@@ -1,0 +1,251 @@
+{
+  "schema": "maithic.search.rankings/1",
+  "engine": "maithic-lexical",
+  "queryset": "demo",
+  "config": {
+    "retrievers": [
+      "lexical"
+    ],
+    "limit": 10,
+    "k1": 1.2,
+    "b": 0.75
+  },
+  "results": [
+    {
+      "query": "sorted-output",
+      "ranked": [
+        "Maithic.Algo.sorted_insertionSort",
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.insertionSort_perm",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.insertionSort_idem",
+        "Maithic.Algo.Sorted.tail",
+        "Maithic.Algo.Sorted.sublist",
+        "Maithic.Algo.length_insertionSort",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.sorted_append"
+      ],
+      "elapsed_ms": 0.04100799560546875
+    },
+    {
+      "query": "perm-of-input",
+      "ranked": [
+        "Maithic.Algo.insertionSort_perm",
+        "Maithic.Algo.insertSorted_perm",
+        "Maithic.Algo.insertionSort_idem",
+        "Maithic.Algo.length_insertionSort",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.sorted_insertionSort",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.insertSorted",
+        "Maithic.Algo.mem_insertSorted"
+      ],
+      "elapsed_ms": 0.025987625122070312
+    },
+    {
+      "query": "length",
+      "ranked": [
+        "Maithic.Algo.length_insertionSort",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.insertionSort_idem",
+        "Maithic.Algo.insertionSort_perm",
+        "Maithic.Algo.sorted_insertionSort",
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertSorted"
+      ],
+      "elapsed_ms": 0.015020370483398438
+    },
+    {
+      "query": "idempotent",
+      "ranked": [
+        "Maithic.Algo.insertionSort_idem",
+        "Maithic.Algo.length_insertionSort",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.insertionSort_perm",
+        "Maithic.Algo.sorted_insertionSort",
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertSorted",
+        "Maithic.Algo.mem_insertSorted"
+      ],
+      "elapsed_ms": 0.015020370483398438
+    },
+    {
+      "query": "already-sorted",
+      "ranked": [
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.sorted_insertionSort",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.Sorted.tail",
+        "Maithic.Algo.Sorted.sublist",
+        "Maithic.Algo.insertionSort_idem",
+        "Maithic.Algo.insertionSort_perm",
+        "Maithic.Algo.length_insertionSort",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.sorted_cons"
+      ],
+      "elapsed_ms": 0.033855438232421875
+    },
+    {
+      "query": "search-none",
+      "ranked": [
+        "Maithic.Algo.linearSearch_none",
+        "Maithic.Algo.linearSearch_isSome_iff",
+        "Maithic.Algo.linearSearch_some",
+        "Maithic.Algo.linearSearch_first",
+        "Maithic.Algo.linearSearch",
+        "Maithic.Algo.insertSorted"
+      ],
+      "elapsed_ms": 0.02002716064453125
+    },
+    {
+      "query": "first-index",
+      "ranked": [
+        "Maithic.Algo.linearSearch_first",
+        "Maithic.Algo.mem_insertSorted",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.linearSearch_some",
+        "Maithic.Algo.linearSearch",
+        "double_eq",
+        "Maithic.Algo.linearSearch_isSome_iff",
+        "Maithic.Algo.linearSearch_none",
+        "Maithic.Algo.sorted_append",
+        "Maithic.Algo.Sorted.head_le"
+      ],
+      "elapsed_ms": 0.034093856811523438
+    },
+    {
+      "query": "tail",
+      "ranked": [
+        "Maithic.Algo.Sorted.tail",
+        "Maithic.Algo.sorted_cons",
+        "Maithic.Algo.Sorted.sublist",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.sorted_append",
+        "Maithic.Algo.Sorted.head_le",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.insertSorted_perm",
+        "Maithic.Algo.sorted_insertionSort"
+      ],
+      "elapsed_ms": 0.025987625122070312
+    },
+    {
+      "query": "sublist",
+      "ranked": [
+        "Maithic.Algo.Sorted.sublist",
+        "Maithic.Algo.Sorted.tail",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.sorted_cons",
+        "Maithic.Algo.sorted_append",
+        "Maithic.Algo.Sorted.head_le",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.insertSorted_perm",
+        "Maithic.Algo.sorted_insertionSort"
+      ],
+      "elapsed_ms": 0.02384185791015625
+    },
+    {
+      "query": "append",
+      "ranked": [
+        "Maithic.Algo.sorted_append",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.Sorted.tail",
+        "Maithic.Algo.Sorted.sublist",
+        "Maithic.Algo.sorted_cons",
+        "Maithic.Algo.Sorted.head_le",
+        "Maithic.Algo.sorted_nil",
+        "Maithic.Algo.sorted_singleton",
+        "Maithic.Algo.sorted_insertionSort",
+        "Maithic.Algo.insertionSort_of_sorted"
+      ],
+      "elapsed_ms": 0.0171661376953125
+    },
+    {
+      "query": "add-comm",
+      "ranked": [
+        "Bad_Name",
+        "open_one",
+        "uses_open",
+        "shortcut",
+        "by_shortcut",
+        "term_gap",
+        "double_eq",
+        "Maithic.Algo.linearSearch_first",
+        "Maithic.Algo.linearSearch_some",
+        "Maithic.Algo.length_insertionSort"
+      ],
+      "elapsed_ms": 0.015020370483398438
+    },
+    {
+      "query": "preorder-nat",
+      "ranked": [
+        "Maithic.Algo.instTotalPreorderNat",
+        "Maithic.Algo.instTotalPreorderInt",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.sorted_insertionSort",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.insertionSort_idem",
+        "double",
+        "Bad_Name",
+        "open_one",
+        "uses_open"
+      ],
+      "elapsed_ms": 0.011920928955078125
+    },
+    {
+      "query": "by-name",
+      "ranked": [
+        "Maithic.Algo.mem_insertSorted",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.insertSorted_perm",
+        "Maithic.Algo.insertSorted",
+        "Maithic.Algo.sorted_cons",
+        "Maithic.Algo.Sorted.head_le",
+        "Maithic.Algo.sorted_append",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.Sorted.tail",
+        "Maithic.Algo.Sorted.sublist"
+      ],
+      "elapsed_ms": 0.019073486328125
+    },
+    {
+      "query": "double",
+      "ranked": [
+        "double"
+      ],
+      "elapsed_ms": 0.0050067901611328125
+    },
+    {
+      "query": "point",
+      "ranked": [
+        "instInhabitedPoint",
+        "Point",
+        "Point3"
+      ],
+      "elapsed_ms": 0.0069141387939453125
+    },
+    {
+      "query": "head",
+      "ranked": [
+        "Maithic.Algo.Sorted.head_le",
+        "Maithic.Algo.sorted_cons",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.mem_insertSorted",
+        "Maithic.Algo.sorted_append",
+        "Maithic.Algo.mem_insertionSort",
+        "Maithic.Algo.Sorted.tail",
+        "Maithic.Algo.Sorted.sublist",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.insertSorted_perm"
+      ],
+      "elapsed_ms": 0.06103515625
+    }
+  ]
+}

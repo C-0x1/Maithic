@@ -1,0 +1,15 @@
+{
+  "schema": "maithic.oracle.certificate/1",
+  "kind": "discrete.inverse",
+  "claim": "3 * 5 ≡ 1 [ZMOD 7]",
+  "data": {
+    "a": "3",
+    "modulus": "7",
+    "inverse": "5"
+  },
+  "engine": {
+    "name": "MaithicOracle",
+    "version": "0.1.0",
+    "parameters": {}
+  }
+}

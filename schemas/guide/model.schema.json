@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tactic model",
+  "description": "A small model that reads a proof state and gives a probability to every tactic template: a tactic with its arguments taken out, such as `simp [_] at _`. The document holds the whole model: its shape, the tokens it knows, the templates it predicts with how often each was seen and how often its tactic closed a goal, and every weight. Token and position vectors are lists of columns, one vector for each token and for each position; the classifier and the attention matrices are lists of rows. A model advises a search on the order of its candidates and decides nothing: Lean checks every proof.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.guide.model/1"
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "dim": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pooling": {
+          "enum": [
+            "mean",
+            "first"
+          ]
+        },
+        "mixer": {
+          "enum": [
+            "none",
+            "attention"
+          ]
+        }
+      },
+      "required": [
+        "dim",
+        "max_length",
+        "pooling",
+        "mixer"
+      ],
+      "additionalProperties": false
+    },
+    "vocabulary": {
+      "type": "object",
+      "properties": {
+        "tokens": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "counts": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "required": [
+        "tokens",
+        "counts"
+      ],
+      "additionalProperties": false
+    },
+    "templates": {
+      "type": "object",
+      "properties": {
+        "templates": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "counts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "closes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "required": [
+        "templates",
+        "counts",
+        "closes"
+      ],
+      "additionalProperties": false
+    },
+    "weights": {
+      "type": "object",
+      "properties": {
+        "tokens": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "positions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "query": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "key": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "value": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "head": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "bias": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "required": [
+        "tokens",
+        "positions",
+        "head",
+        "bias"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "config",
+    "vocabulary",
+    "templates",
+    "weights"
+  ],
+  "additionalProperties": false,
+  "if": {
+    "properties": {
+      "config": {
+        "properties": {
+          "mixer": {
+            "const": "attention"
+          }
+        }
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "weights": {
+        "required": [
+          "query",
+          "key",
+          "value"
+        ]
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "weights": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "query"
+              ]
+            },
+            {
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "required": [
+                "value"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

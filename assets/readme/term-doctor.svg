@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757 508" width="757" height="508" role="img" aria-label="A terminal session: maithic version prints the version of the command, of the Bridge protocol, of Lean and of OCaml. maithic doctor lists Lean, Lake, the Bridge with the result of its self-test, curl, Julia and R, each with its version and the status ok, and then the gateway mode, the provider and model, and that candidate screening is active and that Lean workers never see API keys.">
+  <title>A terminal session: maithic version prints the version of the command, of the Bridge protocol, of Lean and of OCaml. maithic doctor lists Lean, Lake, the Bridge with the result of its self-test, curl, Julia and R, each with its version and the status ok, and then the gateway mode, the provider and model, and that candidate screening is active and that Lean workers never see API keys.</title>
+  <rect width="757" height="508" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h737a10 10 0 0 1 10 10v26h-757z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="378" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic version, doctor</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic version</text>
+    <text x="22.00" y="77" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">maithic 0.1.0</text>
+    <text x="37.66" y="96" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">bridge_protocol</text>
+    <text x="170.77" y="96" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1</text>
+    <text x="37.66" y="115" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean_toolchain</text>
+    <text x="170.77" y="115" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">4.36.0</text>
+    <text x="37.66" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">ocaml</text>
+    <text x="170.77" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">5.5.2</text>
+    <text x="22.00" y="172" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="172" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic doctor</text>
+    <text x="22.00" y="191" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">component</text>
+    <text x="147.28" y="191" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">status</text>
+    <text x="209.92" y="191" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">detail</text>
+    <text x="22.00" y="210" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------------</text>
+    <text x="147.28" y="210" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">------</text>
+    <text x="209.92" y="210" textLength="524.61" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">-------------------------------------------------------------------</text>
+    <text x="22.00" y="229" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean</text>
+    <text x="147.28" y="229" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="209.92" y="229" textLength="438.48" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean (version 4.36.0, x86_64-unknown-linux-gnu, commit …</text>
+    <text x="22.00" y="248" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lake</text>
+    <text x="147.28" y="248" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="209.92" y="248" textLength="407.16" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lake version 5.0.0-src+611c117 (Lean version 4.36.0)</text>
+    <text x="22.00" y="267" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">maithic-bridge</text>
+    <text x="147.28" y="267" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="209.92" y="267" textLength="383.67" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.1.0, protocol 1, Lean 4.36.0, self-test healthy</text>
+    <text x="209.92" y="286" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(lean/.lake/build/bin/maithic-bridge)</text>
+    <text x="22.00" y="305" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">curl</text>
+    <text x="147.28" y="305" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="209.92" y="305" textLength="524.61" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">curl 8.23.0 (x86_64-conda-linux-gnu) libcurl/8.23.0 OpenSSL/3.6.5 …</text>
+    <text x="22.00" y="324" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">julia</text>
+    <text x="147.28" y="324" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="209.92" y="324" textLength="156.60" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">julia version 1.13.4</text>
+    <text x="22.00" y="343" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Rscript</text>
+    <text x="147.28" y="343" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="209.92" y="343" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Rscript (R) version 4.5.3 (2026-03-11)</text>
+    <text x="22.00" y="381" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">gateway mode</text>
+    <text x="202.09" y="381" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">replay</text>
+    <text x="22.00" y="400" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">provider</text>
+    <text x="202.09" y="400" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">anthropic</text>
+    <text x="22.00" y="419" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">model</text>
+    <text x="202.09" y="419" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">claude-sonnet-5-5</text>
+    <text x="22.00" y="438" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">ai ready</text>
+    <text x="202.09" y="438" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">yes</text>
+    <text x="22.00" y="457" textLength="164.43" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">environment scrubbing</text>
+    <text x="202.09" y="457" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">active: Lean workers never see API keys</text>
+    <text x="22.00" y="476" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">candidate screening</text>
+    <text x="202.09" y="476" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">active</text>
+  </g>
+</svg>

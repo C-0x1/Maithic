@@ -1,0 +1,30 @@
+# A sample project configuration. Copy it to maithic.toml and change what you
+# need; every setting is optional. `maithic config show` prints the effective
+# values, and docs/reference/configuration.md describes each setting.
+#
+# API keys never go in this file. Export ANTHROPIC_API_KEY, OPENAI_API_KEY or
+# XAI_API_KEY, or run `maithic auth login`.
+
+[ai]
+provider = "anthropic"          # "anthropic" | "openai" | "xai" | "local" | "mock"
+tier = "balanced"               # "fast" | "balanced" | "best"
+# model = "..."                 # an explicit model identifier, instead of the tier
+
+[gateway]
+mode = "live"                   # "live" | "record" | "replay" | "mock" | "off"
+cassette_dir = "fixtures/cassettes"
+timeout_s = 120
+max_tokens = 2048
+
+[bridge]
+# project = "."                 # a Lake project whose modules your files import
+timeout_s = 120
+max_heartbeats = 0              # 0 keeps Lean's default budget
+
+[prove]
+use_ai = true
+rounds = 3
+candidates = 4
+
+[ledger]
+# policy = ".maithic/trust.toml"

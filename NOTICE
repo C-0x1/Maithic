@@ -1,0 +1,9 @@
+Maithic
+Copyright 2026 The Maithic Authors
+
+Licensed under the Apache License, Version 2.0. Documentation is licensed under
+the Creative Commons Attribution 4.0 International License.
+
+This product is built on Lean 4 (https://lean-lang.org), which is distributed
+under the Apache License, Version 2.0. Maithic does not include Lean; it uses the
+toolchain installed on the user's machine.

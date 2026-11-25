@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="t d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="t">A codebase as a graph, across four languages</title>
+  <desc id="d">Four stages, each in the language that suits it. Lean elaborates every file and reports what its kernel knows: declarations, their types, and what each proof refers to. OCaml builds the graph of declarations and answers questions about it: what a declaration uses, what a change would reach, which proofs are unfinished. Julia computes on the graph: PageRank, betweenness and connected components. R reads all of it and makes tables and figures. Below, a piece of the real graph of the insertion sort in this repository: the theorem insertionSort_idem uses sorted_insertionSort and the definition insertionSort; sorted_insertionSort uses sorted_insertSorted, insertionSort and the definition Sorted; sorted_insertSorted uses mem_insertSorted, Sorted and insertSorted; mem_insertSorted and insertionSort use insertSorted. Beside it, four answers from the same scan: ten declarations depend on insertSorted within two steps; three proofs rest on sorry, one of them through a lemma; Sorted has the highest PageRank; and Sorted is used by 12 of the 41 declarations.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5B6477"/>
+    </marker>
+    <marker id="flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#14162B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="600" fill="#FAF8F4"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#14162B" textLength="776.3" lengthAdjust="spacingAndGlyphs">Lean knows what depends on what. Maithic asks it, and keeps the answer.</text>
+  <text x="40" y="68" font-size="14" fill="#5B6477" textLength="695.8" lengthAdjust="spacingAndGlyphs">maithic intel scan reads a project into a graph of its declarations. Each stage is done in the language that suits it.</text>
+
+  <!-- four stages -->
+  <g font-size="12.5">
+    <g transform="translate(40 88)">
+      <rect width="205" height="118" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h185a10 10 0 0 1 10 10v24h-205z" fill="#2B2F77"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="102.8" lengthAdjust="spacingAndGlyphs">Lean elaborates</text>
+      <text x="14" y="54" fill="#14162B" textLength="168.8" lengthAdjust="spacingAndGlyphs">Every declaration with its type,</text>
+      <text x="14" y="71" fill="#14162B" textLength="166.1" lengthAdjust="spacingAndGlyphs">its place, its axioms, and what</text>
+      <text x="14" y="88" fill="#14162B" textLength="125.7" lengthAdjust="spacingAndGlyphs">its proof term refers to.</text>
+      <text x="14" y="108" font-size="11.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="120.2" lengthAdjust="spacingAndGlyphs">extraction per file</text>
+    </g>
+    <g transform="translate(265 88)">
+      <rect width="205" height="118" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h185a10 10 0 0 1 10 10v24h-205z" fill="#EC6813"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="172.6" lengthAdjust="spacingAndGlyphs">OCaml builds and answers</text>
+      <text x="14" y="54" fill="#14162B" textLength="173.0" lengthAdjust="spacingAndGlyphs">The graph, the questions about</text>
+      <text x="14" y="71" fill="#14162B" textLength="159.1" lengthAdjust="spacingAndGlyphs">it, the inventory of unfinished</text>
+      <text x="14" y="88" fill="#14162B" textLength="163.3" lengthAdjust="spacingAndGlyphs">proofs and the axiom census.</text>
+      <text x="14" y="108" font-size="11.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="139.2" lengthAdjust="spacingAndGlyphs">graph.json  health.json</text>
+    </g>
+    <g transform="translate(490 88)">
+      <rect width="205" height="118" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h185a10 10 0 0 1 10 10v24h-205z" fill="#9558B2"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="98.3" lengthAdjust="spacingAndGlyphs">Julia computes</text>
+      <text x="14" y="54" fill="#14162B" textLength="163.3" lengthAdjust="spacingAndGlyphs">PageRank, betweenness and</text>
+      <text x="14" y="71" fill="#14162B" textLength="157.0" lengthAdjust="spacingAndGlyphs">connected components over</text>
+      <text x="14" y="88" fill="#14162B" textLength="92.4" lengthAdjust="spacingAndGlyphs">the whole graph.</text>
+      <text x="14" y="108" font-size="11.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="75.9" lengthAdjust="spacingAndGlyphs">metrics.json</text>
+    </g>
+    <g transform="translate(715 88)">
+      <rect width="205" height="118" rx="10" fill="#FFFFFF" stroke="#276DC3" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h185a10 10 0 0 1 10 10v24h-205z" fill="#276DC3"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="60.0" lengthAdjust="spacingAndGlyphs">R reports</text>
+      <text x="14" y="54" fill="#14162B" textLength="160.5" lengthAdjust="spacingAndGlyphs">Reads the three files, checks</text>
+      <text x="14" y="71" fill="#14162B" textLength="165.4" lengthAdjust="spacingAndGlyphs">that they belong together, and</text>
+      <text x="14" y="88" fill="#14162B" textLength="142.4" lengthAdjust="spacingAndGlyphs">makes tables and figures.</text>
+      <text x="14" y="108" font-size="11.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="88.6" lengthAdjust="spacingAndGlyphs">top_depended()</text>
+    </g>
+  </g>
+  <g stroke="#14162B" stroke-width="1.8" fill="none" marker-end="url(#flow)">
+    <path d="M246 147 H263"/>
+    <path d="M471 147 H488"/>
+    <path d="M696 147 H713"/>
+  </g>
+
+  <!-- a piece of the real graph -->
+  <g transform="translate(40 226)">
+    <rect width="480" height="354" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+    <text x="18" y="28" font-size="14" font-weight="700" fill="#14162B" textLength="375.2" lengthAdjust="spacingAndGlyphs">A piece of the graph: the insertion sort of this repository</text>
+    <g stroke="#5B6477" stroke-width="1.4" fill="none" marker-end="url(#arrow)">
+      <path d="M250 82 V110"/>
+      <path d="M300 82 L386 174"/>
+      <path d="M214 136 L140 174"/>
+      <path d="M290 136 L378 174"/>
+      <path d="M170 123 H22 a6 6 0 0 0 -6 6 V310 a6 6 0 0 0 6 6 H24"/>
+      <path d="M124 200 V236"/>
+      <path d="M56 200 V302"/>
+      <path d="M186 200 L282 302"/>
+      <path d="M160 262 L268 302"/>
+      <path d="M390 200 L324 302"/>
+    </g>
+    <g font-size="11.5" font-family="Menlo, Consolas, monospace" text-anchor="middle">
+      <rect x="177" y="56" width="146" height="26" rx="13" fill="#E3F6F4" stroke="#0FA89B" stroke-width="1.5"/>
+      <text x="250" y="73" fill="#14162B" textLength="113.9" lengthAdjust="spacingAndGlyphs">insertionSort_idem</text>
+      <rect x="170" y="110" width="160" height="26" rx="13" fill="#E3F6F4" stroke="#0FA89B" stroke-width="1.5"/>
+      <text x="250" y="127" fill="#14162B" textLength="126.5" lengthAdjust="spacingAndGlyphs">sorted_insertionSort</text>
+      <rect x="47" y="174" width="154" height="26" rx="13" fill="#E3F6F4" stroke="#0FA89B" stroke-width="1.5"/>
+      <text x="124" y="191" fill="#14162B" textLength="120.2" lengthAdjust="spacingAndGlyphs">sorted_insertSorted</text>
+      <rect x="334" y="174" width="112" height="26" rx="4" fill="#E8E9F3" stroke="#2B2F77" stroke-width="1.5"/>
+      <text x="390" y="191" fill="#14162B" textLength="82.2" lengthAdjust="spacingAndGlyphs">insertionSort</text>
+      <rect x="64" y="236" width="132" height="26" rx="13" fill="#E3F6F4" stroke="#0FA89B" stroke-width="1.5"/>
+      <text x="130" y="253" fill="#14162B" textLength="101.2" lengthAdjust="spacingAndGlyphs">mem_insertSorted</text>
+      <rect x="25" y="302" width="70" height="26" rx="4" fill="#E8E9F3" stroke="#2B2F77" stroke-width="1.5"/>
+      <text x="60" y="319" fill="#14162B" textLength="38.0" lengthAdjust="spacingAndGlyphs">Sorted</text>
+      <rect x="248" y="302" width="104" height="26" rx="4" fill="#E8E9F3" stroke="#2B2F77" stroke-width="1.5"/>
+      <text x="300" y="319" fill="#14162B" textLength="75.9" lengthAdjust="spacingAndGlyphs">insertSorted</text>
+    </g>
+    <g font-size="11.5" fill="#5B6477">
+      <rect x="372" y="262" width="16" height="12" rx="6" fill="#E3F6F4" stroke="#0FA89B" stroke-width="1.2"/>
+      <text x="394" y="272" textLength="42.2" lengthAdjust="spacingAndGlyphs">theorem</text>
+      <rect x="372" y="282" width="16" height="12" rx="2" fill="#E8E9F3" stroke="#2B2F77" stroke-width="1.2"/>
+      <text x="394" y="292" textLength="46.0" lengthAdjust="spacingAndGlyphs">definition</text>
+      <path d="M372 308 H388" stroke="#5B6477" stroke-width="1.4" marker-end="url(#arrow)"/>
+      <text x="394" y="312" textLength="24.3" lengthAdjust="spacingAndGlyphs">uses</text>
+      <text x="372" y="336" textLength="76.1" lengthAdjust="spacingAndGlyphs">7 of 251 nodes</text>
+    </g>
+  </g>
+
+  <!-- answers -->
+  <g transform="translate(540 226)" font-size="12.5">
+    <rect width="380" height="354" rx="10" fill="#14162B"/>
+    <text x="18" y="28" font-size="14" font-weight="700" fill="#F0A92E" textLength="194.5" lengthAdjust="spacingAndGlyphs">What the same scan answers</text>
+
+    <text x="18" y="58" font-size="12" fill="#2CC4B6" font-family="Menlo, Consolas, monospace" textLength="257.4" lengthAdjust="spacingAndGlyphs">$ maithic intel dependents insertSorted</text>
+    <text x="18" y="78" fill="#E8E9F3" textLength="264.8" lengthAdjust="spacingAndGlyphs">10 declarations within two steps: what a change</text>
+    <text x="18" y="95" fill="#E8E9F3" textLength="159.1" lengthAdjust="spacingAndGlyphs">to the definition would reach.</text>
+
+    <text x="18" y="128" font-size="12" fill="#2CC4B6" font-family="Menlo, Consolas, monospace" textLength="145.2" lengthAdjust="spacingAndGlyphs">$ maithic intel health</text>
+    <text x="18" y="148" fill="#E8E9F3" textLength="268.2" lengthAdjust="spacingAndGlyphs">3 proofs rest on sorry: open_one, term_gap, and</text>
+    <text x="18" y="165" fill="#E8E9F3" textLength="262.0" lengthAdjust="spacingAndGlyphs">uses_open, which inherits it through open_one.</text>
+
+    <text x="18" y="198" font-size="12" fill="#C39BD9" font-family="Menlo, Consolas, monospace" textLength="145.2" lengthAdjust="spacingAndGlyphs">julia&gt; pagerank(graph)</text>
+    <text x="18" y="218" fill="#E8E9F3" textLength="271.5" lengthAdjust="spacingAndGlyphs">Sorted first, then TotalPreorder and insertionSort:</text>
+    <text x="18" y="235" fill="#E8E9F3" textLength="166.1" lengthAdjust="spacingAndGlyphs">the notions the rest is built on.</text>
+
+    <text x="18" y="268" font-size="12" fill="#7FB0EA" font-family="Menlo, Consolas, monospace" textLength="165.0" lengthAdjust="spacingAndGlyphs">r&gt; top_depended(snapshot)</text>
+    <text x="18" y="288" fill="#E8E9F3" textLength="272.4" lengthAdjust="spacingAndGlyphs">Sorted is used by 12 of the 41 declarations, 29%;</text>
+    <text x="18" y="305" fill="#E8E9F3" textLength="255.0" lengthAdjust="spacingAndGlyphs">the count agrees with the one Julia computed.</text>
+
+    <text x="18" y="336" font-size="11.5" fill="#8A90A6" textLength="275.5" lengthAdjust="spacingAndGlyphs">From fixtures/intel: 4 files, 41 declarations, 757 edges.</text>
+  </g>
+</svg>

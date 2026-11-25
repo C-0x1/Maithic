@@ -1,0 +1,156 @@
+{
+  "schema": "maithic.bench.baseline/1",
+  "suite": "basics",
+  "mode": "replay",
+  "use_ai": false,
+  "policy": "default",
+  "note": "version 0.1.0, automation only",
+  "total": 24,
+  "verified": 24,
+  "problems": [
+    {
+      "id": "basics-001",
+      "status": "verified",
+      "attempts": 6,
+      "elapsed_ms": 1697
+    },
+    {
+      "id": "basics-002",
+      "status": "verified",
+      "attempts": 7,
+      "elapsed_ms": 917
+    },
+    {
+      "id": "basics-003",
+      "status": "verified",
+      "attempts": 6,
+      "elapsed_ms": 856
+    },
+    {
+      "id": "basics-004",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 858
+    },
+    {
+      "id": "basics-005",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 851
+    },
+    {
+      "id": "basics-006",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 821
+    },
+    {
+      "id": "basics-007",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 837
+    },
+    {
+      "id": "basics-008",
+      "status": "verified",
+      "attempts": 3,
+      "elapsed_ms": 819
+    },
+    {
+      "id": "basics-009",
+      "status": "verified",
+      "attempts": 2,
+      "elapsed_ms": 806
+    },
+    {
+      "id": "basics-010",
+      "status": "verified",
+      "attempts": 3,
+      "elapsed_ms": 816
+    },
+    {
+      "id": "basics-011",
+      "status": "verified",
+      "attempts": 3,
+      "elapsed_ms": 806
+    },
+    {
+      "id": "basics-012",
+      "status": "verified",
+      "attempts": 1,
+      "elapsed_ms": 823
+    },
+    {
+      "id": "basics-013",
+      "status": "verified",
+      "attempts": 6,
+      "elapsed_ms": 822
+    },
+    {
+      "id": "basics-014",
+      "status": "verified",
+      "attempts": 6,
+      "elapsed_ms": 805
+    },
+    {
+      "id": "basics-015",
+      "status": "verified",
+      "attempts": 6,
+      "elapsed_ms": 804
+    },
+    {
+      "id": "basics-016",
+      "status": "verified",
+      "attempts": 6,
+      "elapsed_ms": 803
+    },
+    {
+      "id": "basics-017",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 852
+    },
+    {
+      "id": "basics-018",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 851
+    },
+    {
+      "id": "basics-019",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 848
+    },
+    {
+      "id": "basics-020",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 928
+    },
+    {
+      "id": "basics-021",
+      "status": "verified",
+      "attempts": 4,
+      "elapsed_ms": 835
+    },
+    {
+      "id": "basics-022",
+      "status": "verified",
+      "attempts": 3,
+      "elapsed_ms": 789
+    },
+    {
+      "id": "basics-023",
+      "status": "verified",
+      "attempts": 3,
+      "elapsed_ms": 789
+    },
+    {
+      "id": "basics-024",
+      "status": "verified",
+      "attempts": 1,
+      "elapsed_ms": 781
+    }
+  ]
+}

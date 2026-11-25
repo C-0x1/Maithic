@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dataset manifest",
+  "description": "What a dataset holds: its name and version, where its records come from, how many records of each kind there are, and the shard files with the number of records and the SHA-256 of each. A shard is a file of JSON lines, one record on each line, named by its kind and the first sixteen digits of its hash.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.corpus.manifest/1"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "repository": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "toolchain": {
+            "type": "string"
+          },
+          "files": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "repository",
+          "revision",
+          "toolchain",
+          "files"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "records": {
+      "type": "object",
+      "properties": {
+        "theorem": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "premise": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pair": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "theorem",
+        "step",
+        "premise",
+        "pair"
+      ],
+      "additionalProperties": false
+    },
+    "shards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "theorem",
+              "step",
+              "premise",
+              "pair"
+            ]
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "records": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "kind",
+          "file",
+          "records",
+          "sha256"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "name",
+    "version",
+    "sources",
+    "records",
+    "shards"
+  ],
+  "additionalProperties": false
+}

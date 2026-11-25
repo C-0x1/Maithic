@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 639 679" width="639" height="679" role="img" aria-label="A terminal session: maithic check with the option json prints its report as a JSON document that names its schema, maithic.check.report/1, with the file, the counts of errors, warnings and declarations, the theorem even_add_even with its statement, the status failed, the axiom sorryAx and the reason, and the diagnostic of Lean with its line and column.">
+  <title>A terminal session: maithic check with the option json prints its report as a JSON document that names its schema, maithic.check.report/1, with the file, the counts of errors, warnings and declarations, the theorem even_add_even with its statement, the status failed, the axiom sorryAx and the reason, and the diagnostic of Lean with its line and column.</title>
+  <rect width="639" height="679" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h619a10 10 0 0 1 10 10v26h-639z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="320" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic check --json</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic check examples/even.lean --json</text>
+    <text x="22.00" y="77" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">{</text>
+    <text x="37.66" y="96" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"schema": "maithic.check.report/1",</text>
+    <text x="37.66" y="115" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"file": "examples/even.lean",</text>
+    <text x="37.66" y="134" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"ok": false,</text>
+    <text x="37.66" y="153" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"errors": 0,</text>
+    <text x="37.66" y="172" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"warnings": 1,</text>
+    <text x="37.66" y="191" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"declarations": 1,</text>
+    <text x="37.66" y="210" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"theorems": [</text>
+    <text x="53.32" y="229" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">{</text>
+    <text x="68.98" y="248" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"name": "even_add_even",</text>
+    <text x="68.98" y="267" textLength="548.10" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"statement": "∀ (a b : Nat), a % 2 = 0 → b % 2 = 0 → (a + b) % 2 = 0",</text>
+    <text x="68.98" y="286" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"status": "failed",</text>
+    <text x="68.98" y="305" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"axioms": [</text>
+    <text x="84.64" y="324" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"sorryAx"</text>
+    <text x="68.98" y="343" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">],</text>
+    <text x="68.98" y="362" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"reasons": [</text>
+    <text x="84.64" y="381" textLength="360.18" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"the proof is unfinished: it depends on sorry"</text>
+    <text x="68.98" y="400" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">]</text>
+    <text x="53.32" y="419" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">}</text>
+    <text x="37.66" y="438" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">],</text>
+    <text x="37.66" y="457" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"diagnostics": [</text>
+    <text x="53.32" y="476" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">{</text>
+    <text x="68.98" y="495" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"severity": "warning",</text>
+    <text x="68.98" y="514" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"line": 7,</text>
+    <text x="68.98" y="533" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"column": 8,</text>
+    <text x="68.98" y="552" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"endLine": 7,</text>
+    <text x="68.98" y="571" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"endColumn": 21,</text>
+    <text x="68.98" y="590" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">"text": "declaration uses `sorry`"</text>
+    <text x="53.32" y="609" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">}</text>
+    <text x="37.66" y="628" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">]</text>
+    <text x="22.00" y="647" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">}</text>
+  </g>
+</svg>

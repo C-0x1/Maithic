@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+ (name maithic_bridge)
+ (public_name maithic.bridge)
+ (libraries maithic_base maithic_schema))

@@ -1,0 +1,77 @@
+{
+  "schema": "maithic.check.report/1",
+  "file": "fixtures/oracle/lean/Replay.lean",
+  "ok": true,
+  "errors": 0,
+  "warnings": 0,
+  "declarations": 6,
+  "theorems": [
+    {
+      "name": "replay_linear_integer_bound",
+      "statement": "∀ (x y : Int), 3 * x ≥ 4 → y ≥ x → y ≥ 2",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "replay_linear_integer_cycle",
+      "statement": "∀ (x y z : Int), x - y < 3 → y - z < -1 → z - x ≤ -1 → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "replay_linear_integer_distinct",
+      "statement": "∀ (x y : Int), 2 * x + 1 = 2 * y → x ≠ y",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "replay_linear_integer_gap",
+      "statement": "∀ (x y : Int), 2 * x + 4 * y < 7 → x + 2 * y ≥ 4 → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "replay_linear_integer_parity",
+      "statement": "∀ (x y : Int), 2 * x + 4 * y < 7 → x + 2 * y > 2 → x + 2 * y = 3",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "replay_linear_integer_system",
+      "statement": "∀ (a b c : Int),\n  7 * a + 12 * b + 31 * c = 17 →\n    3 * a + 5 * b + 14 * c = 7 → 1 ≤ a → a ≤ 40 → -50 ≤ b → b ≤ 50 → c ≥ -1000",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    }
+  ],
+  "diagnostics": []
+}

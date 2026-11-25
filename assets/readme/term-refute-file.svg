@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984 1344" width="984" height="1344" role="img" aria-label="A terminal session: maithic refute examines the six unproved statements of a file. Four are refuted, each with a counterexample and the Lean proof that confirms it, among them one that is false by a slip of the key; one is found vacuous; one stands.">
+  <title>A terminal session: maithic refute examines the six unproved statements of a file. Four are refuted, each with a counterexample and the Lean proof that confirms it, among them one that is false by a slip of the key; one is found vacuous; one stands.</title>
+  <rect width="984" height="1344" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h964a10 10 0 0 1 10 10v26h-984z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="492" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic refute examples/conjectures.lean</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic refute examples/conjectures.lean</text>
+    <text x="22.00" y="77" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">sum_le_product</text>
+    <text x="147.28" y="77" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:10</text>
+    <text x="37.66" y="96" textLength="391.50" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem sum_le_product (a b : Nat) : a + b ≤ a * b</text>
+    <text x="37.66" y="115" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="115" textLength="368.01" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">falsified at case 5 with seed 0: a := 1, b := 0</text>
+    <text x="37.66" y="134" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean</text>
+    <text x="115.96" y="134" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">accepts the refutation, closed by decide; it rests on no axiom</text>
+    <text x="37.66" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F26D72">refuted</text>
+    <text x="115.96" y="153" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is false</text>
+    <text x="53.32" y="191" textLength="673.38" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem _root_.maithic_refutation_of_sum_le_product : ¬ type_of% @sum_le_product := by</text>
+    <text x="68.98" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">intro h</text>
+    <text x="68.98" y="229" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have h' := h (a := 1) (b := 0)</text>
+    <text x="68.98" y="248" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">revert h'</text>
+    <text x="68.98" y="267" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="22.00" y="305" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">square_monotone</text>
+    <text x="155.11" y="305" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:14</text>
+    <text x="37.66" y="324" textLength="493.29" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem square_monotone (x y : Int) (h : x ≤ y) : x * x ≤ y * y</text>
+    <text x="37.66" y="343" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="343" textLength="540.27" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">falsified at case 9 with seed 0, made smaller 1 time: x := -1, y := 0</text>
+    <text x="37.66" y="362" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean</text>
+    <text x="115.96" y="362" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">accepts the refutation, closed by decide; it rests on no axiom</text>
+    <text x="37.66" y="381" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F26D72">refuted</text>
+    <text x="115.96" y="381" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is false</text>
+    <text x="53.32" y="419" textLength="689.04" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem _root_.maithic_refutation_of_square_monotone : ¬ type_of% @square_monotone := by</text>
+    <text x="68.98" y="438" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">intro h</text>
+    <text x="68.98" y="457" textLength="242.73" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have h' := h (x := -1) (y := 0)</text>
+    <text x="68.98" y="476" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">revert h'</text>
+    <text x="68.98" y="495" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="22.00" y="533" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">within_budget</text>
+    <text x="139.45" y="533" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:18</text>
+    <text x="37.66" y="552" textLength="751.68" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem within_budget (x y : Rat) (h₁ : 2 * x + 3 * y ≤ 6) (h₂ : 0 ≤ x) (h₃ : 0 ≤ y) : x + y ≤ 2</text>
+    <text x="37.66" y="571" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="571" textLength="555.93" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">falsified at case 18 with seed 0: x := (26 : Rat)/15, y := (9 : Rat)/19</text>
+    <text x="37.66" y="590" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean</text>
+    <text x="115.96" y="590" textLength="775.17" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">accepts the refutation, closed by decide +kernel; it rests on Classical.choice, Quot.sound, propext</text>
+    <text x="37.66" y="609" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F26D72">refuted</text>
+    <text x="115.96" y="609" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is false</text>
+    <text x="53.32" y="647" textLength="657.72" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem _root_.maithic_refutation_of_within_budget : ¬ type_of% @within_budget := by</text>
+    <text x="68.98" y="666" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">intro h</text>
+    <text x="68.98" y="685" textLength="414.99" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have h' := h (x := (26 : Rat)/15) (y := (9 : Rat)/19)</text>
+    <text x="68.98" y="704" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">revert h'</text>
+    <text x="68.98" y="723" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide +kernel</text>
+    <text x="22.00" y="761" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">pred_lt</text>
+    <text x="92.47" y="761" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:23</text>
+    <text x="37.66" y="780" textLength="383.67" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem pred_lt (n : Nat) (h : 0 &lt; n) : n - 1 &lt; m</text>
+    <text x="37.66" y="799" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="799" textLength="532.44" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">falsified at case 3 with seed 0, made smaller 1 time: m := 0, n := 1</text>
+    <text x="37.66" y="818" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean</text>
+    <text x="115.96" y="818" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">accepts the refutation, closed by decide; it rests on no axiom</text>
+    <text x="37.66" y="837" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F26D72">refuted</text>
+    <text x="115.96" y="837" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is false</text>
+    <text x="53.32" y="875" textLength="563.76" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem _root_.maithic_refutation_of_pred_lt : ¬ type_of% @pred_lt := by</text>
+    <text x="68.98" y="894" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">intro h</text>
+    <text x="68.98" y="913" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have h' := h (m := 0) (n := 1)</text>
+    <text x="68.98" y="932" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">revert h'</text>
+    <text x="68.98" y="951" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="22.00" y="989" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">small_and_large</text>
+    <text x="155.11" y="989" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:27</text>
+    <text x="37.66" y="1008" textLength="555.93" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem small_and_large (n : Nat) (h₁ : n &lt; 3) (h₂ : n &gt; 5) : n * n = 7</text>
+    <text x="37.66" y="1027" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="1027" textLength="532.44" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">gave up with seed 0: 1000 cases left out by the hypotheses, 0 passed</text>
+    <text x="37.66" y="1046" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">oracle</text>
+    <text x="115.96" y="1046" textLength="845.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">not a statement a solver takes: variables over the natural numbers are not exported: their subtraction stops</text>
+    <text x="115.96" y="1065" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">at zero</text>
+    <text x="37.66" y="1084" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="115.96" y="1084" textLength="469.80" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the hypotheses h₁, h₂ contradict each other (shown by omega)</text>
+    <text x="37.66" y="1103" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">vacuous</text>
+    <text x="115.96" y="1103" textLength="783.00" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is true and says nothing: the hypotheses h₁, h₂ contradict each other (shown by omega)</text>
+    <text x="22.00" y="1141" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">reverse_append</text>
+    <text x="147.28" y="1141" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:31</text>
+    <text x="37.66" y="1160" textLength="696.87" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem reverse_append (l₁ l₂ : List Nat) : (l₁ ++ l₂).reverse = l₂.reverse ++ l₁.reverse</text>
+    <text x="37.66" y="1179" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="1179" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">passed 100 cases with seed 0</text>
+    <text x="37.66" y="1198" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="1198" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">passed 100 cases with seed 1</text>
+    <text x="37.66" y="1217" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">test</text>
+    <text x="115.96" y="1217" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">passed 100 cases with seed 2</text>
+    <text x="37.66" y="1236" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">oracle</text>
+    <text x="115.96" y="1236" textLength="595.08" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">not a statement a solver takes: the goal has no integer or rational variable</text>
+    <text x="37.66" y="1255" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="115.96" y="1255" textLength="422.82" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">no contradiction among the hypotheses, no empty domain</text>
+    <text x="37.66" y="1274" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">standing</text>
+    <text x="115.96" y="1274" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">nothing was found, which proves nothing</text>
+    <text x="22.00" y="1312" textLength="720.36" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">6 statements: 4 refuted, 1 vacuous, 0 with a counterexample Lean did not confirm, 1 standing</text>
+  </g>
+</svg>

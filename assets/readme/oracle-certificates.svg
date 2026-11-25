@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="t d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="t">Oracles compute, certificates are checked</title>
+  <desc id="d">A goal goes to an oracle written in Julia. The oracle searches and returns a certificate, a small piece of data with exact numbers. The certificate is checked in exact arithmetic before it is written, and its claim is checked again by Lean's kernel. Four families of goals are shown with their certificates: linear arithmetic with Farkas multipliers, polynomial equations with cofactors, real inequalities with boxes and enclosures, and discrete facts with witnesses.</desc>
+  <defs>
+    <marker id="oc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5B6477"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#FAF8F4"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#14162B" textLength="376.6" lengthAdjust="spacingAndGlyphs">Julia computes. The kernel decides.</text>
+  <text x="40" y="68" font-size="14" fill="#5B6477" textLength="643.9" lengthAdjust="spacingAndGlyphs">A solver's answer is a claim. A certificate is data from which the fact can be checked by arithmetic alone.</text>
+
+  <g font-size="14">
+    <g transform="translate(40 96)">
+      <rect width="176" height="104" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="35.6" lengthAdjust="spacingAndGlyphs">Goal</text>
+      <text x="14" y="52" fill="#5B6477" textLength="110.5" lengthAdjust="spacingAndGlyphs">hypotheses and a</text>
+      <text x="14" y="72" fill="#5B6477" textLength="115.2" lengthAdjust="spacingAndGlyphs">conclusion, as text</text>
+      <text x="14" y="92" font-size="11" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="127.1" lengthAdjust="spacingAndGlyphs">maithic.oracle.goal/1</text>
+    </g>
+    <line x1="220" y1="148" x2="258" y2="148" stroke="#5B6477" stroke-width="1.5" marker-end="url(#oc-arrow)"/>
+    <g transform="translate(264 96)">
+      <rect width="200" height="104" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="2"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="49.8" lengthAdjust="spacingAndGlyphs">Oracle</text>
+      <text x="80" y="28" font-size="12" fill="#9558B2" textLength="37.4" lengthAdjust="spacingAndGlyphs">in Julia</text>
+      <text x="14" y="52" fill="#5B6477" textLength="132.3" lengthAdjust="spacingAndGlyphs">searches: fast, clever</text>
+      <text x="14" y="72" fill="#5B6477" textLength="93.4" lengthAdjust="spacingAndGlyphs">and not trusted</text>
+      <text x="14" y="92" font-size="11" fill="#5B6477" textLength="154.7" lengthAdjust="spacingAndGlyphs">simplex · Buchberger · intervals</text>
+    </g>
+    <line x1="468" y1="148" x2="506" y2="148" stroke="#5B6477" stroke-width="1.5" marker-end="url(#oc-arrow)"/>
+    <g transform="translate(512 96)">
+      <rect width="176" height="104" rx="10" fill="#FFFFFF" stroke="#F0A92E" stroke-width="2.5"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="78.3" lengthAdjust="spacingAndGlyphs">Certificate</text>
+      <text x="14" y="52" fill="#5B6477" textLength="132.3" lengthAdjust="spacingAndGlyphs">a small piece of data,</text>
+      <text x="14" y="72" fill="#5B6477" textLength="122.9" lengthAdjust="spacingAndGlyphs">every number exact</text>
+      <text x="14" y="92" font-size="11" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="151.3" lengthAdjust="spacingAndGlyphs">"multipliers": ["1/2", …]</text>
+    </g>
+    <line x1="692" y1="130" x2="730" y2="118" stroke="#5B6477" stroke-width="1.5" marker-end="url(#oc-arrow)"/>
+    <line x1="692" y1="166" x2="730" y2="178" stroke="#5B6477" stroke-width="1.5" marker-end="url(#oc-arrow)"/>
+    <g transform="translate(736 96)">
+      <rect width="184" height="46" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="2"/>
+      <text x="14" y="20" font-weight="700" fill="#14162B" textLength="80.9" lengthAdjust="spacingAndGlyphs">Exact check</text>
+      <text x="14" y="37" font-size="12" fill="#5B6477" textLength="133.4" lengthAdjust="spacingAndGlyphs">before anything is written</text>
+    </g>
+    <g transform="translate(736 154)">
+      <rect width="184" height="46" rx="10" fill="#0FA89B"/>
+      <text x="14" y="20" font-weight="700" fill="#FFFFFF" textLength="88.9" lengthAdjust="spacingAndGlyphs">Lean's kernel</text>
+      <text x="14" y="37" font-size="12" fill="#FFFFFF" textLength="136.8" lengthAdjust="spacingAndGlyphs">before anything is verified</text>
+    </g>
+  </g>
+
+  <text x="40" y="244" font-size="16" font-weight="700" fill="#14162B" textLength="316.6" lengthAdjust="spacingAndGlyphs">Four families, and what each certificate is</text>
+
+  <g font-size="13">
+    <g transform="translate(40 262)">
+      <rect width="210" height="226" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+      <path d="M0 10 a10 10 0 0 1 10 -10 h190 a10 10 0 0 1 10 10 v26 h-210 z" fill="#2B2F77"/>
+      <text x="14" y="24" font-size="15" font-weight="700" fill="#FFFFFF" textLength="120.9" lengthAdjust="spacingAndGlyphs">Linear arithmetic</text>
+      <text x="14" y="60" font-size="11" font-weight="700" fill="#5B6477" textLength="31.8" lengthAdjust="spacingAndGlyphs">GOAL</text>
+      <text x="14" y="80" fill="#14162B" textLength="134.5" lengthAdjust="spacingAndGlyphs">2x + 3y ≤ 6,  x ≥ 0,  y ≥ 0</text>
+      <text x="14" y="98" fill="#14162B" textLength="62.8" lengthAdjust="spacingAndGlyphs">⊢  x + y ≤ 3</text>
+      <text x="14" y="126" font-size="11" font-weight="700" fill="#5B6477" textLength="71.9" lengthAdjust="spacingAndGlyphs">CERTIFICATE</text>
+      <text x="14" y="146" fill="#14162B" textLength="119.9" lengthAdjust="spacingAndGlyphs">multipliers ½, 0, ½, 1</text>
+      <text x="14" y="174" font-size="11" font-weight="700" fill="#5B6477" textLength="39.1" lengthAdjust="spacingAndGlyphs">CHECK</text>
+      <text x="14" y="194" fill="#14162B" textLength="138.0" lengthAdjust="spacingAndGlyphs">the weighted sum of the</text>
+      <text x="14" y="212" fill="#14162B" textLength="132.6" lengthAdjust="spacingAndGlyphs">statements reads 0 &lt; 0</text>
+    </g>
+    <g transform="translate(264 262)">
+      <rect width="210" height="226" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+      <path d="M0 10 a10 10 0 0 1 10 -10 h190 a10 10 0 0 1 10 10 v26 h-210 z" fill="#2B2F77"/>
+      <text x="14" y="24" font-size="15" font-weight="700" fill="#FFFFFF" textLength="155.0" lengthAdjust="spacingAndGlyphs">Polynomial equations</text>
+      <text x="14" y="60" font-size="11" font-weight="700" fill="#5B6477" textLength="31.8" lengthAdjust="spacingAndGlyphs">GOAL</text>
+      <text x="14" y="80" fill="#14162B" textLength="96.5" lengthAdjust="spacingAndGlyphs">x + y = 3,  x·y = 2</text>
+      <text x="14" y="98" fill="#14162B" textLength="73.2" lengthAdjust="spacingAndGlyphs">⊢  x<tspan dy="-5" font-size="9">2</tspan><tspan dy="5"> + y</tspan><tspan dy="-5" font-size="9">2</tspan><tspan dy="5"> = 5</tspan></text>
+      <text x="14" y="126" font-size="11" font-weight="700" fill="#5B6477" textLength="71.9" lengthAdjust="spacingAndGlyphs">CERTIFICATE</text>
+      <text x="14" y="146" fill="#14162B" textLength="150.0" lengthAdjust="spacingAndGlyphs">cofactors x + y + 3 and −2</text>
+      <text x="14" y="174" font-size="11" font-weight="700" fill="#5B6477" textLength="39.1" lengthAdjust="spacingAndGlyphs">CHECK</text>
+      <text x="14" y="194" fill="#14162B" textLength="132.3" lengthAdjust="spacingAndGlyphs">one polynomial identity</text>
+      <text x="14" y="212" fill="#14162B" textLength="57.1" lengthAdjust="spacingAndGlyphs">to expand</text>
+    </g>
+    <g transform="translate(488 262)">
+      <rect width="210" height="226" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+      <path d="M0 10 a10 10 0 0 1 10 -10 h190 a10 10 0 0 1 10 10 v26 h-210 z" fill="#2B2F77"/>
+      <text x="14" y="24" font-size="15" font-weight="700" fill="#FFFFFF" textLength="118.4" lengthAdjust="spacingAndGlyphs">Real inequalities</text>
+      <text x="14" y="60" font-size="11" font-weight="700" fill="#5B6477" textLength="31.8" lengthAdjust="spacingAndGlyphs">GOAL</text>
+      <text x="14" y="80" fill="#14162B" textLength="49.7" lengthAdjust="spacingAndGlyphs">0 ≤ x ≤ 1</text>
+      <text x="14" y="98" fill="#14162B" textLength="96.7" lengthAdjust="spacingAndGlyphs">⊢  x(1 − x) ≤ 0.26</text>
+      <text x="14" y="126" font-size="11" font-weight="700" fill="#5B6477" textLength="71.9" lengthAdjust="spacingAndGlyphs">CERTIFICATE</text>
+      <text x="14" y="146" fill="#14162B" textLength="134.4" lengthAdjust="spacingAndGlyphs">18 boxes that tile [0, 1],</text>
+      <text x="14" y="164" fill="#14162B" textLength="133.0" lengthAdjust="spacingAndGlyphs">each with an enclosure</text>
+      <text x="14" y="188" font-size="11" font-weight="700" fill="#5B6477" textLength="39.1" lengthAdjust="spacingAndGlyphs">CHECK</text>
+      <text x="14" y="208" fill="#14162B" textLength="148.8" lengthAdjust="spacingAndGlyphs">interval arithmetic per box</text>
+    </g>
+    <g transform="translate(712 262)">
+      <rect width="210" height="226" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+      <path d="M0 10 a10 10 0 0 1 10 -10 h190 a10 10 0 0 1 10 10 v26 h-210 z" fill="#2B2F77"/>
+      <text x="14" y="24" font-size="15" font-weight="700" fill="#FFFFFF" textLength="98.4" lengthAdjust="spacingAndGlyphs">Discrete facts</text>
+      <text x="14" y="60" font-size="11" font-weight="700" fill="#5B6477" textLength="31.8" lengthAdjust="spacingAndGlyphs">GOAL</text>
+      <text x="14" y="80" fill="#14162B" textLength="101.8" lengthAdjust="spacingAndGlyphs">⊢  2<tspan dy="-5" font-size="9">61</tspan><tspan dy="5"> − 1 is prime</tspan></text>
+      <text x="14" y="126" font-size="11" font-weight="700" fill="#5B6477" textLength="71.9" lengthAdjust="spacingAndGlyphs">CERTIFICATE</text>
+      <text x="14" y="146" fill="#14162B" textLength="158.3" lengthAdjust="spacingAndGlyphs">a Pratt proof: a witness and</text>
+      <text x="14" y="164" fill="#14162B" textLength="108.0" lengthAdjust="spacingAndGlyphs">the factors of n − 1</text>
+      <text x="14" y="188" font-size="11" font-weight="700" fill="#5B6477" textLength="39.1" lengthAdjust="spacingAndGlyphs">CHECK</text>
+      <text x="14" y="208" fill="#14162B" textLength="141.7" lengthAdjust="spacingAndGlyphs">modular exponentiations</text>
+    </g>
+  </g>
+</svg>

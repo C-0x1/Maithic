@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 636" role="img" aria-labelledby="nnv-intervals-t nnv-intervals-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="nnv-intervals-t">Why a true property can be out of the verifier's reach</title>
+  <desc id="nnv-intervals-d">The network that computes the absolute value, as relu of x plus relu of minus x, on inputs from minus 2 to 3. After the first layer, relu of x lies between 0 and 3 and relu of minus x between 0 and 2. Their sum is bounded by 0 and 5, although the network never outputs more than 3, because the two are never large together. Below, on a number line from 0 to 6: the true outputs cover 0 to 3, the proved box covers 0 to 5. The claim 0 to 6 is verified, because the proved box lies inside it. The claim 0 to 2 is refuted, because the input 3 gives 3. The claim 0 to 4 is true and stays unknown, because 5 is more than 4.</desc>
+  <rect width="960" height="636" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="273.3" height="138.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="343.3" y="96.0" width="273.3" height="138.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <rect x="646.7" y="96.0" width="273.3" height="138.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <path d="M290 260 L290 470" stroke="#C9CCE8" stroke-width="1" stroke-dasharray="2 4" fill="none"/>
+  <path d="M340 260 L340 470" stroke="#C9CCE8" stroke-width="1" stroke-dasharray="2 4" fill="none"/>
+  <path d="M390 260 L390 470" stroke="#C9CCE8" stroke-width="1" stroke-dasharray="2 4" fill="none"/>
+  <path d="M440 260 L440 470" stroke="#C9CCE8" stroke-width="1" stroke-dasharray="2 4" fill="none"/>
+  <path d="M490 260 L490 470" stroke="#C9CCE8" stroke-width="1" stroke-dasharray="2 4" fill="none"/>
+  <path d="M540 260 L540 470" stroke="#C9CCE8" stroke-width="1" stroke-dasharray="2 4" fill="none"/>
+  <path d="M590 260 L590 470" stroke="#C9CCE8" stroke-width="1" stroke-dasharray="2 4" fill="none"/>
+  <rect x="40.0" y="504.0" width="880.0" height="102.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#5B6477"/>
+  <path d="M317.3 165.0 L331.3 165.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M329.3333333333333 159.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M343.3 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#9558B2"/>
+  <path d="M620.7 165.0 L634.7 165.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M632.6666666666666 159.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M646.7 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#9558B2"/>
+  <rect x="290.0" y="268.0" width="150.0" height="22.0" rx="5" fill="#0FA89B"/>
+  <rect x="290.0" y="308.0" width="250.0" height="22.0" rx="5" fill="#2B2F77"/>
+  <rect x="290.0" y="348.0" width="300.0" height="22.0" rx="5" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <circle cx="624" cy="359" r="9" fill="#0FA89B"/>
+  <path d="M619.5 359 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="290.0" y="388.0" width="100.0" height="22.0" rx="5" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <circle cx="624" cy="399" r="9" fill="#E5484D"/>
+  <path d="M620 395 l8 8 M628 395 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <rect x="290.0" y="428.0" width="200.0" height="22.0" rx="5" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <circle cx="624" cy="439" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="415.6" lengthAdjust="spacingAndGlyphs">Why a true property can be out of reach</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="650.2" lengthAdjust="spacingAndGlyphs">examples/nnv/absolute-value.json   |x| = relu(x) + relu(-x)   on inputs from -2 to 3</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="63.0" lengthAdjust="spacingAndGlyphs">The input</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="137.3" lengthAdjust="spacingAndGlyphs">x lies between -2 and 3.</text>
+  <text x="357.3" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="124.5" lengthAdjust="spacingAndGlyphs">After the first layer</text>
+  <text x="357.3" y="155.0" font-size="13" fill="#14162B" textLength="163.3" lengthAdjust="spacingAndGlyphs">relu(x) lies between 0 and 3.</text>
+  <text x="357.3" y="179.0" font-size="13" fill="#14162B" textLength="167.6" lengthAdjust="spacingAndGlyphs">relu(-x) lies between 0 and 2.</text>
+  <text x="357.3" y="203.0" font-size="13" fill="#14162B" textLength="195.1" lengthAdjust="spacingAndGlyphs">Each bound is exact, taken alone.</text>
+  <text x="660.7" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="87.1" lengthAdjust="spacingAndGlyphs">At the output</text>
+  <text x="660.7" y="155.0" font-size="13" fill="#14162B" textLength="177.1" lengthAdjust="spacingAndGlyphs">The sum lies between 0 and 5.</text>
+  <text x="660.7" y="179.0" font-size="13" fill="#14162B" textLength="191.5" lengthAdjust="spacingAndGlyphs">The two are never large together,</text>
+  <text x="660.7" y="197.0" font-size="13" fill="#14162B" textLength="198.0" lengthAdjust="spacingAndGlyphs">and intervals do not know that: the</text>
+  <text x="660.7" y="215.0" font-size="13" fill="#14162B" textLength="204.5" lengthAdjust="spacingAndGlyphs">network never outputs more than 3.</text>
+  <text x="274.0" y="283.0" font-size="13" fill="#14162B" text-anchor="end" textLength="144.5" lengthAdjust="spacingAndGlyphs">what the network outputs</text>
+  <text x="274.0" y="323.0" font-size="13" fill="#14162B" text-anchor="end" textLength="137.3" lengthAdjust="spacingAndGlyphs">what the intervals prove</text>
+  <text x="274.0" y="363.0" font-size="13" fill="#14162B" text-anchor="end" textLength="84.5" lengthAdjust="spacingAndGlyphs">claimed: 0 to 6</text>
+  <text x="642.0" y="357.0" font-size="12.5" fill="#5B6477" textLength="209.2" lengthAdjust="spacingAndGlyphs">verified: the proved box lies inside the</text>
+  <text x="642.0" y="373.0" font-size="12.5" fill="#5B6477" textLength="29.2" lengthAdjust="spacingAndGlyphs">claim</text>
+  <text x="274.0" y="403.0" font-size="13" fill="#14162B" text-anchor="end" textLength="84.5" lengthAdjust="spacingAndGlyphs">claimed: 0 to 2</text>
+  <text x="642.0" y="397.0" font-size="12.5" fill="#5B6477" textLength="147.3" lengthAdjust="spacingAndGlyphs">refuted: the input 3 gives 3</text>
+  <text x="274.0" y="443.0" font-size="13" fill="#14162B" text-anchor="end" textLength="84.5" lengthAdjust="spacingAndGlyphs">claimed: 0 to 4</text>
+  <text x="642.0" y="437.0" font-size="12.5" fill="#5B6477" textLength="196.0" lengthAdjust="spacingAndGlyphs">unknown: true, but 5 is more than 4</text>
+  <text x="290.0" y="486.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="6.7" lengthAdjust="spacingAndGlyphs">0</text>
+  <text x="340.0" y="486.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="6.7" lengthAdjust="spacingAndGlyphs">1</text>
+  <text x="390.0" y="486.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="6.7" lengthAdjust="spacingAndGlyphs">2</text>
+  <text x="440.0" y="486.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="6.7" lengthAdjust="spacingAndGlyphs">3</text>
+  <text x="490.0" y="486.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="6.7" lengthAdjust="spacingAndGlyphs">4</text>
+  <text x="540.0" y="486.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="6.7" lengthAdjust="spacingAndGlyphs">5</text>
+  <text x="590.0" y="486.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="6.7" lengthAdjust="spacingAndGlyphs">6</text>
+  <text x="56.0" y="529.0" font-size="13" fill="#14162B" textLength="740.4" lengthAdjust="spacingAndGlyphs">Interval bounds are sound and coarse. What they prove is always true; what is true is not always within what they can prove. The</text>
+  <text x="56.0" y="547.0" font-size="13" fill="#14162B" textLength="411.6" lengthAdjust="spacingAndGlyphs">verifier then answers unknown, which is never a verdict on the property.</text>
+  <text x="56.0" y="571.0" font-size="13" fill="#14162B" textLength="712.8" lengthAdjust="spacingAndGlyphs">All three answers above are the recorded ones: the first two were checked by Lean's kernel, and the third makes no claim to</text>
+  <text x="56.0" y="589.0" font-size="13" fill="#14162B" textLength="37.6" lengthAdjust="spacingAndGlyphs">check.</text>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "proved",
+  "certificate": {
+    "schema": "maithic.oracle.certificate/1",
+    "kind": "linear.farkas",
+    "claim": "∀ x y : ℚ, x + y ≤ 1 → x ≥ 1 → y ≥ 1 / 2 → False",
+    "data": {
+      "domain": "rat",
+      "variables": ["x", "y"],
+      "hypotheses": [
+        {
+          "name": "h1",
+          "statement": "x + y <= 1"
+        },
+        {
+          "name": "h2",
+          "statement": "x >= 1"
+        },
+        {
+          "name": "h3",
+          "statement": "y >= 1 / 2"
+        }
+      ],
+      "goal": "false",
+      "refutations": [
+        {
+          "assumption": null,
+          "multipliers": ["1", "1", "1"]
+        }
+      ]
+    },
+    "engine": {
+      "name": "MaithicOracle",
+      "version": "0.1.0",
+      "parameters": {}
+    }
+  }
+}

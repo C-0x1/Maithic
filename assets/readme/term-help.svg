@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 874 622" width="874" height="622" role="img" aria-label="A terminal session: maithic help status prints the eight status words with the meaning of each, and maithic help exit-codes prints the fourteen exit codes from 0, success, to 13, regression gate failed.">
+  <title>A terminal session: maithic help status prints the eight status words with the meaning of each, and maithic help exit-codes prints the fourteen exit codes from 0, success, to 13, regression gate failed.</title>
+  <rect width="874" height="622" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h854a10 10 0 0 1 10 10v26h-874z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="437" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic help status, exit-codes</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic help status</text>
+    <text x="22.00" y="77" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">status</text>
+    <text x="123.79" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">meaning</text>
+    <text x="22.00" y="96" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">-----------</text>
+    <text x="123.79" y="96" textLength="728.19" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">---------------------------------------------------------------------------------------------</text>
+    <text x="22.00" y="115" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">verified</text>
+    <text x="123.79" y="115" textLength="728.19" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The kernel accepted the proof of exactly the requested statement and the trust policy passed.</text>
+    <text x="22.00" y="134" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">checked</text>
+    <text x="123.79" y="134" textLength="555.93" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The kernel accepted a proof, but a policy requirement is still pending.</text>
+    <text x="22.00" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">refuted</text>
+    <text x="123.79" y="153" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">A counterexample to the statement was confirmed by the kernel.</text>
+    <text x="22.00" y="172" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">conjectured</text>
+    <text x="123.79" y="172" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Stated and not yet proved or refuted.</text>
+    <text x="22.00" y="191" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unverified</text>
+    <text x="123.79" y="191" textLength="360.18" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Produced by a model or engine and not checked.</text>
+    <text x="22.00" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unknown</text>
+    <text x="123.79" y="210" textLength="368.01" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">A verification method ended without a decision.</text>
+    <text x="22.00" y="229" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">failed</text>
+    <text x="123.79" y="229" textLength="454.14" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The attempt ended without a proof, with a recorded reason.</text>
+    <text x="22.00" y="248" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">abstained</text>
+    <text x="123.79" y="248" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The system declined to choose.</text>
+    <text x="22.00" y="286" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="286" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic help exit-codes</text>
+    <text x="22.00" y="305" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">code</text>
+    <text x="68.98" y="305" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">meaning</text>
+    <text x="22.00" y="324" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">----</text>
+    <text x="68.98" y="324" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">----------------------------------------</text>
+    <text x="22.00" y="343" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0</text>
+    <text x="68.98" y="343" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Success</text>
+    <text x="22.00" y="362" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1</text>
+    <text x="68.98" y="362" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">General failure</text>
+    <text x="22.00" y="381" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2</text>
+    <text x="68.98" y="381" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Usage error</text>
+    <text x="22.00" y="400" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">3</text>
+    <text x="68.98" y="400" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Configuration error</text>
+    <text x="22.00" y="419" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">4</text>
+    <text x="68.98" y="419" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Toolchain or runtime missing</text>
+    <text x="22.00" y="438" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">5</text>
+    <text x="68.98" y="438" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Provider or authentication error</text>
+    <text x="22.00" y="457" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">6</text>
+    <text x="68.98" y="457" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Budget exceeded</text>
+    <text x="22.00" y="476" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">7</text>
+    <text x="68.98" y="476" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Abstained or not verified</text>
+    <text x="22.00" y="495" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">8</text>
+    <text x="68.98" y="495" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Statement refuted</text>
+    <text x="22.00" y="514" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">9</text>
+    <text x="68.98" y="514" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Trust or review policy violation</text>
+    <text x="22.00" y="533" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="68.98" y="533" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Timeout</text>
+    <text x="22.00" y="552" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">11</text>
+    <text x="68.98" y="552" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Cancelled</text>
+    <text x="22.00" y="571" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">12</text>
+    <text x="68.98" y="571" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Feature unavailable in this installation</text>
+    <text x="22.00" y="590" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">13</text>
+    <text x="68.98" y="590" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Regression gate failed</text>
+  </g>
+</svg>

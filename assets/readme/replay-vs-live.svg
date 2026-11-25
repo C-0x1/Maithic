@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 434" role="img" aria-labelledby="replay-vs-live-t replay-vs-live-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="replay-vs-live-t">The same commands, without a key and with one</title>
+  <desc id="replay-vs-live-d">Two cards side by side. Without a key, in replay mode, the answers of the model are read from cassettes in the repository: every model-assisted command runs on any machine with the same result, and the answers were written by hand for the demonstrations. With your key, in live mode, the same commands ask the model you chose, and record mode keeps the exchanges as cassettes.</desc>
+  <rect width="960" height="434" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="431.0" height="230.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="489.0" y="96.0" width="431.0" height="230.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="344.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#0B7F75"/>
+  <rect x="54.0" y="290.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M489.0 106.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#2B2F77"/>
+  <rect x="503.0" y="290.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="515.9" lengthAdjust="spacingAndGlyphs">The same commands, without a key and with one</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="463.2" lengthAdjust="spacingAndGlyphs">maithic prove examples/triangle.lean --provider anthropic</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="90.9" lengthAdjust="spacingAndGlyphs">Without a key</text>
+  <text x="457.0" y="118.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="70.9" lengthAdjust="spacingAndGlyphs">--mode replay</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="319.7" lengthAdjust="spacingAndGlyphs">The model's answers are read from the cassettes in the</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="59.7" lengthAdjust="spacingAndGlyphs">repository.</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="343.2" lengthAdjust="spacingAndGlyphs">Every model-assisted command runs, on any machine, with</text>
+  <text x="54.0" y="215.0" font-size="13" fill="#14162B" textLength="92.5" lengthAdjust="spacingAndGlyphs">the same result.</text>
+  <text x="54.0" y="239.0" font-size="13" fill="#14162B" textLength="334.6" lengthAdjust="spacingAndGlyphs">The answers were written by hand for the demonstrations.</text>
+  <text x="54.0" y="257.0" font-size="13" fill="#14162B" textLength="319.5" lengthAdjust="spacingAndGlyphs">They show the path, and say nothing about how good a</text>
+  <text x="54.0" y="275.0" font-size="13" fill="#14162B" textLength="52.0" lengthAdjust="spacingAndGlyphs">model is.</text>
+  <text x="64.0" y="305.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="131.5" lengthAdjust="spacingAndGlyphs">fixtures/cassettes/</text>
+  <text x="503.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="91.7" lengthAdjust="spacingAndGlyphs">With your key</text>
+  <text x="906.0" y="118.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="17.3" lengthAdjust="spacingAndGlyphs">live</text>
+  <text x="503.0" y="155.0" font-size="13" fill="#14162B" textLength="333.9" lengthAdjust="spacingAndGlyphs">Export the key of the provider you want, and leave --mode</text>
+  <text x="503.0" y="173.0" font-size="13" fill="#14162B" textLength="60.7" lengthAdjust="spacingAndGlyphs">replay out.</text>
+  <text x="503.0" y="197.0" font-size="13" fill="#14162B" textLength="337.5" lengthAdjust="spacingAndGlyphs">The same commands ask the model you chose: Anthropic,</text>
+  <text x="503.0" y="215.0" font-size="13" fill="#14162B" textLength="85.3" lengthAdjust="spacingAndGlyphs">OpenAI or xAI.</text>
+  <text x="503.0" y="239.0" font-size="13" fill="#14162B" textLength="350.5" lengthAdjust="spacingAndGlyphs">With --mode record, the exchanges are kept as cassettes, so</text>
+  <text x="503.0" y="257.0" font-size="13" fill="#14162B" textLength="157.6" lengthAdjust="spacingAndGlyphs">a run can be replayed later.</text>
+  <text x="513.0" y="305.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="318.5" lengthAdjust="spacingAndGlyphs">ANTHROPIC_API_KEY, OPENAI_API_KEY, XAI_API_KEY</text>
+  <text x="56.0" y="369.0" font-size="13" fill="#14162B" textLength="729.4" lengthAdjust="spacingAndGlyphs">Either way, what the model says is a proposal. The same screen, kernel, axiom audit, policy and re-check stand between it and</text>
+  <text x="56.0" y="387.0" font-size="13" fill="#14162B" textLength="99.0" lengthAdjust="spacingAndGlyphs">the word verified.</text>
+</svg>

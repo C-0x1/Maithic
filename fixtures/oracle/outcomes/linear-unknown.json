@@ -1,0 +1,5 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "unknown",
+  "reason": "the hypotheses and the negated goal have rational solutions, and no integer one was found nearby"
+}

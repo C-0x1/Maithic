@@ -1,0 +1,30 @@
+# A task for `maithic algo synth`: what the function is called, what it
+# should do, and examples it has to get right.
+
+name = "runLengths"
+description = "Run-length encoding of a list of natural numbers. Every maximal run of equal neighbours becomes one pair: the value, and how long the run is. The pairs stand in the order of the runs."
+signature = "(l : List Nat) : List (Nat × Nat)"
+constraints = [
+  "Recursion on the structure of the list: no well-founded recursion and no partial definition.",
+  "Nothing beyond the Lean core library.",
+]
+
+[[example]]
+call = "runLengths [1, 1, 2, 3, 3, 3]"
+expect = "[(1, 2), (2, 1), (3, 3)]"
+
+[[example]]
+call = "runLengths []"
+expect = "[]"
+
+[[example]]
+call = "runLengths [7]"
+expect = "[(7, 1)]"
+
+[[example]]
+call = "runLengths [4, 4, 4, 4]"
+expect = "[(4, 4)]"
+
+[[example]]
+call = "(runLengths [5, 5, 6, 5]).length"
+expect = "3"

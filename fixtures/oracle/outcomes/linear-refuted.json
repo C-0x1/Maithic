@@ -1,0 +1,8 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "refuted",
+  "model": {
+    "x": "3",
+    "y": "0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "linear",
+  "domain": "int",
+  "variables": ["x", "y"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "2 * x + 1 = 2 * y"
+    }
+  ],
+  "goal": "x != y"
+}

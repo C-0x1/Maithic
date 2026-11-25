@@ -1,0 +1,190 @@
+# Capability register for P04 Search.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P04"
+name = "Search"
+title = "Retrieval system for mathematical theorem discovery"
+mission = "Find the right definition or lemma in a Lean library from a description in words or a name, by embeddings and by lexical ranking, and measure how well the retrieval works."
+
+[[group]]
+id = "P04-01"
+title = "Indexing pipeline"
+language = "OCaml"
+path = "ocaml/lib/search/indexer/"
+purpose = "Builds and maintains all search indexes from declaration exports."
+
+  [[group.capability]]
+  id = "P04-01-01"
+  title = "Declaration document model"
+  spec = "Search document with name, kind, statement, docstring, module and attributes."
+  status = "done"
+  tests = ["ocaml/test/test_lookup.ml"]
+
+[[group]]
+id = "P04-02"
+title = "Embedding engine"
+language = "Julia"
+path = "julia/MaithicEmbed/src/embed/"
+purpose = "Turns statements and queries into vectors without depending on any provider."
+
+  [[group.capability]]
+  id = "P04-02-01"
+  title = "Embedding interface"
+  spec = "Abstract embedder with `embed(texts)` returning unit-normalized vectors."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P04-02-02"
+  title = "Hashed n-gram embedder"
+  spec = "Dependency-free baseline embedder using feature hashing of character and token n-grams."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P04-02-03"
+  title = "Deterministic embeddings"
+  spec = "Identical output for identical input across runs, within a documented tolerance."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P04-02-04"
+  title = "Query and document modes"
+  spec = "Distinct preprocessing for queries and documents."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P04-02-05"
+  title = "Vector serialization"
+  spec = "Compact binary and JSON vector formats."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+[[group]]
+id = "P04-03"
+title = "Vector index"
+language = "Julia"
+path = "julia/MaithicEmbed/src/index/"
+purpose = "Nearest-neighbor search structures with persistence and filters."
+
+  [[group.capability]]
+  id = "P04-03-01"
+  title = "Flat index"
+  spec = "Exact brute-force search with vectorized dot products."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P04-03-02"
+  title = "Top-k query"
+  spec = "Return identifiers and scores of the k nearest vectors."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P04-03-03"
+  title = "Identifier mapping"
+  spec = "Stable mapping between vector rows and declaration identifiers."
+  status = "done"
+  tests = ["julia/MaithicEmbed/test/runtests.jl"]
+
+[[group]]
+id = "P04-04"
+title = "Lexical and type-pattern retrieval"
+language = "OCaml"
+path = "ocaml/lib/search/lexical/"
+purpose = "Keyword, name and unification-based retrieval that needs no embeddings."
+
+  [[group.capability]]
+  id = "P04-04-01"
+  title = "Inverted index"
+  spec = "Term-to-posting-list index over names, statements and documentation."
+  status = "done"
+  tests = ["ocaml/test/test_lookup.ml"]
+
+  [[group.capability]]
+  id = "P04-04-02"
+  title = "BM25 scoring"
+  spec = "BM25 ranking with per-field weights."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_lookup.ml"]
+
+[[group]]
+id = "P04-05"
+title = "Hybrid fusion and ranking"
+language = "OCaml"
+path = "ocaml/lib/search/rank/"
+purpose = "Combines retrievers into one ranked, deduplicated answer."
+
+  [[group.capability]]
+  id = "P04-05-01"
+  title = "Search entry point"
+  spec = "Single function combining retrievers with options."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_lookup.ml"]
+
+[[group]]
+id = "P04-06"
+title = "Retrieval evaluation"
+language = "R"
+path = "r/maithicstats/R/search-*.R"
+purpose = "Measures retrieval quality with standard metrics and significance tests."
+
+  [[group.capability]]
+  id = "P04-06-01"
+  title = "Query-set format"
+  spec = "Evaluation sets of queries with their relevant declarations."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-search.R"]
+
+  [[group.capability]]
+  id = "P04-06-02"
+  title = "Recall at k"
+  spec = "Recall at several cutoffs with intervals."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-search.R", "r/maithicviz/tests/testthat/test-overview-figures.R"]
+
+  [[group.capability]]
+  id = "P04-06-03"
+  title = "Mean reciprocal rank"
+  spec = "MRR per engine and configuration."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-search.R"]
+
+  [[group.capability]]
+  id = "P04-06-04"
+  title = "nDCG"
+  spec = "Graded-relevance metric computation."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-search.R"]
+
+  [[group.capability]]
+  id = "P04-06-05"
+  title = "Engine comparison table"
+  spec = "Side-by-side metrics per engine."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-search.R"]
+
+  [[group.capability]]
+  id = "P04-06-06"
+  title = "Query latency summary"
+  spec = "Query latency quantiles per engine."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-search.R"]
+
+  [[group.capability]]
+  id = "P04-06-07"
+  title = "Retrieval plots"
+  spec = "Recall curves and latency plots."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-report-figures.R"]
+
+  [[group.capability]]
+  id = "P04-06-08"
+  title = "Retrieval report table"
+  spec = "Summary table for reports."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-search.R"]

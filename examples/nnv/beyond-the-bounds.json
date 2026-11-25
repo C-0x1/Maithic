@@ -1,0 +1,6 @@
+{
+  "schema": "maithic.nnv.property/1",
+  "name": "on [-2, 3] the output stays within [0, 4]",
+  "input": [["-2", "3"]],
+  "output": [["0", "4"]]
+}

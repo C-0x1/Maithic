@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oracle goal",
+  "description": "A goal in the oracle exchange format: hypotheses and a conclusion in the arithmetic language shared by the oracles. A hypothesis is an object with a name, or just its statement. The goal is a comparison, or \"false\" to ask for a refutation of the hypotheses.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.oracle.goal/1"
+    },
+    "kind": {
+      "enum": [
+        "linear",
+        "polynomial",
+        "real"
+      ]
+    },
+    "domain": {
+      "enum": [
+        "int",
+        "rat",
+        "real"
+      ]
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "statement": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "statement"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "goal": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "kind",
+    "goal"
+  ],
+  "additionalProperties": false
+}

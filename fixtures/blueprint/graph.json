@@ -1,0 +1,138 @@
+{
+  "schema": "maithic.blueprint.graph/1",
+  "title": "Odd numbers, squares and triangles",
+  "namespace": "Triangles",
+  "nodes": [
+    {
+      "id": "tri",
+      "kind": "definition",
+      "title": "Triangular numbers",
+      "lean": "Triangles.tri",
+      "stated": true,
+      "argued": false
+    },
+    {
+      "id": "sum-odd",
+      "kind": "definition",
+      "title": "The sum of the first odd numbers",
+      "lean": "Triangles.sumOdd",
+      "stated": true,
+      "argued": false
+    },
+    {
+      "id": "tri-step",
+      "kind": "lemma",
+      "title": "The next triangular number",
+      "lean": "Triangles.tri_succ",
+      "stated": true,
+      "argued": true
+    },
+    {
+      "id": "tri-formula",
+      "kind": "lemma",
+      "title": "Twice a triangular number",
+      "lean": "Triangles.two_mul_tri",
+      "stated": true,
+      "argued": true
+    },
+    {
+      "id": "odd-step",
+      "kind": "lemma",
+      "title": "The next odd number",
+      "lean": "Triangles.sumOdd_succ",
+      "stated": true,
+      "argued": true
+    },
+    {
+      "id": "odd-square",
+      "kind": "theorem",
+      "title": "Odd numbers add up to a square",
+      "lean": "Triangles.sumOdd_eq_square",
+      "stated": true,
+      "argued": true
+    },
+    {
+      "id": "two-triangles",
+      "kind": "lemma",
+      "title": "Two triangles make a square",
+      "lean": "Triangles.tri_add_tri_succ",
+      "stated": true,
+      "argued": true
+    },
+    {
+      "id": "odd-triangles",
+      "kind": "corollary",
+      "title": "Odd numbers add up to two triangles",
+      "lean": "Triangles.sumOdd_eq_two_triangles",
+      "stated": true,
+      "argued": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "tri-step",
+      "to": "tri",
+      "role": "statement"
+    },
+    {
+      "from": "tri-formula",
+      "to": "tri",
+      "role": "statement"
+    },
+    {
+      "from": "tri-formula",
+      "to": "tri-step",
+      "role": "proof"
+    },
+    {
+      "from": "odd-step",
+      "to": "sum-odd",
+      "role": "statement"
+    },
+    {
+      "from": "odd-square",
+      "to": "sum-odd",
+      "role": "statement"
+    },
+    {
+      "from": "odd-square",
+      "to": "odd-step",
+      "role": "proof"
+    },
+    {
+      "from": "two-triangles",
+      "to": "tri",
+      "role": "statement"
+    },
+    {
+      "from": "two-triangles",
+      "to": "tri-formula",
+      "role": "proof"
+    },
+    {
+      "from": "two-triangles",
+      "to": "tri-step",
+      "role": "proof"
+    },
+    {
+      "from": "odd-triangles",
+      "to": "sum-odd",
+      "role": "statement"
+    },
+    {
+      "from": "odd-triangles",
+      "to": "tri",
+      "role": "statement"
+    },
+    {
+      "from": "odd-triangles",
+      "to": "odd-square",
+      "role": "proof"
+    },
+    {
+      "from": "odd-triangles",
+      "to": "two-triangles",
+      "role": "proof"
+    }
+  ]
+}

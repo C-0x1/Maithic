@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark manifest",
+  "description": "The problems of the benchmark suites, exported from the Lean package by `maithic-bench manifest`: for each its identifier, suite, tags, difficulty, the declaration that states it and the statement as Lean prints it.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.bench.manifest/1"
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "problems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*-[0-9]{3}$"
+          },
+          "suite": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "difficulty": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "decl": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "suite",
+          "tags",
+          "difficulty",
+          "decl",
+          "statement"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "count",
+    "problems"
+  ],
+  "additionalProperties": false
+}

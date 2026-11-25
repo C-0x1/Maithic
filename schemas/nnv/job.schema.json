@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verification job",
+  "description": "One run of maithic nnv verify: what the verifier claimed about a property of a network, and what Lean said about the theorem that states the claim. The status is verified when the verifier claims that the property holds and the kernel accepted the theorem that says so within the trust policy; refuted when the same is true of the theorem that says it fails; unknown when the verifier claims nothing; and failed when a claim was made that Lean did not accept. check is absent when there was no claim to check. verdict is what the verifier returned.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.nnv.job/1"
+    },
+    "model": {
+      "type": "string"
+    },
+    "property": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "verified",
+        "refuted",
+        "unknown",
+        "failed"
+      ]
+    },
+    "claim": {
+      "enum": [
+        "verified",
+        "violated",
+        "unknown"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "check": {
+      "type": "object",
+      "properties": {
+        "theorem": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "accepted": {
+          "type": "boolean"
+        },
+        "axioms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "error": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "object"
+        },
+        "elapsed_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "theorem",
+        "statement",
+        "accepted",
+        "axioms",
+        "policy",
+        "elapsed_ms"
+      ]
+    },
+    "verify_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verdict": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema",
+    "model",
+    "property",
+    "status",
+    "claim",
+    "verify_ms",
+    "verdict"
+  ]
+}

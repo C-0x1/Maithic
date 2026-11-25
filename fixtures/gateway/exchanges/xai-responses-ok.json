@@ -1,0 +1,51 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "xai-responses-ok",
+  "provider": "xai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "api": "responses",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "0daf962f-a275-4a3c-839a-047854645532",
+    "object": "response",
+    "status": "completed",
+    "model": "grok-4.7",
+    "output": [
+      {
+        "id": "rs_1",
+        "type": "reasoning",
+        "summary": []
+      },
+      {
+        "id": "msg_1",
+        "type": "message",
+        "status": "completed",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "{\"candidates\": [\"by grind\"]}"
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 150,
+      "output_tokens": 19,
+      "total_tokens": 169,
+      "output_tokens_details": {
+        "reasoning_tokens": 4
+      },
+      "num_sources_used": 0
+    }
+  },
+  "expect": {
+    "text": "{\"candidates\": [\"by grind\"]}",
+    "stop": "end_turn",
+    "input_tokens": 150,
+    "output_tokens": 19,
+    "model": "grok-4.7"
+  }
+}

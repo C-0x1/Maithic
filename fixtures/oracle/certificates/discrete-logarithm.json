@@ -1,0 +1,16 @@
+{
+  "schema": "maithic.oracle.certificate/1",
+  "kind": "discrete.logarithm",
+  "claim": "5 ^ 123456 ≡ 979732 [ZMOD 1000003]",
+  "data": {
+    "base": "5",
+    "target": "979732",
+    "modulus": "1000003",
+    "exponent": "123456"
+  },
+  "engine": {
+    "name": "MaithicOracle",
+    "version": "0.1.0",
+    "parameters": {}
+  }
+}

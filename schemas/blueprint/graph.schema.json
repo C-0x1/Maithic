@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blueprint graph",
+  "description": "The plan of a formalization as a graph. A node is a definition or a claim; an edge says that one node uses another, in its statement or only in its proof. An edge of the proof is listed only when the statement does not use the same node. stated says whether the node has a statement in Lean, argued whether it has an informal proof.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.blueprint.graph/1"
+    },
+    "title": {
+      "type": "string"
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "definition",
+              "lemma",
+              "proposition",
+              "theorem",
+              "corollary"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "lean": {
+            "type": "string"
+          },
+          "stated": {
+            "type": "boolean"
+          },
+          "argued": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "stated",
+          "argued"
+        ]
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "statement",
+              "proof"
+            ]
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "role"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "title",
+    "nodes",
+    "edges"
+  ]
+}

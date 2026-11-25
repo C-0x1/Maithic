@@ -1,0 +1,29 @@
+{
+  "schema": "maithic.oracle.proofs/1",
+  "description": "Clause sets in the DIMACS format with clausal proofs in the LRAT text form. Every proof is listed with what the checker must say about it. The texts are written by hand and kept small enough to follow, except those whose first line names the solver that wrote them.",
+  "proofs": [
+    {"name": "two-atoms", "problem": "two-atoms.cnf", "proof": "two-atoms.lrat", "expect": "accepted"},
+    {"name": "chain", "problem": "chain.cnf", "proof": "chain.lrat", "expect": "accepted"},
+    {"name": "pigeonhole-3-2", "problem": "pigeonhole-3-2.cnf", "proof": "pigeonhole-3-2.lrat", "expect": "accepted"},
+    {"name": "pigeonhole-4-3-solver", "problem": "pigeonhole-4-3.cnf", "proof": "pigeonhole-4-3-cadical.lrat", "expect": "accepted"},
+    {"name": "random-40-220-solver", "problem": "random-40-220.cnf", "proof": "random-40-220-cadical.lrat", "expect": "accepted"},
+    {"name": "solver-proof-truncated", "problem": "pigeonhole-4-3.cnf", "proof": "pigeonhole-4-3-truncated.lrat", "expect": "rejected",
+     "step": 14, "reason": "the empty clause is not derived"},
+    {"name": "solver-proof-for-another-problem", "problem": "pigeonhole-3-2.cnf", "proof": "pigeonhole-4-3-cadical.lrat", "expect": "rejected",
+     "step": 0, "reason": "there is no clause 22"},
+    {"name": "missing-hint", "problem": "two-atoms.cnf", "proof": "two-atoms-missing-hint.lrat", "expect": "rejected",
+     "step": 0, "reason": "ends without a conflict"},
+    {"name": "unknown-clause", "problem": "two-atoms.cnf", "proof": "two-atoms-unknown-clause.lrat", "expect": "rejected",
+     "step": 1, "reason": "there is no clause 9"},
+    {"name": "no-empty-clause", "problem": "two-atoms.cnf", "proof": "two-atoms-no-empty-clause.lrat", "expect": "rejected",
+     "step": 1, "reason": "the empty clause is not derived"},
+    {"name": "not-unit", "problem": "two-atoms.cnf", "proof": "two-atoms-not-unit.lrat", "expect": "rejected",
+     "step": 0, "reason": "more than one literal"},
+    {"name": "deleted-hint", "problem": "two-atoms.cnf", "proof": "two-atoms-deleted-hint.lrat", "expect": "rejected",
+     "step": 2, "reason": "there is no clause 3"},
+    {"name": "rat-step", "problem": "two-atoms.cnf", "proof": "two-atoms-rat-step.lrat", "expect": "unreadable",
+     "reason": "RAT steps"},
+    {"name": "satisfiable-claimed", "problem": "satisfiable.cnf", "proof": "satisfiable-claimed.lrat", "expect": "rejected",
+     "step": 0, "reason": "more than one literal"}
+  ]
+}

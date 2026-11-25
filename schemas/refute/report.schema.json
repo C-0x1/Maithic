@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Refutation report",
+  "description": "What a search for counterexamples found about the statements of a Lean file. Each statement has a verdict: refuted, when Lean accepted a proof that the statement is false at a counterexample, and that proof is given; vacuous, when Lean proved that its hypotheses cannot hold together or that a variable ranges over nothing; unconfirmed, when a counterexample was found and Lean did not accept the proof built from it; not-refuted, when nothing was found, which proves nothing. The steps say what each method did within the budget: tests on sampled values, a solver, and the vacuity checks. A counterexample is a list of variables with values as Lean text.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.refute.report/1"
+    },
+    "file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "statements": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "refuted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "vacuous": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unconfirmed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "standing": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "statements",
+        "refuted",
+        "vacuous",
+        "unconfirmed",
+        "standing"
+      ],
+      "additionalProperties": false
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "theorem": {
+            "type": "string",
+            "minLength": 1
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verdict": {
+            "enum": [
+              "refuted",
+              "vacuous",
+              "unconfirmed",
+              "not-refuted"
+            ]
+          },
+          "counterexample": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "name",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "foundBy": {
+            "enum": [
+              "test",
+              "oracle",
+              "vacuity"
+            ]
+          },
+          "refutation": {
+            "type": "object",
+            "properties": {
+              "lean": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The proof that the statement is false, as Lean accepted it."
+              },
+              "closedBy": {
+                "type": "string",
+                "minLength": 1
+              },
+              "axioms": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "lean",
+              "closedBy",
+              "axioms"
+            ],
+            "additionalProperties": false
+          },
+          "unconfirmed": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Why Lean did not confirm the counterexample."
+          },
+          "vacuity": {
+            "type": "string",
+            "minLength": 1,
+            "description": "What makes the statement vacuous."
+          },
+          "methods": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "test",
+                "oracle",
+                "vacuity"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "budget": {
+            "type": "object",
+            "properties": {
+              "cases": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "size": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "seed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "rounds": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "seconds": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "cases",
+              "size",
+              "seed",
+              "rounds",
+              "seconds"
+            ],
+            "additionalProperties": false
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "enum": [
+                    "test",
+                    "oracle",
+                    "vacuity"
+                  ]
+                },
+                "outcome": {
+                  "enum": [
+                    "counterexample",
+                    "passed",
+                    "gave-up",
+                    "not-applicable",
+                    "proved",
+                    "unknown",
+                    "unavailable",
+                    "vacuous",
+                    "trivial",
+                    "nothing",
+                    "skipped"
+                  ]
+                },
+                "detail": {
+                  "type": "string"
+                },
+                "candidate": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "value": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "value"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "rejection": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "seconds": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "method",
+                "outcome",
+                "detail",
+                "seconds"
+              ],
+              "additionalProperties": false,
+              "if": {
+                "properties": {
+                  "outcome": {
+                    "const": "counterexample"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "candidate",
+                  "confirmed"
+                ]
+              },
+              "else": {
+                "not": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "candidate"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "confirmed"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "rejection"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "seconds": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "theorem",
+          "line",
+          "statement",
+          "verdict",
+          "methods",
+          "budget",
+          "steps",
+          "seconds"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "verdict": {
+                  "const": "refuted"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "counterexample",
+                "foundBy",
+                "refutation"
+              ]
+            },
+            "else": {
+              "not": {
+                "required": [
+                  "refutation"
+                ]
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "verdict": {
+                  "const": "unconfirmed"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "counterexample",
+                "foundBy",
+                "unconfirmed"
+              ]
+            },
+            "else": {
+              "not": {
+                "required": [
+                  "unconfirmed"
+                ]
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "verdict": {
+                  "const": "vacuous"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "vacuity"
+              ]
+            },
+            "else": {
+              "not": {
+                "required": [
+                  "vacuity"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "file",
+    "summary",
+    "results"
+  ],
+  "additionalProperties": false
+}

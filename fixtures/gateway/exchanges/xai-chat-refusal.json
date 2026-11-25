@@ -1,0 +1,34 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "xai-chat-refusal",
+  "provider": "xai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "api": "chat_completions",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "b2",
+    "object": "chat.completion",
+    "model": "grok-4.7",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": null,
+          "refusal": "I cannot answer that."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 9,
+      "completion_tokens": 6,
+      "total_tokens": 15
+    }
+  },
+  "expect": {
+    "error": "refused"
+  }
+}

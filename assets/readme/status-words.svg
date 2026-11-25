@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 485" role="img" aria-labelledby="status-words-t status-words-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="status-words-t">The eight status words</title>
+  <desc id="status-words-d">Eight tiles, one for each status word Maithic uses. Verified: the kernel accepted the proof of exactly the requested statement and the trust policy passed. Checked: the kernel accepted a proof, but a policy requirement such as the re-check is pending. Refuted: a counterexample was confirmed by the kernel. Conjectured: stated and not yet proved or refuted. Unverified: produced by a model or engine and not checked. Unknown: a verification method ended without a decision. Failed: the attempt ended without a proof, with a recorded reason. Abstained: the system declined to choose. Only verified is presented as an established result.</desc>
+  <rect width="960" height="485" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="209.5" height="121.0" rx="10" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.5"/>
+  <rect x="263.5" y="96.0" width="209.5" height="121.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="487.0" y="96.0" width="209.5" height="121.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="710.5" y="96.0" width="209.5" height="121.0" rx="10" fill="#FFFFFF" stroke="#B37400" stroke-width="1.5"/>
+  <rect x="40.0" y="231.0" width="209.5" height="104.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="263.5" y="231.0" width="209.5" height="104.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="487.0" y="231.0" width="209.5" height="104.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="710.5" y="231.0" width="209.5" height="104.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="353.0" width="880.0" height="102.0" rx="10" fill="#E8E9F3"/>
+  <rect x="40.0" y="96.0" width="7.0" height="121.0" rx="3" fill="#0FA89B"/>
+  <rect x="263.5" y="96.0" width="7.0" height="121.0" rx="3" fill="#0B7F75"/>
+  <rect x="487.0" y="96.0" width="7.0" height="121.0" rx="3" fill="#E5484D"/>
+  <rect x="710.5" y="96.0" width="7.0" height="121.0" rx="3" fill="#B37400"/>
+  <rect x="40.0" y="231.0" width="7.0" height="104.0" rx="3" fill="#5B6477"/>
+  <rect x="263.5" y="231.0" width="7.0" height="104.0" rx="3" fill="#5B6477"/>
+  <rect x="487.0" y="231.0" width="7.0" height="104.0" rx="3" fill="#5B6477"/>
+  <rect x="710.5" y="231.0" width="7.0" height="104.0" rx="3" fill="#5B6477"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="581.9" lengthAdjust="spacingAndGlyphs">Eight status words, and one of them means established</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="154.4" lengthAdjust="spacingAndGlyphs">maithic help status</text>
+  <text x="60.0" y="125.0" font-size="19" fill="#0FA89B" font-weight="700" textLength="67.6" lengthAdjust="spacingAndGlyphs">verified</text>
+  <text x="60.0" y="147.0" font-size="12.5" fill="#14162B" textLength="134.1" lengthAdjust="spacingAndGlyphs">The kernel accepted the</text>
+  <text x="60.0" y="164.0" font-size="12.5" fill="#14162B" textLength="105.6" lengthAdjust="spacingAndGlyphs">proof of exactly the</text>
+  <text x="60.0" y="181.0" font-size="12.5" fill="#14162B" textLength="141.8" lengthAdjust="spacingAndGlyphs">requested statement, and</text>
+  <text x="60.0" y="198.0" font-size="12.5" fill="#14162B" textLength="127.8" lengthAdjust="spacingAndGlyphs">the trust policy passed.</text>
+  <text x="283.5" y="125.0" font-size="19" fill="#0B7F75" font-weight="700" textLength="76.0" lengthAdjust="spacingAndGlyphs">checked</text>
+  <text x="283.5" y="147.0" font-size="12.5" fill="#14162B" textLength="123.7" lengthAdjust="spacingAndGlyphs">The kernel accepted a</text>
+  <text x="283.5" y="164.0" font-size="12.5" fill="#14162B" textLength="98.7" lengthAdjust="spacingAndGlyphs">proof, but a policy</text>
+  <text x="283.5" y="181.0" font-size="12.5" fill="#14162B" textLength="137.6" lengthAdjust="spacingAndGlyphs">requirement, such as the</text>
+  <text x="283.5" y="198.0" font-size="12.5" fill="#14162B" textLength="136.9" lengthAdjust="spacingAndGlyphs">re-check, is still pending.</text>
+  <text x="507.0" y="125.0" font-size="19" fill="#E5484D" font-weight="700" textLength="64.4" lengthAdjust="spacingAndGlyphs">refuted</text>
+  <text x="507.0" y="147.0" font-size="12.5" fill="#14162B" textLength="134.8" lengthAdjust="spacingAndGlyphs">A counterexample to the</text>
+  <text x="507.0" y="164.0" font-size="12.5" fill="#14162B" textLength="139.0" lengthAdjust="spacingAndGlyphs">statement was confirmed</text>
+  <text x="507.0" y="181.0" font-size="12.5" fill="#14162B" textLength="75.0" lengthAdjust="spacingAndGlyphs">by the kernel.</text>
+  <text x="730.5" y="125.0" font-size="19" fill="#B37400" font-weight="700" textLength="107.7" lengthAdjust="spacingAndGlyphs">conjectured</text>
+  <text x="730.5" y="147.0" font-size="12.5" fill="#14162B" textLength="146.6" lengthAdjust="spacingAndGlyphs">Stated, and not yet proved</text>
+  <text x="730.5" y="164.0" font-size="12.5" fill="#14162B" textLength="57.0" lengthAdjust="spacingAndGlyphs">or refuted.</text>
+  <text x="60.0" y="260.0" font-size="19" fill="#5B6477" font-weight="700" textLength="90.8" lengthAdjust="spacingAndGlyphs">unverified</text>
+  <text x="60.0" y="282.0" font-size="12.5" fill="#14162B" textLength="150.1" lengthAdjust="spacingAndGlyphs">Produced by a model or an</text>
+  <text x="60.0" y="299.0" font-size="12.5" fill="#14162B" textLength="139.7" lengthAdjust="spacingAndGlyphs">engine, and not checked.</text>
+  <text x="283.5" y="260.0" font-size="19" fill="#5B6477" font-weight="700" textLength="83.4" lengthAdjust="spacingAndGlyphs">unknown</text>
+  <text x="283.5" y="282.0" font-size="12.5" fill="#14162B" textLength="116.0" lengthAdjust="spacingAndGlyphs">A verification method</text>
+  <text x="283.5" y="299.0" font-size="12.5" fill="#14162B" textLength="141.1" lengthAdjust="spacingAndGlyphs">ended without a decision.</text>
+  <text x="507.0" y="260.0" font-size="19" fill="#5B6477" font-weight="700" textLength="49.6" lengthAdjust="spacingAndGlyphs">failed</text>
+  <text x="507.0" y="282.0" font-size="12.5" fill="#14162B" textLength="148.0" lengthAdjust="spacingAndGlyphs">The attempt ended without</text>
+  <text x="507.0" y="299.0" font-size="12.5" fill="#14162B" textLength="131.3" lengthAdjust="spacingAndGlyphs">a proof, with a recorded</text>
+  <text x="507.0" y="316.0" font-size="12.5" fill="#14162B" textLength="41.7" lengthAdjust="spacingAndGlyphs">reason.</text>
+  <text x="730.5" y="260.0" font-size="19" fill="#5B6477" font-weight="700" textLength="88.7" lengthAdjust="spacingAndGlyphs">abstained</text>
+  <text x="730.5" y="282.0" font-size="12.5" fill="#14162B" textLength="128.5" lengthAdjust="spacingAndGlyphs">The system declined to</text>
+  <text x="730.5" y="299.0" font-size="12.5" fill="#14162B" textLength="43.8" lengthAdjust="spacingAndGlyphs">choose.</text>
+  <text x="56.0" y="378.0" font-size="13" fill="#14162B" textLength="718.3" lengthAdjust="spacingAndGlyphs">Only verified is ever presented as an established result. When a result depends on several parts, the weakest part decides: a</text>
+  <text x="56.0" y="396.0" font-size="13" fill="#14162B" textLength="379.4" lengthAdjust="spacingAndGlyphs">proof built on a verified lemma and an unverified one is unverified.</text>
+  <text x="56.0" y="420.0" font-size="13" fill="#14162B" textLength="731.8" lengthAdjust="spacingAndGlyphs">One function can say the word: Trust_policy.decide, from facts that Lean reported. A model cannot produce it, and neither can a</text>
+  <text x="56.0" y="438.0" font-size="13" fill="#14162B" textLength="117.8" lengthAdjust="spacingAndGlyphs">configuration switch.</text>
+</svg>

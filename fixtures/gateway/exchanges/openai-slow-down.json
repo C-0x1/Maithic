@@ -1,0 +1,20 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "openai-slow-down",
+  "provider": "openai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 503,
+  "headers": {},
+  "body": {
+    "error": {
+      "message": "Slow down",
+      "type": "server_error",
+      "param": null,
+      "code": "slow_down"
+    }
+  },
+  "expect": {
+    "error": "overloaded"
+  }
+}

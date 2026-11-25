@@ -1,0 +1,20 @@
+# The default trust policy: what Maithic accepts as evidence.
+#
+# A result is reported as `verified` only when Lean's kernel accepted it, it
+# rests on nothing but the axioms listed here, and a fresh process re-checked
+# it. Copy this file to .maithic/trust.toml and point `ledger.policy` at it to
+# change the policy of a project.
+
+[trust]
+name = "default"
+
+# The axioms of ordinary mathematics in Lean: propositional extensionality,
+# quotient soundness and choice. Remove Classical.choice for constructive work.
+allowed_axioms = ["propext", "Quot.sound", "Classical.choice"]
+
+# Proofs by compiled evaluation (`native_decide`) trust the compiler as well as
+# the kernel. They are rejected unless this is set to true.
+allow_native = false
+
+# Re-check every proof in a new process before calling it verified.
+require_recheck = true

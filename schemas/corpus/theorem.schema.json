@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Theorem record",
+  "description": "A theorem of a Lean file: its name, where it stands, its statement as Lean prints it, its proof as it is written, how many smallest tactic steps the proof has and how many constants its proof term refers to, and whether it is complete, which means that it does not rest on sorry. The identifier is the first sixteen digits of the SHA-256 of the record without it.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.corpus.theorem/1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "module": {
+      "type": "string"
+    },
+    "file": {
+      "type": "string"
+    },
+    "line": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proof": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "premises": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "complete": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "name",
+    "module",
+    "file",
+    "line",
+    "statement",
+    "proof",
+    "steps",
+    "premises",
+    "complete"
+  ],
+  "additionalProperties": false
+}

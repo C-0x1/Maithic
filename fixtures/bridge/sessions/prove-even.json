@@ -1,0 +1,128 @@
+{
+  "schema": "maithic.bridge.session/1",
+  "name": "prove-even",
+  "title": "Guarded candidates on a shared environment: the first proof that checks wins",
+  "steps": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "loadHeader",
+        "params": {
+          "imports": []
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 1,
+          "cached": false
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tryCandidates",
+        "params": {
+          "env": 1,
+          "names": [
+            "even_add_even"
+          ],
+          "stopOnFirst": true,
+          "candidates": [
+            {
+              "source": "theorem even_add_even (a b : Nat) (ha : a % 2 = 0) (hb : b % 2 = 0) : (a + b) % 2 = 0 := by rfl",
+              "untrusted": "by rfl"
+            },
+            {
+              "source": "theorem even_add_even (a b : Nat) (ha : a % 2 = 0) (hb : b % 2 = 0) : (a + b) % 2 = 0 := by sorry",
+              "untrusted": "by sorry"
+            },
+            {
+              "source": "theorem even_add_even (a b : Nat) (ha : a % 2 = 0) (hb : b % 2 = 0) : (a + b) % 2 = 0 := by omega",
+              "untrusted": "by omega"
+            },
+            {
+              "source": "theorem even_add_even (a b : Nat) (ha : a % 2 = 0) (hb : b % 2 = 0) : (a + b) % 2 = 0 := by simp",
+              "untrusted": "by simp"
+            }
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "results": [
+            {
+              "index": 0,
+              "admitted": true,
+              "report": {
+                "ok": false,
+                "errors": 1
+              }
+            },
+            {
+              "index": 1,
+              "admitted": false,
+              "rejection": {
+                "$contains": "sorry"
+              }
+            },
+            {
+              "index": 2,
+              "admitted": true,
+              "report": {
+                "ok": true,
+                "errors": 0,
+                "decls": [
+                  {
+                    "name": "even_add_even",
+                    "found": true,
+                    "kind": "theorem",
+                    "usesSorry": false,
+                    "type": "∀ (a b : Nat), a % 2 = 0 → b % 2 = 0 → (a + b) % 2 = 0",
+                    "axioms": [
+                      "propext",
+                      "Quot.sound"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "tryCandidates",
+        "params": {
+          "env": 1,
+          "names": [
+            "even_add_even"
+          ],
+          "candidates": [
+            {
+              "source": "theorem even_add_even (a b : Nat) (ha : a % 2 = 0) (hb : b % 2 = 0) : (a + b) % 2 = 0 := by omega"
+            }
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "results": [
+            {
+              "index": 0,
+              "admitted": false,
+              "rejection": {
+                "$contains": "theorem"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

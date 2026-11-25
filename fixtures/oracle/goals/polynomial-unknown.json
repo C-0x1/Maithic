@@ -1,0 +1,13 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "polynomial",
+  "domain": "rat",
+  "variables": ["x"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "x^2 = 0"
+    }
+  ],
+  "goal": "x = 0"
+}

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 604" role="img" aria-labelledby="ci-jobs-t ci-jobs-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="ci-jobs-t">The five jobs of the workflow and its gate</title>
+  <desc id="ci-jobs-d">Six cards. The OCaml job builds the command and the developer tool, runs the unit tests and the repository gates. The Lean job builds the libraries, the Bridge and the tools, failing on warnings, and runs the Lean tests. The Julia job tests the eight packages. The R job installs the two packages and runs their tests. The integration job brings OCaml, Lean and Julia together: the real Bridge, the built command, the oracle engines, and the sessions a user would run. The last card is the gate, which succeeds only when all five did. No job needs a key.</desc>
+  <rect width="1040" height="604" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="308.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+  <rect x="366.0" y="96.0" width="308.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="692.0" y="96.0" width="308.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <rect x="40.0" y="308.0" width="308.0" height="188.0" rx="10" fill="#FFFFFF" stroke="#276DC3" stroke-width="1.5"/>
+  <rect x="366.0" y="308.0" width="308.0" height="188.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="692.0" y="308.0" width="308.0" height="188.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="514.0" width="960.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#EC6813"/>
+  <rect x="54.0" y="254.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M366.0 106.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#2B2F77"/>
+  <rect x="380.0" y="254.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M692.0 106.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#9558B2"/>
+  <rect x="706.0" y="254.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 318.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#276DC3"/>
+  <rect x="54.0" y="460.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M366.0 318.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#2B2F77"/>
+  <rect x="380.0" y="460.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M692.0 318.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#0B7F75"/>
+  <rect x="706.0" y="460.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="536.7" lengthAdjust="spacingAndGlyphs">Five jobs and a gate, and none of them needs a key</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="195.0" lengthAdjust="spacingAndGlyphs">.github/workflows/ci.yml</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="45.1" lengthAdjust="spacingAndGlyphs">OCaml</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="225.5" lengthAdjust="spacingAndGlyphs">Builds the command and the developer</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="24.6" lengthAdjust="spacingAndGlyphs">tool.</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="224.0" lengthAdjust="spacingAndGlyphs">Runs the unit tests, which need neither</text>
+  <text x="54.0" y="215.0" font-size="13" fill="#14162B" textLength="114.9" lengthAdjust="spacingAndGlyphs">Lean nor a network.</text>
+  <text x="54.0" y="239.0" font-size="13" fill="#14162B" textLength="151.8" lengthAdjust="spacingAndGlyphs">Runs the repository gates.</text>
+  <text x="64.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="242.3" lengthAdjust="spacingAndGlyphs">make build-ocaml test-ocaml hygiene</text>
+  <text x="380.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="32.7" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="380.0" y="155.0" font-size="13" fill="#14162B" textLength="219.7" lengthAdjust="spacingAndGlyphs">Builds the libraries, the Bridge and the</text>
+  <text x="380.0" y="173.0" font-size="13" fill="#14162B" textLength="164.8" lengthAdjust="spacingAndGlyphs">tools, and fails on a warning.</text>
+  <text x="380.0" y="197.0" font-size="13" fill="#14162B" textLength="220.4" lengthAdjust="spacingAndGlyphs">Runs the compile-time checks and the</text>
+  <text x="380.0" y="215.0" font-size="13" fill="#14162B" textLength="144.5" lengthAdjust="spacingAndGlyphs">scripted Bridge sessions.</text>
+  <text x="390.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="173.1" lengthAdjust="spacingAndGlyphs">make build-lean test-lean</text>
+  <text x="706.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="31.9" lengthAdjust="spacingAndGlyphs">Julia</text>
+  <text x="706.0" y="155.0" font-size="13" fill="#14162B" textLength="146.7" lengthAdjust="spacingAndGlyphs">Tests the eight packages.</text>
+  <text x="706.0" y="179.0" font-size="13" fill="#14162B" textLength="234.2" lengthAdjust="spacingAndGlyphs">They depend on the standard library and</text>
+  <text x="706.0" y="197.0" font-size="13" fill="#14162B" textLength="208.9" lengthAdjust="spacingAndGlyphs">on each other, so nothing is fetched.</text>
+  <text x="716.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="103.8" lengthAdjust="spacingAndGlyphs">make test-julia</text>
+  <text x="54.0" y="331.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="10.1" lengthAdjust="spacingAndGlyphs">R</text>
+  <text x="54.0" y="367.0" font-size="13" fill="#14162B" textLength="228.4" lengthAdjust="spacingAndGlyphs">Installs the two packages and runs their</text>
+  <text x="54.0" y="385.0" font-size="13" fill="#14162B" textLength="206.7" lengthAdjust="spacingAndGlyphs">tests: the statistics, and every figure</text>
+  <text x="54.0" y="403.0" font-size="13" fill="#14162B" textLength="152.5" lengthAdjust="spacingAndGlyphs">drawn from recorded data.</text>
+  <text x="64.0" y="475.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">make test-r</text>
+  <text x="380.0" y="331.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="72.3" lengthAdjust="spacingAndGlyphs">Integration</text>
+  <text x="380.0" y="367.0" font-size="13" fill="#14162B" textLength="236.3" lengthAdjust="spacingAndGlyphs">OCaml, Lean and Julia together: the built</text>
+  <text x="380.0" y="385.0" font-size="13" fill="#14162B" textLength="237.8" lengthAdjust="spacingAndGlyphs">command against the real Bridge and the</text>
+  <text x="380.0" y="403.0" font-size="13" fill="#14162B" textLength="88.2" lengthAdjust="spacingAndGlyphs">oracle engines.</text>
+  <text x="380.0" y="427.0" font-size="13" fill="#14162B" textLength="234.2" lengthAdjust="spacingAndGlyphs">Then the sessions of the documentation,</text>
+  <text x="380.0" y="445.0" font-size="13" fill="#14162B" textLength="65.1" lengthAdjust="spacingAndGlyphs">end to end.</text>
+  <text x="390.0" y="475.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="221.5" lengthAdjust="spacingAndGlyphs">make integration e2e e2e-minimal</text>
+  <text x="706.0" y="331.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="121.4" lengthAdjust="spacingAndGlyphs">All checks passed</text>
+  <text x="706.0" y="367.0" font-size="13" fill="#14162B" textLength="216.8" lengthAdjust="spacingAndGlyphs">Succeeds only when the five jobs did.</text>
+  <text x="706.0" y="391.0" font-size="13" fill="#14162B" textLength="209.6" lengthAdjust="spacingAndGlyphs">This is the one check to require on a</text>
+  <text x="706.0" y="409.0" font-size="13" fill="#14162B" textLength="101.2" lengthAdjust="spacingAndGlyphs">protected branch.</text>
+  <text x="716.0" y="475.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">the gate</text>
+  <text x="56.0" y="539.0" font-size="13" fill="#14162B" textLength="788.8" lengthAdjust="spacingAndGlyphs">Model calls are answered from the cassettes in the repository, so the workflow has no secret and gives the same result on a fork. make ci</text>
+  <text x="56.0" y="557.0" font-size="13" fill="#14162B" textLength="331.7" lengthAdjust="spacingAndGlyphs">runs the same steps, in the same order, on your machine.</text>
+</svg>

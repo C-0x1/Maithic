@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ranking of tactics by a tactic model",
+  "description": "What a tactic model says about one goal: for each candidate tactic the template it was read as and the probability the model gives it among the candidates, which add up to one, and for the goal a value, the model's estimate of the chance that the next tactic closes a goal. When the candidates are those of the step-wise search, each also has the prior the search gives it and the prior it has after the guide weighed it. The candidates come most probable first. A ranking is advice on the order of a search; nothing in it was checked by Lean.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.guide.ranking/1"
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal": {
+      "type": "string"
+    },
+    "value": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "tactic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "template": {
+            "type": "string"
+          },
+          "prior": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "search_prior": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          },
+          "guided_prior": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "tactic",
+          "template",
+          "prior"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "model",
+    "goal",
+    "value",
+    "candidates"
+  ],
+  "additionalProperties": false
+}

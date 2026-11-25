@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 702 603" width="702" height="603" role="img" aria-label="A terminal session: maithic bench run with AI switched off proves the 24 problems of the basics suite with the automation portfolio. Every row is a problem with the status verified, the proof that was found and the time it took, and the last line gives 24 of 24.">
+  <title>A terminal session: maithic bench run with AI switched off proves the 24 problems of the basics suite with the automation portfolio. Every row is a problem with the status verified, the proof that was found and the time it took, and the last line gives 24 of 24.</title>
+  <rect width="702" height="603" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h682a10 10 0 0 1 10 10v26h-702z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="351" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic bench run</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic bench run --no-ai</text>
+    <text x="22.00" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">problem</text>
+    <text x="115.96" y="77" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">status</text>
+    <text x="194.26" y="77" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="280.39" y="77" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">proof</text>
+    <text x="648.40" y="77" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">ms</text>
+    <text x="22.00" y="96" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">----------</text>
+    <text x="115.96" y="96" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------</text>
+    <text x="194.26" y="96" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">---------</text>
+    <text x="280.39" y="96" textLength="352.35" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">---------------------------------------------</text>
+    <text x="648.40" y="96" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">----</text>
+    <text x="22.00" y="115" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-001</text>
+    <text x="115.96" y="115" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="115" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="115" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold and_comm'; intros; simp_all</text>
+    <text x="648.40" y="115" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2071</text>
+    <text x="22.00" y="134" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-002</text>
+    <text x="115.96" y="134" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="134" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="134" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold or_comm'; intros; grind</text>
+    <text x="648.40" y="134" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">958</text>
+    <text x="22.00" y="153" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-003</text>
+    <text x="115.96" y="153" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="153" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="153" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold imp_trans; intros; simp_all</text>
+    <text x="648.40" y="153" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">937</text>
+    <text x="22.00" y="172" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-004</text>
+    <text x="115.96" y="172" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="172" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="172" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold add_comm'; intros; omega</text>
+    <text x="648.40" y="172" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1197</text>
+    <text x="22.00" y="191" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-005</text>
+    <text x="115.96" y="191" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="191" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="191" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold even_add_even; intros; omega</text>
+    <text x="648.40" y="191" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1098</text>
+    <text x="22.00" y="210" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-006</text>
+    <text x="115.96" y="210" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="210" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="210" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold lt_succ_of_le'; intros; omega</text>
+    <text x="648.40" y="210" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1037</text>
+    <text x="22.00" y="229" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-007</text>
+    <text x="115.96" y="229" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="229" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="229" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold mul_two; intros; omega</text>
+    <text x="648.40" y="229" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">949</text>
+    <text x="22.00" y="248" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-008</text>
+    <text x="115.96" y="248" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="248" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="248" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold succ_ne_zero'; intros; simp</text>
+    <text x="648.40" y="248" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">925</text>
+    <text x="22.00" y="267" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-009</text>
+    <text x="115.96" y="267" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="267" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="267" textLength="336.69" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold add_one_le_of_lt; intros; trivial</text>
+    <text x="648.40" y="267" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1230</text>
+    <text x="22.00" y="286" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-010</text>
+    <text x="115.96" y="286" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="286" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="286" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold length_append'; intros; simp</text>
+    <text x="648.40" y="286" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">973</text>
+    <text x="22.00" y="305" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-011</text>
+    <text x="115.96" y="305" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="305" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="305" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold reverse_reverse'; intros; simp</text>
+    <text x="648.40" y="305" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1049</text>
+    <text x="22.00" y="324" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-012</text>
+    <text x="115.96" y="324" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="324" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="324" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold small_sum; intros; rfl</text>
+    <text x="648.40" y="324" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1218</text>
+    <text x="22.00" y="343" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-013</text>
+    <text x="115.96" y="343" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="343" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="343" textLength="328.86" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold not_not_intro'; intros; simp_all</text>
+    <text x="648.40" y="343" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1110</text>
+    <text x="22.00" y="362" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-014</text>
+    <text x="115.96" y="362" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="362" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="362" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold and_assoc'; intros; simp_all</text>
+    <text x="648.40" y="362" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1032</text>
+    <text x="22.00" y="381" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-015</text>
+    <text x="115.96" y="381" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="381" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="381" textLength="328.86" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold and_or_distrib; intros; simp_all</text>
+    <text x="648.40" y="381" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1149</text>
+    <text x="22.00" y="400" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-016</text>
+    <text x="115.96" y="400" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="400" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="400" textLength="328.86" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold contrapositive; intros; simp_all</text>
+    <text x="648.40" y="400" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1167</text>
+    <text x="22.00" y="419" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-017</text>
+    <text x="115.96" y="419" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="419" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="419" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold odd_add_odd; intros; omega</text>
+    <text x="648.40" y="419" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1176</text>
+    <text x="22.00" y="438" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-018</text>
+    <text x="115.96" y="438" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="438" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="438" textLength="352.35" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold sub_add_cancel_of_le; intros; omega</text>
+    <text x="648.40" y="438" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1241</text>
+    <text x="22.00" y="457" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-019</text>
+    <text x="115.96" y="457" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="457" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="457" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold max_comm'; intros; omega</text>
+    <text x="648.40" y="457" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1183</text>
+    <text x="22.00" y="476" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-020</text>
+    <text x="115.96" y="476" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="476" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="476" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold le_antisymm'; intros; omega</text>
+    <text x="648.40" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1130</text>
+    <text x="22.00" y="495" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-021</text>
+    <text x="115.96" y="495" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="495" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="495" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold int_add_self; intros; omega</text>
+    <text x="648.40" y="495" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">999</text>
+    <text x="22.00" y="514" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-022</text>
+    <text x="115.96" y="514" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="514" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="514" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold length_map'; intros; simp</text>
+    <text x="648.40" y="514" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1039</text>
+    <text x="22.00" y="533" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-023</text>
+    <text x="115.96" y="533" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="533" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="533" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold append_nil'; intros; simp</text>
+    <text x="648.40" y="533" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1015</text>
+    <text x="22.00" y="552" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics-024</text>
+    <text x="115.96" y="552" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="194.26" y="552" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">portfolio</text>
+    <text x="280.39" y="552" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by unfold two_pow_ten; intros; rfl</text>
+    <text x="648.40" y="552" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1011</text>
+    <text x="22.00" y="571" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">24 of 24 verified</text>
+  </g>
+</svg>

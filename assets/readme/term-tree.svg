@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 498 869" width="498" height="869" role="img" aria-label="A terminal session: maithic tree prints a recorded proof search step by step: which goal was expanded, which tactics were tried, and what each led to.">
+  <title>A terminal session: maithic tree prints a recorded proof search step by step: which goal was expanded, which tactics were tried, and what each led to.</title>
+  <rect width="498" height="869" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h478a10 10 0 0 1 10 10v26h-498z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="249" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic tree --steps</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="438.48" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic tree fixtures/trees/found/double_eq.json --steps</text>
+    <text x="22.00" y="77" textLength="360.18" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem double_eq (n : Nat) : double n = 2 * n</text>
+    <text x="22.00" y="96" textLength="438.48" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found: 4 goals expanded, 4 calls to Lean, 8 nodes, 95 ms</text>
+    <text x="37.66" y="115" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="53.32" y="134" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">induction n</text>
+    <text x="53.32" y="153" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">· rfl</text>
+    <text x="53.32" y="172" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">· simp [double]</text>
+    <text x="68.98" y="191" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">omega</text>
+    <text x="22.00" y="210" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">step 1</text>
+    <text x="84.64" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">goal #1</text>
+    <text x="155.11" y="210" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">double n = 2 * n</text>
+    <text x="296.05" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(28 ms)</text>
+    <text x="53.32" y="229" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rfl</text>
+    <text x="170.77" y="229" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="248" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">assumption</text>
+    <text x="170.77" y="248" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="267" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">omega</text>
+    <text x="170.77" y="267" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="286" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp</text>
+    <text x="170.77" y="286" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="305" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp_all</text>
+    <text x="170.77" y="305" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="324" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="170.77" y="324" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="343" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">grind</text>
+    <text x="170.77" y="343" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="37.66" y="362" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">* induction n</text>
+    <text x="170.77" y="362" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">leaves 2 goals: #2, #3</text>
+    <text x="53.32" y="381" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp [double]</text>
+    <text x="170.77" y="381" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="22.00" y="400" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">step 2</text>
+    <text x="84.64" y="400" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">goal #2</text>
+    <text x="155.11" y="400" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">double 0 = 2 * 0</text>
+    <text x="296.05" y="400" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(16 ms)</text>
+    <text x="37.66" y="419" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">* rfl</text>
+    <text x="170.77" y="419" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">closes the goal</text>
+    <text x="53.32" y="438" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">assumption</text>
+    <text x="170.77" y="438" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="457" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">omega</text>
+    <text x="170.77" y="457" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp</text>
+    <text x="170.77" y="476" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">leaves 1 goal: #4</text>
+    <text x="53.32" y="495" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp_all</text>
+    <text x="170.77" y="495" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">leaves 1 goal: #5</text>
+    <text x="53.32" y="514" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="170.77" y="514" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">closes the goal</text>
+    <text x="53.32" y="533" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">grind</text>
+    <text x="170.77" y="533" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="552" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp [double]</text>
+    <text x="170.77" y="552" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">closes the goal</text>
+    <text x="22.00" y="571" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">step 3</text>
+    <text x="84.64" y="571" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">goal #3</text>
+    <text x="155.11" y="571" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">double (n✝ + 1) = 2 * (n✝ + 1)</text>
+    <text x="405.67" y="571" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(18 ms)</text>
+    <text x="53.32" y="590" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rfl</text>
+    <text x="170.77" y="590" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="609" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">assumption</text>
+    <text x="170.77" y="609" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="628" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">omega</text>
+    <text x="170.77" y="628" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="647" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp</text>
+    <text x="170.77" y="647" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="666" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp_all</text>
+    <text x="170.77" y="666" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="685" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="170.77" y="685" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="704" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">grind</text>
+    <text x="170.77" y="704" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="37.66" y="723" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">* simp [double]</text>
+    <text x="170.77" y="723" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">leaves 1 goal: #6</text>
+    <text x="22.00" y="742" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">step 4</text>
+    <text x="84.64" y="742" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">goal #6</text>
+    <text x="155.11" y="742" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">double n✝ + 2 = 2 * (n✝ + 1)</text>
+    <text x="390.01" y="742" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(32 ms)</text>
+    <text x="53.32" y="761" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rfl</text>
+    <text x="170.77" y="761" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="53.32" y="780" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">assumption</text>
+    <text x="170.77" y="780" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="37.66" y="799" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">* omega</text>
+    <text x="170.77" y="799" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">closes the goal</text>
+    <text x="53.32" y="818" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp</text>
+    <text x="170.77" y="818" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails (tactic)</text>
+    <text x="22.00" y="837" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">… 4 more lines</text>
+  </g>
+</svg>

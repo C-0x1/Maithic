@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 392" role="img" aria-labelledby="gateway-modes-t gateway-modes-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="gateway-modes-t">The five gateway modes</title>
+  <desc id="gateway-modes-d">Five cards, one for each way the gateway can answer a model call. Live calls the provider. Record calls the provider and saves the exchange as a cassette. Replay answers from cassettes only, and a request with no cassette is an error. Mock returns a canned answer chosen by the purpose of the request. Off makes every call fail, and commands fall back to work that needs no model. Live and record need a key; replay, mock and off need neither a key nor a network.</desc>
+  <rect width="1040" height="392" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="180.8" height="188.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="234.8" y="96.0" width="180.8" height="188.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="429.6" y="96.0" width="180.8" height="188.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="624.4" y="96.0" width="180.8" height="188.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="819.2" y="96.0" width="180.8" height="188.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="302.0" width="960.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h160.8a10 10 0 0 1 10 10v26.0h-180.8z" fill="#2B2F77"/>
+  <rect x="54.0" y="248.0" width="152.8" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M234.8 106.0a10 10 0 0 1 10-10h160.8a10 10 0 0 1 10 10v26.0h-180.8z" fill="#2B2F77"/>
+  <rect x="248.8" y="248.0" width="152.8" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M429.6 106.0a10 10 0 0 1 10-10h160.8a10 10 0 0 1 10 10v26.0h-180.8z" fill="#0B7F75"/>
+  <rect x="443.6" y="248.0" width="152.8" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M624.4 106.0a10 10 0 0 1 10-10h160.8a10 10 0 0 1 10 10v26.0h-180.8z" fill="#0B7F75"/>
+  <rect x="638.4" y="248.0" width="152.8" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M819.2 106.0a10 10 0 0 1 10-10h160.8a10 10 0 0 1 10 10v26.0h-180.8z" fill="#5B6477"/>
+  <rect x="833.2" y="248.0" width="152.8" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="344.8" lengthAdjust="spacingAndGlyphs">Five ways to answer a model call</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="512.0" lengthAdjust="spacingAndGlyphs">--mode live | record | replay | mock | off     MAITHIC_GATEWAY_MODE</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="23.4" lengthAdjust="spacingAndGlyphs">live</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="104.1" lengthAdjust="spacingAndGlyphs">Calls the provider.</text>
+  <text x="64.0" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">needs a key</text>
+  <text x="248.8" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="43.6" lengthAdjust="spacingAndGlyphs">record</text>
+  <text x="248.8" y="155.0" font-size="13" fill="#14162B" textLength="129.4" lengthAdjust="spacingAndGlyphs">Calls the provider, and</text>
+  <text x="248.8" y="173.0" font-size="13" fill="#14162B" textLength="133.0" lengthAdjust="spacingAndGlyphs">saves the exchange as</text>
+  <text x="248.8" y="191.0" font-size="13" fill="#14162B" textLength="62.9" lengthAdjust="spacingAndGlyphs">a cassette.</text>
+  <text x="258.8" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">needs a key</text>
+  <text x="443.6" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="41.2" lengthAdjust="spacingAndGlyphs">replay</text>
+  <text x="443.6" y="155.0" font-size="13" fill="#14162B" textLength="79.5" lengthAdjust="spacingAndGlyphs">Answers from</text>
+  <text x="443.6" y="173.0" font-size="13" fill="#14162B" textLength="85.0" lengthAdjust="spacingAndGlyphs">cassettes only.</text>
+  <text x="443.6" y="197.0" font-size="13" fill="#14162B" textLength="99.7" lengthAdjust="spacingAndGlyphs">A request with no</text>
+  <text x="443.6" y="215.0" font-size="13" fill="#14162B" textLength="113.4" lengthAdjust="spacingAndGlyphs">cassette is an error,</text>
+  <text x="443.6" y="233.0" font-size="13" fill="#14162B" textLength="130.8" lengthAdjust="spacingAndGlyphs">MTH-GATEWAY-0007.</text>
+  <text x="453.6" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="124.6" lengthAdjust="spacingAndGlyphs">no key, no network</text>
+  <text x="638.4" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="36.6" lengthAdjust="spacingAndGlyphs">mock</text>
+  <text x="638.4" y="155.0" font-size="13" fill="#14162B" textLength="102.6" lengthAdjust="spacingAndGlyphs">Returns a canned</text>
+  <text x="638.4" y="173.0" font-size="13" fill="#14162B" textLength="129.4" lengthAdjust="spacingAndGlyphs">answer, chosen by the</text>
+  <text x="638.4" y="191.0" font-size="13" fill="#14162B" textLength="133.7" lengthAdjust="spacingAndGlyphs">purpose of the request.</text>
+  <text x="648.4" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="124.6" lengthAdjust="spacingAndGlyphs">no key, no network</text>
+  <text x="833.2" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="17.9" lengthAdjust="spacingAndGlyphs">off</text>
+  <text x="833.2" y="155.0" font-size="13" fill="#14162B" textLength="109.8" lengthAdjust="spacingAndGlyphs">Every call fails with</text>
+  <text x="833.2" y="173.0" font-size="13" fill="#14162B" textLength="130.8" lengthAdjust="spacingAndGlyphs">MTH-GATEWAY-0001.</text>
+  <text x="833.2" y="197.0" font-size="13" fill="#14162B" textLength="132.2" lengthAdjust="spacingAndGlyphs">Commands fall back to</text>
+  <text x="833.2" y="215.0" font-size="13" fill="#14162B" textLength="109.8" lengthAdjust="spacingAndGlyphs">work that needs no</text>
+  <text x="833.2" y="233.0" font-size="13" fill="#14162B" textLength="39.0" lengthAdjust="spacingAndGlyphs">model.</text>
+  <text x="843.2" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="124.6" lengthAdjust="spacingAndGlyphs">no key, no network</text>
+  <text x="56.0" y="327.0" font-size="13" fill="#14162B" textLength="801.1" lengthAdjust="spacingAndGlyphs">The demonstrations, the tests and the workflow run in replay mode, so every model-assisted path can be run anywhere. With your own key,</text>
+  <text x="56.0" y="345.0" font-size="13" fill="#14162B" textLength="169.8" lengthAdjust="spacingAndGlyphs">the same commands run live.</text>
+</svg>

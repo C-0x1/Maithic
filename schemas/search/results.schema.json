@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Search results",
+  "description": "The answer to one query: declarations in ranked order. Each hit carries the declaration as the search knows it (its name, its kind, its statement as Lean prints it, its documentation, its module and its attributes), the merged score, the retrievers that found it with the rank each gave, and the words of the query it has. The score is a sum of reciprocal ranks and is comparable only within one answer. note says why a retriever that was asked for did not answer.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.search.results/1"
+    },
+    "query": {
+      "type": "string"
+    },
+    "declarations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "retrievers": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "lexical",
+          "name",
+          "lean"
+        ]
+      }
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "note": {
+      "type": "string"
+    },
+    "hits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "score": {
+            "type": "number"
+          },
+          "declaration": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "statement": {
+                "type": "string"
+              },
+              "doc": {
+                "type": "string"
+              },
+              "module": {
+                "type": "string"
+              },
+              "attributes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "file": {
+                "type": "string"
+              },
+              "line": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "name",
+              "kind",
+              "statement",
+              "doc",
+              "module",
+              "attributes",
+              "file",
+              "line"
+            ]
+          },
+          "found_by": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "retriever": {
+                  "enum": [
+                    "lexical",
+                    "name",
+                    "lean"
+                  ]
+                },
+                "rank": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "retriever",
+                "rank"
+              ]
+            }
+          },
+          "matched": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "rank",
+          "score",
+          "declaration",
+          "found_by",
+          "matched"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "query",
+    "declarations",
+    "retrievers",
+    "limit",
+    "hits"
+  ]
+}

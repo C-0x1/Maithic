@@ -1,0 +1,3 @@
+(executable
+ (name bridge_stub)
+ (libraries maithic_base maithic_schema))

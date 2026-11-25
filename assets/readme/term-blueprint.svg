@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 819 451" width="819" height="451" role="img" aria-label="A terminal session: maithic blueprint status lists the eight nodes of a blueprint with what Lean reports of each: three are done, one is proved on lemmas that are not, three are stated and one is planned; two of the stated ones are ready to prove. maithic blueprint next then names those two, the one that most rests on first.">
+  <title>A terminal session: maithic blueprint status lists the eight nodes of a blueprint with what Lean reports of each: three are done, one is proved on lemmas that are not, three are stated and one is planned; two of the stated ones are ready to prove. maithic blueprint next then names those two, the one that most rests on first.</title>
+  <rect width="819" height="451" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h799a10 10 0 0 1 10 10v26h-819z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="410" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic blueprint status, next</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="759.51" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic blueprint status examples/blueprint/triangles.md --lean examples/blueprint/triangles.lean</text>
+    <text x="22.00" y="77" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Odd numbers, squares and triangles</text>
+    <text x="37.66" y="96" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">node</text>
+    <text x="155.11" y="96" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">kind</text>
+    <text x="249.07" y="96" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">status</text>
+    <text x="37.66" y="115" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tri</text>
+    <text x="155.11" y="115" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition</text>
+    <text x="249.07" y="115" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#57C98F">done</text>
+    <text x="37.66" y="134" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">sum-odd</text>
+    <text x="155.11" y="134" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition</text>
+    <text x="249.07" y="134" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#57C98F">done</text>
+    <text x="37.66" y="153" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tri-step</text>
+    <text x="155.11" y="153" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="249.07" y="153" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#57C98F">done</text>
+    <text x="37.66" y="172" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tri-formula</text>
+    <text x="155.11" y="172" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="249.07" y="172" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">stated</text>
+    <text x="319.54" y="172" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">ready to prove; 2 node(s) rest on it</text>
+    <text x="37.66" y="191" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">odd-step</text>
+    <text x="155.11" y="191" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="249.07" y="191" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">stated</text>
+    <text x="319.54" y="191" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">ready to prove; 1 node(s) rest on it</text>
+    <text x="37.66" y="210" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">odd-square</text>
+    <text x="155.11" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="249.07" y="210" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">proved</text>
+    <text x="37.66" y="229" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">two-triangles</text>
+    <text x="155.11" y="229" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="249.07" y="229" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">stated</text>
+    <text x="319.54" y="229" textLength="164.43" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">waits for tri-formula</text>
+    <text x="37.66" y="248" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">odd-triangles</text>
+    <text x="155.11" y="248" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">corollary</text>
+    <text x="249.07" y="248" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">planned</text>
+    <text x="319.54" y="248" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">waits for two-triangles</text>
+    <text x="22.00" y="267" textLength="375.84" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">8 node(s): 3 done, 1 proved, 3 stated, 1 planned</text>
+    <text x="37.66" y="286" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition : 2 done</text>
+    <text x="37.66" y="305" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="123.79" y="305" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">: 1 done, 3 stated</text>
+    <text x="37.66" y="324" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="123.79" y="324" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">: 1 proved</text>
+    <text x="37.66" y="343" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">corollary</text>
+    <text x="123.79" y="343" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">: 1 planned</text>
+    <text x="22.00" y="381" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="381" textLength="743.85" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic blueprint next examples/blueprint/triangles.md --lean examples/blueprint/triangles.lean</text>
+    <text x="22.00" y="400" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1. tri-formula</text>
+    <text x="147.28" y="400" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="202.09" y="400" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">to prove</text>
+    <text x="280.39" y="400" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Twice a triangular number</text>
+    <text x="491.80" y="400" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(2 node(s) rest on it)</text>
+    <text x="22.00" y="419" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2. odd-step</text>
+    <text x="123.79" y="419" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="178.60" y="419" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">to prove</text>
+    <text x="256.90" y="419" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The next odd number</text>
+    <text x="421.33" y="419" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(1 node(s) rest on it)</text>
+  </g>
+</svg>

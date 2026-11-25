@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 968 565" width="968" height="565" role="img" aria-label="A terminal session: maithic mend minimize shortens the proofs of a file. Four of six proofs get shorter, each shorter proof compiled by Lean with the same statement and no new axiom, and one is left alone because the shorter proof would need axioms the original does without.">
+  <title>A terminal session: maithic mend minimize shortens the proofs of a file. Four of six proofs get shorter, each shorter proof compiled by Lean with the same statement and no new axiom, and one is left alone because the shorter proof would need axioms the original does without.</title>
+  <rect width="968" height="565" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h948a10 10 0 0 1 10 10v26h-968z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="484" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic mend minimize --automation</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="516.78" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic mend minimize fixtures/mend/lean/Verbose.lean --automation</text>
+    <text x="22.00" y="77" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">twice_eq</text>
+    <text x="100.30" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#57C98F">shorter</text>
+    <text x="170.77" y="77" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">5 to 3 line(s), 98 to 43 character(s)</text>
+    <text x="476.14" y="77" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(deletion, 14 check(s))</text>
+    <text x="37.66" y="96" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">-</text>
+    <text x="53.32" y="96" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have bound : n ≤ n + n := by</text>
+    <text x="37.66" y="115" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">-</text>
+    <text x="53.32" y="115" textLength="430.65" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Nat.add_zero in `simp only [Nat.two_mul, Nat.add_zero]`</text>
+    <text x="53.32" y="134" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="68.98" y="153" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unfold twice</text>
+    <text x="68.98" y="172" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp only [Nat.two_mul]</text>
+    <text x="22.00" y="191" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">length_twice</text>
+    <text x="131.62" y="191" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#57C98F">shorter</text>
+    <text x="202.09" y="191" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2 to 2 line(s), 51 to 17 character(s)</text>
+    <text x="507.46" y="191" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(deletion, 4 check(s))</text>
+    <text x="37.66" y="210" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">-</text>
+    <text x="53.32" y="210" textLength="501.12" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Nat.add_comm in `simp [twice, List.length_append, Nat.add_comm]`</text>
+    <text x="37.66" y="229" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">-</text>
+    <text x="53.32" y="229" textLength="438.48" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">List.length_append in `simp [twice, List.length_append]`</text>
+    <text x="53.32" y="248" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="68.98" y="267" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp [twice]</text>
+    <text x="22.00" y="286" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">twice_mono</text>
+    <text x="115.96" y="286" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#57C98F">shorter</text>
+    <text x="186.43" y="286" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">7 to 3 line(s), 109 to 25 character(s)</text>
+    <text x="499.63" y="286" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(deletion, 13 check(s))</text>
+    <text x="37.66" y="305" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">-</text>
+    <text x="53.32" y="305" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have h3 : n + m ≤ n + n := by</text>
+    <text x="37.66" y="324" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">-</text>
+    <text x="53.32" y="324" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have h2 : m + m ≤ n + m := by</text>
+    <text x="53.32" y="343" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="68.98" y="362" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unfold twice</text>
+    <text x="68.98" y="381" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">omega</text>
+    <text x="22.00" y="400" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">sum_le</text>
+    <text x="84.64" y="400" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#57C98F">shorter</text>
+    <text x="155.11" y="400" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">3 to 1 line(s), 58 to 8 character(s)</text>
+    <text x="452.65" y="400" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(automation, 4 check(s))</text>
+    <text x="37.66" y="419" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">-</text>
+    <text x="53.32" y="419" textLength="242.73" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the whole proof, for `by omega`</text>
+    <text x="53.32" y="438" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by omega</text>
+    <text x="22.00" y="457" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">sum_le_plain</text>
+    <text x="131.62" y="457" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">as short as it gets</text>
+    <text x="296.05" y="457" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">3 line(s)</text>
+    <text x="382.18" y="457" textLength="563.76" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">Lean accepts a shorter proof, and it needs what this proof does without:</text>
+    <text x="382.18" y="476" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">Classical.choice, Quot.sound, propext</text>
+    <text x="22.00" y="495" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">le_twice</text>
+    <text x="100.30" y="495" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">as short as it gets</text>
+    <text x="264.73" y="495" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">3 line(s)</text>
+    <text x="350.86" y="495" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(9 check(s))</text>
+    <text x="22.00" y="514" textLength="884.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/mend/lean/Verbose.lean: 4 of 6 proof(s) shortened, 23 line(s) to 15, every shorter proof checked by Lean</text>
+    <text x="22.00" y="533" textLength="501.12" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">the file was not changed; --write writes the shorter proofs back</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 468" role="img" aria-labelledby="algo-ladder-t algo-ladder-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="algo-ladder-t">Five steps of trust for an algorithm</title>
+  <desc id="algo-ladder-d">Five blocks that rise to the right. Compiles: Lean elaborates the definition, so it is total and well typed. Passes its examples: Lean runs it on your examples. Agrees with a reference: the compiled program and an independent implementation give the same answers on generated inputs. Meets its specification: a theorem checked by the kernel says what it returns for every input. Stays within a bound: a theorem bounds how much work it does.</desc>
+  <rect width="1040" height="468" fill="#FAF8F4"/>
+  <rect x="40.0" y="204.0" width="184.0" height="58.0" rx="8" fill="#5B6477"/>
+  <rect x="234.0" y="178.0" width="184.0" height="84.0" rx="8" fill="#B37400"/>
+  <rect x="428.0" y="152.0" width="184.0" height="110.0" rx="8" fill="#9558B2"/>
+  <rect x="622.0" y="126.0" width="184.0" height="136.0" rx="8" fill="#2B2F77"/>
+  <rect x="816.0" y="100.0" width="184.0" height="162.0" rx="8" fill="#0B7F75"/>
+  <rect x="40.0" y="378.0" width="960.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="363.1" lengthAdjust="spacingAndGlyphs">Five steps of trust for an algorithm</text>
+  <text x="40.0" y="69.0" font-size="14" fill="#5B6477" textLength="354.1" lengthAdjust="spacingAndGlyphs">Each step answers a question that the one before cannot</text>
+  <text x="132.0" y="228.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="58.5" lengthAdjust="spacingAndGlyphs">compiles</text>
+  <text x="326.0" y="202.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="130.6" lengthAdjust="spacingAndGlyphs">passes its examples</text>
+  <text x="520.0" y="176.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="85.5" lengthAdjust="spacingAndGlyphs">agrees with a</text>
+  <text x="520.0" y="193.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="60.8" lengthAdjust="spacingAndGlyphs">reference</text>
+  <text x="714.0" y="150.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="58.5" lengthAdjust="spacingAndGlyphs">meets its</text>
+  <text x="714.0" y="167.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="82.5" lengthAdjust="spacingAndGlyphs">specification</text>
+  <text x="908.0" y="124.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="133.5" lengthAdjust="spacingAndGlyphs">stays within a bound</text>
+  <text x="44.0" y="286.0" font-size="12.5" fill="#14162B" textLength="110.5" lengthAdjust="spacingAndGlyphs">Lean elaborates the</text>
+  <text x="44.0" y="303.0" font-size="12.5" fill="#14162B" textLength="138.3" lengthAdjust="spacingAndGlyphs">definition: it is well typed,</text>
+  <text x="44.0" y="320.0" font-size="12.5" fill="#14162B" textLength="146.6" lengthAdjust="spacingAndGlyphs">and it ends on every input.</text>
+  <text x="238.0" y="286.0" font-size="12.5" fill="#14162B" textLength="110.5" lengthAdjust="spacingAndGlyphs">Lean runs it on your</text>
+  <text x="238.0" y="303.0" font-size="12.5" fill="#14162B" textLength="139.7" lengthAdjust="spacingAndGlyphs">examples and compares.</text>
+  <text x="238.0" y="320.0" font-size="12.5" fill="#14162B" textLength="133.4" lengthAdjust="spacingAndGlyphs">maithic algo synth stops</text>
+  <text x="238.0" y="337.0" font-size="12.5" fill="#14162B" textLength="123.0" lengthAdjust="spacingAndGlyphs">here, and says tested.</text>
+  <text x="432.0" y="286.0" font-size="12.5" fill="#14162B" textLength="149.4" lengthAdjust="spacingAndGlyphs">The compiled program and</text>
+  <text x="432.0" y="303.0" font-size="12.5" fill="#14162B" textLength="86.2" lengthAdjust="spacingAndGlyphs">an independent</text>
+  <text x="432.0" y="320.0" font-size="12.5" fill="#14162B" textLength="128.5" lengthAdjust="spacingAndGlyphs">implementation answer</text>
+  <text x="432.0" y="337.0" font-size="12.5" fill="#14162B" textLength="143.2" lengthAdjust="spacingAndGlyphs">alike on generated inputs.</text>
+  <text x="432.0" y="354.0" font-size="12.5" fill="#14162B" textLength="131.1" lengthAdjust="spacingAndGlyphs">maithic algo differential.</text>
+  <text x="626.0" y="286.0" font-size="12.5" fill="#14162B" textLength="148.0" lengthAdjust="spacingAndGlyphs">A theorem, checked by the</text>
+  <text x="626.0" y="303.0" font-size="12.5" fill="#14162B" textLength="148.7" lengthAdjust="spacingAndGlyphs">kernel, says what it returns</text>
+  <text x="626.0" y="320.0" font-size="12.5" fill="#14162B" textLength="150.8" lengthAdjust="spacingAndGlyphs">for every input, not only the</text>
+  <text x="626.0" y="337.0" font-size="12.5" fill="#14162B" textLength="113.3" lengthAdjust="spacingAndGlyphs">ones that were tried.</text>
+  <text x="820.0" y="286.0" font-size="12.5" fill="#14162B" textLength="122.3" lengthAdjust="spacingAndGlyphs">A theorem bounds the</text>
+  <text x="820.0" y="303.0" font-size="12.5" fill="#14162B" textLength="147.3" lengthAdjust="spacingAndGlyphs">work: merge sort makes at</text>
+  <text x="820.0" y="320.0" font-size="12.5" fill="#14162B" textLength="102.5" lengthAdjust="spacingAndGlyphs">most n (log₂ n + 1)</text>
+  <text x="820.0" y="337.0" font-size="12.5" fill="#14162B" textLength="149.4" lengthAdjust="spacingAndGlyphs">comparisons, whatever the</text>
+  <text x="820.0" y="354.0" font-size="12.5" fill="#14162B" textLength="18.8" lengthAdjust="spacingAndGlyphs">list.</text>
+  <text x="56.0" y="403.0" font-size="13" fill="#14162B" textLength="786.7" lengthAdjust="spacingAndGlyphs">Tests cover the inputs that were tried. Proofs cover all of them. The laboratory has a tool for every step, and never calls a function proved</text>
+  <text x="56.0" y="421.0" font-size="13" fill="#14162B" textLength="221.9" lengthAdjust="spacingAndGlyphs">before the kernel has checked a proof.</text>
+</svg>

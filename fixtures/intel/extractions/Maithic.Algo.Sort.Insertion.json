@@ -1,0 +1,1716 @@
+{
+  "schema": "maithic.bridge.extraction/1",
+  "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+  "module": "Maithic.Algo.Sort.Insertion",
+  "report": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  "imports": [
+    "Init",
+    "Maithic.Algo.Spec.Sorted"
+  ],
+  "moduleDocs": [
+    "# Insertion sort\n\nInsertion sort on lists, with the two halves of its specification: the output is sorted, and the\noutput is a permutation of the input. Together they pin the result down completely."
+  ],
+  "declarations": [
+    {
+      "name": "Maithic.Algo.insertSorted",
+      "kind": "definition",
+      "type": "{α : Type u} → [inst : LE α] → [DecidableLE α] → α → List α → List α",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 20,
+      "column": 0,
+      "endLine": 23,
+      "endColumn": 69,
+      "nameLine": 21,
+      "nameColumn": 4,
+      "doc": "Inserts `x` in front of the first element that is not smaller than it.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [],
+      "typeDeps": [
+        "DecidableLE",
+        "LE",
+        "List"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "PProd",
+        "Unit",
+        "ite",
+        "LE.le",
+        "List.below",
+        "List.brecOn",
+        "List.casesOn",
+        "List.cons",
+        "List.nil",
+        "Unit.unit"
+      ],
+      "parents": [],
+      "statementHash": "119874961",
+      "sameStatement": [],
+      "source": "/-- Inserts `x` in front of the first element that is not smaller than it. -/\ndef insertSorted (x : α) : List α → List α\n  | [] => [x]\n  | y :: ys => if x ≤ y then x :: y :: ys else y :: insertSorted x ys",
+      "proof": "| [] => [x]\n  | y :: ys => if x ≤ y then x :: y :: ys else y :: insertSorted x ys"
+    },
+    {
+      "name": "Maithic.Algo.insertionSort",
+      "kind": "definition",
+      "type": "{α : Type u} → [inst : LE α] → [DecidableLE α] → List α → List α",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 25,
+      "column": 0,
+      "endLine": 28,
+      "endColumn": 48,
+      "nameLine": 26,
+      "nameColumn": 4,
+      "doc": "Insertion sort.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [],
+      "typeDeps": [
+        "DecidableLE",
+        "LE",
+        "List"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "PProd",
+        "Unit",
+        "List.below",
+        "List.brecOn",
+        "List.casesOn",
+        "List.cons",
+        "List.nil",
+        "Unit.unit",
+        "Maithic.Algo.insertSorted"
+      ],
+      "parents": [],
+      "statementHash": "2214123072",
+      "sameStatement": [],
+      "source": "/-- Insertion sort. -/\ndef insertionSort : List α → List α\n  | [] => []\n  | x :: xs => insertSorted x (insertionSort xs)",
+      "proof": "| [] => []\n  | x :: xs => insertSorted x (insertionSort xs)"
+    },
+    {
+      "name": "Maithic.Algo.mem_insertSorted",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {x z : α} {l : List α},\n  z ∈ Maithic.Algo.insertSorted x l ↔ z = x ∨ z ∈ l",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 30,
+      "column": 0,
+      "endLine": 47,
+      "endColumn": 33,
+      "nameLine": 31,
+      "nameColumn": 8,
+      "doc": "Inserting adds exactly the new element.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "typeDeps": [
+        "DecidableLE",
+        "Eq",
+        "Iff",
+        "LE",
+        "List",
+        "Or",
+        "List.instMembership",
+        "Membership.mem",
+        "Maithic.Algo.insertSorted"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "Eq",
+        "False",
+        "Iff",
+        "LE",
+        "List",
+        "Not",
+        "Or",
+        "True",
+        "congr",
+        "congrArg",
+        "congrFun'",
+        "dite",
+        "eq_false",
+        "id",
+        "iff_self",
+        "ite",
+        "ite_eq_left",
+        "ite_eq_right",
+        "of_eq_true",
+        "or_false",
+        "propext",
+        "Eq.mpr",
+        "Eq.trans",
+        "Iff.intro",
+        "LE.le",
+        "List.cons",
+        "List.instMembership",
+        "List.mem_cons",
+        "List.nil",
+        "List.not_mem_nil",
+        "List.rec",
+        "Membership.mem",
+        "Or.casesOn",
+        "Or.inl",
+        "Or.inr",
+        "Maithic.Algo.insertSorted"
+      ],
+      "parents": [],
+      "statementHash": "3099394201",
+      "sameStatement": [],
+      "source": "/-- Inserting adds exactly the new element. -/\ntheorem mem_insertSorted {x z : α} {l : List α} : z ∈ insertSorted x l ↔ z = x ∨ z ∈ l := by\n  induction l with\n  | nil => simp [insertSorted]\n  | cons y ys ih =>\n    simp only [insertSorted]\n    split\n    · simp\n    · simp only [List.mem_cons, ih]\n      constructor\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)",
+      "proof": "by\n  induction l with\n  | nil => simp [insertSorted]\n  | cons y ys ih =>\n    simp only [insertSorted]\n    split\n    · simp\n    · simp only [List.mem_cons, ih]\n      constructor\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)"
+    },
+    {
+      "name": "Maithic.Algo.insertSorted_perm",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] (x : α) (l : List α),\n  (Maithic.Algo.insertSorted x l).Perm (x :: l)",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 49,
+      "column": 0,
+      "endLine": 57,
+      "endColumn": 63,
+      "nameLine": 50,
+      "nameColumn": 8,
+      "doc": "Inserting into a list gives a permutation of the list with the element in front.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [],
+      "typeDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "List.Perm",
+        "List.cons",
+        "Maithic.Algo.insertSorted"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "Eq",
+        "LE",
+        "List",
+        "Not",
+        "congrArg",
+        "congrFun'",
+        "dite",
+        "id",
+        "ite",
+        "ite_eq_left",
+        "ite_eq_right",
+        "Eq.mpr",
+        "LE.le",
+        "List.Perm",
+        "List.cons",
+        "List.nil",
+        "List.rec",
+        "List.Perm.cons",
+        "List.Perm.refl",
+        "List.Perm.swap",
+        "List.Perm.trans",
+        "Maithic.Algo.insertSorted"
+      ],
+      "parents": [],
+      "statementHash": "1650501017",
+      "sameStatement": [],
+      "source": "/-- Inserting into a list gives a permutation of the list with the element in front. -/\ntheorem insertSorted_perm (x : α) (l : List α) : (insertSorted x l).Perm (x :: l) := by\n  induction l with\n  | nil => exact List.Perm.refl _\n  | cons y ys ih =>\n    simp only [insertSorted]\n    split\n    · exact List.Perm.refl _\n    · exact (List.Perm.cons y ih).trans (List.Perm.swap x y ys)",
+      "proof": "by\n  induction l with\n  | nil => exact List.Perm.refl _\n  | cons y ys ih =>\n    simp only [insertSorted]\n    split\n    · exact List.Perm.refl _\n    · exact (List.Perm.cons y ih).trans (List.Perm.swap x y ys)"
+    },
+    {
+      "name": "Maithic.Algo.sorted_insertSorted",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] [Maithic.Algo.TotalPreorder α] (x : α)\n  {l : List α}, Maithic.Algo.Sorted l → Maithic.Algo.Sorted (Maithic.Algo.insertSorted x l)",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 59,
+      "column": 0,
+      "endLine": 80,
+      "endColumn": 23,
+      "nameLine": 60,
+      "nameColumn": 8,
+      "doc": "Inserting into a sorted list keeps it sorted.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "typeDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertSorted"
+      ],
+      "valueDeps": [
+        "And",
+        "DecidableLE",
+        "Eq",
+        "LE",
+        "List",
+        "Not",
+        "Or",
+        "True",
+        "congrArg",
+        "dite",
+        "eq_true",
+        "id",
+        "ite",
+        "ite_eq_left",
+        "ite_eq_right",
+        "of_eq_true",
+        "And.intro",
+        "And.left",
+        "And.right",
+        "Eq.mpr",
+        "Eq.ndrec",
+        "Iff.mp",
+        "Iff.mpr",
+        "LE.le",
+        "List.cons",
+        "List.instMembership",
+        "List.mem_cons",
+        "List.nil",
+        "List.rec",
+        "Membership.mem",
+        "Or.casesOn",
+        "Or.resolve_left",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertSorted",
+        "Maithic.Algo.mem_insertSorted",
+        "Maithic.Algo.sorted_cons",
+        "Maithic.Algo.sorted_singleton",
+        "Maithic.Algo.TotalPreorder.le_total",
+        "Maithic.Algo.TotalPreorder.le_trans"
+      ],
+      "parents": [],
+      "statementHash": "2859149378",
+      "sameStatement": [],
+      "source": "/-- Inserting into a sorted list keeps it sorted. -/\ntheorem sorted_insertSorted [TotalPreorder α] (x : α) {l : List α} (h : Sorted l) :\n    Sorted (insertSorted x l) := by\n  induction l with\n  | nil => simp [insertSorted]\n  | cons y ys ih =>\n    have hy := sorted_cons.mp h\n    simp only [insertSorted]\n    split\n    · rename_i hxy\n      refine sorted_cons.mpr ⟨?_, h⟩\n      intro z hz\n      rcases List.mem_cons.mp hz with rfl | hz\n      · exact hxy\n      · exact TotalPreorder.le_trans _ _ _ hxy (hy.1 z hz)\n    · rename_i hxy\n      have hyx : y ≤ x := (TotalPreorder.le_total x y).resolve_left hxy\n      refine sorted_cons.mpr ⟨?_, ih hy.2⟩\n      intro z hz\n      rcases mem_insertSorted.mp hz with rfl | hz\n      · exact hyx\n      · exact hy.1 z hz",
+      "proof": "by\n  induction l with\n  | nil => simp [insertSorted]\n  | cons y ys ih =>\n    have hy := sorted_cons.mp h\n    simp only [insertSorted]\n    split\n    · rename_i hxy\n      refine sorted_cons.mpr ⟨?_, h⟩\n      intro z hz\n      rcases List.mem_cons.mp hz with rfl | hz\n      · exact hxy\n      · exact TotalPreorder.le_trans _ _ _ hxy (hy.1 z hz)\n    · rename_i hxy\n      have hyx : y ≤ x := (TotalPreorder.le_total x y).resolve_left hxy\n      refine sorted_cons.mpr ⟨?_, ih hy.2⟩\n      intro z hz\n      rcases mem_insertSorted.mp hz with rfl | hz\n      · exact hyx\n      · exact hy.1 z hz"
+    },
+    {
+      "name": "Maithic.Algo.sorted_insertionSort",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] [Maithic.Algo.TotalPreorder α] (l : List α),\n  Maithic.Algo.Sorted (Maithic.Algo.insertionSort l)",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 82,
+      "column": 0,
+      "endLine": 86,
+      "endColumn": 50,
+      "nameLine": 83,
+      "nameColumn": 8,
+      "doc": "The output of insertion sort is sorted.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "typeDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertionSort"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "List.rec",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.sorted_insertSorted",
+        "Maithic.Algo.sorted_nil"
+      ],
+      "parents": [],
+      "statementHash": "1372891663",
+      "sameStatement": [],
+      "source": "/-- The output of insertion sort is sorted. -/\ntheorem sorted_insertionSort [TotalPreorder α] (l : List α) : Sorted (insertionSort l) := by\n  induction l with\n  | nil => exact sorted_nil\n  | cons x xs ih => exact sorted_insertSorted x ih",
+      "proof": "by\n  induction l with\n  | nil => exact sorted_nil\n  | cons x xs ih => exact sorted_insertSorted x ih"
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_perm",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] (l : List α),\n  (Maithic.Algo.insertionSort l).Perm l",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 88,
+      "column": 0,
+      "endLine": 92,
+      "endColumn": 77,
+      "nameLine": 89,
+      "nameColumn": 8,
+      "doc": "The output of insertion sort is a permutation of its input.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [],
+      "typeDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "List.Perm",
+        "Maithic.Algo.insertionSort"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "List.Perm",
+        "List.cons",
+        "List.nil",
+        "List.rec",
+        "List.Perm.cons",
+        "List.Perm.refl",
+        "List.Perm.trans",
+        "Maithic.Algo.insertSorted",
+        "Maithic.Algo.insertSorted_perm",
+        "Maithic.Algo.insertionSort"
+      ],
+      "parents": [],
+      "statementHash": "3807410698",
+      "sameStatement": [],
+      "source": "/-- The output of insertion sort is a permutation of its input. -/\ntheorem insertionSort_perm (l : List α) : (insertionSort l).Perm l := by\n  induction l with\n  | nil => exact List.Perm.refl _\n  | cons x xs ih => exact (insertSorted_perm x _).trans (List.Perm.cons x ih)",
+      "proof": "by\n  induction l with\n  | nil => exact List.Perm.refl _\n  | cons x xs ih => exact (insertSorted_perm x _).trans (List.Perm.cons x ih)"
+    },
+    {
+      "name": "Maithic.Algo.length_insertionSort",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] (l : List α),\n  (Maithic.Algo.insertionSort l).length = l.length",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 94,
+      "column": 0,
+      "endLine": 96,
+      "endColumn": 34,
+      "nameLine": 95,
+      "nameColumn": 8,
+      "doc": "Insertion sort keeps the length.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "typeDeps": [
+        "DecidableLE",
+        "Eq",
+        "LE",
+        "List",
+        "Nat",
+        "List.length",
+        "Maithic.Algo.insertionSort"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "List.Perm.length_eq",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.insertionSort_perm"
+      ],
+      "parents": [],
+      "statementHash": "480702595",
+      "sameStatement": [],
+      "source": "/-- Insertion sort keeps the length. -/\ntheorem length_insertionSort (l : List α) : (insertionSort l).length = l.length :=\n  (insertionSort_perm l).length_eq",
+      "proof": "(insertionSort_perm l).length_eq"
+    },
+    {
+      "name": "Maithic.Algo.mem_insertionSort",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {x : α} {l : List α},\n  x ∈ Maithic.Algo.insertionSort l ↔ x ∈ l",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 98,
+      "column": 0,
+      "endLine": 100,
+      "endColumn": 32,
+      "nameLine": 99,
+      "nameColumn": 8,
+      "doc": "Insertion sort keeps the elements.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "typeDeps": [
+        "DecidableLE",
+        "Iff",
+        "LE",
+        "List",
+        "List.instMembership",
+        "Membership.mem",
+        "Maithic.Algo.insertionSort"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "List.Perm.mem_iff",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.insertionSort_perm"
+      ],
+      "parents": [],
+      "statementHash": "673267330",
+      "sameStatement": [],
+      "source": "/-- Insertion sort keeps the elements. -/\ntheorem mem_insertionSort {x : α} {l : List α} : x ∈ insertionSort l ↔ x ∈ l :=\n  (insertionSort_perm l).mem_iff",
+      "proof": "(insertionSort_perm l).mem_iff"
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_of_sorted",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {l : List α},\n  Maithic.Algo.Sorted l → Maithic.Algo.insertionSort l = l",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 102,
+      "column": 0,
+      "endLine": 111,
+      "endColumn": 70,
+      "nameLine": 103,
+      "nameColumn": 8,
+      "doc": "Sorting a sorted list changes nothing.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "typeDeps": [
+        "DecidableLE",
+        "Eq",
+        "LE",
+        "List",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.insertionSort"
+      ],
+      "valueDeps": [
+        "And",
+        "DecidableLE",
+        "Eq",
+        "LE",
+        "List",
+        "True",
+        "congrArg",
+        "congrFun'",
+        "eq_self",
+        "eq_true",
+        "id",
+        "ite_eq_left_of_eq_true",
+        "of_eq_true",
+        "And.left",
+        "And.right",
+        "Eq.mpr",
+        "Eq.ndrec",
+        "Eq.refl",
+        "Eq.symm",
+        "Eq.trans",
+        "Iff.mp",
+        "LE.le",
+        "List.casesOn",
+        "List.cons",
+        "List.instMembership",
+        "List.mem_cons_self",
+        "List.nil",
+        "List.rec",
+        "Membership.mem",
+        "Maithic.Algo.Sorted",
+        "Maithic.Algo.insertSorted",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.sorted_cons"
+      ],
+      "parents": [],
+      "statementHash": "2327557583",
+      "sameStatement": [],
+      "source": "/-- Sorting a sorted list changes nothing. -/\ntheorem insertionSort_of_sorted {l : List α} (h : Sorted l) : insertionSort l = l := by\n  induction l with\n  | nil => rfl\n  | cons x xs ih =>\n    have hx := sorted_cons.mp h\n    simp only [insertionSort, ih hx.2]\n    cases xs with\n    | nil => rfl\n    | cons y ys => simp [insertSorted, hx.1 y (List.mem_cons_self ..)]",
+      "proof": "by\n  induction l with\n  | nil => rfl\n  | cons x xs ih =>\n    have hx := sorted_cons.mp h\n    simp only [insertionSort, ih hx.2]\n    cases xs with\n    | nil => rfl\n    | cons y ys => simp [insertSorted, hx.1 y (List.mem_cons_self ..)]"
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_idem",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] [Maithic.Algo.TotalPreorder α] (l : List α),\n  Maithic.Algo.insertionSort (Maithic.Algo.insertionSort l) = Maithic.Algo.insertionSort l",
+      "module": "Maithic.Algo.Sort.Insertion",
+      "line": 113,
+      "column": 0,
+      "endLine": 116,
+      "endColumn": 50,
+      "nameLine": 114,
+      "nameColumn": 8,
+      "doc": "Insertion sort is idempotent.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "typeDeps": [
+        "DecidableLE",
+        "Eq",
+        "LE",
+        "List",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertionSort"
+      ],
+      "valueDeps": [
+        "DecidableLE",
+        "LE",
+        "List",
+        "Maithic.Algo.TotalPreorder",
+        "Maithic.Algo.insertionSort",
+        "Maithic.Algo.insertionSort_of_sorted",
+        "Maithic.Algo.sorted_insertionSort"
+      ],
+      "parents": [],
+      "statementHash": "2249917559",
+      "sameStatement": [],
+      "source": "/-- Insertion sort is idempotent. -/\ntheorem insertionSort_idem [TotalPreorder α] (l : List α) :\n    insertionSort (insertionSort l) = insertionSort l :=\n  insertionSort_of_sorted (sorted_insertionSort l)",
+      "proof": "insertionSort_of_sorted (sorted_insertionSort l)"
+    }
+  ],
+  "steps": [
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 0,
+      "tactic": "induction l with\n  | nil => simp [insertSorted]\n  | cons y ys ih =>\n    simp only [insertSorted]\n    split\n    · simp\n    · simp only [List.mem_cons, ih]\n      constructor\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)",
+      "line": 32,
+      "column": 2,
+      "endLine": 47,
+      "endColumn": 33,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z : α\nl : List α\n⊢ z ∈ insertSorted x l ↔ z = x ∨ z ∈ l"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 24
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 1,
+      "tactic": "simp [insertSorted]",
+      "line": 33,
+      "column": 11,
+      "endLine": 33,
+      "endColumn": 30,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z : α\n⊢ z ∈ insertSorted x [] ↔ z = x ∨ z ∈ []"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 2,
+      "tactic": "simp only [insertSorted]",
+      "line": 35,
+      "column": 4,
+      "endLine": 35,
+      "endColumn": 28,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\n⊢ z ∈ insertSorted x (y :: ys) ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\n⊢ (z ∈ if x ≤ y then x :: y :: ys else y :: insertSorted x ys) ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 3,
+      "tactic": "split",
+      "line": 36,
+      "column": 4,
+      "endLine": 36,
+      "endColumn": 9,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\n⊢ (z ∈ if x ≤ y then x :: y :: ys else y :: insertSorted x ys) ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : x ≤ y\n⊢ z ∈ x :: y :: ys ↔ z = x ∨ z ∈ y :: ys",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z ∈ y :: insertSorted x ys ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 4,
+      "tactic": "· simp",
+      "line": 37,
+      "column": 4,
+      "endLine": 37,
+      "endColumn": 10,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : x ≤ y\n⊢ z ∈ x :: y :: ys ↔ z = x ∨ z ∈ y :: ys",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z ∈ y :: insertSorted x ys ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z ∈ y :: insertSorted x ys ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "depth": 1,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 5,
+      "tactic": "simp",
+      "line": 37,
+      "column": 6,
+      "endLine": 37,
+      "endColumn": 10,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : x ≤ y\n⊢ z ∈ x :: y :: ys ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 6,
+      "tactic": "· simp only [List.mem_cons, ih]\n      constructor\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)\n      · rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)",
+      "line": 38,
+      "column": 4,
+      "endLine": 47,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z ∈ y :: insertSorted x ys ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 18
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 7,
+      "tactic": "simp only [List.mem_cons, ih]",
+      "line": 38,
+      "column": 6,
+      "endLine": 38,
+      "endColumn": 35,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z ∈ y :: insertSorted x ys ↔ z = x ∨ z ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = y ∨ z = x ∨ z ∈ ys ↔ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 8,
+      "tactic": "constructor",
+      "line": 39,
+      "column": 6,
+      "endLine": 39,
+      "endColumn": 17,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = y ∨ z = x ∨ z ∈ ys ↔ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mp\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = y ∨ z = x ∨ z ∈ ys → z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mpr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = x ∨ z = y ∨ z ∈ ys → z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 9,
+      "tactic": "· rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)",
+      "line": 40,
+      "column": 6,
+      "endLine": 43,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mp\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = y ∨ z = x ∨ z ∈ ys → z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mpr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = x ∨ z = y ∨ z ∈ ys → z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mpr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = x ∨ z = y ∨ z ∈ ys → z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "depth": 2,
+      "inner": 7
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 10,
+      "tactic": "rintro (h | h | h)",
+      "line": 40,
+      "column": 8,
+      "endLine": 40,
+      "endColumn": 26,
+      "goalsBefore": [
+        "case cons.isFalse.mp\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = y ∨ z = x ∨ z ∈ ys → z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mp.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mp.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mp.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 11,
+      "tactic": "· exact Or.inr (Or.inl h)",
+      "line": 41,
+      "column": 8,
+      "endLine": 41,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mp.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mp.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mp.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mp.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mp.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 12,
+      "tactic": "exact Or.inr (Or.inl h)",
+      "line": 41,
+      "column": 10,
+      "endLine": 41,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mp.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 13,
+      "tactic": "· exact Or.inl h",
+      "line": 42,
+      "column": 8,
+      "endLine": 42,
+      "endColumn": 24,
+      "goalsBefore": [
+        "case cons.isFalse.mp.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = x ∨ z = y ∨ z ∈ ys",
+        "case cons.isFalse.mp.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mp.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 14,
+      "tactic": "exact Or.inl h",
+      "line": 42,
+      "column": 10,
+      "endLine": 42,
+      "endColumn": 24,
+      "goalsBefore": [
+        "case cons.isFalse.mp.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 15,
+      "tactic": "· exact Or.inr (Or.inr h)",
+      "line": 43,
+      "column": 8,
+      "endLine": 43,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mp.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 16,
+      "tactic": "exact Or.inr (Or.inr h)",
+      "line": 43,
+      "column": 10,
+      "endLine": 43,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mp.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = x ∨ z = y ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 17,
+      "tactic": "· rintro (h | h | h)\n        · exact Or.inr (Or.inl h)\n        · exact Or.inl h\n        · exact Or.inr (Or.inr h)",
+      "line": 44,
+      "column": 6,
+      "endLine": 47,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mpr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = x ∨ z = y ∨ z ∈ ys → z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 7
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 18,
+      "tactic": "rintro (h | h | h)",
+      "line": 44,
+      "column": 8,
+      "endLine": 44,
+      "endColumn": 26,
+      "goalsBefore": [
+        "case cons.isFalse.mpr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\n⊢ z = x ∨ z = y ∨ z ∈ ys → z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mpr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = y ∨ z = x ∨ z ∈ ys",
+        "case cons.isFalse.mpr.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = y ∨ z = x ∨ z ∈ ys",
+        "case cons.isFalse.mpr.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 19,
+      "tactic": "· exact Or.inr (Or.inl h)",
+      "line": 45,
+      "column": 8,
+      "endLine": 45,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mpr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = y ∨ z = x ∨ z ∈ ys",
+        "case cons.isFalse.mpr.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = y ∨ z = x ∨ z ∈ ys",
+        "case cons.isFalse.mpr.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mpr.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = y ∨ z = x ∨ z ∈ ys",
+        "case cons.isFalse.mpr.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 20,
+      "tactic": "exact Or.inr (Or.inl h)",
+      "line": 45,
+      "column": 10,
+      "endLine": 45,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mpr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = x\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 21,
+      "tactic": "· exact Or.inl h",
+      "line": 46,
+      "column": 8,
+      "endLine": 46,
+      "endColumn": 24,
+      "goalsBefore": [
+        "case cons.isFalse.mpr.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = y ∨ z = x ∨ z ∈ ys",
+        "case cons.isFalse.mpr.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.mpr.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 22,
+      "tactic": "exact Or.inl h",
+      "line": 46,
+      "column": 10,
+      "endLine": 46,
+      "endColumn": 24,
+      "goalsBefore": [
+        "case cons.isFalse.mpr.inr.inl\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z = y\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 23,
+      "tactic": "· exact Or.inr (Or.inr h)",
+      "line": 47,
+      "column": 8,
+      "endLine": 47,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mpr.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.mem_insertSorted",
+      "index": 24,
+      "tactic": "exact Or.inr (Or.inr h)",
+      "line": 47,
+      "column": 10,
+      "endLine": 47,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.mpr.inr.inr\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx z y : α\nys : List α\nih : z ∈ insertSorted x ys ↔ z = x ∨ z ∈ ys\nh✝ : ¬x ≤ y\nh : z ∈ ys\n⊢ z = y ∨ z = x ∨ z ∈ ys"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 25,
+      "tactic": "induction l with\n  | nil => exact List.Perm.refl _\n  | cons y ys ih =>\n    simp only [insertSorted]\n    split\n    · exact List.Perm.refl _\n    · exact (List.Perm.cons y ih).trans (List.Perm.swap x y ys)",
+      "line": 51,
+      "column": 2,
+      "endLine": 57,
+      "endColumn": 63,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nl : List α\n⊢ (insertSorted x l).Perm (x :: l)"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 7
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 26,
+      "tactic": "exact List.Perm.refl _",
+      "line": 52,
+      "column": 11,
+      "endLine": 52,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\n⊢ (insertSorted x []).Perm [x]"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 27,
+      "tactic": "simp only [insertSorted]",
+      "line": 54,
+      "column": 4,
+      "endLine": 54,
+      "endColumn": 28,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\n⊢ (insertSorted x (y :: ys)).Perm (x :: y :: ys)"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\n⊢ (if x ≤ y then x :: y :: ys else y :: insertSorted x ys).Perm (x :: y :: ys)"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 28,
+      "tactic": "split",
+      "line": 55,
+      "column": 4,
+      "endLine": 55,
+      "endColumn": 9,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\n⊢ (if x ≤ y then x :: y :: ys else y :: insertSorted x ys).Perm (x :: y :: ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : x ≤ y\n⊢ (x :: y :: ys).Perm (x :: y :: ys)",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : ¬x ≤ y\n⊢ (y :: insertSorted x ys).Perm (x :: y :: ys)"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 29,
+      "tactic": "· exact List.Perm.refl _",
+      "line": 56,
+      "column": 4,
+      "endLine": 56,
+      "endColumn": 28,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : x ≤ y\n⊢ (x :: y :: ys).Perm (x :: y :: ys)",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : ¬x ≤ y\n⊢ (y :: insertSorted x ys).Perm (x :: y :: ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : ¬x ≤ y\n⊢ (y :: insertSorted x ys).Perm (x :: y :: ys)"
+      ],
+      "depth": 1,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 30,
+      "tactic": "exact List.Perm.refl _",
+      "line": 56,
+      "column": 6,
+      "endLine": 56,
+      "endColumn": 28,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : x ≤ y\n⊢ (x :: y :: ys).Perm (x :: y :: ys)"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 31,
+      "tactic": "· exact (List.Perm.cons y ih).trans (List.Perm.swap x y ys)",
+      "line": 57,
+      "column": 4,
+      "endLine": 57,
+      "endColumn": 63,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : ¬x ≤ y\n⊢ (y :: insertSorted x ys).Perm (x :: y :: ys)"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.insertSorted_perm",
+      "index": 32,
+      "tactic": "exact (List.Perm.cons y ih).trans (List.Perm.swap x y ys)",
+      "line": 57,
+      "column": 6,
+      "endLine": 57,
+      "endColumn": 63,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : (insertSorted x ys).Perm (x :: ys)\nh✝ : ¬x ≤ y\n⊢ (y :: insertSorted x ys).Perm (x :: y :: ys)"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 33,
+      "tactic": "induction l with\n  | nil => simp [insertSorted]\n  | cons y ys ih =>\n    have hy := sorted_cons.mp h\n    simp only [insertSorted]\n    split\n    · rename_i hxy\n      refine sorted_cons.mpr ⟨?_, h⟩\n      intro z hz\n      rcases List.mem_cons.mp hz with rfl | hz\n      · exact hxy\n      · exact TotalPreorder.le_trans _ _ _ hxy (hy.1 z hz)\n    · rename_i hxy\n      have hyx : y ≤ x := (TotalPreorder.le_total x y).resolve_left hxy\n      refine sorted_cons.mpr ⟨?_, ih hy.2⟩\n      intro z hz\n      rcases mem_insertSorted.mp hz with rfl | hz\n      · exact hyx\n      · exact hy.1 z hz",
+      "line": 62,
+      "column": 2,
+      "endLine": 80,
+      "endColumn": 23,
+      "goalsBefore": [
+        "α : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx : α\nl : List α\nh : Sorted l\n⊢ Sorted (insertSorted x l)"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 23
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 34,
+      "tactic": "simp [insertSorted]",
+      "line": 63,
+      "column": 11,
+      "endLine": 63,
+      "endColumn": 30,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx : α\nh : Sorted []\n⊢ Sorted (insertSorted x [])"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 35,
+      "tactic": "have hy := sorted_cons.mp h",
+      "line": 65,
+      "column": 4,
+      "endLine": 65,
+      "endColumn": 31,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\n⊢ Sorted (insertSorted x (y :: ys))"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\n⊢ Sorted (insertSorted x (y :: ys))"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 36,
+      "tactic": "simp only [insertSorted]",
+      "line": 66,
+      "column": 4,
+      "endLine": 66,
+      "endColumn": 28,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\n⊢ Sorted (insertSorted x (y :: ys))"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\n⊢ Sorted (if x ≤ y then x :: y :: ys else y :: insertSorted x ys)"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 37,
+      "tactic": "split",
+      "line": 67,
+      "column": 4,
+      "endLine": 67,
+      "endColumn": 9,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\n⊢ Sorted (if x ≤ y then x :: y :: ys else y :: insertSorted x ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : x ≤ y\n⊢ Sorted (x :: y :: ys)",
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : ¬x ≤ y\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 38,
+      "tactic": "· rename_i hxy\n      refine sorted_cons.mpr ⟨?_, h⟩\n      intro z hz\n      rcases List.mem_cons.mp hz with rfl | hz\n      · exact hxy\n      · exact TotalPreorder.le_trans _ _ _ hxy (hy.1 z hz)",
+      "line": 68,
+      "column": 4,
+      "endLine": 73,
+      "endColumn": 58,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : x ≤ y\n⊢ Sorted (x :: y :: ys)",
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : ¬x ≤ y\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : ¬x ≤ y\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "depth": 1,
+      "inner": 8
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 39,
+      "tactic": "rename_i hxy",
+      "line": 68,
+      "column": 6,
+      "endLine": 68,
+      "endColumn": 18,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : x ≤ y\n⊢ Sorted (x :: y :: ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\n⊢ Sorted (x :: y :: ys)"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 40,
+      "tactic": "refine sorted_cons.mpr ⟨?_, h⟩",
+      "line": 69,
+      "column": 6,
+      "endLine": 69,
+      "endColumn": 36,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\n⊢ Sorted (x :: y :: ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\n⊢ ∀ (b : α), b ∈ y :: ys → x ≤ b"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 41,
+      "tactic": "intro z hz",
+      "line": 70,
+      "column": 6,
+      "endLine": 70,
+      "endColumn": 16,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\n⊢ ∀ (b : α), b ∈ y :: ys → x ≤ b"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\nz : α\nhz : z ∈ y :: ys\n⊢ x ≤ z"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 42,
+      "tactic": "rcases List.mem_cons.mp hz with rfl | hz",
+      "line": 71,
+      "column": 6,
+      "endLine": 71,
+      "endColumn": 46,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\nz : α\nhz : z ∈ y :: ys\n⊢ x ≤ z"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue.inl\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nz : α\nh : Sorted (z :: ys)\nhy : (∀ (b : α), b ∈ ys → z ≤ b) ∧ Sorted ys\nhxy : x ≤ z\nhz : z ∈ z :: ys\n⊢ x ≤ z",
+        "case cons.isTrue.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\nz : α\nhz✝ : z ∈ y :: ys\nhz : z ∈ ys\n⊢ x ≤ z"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 43,
+      "tactic": "· exact hxy",
+      "line": 72,
+      "column": 6,
+      "endLine": 72,
+      "endColumn": 17,
+      "goalsBefore": [
+        "case cons.isTrue.inl\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nz : α\nh : Sorted (z :: ys)\nhy : (∀ (b : α), b ∈ ys → z ≤ b) ∧ Sorted ys\nhxy : x ≤ z\nhz : z ∈ z :: ys\n⊢ x ≤ z",
+        "case cons.isTrue.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\nz : α\nhz✝ : z ∈ y :: ys\nhz : z ∈ ys\n⊢ x ≤ z"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\nz : α\nhz✝ : z ∈ y :: ys\nhz : z ∈ ys\n⊢ x ≤ z"
+      ],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 44,
+      "tactic": "exact hxy",
+      "line": 72,
+      "column": 8,
+      "endLine": 72,
+      "endColumn": 17,
+      "goalsBefore": [
+        "case cons.isTrue.inl\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nz : α\nh : Sorted (z :: ys)\nhy : (∀ (b : α), b ∈ ys → z ≤ b) ∧ Sorted ys\nhxy : x ≤ z\nhz : z ∈ z :: ys\n⊢ x ≤ z"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 45,
+      "tactic": "· exact TotalPreorder.le_trans _ _ _ hxy (hy.1 z hz)",
+      "line": 73,
+      "column": 6,
+      "endLine": 73,
+      "endColumn": 58,
+      "goalsBefore": [
+        "case cons.isTrue.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\nz : α\nhz✝ : z ∈ y :: ys\nhz : z ∈ ys\n⊢ x ≤ z"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 46,
+      "tactic": "exact TotalPreorder.le_trans _ _ _ hxy (hy.1 z hz)",
+      "line": 73,
+      "column": 8,
+      "endLine": 73,
+      "endColumn": 58,
+      "goalsBefore": [
+        "case cons.isTrue.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : x ≤ y\nz : α\nhz✝ : z ∈ y :: ys\nhz : z ∈ ys\n⊢ x ≤ z"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 47,
+      "tactic": "· rename_i hxy\n      have hyx : y ≤ x := (TotalPreorder.le_total x y).resolve_left hxy\n      refine sorted_cons.mpr ⟨?_, ih hy.2⟩\n      intro z hz\n      rcases mem_insertSorted.mp hz with rfl | hz\n      · exact hyx\n      · exact hy.1 z hz",
+      "line": 74,
+      "column": 4,
+      "endLine": 80,
+      "endColumn": 23,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : ¬x ≤ y\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 9
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 48,
+      "tactic": "rename_i hxy",
+      "line": 74,
+      "column": 6,
+      "endLine": 74,
+      "endColumn": 18,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nh✝ : ¬x ≤ y\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 49,
+      "tactic": "have hyx : y ≤ x := (TotalPreorder.le_total x y).resolve_left hxy",
+      "line": 75,
+      "column": 6,
+      "endLine": 75,
+      "endColumn": 71,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 50,
+      "tactic": "refine sorted_cons.mpr ⟨?_, ih hy.2⟩",
+      "line": 76,
+      "column": 6,
+      "endLine": 76,
+      "endColumn": 42,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\n⊢ Sorted (y :: insertSorted x ys)"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\n⊢ ∀ (b : α), b ∈ insertSorted x ys → y ≤ b"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 51,
+      "tactic": "intro z hz",
+      "line": 77,
+      "column": 6,
+      "endLine": 77,
+      "endColumn": 16,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\n⊢ ∀ (b : α), b ∈ insertSorted x ys → y ≤ b"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\nz : α\nhz : z ∈ insertSorted x ys\n⊢ y ≤ z"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 52,
+      "tactic": "rcases mem_insertSorted.mp hz with rfl | hz",
+      "line": 78,
+      "column": 6,
+      "endLine": 78,
+      "endColumn": 49,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\nz : α\nhz : z ∈ insertSorted x ys\n⊢ y ≤ z"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.inl\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\ny : α\nys : List α\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nz : α\nih : Sorted ys → Sorted (insertSorted z ys)\nhxy : ¬z ≤ y\nhyx : y ≤ z\nhz : z ∈ insertSorted z ys\n⊢ y ≤ z",
+        "case cons.isFalse.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\nz : α\nhz✝ : z ∈ insertSorted x ys\nhz : z ∈ ys\n⊢ y ≤ z"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 53,
+      "tactic": "· exact hyx",
+      "line": 79,
+      "column": 6,
+      "endLine": 79,
+      "endColumn": 17,
+      "goalsBefore": [
+        "case cons.isFalse.inl\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\ny : α\nys : List α\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nz : α\nih : Sorted ys → Sorted (insertSorted z ys)\nhxy : ¬z ≤ y\nhyx : y ≤ z\nhz : z ∈ insertSorted z ys\n⊢ y ≤ z",
+        "case cons.isFalse.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\nz : α\nhz✝ : z ∈ insertSorted x ys\nhz : z ∈ ys\n⊢ y ≤ z"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\nz : α\nhz✝ : z ∈ insertSorted x ys\nhz : z ∈ ys\n⊢ y ≤ z"
+      ],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 54,
+      "tactic": "exact hyx",
+      "line": 79,
+      "column": 8,
+      "endLine": 79,
+      "endColumn": 17,
+      "goalsBefore": [
+        "case cons.isFalse.inl\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\ny : α\nys : List α\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nz : α\nih : Sorted ys → Sorted (insertSorted z ys)\nhxy : ¬z ≤ y\nhyx : y ≤ z\nhz : z ∈ insertSorted z ys\n⊢ y ≤ z"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 55,
+      "tactic": "· exact hy.1 z hz",
+      "line": 80,
+      "column": 6,
+      "endLine": 80,
+      "endColumn": 23,
+      "goalsBefore": [
+        "case cons.isFalse.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\nz : α\nhz✝ : z ∈ insertSorted x ys\nhz : z ∈ ys\n⊢ y ≤ z"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertSorted",
+      "index": 56,
+      "tactic": "exact hy.1 z hz",
+      "line": 80,
+      "column": 8,
+      "endLine": 80,
+      "endColumn": 23,
+      "goalsBefore": [
+        "case cons.isFalse.inr\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx y : α\nys : List α\nih : Sorted ys → Sorted (insertSorted x ys)\nh : Sorted (y :: ys)\nhy : (∀ (b : α), b ∈ ys → y ≤ b) ∧ Sorted ys\nhxy : ¬x ≤ y\nhyx : y ≤ x\nz : α\nhz✝ : z ∈ insertSorted x ys\nhz : z ∈ ys\n⊢ y ≤ z"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertionSort",
+      "index": 57,
+      "tactic": "induction l with\n  | nil => exact sorted_nil\n  | cons x xs ih => exact sorted_insertSorted x ih",
+      "line": 84,
+      "column": 2,
+      "endLine": 86,
+      "endColumn": 50,
+      "goalsBefore": [
+        "α : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nl : List α\n⊢ Sorted (insertionSort l)"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 2
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertionSort",
+      "index": 58,
+      "tactic": "exact sorted_nil",
+      "line": 85,
+      "column": 11,
+      "endLine": 85,
+      "endColumn": 27,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\n⊢ Sorted (insertionSort [])"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.sorted_insertionSort",
+      "index": 59,
+      "tactic": "exact sorted_insertSorted x ih",
+      "line": 86,
+      "column": 20,
+      "endLine": 86,
+      "endColumn": 50,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝² : LE α\ninst✝¹ : DecidableLE α\ninst✝ : TotalPreorder α\nx : α\nxs : List α\nih : Sorted (insertionSort xs)\n⊢ Sorted (insertionSort (x :: xs))"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_perm",
+      "index": 60,
+      "tactic": "induction l with\n  | nil => exact List.Perm.refl _\n  | cons x xs ih => exact (insertSorted_perm x _).trans (List.Perm.cons x ih)",
+      "line": 90,
+      "column": 2,
+      "endLine": 92,
+      "endColumn": 77,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nl : List α\n⊢ (insertionSort l).Perm l"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 2
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_perm",
+      "index": 61,
+      "tactic": "exact List.Perm.refl _",
+      "line": 91,
+      "column": 11,
+      "endLine": 91,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\n⊢ (insertionSort []).Perm []"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_perm",
+      "index": 62,
+      "tactic": "exact (insertSorted_perm x _).trans (List.Perm.cons x ih)",
+      "line": 92,
+      "column": 20,
+      "endLine": 92,
+      "endColumn": 77,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nxs : List α\nih : (insertionSort xs).Perm xs\n⊢ (insertionSort (x :: xs)).Perm (x :: xs)"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_of_sorted",
+      "index": 63,
+      "tactic": "induction l with\n  | nil => rfl\n  | cons x xs ih =>\n    have hx := sorted_cons.mp h\n    simp only [insertionSort, ih hx.2]\n    cases xs with\n    | nil => rfl\n    | cons y ys => simp [insertSorted, hx.1 y (List.mem_cons_self ..)]",
+      "line": 104,
+      "column": 2,
+      "endLine": 111,
+      "endColumn": 70,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nl : List α\nh : Sorted l\n⊢ insertionSort l = l"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 6
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_of_sorted",
+      "index": 64,
+      "tactic": "rfl",
+      "line": 105,
+      "column": 11,
+      "endLine": 105,
+      "endColumn": 14,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nh : Sorted []\n⊢ insertionSort [] = []"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_of_sorted",
+      "index": 65,
+      "tactic": "have hx := sorted_cons.mp h",
+      "line": 107,
+      "column": 4,
+      "endLine": 107,
+      "endColumn": 31,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nxs : List α\nih : Sorted xs → insertionSort xs = xs\nh : Sorted (x :: xs)\n⊢ insertionSort (x :: xs) = x :: xs"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nxs : List α\nih : Sorted xs → insertionSort xs = xs\nh : Sorted (x :: xs)\nhx : (∀ (b : α), b ∈ xs → x ≤ b) ∧ Sorted xs\n⊢ insertionSort (x :: xs) = x :: xs"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_of_sorted",
+      "index": 66,
+      "tactic": "simp only [insertionSort, ih hx.2]",
+      "line": 108,
+      "column": 4,
+      "endLine": 108,
+      "endColumn": 38,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nxs : List α\nih : Sorted xs → insertionSort xs = xs\nh : Sorted (x :: xs)\nhx : (∀ (b : α), b ∈ xs → x ≤ b) ∧ Sorted xs\n⊢ insertionSort (x :: xs) = x :: xs"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nxs : List α\nih : Sorted xs → insertionSort xs = xs\nh : Sorted (x :: xs)\nhx : (∀ (b : α), b ∈ xs → x ≤ b) ∧ Sorted xs\n⊢ insertSorted x xs = x :: xs"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_of_sorted",
+      "index": 67,
+      "tactic": "cases xs with\n    | nil => rfl\n    | cons y ys => simp [insertSorted, hx.1 y (List.mem_cons_self ..)]",
+      "line": 109,
+      "column": 4,
+      "endLine": 111,
+      "endColumn": 70,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nxs : List α\nih : Sorted xs → insertionSort xs = xs\nh : Sorted (x :: xs)\nhx : (∀ (b : α), b ∈ xs → x ≤ b) ∧ Sorted xs\n⊢ insertSorted x xs = x :: xs"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 2
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_of_sorted",
+      "index": 68,
+      "tactic": "rfl",
+      "line": 110,
+      "column": 13,
+      "endLine": 110,
+      "endColumn": 16,
+      "goalsBefore": [
+        "case cons.nil\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx : α\nih : Sorted [] → insertionSort [] = []\nh : Sorted [x]\nhx : (∀ (b : α), b ∈ [] → x ≤ b) ∧ Sorted []\n⊢ insertSorted x [] = [x]"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.insertionSort_of_sorted",
+      "index": 69,
+      "tactic": "simp [insertSorted, hx.1 y (List.mem_cons_self ..)]",
+      "line": 111,
+      "column": 19,
+      "endLine": 111,
+      "endColumn": 70,
+      "goalsBefore": [
+        "case cons.cons\nα : Type u\ninst✝¹ : LE α\ninst✝ : DecidableLE α\nx y : α\nys : List α\nih : Sorted (y :: ys) → insertionSort (y :: ys) = y :: ys\nh : Sorted (x :: y :: ys)\nhx : (∀ (b : α), b ∈ y :: ys → x ≤ b) ∧ Sorted (y :: ys)\n⊢ insertSorted x (y :: ys) = x :: y :: ys"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    }
+  ],
+  "holes": [],
+  "findings": []
+}

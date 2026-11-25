@@ -1,0 +1,8 @@
+{
+  "schema": "maithic.nnv.network/1",
+  "name": "absolute value",
+  "layers": [
+    { "activation": "relu", "neurons": [ { "weights": ["1"], "bias": "0" }, { "weights": ["-1"], "bias": "0" } ] },
+    { "activation": "identity", "neurons": [ { "weights": ["1", "1"], "bias": "0" } ] }
+  ]
+}

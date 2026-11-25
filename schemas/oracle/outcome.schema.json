@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oracle outcome",
+  "description": "What an oracle found out about a goal: proved, with the certificate; refuted, with an exact point that satisfies the hypotheses and violates the goal; or unknown, with the reason. Unknown is never a verdict on the goal.",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "maithic.oracle.outcome/1"
+        },
+        "outcome": {
+          "const": "proved"
+        },
+        "certificate": {
+          "$ref": "certificate.schema.json"
+        },
+        "lean": {
+          "description": "What Lean needs to check the outcome: a statement that a decision procedure of Lean confirms, a theorem that replays the certificate through its verified checker, and tactic scripts that close the goal inside the theorem it came from, the most informative first.",
+          "type": "object",
+          "properties": {
+            "check": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "replay": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "scripts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "check",
+            "replay",
+            "scripts"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "outcome",
+        "certificate"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "maithic.oracle.outcome/1"
+        },
+        "outcome": {
+          "const": "refuted"
+        },
+        "model": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "../common.schema.json#/$defs/exact"
+          }
+        }
+      },
+      "required": [
+        "schema",
+        "outcome",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "maithic.oracle.outcome/1"
+        },
+        "outcome": {
+          "const": "unknown"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "schema",
+        "outcome",
+        "reason"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

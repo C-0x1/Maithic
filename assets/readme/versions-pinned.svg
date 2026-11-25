@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 339" role="img" aria-labelledby="versions-pinned-t versions-pinned-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="versions-pinned-t">The versions the repository is tested with</title>
+  <desc id="versions-pinned-d">Five tiles. Lean 4.36.0, pinned in the file lean-toolchain and installed by elan. OCaml 5.5, with dune 3.25, set in the workflow. Julia 1.13, set in the workflow; the packages need 1.11 or later. R 4.5, set in the workflow; the packages need 4.4 or later. Ubuntu 24.04 is the image every job runs on.</desc>
+  <rect width="960" height="339" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="164.8" height="153.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="218.8" y="96.0" width="164.8" height="153.0" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+  <rect x="397.6" y="96.0" width="164.8" height="153.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <rect x="576.4" y="96.0" width="164.8" height="153.0" rx="10" fill="#FFFFFF" stroke="#276DC3" stroke-width="1.5"/>
+  <rect x="755.2" y="96.0" width="164.8" height="153.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="267.0" width="880.0" height="42.0" rx="10" fill="#E8E9F3"/>
+  <rect x="40.0" y="96.0" width="7.0" height="153.0" rx="3" fill="#2B2F77"/>
+  <rect x="218.8" y="96.0" width="7.0" height="153.0" rx="3" fill="#EC6813"/>
+  <rect x="397.6" y="96.0" width="7.0" height="153.0" rx="3" fill="#9558B2"/>
+  <rect x="576.4" y="96.0" width="7.0" height="153.0" rx="3" fill="#276DC3"/>
+  <rect x="755.2" y="96.0" width="7.0" height="153.0" rx="3" fill="#5B6477"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="583.1" lengthAdjust="spacingAndGlyphs">What the workflow installs, and where it is written down</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="333.2" lengthAdjust="spacingAndGlyphs">.github/workflows/ci.yml  ·  lean-toolchain</text>
+  <text x="60.0" y="123.0" font-size="17" fill="#2B2F77" font-weight="700" textLength="91.7" lengthAdjust="spacingAndGlyphs">Lean 4.36.0</text>
+  <text x="60.0" y="145.0" font-size="12.5" fill="#14162B" textLength="52.1" lengthAdjust="spacingAndGlyphs">Pinned in</text>
+  <text x="60.0" y="162.0" font-size="12.5" fill="#14162B" textLength="95.2" lengthAdjust="spacingAndGlyphs">lean-toolchain, at</text>
+  <text x="60.0" y="179.0" font-size="12.5" fill="#14162B" textLength="79.9" lengthAdjust="spacingAndGlyphs">the root and in</text>
+  <text x="60.0" y="196.0" font-size="12.5" fill="#14162B" textLength="109.1" lengthAdjust="spacingAndGlyphs">lean/. elan installs it</text>
+  <text x="60.0" y="213.0" font-size="12.5" fill="#14162B" textLength="64.6" lengthAdjust="spacingAndGlyphs">on first use.</text>
+  <text x="238.8" y="123.0" font-size="17" fill="#EC6813" font-weight="700" textLength="83.2" lengthAdjust="spacingAndGlyphs">OCaml 5.5</text>
+  <text x="238.8" y="145.0" font-size="12.5" fill="#14162B" textLength="109.8" lengthAdjust="spacingAndGlyphs">With dune 3.25. Set</text>
+  <text x="238.8" y="162.0" font-size="12.5" fill="#14162B" textLength="110.2" lengthAdjust="spacingAndGlyphs">in the workflow. The</text>
+  <text x="238.8" y="179.0" font-size="12.5" fill="#14162B" textLength="77.8" lengthAdjust="spacingAndGlyphs">code uses the</text>
+  <text x="238.8" y="196.0" font-size="12.5" fill="#14162B" textLength="82.3" lengthAdjust="spacingAndGlyphs">compiler's own</text>
+  <text x="238.8" y="213.0" font-size="12.5" fill="#14162B" textLength="112.6" lengthAdjust="spacingAndGlyphs">libraries and nothing</text>
+  <text x="238.8" y="230.0" font-size="12.5" fill="#14162B" textLength="26.4" lengthAdjust="spacingAndGlyphs">else.</text>
+  <text x="417.6" y="123.0" font-size="17" fill="#9558B2" font-weight="700" textLength="76.6" lengthAdjust="spacingAndGlyphs">Julia 1.13</text>
+  <text x="417.6" y="145.0" font-size="12.5" fill="#14162B" textLength="107.7" lengthAdjust="spacingAndGlyphs">Set in the workflow.</text>
+  <text x="417.6" y="162.0" font-size="12.5" fill="#14162B" textLength="78.5" lengthAdjust="spacingAndGlyphs">The packages</text>
+  <text x="417.6" y="179.0" font-size="12.5" fill="#14162B" textLength="105.4" lengthAdjust="spacingAndGlyphs">declare 1.11 as the</text>
+  <text x="417.6" y="196.0" font-size="12.5" fill="#14162B" textLength="104.2" lengthAdjust="spacingAndGlyphs">oldest version they</text>
+  <text x="417.6" y="213.0" font-size="12.5" fill="#14162B" textLength="40.3" lengthAdjust="spacingAndGlyphs">accept.</text>
+  <text x="596.4" y="123.0" font-size="17" fill="#276DC3" font-weight="700" textLength="40.6" lengthAdjust="spacingAndGlyphs">R 4.5</text>
+  <text x="596.4" y="145.0" font-size="12.5" fill="#14162B" textLength="107.7" lengthAdjust="spacingAndGlyphs">Set in the workflow.</text>
+  <text x="596.4" y="162.0" font-size="12.5" fill="#14162B" textLength="78.5" lengthAdjust="spacingAndGlyphs">The packages</text>
+  <text x="596.4" y="179.0" font-size="12.5" fill="#14162B" textLength="99.4" lengthAdjust="spacingAndGlyphs">declare 4.4 as the</text>
+  <text x="596.4" y="196.0" font-size="12.5" fill="#14162B" textLength="104.2" lengthAdjust="spacingAndGlyphs">oldest version they</text>
+  <text x="596.4" y="213.0" font-size="12.5" fill="#14162B" textLength="40.3" lengthAdjust="spacingAndGlyphs">accept.</text>
+  <text x="775.2" y="123.0" font-size="17" fill="#5B6477" font-weight="700" textLength="106.7" lengthAdjust="spacingAndGlyphs">Ubuntu 24.04</text>
+  <text x="775.2" y="145.0" font-size="12.5" fill="#14162B" textLength="107.0" lengthAdjust="spacingAndGlyphs">The image of every</text>
+  <text x="775.2" y="162.0" font-size="12.5" fill="#14162B" textLength="109.6" lengthAdjust="spacingAndGlyphs">job. The actions are</text>
+  <text x="775.2" y="179.0" font-size="12.5" fill="#14162B" textLength="104.9" lengthAdjust="spacingAndGlyphs">pinned to commits,</text>
+  <text x="775.2" y="196.0" font-size="12.5" fill="#14162B" textLength="87.6" lengthAdjust="spacingAndGlyphs">with the release</text>
+  <text x="775.2" y="213.0" font-size="12.5" fill="#14162B" textLength="112.6" lengthAdjust="spacingAndGlyphs">named beside each.</text>
+  <text x="56.0" y="292.0" font-size="13" fill="#14162B" textLength="721.2" lengthAdjust="spacingAndGlyphs">The hygiene gate checks that the two lean-toolchain files agree and that every package carries the version of PROJECT.toml.</text>
+</svg>

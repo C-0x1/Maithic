@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Check report",
+  "description": "What `maithic check FILE --json` writes: the status of every theorem of a Lean file under the trust policy, with the axioms its proof rests on and the reasons when it is not verified.",
+  "$defs": {
+    "theorem": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "../common.schema.json#/$defs/status"
+        },
+        "axioms": {
+          "$ref": "../common.schema.json#/$defs/axioms"
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "statement",
+        "status",
+        "axioms",
+        "reasons"
+      ],
+      "additionalProperties": false
+    },
+    "diagnostic": {
+      "type": "object",
+      "properties": {
+        "severity": {
+          "enum": [
+            "error",
+            "warning",
+            "info"
+          ]
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "endLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "endColumn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "severity",
+        "line",
+        "column",
+        "text"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.check.report/1"
+    },
+    "file": {
+      "type": "string"
+    },
+    "ok": {
+      "type": "boolean"
+    },
+    "errors": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "warnings": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "declarations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "theorems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/theorem"
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/diagnostic"
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "file",
+    "ok",
+    "errors",
+    "warnings",
+    "declarations",
+    "theorems",
+    "diagnostics"
+  ],
+  "additionalProperties": false
+}

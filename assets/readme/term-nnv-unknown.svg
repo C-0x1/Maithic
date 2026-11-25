@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 944 413" width="944" height="413" role="img" aria-label="A terminal session: maithic nnv verify decides two more properties of the absolute-value network on the inputs from -2 to 3. That the output stays within 0 and 6 is verified, and Lean's kernel accepts the theorem. That it stays within 0 and 4 is answered with unknown: the bounds are too loose to show the property and no tested point leaves the box, so Lean is not asked and nothing is claimed.">
+  <title>A terminal session: maithic nnv verify decides two more properties of the absolute-value network on the inputs from -2 to 3. That the output stays within 0 and 6 is verified, and Lean's kernel accepts the theorem. That it stays within 0 and 4 is answered with unknown: the bounds are too loose to show the property and no tested point leaves the box, so Lean is not asked and nothing is claimed.</title>
+  <rect width="944" height="413" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h924a10 10 0 0 1 10 10v26h-944z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="472" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic nnv verify, the third answer</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="602.91" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic nnv verify examples/nnv/absolute-value.json examples/nnv/bounded.json</text>
+    <text x="22.00" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">network</text>
+    <text x="100.30" y="77" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">absolute value: 2 layer(s), 3 neuron(s)</text>
+    <text x="22.00" y="96" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">property</text>
+    <text x="100.30" y="96" textLength="321.03" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">on [-2, 3] the output stays within [0, 6]</text>
+    <text x="37.66" y="115" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">inputs in</text>
+    <text x="131.62" y="115" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">[-2, 3]</text>
+    <text x="37.66" y="134" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">outputs in</text>
+    <text x="131.62" y="134" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">[0, 6]</text>
+    <text x="22.00" y="153" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">verifier</text>
+    <text x="100.30" y="153" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">claims verified (2714 ms)</text>
+    <text x="22.00" y="172" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean</text>
+    <text x="100.30" y="172" textLength="375.84" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">accepted Maithic.NNV.Job.property_holds (471 ms)</text>
+    <text x="37.66" y="191" textLength="642.06" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.NN.Holds Maithic.NNV.Job.net Maithic.NNV.Job.input Maithic.NNV.Job.claimed</text>
+    <text x="22.00" y="210" textLength="869.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">verified: Lean's kernel accepted Maithic.NNV.Job.property_holds (axioms: propext, Classical.choice, Quot.sound)</text>
+    <text x="22.00" y="248" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="248" textLength="681.21" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic nnv verify examples/nnv/absolute-value.json examples/nnv/beyond-the-bounds.json</text>
+    <text x="22.00" y="267" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">network</text>
+    <text x="100.30" y="267" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">absolute value: 2 layer(s), 3 neuron(s)</text>
+    <text x="22.00" y="286" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">property</text>
+    <text x="100.30" y="286" textLength="321.03" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">on [-2, 3] the output stays within [0, 4]</text>
+    <text x="37.66" y="305" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">inputs in</text>
+    <text x="131.62" y="305" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">[-2, 3]</text>
+    <text x="37.66" y="324" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">outputs in</text>
+    <text x="131.62" y="324" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">[0, 4]</text>
+    <text x="22.00" y="343" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">verifier</text>
+    <text x="100.30" y="343" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">claims unknown (3051 ms)</text>
+    <text x="22.00" y="362" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean</text>
+    <text x="100.30" y="362" textLength="321.03" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">was not asked: there is no claim to check</text>
+    <text x="22.00" y="381" textLength="900.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unknown: the bounds are too loose to show the property, and no tested point of the input box leaves the claimed box</text>
+  </g>
+</svg>

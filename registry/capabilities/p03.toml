@@ -1,0 +1,197 @@
+# Capability register for P03 Review.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P03"
+name = "Review"
+title = "AI-powered Lean code reviewer"
+mission = "Review Lean 4 code the way a careful maintainer would: find unfinished or unsound work, flag duplicates and departures from convention, and propose simplifications that Lean has checked before anyone sees them."
+
+[[group]]
+id = "P03-01"
+title = "Lean lint engine"
+language = "Lean"
+path = "lean/Maithic/Lint/"
+purpose = "Lean-native checks that run over the environment and syntax."
+
+  [[group.capability]]
+  id = "P03-01-01"
+  title = "Lint framework"
+  spec = "Environment-linter framework running registered checks over declarations and returning structured findings."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P03-01-02"
+  title = "Sorry detector"
+  spec = "Find declarations whose proof depends on `sorryAx`, including through dependencies."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P03-01-03"
+  title = "Axiom detector"
+  spec = "Report non-standard axioms used by each declaration."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P03-01-04"
+  title = "Missing-docstring lint"
+  spec = "Flag public definitions and main theorems lacking docstrings."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P03-01-05"
+  title = "Naming-convention lint"
+  spec = "Check names against the configured convention."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+[[group]]
+id = "P03-02"
+title = "Semantic checks"
+language = "OCaml"
+path = "ocaml/lib/review/semantic/"
+purpose = "Checks that need the dependency graph, search or a second build."
+
+  [[group.capability]]
+  id = "P03-02-01"
+  title = "Duplicate-lemma check"
+  spec = "Find existing declarations with the same or alpha-equivalent statement."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean", "ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-02-02"
+  title = "Finding record"
+  spec = "Unified finding type across lint, semantic and AI checks."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+[[group]]
+id = "P03-03"
+title = "AI review reasoning"
+language = "OCaml"
+path = "ocaml/lib/review/ai/"
+purpose = "Model-driven explanation, intent checking and comment drafting under verification rules."
+
+  [[group.capability]]
+  id = "P03-03-01"
+  title = "Structured review output"
+  spec = "JSON-schema-constrained findings with locations and suggested edits."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-03-02"
+  title = "Untrusted-content isolation"
+  spec = "Treat repository text as data and ignore instructions embedded in it."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+[[group]]
+id = "P03-04"
+title = "Verified simplification suggestions"
+language = "OCaml"
+path = "ocaml/lib/review/simplify/"
+purpose = "Proposes shorter or sturdier proofs and compiles each proposal first."
+
+  [[group.capability]]
+  id = "P03-04-01"
+  title = "Automation replacement trial"
+  spec = "Try replacing a proof with a single automation call and verify it compiles."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-04-02"
+  title = "Suggestion verification"
+  spec = "Every suggested edit is checked by Lean before it is reported."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-04-03"
+  title = "Step deletion trial"
+  spec = "Remove individual steps and keep the deletions that still compile."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+[[group]]
+id = "P03-05"
+title = "Policy and configuration"
+language = "OCaml"
+path = "ocaml/lib/review/policy/"
+purpose = "Decides which findings matter for a given repository."
+
+  [[group.capability]]
+  id = "P03-05-01"
+  title = "Rule switches"
+  spec = "Per-rule enable and disable with defaults by profile."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-05-02"
+  title = "Severity mapping"
+  spec = "Map rules to info, warning or error."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-05-03"
+  title = "Inline suppression"
+  spec = "Suppress a finding with a justified comment or attribute."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+[[group]]
+id = "P03-06"
+title = "Review analytics"
+language = "R"
+path = "r/maithicstats/R/review-*.R"
+purpose = "Measures whether reviews are useful and which rules are noisy."
+
+  [[group.capability]]
+  id = "P03-06-01"
+  title = "Review run import"
+  spec = "Load findings, comments and outcomes."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-review.R"]
+
+  [[group.capability]]
+  id = "P03-06-02"
+  title = "Finding counts"
+  spec = "Findings by rule, severity and repository."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-review.R", "r/maithicviz/tests/testthat/test-insight-figures.R"]
+
+[[group]]
+id = "P03-07"
+title = "Report renderers"
+language = "OCaml"
+path = "ocaml/lib/review/report/"
+purpose = "Renders findings for terminals, forges, editors and CI systems."
+
+  [[group.capability]]
+  id = "P03-07-01"
+  title = "Markdown report"
+  spec = "Full review report in Markdown."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-07-02"
+  title = "Terminal report"
+  spec = "Colored terminal output with source excerpts."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]
+
+  [[group.capability]]
+  id = "P03-07-03"
+  title = "JSON report"
+  spec = "Machine-readable report conforming to the findings schema."
+  status = "done"
+  tests = ["ocaml/test/test_review.ml"]

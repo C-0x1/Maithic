@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757 622" width="757" height="622" role="img" aria-label="A terminal session: maithic prove with the option verbose lists every candidate proof of a theorem about triangular numbers. The eighteen candidates of the automation fail. In round 1 a model proposes two proofs and Lean rejects both, the first as a failed tactic and the second with unsolved goals. In round 2 the model's proof by induction is accepted, and the result is verified after 21 attempts.">
+  <title>A terminal session: maithic prove with the option verbose lists every candidate proof of a theorem about triangular numbers. The eighteen candidates of the automation fail. In round 1 a model proposes two proofs and Lean rejects both, the first as a failed tactic and the second with unsolved goals. In round 2 the model's proof by induction is accepted, and the result is verified after 21 attempts.</title>
+  <rect width="757" height="622" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h737a10 10 0 0 1 10 10v26h-757z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="378" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic prove --verbose</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="360.18" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic prove examples/triangle.lean --verbose</text>
+    <text x="22.00" y="77" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">tri_formula</text>
+    <text x="123.79" y="77" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="202.09" y="77" textLength="242.73" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(model, 21 attempt(s), 1626 ms)</text>
+    <text x="37.66" y="96" textLength="368.01" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">statement: ∀ (n : Nat), 2 * tri n = n * (n + 1)</text>
+    <text x="37.66" y="115" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">proof:</text>
+    <text x="123.79" y="115" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="139.45" y="134" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">induction n with</text>
+    <text x="139.45" y="153" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">| zero =&gt; rfl</text>
+    <text x="139.45" y="172" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">| succ k ih =&gt; simp only [tri]; grind</text>
+    <text x="37.66" y="191" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axioms:</text>
+    <text x="123.79" y="191" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Classical.choice, Quot.sound</text>
+    <text x="53.32" y="210" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="210" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by rfl</text>
+    <text x="296.05" y="210" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="229" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="229" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by trivial</text>
+    <text x="327.37" y="229" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="248" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="248" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by simp</text>
+    <text x="303.88" y="248" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="267" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="267" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by omega</text>
+    <text x="311.71" y="267" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="286" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="286" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by decide</text>
+    <text x="319.54" y="286" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[other]</text>
+    <text x="53.32" y="305" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="305" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by simp_all</text>
+    <text x="335.20" y="305" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="324" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="324" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by grind</text>
+    <text x="311.71" y="324" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="343" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="343" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; rfl</text>
+    <text x="358.69" y="343" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="362" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="362" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; trivial</text>
+    <text x="390.01" y="362" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="381" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="381" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; simp</text>
+    <text x="366.52" y="381" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="400" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="400" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; omega</text>
+    <text x="374.35" y="400" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="419" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="419" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; decide</text>
+    <text x="382.18" y="419" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[other]</text>
+    <text x="53.32" y="438" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="438" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; simp_all</text>
+    <text x="397.84" y="438" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="457" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="457" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; grind</text>
+    <text x="374.35" y="457" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="476" textLength="422.82" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; constructor &lt;;&gt; simp_all</text>
+    <text x="523.12" y="476" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="495" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="495" textLength="399.33" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intro h; cases h &lt;;&gt; simp_all</text>
+    <text x="499.63" y="495" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="514" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="514" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; constructor &lt;;&gt; intros &lt;;&gt; omega</text>
+    <text x="585.76" y="514" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="533" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="533" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 0 portfolio: by intros; exact?</text>
+    <text x="382.18" y="533" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="552" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="552" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 1 model: by simp [tri]</text>
+    <text x="319.54" y="552" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[tactic-failed]</text>
+    <text x="53.32" y="571" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">fail</text>
+    <text x="92.47" y="571" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 1 model: by induction n &lt;;&gt; simp [tri]</text>
+    <text x="444.82" y="571" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">[unsolved-goals]</text>
+    <text x="53.32" y="590" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="92.47" y="590" textLength="642.06" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round 2 model: by induction n with | zero =&gt; rfl | succ k ih =&gt; simp only [tri]; …</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 921 318" width="921" height="318" role="img" aria-label="A terminal session: three goals sent to the oracles. A linear goal over the rationals is refuted with the exact point x = 3, y = 0. A linear goal over the integers is answered with unknown, and the reason: the hypotheses and the negated goal have rational solutions, and no integer one was found nearby. A polynomial goal is proved with a certificate, and the command says that Lean has no checker for this kind of certificate yet.">
+  <title>A terminal session: three goals sent to the oracles. A linear goal over the rationals is refuted with the exact point x = 3, y = 0. A linear goal over the integers is answered with unknown, and the reason: the hypotheses and the negated goal have rational solutions, and no integer one was found nearby. A polynomial goal is proved with a certificate, and the command says that Lean has no checker for this kind of certificate yet.</title>
+  <rect width="921" height="318" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h901a10 10 0 0 1 10 10v26h-921z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="460" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic oracle solve, three more answers</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic oracle solve fixtures/oracle/goals/linear-refuted.json</text>
+    <text x="22.00" y="77" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">linear</text>
+    <text x="84.64" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F26D72">refuted</text>
+    <text x="155.11" y="77" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(linear over rat, 368 ms)</text>
+    <text x="37.66" y="96" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fails at:</text>
+    <text x="147.28" y="96" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">x = 3, y = 0</text>
+    <text x="22.00" y="134" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="134" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic oracle solve fixtures/oracle/goals/linear-unknown.json</text>
+    <text x="22.00" y="153" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">linear</text>
+    <text x="84.64" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">unknown</text>
+    <text x="155.11" y="153" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(linear over int, 1068 ms)</text>
+    <text x="37.66" y="172" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">reason:</text>
+    <text x="147.28" y="172" textLength="751.68" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the hypotheses and the negated goal have rational solutions, and no integer one was found nearby</text>
+    <text x="22.00" y="210" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="210" textLength="532.44" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic oracle solve fixtures/oracle/goals/polynomial-symmetric.json</text>
+    <text x="22.00" y="229" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">polynomial</text>
+    <text x="115.96" y="229" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">proved</text>
+    <text x="178.60" y="229" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(polynomial over rat, 529 ms)</text>
+    <text x="37.66" y="248" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">claim:</text>
+    <text x="147.28" y="248" textLength="407.16" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ x y : ℚ, x + y = 3 → x * y = 2 → x ^ 2 + y ^ 2 = 5</text>
+    <text x="37.66" y="267" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">certificate:</text>
+    <text x="147.28" y="267" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">polynomial.combination, 2158deffbf964a19</text>
+    <text x="37.66" y="286" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">in Lean:</text>
+    <text x="147.28" y="286" textLength="336.69" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">no checker for this kind of certificate yet</text>
+  </g>
+</svg>

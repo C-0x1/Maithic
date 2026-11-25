@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Outcome of running a tactic on a proof state",
+  "description": "A success carries the handle of the new state and its goals. A failure says where the tactic was stopped: by the guard, by the parser, or by Lean.",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "ok": {
+          "const": true
+        },
+        "state": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "goals": {
+          "type": "array",
+          "items": {
+            "$ref": "goal.schema.json"
+          }
+        },
+        "solved": {
+          "type": "boolean"
+        },
+        "diagnostics": {
+          "type": "array",
+          "items": {
+            "$ref": "report.schema.json#/$defs/diagnostic"
+          }
+        }
+      },
+      "required": [
+        "ok",
+        "state",
+        "goals",
+        "solved",
+        "diagnostics"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "ok": {
+          "const": false
+        },
+        "kind": {
+          "enum": [
+            "guard",
+            "parse",
+            "tactic"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "diagnostics": {
+          "type": "array",
+          "items": {
+            "$ref": "report.schema.json#/$defs/diagnostic"
+          }
+        }
+      },
+      "required": [
+        "ok",
+        "kind",
+        "error",
+        "diagnostics"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

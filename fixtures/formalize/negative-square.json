@@ -1,0 +1,361 @@
+{
+  "schema": "maithic.formalize.run/1",
+  "problem": {
+    "origin": "fixtures/formalize/problems/negative-square.txt",
+    "source": "Show that the square of a negative integer is positive.\n",
+    "text": "Show that the square of a negative integer is positive.",
+    "task": "prove",
+    "elements": [
+      {
+        "kind": "task",
+        "text": "Show that",
+        "start": 0,
+        "stop": 9
+      },
+      {
+        "kind": "constraint",
+        "text": "negative",
+        "start": 26,
+        "stop": 34
+      },
+      {
+        "kind": "constraint",
+        "text": "integer",
+        "start": 35,
+        "stop": 42
+      },
+      {
+        "kind": "constraint",
+        "text": "positive",
+        "start": 46,
+        "stop": 54
+      }
+    ]
+  },
+  "settings": {
+    "candidates": 4,
+    "rounds": 2,
+    "name": "problem",
+    "imports": []
+  },
+  "status": "formalized",
+  "chosen": 1,
+  "candidates": [
+    {
+      "id": 1,
+      "name": "problem_1",
+      "drafted": "(n : Int) (h : n < 0) : 0 < n ^ 2",
+      "statement": "(n : Int) (h : n < 0) : 0 < n ^ 2",
+      "reading": "The number is an integer below zero, and positive means above zero.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (n : Int), n < 0 → 0 < n ^ 2",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(n : Int) (h : n < 0) : 0 < n ^ 2",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "passed"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "passed",
+          "note": "no counterexample in 300 sampled cases"
+        },
+        {
+          "name": "triviality",
+          "outcome": "passed"
+        },
+        {
+          "name": "numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "variables",
+          "outcome": "passed"
+        },
+        {
+          "name": "traps",
+          "outcome": "passed"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "passed"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "passed",
+          "note": "agreement 10 of 10"
+        }
+      ],
+      "english": "For every integer n that is less than zero, the square of n is greater than zero.",
+      "agreement": 10,
+      "score": 1.0,
+      "verdict": "chosen",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "name": "problem_2",
+      "drafted": "(n : Nat) (h : n < 0) : 0 < n ^ 2",
+      "statement": "(n : Nat) (h : n < 0) : 0 < n ^ 2",
+      "reading": "The number is taken from the natural numbers.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (n : Nat), n < 0 → 0 < n ^ 2",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(n : Nat) (h : n < 0) : 0 < n ^ 2",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "failed",
+          "note": "the hypothesis h cannot hold (shown by contradiction)"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "skipped",
+          "note": "the statement is vacuous"
+        },
+        {
+          "name": "triviality",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "numbers",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "variables",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "traps",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        }
+      ],
+      "score": 0.0,
+      "verdict": "rejected",
+      "reason": "vacuous: the hypothesis h cannot hold (shown by contradiction)"
+    },
+    {
+      "id": 3,
+      "name": "problem_3",
+      "drafted": "(n : Int) (h : n ≤ 0) : 0 < n ^ 2",
+      "statement": "(n : Int) (h : n ≤ 0) : 0 < n ^ 2",
+      "reading": "Negative is read as not positive, so zero is allowed.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (n : Int), n ≤ 0 → 0 < n ^ 2",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(n : Int) (h : n ≤ 0) : 0 < n ^ 2",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "passed"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "failed",
+          "note": "it fails at n = 0"
+        },
+        {
+          "name": "triviality",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "numbers",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "variables",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "traps",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        }
+      ],
+      "score": 0.0,
+      "verdict": "rejected",
+      "reason": "refuted: it fails at n = 0"
+    },
+    {
+      "id": 4,
+      "name": "problem_4",
+      "drafted": "(n : ℤ) (h : n < 0) : n ^ 2 > 0",
+      "statement": "(n : Int) (h : n < 0) : n ^ 2 > 0",
+      "reading": "The same claim with the conclusion written as greater than.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": false,
+        "repairs": 1,
+        "statement": "∀ (n : Int), n < 0 → n ^ 2 > 0",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(n : ℤ) (h : n < 0) : n ^ 2 > 0",
+            "elaborated": false,
+            "error_class": "unknown-constant",
+            "error": "Unknown identifier `ℤ`\n\nNote: It is not possible to treat `ℤ` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.\n\nHint: Perhaps you meant `Int` in place of `ℤ`:\n  [apply] `Int`"
+          },
+          {
+            "round": 1,
+            "statement": "(n : Int) (h : n < 0) : n ^ 2 > 0",
+            "elaborated": true
+          }
+        ]
+      },
+      "verdict": "duplicate",
+      "duplicate_of": {
+        "id": 1,
+        "relation": "definitional"
+      },
+      "reason": "it says what candidate 1 says (the same once definitions are unfolded)"
+    }
+  ],
+  "summary": {
+    "drafted": 4,
+    "elaborated_first_try": 3,
+    "repaired": 1,
+    "elaborated": 4,
+    "failed": 0,
+    "duplicates": 1,
+    "rejected": 2,
+    "kept": 1
+  },
+  "lean": "/-\nThe problem, as it was posed:\n\n  Show that the square of a negative integer is positive.\n\nThe statement below was chosen from 4 candidates. Lean elaborates it; nothing here proves it.\nIts reading of the problem: The number is an integer below zero, and positive means above zero.\n\nRead back into English, the statement says:\n\n  For every integer n that is less than zero, the square of n is greater than zero.\n\nWhat the checks found:\n\n  vacuity           passed\n  counterexample    passed   no counterexample in 300 sampled cases\n  triviality        passed\n  numbers           passed\n  variables         passed\n  traps             passed\n  back-translation  passed\n  round-trip        passed   agreement 10 of 10\n\nThat a statement says what was meant is a matter of evidence. Read it before you rely on it.\n-/\nset_option autoImplicit false in\ntheorem problem (n : Int) (h : n < 0) : 0 < n ^ 2 := by\n  sorry\n",
+  "written": "fixtures/formalize/lean/NegativeSquare.lean",
+  "gateway": {
+    "mode": "replay",
+    "calls": 4,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": [
+      {
+        "purpose": "formalize.draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:43Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:43Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.back",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:43Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.judge",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:43Z",
+        "elapsed_ms": 0
+      }
+    ]
+  }
+}

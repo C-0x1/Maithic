@@ -1,0 +1,71 @@
+{
+  "schema": "maithic.guide.ranking/1",
+  "model": "fixtures/guide/library/model.json",
+  "goal": "n : Nat\n⊢ double n = 2 * n",
+  "value": 0.39686895280733592,
+  "candidates": [
+    {
+      "tactic": "rfl",
+      "template": "rfl",
+      "prior": 0.30811492757379133,
+      "search_prior": 0.9,
+      "guided_prior": 0.9
+    },
+    {
+      "tactic": "simp [double]",
+      "template": "simp [_]",
+      "prior": 0.2805279652105212,
+      "search_prior": 0.5,
+      "guided_prior": 0.45523267473520374
+    },
+    {
+      "tactic": "grind",
+      "template": "grind",
+      "prior": 0.15051892667066602,
+      "search_prior": 0.5,
+      "guided_prior": 0.24425776423087747
+    },
+    {
+      "tactic": "simp",
+      "template": "simp",
+      "prior": 0.059653102492669793,
+      "search_prior": 0.7,
+      "guided_prior": 0.13552466306543459
+    },
+    {
+      "tactic": "decide",
+      "template": "decide",
+      "prior": 0.077244275656483147,
+      "search_prior": 0.5,
+      "guided_prior": 0.12534977818947718
+    },
+    {
+      "tactic": "omega",
+      "template": "omega",
+      "prior": 0.038897614407867265,
+      "search_prior": 0.8,
+      "guided_prior": 0.10099507924308943
+    },
+    {
+      "tactic": "assumption",
+      "template": "assumption",
+      "prior": 0.028347729329333795,
+      "search_prior": 0.9,
+      "guided_prior": 0.08280337664032926
+    },
+    {
+      "tactic": "simp_all",
+      "template": "simp_all",
+      "prior": 0.028347729329333795,
+      "search_prior": 0.6,
+      "guided_prior": 0.055202251093552833
+    },
+    {
+      "tactic": "induction n",
+      "template": "induction _",
+      "prior": 0.028347729329333795,
+      "search_prior": 0.4,
+      "guided_prior": 0.036801500729035229
+    }
+  ]
+}

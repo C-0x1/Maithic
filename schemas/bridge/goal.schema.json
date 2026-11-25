@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Goal of a proof state",
+  "description": "One open goal as text: an identifier that stays the same while the goal is open, the case tag, the hypotheses in order, the target, and the whole goal as Lean prints it.",
+  "$defs": {
+    "hypothesis": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hypothesis"
+      }
+    },
+    "target": {
+      "type": "string"
+    },
+    "pretty": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "tag",
+    "hypotheses",
+    "target",
+    "pretty"
+  ],
+  "additionalProperties": false
+}

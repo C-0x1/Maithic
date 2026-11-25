@@ -1,0 +1,37 @@
+name = "maithic"
+version = "0.1.0"
+description = "Maithic: the Lean side. Verified libraries, the Bridge server and their tests."
+license = "Apache-2.0"
+defaultTargets = ["Maithic", "MaithicBridge", "MaithicBench", "MaithicTest", "maithic-bridge", "maithic-bench", "maithic-algo", "maithic_test"]
+testDriver = "maithic_test"
+
+[[lean_lib]]
+name = "Maithic"
+
+[[lean_lib]]
+name = "MaithicBridge"
+
+[[lean_lib]]
+name = "MaithicBench"
+
+[[lean_lib]]
+name = "MaithicTest"
+
+[[lean_exe]]
+name = "maithic-bridge"
+root = "MaithicBridge.Main"
+supportInterpreter = true
+
+[[lean_exe]]
+name = "maithic-bench"
+root = "MaithicBench.Main"
+supportInterpreter = true
+
+[[lean_exe]]
+name = "maithic-algo"
+root = "MaithicAlgo"
+
+[[lean_exe]]
+name = "maithic_test"
+root = "MaithicTest.Main"
+supportInterpreter = true

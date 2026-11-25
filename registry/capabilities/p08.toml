@@ -1,0 +1,183 @@
+# Capability register for P08 NNV.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P08"
+name = "NNV"
+title = "AI-assisted neural network verification"
+mission = "Specify properties of neural networks in Lean, compute verification evidence with fast numerical engines, and have Lean check that evidence so that the final guarantee rests on the kernel and an explicit list of assumptions."
+
+[[group]]
+id = "P08-01"
+title = "Layer and network semantics"
+language = "Lean"
+path = "lean/Maithic/NN/Layers/"
+purpose = "A precise meaning for each layer and for whole networks, executable and provable."
+
+  [[group.capability]]
+  id = "P08-01-01"
+  title = "Dense layer"
+  spec = "Affine map with weight matrix and bias vector."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+  [[group.capability]]
+  id = "P08-01-02"
+  title = "ReLU"
+  spec = "Definition with nonnegativity, monotonicity and idempotence lemmas."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+  [[group.capability]]
+  id = "P08-01-03"
+  title = "Exact network evaluation"
+  spec = "Executable forward pass over exact rationals."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+[[group]]
+id = "P08-02"
+title = "Certificate checkers"
+language = "Lean"
+path = "lean/Maithic/NN/Cert/"
+purpose = "Proven-sound programs that accept or reject evidence produced outside Lean."
+
+  [[group.capability]]
+  id = "P08-02-01"
+  title = "Interval type"
+  spec = "Closed rational intervals with arithmetic operations."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+  [[group.capability]]
+  id = "P08-02-02"
+  title = "Interval soundness"
+  spec = "Each interval operation is proved to contain the true result."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+  [[group.capability]]
+  id = "P08-02-03"
+  title = "Interval-bound checker"
+  spec = "Recompute layer bounds in Lean and compare them with the claimed bounds."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+  [[group.capability]]
+  id = "P08-02-04"
+  title = "Bound certificate format"
+  spec = "Per-layer lower and upper bounds as data."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+  [[group.capability]]
+  id = "P08-02-05"
+  title = "Checker soundness theorem"
+  spec = "If the checker accepts, the property holds for the network semantics."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+  [[group.capability]]
+  id = "P08-02-06"
+  title = "Counterexample checker"
+  spec = "Evaluate the network on a witness and confirm the violation."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean"]
+
+[[group]]
+id = "P08-03"
+title = "Bound propagation engines"
+language = "Julia"
+path = "julia/MaithicNNV/src/bounds/"
+purpose = "Fast incomplete verifiers that produce certificates."
+
+  [[group.capability]]
+  id = "P08-03-01"
+  title = "Network structs"
+  spec = "Typed layer structs with exact and floating parameters."
+  status = "done"
+  tests = ["julia/MaithicNNV/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P08-03-02"
+  title = "Interval bound propagation"
+  spec = "Interval propagation with outward rounding."
+  status = "done"
+  tests = ["julia/MaithicNNV/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P08-03-03"
+  title = "Bound certificate emission"
+  spec = "Write bounds as rational certificates."
+  status = "done"
+  tests = ["julia/MaithicNNV/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P08-03-04"
+  title = "Property decision from bounds"
+  spec = "Decide verified, violated or unknown from output bounds."
+  status = "done"
+  tests = ["julia/MaithicNNV/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P08-03-05"
+  title = "Reference forward pass"
+  spec = "Reference evaluation of the network."
+  status = "done"
+  tests = ["julia/MaithicNNV/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P08-03-06"
+  title = "Rational enclosure"
+  spec = "Convert floating bounds to enclosing rationals."
+  status = "done"
+  tests = ["julia/MaithicNNV/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P08-03-07"
+  title = "Deterministic bounds"
+  spec = "Stable results for stable inputs."
+  status = "done"
+  tests = ["julia/MaithicNNV/test/runtests.jl"]
+
+[[group]]
+id = "P08-04"
+title = "AI-assisted verification workflow"
+language = "OCaml"
+path = "ocaml/lib/nnv/"
+purpose = "Orchestrates engines, checkers and models into one verification job."
+
+  [[group.capability]]
+  id = "P08-04-01"
+  title = "Verification orchestration"
+  spec = "Call the Julia verifier, then the Lean checker."
+  status = "done"
+  tests = ["ocaml/test/test_nnv.ml"]
+
+  [[group.capability]]
+  id = "P08-04-02"
+  title = "Checker invocation"
+  spec = "Run the certificate checker and capture its verdict."
+  status = "done"
+  tests = ["lean/MaithicTest/NN.lean", "ocaml/test/integration/test_integration.ml", "ocaml/test/test_nnv.ml"]
+
+  [[group.capability]]
+  id = "P08-04-03"
+  title = "Verify command"
+  spec = "`maithic nnv verify MODEL PROPERTY`."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_nnv.ml"]
+
+[[group]]
+id = "P08-05"
+title = "Verification analytics and reporting"
+language = "R"
+path = "r/maithicstats/R/nnv-*.R"
+purpose = "Standard robustness-verification statistics and figures."
+
+  [[group.capability]]
+  id = "P08-05-01"
+  title = "Verification results import"
+  spec = "Load verification job results."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-nnv.R"]

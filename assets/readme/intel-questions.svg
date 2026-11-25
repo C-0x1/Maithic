@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" role="img" aria-labelledby="intel-questions-t intel-questions-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="intel-questions-t">Six commands on one graph</title>
+  <desc id="intel-questions-d">Six cards. Scan asks Lean once about every file and keeps the answer as a graph. Show tells what a declaration is, what it uses and what uses it. Deps lists everything it depends on, with the distance. Dependents lists everything that depends on it, which is what a change would reach. Health lists every unfinished proof with its open goal, and the axioms in use. Stats gives the size and shape of the graph and the declarations most others use.</desc>
+  <rect width="1040" height="520" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="308.0" height="170.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="366.0" y="96.0" width="308.0" height="170.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="692.0" y="96.0" width="308.0" height="170.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="284.0" width="308.0" height="128.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="366.0" y="284.0" width="308.0" height="128.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="692.0" y="284.0" width="308.0" height="128.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="430.0" width="960.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#2B2F77"/>
+  <rect x="54.0" y="230.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M366.0 106.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#2B2F77"/>
+  <rect x="380.0" y="230.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M692.0 106.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#2B2F77"/>
+  <rect x="706.0" y="230.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 294.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#2B2F77"/>
+  <rect x="54.0" y="376.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M366.0 294.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#0B7F75"/>
+  <rect x="380.0" y="376.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M692.0 294.0a10 10 0 0 1 10-10h288.0a10 10 0 0 1 10 10v26.0h-308.0z" fill="#0B7F75"/>
+  <rect x="706.0" y="376.0" width="280.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="363.1" lengthAdjust="spacingAndGlyphs">Ask Lean once, then ask the graph</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="300.7" lengthAdjust="spacingAndGlyphs">maithic intel scan PATH --project DIR</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="31.9" lengthAdjust="spacingAndGlyphs">scan</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="240.6" lengthAdjust="spacingAndGlyphs">Every file is elaborated, each in a process</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="58.5" lengthAdjust="spacingAndGlyphs">of its own.</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="239.9" lengthAdjust="spacingAndGlyphs">What is kept comes from the environment</text>
+  <text x="54.0" y="215.0" font-size="13" fill="#14162B" textLength="213.9" lengthAdjust="spacingAndGlyphs">the kernel checked, not from the text.</text>
+  <text x="64.0" y="245.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">needs Lean</text>
+  <text x="380.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="80.9" lengthAdjust="spacingAndGlyphs">show NAME</text>
+  <text x="380.0" y="155.0" font-size="13" fill="#14162B" textLength="206.7" lengthAdjust="spacingAndGlyphs">What the declaration is and where it</text>
+  <text x="380.0" y="173.0" font-size="13" fill="#14162B" textLength="244.2" lengthAdjust="spacingAndGlyphs">stands, the axioms it rests on, what it uses</text>
+  <text x="380.0" y="191.0" font-size="13" fill="#14162B" textLength="97.6" lengthAdjust="spacingAndGlyphs">and what uses it.</text>
+  <text x="390.0" y="245.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">needs no Lean</text>
+  <text x="706.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="77.8" lengthAdjust="spacingAndGlyphs">deps NAME</text>
+  <text x="706.0" y="155.0" font-size="13" fill="#14162B" textLength="216.8" lengthAdjust="spacingAndGlyphs">Everything it depends on, directly and</text>
+  <text x="706.0" y="173.0" font-size="13" fill="#14162B" textLength="191.5" lengthAdjust="spacingAndGlyphs">through others, with the distance.</text>
+  <text x="716.0" y="245.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">needs no Lean</text>
+  <text x="54.0" y="307.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="123.7" lengthAdjust="spacingAndGlyphs">dependents NAME</text>
+  <text x="54.0" y="343.0" font-size="13" fill="#14162B" textLength="213.9" lengthAdjust="spacingAndGlyphs">Everything that depends on it: what a</text>
+  <text x="54.0" y="361.0" font-size="13" fill="#14162B" textLength="120.0" lengthAdjust="spacingAndGlyphs">change would reach.</text>
+  <text x="64.0" y="391.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">needs no Lean</text>
+  <text x="380.0" y="307.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="41.2" lengthAdjust="spacingAndGlyphs">health</text>
+  <text x="380.0" y="343.0" font-size="13" fill="#14162B" textLength="237.0" lengthAdjust="spacingAndGlyphs">Every unfinished proof with its open goal,</text>
+  <text x="380.0" y="361.0" font-size="13" fill="#14162B" textLength="130.1" lengthAdjust="spacingAndGlyphs">and the axioms in use.</text>
+  <text x="390.0" y="391.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">needs no Lean</text>
+  <text x="706.0" y="307.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="32.7" lengthAdjust="spacingAndGlyphs">stats</text>
+  <text x="706.0" y="343.0" font-size="13" fill="#14162B" textLength="237.1" lengthAdjust="spacingAndGlyphs">The size and shape of the graph, and the</text>
+  <text x="706.0" y="361.0" font-size="13" fill="#14162B" textLength="169.8" lengthAdjust="spacingAndGlyphs">declarations most others use.</text>
+  <text x="716.0" y="391.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">needs no Lean</text>
+  <text x="56.0" y="455.0" font-size="13" fill="#14162B" textLength="802.2" lengthAdjust="spacingAndGlyphs">A dependency is in the graph because the proof term refers to the constant, whether or not the proof names it. A lemma that simp found is a</text>
+  <text x="56.0" y="473.0" font-size="13" fill="#14162B" textLength="238.5" lengthAdjust="spacingAndGlyphs">dependency like one that was written out.</text>
+</svg>

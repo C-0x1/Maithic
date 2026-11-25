@@ -1,0 +1,117 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "proved",
+  "certificate": {
+    "schema": "maithic.oracle.certificate/1",
+    "kind": "interval.boxes",
+    "claim": "∀ x : ℝ, 1 / 4 ≤ x → x ≤ 4 → (Real.sqrt x) + 1 / x > 9 / 5",
+    "data": {
+      "variables": ["x"],
+      "hypotheses": [
+        {
+          "name": "h1",
+          "statement": "1 / 4 <= x"
+        },
+        {
+          "name": "h2",
+          "statement": "x <= 4"
+        }
+      ],
+      "goal": "sqrt(x) + 1 / x > 9 / 5",
+      "domain": [
+        ["1/4", "4"]
+      ],
+      "boxes": [
+        {
+          "bounds": [
+            ["49/16", "4"]
+          ],
+          "reason": 0,
+          "enclosure": ["199/1000", "527/1000"]
+        },
+        {
+          "bounds": [
+            ["1/4", "23/32"]
+          ],
+          "reason": 0,
+          "enclosure": ["91/1000", "381/125"]
+        },
+        {
+          "bounds": [
+            ["17/8", "83/32"]
+          ],
+          "reason": 0,
+          "enclosure": ["43/1000", "141/500"]
+        },
+        {
+          "bounds": [
+            ["83/32", "49/16"]
+          ],
+          "reason": 0,
+          "enclosure": ["137/1000", "42/125"]
+        },
+        {
+          "bounds": [
+            ["23/32", "61/64"]
+          ],
+          "reason": 0,
+          "enclosure": ["12/125", "71/125"]
+        },
+        {
+          "bounds": [
+            ["61/64", "19/16"]
+          ],
+          "reason": 0,
+          "enclosure": ["9/500", "339/1000"]
+        },
+        {
+          "bounds": [
+            ["53/32", "121/64"]
+          ],
+          "reason": 0,
+          "enclosure": ["3/200", "179/1000"]
+        },
+        {
+          "bounds": [
+            ["121/64", "17/8"]
+          ],
+          "reason": 0,
+          "enclosure": ["9/200", "187/1000"]
+        },
+        {
+          "bounds": [
+            ["19/16", "167/128"]
+          ],
+          "reason": 0,
+          "enclosure": ["7/125", "37/200"]
+        },
+        {
+          "bounds": [
+            ["167/128", "91/64"]
+          ],
+          "reason": 0,
+          "enclosure": ["9/200", "159/1000"]
+        },
+        {
+          "bounds": [
+            ["91/64", "197/128"]
+          ],
+          "reason": 0,
+          "enclosure": ["21/500", "18/125"]
+        },
+        {
+          "bounds": [
+            ["197/128", "53/32"]
+          ],
+          "reason": 0,
+          "enclosure": ["11/250", "137/1000"]
+        }
+      ]
+    },
+    "engine": {
+      "name": "MaithicOracle",
+      "version": "0.1.0",
+      "parameters": {}
+    }
+  }
+}

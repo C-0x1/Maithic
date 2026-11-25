@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="t d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="t">From a Lean theorem to a certificate and back</title>
+  <desc id="d">The command maithic oracle solve reads the theorem no_point from a Lean file. Its goal is exported with the names Lean uses: the integer variables x and y, and the hypotheses h1 and h2. The linear oracle, written in Julia and not trusted, answers with Farkas multipliers: one times x plus 2 y at most 3, plus one times minus x minus 2 y at most minus 4, gives 0 at most minus 1. The certificate is turned into a tactic call, maithic_linear_int, which Lean's kernel checks in place of sorry. Below, the three answers an oracle can give: proved with a certificate, refuted with an exact counterexample, as for the theorem wrong, which fails at x equal to 0 and y equal to 0, and unknown with the reason.</desc>
+  <defs>
+    <marker id="oh-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5B6477"/>
+    </marker>
+  </defs>
+  <rect width="960" height="560" fill="#FAF8F4"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#14162B" textLength="566.1" lengthAdjust="spacingAndGlyphs">From a theorem to a certificate, and back to the kernel</text>
+  <text x="40" y="68" font-size="14" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="554.4" lengthAdjust="spacingAndGlyphs">maithic oracle solve examples/gap.lean --theorem no_point --project lean</text>
+
+  <g font-size="12.5">
+    <g transform="translate(40 96)">
+      <rect width="205" height="214" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="67.6" lengthAdjust="spacingAndGlyphs">Theorem</text>
+      <text x="14" y="46" font-size="11.5" fill="#5B6477" textLength="126.6" lengthAdjust="spacingAndGlyphs">in a Lean file, proof open</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#14162B" xml:space="preserve">
+        <text x="14" y="74" xml:space="preserve" textLength="92.4" lengthAdjust="spacingAndGlyphs">theorem no_point</text>
+        <text x="14" y="92" xml:space="preserve" textLength="75.1" lengthAdjust="spacingAndGlyphs">  (x y : Int)</text>
+        <text x="14" y="110" xml:space="preserve" textLength="150.2" lengthAdjust="spacingAndGlyphs">  (h₁ : 2 * x + 4 * y &lt; 7)</text>
+        <text x="14" y="128" xml:space="preserve" textLength="138.6" lengthAdjust="spacingAndGlyphs">  (h₂ : x + 2 * y ≥ 4) :</text>
+        <text x="14" y="146" xml:space="preserve" textLength="75.1" lengthAdjust="spacingAndGlyphs">  False := by</text>
+        <text x="14" y="164" fill="#E5484D" xml:space="preserve" textLength="40.4" lengthAdjust="spacingAndGlyphs">  sorry</text>
+      </g>
+      <text x="14" y="196" font-size="11.5" fill="#5B6477" textLength="106.8" lengthAdjust="spacingAndGlyphs">Lean states the goal.</text>
+    </g>
+    <line x1="249" y1="203" x2="261" y2="203" stroke="#5B6477" stroke-width="1.5" marker-end="url(#oh-arrow)"/>
+
+    <g transform="translate(265 96)">
+      <rect width="205" height="214" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="106.7" lengthAdjust="spacingAndGlyphs">Exported goal</text>
+      <text x="14" y="46" font-size="11.5" fill="#EC6813" font-weight="700" textLength="37.1" lengthAdjust="spacingAndGlyphs">OCaml</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#14162B">
+        <text x="14" y="74" fill="#5B6477" textLength="23.1" lengthAdjust="spacingAndGlyphs">kind</text><text x="86" y="74" textLength="34.7" lengthAdjust="spacingAndGlyphs">linear</text>
+        <text x="14" y="92" fill="#5B6477" textLength="40.4" lengthAdjust="spacingAndGlyphs">numbers</text><text x="86" y="92" textLength="17.3" lengthAdjust="spacingAndGlyphs">int</text>
+        <text x="14" y="110" fill="#5B6477" textLength="52.0" lengthAdjust="spacingAndGlyphs">variables</text><text x="86" y="110" textLength="23.1" lengthAdjust="spacingAndGlyphs">x, y</text>
+        <text x="14" y="128" fill="#5B6477" textLength="11.6" lengthAdjust="spacingAndGlyphs">h₁</text><text x="40" y="128" textLength="98.2" lengthAdjust="spacingAndGlyphs">2 * x + 4 * y &lt; 7</text>
+        <text x="14" y="146" fill="#5B6477" textLength="11.6" lengthAdjust="spacingAndGlyphs">h₂</text><text x="40" y="146" textLength="75.1" lengthAdjust="spacingAndGlyphs">x + 2 * y ≥ 4</text>
+        <text x="14" y="164" fill="#5B6477" textLength="34.7" lengthAdjust="spacingAndGlyphs">target</text><text x="86" y="164" textLength="28.9" lengthAdjust="spacingAndGlyphs">False</text>
+      </g>
+      <text x="14" y="186" font-size="11.5" fill="#5B6477" textLength="160.7" lengthAdjust="spacingAndGlyphs">Lean's names are kept. What is</text>
+      <text x="14" y="201" font-size="11.5" fill="#5B6477" textLength="177.1" lengthAdjust="spacingAndGlyphs">not arithmetic is left out, and listed.</text>
+    </g>
+    <line x1="474" y1="203" x2="486" y2="203" stroke="#5B6477" stroke-width="1.5" marker-end="url(#oh-arrow)"/>
+
+    <g transform="translate(490 96)">
+      <rect width="205" height="214" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="49.8" lengthAdjust="spacingAndGlyphs">Oracle</text>
+      <text x="14" y="46" font-size="11.5" textLength="86.3" lengthAdjust="spacingAndGlyphs"><tspan fill="#9558B2" font-weight="700">Julia</tspan><tspan fill="#E5484D" font-weight="700" dx="8">not trusted</tspan></text>
+      <text x="14" y="74" fill="#14162B" textLength="105.6" lengthAdjust="spacingAndGlyphs">exact simplex finds</text>
+      <text x="14" y="92" fill="#14162B" textLength="59.7" lengthAdjust="spacingAndGlyphs">multipliers:</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#14162B">
+        <text x="14" y="116" textLength="17.3" lengthAdjust="spacingAndGlyphs">1 ·</text><text x="124" y="116" text-anchor="end" textLength="34.7" lengthAdjust="spacingAndGlyphs">x + 2y</text><text x="132" y="116" textLength="5.8" lengthAdjust="spacingAndGlyphs">≤</text><text x="170" y="116" text-anchor="end" textLength="5.8" lengthAdjust="spacingAndGlyphs">3</text>
+        <text x="14" y="134" textLength="17.3" lengthAdjust="spacingAndGlyphs">1 ·</text><text x="124" y="134" text-anchor="end" textLength="40.4" lengthAdjust="spacingAndGlyphs">−x − 2y</text><text x="132" y="134" textLength="5.8" lengthAdjust="spacingAndGlyphs">≤</text><text x="170" y="134" text-anchor="end" textLength="11.6" lengthAdjust="spacingAndGlyphs">−4</text>
+        <line x1="14" y1="143" x2="172" y2="143" stroke="#5B6477" stroke-width="1"/>
+        <text x="124" y="160" text-anchor="end" font-weight="700" textLength="5.8" lengthAdjust="spacingAndGlyphs">0</text><text x="132" y="160" font-weight="700" textLength="5.8" lengthAdjust="spacingAndGlyphs">≤</text><text x="170" y="160" text-anchor="end" font-weight="700" textLength="11.6" lengthAdjust="spacingAndGlyphs">−1</text>
+      </g>
+      <text x="14" y="186" font-size="11.5" fill="#5B6477" textLength="117.6" lengthAdjust="spacingAndGlyphs">certificate linear.farkas,</text>
+      <text x="14" y="201" font-size="11.5" fill="#5B6477" textLength="149.6" lengthAdjust="spacingAndGlyphs">exact numbers written as text</text>
+    </g>
+    <line x1="699" y1="203" x2="711" y2="203" stroke="#5B6477" stroke-width="1.5" marker-end="url(#oh-arrow)"/>
+
+    <g transform="translate(715 96)">
+      <rect width="205" height="214" rx="10" fill="#FFFFFF" stroke="#0FA89B" stroke-width="2"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="127.2" lengthAdjust="spacingAndGlyphs">Checked in Lean</text>
+      <text x="14" y="46" font-size="11.5" fill="#0FA89B" font-weight="700" textLength="100.4" lengthAdjust="spacingAndGlyphs">the kernel decides</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#14162B" xml:space="preserve">
+        <text x="14" y="74" xml:space="preserve" textLength="144.4" lengthAdjust="spacingAndGlyphs">maithic_linear_int [x, y]</text>
+        <text x="14" y="92" xml:space="preserve" textLength="144.4" lengthAdjust="spacingAndGlyphs">  [(1, ⟨[1, 2], .le, 3⟩),</text>
+        <text x="14" y="110" xml:space="preserve" textLength="161.7" lengthAdjust="spacingAndGlyphs">   (1, ⟨[-1, -2], .le, -4⟩)]</text>
+        <text x="14" y="128" xml:space="preserve" textLength="92.4" lengthAdjust="spacingAndGlyphs">  using [h₁, h₂]</text>
+      </g>
+      <text x="14" y="154" font-size="11.5" fill="#5B6477" textLength="150.2" lengthAdjust="spacingAndGlyphs">A verified checker replays the</text>
+      <text x="14" y="169" font-size="11.5" fill="#5B6477" textLength="147.0" lengthAdjust="spacingAndGlyphs">certificate where sorry stood.</text>
+      <rect x="14" y="182" width="78" height="22" rx="11" fill="#0FA89B"/>
+      <text x="53" y="197" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" textLength="42.7" lengthAdjust="spacingAndGlyphs">verified</text>
+    </g>
+  </g>
+
+  <g transform="translate(40 338)" font-size="13">
+    <text x="0" y="14" font-size="15" font-weight="700" fill="#14162B" textLength="471.9" lengthAdjust="spacingAndGlyphs">An oracle answers in one of three ways, and never with a bare yes</text>
+    <g transform="translate(0 30)">
+      <rect width="280" height="150" rx="10" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.5"/>
+      <text x="16" y="26" font-weight="700" fill="#0FA89B" textLength="43.3" lengthAdjust="spacingAndGlyphs">proved</text>
+      <text x="16" y="48" fill="#14162B" textLength="213.2" lengthAdjust="spacingAndGlyphs">with a certificate that can be checked</text>
+      <text x="16" y="66" fill="#14162B" textLength="101.9" lengthAdjust="spacingAndGlyphs">without the oracle</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#14162B" xml:space="preserve">
+        <text x="16" y="94" xml:space="preserve" textLength="190.6" lengthAdjust="spacingAndGlyphs">linear  proved  (linear over int)</text>
+        <text x="16" y="111" xml:space="preserve" textLength="167.5" lengthAdjust="spacingAndGlyphs">  certificate:  linear.farkas</text>
+      </g>
+      <text x="16" y="136" font-size="11.5" fill="#5B6477" textLength="61.4" lengthAdjust="spacingAndGlyphs">exit status 0</text>
+    </g>
+    <g transform="translate(300 30)">
+      <rect width="280" height="150" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+      <text x="16" y="26" font-weight="700" fill="#E5484D" textLength="44.1" lengthAdjust="spacingAndGlyphs">refuted</text>
+      <text x="16" y="48" fill="#14162B" textLength="223.3" lengthAdjust="spacingAndGlyphs">with an exact point where the goal fails</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="10.5" fill="#14162B" xml:space="preserve">
+        <text x="16" y="76" xml:space="preserve" textLength="144.4" lengthAdjust="spacingAndGlyphs">theorem wrong (x y : Int)</text>
+        <text x="16" y="93" xml:space="preserve" textLength="144.4" lengthAdjust="spacingAndGlyphs">  (h : x ≤ y) : x + 1 ≤ y</text>
+        <text x="16" y="113" font-weight="700" fill="#E5484D" xml:space="preserve" textLength="144.4" lengthAdjust="spacingAndGlyphs">  fails at:  x = 0, y = 0</text>
+      </g>
+      <text x="16" y="136" font-size="11.5" fill="#5B6477" textLength="61.4" lengthAdjust="spacingAndGlyphs">exit status 8</text>
+    </g>
+    <g transform="translate(600 30)">
+      <rect width="280" height="150" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <text x="16" y="26" font-weight="700" fill="#5B6477" textLength="57.0" lengthAdjust="spacingAndGlyphs">unknown</text>
+      <text x="16" y="48" fill="#14162B" textLength="205.2" lengthAdjust="spacingAndGlyphs">with the reason: out of time, outside</text>
+      <text x="16" y="66" fill="#14162B" textLength="204.5" lengthAdjust="spacingAndGlyphs">what the oracle decides, or a goal it</text>
+      <text x="16" y="84" fill="#14162B" textLength="87.4" lengthAdjust="spacingAndGlyphs">could not settle</text>
+      <text x="16" y="112" fill="#5B6477" textLength="171.7" lengthAdjust="spacingAndGlyphs">Nothing is claimed either way.</text>
+      <text x="16" y="136" font-size="11.5" fill="#5B6477" textLength="61.4" lengthAdjust="spacingAndGlyphs">exit status 7</text>
+    </g>
+  </g>
+</svg>

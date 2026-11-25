@@ -1,0 +1,216 @@
+{
+  "schema": "maithic.blueprint.status/1",
+  "title": "Odd numbers, squares and triangles",
+  "label": "skeleton",
+  "lean": {
+    "file": "fixtures/blueprint/lean/Stage1.lean",
+    "errors": 0
+  },
+  "summary": {
+    "nodes": 8,
+    "by_status": {
+      "planned": 0,
+      "stated": 6,
+      "proved": 0,
+      "done": 2
+    },
+    "by_kind": {
+      "definition": {
+        "planned": 0,
+        "stated": 0,
+        "proved": 0,
+        "done": 2
+      },
+      "lemma": {
+        "planned": 0,
+        "stated": 4,
+        "proved": 0,
+        "done": 0
+      },
+      "theorem": {
+        "planned": 0,
+        "stated": 1,
+        "proved": 0,
+        "done": 0
+      },
+      "corollary": {
+        "planned": 0,
+        "stated": 1,
+        "proved": 0,
+        "done": 0
+      }
+    },
+    "complete": false
+  },
+  "nodes": [
+    {
+      "id": "tri",
+      "kind": "definition",
+      "title": "Triangular numbers",
+      "lean": "Triangles.tri",
+      "status": "done",
+      "uses": [],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 4,
+      "notes": []
+    },
+    {
+      "id": "sum-odd",
+      "kind": "definition",
+      "title": "The sum of the first odd numbers",
+      "lean": "Triangles.sumOdd",
+      "status": "done",
+      "uses": [],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 3,
+      "notes": []
+    },
+    {
+      "id": "tri-step",
+      "kind": "lemma",
+      "title": "The next triangular number",
+      "lean": "Triangles.tri_succ",
+      "status": "stated",
+      "uses": [
+        "tri"
+      ],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": true,
+      "unblocks": 3,
+      "notes": []
+    },
+    {
+      "id": "tri-formula",
+      "kind": "lemma",
+      "title": "Twice a triangular number",
+      "lean": "Triangles.two_mul_tri",
+      "status": "stated",
+      "uses": [
+        "tri"
+      ],
+      "proof_uses": [
+        "tri-step"
+      ],
+      "blockers": [
+        "tri-step"
+      ],
+      "ready": false,
+      "unblocks": 2,
+      "notes": []
+    },
+    {
+      "id": "odd-step",
+      "kind": "lemma",
+      "title": "The next odd number",
+      "lean": "Triangles.sumOdd_succ",
+      "status": "stated",
+      "uses": [
+        "sum-odd"
+      ],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": true,
+      "unblocks": 2,
+      "notes": []
+    },
+    {
+      "id": "odd-square",
+      "kind": "theorem",
+      "title": "Odd numbers add up to a square",
+      "lean": "Triangles.sumOdd_eq_square",
+      "status": "stated",
+      "uses": [
+        "sum-odd"
+      ],
+      "proof_uses": [
+        "odd-step"
+      ],
+      "blockers": [
+        "odd-step"
+      ],
+      "ready": false,
+      "unblocks": 1,
+      "notes": []
+    },
+    {
+      "id": "two-triangles",
+      "kind": "lemma",
+      "title": "Two triangles make a square",
+      "lean": "Triangles.tri_add_tri_succ",
+      "status": "stated",
+      "uses": [
+        "tri"
+      ],
+      "proof_uses": [
+        "tri-formula",
+        "tri-step"
+      ],
+      "blockers": [
+        "tri-formula",
+        "tri-step"
+      ],
+      "ready": false,
+      "unblocks": 1,
+      "notes": []
+    },
+    {
+      "id": "odd-triangles",
+      "kind": "corollary",
+      "title": "Odd numbers add up to two triangles",
+      "lean": "Triangles.sumOdd_eq_two_triangles",
+      "status": "stated",
+      "uses": [
+        "sum-odd",
+        "tri"
+      ],
+      "proof_uses": [
+        "odd-square",
+        "two-triangles"
+      ],
+      "blockers": [
+        "odd-square",
+        "two-triangles"
+      ],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    }
+  ],
+  "frontier": [
+    "tri-step",
+    "odd-step"
+  ],
+  "blocked": [
+    {
+      "id": "tri-formula",
+      "blockers": [
+        "tri-step"
+      ]
+    },
+    {
+      "id": "odd-square",
+      "blockers": [
+        "odd-step"
+      ]
+    },
+    {
+      "id": "two-triangles",
+      "blockers": [
+        "tri-formula",
+        "tri-step"
+      ]
+    },
+    {
+      "id": "odd-triangles",
+      "blockers": [
+        "odd-square",
+        "two-triangles"
+      ]
+    }
+  ]
+}

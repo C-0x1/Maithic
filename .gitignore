@@ -1,0 +1,34 @@
+# Build products and local switches
+_build/
+_opam/
+.lake/
+*.install
+ocaml/*.opam.locked
+
+# Julia
+Manifest.toml
+*.jl.cov
+*.jl.mem
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+*.Rcheck/
+r/*.tar.gz
+r/.library/
+r/*/src/*.o
+r/*/src/*.so
+
+# Maithic workspaces, local configuration and credentials
+.maithic/
+maithic.toml
+credentials.toml
+.env
+.env.*
+
+# Editors and operating systems
+.vscode/
+.idea/
+*.swp
+.DS_Store

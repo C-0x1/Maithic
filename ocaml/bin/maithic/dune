@@ -1,0 +1,5 @@
+(executable
+ (name main)
+ (public_name maithic)
+ (package maithic)
+ (libraries maithic_cli))

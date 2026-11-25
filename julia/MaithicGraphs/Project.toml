@@ -1,0 +1,20 @@
+name = "MaithicGraphs"
+uuid = "6c0f3f0e-7a55-4a0b-9d3c-2f4e8b1a9c57"
+authors = ["The Maithic Authors <maintainers@example.org>"]
+version = "0.1.0"
+
+[deps]
+MaithicCore = "f7fad7d2-d945-4663-bf2f-5d0523f5d6e5"
+
+[sources]
+MaithicCore = {path = "../MaithicCore"}
+
+[compat]
+MaithicCore = "0.1"
+julia = "1.11"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

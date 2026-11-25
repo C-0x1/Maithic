@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984 261" width="984" height="261" role="img" aria-label="A terminal session: three commands that end with an error, each with a code and its own exit status. A file that does not exist: MTH-CLI-0002, status 2. A setting with a value of the wrong type: MTH-CONFIG-0002, status 3. A model call in replay mode with no cassette for the request: MTH-FORMALIZE-0004, status 5, with the digest of the request.">
+  <title>A terminal session: three commands that end with an error, each with a code and its own exit status. A file that does not exist: MTH-CLI-0002, status 2. A setting with a value of the wrong type: MTH-CONFIG-0002, status 3. A model call in replay mode with no cassette for the request: MTH-FORMALIZE-0004, status 5, with the digest of the request.</title>
+  <rect width="984" height="261" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h964a10 10 0 0 1 10 10v26h-984z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="492" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">what an error looks like</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic prove examples/nothing.lean</text>
+    <text x="22.00" y="77" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#F26D72">error</text>
+    <text x="61.15" y="77" textLength="775.17" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">: MTH-CLI-0002: cannot read examples/nothing.lean: examples/nothing.lean: No such file or directory</text>
+    <text x="22.00" y="115" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="115" textLength="360.18" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic prove examples/even.lean --rounds many</text>
+    <text x="22.00" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#F26D72">error</text>
+    <text x="61.15" y="134" textLength="704.70" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">: MTH-CONFIG-0002: command line: 'prove.rounds' must be a non-negative integer, got 'many'</text>
+    <text x="22.00" y="172" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="172" textLength="516.78" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic formalize "Show that every prime greater than two is odd."</text>
+    <text x="22.00" y="191" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#F26D72">error</text>
+    <text x="61.15" y="191" textLength="595.08" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">: MTH-FORMALIZE-0004: no statement could be drafted: no cassette for request</text>
+    <text x="53.32" y="210" textLength="908.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">76f1815ae43886ac713344ea4f8fd58c7b55412c4a9201ecc226f1eb7397601d (purpose formalize.draft, provider anthropic, model</text>
+    <text x="53.32" y="229" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">claude-sonnet-5-5)</text>
+  </g>
+</svg>

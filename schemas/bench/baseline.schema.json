@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark baseline",
+  "description": "What one suite of the benchmark gave in the run that later runs are held against: for every problem its status, the candidates that were tried and the time it took. mode, use_ai and policy are those of the run the baseline was made from; note says why it was set.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.bench.baseline/1"
+    },
+    "suite": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "use_ai": {
+      "type": "boolean"
+    },
+    "policy": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verified": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "problems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "attempts": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "elapsed_ms": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "attempts",
+          "elapsed_ms"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "suite",
+    "total",
+    "verified",
+    "problems"
+  ]
+}

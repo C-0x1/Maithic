@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 398" role="img" aria-labelledby="recheck-t recheck-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="recheck-t">The fresh re-check</title>
+  <desc id="recheck-d">Two cards side by side with an arrow from the first to the second. In the session, a candidate is elaborated on an environment that the Bridge has kept, among many other candidates; this is fast and good enough to find a proof. In a fresh process, the finished text, the file up to the theorem followed by the theorem with its proof, is elaborated from its imports in a new Bridge; it must reach the same statement, and its facts, not the session's, are what the policy judges.</desc>
+  <rect width="960" height="398" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="418.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="502.0" y="96.0" width="418.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="308.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h398.0a10 10 0 0 1 10 10v26.0h-418.0z" fill="#5B6477"/>
+  <rect x="54.0" y="254.0" width="390.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M462.0 193.0 L490.0 193.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M488.0 187.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M502.0 106.0a10 10 0 0 1 10-10h398.0a10 10 0 0 1 10 10v26.0h-418.0z" fill="#0B7F75"/>
+  <rect x="516.0" y="254.0" width="390.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="425.4" lengthAdjust="spacingAndGlyphs">Found in one process, judged in another</text>
+  <text x="40.0" y="69.0" font-size="14" fill="#5B6477" textLength="204.6" lengthAdjust="spacingAndGlyphs">The fifth layer: the fresh re-check</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="93.4" lengthAdjust="spacingAndGlyphs">In the session</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="320.2" lengthAdjust="spacingAndGlyphs">A candidate is elaborated on an environment the Bridge</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="234.9" lengthAdjust="spacingAndGlyphs">has kept, among many other candidates.</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="220.5" lengthAdjust="spacingAndGlyphs">Fast, and good enough to find a proof.</text>
+  <text x="54.0" y="221.0" font-size="13" fill="#14162B" textLength="312.2" lengthAdjust="spacingAndGlyphs">The session is one long-lived process that holds many</text>
+  <text x="54.0" y="239.0" font-size="13" fill="#14162B" textLength="127.9" lengthAdjust="spacingAndGlyphs">environments at once.</text>
+  <text x="64.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">finds</text>
+  <text x="516.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="119.8" lengthAdjust="spacingAndGlyphs">In a fresh process</text>
+  <text x="516.0" y="155.0" font-size="13" fill="#14162B" textLength="322.3" lengthAdjust="spacingAndGlyphs">The finished text, the file up to the theorem and then the</text>
+  <text x="516.0" y="173.0" font-size="13" fill="#14162B" textLength="323.0" lengthAdjust="spacingAndGlyphs">theorem with its proof, is elaborated from its imports in a</text>
+  <text x="516.0" y="191.0" font-size="13" fill="#14162B" textLength="68.7" lengthAdjust="spacingAndGlyphs">new Bridge.</text>
+  <text x="516.0" y="215.0" font-size="13" fill="#14162B" textLength="196.5" lengthAdjust="spacingAndGlyphs">It must reach the same statement.</text>
+  <text x="516.0" y="239.0" font-size="13" fill="#14162B" textLength="334.9" lengthAdjust="spacingAndGlyphs">Its facts, and not the session's, are what the policy judges.</text>
+  <text x="526.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">judges</text>
+  <text x="56.0" y="333.0" font-size="13" fill="#14162B" textLength="707.2" lengthAdjust="spacingAndGlyphs">The word verified is printed only after the second process agrees. The default policy requires the re-check; a result that has</text>
+  <text x="56.0" y="351.0" font-size="13" fill="#14162B" textLength="383.0" lengthAdjust="spacingAndGlyphs">passed everything else and still waits for it has the status checked.</text>
+</svg>

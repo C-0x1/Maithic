@@ -1,0 +1,33 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "linear",
+  "domain": "int",
+  "variables": ["a", "b", "c"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "7 * a + 12 * b + 31 * c = 17"
+    },
+    {
+      "name": "h2",
+      "statement": "3 * a + 5 * b + 14 * c = 7"
+    },
+    {
+      "name": "h3",
+      "statement": "1 <= a"
+    },
+    {
+      "name": "h4",
+      "statement": "a <= 40"
+    },
+    {
+      "name": "h5",
+      "statement": "-50 <= b"
+    },
+    {
+      "name": "h6",
+      "statement": "b <= 50"
+    }
+  ],
+  "goal": "c >= -1000"
+}

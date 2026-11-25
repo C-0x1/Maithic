@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 789" role="img" aria-labelledby="mend-remedies-t mend-remedies-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="mend-remedies-t">Five breakages and the remedy that took each</title>
+  <desc id="mend-remedies-d">A table of five breakages of one Lean file after an upgrade, each taken by the cheapest remedy that works, with one column for each of three stages: rules, which need no model; a model, which is asked for the smallest change to a proof; and the prover, which proves a statement again from nothing. The breakage of sum_comm, an unknown constant Nat.add_commutes, is repaired by the rule rename from a table of renames. The breakage of twice_add_zero, a deprecated name, is repaired by the rule rename from Lean's own message. The breakage of le_succ_self, a call that printed a suggestion, is repaired by the rule suggestion. For the breakages of twice_add, where simp made no progress, and of add_zero_eq, a type mismatch, no rule applies, and a model repairs each. The prover is not needed. Below the table, the four conditions under which an edit is kept: Lean compiles it where the theorem stands, the statement Lean prints is the one it printed before, no new breakage appears, and at the end Lean reads the whole file once more.</desc>
+  <rect width="1040" height="789" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="960.0" height="64.0" rx="8" fill="#2B2F77"/>
+  <rect x="40.0" y="160.0" width="960.0" height="48.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="256.0" width="960.0" height="48.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="352.0" width="960.0" height="65.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="416.0" width="960.0" height="1.5" rx="0" fill="#C9CCE8"/>
+  <rect x="40.0" y="469.0" width="960.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <rect x="40.0" y="585.0" width="471.0" height="78.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="529.0" y="585.0" width="471.0" height="78.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="681.0" width="471.0" height="78.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="529.0" y="681.0" width="471.0" height="78.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <circle cx="685.0" cy="184.0" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="895.0" cy="184.0" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="685.0" cy="232.0" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="895.0" cy="232.0" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="685.0" cy="280.0" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="895.0" cy="280.0" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="895.0" cy="328.0" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="895.0" cy="384.5" r="8" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <circle cx="53" cy="442" r="7" fill="none" stroke="#C9CCE8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <path d="M40.0 595.0a10 10 0 0 1 10-10h451.0a10 10 0 0 1 10 10v26.0h-471.0z" fill="#0B7F75"/>
+  <path d="M529.0 595.0a10 10 0 0 1 10-10h451.0a10 10 0 0 1 10 10v26.0h-471.0z" fill="#0B7F75"/>
+  <path d="M40.0 691.0a10 10 0 0 1 10-10h451.0a10 10 0 0 1 10 10v26.0h-471.0z" fill="#0B7F75"/>
+  <path d="M529.0 691.0a10 10 0 0 1 10-10h451.0a10 10 0 0 1 10 10v26.0h-471.0z" fill="#0B7F75"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="639.5" lengthAdjust="spacingAndGlyphs">The cheapest remedy that works, and Lean checks every edit</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="715.2" lengthAdjust="spacingAndGlyphs">maithic mend repair fixtures/mend/lean/Upgrade.lean --renames fixtures/mend/renames.toml</text>
+  <text x="475.0" y="124.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="129.9" lengthAdjust="spacingAndGlyphs">1  Rules: no model, no</text>
+  <text x="475.0" y="140.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="40.3" lengthAdjust="spacingAndGlyphs">search</text>
+  <text x="685.0" y="124.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="138.7" lengthAdjust="spacingAndGlyphs">2  A model: the smallest</text>
+  <text x="685.0" y="140.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="127.8" lengthAdjust="spacingAndGlyphs">change that compiles</text>
+  <text x="895.0" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="101.4" lengthAdjust="spacingAndGlyphs">3  The prover: the</text>
+  <text x="895.0" y="132.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="129.9" lengthAdjust="spacingAndGlyphs">statement again, from</text>
+  <text x="895.0" y="148.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="45.8" lengthAdjust="spacingAndGlyphs">nothing</text>
+  <text x="54.0" y="180.0" font-size="13" fill="#14162B" textLength="179.2" lengthAdjust="spacingAndGlyphs">sum_comm: unknown constant</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="112.7" lengthAdjust="spacingAndGlyphs">Nat.add_commutes</text>
+  <text x="475.0" y="180.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="142.1" lengthAdjust="spacingAndGlyphs">rename to Nat.add_comm,</text>
+  <text x="475.0" y="196.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="136.7" lengthAdjust="spacingAndGlyphs">from the table of renames</text>
+  <text x="54.0" y="228.0" font-size="13" fill="#14162B" textLength="247.9" lengthAdjust="spacingAndGlyphs">twice_add_zero: twice_is_double has been</text>
+  <text x="54.0" y="245.0" font-size="13" fill="#14162B" textLength="65.1" lengthAdjust="spacingAndGlyphs">deprecated</text>
+  <text x="475.0" y="228.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="135.4" lengthAdjust="spacingAndGlyphs">rename to twice_eq, from</text>
+  <text x="475.0" y="244.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="112.4" lengthAdjust="spacingAndGlyphs">Lean's own message</text>
+  <text x="54.0" y="284.5" font-size="13" fill="#14162B" textLength="237.8" lengthAdjust="spacingAndGlyphs">le_succ_self: exact? printed a suggestion</text>
+  <text x="475.0" y="276.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="141.4" lengthAdjust="spacingAndGlyphs">the suggestion is written in</text>
+  <text x="475.0" y="292.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="80.7" lengthAdjust="spacingAndGlyphs">place of exact?</text>
+  <text x="54.0" y="332.5" font-size="13" fill="#14162B" textLength="201.6" lengthAdjust="spacingAndGlyphs">twice_add: simp made no progress</text>
+  <text x="475.0" y="332.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="78.1" lengthAdjust="spacingAndGlyphs">no rule applies</text>
+  <text x="685.0" y="324.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="162.7" lengthAdjust="spacingAndGlyphs">simp becomes omega, the last</text>
+  <text x="685.0" y="340.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="86.7" lengthAdjust="spacingAndGlyphs">step of the proof</text>
+  <text x="54.0" y="389.0" font-size="13" fill="#14162B" textLength="166.9" lengthAdjust="spacingAndGlyphs">add_zero_eq: type mismatch</text>
+  <text x="475.0" y="388.5" font-size="12" fill="#5B6477" text-anchor="middle" textLength="78.1" lengthAdjust="spacingAndGlyphs">no rule applies</text>
+  <text x="685.0" y="372.5" font-size="12" fill="#5B6477" text-anchor="middle" textLength="124.1" lengthAdjust="spacingAndGlyphs">Nat.zero_add becomes</text>
+  <text x="685.0" y="388.5" font-size="12" fill="#5B6477" text-anchor="middle" textLength="164.8" lengthAdjust="spacingAndGlyphs">Nat.add_zero, one name in the</text>
+  <text x="685.0" y="404.5" font-size="12" fill="#5B6477" text-anchor="middle" textLength="27.4" lengthAdjust="spacingAndGlyphs">proof</text>
+  <text x="66.0" y="446.5" font-size="12" fill="#5B6477" textLength="206.1" lengthAdjust="spacingAndGlyphs">not needed: an earlier stage repaired it</text>
+  <text x="56.0" y="494.0" font-size="13" fill="#14162B" textLength="803.3" lengthAdjust="spacingAndGlyphs">Without a model (--no-ai) the rules still repair the first three. The prover then proves add_zero_eq again from its statement, and twice_add is</text>
+  <text x="56.0" y="512.0" font-size="13" fill="#14162B" textLength="98.3" lengthAdjust="spacingAndGlyphs">left and reported.</text>
+  <text x="40.0" y="569.0" font-size="14" fill="#14162B" font-weight="700" textLength="274.6" lengthAdjust="spacingAndGlyphs">An edit is kept only when all of this holds</text>
+  <text x="54.0" y="608.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="109.7" lengthAdjust="spacingAndGlyphs">Lean compiles it</text>
+  <text x="54.0" y="644.0" font-size="13" fill="#14162B" textLength="301.3" lengthAdjust="spacingAndGlyphs">Where the theorem stands, with everything before it.</text>
+  <text x="543.0" y="608.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="175.1" lengthAdjust="spacingAndGlyphs">The statement is the same</text>
+  <text x="543.0" y="644.0" font-size="13" fill="#14162B" textLength="356.3" lengthAdjust="spacingAndGlyphs">As Lean prints it, before and after; only the proof may change.</text>
+  <text x="54.0" y="704.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="133.0" lengthAdjust="spacingAndGlyphs">Nothing else breaks</text>
+  <text x="54.0" y="740.0" font-size="13" fill="#14162B" textLength="292.7" lengthAdjust="spacingAndGlyphs">No new breakage, and no more errors than before.</text>
+  <text x="543.0" y="704.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="171.2" lengthAdjust="spacingAndGlyphs">The whole file, once more</text>
+  <text x="543.0" y="740.0" font-size="13" fill="#14162B" textLength="356.3" lengthAdjust="spacingAndGlyphs">At the end Lean reads all of it, and the report says what is left.</text>
+</svg>

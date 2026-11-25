@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 544" role="img" aria-labelledby="differential-t differential-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="differential-t">The differential test</title>
+  <desc id="differential-d">On the left, inputs are generated from a seed: lists, sorted lists, arrays, graphs and strings. The same requests go to two sides: the program maithic-algo, compiled by Lake from the verified Lean library, and reference implementations in Julia that share no code with it. On the right a judge accepts or rejects each answer: it compares, and where several answers are right, as for a path in a graph, it checks the answer instead.</desc>
+  <rect width="960" height="544" fill="#FAF8F4"/>
+  <rect x="40.0" y="159.0" width="230.0" height="188.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="320.0" y="96.0" width="300.0" height="146.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="320.0" y="264.0" width="300.0" height="146.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <rect x="670.0" y="141.0" width="250.0" height="224.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="430.0" width="880.0" height="84.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 169.0a10 10 0 0 1 10-10h210.0a10 10 0 0 1 10 10v26.0h-230.0z" fill="#5B6477"/>
+  <rect x="54.0" y="311.0" width="202.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M320.0 106.0a10 10 0 0 1 10-10h280.0a10 10 0 0 1 10 10v26.0h-300.0z" fill="#2B2F77"/>
+  <rect x="334.0" y="206.0" width="272.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M320.0 274.0a10 10 0 0 1 10-10h280.0a10 10 0 0 1 10 10v26.0h-300.0z" fill="#9558B2"/>
+  <rect x="334.0" y="374.0" width="272.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M670.0 151.0a10 10 0 0 1 10-10h230.0a10 10 0 0 1 10 10v26.0h-250.0z" fill="#0B7F75"/>
+  <rect x="684.0" y="329.0" width="222.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M274.0 253.0 L295.0 253.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M295.0 169.0 L295.0 337.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M295.0 169.0 L308.0 169.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M306 163.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M295.0 337.0 L308.0 337.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M306 331.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M624.0 169.0 L645.0 169.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M624.0 337.0 L645.0 337.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M645.0 169.0 L645.0 337.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M645.0 253.0 L658.0 253.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M656 247.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="632.1" lengthAdjust="spacingAndGlyphs">The same requests, two implementations that share no code</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="373.8" lengthAdjust="spacingAndGlyphs">maithic algo differential --seed 1 --count 190</text>
+  <text x="54.0" y="182.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="115.1" lengthAdjust="spacingAndGlyphs">Generated inputs</text>
+  <text x="54.0" y="218.0" font-size="13" fill="#14162B" textLength="172.7" lengthAdjust="spacingAndGlyphs">Inputs are drawn from a seed:</text>
+  <text x="54.0" y="236.0" font-size="13" fill="#14162B" textLength="138.7" lengthAdjust="spacingAndGlyphs">lists, sorted lists, arrays,</text>
+  <text x="54.0" y="254.0" font-size="13" fill="#14162B" textLength="110.6" lengthAdjust="spacingAndGlyphs">graphs and strings.</text>
+  <text x="54.0" y="278.0" font-size="13" fill="#14162B" textLength="145.3" lengthAdjust="spacingAndGlyphs">The same seed gives the</text>
+  <text x="54.0" y="296.0" font-size="13" fill="#14162B" textLength="179.2" lengthAdjust="spacingAndGlyphs">same cases on every machine.</text>
+  <text x="64.0" y="326.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">seeded</text>
+  <text x="334.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="100.3" lengthAdjust="spacingAndGlyphs">Compiled Lean</text>
+  <text x="334.0" y="155.0" font-size="13" fill="#14162B" textLength="214.4" lengthAdjust="spacingAndGlyphs">The verified library, compiled by Lake</text>
+  <text x="334.0" y="173.0" font-size="13" fill="#14162B" textLength="229.1" lengthAdjust="spacingAndGlyphs">into one program that answers requests</text>
+  <text x="334.0" y="191.0" font-size="13" fill="#14162B" textLength="150.3" lengthAdjust="spacingAndGlyphs">such as merge_sort 3 1 2.</text>
+  <text x="344.0" y="221.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="83.1" lengthAdjust="spacingAndGlyphs">maithic-algo</text>
+  <text x="334.0" y="287.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="75.5" lengthAdjust="spacingAndGlyphs">References</text>
+  <text x="334.0" y="323.0" font-size="13" fill="#14162B" textLength="227.7" lengthAdjust="spacingAndGlyphs">A second implementation of each of the</text>
+  <text x="334.0" y="341.0" font-size="13" fill="#14162B" textLength="221.1" lengthAdjust="spacingAndGlyphs">nineteen algorithms, most of them one</text>
+  <text x="334.0" y="359.0" font-size="13" fill="#14162B" textLength="184.3" lengthAdjust="spacingAndGlyphs">line over Julia's standard library.</text>
+  <text x="344.0" y="389.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="96.9" lengthAdjust="spacingAndGlyphs">MaithicAlgoRef</text>
+  <text x="684.0" y="164.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="66.1" lengthAdjust="spacingAndGlyphs">The judge</text>
+  <text x="684.0" y="200.0" font-size="13" fill="#14162B" textLength="185.7" lengthAdjust="spacingAndGlyphs">Compares each answer with the</text>
+  <text x="684.0" y="218.0" font-size="13" fill="#14162B" textLength="58.5" lengthAdjust="spacingAndGlyphs">reference.</text>
+  <text x="684.0" y="242.0" font-size="13" fill="#14162B" textLength="190.7" lengthAdjust="spacingAndGlyphs">Where several answers are right,</text>
+  <text x="684.0" y="260.0" font-size="13" fill="#14162B" textLength="191.5" lengthAdjust="spacingAndGlyphs">as for a path in a graph, it checks</text>
+  <text x="684.0" y="278.0" font-size="13" fill="#14162B" textLength="163.3" lengthAdjust="spacingAndGlyphs">the answer instead: the path</text>
+  <text x="684.0" y="296.0" font-size="13" fill="#14162B" textLength="156.8" lengthAdjust="spacingAndGlyphs">must start and end where it</text>
+  <text x="684.0" y="314.0" font-size="13" fill="#14162B" textLength="143.1" lengthAdjust="spacingAndGlyphs">should and follow edges.</text>
+  <text x="694.0" y="344.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="131.5" lengthAdjust="spacingAndGlyphs">accepted, or listed</text>
+  <text x="56.0" y="455.0" font-size="13" fill="#14162B" textLength="686.3" lengthAdjust="spacingAndGlyphs">A proof says that the Lean definition meets its specification. This test says that the compiled program is that definition in</text>
+  <text x="56.0" y="473.0" font-size="13" fill="#14162B" textLength="481.3" lengthAdjust="spacingAndGlyphs">practice, and that the code which reads requests and prints answers is right as well.</text>
+  <text x="56.0" y="497.0" font-size="13" fill="#14162B" textLength="479.8" lengthAdjust="spacingAndGlyphs">In the recorded run, 190 cases over nineteen algorithms, every answer is accepted.</text>
+</svg>

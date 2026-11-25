@@ -1,0 +1,30 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "proved",
+  "certificate": {
+    "schema": "maithic.oracle.certificate/1",
+    "kind": "polynomial.combination",
+    "claim": "∀ x y : ℚ, x + y = 3 → x * y = 2 → x ^ 2 + y ^ 2 = 5",
+    "data": {
+      "domain": "rat",
+      "variables": ["x", "y"],
+      "hypotheses": [
+        {
+          "name": "h1",
+          "statement": "x + y = 3"
+        },
+        {
+          "name": "h2",
+          "statement": "x * y = 2"
+        }
+      ],
+      "goal": "x^2 + y^2 = 5",
+      "cofactors": ["x + y + 3", "-2"]
+    },
+    "engine": {
+      "name": "MaithicOracle",
+      "version": "0.1.0",
+      "parameters": {}
+    }
+  }
+}

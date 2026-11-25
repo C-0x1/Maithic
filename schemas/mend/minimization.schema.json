@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proof minimization",
+  "description": "The proofs of a Lean file, made shorter. For each theorem: the proof as it stood and the proof that is left, their sizes in lines, steps and characters, what was removed, and how: by deletion, one step or one argument of a lemma list at a time, or by automation, the whole proof for a single call, or unchanged. Every shorter proof was compiled by Lean, states what the theorem stated, and rests on no axiom the theorem did not rest on before; `checks` is the number of proofs given to Lean. A note says why nothing was tried, or that a shorter proof exists at the price of new axioms.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.mend.minimization/1"
+    },
+    "file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "theorems": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "shortened": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lines_before": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lines_after": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "chars_before": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "chars_after": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checks": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "theorems",
+        "shortened",
+        "lines_before",
+        "lines_after",
+        "chars_before",
+        "chars_after",
+        "checks"
+      ],
+      "additionalProperties": false
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "theorem": {
+            "type": "string",
+            "minLength": 1
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "how": {
+            "enum": [
+              "deletion",
+              "automation",
+              "unchanged"
+            ]
+          },
+          "before": {
+            "type": "string"
+          },
+          "after": {
+            "type": "string"
+          },
+          "size_before": {
+            "type": "object",
+            "properties": {
+              "lines": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "steps": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "chars": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "lines",
+              "steps",
+              "chars"
+            ],
+            "additionalProperties": false
+          },
+          "size_after": {
+            "type": "object",
+            "properties": {
+              "lines": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "steps": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "chars": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "lines",
+              "steps",
+              "chars"
+            ],
+            "additionalProperties": false
+          },
+          "removed": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "checks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "axioms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "theorem",
+          "line",
+          "how",
+          "before",
+          "after",
+          "size_before",
+          "size_after",
+          "removed",
+          "checks",
+          "axioms"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "written": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema",
+    "file",
+    "summary",
+    "results"
+  ],
+  "additionalProperties": false
+}

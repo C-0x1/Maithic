@@ -1,0 +1,107 @@
+{
+  "schema": "maithic.algolab.differential/1",
+  "implementation": "maithic-algo",
+  "seed": 1,
+  "size": 12,
+  "cases": 190,
+  "mismatches": 0,
+  "agrees": true,
+  "algorithms": [
+    {
+      "name": "insertion_sort",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "merge_sort",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "selection_sort",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "quick_sort",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "linear_search",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "binary_search",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "minimum",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "maximum",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "dedup_sorted",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "is_sorted",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "same_counts",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "fib",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "prefix_sums",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "range_sum",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "gcd",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "pow",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "pow_mod",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "find_sub",
+      "cases": 10,
+      "mismatches": 0
+    },
+    {
+      "name": "path",
+      "cases": 10,
+      "mismatches": 0
+    }
+  ],
+  "failures": []
+}

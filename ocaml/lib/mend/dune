@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+ (name maithic_mend)
+ (public_name maithic.mend)
+ (libraries maithic_base maithic_schema maithic_bridge maithic_gateway maithic_ledger maithic_prover))

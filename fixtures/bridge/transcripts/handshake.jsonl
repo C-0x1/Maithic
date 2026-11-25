@@ -1,0 +1,7 @@
+{"request":{"jsonrpc":"2.0","id":1,"method":"handshake"},"response":{"id":1,"jsonrpc":"2.0","result":{"bridge":"0.1.0","lean":"4.36.0","methods":["handshake","loadHeader","runCommand","checkFile","extract","tryCandidates","releaseEnv","guard","startProof","runTactic","tryTactics","getState","releaseState","stats","selfTest","shutdown"],"protocol":1}}}
+{"request":{"jsonrpc":"2.0","id":"a-string-id","method":"stats"},"response":{"id":"a-string-id","jsonrpc":"2.0","result":{"elaborations":0,"environments":0,"headerHits":0,"headerMisses":0,"headers":0,"proofStates":0,"requests":2,"tacticRuns":0}}}
+{"request":{"jsonrpc":"2.0","id":3,"method":"noSuchMethod"},"response":{"error":{"code":-32601,"data":{"code":"MTH-BRG-0003"},"message":"unknown method 'noSuchMethod'"},"id":3,"jsonrpc":"2.0"}}
+{"request":{"id":5,"method":"handshake"},"response":{"error":{"code":-32600,"data":{"code":"MTH-BRG-0002"},"message":"invalid request: member 'jsonrpc' must be \"2.0\""},"id":5,"jsonrpc":"2.0"}}
+{"request":{"jsonrpc":"2.0","id":6,"method":"runCommand","params":{"env":"one"}},"response":{"error":{"code":-32602,"data":{"code":"MTH-BRG-0004"},"message":"invalid parameters: missing or malformed parameter 'env'"},"id":6,"jsonrpc":"2.0"}}
+{"request":{"jsonrpc":"2.0","id":7,"method":"handshake","params":[1,2]},"response":{"error":{"code":-32600,"data":{"code":"MTH-BRG-0002"},"message":"invalid request: member 'params' must be an object"},"id":7,"jsonrpc":"2.0"}}
+{"request":{"jsonrpc":"2.0","id":8,"method":"shutdown"},"response":{"id":8,"jsonrpc":"2.0","result":{"bye":true}}}

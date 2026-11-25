@@ -1,0 +1,31 @@
+{
+  "schema": "maithic.check.report/1",
+  "file": "examples/triangle.lean",
+  "ok": false,
+  "errors": 0,
+  "warnings": 1,
+  "declarations": 2,
+  "theorems": [
+    {
+      "name": "tri_formula",
+      "statement": "∀ (n : Nat), 2 * tri n = n * (n + 1)",
+      "status": "failed",
+      "axioms": [
+        "sorryAx"
+      ],
+      "reasons": [
+        "the proof is unfinished: it depends on sorry"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "line": 14,
+      "column": 8,
+      "endLine": 14,
+      "endColumn": 19,
+      "text": "declaration uses `sorry`"
+    }
+  ]
+}

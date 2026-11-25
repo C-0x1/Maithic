@@ -1,0 +1,4 @@
+c Unit propagation alone reaches the conflict; clause 1 is no longer needed after the first step.
+5 2 0 1 2 0
+5 d 1 2 0
+6 0 5 3 4 0

@@ -1,0 +1,16 @@
+{
+  "schema": "maithic.oracle.certificate/1",
+  "kind": "discrete.witness",
+  "claim": "∃ x y : ℕ, x ^ 2 = 2 * y ^ 2 + 1 ∧ y > 0",
+  "data": {
+    "domain": "nat",
+    "variables": ["x", "y"],
+    "conditions": ["x^2 = 2 * y^2 + 1", "y > 0"],
+    "values": ["3", "2"]
+  },
+  "engine": {
+    "name": "MaithicOracle",
+    "version": "0.1.0",
+    "parameters": {}
+  }
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 796 299" width="796" height="299" role="img" aria-label="A terminal session: maithic intel deps lists what the theorem sorted_insertionSort rests on, with the distance of each declaration: at distance 1 the definitions Sorted and insertionSort, the class TotalPreorder and two theorems, and at distance 2 what those use in turn, each with its kind and the file and line where it is.">
+  <title>A terminal session: maithic intel deps lists what the theorem sorted_insertionSort rests on, with the distance of each declaration: at distance 1 the definitions Sorted and insertionSort, the class TotalPreorder and two theorems, and at distance 2 what those use in turn, each with its kind and the file and line where it is.</title>
+  <rect width="796" height="299" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h776a10 10 0 0 1 10 10v26h-796z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="398" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic intel deps</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="571.59" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic intel deps Maithic.Algo.sorted_insertionSort --dir fixtures/intel</text>
+    <text x="22.00" y="77" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">distance</text>
+    <text x="100.30" y="77" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">declaration</text>
+    <text x="366.52" y="77" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">kind</text>
+    <text x="460.48" y="77" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">where</text>
+    <text x="22.00" y="96" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------</text>
+    <text x="100.30" y="96" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------------------------------</text>
+    <text x="366.52" y="96" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">----------</text>
+    <text x="460.48" y="96" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">----------------------------------------</text>
+    <text x="22.00" y="115" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1</text>
+    <text x="100.30" y="115" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.Sorted</text>
+    <text x="366.52" y="115" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition</text>
+    <text x="460.48" y="115" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Spec/Sorted.lean:31</text>
+    <text x="22.00" y="134" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1</text>
+    <text x="100.30" y="134" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.TotalPreorder</text>
+    <text x="366.52" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">class</text>
+    <text x="460.48" y="134" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Spec/Sorted.lean:20</text>
+    <text x="22.00" y="153" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1</text>
+    <text x="100.30" y="153" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.insertionSort</text>
+    <text x="366.52" y="153" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition</text>
+    <text x="460.48" y="153" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Sort/Insertion.lean:26</text>
+    <text x="22.00" y="172" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1</text>
+    <text x="100.30" y="172" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.sorted_insertSorted</text>
+    <text x="366.52" y="172" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="460.48" y="172" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Sort/Insertion.lean:60</text>
+    <text x="22.00" y="191" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1</text>
+    <text x="100.30" y="191" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.sorted_nil</text>
+    <text x="366.52" y="191" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="460.48" y="191" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Spec/Sorted.lean:42</text>
+    <text x="22.00" y="210" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2</text>
+    <text x="100.30" y="210" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.insertSorted</text>
+    <text x="366.52" y="210" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition</text>
+    <text x="460.48" y="210" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Sort/Insertion.lean:21</text>
+    <text x="22.00" y="229" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2</text>
+    <text x="100.30" y="229" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.mem_insertSorted</text>
+    <text x="366.52" y="229" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="460.48" y="229" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Sort/Insertion.lean:31</text>
+    <text x="22.00" y="248" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2</text>
+    <text x="100.30" y="248" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.sorted_cons</text>
+    <text x="366.52" y="248" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="460.48" y="248" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Spec/Sorted.lean:49</text>
+    <text x="22.00" y="267" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2</text>
+    <text x="100.30" y="267" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.sorted_singleton</text>
+    <text x="366.52" y="267" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="460.48" y="267" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Spec/Sorted.lean:44</text>
+  </g>
+</svg>

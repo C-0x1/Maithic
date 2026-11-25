@@ -1,0 +1,20 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "anthropic-timeout",
+  "provider": "anthropic",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 504,
+  "headers": {},
+  "body": {
+    "type": "error",
+    "error": {
+      "type": "timeout_error",
+      "message": "Request timed out"
+    },
+    "request_id": "req_011Example"
+  },
+  "expect": {
+    "error": "timeout"
+  }
+}

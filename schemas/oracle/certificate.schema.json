@@ -1,0 +1,745 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oracle certificate",
+  "description": "Data from which a fact can be checked without trusting whoever produced the data. `kind` names the fact and fixes the shape of `data`; `claim` states the fact in Lean's notation; `engine` records who produced the certificate and is never read by a checker. Every number is exact and written as text.",
+  "$defs": {
+    "factors": {
+      "description": "A product of prime powers: pairs of a prime and its exponent.",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "$ref": "../common.schema.json#/$defs/integer_text"
+          },
+          {
+            "type": "integer",
+            "minimum": 1
+          }
+        ],
+        "items": false,
+        "minItems": 2
+      }
+    },
+    "pratt_proof": {
+      "description": "The lines of a Pratt proof, smaller primes first: n is prime because the witness has order n - 1, where factors is the factorization of n - 1 into primes proved earlier.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "$ref": "../common.schema.json#/$defs/integer_text"
+          },
+          "witness": {
+            "$ref": "../common.schema.json#/$defs/integer_text"
+          },
+          "factors": {
+            "$ref": "#/$defs/factors"
+          }
+        },
+        "required": [
+          "n",
+          "witness",
+          "factors"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "interval": {
+      "description": "A closed interval with exact endpoints.",
+      "type": "array",
+      "prefixItems": [
+        {
+          "$ref": "../common.schema.json#/$defs/exact"
+        },
+        {
+          "$ref": "../common.schema.json#/$defs/exact"
+        }
+      ],
+      "items": false,
+      "minItems": 2
+    },
+    "bounds": {
+      "description": "A box: one interval per variable, in the order of the variables.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/interval"
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "statement"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "discrete_prime": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "proof": {
+          "$ref": "#/$defs/pratt_proof"
+        }
+      },
+      "required": [
+        "n",
+        "proof"
+      ],
+      "additionalProperties": false
+    },
+    "discrete_factorization": {
+      "type": "object",
+      "properties": {
+        "n": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "factors": {
+          "$ref": "#/$defs/factors"
+        },
+        "proof": {
+          "$ref": "#/$defs/pratt_proof"
+        }
+      },
+      "required": [
+        "n",
+        "factors",
+        "proof"
+      ],
+      "additionalProperties": false
+    },
+    "discrete_inverse": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "modulus": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "inverse": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        }
+      },
+      "required": [
+        "a",
+        "modulus",
+        "inverse"
+      ],
+      "additionalProperties": false
+    },
+    "discrete_order": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "modulus": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "order": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "factors": {
+          "$ref": "#/$defs/factors"
+        },
+        "proof": {
+          "$ref": "#/$defs/pratt_proof"
+        }
+      },
+      "required": [
+        "a",
+        "modulus",
+        "order",
+        "factors",
+        "proof"
+      ],
+      "additionalProperties": false
+    },
+    "discrete_logarithm": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "target": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "modulus": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "exponent": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        }
+      },
+      "required": [
+        "base",
+        "target",
+        "modulus",
+        "exponent"
+      ],
+      "additionalProperties": false
+    },
+    "discrete_square_root": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "modulus": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "root": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        }
+      },
+      "required": [
+        "a",
+        "modulus",
+        "root"
+      ],
+      "additionalProperties": false
+    },
+    "discrete_bezout": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "b": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "gcd": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "x": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "y": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "a_cofactor": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        },
+        "b_cofactor": {
+          "$ref": "../common.schema.json#/$defs/integer_text"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "gcd",
+        "x",
+        "y",
+        "a_cofactor",
+        "b_cofactor"
+      ],
+      "additionalProperties": false
+    },
+    "discrete_witness": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "enum": [
+            "int",
+            "nat"
+          ]
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "../common.schema.json#/$defs/integer_text"
+          }
+        }
+      },
+      "required": [
+        "domain",
+        "variables",
+        "conditions",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "linear": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "enum": [
+            "int",
+            "rat"
+          ]
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hypotheses": {
+          "$ref": "#/$defs/hypotheses"
+        },
+        "goal": {
+          "type": "string"
+        },
+        "refutations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "assumption": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "multipliers": {
+                "type": "array",
+                "items": {
+                  "$ref": "../common.schema.json#/$defs/exact"
+                }
+              }
+            },
+            "required": [
+              "assumption",
+              "multipliers"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "domain",
+        "variables",
+        "hypotheses",
+        "goal",
+        "refutations"
+      ],
+      "additionalProperties": false
+    },
+    "polynomial": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "enum": [
+            "int",
+            "rat",
+            "real"
+          ]
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hypotheses": {
+          "$ref": "#/$defs/hypotheses"
+        },
+        "goal": {
+          "type": "string"
+        },
+        "cofactors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "domain",
+        "variables",
+        "hypotheses",
+        "goal",
+        "cofactors"
+      ],
+      "additionalProperties": false
+    },
+    "interval_boxes": {
+      "type": "object",
+      "properties": {
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hypotheses": {
+          "$ref": "#/$defs/hypotheses"
+        },
+        "goal": {
+          "type": "string"
+        },
+        "domain": {
+          "$ref": "#/$defs/bounds"
+        },
+        "boxes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "bounds": {
+                "$ref": "#/$defs/bounds"
+              },
+              "reason": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "enclosure": {
+                "$ref": "#/$defs/interval"
+              }
+            },
+            "required": [
+              "bounds",
+              "reason",
+              "enclosure"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "variables",
+        "hypotheses",
+        "goal",
+        "domain",
+        "boxes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.oracle.certificate/1"
+    },
+    "kind": {
+      "enum": [
+        "discrete.prime",
+        "discrete.factorization",
+        "discrete.inverse",
+        "discrete.order",
+        "discrete.logarithm",
+        "discrete.square_root",
+        "discrete.bezout",
+        "discrete.witness",
+        "linear.farkas",
+        "linear.combination",
+        "polynomial.identity",
+        "polynomial.combination",
+        "interval.boxes"
+      ]
+    },
+    "claim": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object"
+    },
+    "engine": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "parameters": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "parameters"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "kind",
+    "claim",
+    "data",
+    "engine"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.prime"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_prime"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.factorization"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_factorization"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.inverse"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_inverse"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.order"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_order"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.logarithm"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_logarithm"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.square_root"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_square_root"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.bezout"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_bezout"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "discrete.witness"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/discrete_witness"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "linear.farkas"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/linear"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "linear.combination"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/linear"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "polynomial.identity"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/polynomial"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "polynomial.combination"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/polynomial"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "interval.boxes"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/interval_boxes"
+          }
+        }
+      }
+    }
+  ]
+}

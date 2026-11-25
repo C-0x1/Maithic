@@ -1,0 +1,150 @@
+# The required workflow. Every job runs with no secret and no API key: model
+# calls are served from cassettes. `make ci` runs the same steps locally.
+
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# The versions the repository is developed and tested with. Lean's is in
+# `lean-toolchain`.
+env:
+  MAITHIC_GATEWAY_MODE: replay
+  OCAML_COMPILER: "5.5"
+  DUNE_VERSION: "3.25.0"
+  JULIA_VERSION: "1.13"
+  R_VERSION: "4.5"
+
+jobs:
+  ocaml:
+    name: OCaml build, unit tests and repository gates
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: ocaml/setup-ocaml@ff66428f72b64472e749b22e0ad4dded4b2ddca6 # v3.9.1
+        with:
+          ocaml-compiler: ${{ env.OCAML_COMPILER }}
+      - name: Install dune
+        run: opam install --yes "dune.${DUNE_VERSION}"
+      - name: Build
+        run: opam exec -- make build-ocaml
+      - name: Unit tests
+        run: opam exec -- make test-ocaml
+      - name: Language share, capability register, scans, README images
+        run: opam exec -- make hygiene
+
+  lean:
+    name: Lean build and tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1.7.1
+        with:
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-mathlib-cache: false
+          use-github-cache: false
+          lake-package-directory: lean
+      - name: Build, failing on warnings
+        run: make build-lean
+      - name: Tests
+        run: make test-lean
+
+  julia:
+    name: Julia package tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: julia-actions/setup-julia@da908477b5db94c10ffce8cfea9f2b3b9d5db687 # v3.0.3
+        with:
+          version: ${{ env.JULIA_VERSION }}
+      - name: Tests
+        run: make test-julia
+
+  r:
+    name: R package tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: r-lib/actions/setup-r@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
+        with:
+          r-version: ${{ env.R_VERSION }}
+          use-public-rspm: true
+      - name: Install the system libraries that the graphics packages link against
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            libfontconfig1-dev libfreetype-dev libfribidi-dev libharfbuzz-dev libpng-dev
+      - name: Install the packages the tests need
+        run: |
+          Rscript -e '
+            wanted <- c("jsonlite", "testthat", "ggplot2", "svglite")
+            install.packages(wanted)
+            missing <- setdiff(wanted, rownames(installed.packages()))
+            if (length(missing) > 0) stop("not installed: ", paste(missing, collapse = ", "))
+          '
+      # The packages come from CRAN as they are on the day of the run. A newer
+      # one that warns about something it will change does not fail the job; a
+      # test that fails does. `make test-r` on its own fails on warnings too.
+      - name: Tests
+        run: make test-r R_WARNINGS_FAIL=FALSE
+
+  integration:
+    name: Integration and end-to-end, replay mode, with the Julia engines
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: ocaml/setup-ocaml@ff66428f72b64472e749b22e0ad4dded4b2ddca6 # v3.9.1
+        with:
+          ocaml-compiler: ${{ env.OCAML_COMPILER }}
+      - name: Install dune
+        run: opam install --yes "dune.${DUNE_VERSION}"
+      - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1.7.1
+        with:
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-mathlib-cache: false
+          use-github-cache: false
+          lake-package-directory: lean
+      - uses: julia-actions/setup-julia@da908477b5db94c10ffce8cfea9f2b3b9d5db687 # v3.0.3
+        with:
+          version: ${{ env.JULIA_VERSION }}
+      - name: Integration tests against the real Bridge and the oracle engines
+        run: opam exec -- make integration
+      - name: End-to-end sessions
+        run: opam exec -- make e2e
+      - name: Minimal profile
+        run: opam exec -- make e2e-minimal
+
+  gate:
+    name: All checks passed
+    if: always()
+    needs: [ocaml, lean, julia, r, integration]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Fail unless every job succeeded
+        run: |
+          results='${{ join(needs.*.result, ' ') }}'
+          echo "job results: $results"
+          for result in $results; do
+            if [ "$result" != "success" ]; then exit 1; fi
+          done

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 486" role="img" aria-labelledby="fixtures-map-t fixtures-map-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="fixtures-map-t">The targets that rewrite what is recorded</title>
+  <desc id="fixtures-map-d">A list of ten make targets with what each one regenerates. transcripts: the Bridge transcripts that the OCaml unit tests replay. cassettes: the answers the demonstrations replay. julia-fixtures: the oracle and network certificates that Julia writes for the other languages. lean-fixtures: what Lean says about the demonstration sources. guide-fixtures: the tactic model the repository keeps. run-fixtures: the demonstrations as result files. figures: the benchmark results and the figures drawn from data. shots: the pictures of terminal sessions. docs: the generated reference pages. cap-sync: the capability register and its status page.</desc>
+  <rect width="960" height="486" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="880.0" height="28.0" rx="6" fill="#FFFFFF"/>
+  <rect x="40.0" y="166.0" width="880.0" height="28.0" rx="6" fill="#FFFFFF"/>
+  <rect x="40.0" y="253.0" width="880.0" height="28.0" rx="6" fill="#FFFFFF"/>
+  <rect x="40.0" y="323.0" width="880.0" height="28.0" rx="6" fill="#FFFFFF"/>
+  <rect x="40.0" y="393.0" width="880.0" height="28.0" rx="6" fill="#FFFFFF"/>
+  <rect x="50.0" y="105.0" width="10.0" height="10.0" rx="3" fill="#2B2F77"/>
+  <rect x="50.0" y="140.0" width="10.0" height="10.0" rx="3" fill="#EC6813"/>
+  <rect x="50.0" y="175.0" width="10.0" height="10.0" rx="3" fill="#9558B2"/>
+  <rect x="50.0" y="218.5" width="10.0" height="10.0" rx="3" fill="#2B2F77"/>
+  <rect x="50.0" y="262.0" width="10.0" height="10.0" rx="3" fill="#9558B2"/>
+  <rect x="50.0" y="297.0" width="10.0" height="10.0" rx="3" fill="#EC6813"/>
+  <rect x="50.0" y="332.0" width="10.0" height="10.0" rx="3" fill="#276DC3"/>
+  <rect x="50.0" y="367.0" width="10.0" height="10.0" rx="3" fill="#EC6813"/>
+  <rect x="50.0" y="402.0" width="10.0" height="10.0" rx="3" fill="#5B6477"/>
+  <rect x="50.0" y="437.0" width="10.0" height="10.0" rx="3" fill="#5B6477"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="440.1" lengthAdjust="spacingAndGlyphs">Nothing that is recorded is edited by hand</text>
+  <text x="40.0" y="69.0" font-size="14" fill="#5B6477" textLength="402.3" lengthAdjust="spacingAndGlyphs">Ten targets rewrite the recordings; the tests fail when one is stale</text>
+  <text x="68.0" y="114.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="120.4" lengthAdjust="spacingAndGlyphs">make transcripts</text>
+  <text x="264.0" y="114.5" font-size="12.5" fill="#5B6477" textLength="396.0" lengthAdjust="spacingAndGlyphs">The Bridge transcripts that the OCaml unit tests replay in place of Lean.</text>
+  <text x="68.0" y="149.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="105.3" lengthAdjust="spacingAndGlyphs">make cassettes</text>
+  <text x="264.0" y="149.5" font-size="12.5" fill="#5B6477" textLength="470.9" lengthAdjust="spacingAndGlyphs">The answers the demonstrations replay, authored in fixtures/cassettes/authored.toml.</text>
+  <text x="68.0" y="184.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="143.0" lengthAdjust="spacingAndGlyphs">make julia-fixtures</text>
+  <text x="264.0" y="184.5" font-size="12.5" fill="#5B6477" textLength="419.0" lengthAdjust="spacingAndGlyphs">The oracle and network certificates that Julia writes for the other languages.</text>
+  <text x="68.0" y="228.0" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="135.5" lengthAdjust="spacingAndGlyphs">make lean-fixtures</text>
+  <text x="264.0" y="219.5" font-size="12.5" fill="#5B6477" textLength="526.0" lengthAdjust="spacingAndGlyphs">What Lean says about the demonstration sources: extractions, the code graph, the dataset, the</text>
+  <text x="264.0" y="236.5" font-size="12.5" fill="#5B6477" textLength="125.1" lengthAdjust="spacingAndGlyphs">review, the refutations.</text>
+  <text x="68.0" y="271.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="143.0" lengthAdjust="spacingAndGlyphs">make guide-fixtures</text>
+  <text x="264.0" y="271.5" font-size="12.5" fill="#5B6477" textLength="459.3" lengthAdjust="spacingAndGlyphs">The tactic model the repository keeps, and the runs that compare shapes of model.</text>
+  <text x="68.0" y="306.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="127.9" lengthAdjust="spacingAndGlyphs">make run-fixtures</text>
+  <text x="264.0" y="306.5" font-size="12.5" fill="#5B6477" textLength="400.2" lengthAdjust="spacingAndGlyphs">The demonstrations as result files, for the statistics tests and the figures.</text>
+  <text x="68.0" y="341.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="90.3" lengthAdjust="spacingAndGlyphs">make figures</text>
+  <text x="264.0" y="341.5" font-size="12.5" fill="#5B6477" textLength="357.8" lengthAdjust="spacingAndGlyphs">The benchmark results, and every figure that is drawn from data.</text>
+  <text x="68.0" y="376.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="75.2" lengthAdjust="spacingAndGlyphs">make shots</text>
+  <text x="264.0" y="376.5" font-size="12.5" fill="#5B6477" textLength="387.7" lengthAdjust="spacingAndGlyphs">The pictures of terminal sessions, from what the built command prints.</text>
+  <text x="68.0" y="411.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="67.7" lengthAdjust="spacingAndGlyphs">make docs</text>
+  <text x="264.0" y="411.5" font-size="12.5" fill="#5B6477" textLength="466.3" lengthAdjust="spacingAndGlyphs">The reference pages that are generated from the code, such as the table of settings.</text>
+  <text x="68.0" y="446.5" font-size="12.5" fill="#14162B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="97.8" lengthAdjust="spacingAndGlyphs">make cap-sync</text>
+  <text x="264.0" y="446.5" font-size="12.5" fill="#5B6477" textLength="416.9" lengthAdjust="spacingAndGlyphs">The status of every capability and the page that lists the tests naming each.</text>
+</svg>

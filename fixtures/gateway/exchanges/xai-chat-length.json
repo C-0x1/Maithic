@@ -1,0 +1,37 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "xai-chat-length",
+  "provider": "xai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "api": "chat_completions",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "b1",
+    "object": "chat.completion",
+    "model": "grok-4.7",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "cut off",
+          "refusal": null
+        },
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 9,
+      "completion_tokens": 16,
+      "total_tokens": 25
+    }
+  },
+  "expect": {
+    "text": "cut off",
+    "stop": "max_tokens",
+    "input_tokens": 9,
+    "output_tokens": 16
+  }
+}

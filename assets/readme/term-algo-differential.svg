@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 717 508" width="717" height="508" role="img" aria-label="A terminal session: maithic algo differential sends ten generated requests for each of nineteen verified algorithms to the compiled Lean program and to reference implementations in Julia. No answer differs: 190 cases, and every answer is accepted by its reference.">
+  <title>A terminal session: maithic algo differential sends ten generated requests for each of nineteen verified algorithms to the compiled Lean program and to reference implementations in Julia. No answer differs: 190 cases, and every answer is accepted by its reference.</title>
+  <rect width="717" height="508" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h697a10 10 0 0 1 10 10v26h-717z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="359" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic algo differential</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic algo differential</text>
+    <text x="22.00" y="77" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">algorithm</text>
+    <text x="147.28" y="77" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">cases</text>
+    <text x="202.09" y="77" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">differ</text>
+    <text x="22.00" y="96" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------------</text>
+    <text x="147.28" y="96" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">-----</text>
+    <text x="202.09" y="96" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">------</text>
+    <text x="22.00" y="115" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">insertion_sort</text>
+    <text x="147.28" y="115" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="115" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="134" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">merge_sort</text>
+    <text x="147.28" y="134" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="134" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="153" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">selection_sort</text>
+    <text x="147.28" y="153" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="153" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="172" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">quick_sort</text>
+    <text x="147.28" y="172" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="172" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="191" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">linear_search</text>
+    <text x="147.28" y="191" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="191" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="210" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">binary_search</text>
+    <text x="147.28" y="210" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="210" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="229" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">minimum</text>
+    <text x="147.28" y="229" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="229" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="248" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">maximum</text>
+    <text x="147.28" y="248" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="248" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="267" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">dedup_sorted</text>
+    <text x="147.28" y="267" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="267" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="286" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">is_sorted</text>
+    <text x="147.28" y="286" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="286" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="305" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">same_counts</text>
+    <text x="147.28" y="305" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="305" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="324" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fib</text>
+    <text x="147.28" y="324" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="324" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="343" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">prefix_sums</text>
+    <text x="147.28" y="343" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="343" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="362" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">range_sum</text>
+    <text x="147.28" y="362" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="362" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="381" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">gcd</text>
+    <text x="147.28" y="381" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="381" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="400" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">pow</text>
+    <text x="147.28" y="400" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="400" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="419" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">pow_mod</text>
+    <text x="147.28" y="419" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="419" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="438" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">find_sub</text>
+    <text x="147.28" y="438" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="438" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="457" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">path</text>
+    <text x="147.28" y="457" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="202.09" y="457" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">0</text>
+    <text x="22.00" y="476" textLength="673.38" lengthAdjust="spacingAndGlyphs" fill="#57C98F">agree: 190 case(s) over 19 algorithm(s), and every answer is accepted by its reference</text>
+  </g>
+</svg>

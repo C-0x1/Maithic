@@ -1,0 +1,51 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "proved",
+  "certificate": {
+    "schema": "maithic.oracle.certificate/1",
+    "kind": "linear.combination",
+    "claim": "∀ a b c : ℤ, 7 * a + 12 * b + 31 * c = 17 → 3 * a + 5 * b + 14 * c = 7 → 1 ≤ a → a ≤ 40 → -50 ≤ b → b ≤ 50 → c ≥ -1000",
+    "data": {
+      "domain": "int",
+      "variables": ["a", "b", "c"],
+      "hypotheses": [
+        {
+          "name": "h1",
+          "statement": "7 * a + 12 * b + 31 * c = 17"
+        },
+        {
+          "name": "h2",
+          "statement": "3 * a + 5 * b + 14 * c = 7"
+        },
+        {
+          "name": "h3",
+          "statement": "1 <= a"
+        },
+        {
+          "name": "h4",
+          "statement": "a <= 40"
+        },
+        {
+          "name": "h5",
+          "statement": "-50 <= b"
+        },
+        {
+          "name": "h6",
+          "statement": "b <= 50"
+        }
+      ],
+      "goal": "c >= -1000",
+      "refutations": [
+        {
+          "assumption": "c < -1000",
+          "multipliers": ["5/13", "-12/13", "0", "1/13", "0", "0", "1"]
+        }
+      ]
+    },
+    "engine": {
+      "name": "MaithicOracle",
+      "version": "0.1.0",
+      "parameters": {}
+    }
+  }
+}

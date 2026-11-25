@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthesis record",
+  "description": "One run of maithic algo synth: the task, every implementation that was looked at, and what became of it. An attempt is refused when it may not be given to Lean, and then has neither errors nor examples; otherwise errors are what Lean reported when it compiled the definition, and examples are the results of running the task's examples on it, with got as Lean prints the value. An attempt is accepted when it compiles and every example passed. The status is accepted when the last attempt is, and implementation is then its text. Accepted means tested on the examples: nothing is proved.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.algolab.synthesis/1"
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "call": {
+                "type": "string"
+              },
+              "expect": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "call",
+              "expect"
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "constraints",
+        "examples"
+      ]
+    },
+    "status": {
+      "enum": [
+        "accepted",
+        "failed"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "implementation": {
+      "type": "string"
+    },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "round": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "implementation": {
+            "type": "string"
+          },
+          "provenance": {
+            "type": "object",
+            "properties": {
+              "origin": {
+                "enum": [
+                  "draft",
+                  "repair",
+                  "given"
+                ]
+              },
+              "provider": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "prompt": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "origin"
+            ]
+          },
+          "refused": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "call": {
+                  "type": "string"
+                },
+                "expect": {
+                  "type": "string"
+                },
+                "got": {
+                  "type": "string"
+                },
+                "passed": {
+                  "type": "boolean"
+                },
+                "error": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "call",
+                "expect",
+                "got",
+                "passed"
+              ]
+            }
+          },
+          "accepted": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "round",
+          "implementation",
+          "provenance",
+          "refused",
+          "accepted"
+        ]
+      }
+    },
+    "gateway": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema",
+    "task",
+    "status",
+    "attempts"
+  ]
+}

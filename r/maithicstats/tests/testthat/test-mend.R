@@ -1,0 +1,112 @@
+# Copyright (c) 2026 The Maithic Authors. Apache-2.0; see LICENSE.
+
+test_that("P17-05-01 repair reports are loaded with every breakage and what was done about it", {
+  runs <- read_mend_runs(demo_mend_paths())
+  expect_s3_class(runs, "maithic_mend_runs")
+  expect_equal(runs$runs$label, c("rules", "model"))
+  expect_equal(runs$runs$file, c("A.lean", "B.lean"))
+  expect_equal(runs$runs$breakages, c(5, 4))
+  expect_equal(runs$runs$repaired, c(3, 3))
+  expect_equal(runs$runs$unrepaired, c(2, 1))
+  expect_equal(runs$runs$by_rule, c(2, 1))
+  expect_equal(runs$runs$by_model, c(0, 2))
+  expect_equal(runs$runs$by_prover, c(1, 0))
+  expect_equal(runs$runs$clean, c(FALSE, FALSE))
+  expect_equal(runs$runs$model_calls, c(0, 5))
+
+  expect_equal(nrow(runs$breakages), 9)
+  expect_equal(runs$breakages$declaration, letters[1:9])
+  expect_equal(runs$breakages$run, c(rep(1, 5), rep(2, 4)))
+  expect_equal(runs$breakages$label, c(rep("rules", 5), rep("model", 4)))
+  expect_equal(runs$breakages$class[1:5], c("unknown-identifier", "deprecated", "unsolved-goals", "type-mismatch", "unknown-identifier"))
+  expect_equal(runs$breakages$stage, c("rule", "rule", "none", "prove", "none", "model", "rule", "model", "none"))
+  expect_equal(runs$breakages$repaired, c(TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE))
+  expect_equal(runs$breakages$rule[c(1, 2, 7)], c("rename", "rename", "suggestion"))
+  expect_true(is.na(runs$breakages$rule[3]))
+  expect_equal(runs$breakages$round[c(6, 8)], c(1, 1))
+  expect_equal(runs$breakages$proposer[4], "portfolio")
+  expect_equal(runs$breakages$tried, c(1, 1, 0, 1, 1, 3, 1, 2, 6))
+  expect_equal(runs$breakages$changed_lines[8], 4)
+  expect_equal(runs$breakages$severity[c(2, 7)], c("warning", "info"))
+  expect_equal(runs$breakages$reason[3], "no repair was found")
+
+  # Runs are labelled by the names of the paths, by the file names, or outright.
+  paths <- unname(demo_mend_paths())
+  expect_equal(read_mend_runs(paths)$runs$label, sub("\\.json$", "", basename(paths)))
+  expect_equal(read_mend_runs(paths, label = c("first", "second"))$breakages$label[c(1, 9)], c("first", "second"))
+  expect_error(read_mend_runs(paths, label = "one"), "one label for each report")
+  expect_error(read_mend_runs(character()), "no repair reports given")
+  expect_error(read_mend_runs(tempfile(fileext = ".json")), "file not found")
+  expect_error(read_mend_runs(write_document(list(schema = "maithic.review.report/1"))), "is not a repair report")
+
+  # A report that contradicts itself is refused.
+  broken <- function(change) {
+    report <- jsonlite::fromJSON(demo_mend_paths()[["rules"]], simplifyVector = FALSE)
+    write_document(change(report))
+  }
+  expect_error(read_mend_runs(broken(function(r) { r$summary$repaired <- 4; r })), "the summary states 4 for 'repaired', and the report holds 3")
+  expect_error(read_mend_runs(broken(function(r) { r$repairs[[1]]$class <- "typo"; r })), "a breakage of the unknown class 'typo'")
+  expect_error(read_mend_runs(broken(function(r) { r$repairs[[1]]$stage <- "luck"; r })), "a repair at the unknown stage 'luck'")
+  expect_error(read_mend_runs(broken(function(r) { r$repairs[[3]]$outcome <- "repaired"; r })), "repaired at no stage, or left at one")
+  expect_error(repair_success(list()), "must come from read_mend_runs")
+})
+
+test_that("P17-05-01 the reports the repository keeps are read whole", {
+  skip_if(is.null(fixture_root()), "the repository fixtures are not available")
+  folder <- file.path(fixture_root(), "mend")
+  runs <- read_mend_runs(c(`rules` = file.path(folder, "repair-rules.json"), `rules and the prover` = file.path(folder, "repair-no-ai.json"),
+                           `rules, a model and the prover` = file.path(folder, "repair.json")))
+  expect_equal(runs$runs$breakages, c(5, 5, 5))
+  expect_equal(runs$runs$by_rule, c(3, 3, 3))
+  expect_equal(runs$runs$by_model, c(0, 0, 2))
+  expect_equal(runs$runs$by_prover, c(0, 1, 0))
+  expect_equal(runs$runs$unrepaired, c(2, 1, 0))
+  expect_equal(runs$runs$clean, c(FALSE, FALSE, TRUE))
+  expect_equal(runs$runs$model_calls, c(0, 0, 2))
+  expect_equal(unique(runs$breakages$file), "fixtures/mend/lean/Upgrade.lean")
+  expect_equal(runs$breakages$declaration[1:5], c("sum_comm", "twice_add_zero", "le_succ_self", "twice_add", "add_zero_eq"))
+  expect_equal(runs$breakages$stage[11:15], c("rule", "rule", "rule", "model", "model"))
+})
+
+test_that("P17-05-02 the share of breakages repaired is given by class, with intervals", {
+  runs <- read_mend_runs(demo_mend_paths())
+  by_class <- repair_success(runs)
+  # Classes come in the order the command lists them; a class with no breakage has no row.
+  expect_equal(by_class$class, c("unknown-identifier", "deprecated", "unsolved-goals", "type-mismatch", "suggestion"))
+  expect_equal(by_class$breakages, c(2, 1, 4, 1, 1))
+  expect_equal(by_class$repaired, c(1, 1, 2, 1, 1))
+  expect_equal(by_class$rate, c(0.5, 1, 0.5, 1, 1))
+  expect_equal(by_class$by_rule, c(1, 1, 0, 0, 1))
+  expect_equal(by_class$by_model, c(0, 0, 2, 0, 0))
+  expect_equal(by_class$by_prover, c(0, 0, 0, 1, 0))
+  interval <- wilson_interval(2, 4)
+  expect_equal(c(by_class$lower[3], by_class$upper[3]), c(interval$lower, interval$upper))
+  expect_equal(repair_success(runs, conf = 0.8)$upper[3], wilson_interval(2, 4, conf = 0.8)$upper)
+  expect_true(all(by_class$lower <= by_class$rate & by_class$rate <= by_class$upper))
+
+  # By run, by both, and all together.
+  by_run <- repair_success(runs, "label")
+  expect_equal(by_run$label, c("model", "rules"))
+  expect_equal(by_run$rate, c(3 / 4, 3 / 5))
+  both <- repair_success(runs, c("label", "class"))
+  expect_equal(nrow(both), 6)
+  expect_equal(both$breakages[both$label == "model" & both$class == "unsolved-goals"], 3)
+  overall <- repair_success(runs, character())
+  expect_equal(overall$breakages, 9)
+  expect_equal(overall$rate, 6 / 9)
+  expect_equal(repair_success(runs, "severity")$severity, c("error", "info", "warning"))
+  expect_error(repair_success(runs, "stage"), "`by` must name some of: class, label, severity, file, run")
+  expect_error(repair_success(runs, c("class", "class")), "`by` must name some of")
+
+  # No breakage, no rows, and the columns are there all the same.
+  healthy <- read_mend_runs(write_mend_report("Fine.lean", list()))
+  expect_equal(nrow(repair_success(healthy)), 0)
+  expect_true(all(c("class", "breakages", "rate", "upper") %in% names(repair_success(healthy))))
+  expect_true(healthy$runs$clean)
+
+  report <- mend_report_table(runs)
+  expect_equal(report[1], "2 repair run(s): 9 breakage(s), 6 repaired; 0 run(s) ended with a file that compiles.")
+  expect_true(any(grepl("| rules | A.lean | 5 | 2 | 0 | 1 | 2 | still broken |", report, fixed = TRUE)))
+  expect_true(any(grepl("| unsolved-goals | 4 | 2 | 50.0% | 15% to 85% | 0 | 2 | 0 |", report, fixed = TRUE)))
+  expect_true(any(grepl("| suggestion | 1 | 1 | 100.0% |", report, fixed = TRUE)))
+})

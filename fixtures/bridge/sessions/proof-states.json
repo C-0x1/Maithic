@@ -1,0 +1,736 @@
+{
+  "schema": "maithic.bridge.session/1",
+  "name": "proof-states",
+  "title": "Proof states: open a goal, step tactics, branch, inspect and release",
+  "steps": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "loadHeader",
+        "params": {
+          "imports": []
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 1
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "startProof",
+        "params": {
+          "env": 1,
+          "statement": "theorem add_zero' (n : Nat) : n + 0 = n"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true,
+            "errors": 0
+          },
+          "states": [
+            {
+              "state": 2,
+              "line": 2,
+              "column": 2,
+              "goals": [
+                {
+                  "tag": "",
+                  "hypotheses": [
+                    {
+                      "name": "n",
+                      "type": "Nat"
+                    }
+                  ],
+                  "target": "n + 0 = n",
+                  "pretty": "n : Nat\n⊢ n + 0 = n"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "runTactic",
+        "params": {
+          "state": 2,
+          "tactic": "rfl"
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": true,
+          "state": 3,
+          "goals": [],
+          "solved": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "startProof",
+        "params": {
+          "env": 1,
+          "source": "theorem both (p q : Prop) (hp : p) (hq : q) : p ∧ q := by\n  constructor\n  · sorry\n  · sorry"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true
+          },
+          "states": [
+            {
+              "state": 4,
+              "line": 3,
+              "column": 4,
+              "goals": [
+                {
+                  "tag": "left",
+                  "hypotheses": [
+                    {
+                      "name": "p",
+                      "type": "Prop"
+                    },
+                    {
+                      "name": "q",
+                      "type": "Prop"
+                    },
+                    {
+                      "name": "hp",
+                      "type": "p"
+                    },
+                    {
+                      "name": "hq",
+                      "type": "q"
+                    }
+                  ],
+                  "target": "p"
+                }
+              ]
+            },
+            {
+              "state": 5,
+              "line": 4,
+              "column": 4,
+              "goals": [
+                {
+                  "tag": "right",
+                  "hypotheses": [
+                    {
+                      "name": "p",
+                      "type": "Prop"
+                    },
+                    {
+                      "name": "q",
+                      "type": "Prop"
+                    },
+                    {
+                      "name": "hp",
+                      "type": "p"
+                    },
+                    {
+                      "name": "hq",
+                      "type": "q"
+                    }
+                  ],
+                  "target": "q"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "method": "runTactic",
+        "params": {
+          "state": 4,
+          "tactic": "exact hq"
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": false,
+          "kind": "tactic",
+          "error": {
+            "$contains": "Type mismatch"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "method": "runTactic",
+        "params": {
+          "state": 4,
+          "tactic": "exact hp"
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": true,
+          "state": 6,
+          "solved": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "method": "getState",
+        "params": {
+          "state": 4
+        }
+      },
+      "expect": {
+        "result": {
+          "state": 4,
+          "env": 1,
+          "depth": 0,
+          "solved": false,
+          "goals": [
+            {
+              "tag": "left",
+              "target": "p"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "method": "getState",
+        "params": {
+          "state": 6
+        }
+      },
+      "expect": {
+        "result": {
+          "state": 6,
+          "parent": 4,
+          "depth": 1,
+          "solved": true,
+          "goals": []
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 9,
+        "method": "startProof",
+        "params": {
+          "env": 1,
+          "statement": "theorem two_mul' (n : Nat) : n + n = 2 * n"
+        }
+      },
+      "expect": {
+        "result": {
+          "states": [
+            {
+              "state": 7,
+              "goals": [
+                {
+                  "target": "n + n = 2 * n"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 10,
+        "method": "runTactic",
+        "params": {
+          "state": 7,
+          "tactic": "induction n"
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": true,
+          "state": 8,
+          "solved": false,
+          "goals": [
+            {
+              "tag": "zero",
+              "hypotheses": [],
+              "target": "0 + 0 = 2 * 0"
+            },
+            {
+              "tag": "succ",
+              "hypotheses": [
+                {
+                  "name": "n✝",
+                  "type": "Nat"
+                },
+                {
+                  "name": "a✝",
+                  "type": "n✝ + n✝ = 2 * n✝"
+                }
+              ],
+              "target": "n✝ + 1 + (n✝ + 1) = 2 * (n✝ + 1)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 11,
+        "method": "tryTactics",
+        "params": {
+          "state": 8,
+          "goal": 0,
+          "tactics": [
+            "rfl",
+            "#eval 1",
+            "exact (",
+            "omega",
+            "sorry"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "results": [
+            {
+              "ok": true,
+              "state": 9,
+              "solved": false,
+              "goals": [
+                {
+                  "tag": "succ",
+                  "hypotheses": [
+                    {
+                      "name": "n✝",
+                      "type": "Nat"
+                    },
+                    {
+                      "name": "a✝",
+                      "type": "n✝ + n✝ = 2 * n✝"
+                    }
+                  ],
+                  "target": "n✝ + 1 + (n✝ + 1) = 2 * (n✝ + 1)"
+                }
+              ]
+            },
+            {
+              "ok": false,
+              "kind": "guard",
+              "error": {
+                "$contains": "#eval"
+              }
+            },
+            {
+              "ok": false,
+              "kind": "parse",
+              "error": {
+                "$contains": "unexpected end of input"
+              }
+            },
+            {
+              "ok": true,
+              "state": 10,
+              "goals": [
+                {
+                  "tag": "succ",
+                  "hypotheses": [
+                    {
+                      "name": "n✝",
+                      "type": "Nat"
+                    },
+                    {
+                      "name": "a✝",
+                      "type": "n✝ + n✝ = 2 * n✝"
+                    }
+                  ],
+                  "target": "n✝ + 1 + (n✝ + 1) = 2 * (n✝ + 1)"
+                }
+              ]
+            },
+            {
+              "ok": false,
+              "kind": "guard",
+              "error": {
+                "$contains": "sorry"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 12,
+        "method": "runTactic",
+        "params": {
+          "state": 8,
+          "tactic": "all_goals omega"
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": true,
+          "state": 11,
+          "solved": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 13,
+        "method": "runTactic",
+        "params": {
+          "state": 8,
+          "tactic": "omega",
+          "goal": 5
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": false,
+          "kind": "tactic",
+          "error": "there is no goal 5; the state has 2 goal(s)"
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 14,
+        "method": "runTactic",
+        "params": {
+          "state": 7,
+          "tactic": "have h : n + n = 2 * n := by omega\nexact h"
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": true,
+          "state": 12,
+          "solved": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 15,
+        "method": "startProof",
+        "params": {
+          "env": 1,
+          "statement": "theorem slow (xs ys zs : List Nat) : (xs ++ ys ++ zs).reverse.length = zs.length + (ys.length + xs.length)"
+        }
+      },
+      "expect": {
+        "result": {
+          "states": [
+            {
+              "state": 13
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 16,
+        "method": "runTactic",
+        "params": {
+          "state": 13,
+          "tactic": "grind",
+          "maxHeartbeats": 1
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": false,
+          "kind": "tactic",
+          "error": {
+            "$contains": "maximum number of heartbeats"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 17,
+        "method": "runTactic",
+        "params": {
+          "state": 13,
+          "tactic": "grind"
+        }
+      },
+      "expect": {
+        "result": {
+          "ok": true,
+          "state": 14,
+          "solved": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 18,
+        "method": "runTactic",
+        "params": {
+          "state": 999,
+          "tactic": "rfl"
+        }
+      },
+      "expect": {
+        "error": {
+          "code": -32003,
+          "message": "unknown proof state 999",
+          "data": {
+            "code": "MTH-BRG-0104"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 19,
+        "method": "releaseState",
+        "params": {
+          "state": 2
+        }
+      },
+      "expect": {
+        "result": {
+          "released": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 20,
+        "method": "releaseState",
+        "params": {
+          "state": 2
+        }
+      },
+      "expect": {
+        "result": {
+          "released": false
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 21,
+        "method": "getState",
+        "params": {
+          "state": 2
+        }
+      },
+      "expect": {
+        "error": {
+          "code": -32003
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 22,
+        "method": "getState",
+        "params": {
+          "state": 3
+        }
+      },
+      "expect": {
+        "result": {
+          "state": 3,
+          "parent": 2,
+          "solved": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 23,
+        "method": "startProof",
+        "params": {
+          "env": 1,
+          "statement": "theorem broken : (1 : Nat) = \"a\""
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": false,
+            "errors": 1
+          },
+          "states": []
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 24,
+        "method": "startProof",
+        "params": {
+          "env": 1,
+          "source": "theorem term_sorry : True := sorry"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true
+          },
+          "states": []
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 25,
+        "method": "tryTactics",
+        "params": {
+          "state": 8,
+          "tactics": [
+            "all_goals omega",
+            "rfl"
+          ],
+          "stopOnSolved": true
+        }
+      },
+      "expect": {
+        "result": {
+          "results": [
+            {
+              "ok": true,
+              "state": 15,
+              "solved": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 26,
+        "method": "startProof",
+        "params": {
+          "env": 1,
+          "source": "theorem with_let : ∀ n : Nat, n = n := by\n  intro n\n  let m := n + 1\n  sorry"
+        }
+      },
+      "expect": {
+        "result": {
+          "states": [
+            {
+              "state": 16,
+              "line": 4,
+              "goals": [
+                {
+                  "hypotheses": [
+                    {
+                      "name": "n",
+                      "type": "Nat"
+                    },
+                    {
+                      "name": "m",
+                      "type": "Nat",
+                      "value": "n + 1"
+                    }
+                  ],
+                  "target": "n = n",
+                  "pretty": "n : Nat\nm : Nat := n + 1\n⊢ n = n"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 27,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "#check both",
+          "names": []
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": false
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 28,
+        "method": "startProof",
+        "params": {
+          "env": 1
+        }
+      },
+      "expect": {
+        "error": {
+          "code": -32602
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 29,
+        "method": "stats"
+      },
+      "expect": {
+        "result": {
+          "environments": 1,
+          "proofStates": 14,
+          "tacticRuns": 15
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "maithic.bridge.session/1",
+  "name": "escaping",
+  "title": "Strings survive the wire: quotes, backslashes, control characters and Unicode",
+  "steps": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "loadHeader"
+      },
+      "expect": {
+        "result": {
+          "env": 1
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "#eval \"quote \\\" backslash \\\\ tab \\t done\""
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "diagnostics": [
+              {
+                "severity": "info",
+                "text": "\"quote \\\" backslash \\\\ tab \\t done\""
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "#eval IO.println \"line one\\nπ ≤ ∀ ✓ 数学\""
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "diagnostics": [
+              {
+                "text": "line one\nπ ≤ ∀ ✓ 数学\n"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "theorem «weird name» : ∀ α : Type, ∀ x : α, x = x := fun _ _ => rfl",
+          "names": [
+            "«weird name»"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true,
+            "decls": [
+              {
+                "found": true,
+                "type": "∀ (α : Type) (x : α), x = x"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "method": "guard",
+        "params": {
+          "candidate": "by exact «IO».println"
+        }
+      },
+      "expect": {
+        "result": {
+          "admitted": false
+        }
+      }
+    }
+  ]
+}

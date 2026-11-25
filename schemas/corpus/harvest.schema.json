@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Harvest record",
+  "description": "The record of one harvest: the repository that was read and its revision, the Lean toolchain, for every file whether it elaborated and what it gave, and where the dataset was written.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.corpus.harvest/1"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "revision": {
+      "type": "string"
+    },
+    "toolchain": {
+      "type": "string"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "outcome": {
+            "enum": [
+              "ok",
+              "errors",
+              "failed"
+            ]
+          },
+          "errors": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "theorems": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "steps": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file",
+          "outcome",
+          "errors",
+          "theorems",
+          "steps"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "dataset": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "records": {
+      "type": "object",
+      "properties": {
+        "theorem": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "premise": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pair": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "repository",
+    "revision",
+    "toolchain",
+    "files",
+    "dataset",
+    "manifest",
+    "records"
+  ],
+  "additionalProperties": false
+}

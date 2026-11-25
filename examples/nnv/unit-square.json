@@ -1,0 +1,6 @@
+{
+  "schema": "maithic.nnv.property/1",
+  "name": "on the unit square the score stays within [-1, 1]",
+  "input": [["0", "1"], ["0", "1"]],
+  "output": [["-1", "1"]]
+}

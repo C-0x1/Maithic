@@ -1,0 +1,207 @@
+{
+  "schema": "maithic.review.report/1",
+  "profile": "default",
+  "summary": {
+    "files": 2,
+    "findings": 19,
+    "error": 3,
+    "warning": 6,
+    "info": 10,
+    "suppressed": 1
+  },
+  "files": [
+    {
+      "file": "fixtures/intel/lean/Demo.lean",
+      "declarations": 11,
+      "suppressed": 0,
+      "findings": [
+        {
+          "rule": "docstring",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 8,
+          "declaration": "double_eq",
+          "message": "the theorem is a result of this file, since nothing else in it uses it, and has no documentation"
+        },
+        {
+          "rule": "duplicate",
+          "origin": "semantic",
+          "severity": "warning",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 15,
+          "declaration": "Bad_Name",
+          "message": "states the same as Nat.add_comm, which already exists"
+        },
+        {
+          "rule": "docstring",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 15,
+          "declaration": "Bad_Name",
+          "message": "the theorem is a result of this file, since nothing else in it uses it, and has no documentation"
+        },
+        {
+          "rule": "naming",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 15,
+          "declaration": "Bad_Name",
+          "message": "the name Bad_Name is not in snake_case, the convention for a theorem"
+        },
+        {
+          "rule": "sorry",
+          "origin": "lint",
+          "severity": "error",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 17,
+          "declaration": "open_one",
+          "message": "the theorem contains sorry"
+        },
+        {
+          "rule": "duplicate",
+          "origin": "semantic",
+          "severity": "warning",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 17,
+          "declaration": "open_one",
+          "message": "states the same as Nat.add_zero, which already exists"
+        },
+        {
+          "rule": "sorry",
+          "origin": "lint",
+          "severity": "error",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 20,
+          "declaration": "uses_open",
+          "message": "the theorem depends on sorry through open_one"
+        },
+        {
+          "rule": "duplicate",
+          "origin": "semantic",
+          "severity": "warning",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 20,
+          "declaration": "uses_open",
+          "message": "states the same as Nat.add_zero, which already exists"
+        },
+        {
+          "rule": "docstring",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 20,
+          "declaration": "uses_open",
+          "message": "the theorem is a result of this file, since nothing else in it uses it, and has no documentation"
+        },
+        {
+          "rule": "docstring",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 22,
+          "declaration": "Point",
+          "message": "the structure has no documentation"
+        },
+        {
+          "rule": "axiom",
+          "origin": "lint",
+          "severity": "warning",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 28,
+          "declaration": "shortcut",
+          "message": "declares an axiom: nothing checks that it is true"
+        },
+        {
+          "rule": "axiom",
+          "origin": "lint",
+          "severity": "warning",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 30,
+          "declaration": "by_shortcut",
+          "message": "rests on shortcut, beyond the axioms of Lean's logic"
+        },
+        {
+          "rule": "docstring",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 30,
+          "declaration": "by_shortcut",
+          "message": "the theorem is a result of this file, since nothing else in it uses it, and has no documentation"
+        },
+        {
+          "rule": "sorry",
+          "origin": "lint",
+          "severity": "error",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 36,
+          "declaration": "term_gap",
+          "message": "the theorem contains sorry"
+        },
+        {
+          "rule": "docstring",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 36,
+          "declaration": "term_gap",
+          "message": "the theorem is a result of this file, since nothing else in it uses it, and has no documentation"
+        }
+      ]
+    },
+    {
+      "file": "fixtures/review/lean/Simplify.lean",
+      "declarations": 5,
+      "suppressed": 1,
+      "findings": [
+        {
+          "rule": "automation",
+          "origin": "suggestion",
+          "severity": "info",
+          "file": "fixtures/review/lean/Simplify.lean",
+          "line": 4,
+          "declaration": "le_succ_of_le'",
+          "message": "the proof can be replaced by `by omega`; Lean accepts it",
+          "edit": {
+            "before": "by\n  have h2 : a ≤ b := h\n  omega",
+            "after": "by omega"
+          }
+        },
+        {
+          "rule": "unneeded-step",
+          "origin": "suggestion",
+          "severity": "info",
+          "file": "fixtures/review/lean/Simplify.lean",
+          "line": 14,
+          "declaration": "two_tri",
+          "message": "one step is not needed: Lean accepts the proof without `have zero : tri 0 = 0 := rfl`",
+          "edit": {
+            "before": "by\n  have zero : tri 0 = 0 := rfl\n  induction n with\n  | zero => rfl\n  | succ k ih => simp only [tri]; grind",
+            "after": "by\n  induction n with\n  | zero => rfl\n  | succ k ih => simp only [tri]; grind"
+          }
+        },
+        {
+          "rule": "suppression",
+          "origin": "semantic",
+          "severity": "warning",
+          "file": "fixtures/review/lean/Simplify.lean",
+          "line": 23,
+          "declaration": "",
+          "message": "a suppression needs a reason in parentheses, and suppresses nothing without one"
+        },
+        {
+          "rule": "docstring",
+          "origin": "lint",
+          "severity": "info",
+          "file": "fixtures/review/lean/Simplify.lean",
+          "line": 24,
+          "declaration": "tri_one",
+          "message": "the theorem is a result of this file, since nothing else in it uses it, and has no documentation"
+        }
+      ]
+    }
+  ]
+}

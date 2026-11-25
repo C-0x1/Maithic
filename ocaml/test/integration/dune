@@ -1,0 +1,16 @@
+; Integration tests: the real Bridge, the real command, authored cassettes.
+; They need the Lean package to be built (`make build-lean`), so they run
+; under their own alias: `dune build @integration`.
+
+(executable
+ (name test_integration)
+ (libraries maithic_base maithic_schema maithic_config maithic_bridge maithic_gateway maithic_ledger maithic_prover
+   maithic_oracle maithic_corpus maithic_refute maithic_guide maithic_mend maithic_formalize maithic_council))
+
+(rule
+ (alias integration)
+ (deps
+  (universe)
+  %{exe:../../bin/maithic/main.exe})
+ (action
+  (run ./test_integration.exe %{exe:../../bin/maithic/main.exe})))

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 739.1 532.0" role="img" aria-labelledby="t d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">
+  <title id="t">The search for a proof of theorem double_eq (n : Nat) : double n = 2 * n</title>
+  <desc id="d">out of expansions · 2 goals expanded · 2 calls to Lean · 5 goals drawn. No proof was found.</desc>
+  <rect width="739.1" height="532.0" fill="#FAF8F4"/>
+  <text x="40.0" y="44" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#14162B">Proof search</text>
+  <text x="40.0" y="70" font-size="13" fill="#2B2F77">theorem double_eq (n : Nat) : double n = 2 * n</text>
+  <text x="40.0" y="92" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5B6477">out of expansions · 2 goals expanded · 2 calls to Lean · 5 goals drawn</text>
+  <path d="M369.5 192.0V203.0H369.5V214.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <path d="M369.5 238.0V249.0H269.5V260.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <path d="M269.5 334.0V345.0H69.5V356.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <path d="M269.5 334.0V345.0H211.1V356.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <path d="M211.1 380.0V391.0H211.1V402.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <path d="M269.5 334.0V345.0H411.1V356.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <path d="M411.1 380.0V391.0H411.1V402.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <path d="M369.5 238.0V249.0H611.1V260.0" fill="none" stroke="#C5C8DC" stroke-width="1.4"/>
+  <g class="goal open">
+    <rect x="219.5" y="118.0" width="300.0" height="74.0" rx="9" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.4"/>
+    <rect x="226.5" y="127.0" width="5" height="56.0" rx="2.5" fill="#5B6477"/>
+    <text x="241.5" y="138.0" font-size="10.5" fill="#5B6477">n : Nat</text>
+    <text x="509.5" y="138.0" font-size="10" fill="#5B6477" text-anchor="end">#1</text>
+    <text x="241.5" y="160.0" font-size="12.5" font-weight="700" fill="#14162B">⊢ double n = 2 * n</text>
+    <text x="241.5" y="180.0" font-size="10.5" fill="#5B6477" xml:space="preserve">✗ rfl · assumption · omega · simp · …</text>
+  </g>
+  <g class="tactic">
+    <rect x="319.0" y="214.0" width="101.2" height="24.0" rx="12" fill="#E8E9F3" stroke="#C5C8DC" stroke-width="1.2"/>
+    <text x="369.5" y="230.0" font-size="11.5" font-weight="600" fill="#2B2F77" text-anchor="middle">induction n</text>
+  </g>
+  <g class="goal proved">
+    <rect x="119.5" y="260.0" width="300.0" height="74.0" rx="9" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.4"/>
+    <rect x="126.5" y="269.0" width="5" height="56.0" rx="2.5" fill="#0FA89B"/>
+    <text x="141.5" y="280.0" font-size="10.5" fill="#5B6477"></text>
+    <text x="409.5" y="280.0" font-size="10" fill="#5B6477" text-anchor="end">#2</text>
+    <text x="141.5" y="302.0" font-size="12.5" font-weight="700" fill="#14162B">⊢ double 0 = 2 * 0</text>
+    <text x="141.5" y="322.0" font-size="10.5" fill="#5B6477" xml:space="preserve">✗ assumption · omega · grind   ✓ decide …</text>
+  </g>
+  <g class="tactic">
+    <rect x="40.0" y="356.0" width="59.1" height="24.0" rx="12" fill="#E8E9F3" stroke="#C5C8DC" stroke-width="1.2"/>
+    <text x="69.5" y="372.0" font-size="11.5" font-weight="600" fill="#2B2F77" text-anchor="middle">rfl ✓</text>
+  </g>
+  <g class="tactic">
+    <rect x="185.0" y="356.0" width="52.1" height="24.0" rx="12" fill="#E8E9F3" stroke="#C5C8DC" stroke-width="1.2"/>
+    <text x="211.1" y="372.0" font-size="11.5" font-weight="600" fill="#2B2F77" text-anchor="middle">simp</text>
+  </g>
+  <g class="goal open small">
+    <rect x="123.1" y="402.0" width="176.0" height="40.0" rx="9" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.2"/>
+    <text x="135.1" y="419.0" font-size="10.5" font-weight="700" fill="#14162B">⊢ double 0 = 0</text>
+    <text x="290.1" y="419.0" font-size="9.5" fill="#5B6477" text-anchor="end">#4</text>
+    <text x="135.1" y="434.0" font-size="10" fill="#5B6477">not expanded</text>
+  </g>
+  <g class="tactic">
+    <rect x="371.0" y="356.0" width="80.1" height="24.0" rx="12" fill="#E8E9F3" stroke="#C5C8DC" stroke-width="1.2"/>
+    <text x="411.1" y="372.0" font-size="11.5" font-weight="600" fill="#2B2F77" text-anchor="middle">simp_all</text>
+  </g>
+  <g class="goal open small">
+    <rect x="323.1" y="402.0" width="176.0" height="40.0" rx="9" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <text x="335.1" y="419.0" font-size="10.5" font-weight="700" fill="#14162B">⊢ double 0 = 0</text>
+    <text x="490.1" y="419.0" font-size="9.5" fill="#5B6477" text-anchor="end">#5</text>
+    <text x="335.1" y="434.0" font-size="10" fill="#5B6477">the same goal as #4</text>
+  </g>
+  <g class="goal open small">
+    <rect x="523.1" y="260.0" width="176.0" height="40.0" rx="9" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.2"/>
+    <text x="535.1" y="277.0" font-size="10.5" font-weight="700" fill="#14162B">⊢ double (n✝ + 1) …</text>
+    <text x="690.1" y="277.0" font-size="9.5" fill="#5B6477" text-anchor="end">#3</text>
+    <text x="535.1" y="292.0" font-size="10" fill="#5B6477">not expanded</text>
+  </g>
+  <text x="40.0" y="486.0" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#5B6477"><tspan fill="#0FA89B">■</tspan> proved<tspan dx="18" fill="#E5484D">■</tspan> failed<tspan dx="18" fill="#5B6477">■</tspan> open<tspan dx="18" fill="#5B6477">✗</tspan> tactics that failed<tspan dx="18" fill="#5B6477">↺</tspan> tactics that lead in a circle<tspan dx="18" fill="#5B6477">✓</tspan> closes the goal</text>
+</svg>

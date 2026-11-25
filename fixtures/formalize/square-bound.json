@@ -1,0 +1,416 @@
+{
+  "schema": "maithic.formalize.run/1",
+  "problem": {
+    "origin": "fixtures/formalize/problems/square-bound.txt",
+    "source": "Prove that n² ≥ n for every number n.\n",
+    "text": "Prove that n^2 ≥ n for every number n.",
+    "task": "prove",
+    "elements": [
+      {
+        "kind": "task",
+        "text": "Prove that",
+        "start": 0,
+        "stop": 10
+      },
+      {
+        "kind": "formula",
+        "text": "n^2 ≥ n",
+        "start": 11,
+        "stop": 20
+      },
+      {
+        "kind": "symbol",
+        "text": "n",
+        "start": 11,
+        "stop": 12
+      },
+      {
+        "kind": "number",
+        "text": "2",
+        "start": 12,
+        "stop": 14
+      },
+      {
+        "kind": "symbol",
+        "text": "n",
+        "start": 19,
+        "stop": 20
+      },
+      {
+        "kind": "quantifier",
+        "text": "for every",
+        "start": 21,
+        "stop": 30
+      },
+      {
+        "kind": "symbol",
+        "text": "n",
+        "start": 38,
+        "stop": 39
+      }
+    ]
+  },
+  "settings": {
+    "candidates": 4,
+    "rounds": 2,
+    "name": "problem",
+    "imports": []
+  },
+  "status": "formalized",
+  "chosen": 1,
+  "candidates": [
+    {
+      "id": 1,
+      "name": "problem_1",
+      "drafted": "(n : Nat) : n ^ 2 ≥ n",
+      "statement": "(n : Nat) : n ^ 2 ≥ n",
+      "reading": "The numbers are the natural numbers.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (n : Nat), n ^ 2 ≥ n",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(n : Nat) : n ^ 2 ≥ n",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "passed"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "passed",
+          "note": "no counterexample in 300 sampled cases"
+        },
+        {
+          "name": "triviality",
+          "outcome": "passed"
+        },
+        {
+          "name": "numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "variables",
+          "outcome": "passed"
+        },
+        {
+          "name": "traps",
+          "outcome": "passed"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "passed"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "passed",
+          "note": "agreement 8 of 10: The problem speaks of every number; the statement covers the natural numbers only."
+        }
+      ],
+      "english": "For every natural number n, the square of n is greater than or equal to n.",
+      "agreement": 8,
+      "differences": [
+        "The problem speaks of every number; the statement covers the natural numbers only."
+      ],
+      "score": 0.8,
+      "verdict": "chosen",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "name": "problem_2",
+      "drafted": "(n : ℕ) : n ≤ n²",
+      "statement": "(n : Nat) : n ≤ n ^ 2",
+      "reading": "The same over the natural numbers, with the smaller side written first.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": false,
+        "repairs": 2,
+        "statement": "∀ (n : Nat), n ≤ n ^ 2",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(n : ℕ) : n ≤ n²",
+            "elaborated": false,
+            "error_class": "syntax",
+            "error": "expected token\n\nUnknown identifier `ℕ`\n\nNote: It is not possible to treat `ℕ` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.\n\nHint: Perhaps you meant `Nat` in place of `ℕ`:\n  [apply] `Nat`"
+          },
+          {
+            "round": 1,
+            "statement": "(n : ℕ) : n ≤ n ^ 2",
+            "elaborated": false,
+            "error_class": "unknown-constant",
+            "error": "Unknown identifier `ℕ`\n\nNote: It is not possible to treat `ℕ` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.\n\nHint: Perhaps you meant `Nat` in place of `ℕ`:\n  [apply] `Nat`"
+          },
+          {
+            "round": 2,
+            "statement": "(n : Nat) : n ≤ n ^ 2",
+            "elaborated": true
+          }
+        ]
+      },
+      "verdict": "duplicate",
+      "duplicate_of": {
+        "id": 1,
+        "relation": "definitional"
+      },
+      "reason": "it says what candidate 1 says (the same once definitions are unfolded)"
+    },
+    {
+      "id": 3,
+      "name": "problem_3",
+      "drafted": "(n : Int) : n ^ 2 ≥ n",
+      "statement": "(n : Int) : n ^ 2 ≥ n",
+      "reading": "The numbers are the integers, negative ones included.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (n : Int), n ^ 2 ≥ n",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(n : Int) : n ^ 2 ≥ n",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "passed"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "passed",
+          "note": "no counterexample in 300 sampled cases"
+        },
+        {
+          "name": "triviality",
+          "outcome": "passed"
+        },
+        {
+          "name": "numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "variables",
+          "outcome": "passed"
+        },
+        {
+          "name": "traps",
+          "outcome": "passed"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "passed"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "passed",
+          "note": "agreement 8 of 10: The problem speaks of every number; the statement covers the integers only."
+        }
+      ],
+      "english": "For every integer n, the square of n is greater than or equal to n.",
+      "agreement": 8,
+      "differences": [
+        "The problem speaks of every number; the statement covers the integers only."
+      ],
+      "score": 0.8,
+      "verdict": "kept",
+      "rank": 2
+    },
+    {
+      "id": 4,
+      "name": "problem_4",
+      "drafted": "(x : Real) : x ^ 2 ≥ x",
+      "statement": "(x : Real) : x ≤ x ^ 2",
+      "reading": "The numbers are the real numbers.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "failed",
+        "first_try": false,
+        "repairs": 2,
+        "note": "it does not elaborate after 2 repair round(s)",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(x : Real) : x ^ 2 ≥ x",
+            "elaborated": false,
+            "error_class": "unknown-constant",
+            "error": "Unknown identifier `Real`\n\nNote: It is not possible to treat `Real` as an implicitly bound variable here because the `autoImplicit` option is set to `false`."
+          },
+          {
+            "round": 1,
+            "statement": "(x : ℝ) : x ^ 2 ≥ x",
+            "elaborated": false,
+            "error_class": "unknown-constant",
+            "error": "Unknown identifier `ℝ`\n\nNote: It is not possible to treat `ℝ` as an implicitly bound variable here because the `autoImplicit` option is set to `false`."
+          },
+          {
+            "round": 2,
+            "statement": "(x : Real) : x ≤ x ^ 2",
+            "elaborated": false,
+            "error_class": "unknown-constant",
+            "error": "Unknown identifier `Real`\n\nNote: It is not possible to treat `Real` as an implicitly bound variable here because the `autoImplicit` option is set to `false`."
+          }
+        ]
+      },
+      "verdict": "failed",
+      "reason": "it does not elaborate after 2 repair round(s)"
+    }
+  ],
+  "summary": {
+    "drafted": 4,
+    "elaborated_first_try": 2,
+    "repaired": 1,
+    "elaborated": 3,
+    "failed": 1,
+    "duplicates": 1,
+    "rejected": 0,
+    "kept": 2
+  },
+  "lean": "/-\nThe problem, as it was posed:\n\n  Prove that n^2 ≥ n for every number n.\n\nThe statement below was chosen from 4 candidates. Lean elaborates it; nothing here proves it.\nIts reading of the problem: The numbers are the natural numbers.\n\nRead back into English, the statement says:\n\n  For every natural number n, the square of n is greater than or equal to n.\n\nWhat the checks found:\n\n  vacuity           passed\n  counterexample    passed   no counterexample in 300 sampled cases\n  triviality        passed\n  numbers           passed\n  variables         passed\n  traps             passed\n  back-translation  passed\n  round-trip        passed   agreement 8 of 10: The problem speaks of every number; the statement covers the natural numbers only.\n\nThat a statement says what was meant is a matter of evidence. Read it before you rely on it.\n-/\nset_option autoImplicit false in\ntheorem problem (n : Nat) : n ^ 2 ≥ n := by\n  sorry\n",
+  "gateway": {
+    "mode": "replay",
+    "calls": 9,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": [
+      {
+        "purpose": "formalize.draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.back",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.judge",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.back",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.judge",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:47Z",
+        "elapsed_ms": 0
+      }
+    ]
+  }
+}

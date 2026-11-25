@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "State and tactic pair",
+  "description": "A proof state and the tactic that was run on it, taken from a smallest step of a proof: the goals before the tactic as one text, the tactic, and how many goals there were before and after. A tactic that leaves no goal closes the state. Pairs are taken only from proofs that are complete: a proof that rests on sorry, its own or that of a lemma it uses, gives none.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.corpus.pair/1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "theorem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "module": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tactic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goals_before": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "goals_after": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "theorem",
+    "module",
+    "state",
+    "tactic",
+    "goals_before",
+    "goals_after"
+  ],
+  "additionalProperties": false
+}

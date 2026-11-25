@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Neural network",
+  "description": "A feed-forward network: layers applied first to last, each a list of neurons with a weight for every output of the layer before and a bias, and the activation applied to every neuron of the layer. Numbers are text and are read exactly: an integer, a fraction such as -7/2, or a decimal such as 0.1. A JSON number is taken for the exact value of the floating-point number it denotes.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.nnv.network/1"
+    },
+    "name": {
+      "type": "string"
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "activation": {
+            "enum": [
+              "relu",
+              "identity"
+            ]
+          },
+          "neurons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "weights": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^-?[0-9]+(/[0-9]+|\\.[0-9]+)?([eE][+-]?[0-9]+)?$"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  }
+                },
+                "bias": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^-?[0-9]+(/[0-9]+|\\.[0-9]+)?([eE][+-]?[0-9]+)?$"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "weights",
+                "bias"
+              ]
+            }
+          }
+        },
+        "required": [
+          "activation",
+          "neurons"
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "layers"
+  ]
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 392" role="img" aria-labelledby="capability-register-t capability-register-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="capability-register-t">How a capability comes to be counted as done</title>
+  <desc id="capability-register-d">Three steps in a row. The register lists 481 capabilities in 19 pillars, each with an identifier such as P10-07-05, a specification and a status. A test that covers a capability carries its identifier in its name, in each of the four languages. The gate fails when a capability is marked done without such a test, or when a test names an identifier that the register does not have.</desc>
+  <rect width="960" height="392" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="273.3" height="188.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="343.3" y="96.0" width="273.3" height="188.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="646.7" y="96.0" width="273.3" height="188.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="40.0" y="302.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#2B2F77"/>
+  <rect x="54.0" y="248.0" width="245.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M317.3 190.0 L331.3 190.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M329.3333333333333 184.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M343.3 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#0B7F75"/>
+  <rect x="357.3" y="248.0" width="245.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M620.7 190.0 L634.7 190.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M632.6666666666666 184.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M646.7 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#E5484D"/>
+  <circle cx="669.6666666666666" cy="152.0" r="8" fill="#E5484D"/>
+  <path d="M665.6666666666666 148.0 l8 8 M673.6666666666666 148.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <circle cx="669.6666666666666" cy="194.0" r="8" fill="#E5484D"/>
+  <path d="M665.6666666666666 190.0 l8 8 M673.6666666666666 190.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <rect x="660.7" y="248.0" width="245.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="336.2" lengthAdjust="spacingAndGlyphs">Done means that a test names it</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="349.5" lengthAdjust="spacingAndGlyphs">registry/capabilities/  ·  registry/STATUS.md</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="80.1" lengthAdjust="spacingAndGlyphs">The register</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="162.6" lengthAdjust="spacingAndGlyphs">481 capabilities in 19 pillars.</text>
+  <text x="54.0" y="179.0" font-size="13" fill="#14162B" textLength="188.6" lengthAdjust="spacingAndGlyphs">Each has an identifier, a one-line</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="153.2" lengthAdjust="spacingAndGlyphs">specification, and a status.</text>
+  <text x="54.0" y="215.0" font-size="13" fill="#14162B" textLength="188.6" lengthAdjust="spacingAndGlyphs">P10-07-05: a missing cassette in</text>
+  <text x="54.0" y="233.0" font-size="13" fill="#14162B" textLength="159.0" lengthAdjust="spacingAndGlyphs">replay mode is a hard error.</text>
+  <text x="64.0" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="207.7" lengthAdjust="spacingAndGlyphs">registry/capabilities/p10.toml</text>
+  <text x="357.3" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="61.5" lengthAdjust="spacingAndGlyphs">The tests</text>
+  <text x="357.3" y="155.0" font-size="13" fill="#14162B" textLength="211.0" lengthAdjust="spacingAndGlyphs">A test that covers a capability carries</text>
+  <text x="357.3" y="173.0" font-size="13" fill="#14162B" textLength="140.9" lengthAdjust="spacingAndGlyphs">the identifier in its name.</text>
+  <text x="357.3" y="197.0" font-size="13" fill="#14162B" textLength="217.5" lengthAdjust="spacingAndGlyphs">OCaml case names, Lean comments,</text>
+  <text x="357.3" y="215.0" font-size="13" fill="#14162B" textLength="200.9" lengthAdjust="spacingAndGlyphs">Julia test sets and R test names all</text>
+  <text x="357.3" y="233.0" font-size="13" fill="#14162B" textLength="18.1" lengthAdjust="spacingAndGlyphs">do.</text>
+  <text x="367.3" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="193.8" lengthAdjust="spacingAndGlyphs">P10-07-05 a missing cassette</text>
+  <text x="660.7" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="57.6" lengthAdjust="spacingAndGlyphs">The gate</text>
+  <text x="686.7" y="155.0" font-size="13" fill="#14162B" textLength="188.6" lengthAdjust="spacingAndGlyphs">A capability marked done that no</text>
+  <text x="686.7" y="173.0" font-size="13" fill="#14162B" textLength="67.2" lengthAdjust="spacingAndGlyphs">test names.</text>
+  <text x="686.7" y="197.0" font-size="13" fill="#14162B" textLength="171.3" lengthAdjust="spacingAndGlyphs">A test that names an identifier</text>
+  <text x="686.7" y="215.0" font-size="13" fill="#14162B" textLength="153.9" lengthAdjust="spacingAndGlyphs">the register does not have.</text>
+  <text x="670.7" y="263.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="83.1" lengthAdjust="spacingAndGlyphs">make hygiene</text>
+  <text x="56.0" y="327.0" font-size="13" fill="#14162B" textLength="720.4" lengthAdjust="spacingAndGlyphs">make cap-sync reads the test suites and writes the status of every capability, and the page registry/STATUS.md with the tests</text>
+  <text x="56.0" y="345.0" font-size="13" fill="#14162B" textLength="291.3" lengthAdjust="spacingAndGlyphs">that name each one. Nobody types the word done.</text>
+</svg>

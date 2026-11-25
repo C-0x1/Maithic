@@ -1,0 +1,421 @@
+# Capability register for P13 Oracle.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P13"
+name = "Oracle"
+title = "Certified computation bridge"
+mission = "Let fast numerical and symbolic computation contribute to proofs without being trusted: Julia finds a certificate (multipliers, a decomposition, a witness, an enclosure) and a small Lean checker turns it into a kernel-checked proof."
+
+[[group]]
+id = "P13-01"
+title = "Certificate protocol and registry"
+language = "OCaml"
+path = "ocaml/lib/oracle/core/"
+purpose = "The contract between untrusted solvers and trusted checkers."
+
+  [[group.capability]]
+  id = "P13-01-01"
+  title = "Oracle interface"
+  spec = "Module type for an oracle: name, accepted goal kinds, solve function."
+  status = "done"
+  tests = ["ocaml/test/test_oracle.ml"]
+
+  [[group.capability]]
+  id = "P13-01-02"
+  title = "Certificate schema"
+  spec = "JSON Schemas for every certificate kind."
+  status = "done"
+  tests = ["ocaml/test/test_oracle.ml"]
+
+  [[group.capability]]
+  id = "P13-01-03"
+  title = "Oracle registry"
+  spec = "Register and look up oracles by name and goal kind."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_oracle.ml"]
+
+  [[group.capability]]
+  id = "P13-01-04"
+  title = "Goal export"
+  spec = "Export a Lean goal in the oracle exchange format."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_oracle.ml"]
+
+  [[group.capability]]
+  id = "P13-01-05"
+  title = "Solve dispatch"
+  spec = "Send a goal to an oracle with a time limit."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl", "ocaml/test/integration/test_integration.ml", "ocaml/test/test_oracle.ml"]
+
+  [[group.capability]]
+  id = "P13-01-06"
+  title = "Certificate hand-off"
+  spec = "Pass the certificate to the matching Lean checker tactic."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_oracle.ml"]
+
+  [[group.capability]]
+  id = "P13-01-07"
+  title = "Oracle result record"
+  spec = "Outcome, certificate reference and timings."
+  status = "done"
+  tests = ["ocaml/test/test_oracle.ml"]
+
+  [[group.capability]]
+  id = "P13-01-08"
+  title = "Protocol fixtures"
+  spec = "Fixture goals and certificates for each kind."
+  status = "done"
+  tests = ["ocaml/test/test_oracle.ml"]
+
+[[group]]
+id = "P13-02"
+title = "Linear arithmetic certificates"
+language = "Julia"
+path = "julia/MaithicOracle/src/linear/"
+purpose = "Finds exact multipliers that prove linear goals."
+
+  [[group.capability]]
+  id = "P13-02-01"
+  title = "Linear goal parser"
+  spec = "Parse linear hypotheses and goals from the exchange format."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-02"
+  title = "Exact rational simplex"
+  spec = "Linear programming in exact rational arithmetic for small problems."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-03"
+  title = "Farkas certificate"
+  spec = "Nonnegative multipliers whose combination yields a contradiction."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-04"
+  title = "Linear combination certificate"
+  spec = "Coefficients expressing the goal as a combination of hypotheses."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-05"
+  title = "Certificate self-check"
+  spec = "Verify the certificate arithmetically before emitting it."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-06"
+  title = "Linear certificate writer"
+  spec = "Emit certificates in the shared schema."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-07"
+  title = "Integer goal handling"
+  spec = "Strengthen strict inequalities over integers."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-08"
+  title = "Linear oracle tests"
+  spec = "Property tests on random feasible and infeasible systems."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+  [[group.capability]]
+  id = "P13-02-09"
+  title = "Linear round-trip fixtures"
+  spec = "Goals whose certificates Lean must accept."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/linear.jl"]
+
+[[group]]
+id = "P13-03"
+title = "Polynomial certificates"
+language = "Julia"
+path = "julia/MaithicOracle/src/poly/"
+purpose = "Finds witnesses for polynomial identities and inequalities."
+
+  [[group.capability]]
+  id = "P13-03-01"
+  title = "Polynomial parser"
+  spec = "Parse polynomial goals and hypotheses."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+  [[group.capability]]
+  id = "P13-03-02"
+  title = "Polynomial normal form"
+  spec = "Exact normalization of multivariate polynomials."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+  [[group.capability]]
+  id = "P13-03-03"
+  title = "Identity check"
+  spec = "Decide polynomial identities exactly."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+  [[group.capability]]
+  id = "P13-03-04"
+  title = "Ideal-membership certificate"
+  spec = "Coefficient polynomials expressing the goal as a combination of hypotheses."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+  [[group.capability]]
+  id = "P13-03-05"
+  title = "Groebner basis computation"
+  spec = "Compute bases with an exact arithmetic package."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+  [[group.capability]]
+  id = "P13-03-06"
+  title = "Polynomial certificate writer"
+  spec = "Emit certificates in the shared schema."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+  [[group.capability]]
+  id = "P13-03-07"
+  title = "Polynomial self-check"
+  spec = "Verify the combination expands to the goal."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+  [[group.capability]]
+  id = "P13-03-08"
+  title = "Polynomial oracle tests"
+  spec = "Property tests on generated identities."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/poly.jl"]
+
+[[group]]
+id = "P13-04"
+title = "Lean logic certificate checkers"
+language = "Lean"
+path = "lean/Maithic/Oracle/Logic/"
+purpose = "Checkers for propositional and decision-procedure certificates."
+
+  [[group.capability]]
+  id = "P13-04-01"
+  title = "Propositional reflection"
+  spec = "Reflect propositional goals into a formula datatype."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-02"
+  title = "Clause normal form"
+  spec = "Verified conversion to clauses."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-03"
+  title = "Resolution proof checker"
+  spec = "Check resolution proofs step by step."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-04"
+  title = "Clausal certificate tactic"
+  spec = "Close a propositional goal from an LRAT-style proof."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-05"
+  title = "Logic checker soundness"
+  spec = "Soundness theorem connecting checker acceptance to the goal."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-06"
+  title = "Model checker"
+  spec = "Verify that an assignment falsifies a formula."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-07"
+  title = "Logic checker examples"
+  spec = "Compiled examples with embedded proofs."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-08"
+  title = "Logic checker tests"
+  spec = "Accepted and rejected proof fixtures."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-09"
+  title = "Linear integer certificates"
+  spec = "Check certificates for linear integer arithmetic without the Mathlib tier."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-10"
+  title = "Checker error reporting"
+  spec = "Report the first failing step of a proof."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-11"
+  title = "Checker fuzz fixtures"
+  spec = "Mutated proofs that must be rejected."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+  [[group.capability]]
+  id = "P13-04-12"
+  title = "Axiom audit of logic checkers"
+  spec = "Tests asserting the checkers introduce no extra axioms."
+  status = "done"
+  tests = ["lean/MaithicTest/Logic.lean"]
+
+[[group]]
+id = "P13-05"
+title = "Validated numerics"
+language = "Julia"
+path = "julia/MaithicOracle/src/interval/"
+purpose = "Rigorous numerical computation whose results come with guaranteed enclosures."
+
+  [[group.capability]]
+  id = "P13-05-01"
+  title = "Interval evaluation"
+  spec = "Evaluate expressions in interval arithmetic with outward rounding."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+  [[group.capability]]
+  id = "P13-05-02"
+  title = "Expression parser for numerics"
+  spec = "Parse real-valued goals with elementary functions."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+  [[group.capability]]
+  id = "P13-05-03"
+  title = "Inequality proof by enclosure"
+  spec = "Prove an inequality when the enclosure excludes violation."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+  [[group.capability]]
+  id = "P13-05-04"
+  title = "Domain subdivision"
+  spec = "Split the domain until every box is decided."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+  [[group.capability]]
+  id = "P13-05-05"
+  title = "Interval certificate"
+  spec = "List of boxes with rational enclosures."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+  [[group.capability]]
+  id = "P13-05-06"
+  title = "Rational endpoints"
+  spec = "Convert endpoints to exact rationals that still enclose."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+  [[group.capability]]
+  id = "P13-05-07"
+  title = "Numerics self-check"
+  spec = "Re-verify the certificate with independent arithmetic."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+  [[group.capability]]
+  id = "P13-05-08"
+  title = "Validated numerics tests"
+  spec = "Property tests that enclosures contain sampled values."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/interval.jl"]
+
+[[group]]
+id = "P13-06"
+title = "Discrete and algebraic computation"
+language = "Julia"
+path = "julia/MaithicOracle/src/discrete/"
+purpose = "Witnesses for number theory, combinatorics and algebra."
+
+  [[group.capability]]
+  id = "P13-06-01"
+  title = "Primality certificates"
+  spec = "Pratt-style certificates for prime numbers."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]
+
+  [[group.capability]]
+  id = "P13-06-02"
+  title = "Factorization witnesses"
+  spec = "Factorizations that Lean verifies by multiplication."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]
+
+  [[group.capability]]
+  id = "P13-06-03"
+  title = "Modular arithmetic witnesses"
+  spec = "Inverses, orders and discrete facts with checkable witnesses."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]
+
+  [[group.capability]]
+  id = "P13-06-04"
+  title = "Bezout coefficients"
+  spec = "Extended greatest-common-divisor witnesses."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]
+
+  [[group.capability]]
+  id = "P13-06-05"
+  title = "Existence witnesses"
+  spec = "Explicit values for existential goals found by search."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]
+
+  [[group.capability]]
+  id = "P13-06-06"
+  title = "Discrete certificate writer"
+  spec = "Emit witnesses in the shared schema."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]
+
+  [[group.capability]]
+  id = "P13-06-07"
+  title = "Witness self-check"
+  spec = "Verify each witness before emitting."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]
+
+  [[group.capability]]
+  id = "P13-06-08"
+  title = "Discrete oracle tests"
+  spec = "Property tests of every witness kind."
+  status = "done"
+  tests = ["julia/MaithicOracle/test/discrete.jl"]

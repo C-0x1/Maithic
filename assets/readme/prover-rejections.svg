@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='249.12pt' viewBox='0 0 648.00 249.12'>
+<g id='maithic' class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHwyNDkuMTI='>
+    <rect x='0.00' y='0.00' width='648.00' height='249.12' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwyNDkuMTI=)'>
+<rect x='0.00' y='0.000000000000028' width='648.00' height='249.12' style='stroke-width: 1.16; stroke: none; fill: #FAF8F4;' />
+</g>
+<defs>
+  <clipPath id='cpODUuNzd8NjI4LjA3fDU2LjA3fDE5NC45MA=='>
+    <rect x='85.77' y='56.07' width='542.30' height='138.83' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpODUuNzd8NjI4LjA3fDU2LjA3fDE5NC45MA==)'>
+<rect x='85.77' y='56.07' width='542.30' height='138.83' style='stroke-width: 1.16; stroke: none; fill: #FAF8F4;' />
+<rect x='85.77' y='68.65' width='478.46' height='26.90' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5484D;' />
+<rect x='85.77' y='112.04' width='54.68' height='26.90' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5484D;' />
+<rect x='85.77' y='155.42' width='20.51' height='26.90' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5484D;' />
+<text x='569.97' y='85.62' style='font-size: 10.24px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='11.38px' lengthAdjust='spacingAndGlyphs'>70</text>
+<text x='146.20' y='129.01' style='font-size: 10.24px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.69px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='112.02' y='172.39' style='font-size: 10.24px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.69px' lengthAdjust='spacingAndGlyphs'>3</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwyNDkuMTI=)'>
+<text x='80.39' y='172.17' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='64.45px' lengthAdjust='spacingAndGlyphs'>unsolved-goals</text>
+<text x='80.39' y='128.79' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='21.84px' lengthAdjust='spacingAndGlyphs'>other</text>
+<text x='80.39' y='85.40' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='48.48px' lengthAdjust='spacingAndGlyphs'>tactic-failed</text>
+<text x='85.77' y='206.88' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='222.47' y='206.88' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='10.66px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='359.18' y='206.88' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='10.66px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='495.88' y='206.88' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='10.66px' lengthAdjust='spacingAndGlyphs'>60</text>
+<text x='356.92' y='220.11' text-anchor='middle' style='font-size: 12.00px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='58.03px' lengthAdjust='spacingAndGlyphs'>candidates</text>
+<text x='15.94' y='43.62' style='font-size: 12.00px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='503.75px' lengthAdjust='spacingAndGlyphs'>Rejected candidates by the class of Lean's error; every rejection is fed back into the next round</text>
+<text x='15.94' y='26.27' style='font-size: 15.00px; font-weight: bold;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='256.77px' lengthAdjust='spacingAndGlyphs'>Why candidate proofs were rejected</text>
+<text x='15.94' y='235.18' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='226.81px' lengthAdjust='spacingAndGlyphs'>Source: 5 run(s), 5 theorem(s), gateway mode replay.</text>
+</g>
+</g>
+</svg>

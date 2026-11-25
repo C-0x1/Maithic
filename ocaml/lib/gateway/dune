@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+ (name maithic_gateway)
+ (public_name maithic.gateway)
+ (libraries maithic_base maithic_schema maithic_config))

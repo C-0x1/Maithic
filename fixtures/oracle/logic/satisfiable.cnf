@@ -1,0 +1,4 @@
+c Satisfied by making variable 2 true: no proof can be accepted.
+p cnf 2 2
+1 2 0
+-1 2 0

@@ -1,0 +1,127 @@
+{
+  "schema": "maithic.mend.scan/1",
+  "summary": {
+    "files": 1,
+    "broken_files": 1,
+    "breakages": 5,
+    "errors": 3,
+    "by_class": {
+      "unknown-identifier": 1,
+      "deprecated": 1,
+      "unsolved-goals": 1,
+      "type-mismatch": 1,
+      "suggestion": 1,
+      "other": 0
+    }
+  },
+  "files": [
+    {
+      "file": "fixtures/mend/lean/Upgrade.lean",
+      "breakages": [
+        {
+          "file": "fixtures/mend/lean/Upgrade.lean",
+          "declaration": "sum_comm",
+          "kind": "theorem",
+          "line": 22,
+          "column": 8,
+          "severity": "error",
+          "class": "unknown-identifier",
+          "detail": "Nat.add_commutes",
+          "error": "Unknown constant `Nat.add_commutes`",
+          "diagnostics": [
+            {
+              "severity": "error",
+              "line": 22,
+              "column": 8,
+              "text": "Unknown constant `Nat.add_commutes`"
+            }
+          ],
+          "context": "/-- A name that is gone. The table of renames knows its successor. -/\ntheorem sum_comm (a b : Nat) : a + b = b + a := by\n  exact Nat.add_commutes a b",
+          "first_line": 20
+        },
+        {
+          "file": "fixtures/mend/lean/Upgrade.lean",
+          "declaration": "twice_add_zero",
+          "kind": "theorem",
+          "line": 27,
+          "column": 8,
+          "severity": "warning",
+          "class": "deprecated",
+          "detail": "twice_is_double",
+          "error": "`twice_is_double` has been deprecated: Use `twice_eq` instead",
+          "diagnostics": [
+            {
+              "severity": "warning",
+              "line": 27,
+              "column": 8,
+              "text": "`twice_is_double` has been deprecated: Use `twice_eq` instead\n\nHint: Replace the deprecated name:\n  t̵w̵i̵c̵e̵_̵i̵s̵_̵d̵o̵u̵b̵l̵e̵t̲w̲i̲c̲e̲_̲e̲q̲"
+            }
+          ],
+          "context": "/-- A name that is deprecated. Lean says what to use instead. -/\ntheorem twice_add_zero (n : Nat) : twice n + 0 = 2 * n := by\n  rw [Nat.add_zero]\n  exact twice_is_double n",
+          "first_line": 24
+        },
+        {
+          "file": "fixtures/mend/lean/Upgrade.lean",
+          "declaration": "le_succ_self",
+          "kind": "theorem",
+          "line": 31,
+          "column": 2,
+          "severity": "info",
+          "class": "suggestion",
+          "detail": "exact Nat.le_add_right n 1",
+          "error": "Try this: exact Nat.le_add_right n 1",
+          "diagnostics": [
+            {
+              "severity": "info",
+              "line": 31,
+              "column": 2,
+              "text": "Try this:\n  [apply] exact Nat.le_add_right n 1"
+            }
+          ],
+          "context": "/-- A search that was never written down. Lean says what it found. -/\ntheorem le_succ_self (n : Nat) : n ≤ n + 1 := by\n  exact?",
+          "first_line": 29
+        },
+        {
+          "file": "fixtures/mend/lean/Upgrade.lean",
+          "declaration": "twice_add",
+          "kind": "theorem",
+          "line": 39,
+          "column": 4,
+          "severity": "error",
+          "class": "unsolved-goals",
+          "error": "`simp` made no progress",
+          "diagnostics": [
+            {
+              "severity": "error",
+              "line": 39,
+              "column": 4,
+              "text": "`simp` made no progress"
+            }
+          ],
+          "context": "/-- A tactic that no longer closes its goal. One step of the proof has to change. -/\ntheorem twice_add (m n : Nat) : twice (m + n) = twice m + twice n := by\n  induction n with\n  | zero => simp [twice]\n  | succ k ih =>\n    simp [twice] at *\n    simp",
+          "first_line": 33
+        },
+        {
+          "file": "fixtures/mend/lean/Upgrade.lean",
+          "declaration": "add_zero_eq",
+          "kind": "theorem",
+          "line": 43,
+          "column": 2,
+          "severity": "error",
+          "class": "type-mismatch",
+          "error": "Type mismatch",
+          "diagnostics": [
+            {
+              "severity": "error",
+              "line": 43,
+              "column": 2,
+              "text": "Type mismatch\n  Nat.zero_add n\nhas type\n  0 + n = n\nbut is expected to have type\n  n + 0 = n"
+            }
+          ],
+          "context": "/-- A term that no longer has the type its place asks for. -/\ntheorem add_zero_eq (n : Nat) : n + 0 = n := by\n  exact Nat.zero_add n",
+          "first_line": 41
+        }
+      ]
+    }
+  ]
+}

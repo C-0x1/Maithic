@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Extraction of a Lean file",
+  "description": "What the Bridge reads out of an elaborated file: every declaration somebody wrote, with its kind, type, place, documentation, the constants its type and its value refer to, and the axioms it rests on; the imports; the tactic steps with the goals before and after; the open sorry positions with their goals; and the findings of the lint rules. Lines count from one and columns from zero.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.bridge.extraction/1"
+    },
+    "file": {
+      "type": "string"
+    },
+    "module": {
+      "type": "string"
+    },
+    "report": {
+      "type": "object",
+      "properties": {
+        "ok": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "warnings": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "ok",
+        "errors",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "imports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "moduleDocs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "declarations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/declaration"
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    },
+    "holes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hole"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "file",
+    "module",
+    "report",
+    "imports",
+    "moduleDocs",
+    "declarations",
+    "steps",
+    "holes",
+    "findings"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "declaration": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "theorem",
+            "definition",
+            "instance",
+            "structure",
+            "class",
+            "inductive",
+            "axiom",
+            "opaque"
+          ]
+        },
+        "type": {
+          "type": "string"
+        },
+        "module": {
+          "type": "string"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "endLine": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "endColumn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nameLine": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The line on which the name stands; line is where the declaration begins, its documentation included."
+        },
+        "nameColumn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "doc": {
+          "type": "string"
+        },
+        "isPrivate": {
+          "type": "boolean"
+        },
+        "usesSorry": {
+          "type": "boolean"
+        },
+        "axioms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "typeDeps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "valueDeps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "instanceOf": {
+          "type": "string"
+        },
+        "parents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "statementHash": {
+          "type": "string"
+        },
+        "sameStatement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source": {
+          "type": "string"
+        },
+        "proof": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "kind",
+        "type",
+        "module",
+        "line",
+        "column",
+        "endLine",
+        "endColumn",
+        "nameLine",
+        "nameColumn",
+        "isPrivate",
+        "usesSorry",
+        "axioms",
+        "typeDeps",
+        "valueDeps",
+        "parents",
+        "statementHash",
+        "sameStatement"
+      ],
+      "additionalProperties": false
+    },
+    "step": {
+      "type": "object",
+      "properties": {
+        "decl": {
+          "type": "string"
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tactic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "endLine": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "endColumn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "goalsBefore": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "goalsAfter": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "depth": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "inner": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "decl",
+        "index",
+        "tactic",
+        "line",
+        "column",
+        "endLine",
+        "endColumn",
+        "goalsBefore",
+        "goalsAfter",
+        "depth",
+        "inner"
+      ],
+      "additionalProperties": false
+    },
+    "hole": {
+      "type": "object",
+      "properties": {
+        "decl": {
+          "type": "string"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "goals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "decl",
+        "line",
+        "column",
+        "goals"
+      ],
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "enum": [
+            "info",
+            "warning",
+            "error"
+          ]
+        },
+        "declaration": {
+          "type": "string"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "rule",
+        "severity",
+        "declaration",
+        "line",
+        "message"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,183 @@
+# Capability register for P17 Mend.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P17"
+name = "Mend"
+title = "Proof repair and refactoring engine"
+mission = "Keep Lean code working and clean as it changes: detect what broke and why, repair it with rules first and a model second, and shorten proofs, with every change checked by Lean."
+
+[[group]]
+id = "P17-01"
+title = "Breakage detection and classification"
+language = "OCaml"
+path = "ocaml/lib/mend/detect/"
+purpose = "Finds what broke and puts each failure in a class with a known treatment."
+
+  [[group.capability]]
+  id = "P17-01-01"
+  title = "Failure collection"
+  spec = "Build the project and collect failing declarations with diagnostics."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-01-02"
+  title = "Breakage record"
+  spec = "Declaration, error, class and context."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-01-03"
+  title = "Class: unknown identifier"
+  spec = "A referenced declaration no longer exists under that name."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-01-04"
+  title = "Class: unsolved goals"
+  spec = "A tactic no longer closes the goal it used to."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+[[group]]
+id = "P17-02"
+title = "Deterministic repair rules"
+language = "OCaml"
+path = "ocaml/lib/mend/rules/"
+purpose = "Fixes the predictable breakages with no model call."
+
+  [[group.capability]]
+  id = "P17-02-01"
+  title = "Rule interface"
+  spec = "A rule matches a breakage and proposes an edit."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-02-02"
+  title = "Rename rule"
+  spec = "Replace a removed name using deprecation aliases and rename tables."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-02-03"
+  title = "Rule application loop"
+  spec = "Apply a rule, rebuild the declaration and keep the edit only if it compiles."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-02-04"
+  title = "Suggestion rule"
+  spec = "Apply `Try this` suggestions emitted by Lean."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-02-05"
+  title = "Rule registry"
+  spec = "Ordered registry with priorities."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+[[group]]
+id = "P17-03"
+title = "AI repair agent"
+language = "OCaml"
+path = "ocaml/lib/mend/ai/"
+purpose = "Repairs what the rules cannot, with the smallest verified edit."
+
+  [[group.capability]]
+  id = "P17-03-01"
+  title = "Breakage repair prompt"
+  spec = "Prompt asking for a minimal edit that restores the proof."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-03-02"
+  title = "Verify-and-retry loop"
+  spec = "Compile each proposed edit and iterate within a bound."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-03-03"
+  title = "Statement preservation check"
+  spec = "Reject any edit that changes a theorem statement."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-03-04"
+  title = "Re-prove fallback"
+  spec = "Hand the goal to Prove when repair attempts are exhausted."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_mend.ml"]
+
+[[group]]
+id = "P17-04"
+title = "Proof minimization and golfing"
+language = "OCaml"
+path = "ocaml/lib/mend/minimize/"
+purpose = "Makes proofs shorter without making them worse."
+
+  [[group.capability]]
+  id = "P17-04-01"
+  title = "Step deletion"
+  spec = "Remove steps one at a time and keep removals that compile."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-04-02"
+  title = "Verification of every candidate"
+  spec = "Each candidate proof is compiled before acceptance."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-04-03"
+  title = "Minimized proof output"
+  spec = "Final proof with before-and-after metrics."
+  status = "done"
+  tests = ["ocaml/test/test_mend.ml"]
+
+  [[group.capability]]
+  id = "P17-04-04"
+  title = "Minimize command"
+  spec = "`maithic mend minimize`."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P17-04-05"
+  title = "Statement and axiom preservation"
+  spec = "The statement and the set of axioms must not change."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_mend.ml"]
+
+[[group]]
+id = "P17-05"
+title = "Repair analytics"
+language = "R"
+path = "r/maithicstats/R/mend-*.R"
+purpose = "Shows how well maintenance automation works."
+
+  [[group.capability]]
+  id = "P17-05-01"
+  title = "Repair run import"
+  spec = "Load repair and migration results."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-mend.R"]
+
+  [[group.capability]]
+  id = "P17-05-02"
+  title = "Repair success summary"
+  spec = "Share of breakages fixed, by class."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-mend.R", "r/maithicviz/tests/testthat/test-mend-figures.R"]

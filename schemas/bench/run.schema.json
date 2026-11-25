@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark run",
+  "description": "What `maithic bench run --out FILE` writes: one record per problem with its outcome, the proof found, the number of candidates tried and the time taken; the gateway mode the run was made in; and the account of the gateway.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.bench.run/1"
+    },
+    "manifest": {
+      "type": "string"
+    },
+    "mode": {
+      "$ref": "../common.schema.json#/$defs/gateway_mode"
+    },
+    "use_ai": {
+      "type": "boolean"
+    },
+    "policy": {
+      "type": "string"
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verified": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "problems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*-[0-9]{3}$"
+          },
+          "suite": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "difficulty": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "status": {
+            "$ref": "../common.schema.json#/$defs/status"
+          },
+          "proposer": {
+            "type": "string"
+          },
+          "proof": {
+            "type": "string"
+          },
+          "attempts": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "rounds": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "elapsed_ms": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "suite",
+          "tags",
+          "difficulty",
+          "status",
+          "proposer",
+          "proof",
+          "attempts",
+          "rounds",
+          "elapsed_ms"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "gateway": {
+      "$ref": "../gateway/account.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "manifest",
+    "mode",
+    "use_ai",
+    "policy",
+    "total",
+    "verified",
+    "problems",
+    "gateway"
+  ],
+  "additionalProperties": false
+}

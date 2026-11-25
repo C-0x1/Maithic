@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oracle result",
+  "description": "The record of one question to an oracle: which oracle was asked, the goal it was given, what it answered and how long it took. A proved answer carries the certificate and its name by content, with the tactic scripts for Lean when there are any; a refuted answer carries the point where the goal fails; an unknown answer carries the reason.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.oracle.result/1"
+    },
+    "oracle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal": {
+      "$ref": "goal.schema.json"
+    },
+    "outcome": {
+      "enum": [
+        "proved",
+        "refuted",
+        "unknown"
+      ]
+    },
+    "kind": {
+      "type": "string"
+    },
+    "claim": {
+      "type": "string"
+    },
+    "certificate_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "certificate": {
+      "$ref": "certificate.schema.json"
+    },
+    "scripts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "../common.schema.json#/$defs/exact"
+      }
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "elapsed_ms": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schema",
+    "oracle",
+    "goal",
+    "outcome",
+    "elapsed_ms"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "proved"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "kind",
+          "claim",
+          "certificate_id",
+          "certificate"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "refuted"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "model"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "unknown"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "reason"
+        ]
+      }
+    }
+  ]
+}

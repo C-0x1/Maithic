@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 413" role="img" aria-labelledby="blueprint-states-t blueprint-states-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="blueprint-states-t">The four statuses of a blueprint node</title>
+  <desc id="blueprint-states-d">Four states in a row with arrows between them. Planned: no statement in Lean yet. Writing the statement in Lean makes a node stated: the declaration exists and its proof contains sorry. Finishing its own proof makes it proved: its proof is complete, and something beneath it is not. Finishing everything it rests on makes it done.</desc>
+  <rect width="960" height="413" fill="#FAF8F4"/>
+  <rect x="40.0" y="140.0" width="101.4" height="40.0" rx="20.0" fill="#5B6477"/>
+  <rect x="314.4" y="140.0" width="88.9" height="40.0" rx="20.0" fill="#B37400"/>
+  <rect x="576.2" y="140.0" width="93.2" height="40.0" rx="20.0" fill="#2B2F77"/>
+  <rect x="842.3" y="140.0" width="77.7" height="40.0" rx="20.0" fill="#0FA89B"/>
+  <rect x="40.0" y="281.0" width="880.0" height="102.0" rx="10" fill="#E8E9F3"/>
+  <path d="M146.4 160.0 L301.4 160.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M299.36328125 154.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M408.2 160.0 L563.2 160.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M561.154296875 154.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M674.4 160.0 L829.3 160.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M827.29296875 154.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="615.3" lengthAdjust="spacingAndGlyphs">A node moves through four statuses, and Lean says which</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="373.8" lengthAdjust="spacingAndGlyphs">maithic blueprint status FILE --lean FILE.lean</text>
+  <text x="90.7" y="165.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="51.8" lengthAdjust="spacingAndGlyphs">planned</text>
+  <text x="227.9" y="136.0" font-size="11.5" fill="#5B6477" text-anchor="middle" textLength="109.3" lengthAdjust="spacingAndGlyphs">write the statement in</text>
+  <text x="227.9" y="151.0" font-size="11.5" fill="#5B6477" text-anchor="middle" textLength="25.6" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="358.8" y="165.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="39.8" lengthAdjust="spacingAndGlyphs">stated</text>
+  <text x="489.7" y="151.0" font-size="11.5" fill="#5B6477" text-anchor="middle" textLength="95.2" lengthAdjust="spacingAndGlyphs">finish its own proof</text>
+  <text x="622.8" y="165.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="45.0" lengthAdjust="spacingAndGlyphs">proved</text>
+  <text x="755.8" y="151.0" font-size="11.5" fill="#5B6477" text-anchor="middle" textLength="107.4" lengthAdjust="spacingAndGlyphs">finish what it rests on</text>
+  <text x="881.1" y="165.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="32.2" lengthAdjust="spacingAndGlyphs">done</text>
+  <text x="42.0" y="204.0" font-size="12.5" fill="#14162B" textLength="218.9" lengthAdjust="spacingAndGlyphs">No statement in Lean yet, or Lean does</text>
+  <text x="42.0" y="221.0" font-size="12.5" fill="#14162B" textLength="139.0" lengthAdjust="spacingAndGlyphs">not know the declaration.</text>
+  <text x="316.4" y="204.0" font-size="12.5" fill="#14162B" textLength="197.3" lengthAdjust="spacingAndGlyphs">The declaration exists, and its proof</text>
+  <text x="316.4" y="221.0" font-size="12.5" fill="#14162B" textLength="80.4" lengthAdjust="spacingAndGlyphs">contains sorry.</text>
+  <text x="578.2" y="204.0" font-size="12.5" fill="#14162B" textLength="84.1" lengthAdjust="spacingAndGlyphs">Its own proof is</text>
+  <text x="578.2" y="221.0" font-size="12.5" fill="#14162B" textLength="54.2" lengthAdjust="spacingAndGlyphs">complete.</text>
+  <text x="578.2" y="238.0" font-size="12.5" fill="#14162B" textLength="69.5" lengthAdjust="spacingAndGlyphs">Something it</text>
+  <text x="578.2" y="255.0" font-size="12.5" fill="#14162B" textLength="81.3" lengthAdjust="spacingAndGlyphs">rests on is not.</text>
+  <text x="712.0" y="204.0" font-size="12.5" fill="#14162B" textLength="181.3" lengthAdjust="spacingAndGlyphs">Complete, and so is everything it</text>
+  <text x="712.0" y="221.0" font-size="12.5" fill="#14162B" textLength="47.9" lengthAdjust="spacingAndGlyphs">rests on.</text>
+  <text x="56.0" y="306.0" font-size="13" fill="#14162B" textLength="737.6" lengthAdjust="spacingAndGlyphs">The difference between proved and done is the reason to ask Lean. A theorem whose proof was written first, on lemmas that are</text>
+  <text x="56.0" y="324.0" font-size="13" fill="#14162B" textLength="426.1" lengthAdjust="spacingAndGlyphs">still open, looks finished in the file. Lean reports that it still stands on sorry.</text>
+  <text x="56.0" y="348.0" font-size="13" fill="#14162B" textLength="723.4" lengthAdjust="spacingAndGlyphs">maithic blueprint next lists the nodes that can be worked on now, because everything they need is done, and puts the one that</text>
+  <text x="56.0" y="366.0" font-size="13" fill="#14162B" textLength="174.1" lengthAdjust="spacingAndGlyphs">most other nodes wait for first.</text>
+</svg>

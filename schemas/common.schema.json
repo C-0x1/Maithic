@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Definitions shared by the Maithic schemas",
+  "description": "Types that several documents use. Other schemas refer to them by name.",
+  "$defs": {
+    "status": {
+      "description": "What is known about a result, from the strongest claim to the weakest.",
+      "enum": [
+        "verified",
+        "checked",
+        "refuted",
+        "conjectured",
+        "unverified",
+        "unknown",
+        "failed",
+        "abstained"
+      ]
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "milliseconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "exact": {
+      "description": "An integer or a fraction in lowest terms, as text, so that no reader loses precision.",
+      "type": "string",
+      "pattern": "^-?[0-9]+(/[0-9]+)?$"
+    },
+    "integer_text": {
+      "description": "An integer of any size, as text.",
+      "type": "string",
+      "pattern": "^-?[0-9]+$"
+    },
+    "timestamp": {
+      "description": "A time in UTC, to the second.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "error_code": {
+      "description": "A stable Maithic error code.",
+      "type": "string",
+      "pattern": "^MTH-[A-Z]+-[0-9]{4}$"
+    },
+    "gateway_mode": {
+      "enum": [
+        "live",
+        "record",
+        "replay",
+        "mock",
+        "off"
+      ]
+    },
+    "axioms": {
+      "description": "Names of axioms, as the kernel reports them.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

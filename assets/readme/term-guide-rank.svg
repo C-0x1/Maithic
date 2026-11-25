@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 905 603" width="905" height="603" role="img" aria-label="A terminal session: maithic guide info describes a trained tactic model, with its most frequent tactic templates and how often each closed a goal, and maithic guide rank lists the tactics the model would try first on the goal of a theorem, with the model's probability, the preference of the search and the two combined.">
+  <title>A terminal session: maithic guide info describes a trained tactic model, with its most frequent tactic templates and how often each closed a goal, and maithic guide rank lists the tactics the model would try first on the goal of a theorem, with the model's probability, the preference of the search and the two combined.</title>
+  <rect width="905" height="603" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h885a10 10 0 0 1 10 10v26h-905z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="453" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic guide info, rank</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="469.80" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic guide info fixtures/guide/library/model.json --top 5</text>
+    <text x="22.00" y="77" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">tactic model</text>
+    <text x="131.62" y="77" textLength="399.33" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">mean pooling, vectors of 32, reads up to 128 tokens</text>
+    <text x="37.66" y="96" textLength="548.10" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">17345 weights, 380 tokens, 33 tactic templates from 328 recorded steps</text>
+    <text x="37.66" y="134" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">template</text>
+    <text x="335.20" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">steps</text>
+    <text x="397.84" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">share</text>
+    <text x="452.65" y="134" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">closes a goal</text>
+    <text x="37.66" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">exact _</text>
+    <text x="358.69" y="153" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">41</text>
+    <text x="397.84" y="153" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">12.5%</text>
+    <text x="468.31" y="153" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">100%</text>
+    <text x="37.66" y="172" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">cases _</text>
+    <text x="358.69" y="172" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">32</text>
+    <text x="405.67" y="172" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">9.8%</text>
+    <text x="476.14" y="172" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">41%</text>
+    <text x="37.66" y="191" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">simp [_]</text>
+    <text x="358.69" y="191" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">28</text>
+    <text x="405.67" y="191" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">8.5%</text>
+    <text x="476.14" y="191" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">93%</text>
+    <text x="37.66" y="210" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">simp only [_] at _</text>
+    <text x="358.69" y="210" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">28</text>
+    <text x="405.67" y="210" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">8.5%</text>
+    <text x="483.97" y="210" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0%</text>
+    <text x="37.66" y="229" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">simp only [_]</text>
+    <text x="358.69" y="229" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">20</text>
+    <text x="405.67" y="229" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">6.1%</text>
+    <text x="476.14" y="229" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">30%</text>
+    <text x="37.66" y="248" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">and 28 more</text>
+    <text x="22.00" y="286" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="286" textLength="845.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic guide rank fixtures/guide/library/model.json --file examples/double.lean --theorem double_eq --top 6</text>
+    <text x="22.00" y="305" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">goal</text>
+    <text x="37.66" y="324" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">n : Nat</text>
+    <text x="37.66" y="343" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">⊢ double n = 2 * n</text>
+    <text x="22.00" y="381" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tactic</text>
+    <text x="139.45" y="381" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">read as</text>
+    <text x="217.75" y="381" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">model</text>
+    <text x="272.56" y="381" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">search</text>
+    <text x="335.20" y="381" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">guided</text>
+    <text x="22.00" y="400" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">-------------</text>
+    <text x="139.45" y="400" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------</text>
+    <text x="217.75" y="400" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">-----</text>
+    <text x="272.56" y="400" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">------</text>
+    <text x="335.20" y="400" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">------</text>
+    <text x="22.00" y="419" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rfl</text>
+    <text x="139.45" y="419" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rfl</text>
+    <text x="217.75" y="419" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">30.8%</text>
+    <text x="272.56" y="419" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.90</text>
+    <text x="335.20" y="419" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.90</text>
+    <text x="22.00" y="438" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp [double]</text>
+    <text x="139.45" y="438" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp [_]</text>
+    <text x="217.75" y="438" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">28.1%</text>
+    <text x="272.56" y="438" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.50</text>
+    <text x="335.20" y="438" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.46</text>
+    <text x="22.00" y="457" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">grind</text>
+    <text x="139.45" y="457" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">grind</text>
+    <text x="217.75" y="457" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">15.1%</text>
+    <text x="272.56" y="457" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.50</text>
+    <text x="335.20" y="457" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.24</text>
+    <text x="22.00" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp</text>
+    <text x="139.45" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp</text>
+    <text x="217.75" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">6.0%</text>
+    <text x="272.56" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.70</text>
+    <text x="335.20" y="476" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.14</text>
+    <text x="22.00" y="495" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="139.45" y="495" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide</text>
+    <text x="217.75" y="495" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">7.7%</text>
+    <text x="272.56" y="495" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.50</text>
+    <text x="335.20" y="495" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.13</text>
+    <text x="22.00" y="514" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">omega</text>
+    <text x="139.45" y="514" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">omega</text>
+    <text x="217.75" y="514" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">3.9%</text>
+    <text x="272.56" y="514" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.80</text>
+    <text x="335.20" y="514" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0.10</text>
+    <text x="22.00" y="533" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">and 3 more</text>
+    <text x="22.00" y="571" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">value</text>
+    <text x="76.81" y="571" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">39.7%</text>
+    <text x="131.62" y="571" textLength="430.65" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">the model's estimate that the next tactic closes a goal</text>
+  </g>
+</svg>

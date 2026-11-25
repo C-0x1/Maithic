@@ -1,0 +1,96 @@
+{
+  "schema": "maithic.bridge.session/1",
+  "name": "limits",
+  "title": "Heartbeat and recursion limits per request",
+  "steps": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "loadHeader"
+      },
+      "expect": {
+        "result": {
+          "env": 1
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "maxHeartbeats": 1,
+          "source": "theorem slow (xs ys zs : List Nat) : (xs ++ ys ++ zs).reverse.length = zs.length + (ys.length + xs.length) := by grind",
+          "names": [
+            "slow"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": false,
+            "diagnostics": [
+              {
+                "severity": "error",
+                "text": {
+                  "$contains": "maximum number of heartbeats"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "theorem slow (xs ys zs : List Nat) : (xs ++ ys ++ zs).reverse.length = zs.length + (ys.length + xs.length) := by grind",
+          "names": [
+            "slow"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true,
+            "decls": [
+              {
+                "name": "slow",
+                "found": true,
+                "usesSorry": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "maxRecDepth": 16,
+          "source": "example : (List.replicate 40 1).length = 40 := by simp"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": false
+          }
+        }
+      }
+    }
+  ]
+}

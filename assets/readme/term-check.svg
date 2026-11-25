@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 694 660" width="694" height="660" role="img" aria-label="A terminal session: maithic check elaborates two files, each in a new process. In the first, ten theorems about Euclid's algorithm are verified, each with the axioms it rests on. In the second, six conjectures are reported as failed because each proof depends on sorry, and the command ends with status 7.">
+  <title>A terminal session: maithic check elaborates two files, each in a new process. In the first, ten theorems about Euclid's algorithm are verified, each with the axioms it rests on. In the second, six conjectures are reported as failed because each proof depends on sorry, and the command ends with status 7.</title>
+  <rect width="694" height="660" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h674a10 10 0 0 1 10 10v26h-694z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="347" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic check</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="477.63" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic check lean/Maithic/Algo/Arith/Gcd.lean --project lean</text>
+    <text x="22.00" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="272.56" y="77" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">status</text>
+    <text x="350.86" y="77" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axioms or reason</text>
+    <text x="22.00" y="96" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">------------------------------</text>
+    <text x="272.56" y="96" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------</text>
+    <text x="350.86" y="96" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">-------------------------------------</text>
+    <text x="22.00" y="115" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.areCoprime_iff</text>
+    <text x="272.56" y="115" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="115" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Classical.choice, Quot.sound</text>
+    <text x="22.00" y="134" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.dvd_euclid</text>
+    <text x="272.56" y="134" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="134" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="153" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid_comm</text>
+    <text x="272.56" y="153" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="153" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="172" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid_dvd_left</text>
+    <text x="272.56" y="172" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="172" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="191" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid_dvd_right</text>
+    <text x="272.56" y="191" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="191" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="210" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid_eq_gcd</text>
+    <text x="272.56" y="210" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="210" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="229" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid_pos</text>
+    <text x="272.56" y="229" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="229" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="248" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid_zero_left</text>
+    <text x="272.56" y="248" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="248" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="267" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid_zero_right</text>
+    <text x="272.56" y="267" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="267" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="286" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.reduce_mul</text>
+    <text x="272.56" y="286" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="350.86" y="286" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Quot.sound</text>
+    <text x="22.00" y="305" textLength="649.89" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10 of 10 theorem(s) verified, 0 error(s), 0 warning(s), 13 declaration(s) in 275 ms</text>
+    <text x="22.00" y="343" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="343" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic check examples/conjectures.lean</text>
+    <text x="22.00" y="362" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="155.11" y="362" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">status</text>
+    <text x="217.75" y="362" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axioms or reason</text>
+    <text x="22.00" y="381" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">---------------</text>
+    <text x="155.11" y="381" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">------</text>
+    <text x="217.75" y="381" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------------------------------------------</text>
+    <text x="22.00" y="400" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">pred_lt</text>
+    <text x="155.11" y="400" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="217.75" y="400" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the proof is unfinished: it depends on sorry</text>
+    <text x="22.00" y="419" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">reverse_append</text>
+    <text x="155.11" y="419" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="217.75" y="419" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the proof is unfinished: it depends on sorry</text>
+    <text x="22.00" y="438" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">small_and_large</text>
+    <text x="155.11" y="438" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="217.75" y="438" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the proof is unfinished: it depends on sorry</text>
+    <text x="22.00" y="457" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">square_monotone</text>
+    <text x="155.11" y="457" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="217.75" y="457" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the proof is unfinished: it depends on sorry</text>
+    <text x="22.00" y="476" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">sum_le_product</text>
+    <text x="155.11" y="476" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="217.75" y="476" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the proof is unfinished: it depends on sorry</text>
+    <text x="22.00" y="495" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">within_budget</text>
+    <text x="155.11" y="495" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="217.75" y="495" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the proof is unfinished: it depends on sorry</text>
+    <text x="22.00" y="514" textLength="508.95" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">examples/conjectures.lean:10:8: warning: declaration uses `sorry`</text>
+    <text x="22.00" y="533" textLength="508.95" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">examples/conjectures.lean:14:8: warning: declaration uses `sorry`</text>
+    <text x="22.00" y="552" textLength="508.95" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">examples/conjectures.lean:18:8: warning: declaration uses `sorry`</text>
+    <text x="22.00" y="571" textLength="508.95" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">examples/conjectures.lean:23:8: warning: declaration uses `sorry`</text>
+    <text x="22.00" y="590" textLength="508.95" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">examples/conjectures.lean:27:8: warning: declaration uses `sorry`</text>
+    <text x="22.00" y="609" textLength="508.95" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">examples/conjectures.lean:31:8: warning: declaration uses `sorry`</text>
+    <text x="22.00" y="628" textLength="626.40" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">0 of 6 theorem(s) verified, 0 error(s), 6 warning(s), 6 declaration(s) in 182 ms</text>
+  </g>
+</svg>

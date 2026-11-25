@@ -1,0 +1,88 @@
+{
+  "schema": "maithic.algolab.synthesis/1",
+  "task": {
+    "name": "runLengths",
+    "description": "Run-length encoding of a list of natural numbers. Every maximal run of equal neighbours becomes one pair: the value, and how long the run is. The pairs stand in the order of the runs.",
+    "signature": "(l : List Nat) : List (Nat × Nat)",
+    "constraints": [
+      "Recursion on the structure of the list: no well-founded recursion and no partial definition.",
+      "Nothing beyond the Lean core library."
+    ],
+    "examples": [
+      {
+        "call": "runLengths [1, 1, 2, 3, 3, 3]",
+        "expect": "[(1, 2), (2, 1), (3, 3)]"
+      },
+      {
+        "call": "runLengths []",
+        "expect": "[]"
+      },
+      {
+        "call": "runLengths [7]",
+        "expect": "[(7, 1)]"
+      },
+      {
+        "call": "runLengths [4, 4, 4, 4]",
+        "expect": "[(4, 4)]"
+      },
+      {
+        "call": "(runLengths [5, 5, 6, 5]).length",
+        "expect": "3"
+      }
+    ]
+  },
+  "status": "failed",
+  "reason": "the implementation was not accepted",
+  "attempts": [
+    {
+      "round": 0,
+      "implementation": "def runLengths (l : List Nat) : List (Nat × Nat) :=\n  match l with\n  | [] => []\n  | x :: rest =>\n    match runLengths rest with\n    | (y, n) :: tail => if x = y then (y, n + 1) :: tail else (x, 1) :: tail\n    | [] => [(x, 1)]",
+      "provenance": {
+        "origin": "given"
+      },
+      "refused": [],
+      "errors": [],
+      "examples": [
+        {
+          "call": "runLengths [1, 1, 2, 3, 3, 3]",
+          "expect": "[(1, 2), (2, 1), (3, 3)]",
+          "got": "[(1, 2)]",
+          "passed": false
+        },
+        {
+          "call": "runLengths []",
+          "expect": "[]",
+          "got": "[]",
+          "passed": true
+        },
+        {
+          "call": "runLengths [7]",
+          "expect": "[(7, 1)]",
+          "got": "[(7, 1)]",
+          "passed": true
+        },
+        {
+          "call": "runLengths [4, 4, 4, 4]",
+          "expect": "[(4, 4)]",
+          "got": "[(4, 4)]",
+          "passed": true
+        },
+        {
+          "call": "(runLengths [5, 5, 6, 5]).length",
+          "expect": "3",
+          "got": "1",
+          "passed": false
+        }
+      ],
+      "accepted": false
+    }
+  ],
+  "gateway": {
+    "mode": "live",
+    "calls": 0,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": []
+  }
+}

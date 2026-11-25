@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review report",
+  "description": "The findings of a review of Lean files, after the policy was applied: for every file its findings in order, each with the rule that made it, where it comes from (a lint rule run in Lean, a check on what was extracted, a simplification that Lean verified, or a model), its severity, its place and a sentence. A finding from a verified simplification carries the proof before and after; Lean accepted the proof after. The summary counts findings by severity and the findings that suppression comments held back.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.review.report/1"
+    },
+    "profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "files": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "findings": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "error": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "warning": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "info": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "suppressed": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "files",
+        "findings",
+        "error",
+        "warning",
+        "info",
+        "suppressed"
+      ],
+      "additionalProperties": false
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "declarations": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "suppressed": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "note": {
+            "type": "string"
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rule": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "origin": {
+                  "enum": [
+                    "lint",
+                    "semantic",
+                    "suggestion",
+                    "model"
+                  ]
+                },
+                "severity": {
+                  "enum": [
+                    "info",
+                    "warning",
+                    "error"
+                  ]
+                },
+                "file": {
+                  "type": "string"
+                },
+                "line": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "declaration": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "edit": {
+                  "type": "object",
+                  "properties": {
+                    "before": {
+                      "type": "string"
+                    },
+                    "after": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "before",
+                    "after"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "rule",
+                "origin",
+                "severity",
+                "file",
+                "line",
+                "declaration",
+                "message"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "file",
+          "declarations",
+          "suppressed",
+          "findings"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "profile",
+    "summary",
+    "files"
+  ],
+  "additionalProperties": false
+}

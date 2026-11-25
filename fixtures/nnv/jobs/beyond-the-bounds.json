@@ -1,0 +1,65 @@
+{
+  "schema": "maithic.nnv.job/1",
+  "model": "absolute value",
+  "property": "on [-2, 3] the output stays within [0, 4]",
+  "status": "unknown",
+  "claim": "unknown",
+  "reason": "the bounds are too loose to show the property, and no tested point of the input box leaves the claimed box",
+  "verify_ms": 2491,
+  "verdict": {
+    "schema": "maithic.nnv.verdict/1",
+    "verdict": "unknown",
+    "network": [
+      {
+        "activation": "relu",
+        "neurons": [
+          {
+            "weights": [
+              "1"
+            ],
+            "bias": "0"
+          },
+          {
+            "weights": [
+              "-1"
+            ],
+            "bias": "0"
+          }
+        ]
+      },
+      {
+        "activation": "identity",
+        "neurons": [
+          {
+            "weights": [
+              "1",
+              "1"
+            ],
+            "bias": "0"
+          }
+        ]
+      }
+    ],
+    "input": [
+      [
+        "-2",
+        "3"
+      ]
+    ],
+    "output": [
+      [
+        "0",
+        "4"
+      ]
+    ],
+    "reason": "the bounds are too loose to show the property, and no tested point of the input box leaves the claimed box",
+    "engine": {
+      "name": "MaithicNNV",
+      "version": "0.1.0",
+      "parameters": {
+        "method": "interval bound propagation, outward rounding",
+        "max_corners": 1024
+      }
+    }
+  }
+}

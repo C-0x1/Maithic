@@ -1,0 +1,190 @@
+# Capability register for P12 Guide.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P12"
+name = "Guide"
+title = "Neural guidance studio"
+mission = "Train small, fast models in Julia that guide proof search by ranking tactics for a goal. They run locally, cost nothing per call and learn from recorded proofs."
+
+[[group]]
+id = "P12-01"
+title = "Tokenization and encoding"
+language = "Julia"
+path = "julia/MaithicGuide/src/tokenize/"
+purpose = "Converts Lean text into model inputs."
+
+  [[group.capability]]
+  id = "P12-01-01"
+  title = "Lean lexer"
+  spec = "Split Lean text into identifiers, operators, literals and punctuation."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-01-02"
+  title = "Vocabulary builder"
+  spec = "Build a vocabulary from a dataset with frequency thresholds."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-01-03"
+  title = "Encode and decode"
+  spec = "Convert text to token identifiers and back."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+[[group]]
+id = "P12-02"
+title = "Model zoo"
+language = "Julia"
+path = "julia/MaithicGuide/src/models/"
+purpose = "The network architectures used for guidance."
+
+  [[group.capability]]
+  id = "P12-02-01"
+  title = "Embedding layer"
+  spec = "Token and position embeddings."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-02-02"
+  title = "Pooling head"
+  spec = "Mean and first-token pooling to a fixed vector."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-02-03"
+  title = "Tactic classifier head"
+  spec = "Classification over a tactic template vocabulary."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+[[group]]
+id = "P12-03"
+title = "Tactic ranking and generation"
+language = "Julia"
+path = "julia/MaithicGuide/src/tactic/"
+purpose = "Trains models that propose and rank next tactics."
+
+  [[group.capability]]
+  id = "P12-03-01"
+  title = "Tactic template vocabulary"
+  spec = "Extract tactic templates with argument slots from the corpus."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-03-02"
+  title = "Tactic dataset loader"
+  spec = "Load state and tactic pairs."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-03-03"
+  title = "Tactic classification loss"
+  spec = "Cross-entropy over templates."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-03-04"
+  title = "Tactic training loop"
+  spec = "Train the tactic classifier with evaluation."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl", "ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P12-03-05"
+  title = "Top-k accuracy"
+  spec = "Top-1 and top-k accuracy on a held-out split."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-03-06"
+  title = "Tactic prior output"
+  spec = "Normalized probabilities over candidate tactics."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+[[group]]
+id = "P12-04"
+title = "Training infrastructure"
+language = "Julia"
+path = "julia/MaithicGuide/src/train/"
+purpose = "Shared machinery for reproducible training."
+
+  [[group.capability]]
+  id = "P12-04-01"
+  title = "Optimizer setup"
+  spec = "Adam-family optimizers with weight decay."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P12-04-02"
+  title = "Seed control"
+  spec = "One seed controls all randomness."
+  status = "done"
+  tests = ["julia/MaithicGuide/test/runtests.jl"]
+
+[[group]]
+id = "P12-05"
+title = "OCaml guidance client"
+language = "OCaml"
+path = "ocaml/lib/guide/"
+purpose = "Connects the search kernel to the guidance service."
+
+  [[group.capability]]
+  id = "P12-05-01"
+  title = "Guidance client"
+  spec = "Typed client for the premise, tactic and value methods."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_guide.ml"]
+
+  [[group.capability]]
+  id = "P12-05-02"
+  title = "Prior integration"
+  spec = "Feed tactic priors to the search kernel."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_guide.ml"]
+
+  [[group.capability]]
+  id = "P12-05-03"
+  title = "Uniform fallback"
+  spec = "Use uniform priors and zero value when the service is unavailable."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_guide.ml"]
+
+[[group]]
+id = "P12-06"
+title = "Model evaluation and experiment tracking"
+language = "R"
+path = "r/maithicstats/R/guide-*.R"
+purpose = "Compares models and training runs with proper statistics."
+
+  [[group.capability]]
+  id = "P12-06-01"
+  title = "Run manifest import"
+  spec = "Load training run manifests and metric logs."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-guide.R"]
+
+  [[group.capability]]
+  id = "P12-06-02"
+  title = "Learning curves"
+  spec = "Training and validation curves."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-guide.R", "r/maithicviz/tests/testthat/test-guide-figures.R"]
+
+  [[group.capability]]
+  id = "P12-06-03"
+  title = "Accuracy plots"
+  spec = "Tactic accuracy by model."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-guide.R", "r/maithicviz/tests/testthat/test-guide-figures.R"]

@@ -1,0 +1,4 @@
+(library
+ (name maithic_nnv)
+ (public_name maithic.nnv)
+ (libraries unix maithic_base maithic_schema maithic_bridge maithic_ledger))

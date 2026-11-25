@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Differential test report",
+  "description": "One run of the differential test: requests generated from a seed, sent to a compiled implementation and to reference implementations that share no code with it. cases counts the requests and mismatches the answers that the reference did not accept; agrees is true when there are none. algorithms gives the same two counts for each algorithm, and failures lists every answer that was not accepted, with the request that led to it.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.algolab.differential/1"
+    },
+    "implementation": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "size": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cases": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "mismatches": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "agrees": {
+      "type": "boolean"
+    },
+    "algorithms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "cases": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "mismatches": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "name",
+          "cases",
+          "mismatches"
+        ]
+      }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "algorithm": {
+            "type": "string"
+          },
+          "request": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "algorithm",
+          "request",
+          "expected",
+          "answer"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "implementation",
+    "seed",
+    "size",
+    "cases",
+    "mismatches",
+    "agrees",
+    "algorithms",
+    "failures"
+  ]
+}

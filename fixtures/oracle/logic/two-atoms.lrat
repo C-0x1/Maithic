@@ -1,0 +1,4 @@
+c Clause 5 is the unit "2": assuming -2, clause 1 gives 1 and clause 2 is then false.
+5 2 0 1 2 0
+c With 2 true, clause 3 gives 1 and clause 4 is then false.
+6 0 5 3 4 0

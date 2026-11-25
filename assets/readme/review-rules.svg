@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 560" role="img" aria-labelledby="review-rules-t review-rules-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="review-rules-t">What the review looks for, and where each finding comes from</title>
+  <desc id="review-rules-d">A table of eight rules. sorry: a proof that contains sorry or rests on one, an error, read from Lean. axiom: a declaration that rests on an axiom beyond Lean's logic, a warning, from Lean. duplicate: a theorem that states what another already states, a warning, from Lean. docstring and naming: notes, from Lean. automation: a proof that one call of automation replaces, and unneeded-step: a step that can be deleted, both suggestions that Lean accepted. suppression: a suppression comment without a reason, a warning, from the policy.</desc>
+  <rect width="1040" height="560" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="960.0" height="32.0" rx="8" fill="#2B2F77"/>
+  <rect x="40.0" y="128.0" width="960.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="196.0" width="960.0" height="48.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="278.0" width="960.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="360.0" width="960.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="427.0" width="960.0" height="1.5" rx="0" fill="#C9CCE8"/>
+  <rect x="40.0" y="446.0" width="960.0" height="84.0" rx="10" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="562.3" lengthAdjust="spacingAndGlyphs">Eight rules, and none of them is an opinion about text</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="235.7" lengthAdjust="spacingAndGlyphs">maithic review PATH --suggest</text>
+  <text x="427.9" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="33.3" lengthAdjust="spacingAndGlyphs">Finds</text>
+  <text x="714.0" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="48.6" lengthAdjust="spacingAndGlyphs">Severity</text>
+  <text x="891.0" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="72.9" lengthAdjust="spacingAndGlyphs">Comes from</text>
+  <text x="54.0" y="149.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="37.6" lengthAdjust="spacingAndGlyphs">sorry</text>
+  <text x="427.9" y="149.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="360.0" lengthAdjust="spacingAndGlyphs">A proof that contains sorry, or rests on one through a lemma it uses.</text>
+  <text x="714.0" y="149.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="25.3" lengthAdjust="spacingAndGlyphs">error</text>
+  <text x="891.0" y="149.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="26.7" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="54.0" y="183.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="37.6" lengthAdjust="spacingAndGlyphs">axiom</text>
+  <text x="427.9" y="183.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="303.2" lengthAdjust="spacingAndGlyphs">A declaration that rests on an axiom beyond Lean's logic.</text>
+  <text x="714.0" y="183.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="42.0" lengthAdjust="spacingAndGlyphs">warning</text>
+  <text x="891.0" y="183.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="26.7" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="54.0" y="224.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="67.7" lengthAdjust="spacingAndGlyphs">duplicate</text>
+  <text x="427.9" y="216.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="356.9" lengthAdjust="spacingAndGlyphs">A theorem that states what another already states, up to the names</text>
+  <text x="427.9" y="232.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="80.0" lengthAdjust="spacingAndGlyphs">of its variables.</text>
+  <text x="714.0" y="224.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="42.0" lengthAdjust="spacingAndGlyphs">warning</text>
+  <text x="891.0" y="224.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="26.7" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="54.0" y="265.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="67.7" lengthAdjust="spacingAndGlyphs">docstring</text>
+  <text x="427.9" y="265.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="220.2" lengthAdjust="spacingAndGlyphs">A public definition without documentation.</text>
+  <text x="714.0" y="265.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="23.4" lengthAdjust="spacingAndGlyphs">note</text>
+  <text x="891.0" y="265.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="26.7" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="54.0" y="299.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="45.1" lengthAdjust="spacingAndGlyphs">naming</text>
+  <text x="427.9" y="299.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="138.8" lengthAdjust="spacingAndGlyphs">A name out of convention.</text>
+  <text x="714.0" y="299.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="23.4" lengthAdjust="spacingAndGlyphs">note</text>
+  <text x="891.0" y="299.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="26.7" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="54.0" y="340.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="75.2" lengthAdjust="spacingAndGlyphs">automation</text>
+  <text x="427.9" y="332.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="344.9" lengthAdjust="spacingAndGlyphs">A proof that one call of rfl, simp, omega, decide, grind or simp_all</text>
+  <text x="427.9" y="348.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="48.7" lengthAdjust="spacingAndGlyphs">replaces.</text>
+  <text x="714.0" y="340.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="23.4" lengthAdjust="spacingAndGlyphs">note</text>
+  <text x="891.0" y="340.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="150.1" lengthAdjust="spacingAndGlyphs">a suggestion Lean accepted</text>
+  <text x="54.0" y="381.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="97.8" lengthAdjust="spacingAndGlyphs">unneeded-step</text>
+  <text x="427.9" y="381.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="196.2" lengthAdjust="spacingAndGlyphs">A step of a proof that can be deleted.</text>
+  <text x="714.0" y="381.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="23.4" lengthAdjust="spacingAndGlyphs">note</text>
+  <text x="891.0" y="381.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="150.1" lengthAdjust="spacingAndGlyphs">a suggestion Lean accepted</text>
+  <text x="54.0" y="415.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="82.8" lengthAdjust="spacingAndGlyphs">suppression</text>
+  <text x="427.9" y="415.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="222.8" lengthAdjust="spacingAndGlyphs">A suppression comment without a reason.</text>
+  <text x="714.0" y="415.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="42.0" lengthAdjust="spacingAndGlyphs">warning</text>
+  <text x="891.0" y="415.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="50.7" lengthAdjust="spacingAndGlyphs">the policy</text>
+  <text x="56.0" y="471.0" font-size="13" fill="#14162B" textLength="807.9" lengthAdjust="spacingAndGlyphs">The first five are read from what Lean elaborated: a dependency is there because the proof term refers to it, whether or not the text names it.</text>
+  <text x="56.0" y="495.0" font-size="13" fill="#14162B" textLength="804.4" lengthAdjust="spacingAndGlyphs">A suggested edit is elaborated by Lean in the place of the original proof, and shown only when Lean accepts it with no error and no warning.</text>
+  <text x="56.0" y="513.0" font-size="13" fill="#14162B" textLength="438.2" lengthAdjust="spacingAndGlyphs">With --ai, a model adds notes on readability; those are marked as a model's.</text>
+</svg>

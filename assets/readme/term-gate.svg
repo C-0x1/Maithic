@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 223" width="780" height="223" role="img" aria-label="A terminal session: maithic bench gate holds a benchmark run against the stored baseline. The committed run passes, with 24 of 24 problems verified as in the baseline. A copy of the run in which one result was changed fails: problem basics-007, which the baseline verified, is not verified, and the command ends with status 13.">
+  <title>A terminal session: maithic bench gate holds a benchmark run against the stored baseline. The committed run passes, with 24 of 24 problems verified as in the baseline. A copy of the run in which one result was changed fails: problem basics-007, which the baseline verified, is not verified, and the command ends with status 13.</title>
+  <rect width="780" height="223" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h760a10 10 0 0 1 10 10v26h-780z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="390" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic bench gate</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="422.82" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic bench gate bench/results/basics-portfolio.json</text>
+    <text x="22.00" y="77" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics</text>
+    <text x="84.64" y="77" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">passed</text>
+    <text x="147.28" y="77" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">verified 24 of 24 (baseline 24 of 24)</text>
+    <text x="452.65" y="77" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">time x0.82</text>
+    <text x="546.61" y="77" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">candidates x1.00</text>
+    <text x="22.00" y="96" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the gate is passed</text>
+    <text x="22.00" y="134" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="134" textLength="375.84" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic bench gate fixtures/bench/regressed.json</text>
+    <text x="22.00" y="153" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">basics</text>
+    <text x="84.64" y="153" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">FAILED</text>
+    <text x="147.28" y="153" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">verified 23 of 24 (baseline 24 of 24)</text>
+    <text x="452.65" y="153" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">time x0.82</text>
+    <text x="546.61" y="153" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">candidates x1.00</text>
+    <text x="37.66" y="172" textLength="720.36" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1 problem(s) that the baseline verified are not verified: basics-007 (at most 0 may be lost)</text>
+    <text x="22.00" y="191" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the gate is not passed</text>
+  </g>
+</svg>

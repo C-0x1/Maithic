@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+ (name maithic_oracle)
+ (public_name maithic.oracle)
+ (libraries maithic_base maithic_schema maithic_bridge))

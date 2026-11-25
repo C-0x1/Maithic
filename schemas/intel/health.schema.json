@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Health of a code base",
+  "description": "Counts of the declarations of a set of Lean files; every unfinished proof with its place and, where the sorry stands in tactic position, the goals there; the declarations that rest on sorry through another; and the axioms in use with the declarations that rest on each.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.intel.health/1"
+    },
+    "files": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "filesWithErrors": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "declarations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "byKind": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "documented": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "restingOnSorry": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unfinished": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "file": {
+            "type": "string"
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "column": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "goals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "through": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name",
+          "file",
+          "line",
+          "column",
+          "goals"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "axioms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "axiom": {
+            "type": "string",
+            "minLength": 1
+          },
+          "standard": {
+            "type": "boolean"
+          },
+          "usedBy": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "file": {
+                  "type": "string"
+                },
+                "line": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "name",
+                "file",
+                "line"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "axiom",
+          "standard",
+          "usedBy"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "files",
+    "filesWithErrors",
+    "declarations",
+    "byKind",
+    "documented",
+    "restingOnSorry",
+    "unfinished",
+    "axioms"
+  ],
+  "additionalProperties": false
+}

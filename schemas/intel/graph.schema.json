@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Code graph",
+  "description": "A Lean code base as a graph. Nodes are declarations, modules, namespaces and files, each named by an identifier that begins with the first letter of its kind and a colon. Edges say that a declaration uses another (in its type, its value or both), that a module imports another, that a file, module or namespace contains something, that an instance is an instance of a class, and that a structure extends another. Declarations from outside the scanned files are nodes that are not internal and carry no further facts.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.intel.graph/1"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[dmnf]:."
+          },
+          "kind": {
+            "enum": [
+              "declaration",
+              "module",
+              "namespace",
+              "file"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "internal": {
+            "type": "boolean"
+          },
+          "declKind": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string"
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "endLine": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "nameLine": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "The line on which the name stands; line is where the declaration begins, its documentation included."
+          },
+          "usesSorry": {
+            "type": "boolean"
+          },
+          "containsSorry": {
+            "type": "boolean"
+          },
+          "axioms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "documented": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "name",
+          "internal"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 3
+          },
+          "target": {
+            "type": "string",
+            "minLength": 3
+          },
+          "kind": {
+            "enum": [
+              "uses",
+              "imports",
+              "contains",
+              "instance-of",
+              "extends"
+            ]
+          },
+          "via": {
+            "enum": [
+              "type",
+              "value",
+              "both"
+            ]
+          }
+        },
+        "required": [
+          "source",
+          "target",
+          "kind"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "nodes",
+    "edges"
+  ],
+  "additionalProperties": false
+}

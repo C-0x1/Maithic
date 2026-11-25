@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clausal proof fixtures",
+  "description": "A list of clausal proofs with the verdict the checker must give on each. A problem is a clause set in the DIMACS format and a proof is in the LRAT text form; both are files next to the list. A proof is accepted, rejected at a step for a reason, or unreadable for a reason.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.oracle.proofs/1"
+    },
+    "description": {
+      "type": "string"
+    },
+    "proofs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "problem": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+\\.cnf$"
+          },
+          "proof": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+\\.lrat$"
+          },
+          "expect": {
+            "enum": [
+              "accepted",
+              "rejected",
+              "unreadable"
+            ]
+          },
+          "step": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name",
+          "problem",
+          "proof",
+          "expect"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "expect": {
+                  "const": "rejected"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "step",
+                "reason"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "expect": {
+                  "const": "unreadable"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "reason"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "proofs"
+  ],
+  "additionalProperties": false
+}

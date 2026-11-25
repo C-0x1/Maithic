@@ -1,0 +1,17 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "linear",
+  "domain": "int",
+  "variables": ["x", "y"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "3 * x >= 4"
+    },
+    {
+      "name": "h2",
+      "statement": "y >= x"
+    }
+  ],
+  "goal": "y >= 2"
+}

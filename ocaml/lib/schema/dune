@@ -1,0 +1,4 @@
+(library
+ (name maithic_schema)
+ (public_name maithic.schema)
+ (libraries maithic_base))

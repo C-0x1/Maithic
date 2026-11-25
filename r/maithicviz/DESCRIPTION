@@ -1,0 +1,23 @@
+Package: maithicviz
+Title: Figures for Maithic Reports
+Version: 0.1.0
+Authors@R: person("The Maithic Authors", email = "maintainers@example.org", role = c("aut", "cre"))
+Description: Draws the charts used in Maithic reports and documentation, in
+    one visual style, from the result files written by the 'maithic' command.
+    Every figure is drawn from data and can be regenerated with one call.
+License: Apache License (>= 2)
+Encoding: UTF-8
+Depends:
+    R (>= 4.4)
+Imports:
+    ggplot2 (>= 3.5.0),
+    graphics,
+    grDevices,
+    maithicstats,
+    stats,
+    svglite,
+    tools,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

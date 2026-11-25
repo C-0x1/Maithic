@@ -1,0 +1,44 @@
+{
+  "schema": "maithic.corpus.harvest/1",
+  "repository": "lean",
+  "revision": "fixture",
+  "toolchain": "4.36.0",
+  "files": [
+    {
+      "file": "fixtures/intel/lean/Demo.lean",
+      "outcome": "ok",
+      "errors": 0,
+      "theorems": 6,
+      "steps": 5
+    },
+    {
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "outcome": "ok",
+      "errors": 0,
+      "theorems": 9,
+      "steps": 70
+    },
+    {
+      "file": "lean/Maithic/Algo/Sort/Linear.lean",
+      "outcome": "ok",
+      "errors": 0,
+      "theorems": 4,
+      "steps": 63
+    },
+    {
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "outcome": "ok",
+      "errors": 0,
+      "theorems": 9,
+      "steps": 1
+    }
+  ],
+  "dataset": "fixtures/corpus/demo",
+  "manifest": "fixtures/corpus/demo/manifest.json",
+  "records": {
+    "theorem": 28,
+    "step": 139,
+    "premise": 613,
+    "pair": 88
+  }
+}

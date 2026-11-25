@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+ (name maithic_lookup)
+ (public_name maithic.lookup)
+ (libraries unix maithic_base maithic_schema maithic_bridge))

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Network property",
+  "description": "A property of a network: every point of the input box is mapped into the output box. A box is a list of intervals, one for each coordinate, each a pair of a lower and an upper bound. Numbers are written as in a network.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.nnv.property/1"
+    },
+    "name": {
+      "type": "string"
+    },
+    "input": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?[0-9]+(/[0-9]+|\\.[0-9]+)?([eE][+-]?[0-9]+)?$"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 1
+    },
+    "output": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?[0-9]+(/[0-9]+|\\.[0-9]+)?([eE][+-]?[0-9]+)?$"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "input",
+    "output"
+  ]
+}

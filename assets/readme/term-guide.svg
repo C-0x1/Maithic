@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 717 508" width="717" height="508" role="img" aria-label="A terminal session: the same theorem is proved twice by step-wise search, first without and then with a trained model that orders the tactics. Both proofs are verified by Lean; the guided one is a step shorter, and the last line says that the guide answered six of six questions.">
+  <title>A terminal session: the same theorem is proved twice by step-wise search, first without and then with a trained model that orders the tactics. Both proofs are verified by Lean; the guided one is a step shorter, and the last line says that the guide answered six of six questions.</title>
+  <rect width="717" height="508" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h697a10 10 0 0 1 10 10v26h-717z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="359" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic prove --guide</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="399.33" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic prove examples/guided.lean --no-ai --search</text>
+    <text x="22.00" y="77" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">found_iff_mem</text>
+    <text x="139.45" y="77" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="217.75" y="77" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(search, 19 attempt(s), 2656 ms)</text>
+    <text x="37.66" y="96" textLength="579.42" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">statement: ∀ {α : Type} [inst : BEq α] [LawfulBEq α] {x : α} {l : List α},</text>
+    <text x="37.66" y="115" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(firstIndex x l).isSome = true ↔ x ∈ l</text>
+    <text x="37.66" y="134" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">proof:</text>
+    <text x="123.79" y="134" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="139.45" y="153" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">induction l</text>
+    <text x="139.45" y="172" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">· simp [firstIndex]</text>
+    <text x="139.45" y="191" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">· simp</text>
+    <text x="155.11" y="210" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">simp [firstIndex]</text>
+    <text x="155.11" y="229" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">grind</text>
+    <text x="37.66" y="248" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axioms:</text>
+    <text x="123.79" y="248" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Classical.choice, Quot.sound</text>
+    <text x="22.00" y="286" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="286" textLength="657.72" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic prove examples/guided.lean --no-ai --guide fixtures/guide/library/model.json</text>
+    <text x="22.00" y="305" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">found_iff_mem</text>
+    <text x="139.45" y="305" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="217.75" y="305" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(search, 19 attempt(s), 2549 ms)</text>
+    <text x="37.66" y="324" textLength="579.42" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">statement: ∀ {α : Type} [inst : BEq α] [LawfulBEq α] {x : α} {l : List α},</text>
+    <text x="37.66" y="343" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(firstIndex x l).isSome = true ↔ x ∈ l</text>
+    <text x="37.66" y="362" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">proof:</text>
+    <text x="123.79" y="362" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by</text>
+    <text x="139.45" y="381" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">induction l</text>
+    <text x="139.45" y="400" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">· simp [firstIndex]</text>
+    <text x="139.45" y="419" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">· simp [firstIndex]</text>
+    <text x="155.11" y="438" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">grind</text>
+    <text x="37.66" y="457" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axioms:</text>
+    <text x="123.79" y="457" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext, Classical.choice, Quot.sound</text>
+    <text x="22.00" y="476" textLength="555.93" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">the guide fixtures/guide/library/model.json answered 6 of 6 question(s)</text>
+  </g>
+</svg>

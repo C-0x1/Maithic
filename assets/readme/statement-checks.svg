@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="t d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="t">Testing a statement before proving it</title>
+  <desc id="d">Three commands of the Lean library examine a statement. The first, maithic_test, generates values and finds that x times y is at least zero fails at x equal to 1 and y equal to minus 1, after shrinking. The second, maithic_vacuous, finds that a statement with the hypotheses x less than 3 and x greater than 5 is vacuous, because omega derives a contradiction from the two. The third, maithic_necessity, drops each hypothesis in turn: without a at most b the statement fails at a equal to 3 and b equal to 0, and without b less than 1000 it still holds. Below, the findings are sorted by what they are worth. Vacuity, a hypothesis that is not needed and a trivial conclusion rest on proofs that the kernel accepted. A falsified statement and a needed hypothesis come with a counterexample that can be checked by hand. Passing a number of cases and finding nothing are evidence only and are never reported as a proof.</desc>
+  <rect width="960" height="600" fill="#FAF8F4"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#14162B" textLength="518.3" lengthAdjust="spacingAndGlyphs">Before the proof: is the statement worth proving?</text>
+  <text x="40" y="68" font-size="14" fill="#5B6477" textLength="561.1" lengthAdjust="spacingAndGlyphs">Three commands in Lean. Each answer below is the real output for the statement above it.</text>
+
+  <g font-size="13">
+    <g transform="translate(40 92)">
+      <rect width="280" height="312" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h260a10 10 0 0 1 10 10v34h-280z" fill="#2B2F77"/>
+      <text x="16" y="28" font-size="15" font-weight="700" fill="#FFFFFF" font-family="Menlo, Consolas, monospace" textLength="107.2" lengthAdjust="spacingAndGlyphs">#maithic_test</text>
+      <text x="16" y="68" font-size="15" font-weight="700" fill="#14162B" textLength="126.7" lengthAdjust="spacingAndGlyphs">Can it be broken?</text>
+      <text x="16" y="90" fill="#5B6477" textLength="220.9" lengthAdjust="spacingAndGlyphs">Values are generated, small ones first.</text>
+      <text x="16" y="108" fill="#5B6477" textLength="228.3" lengthAdjust="spacingAndGlyphs">A failing case is shrunk while it still fails.</text>
+      <rect x="16" y="124" width="248" height="40" rx="6" fill="#E8E9F3"/>
+      <text x="28" y="149" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="151.3" lengthAdjust="spacingAndGlyphs">∀ x y : Int, x * y ≥ 0</text>
+      <rect x="16" y="180" width="248" height="112" rx="6" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+      <g font-size="12.5" font-family="Menlo, Consolas, monospace" fill="#14162B">
+        <text x="28" y="206" textLength="144.4" lengthAdjust="spacingAndGlyphs">falsified at case 12,</text>
+        <text x="28" y="226" textLength="96.3" lengthAdjust="spacingAndGlyphs">shrunk 2 times</text>
+        <text x="28" y="252" font-weight="700" fill="#E5484D" textLength="41.2" lengthAdjust="spacingAndGlyphs">  x := 1</text>
+        <text x="28" y="272" font-weight="700" fill="#E5484D" textLength="48.1" lengthAdjust="spacingAndGlyphs">  y := -1</text>
+      </g>
+    </g>
+
+    <g transform="translate(340 92)">
+      <rect width="280" height="312" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h260a10 10 0 0 1 10 10v34h-280z" fill="#2B2F77"/>
+      <text x="16" y="28" font-size="15" font-weight="700" fill="#FFFFFF" font-family="Menlo, Consolas, monospace" textLength="132.0" lengthAdjust="spacingAndGlyphs">#maithic_vacuous</text>
+      <text x="16" y="68" font-size="15" font-weight="700" fill="#14162B" textLength="229.2" lengthAdjust="spacingAndGlyphs">Is it true for the wrong reasons?</text>
+      <text x="16" y="90" fill="#5B6477" textLength="228.3" lengthAdjust="spacingAndGlyphs">Contradictory hypotheses, empty types,</text>
+      <text x="16" y="108" fill="#5B6477" textLength="224.0" lengthAdjust="spacingAndGlyphs">a conclusion that needs no hypothesis.</text>
+      <rect x="16" y="124" width="248" height="40" rx="6" fill="#E8E9F3"/>
+      <text x="28" y="141" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="151.8" lengthAdjust="spacingAndGlyphs">∀ (x : Nat) (h₁ : x &lt; 3)</text>
+      <text x="28" y="157" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="120.2" lengthAdjust="spacingAndGlyphs">  (h₂ : x &gt; 5), x = 4</text>
+      <rect x="16" y="180" width="248" height="112" rx="6" fill="#FFFFFF" stroke="#F0A92E" stroke-width="1.5"/>
+      <g font-size="12.5" font-family="Menlo, Consolas, monospace" fill="#14162B">
+        <text x="28" y="206" font-weight="700" textLength="55.0" lengthAdjust="spacingAndGlyphs">vacuous:</text>
+        <text x="28" y="226" textLength="123.8" lengthAdjust="spacingAndGlyphs">the hypotheses are</text>
+        <text x="28" y="246" textLength="158.1" lengthAdjust="spacingAndGlyphs">contradictory (found by</text>
+        <text x="28" y="266" textLength="151.3" lengthAdjust="spacingAndGlyphs">omega, from h₁ and h₂)</text>
+      </g>
+    </g>
+
+    <g transform="translate(640 92)">
+      <rect width="280" height="312" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h260a10 10 0 0 1 10 10v34h-280z" fill="#2B2F77"/>
+      <text x="16" y="28" font-size="15" font-weight="700" fill="#FFFFFF" font-family="Menlo, Consolas, monospace" textLength="148.5" lengthAdjust="spacingAndGlyphs">#maithic_necessity</text>
+      <text x="16" y="68" font-size="15" font-weight="700" fill="#14162B" textLength="225.1" lengthAdjust="spacingAndGlyphs">Which hypotheses are needed?</text>
+      <text x="16" y="90" fill="#5B6477" textLength="227.6" lengthAdjust="spacingAndGlyphs">Each one is dropped in turn; what is left</text>
+      <text x="16" y="108" fill="#5B6477" textLength="199.5" lengthAdjust="spacingAndGlyphs">is proved by automation, or tested.</text>
+      <rect x="16" y="124" width="248" height="40" rx="6" fill="#E8E9F3"/>
+      <text x="28" y="141" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="158.1" lengthAdjust="spacingAndGlyphs">∀ (a b : Nat) (h : a ≤ b)</text>
+      <text x="28" y="157" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="164.5" lengthAdjust="spacingAndGlyphs">  (h' : b &lt; 1000), a ≤ b + 1</text>
+      <rect x="16" y="180" width="248" height="112" rx="6" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.5"/>
+      <g font-size="11.5" font-family="Menlo, Consolas, monospace" fill="#14162B">
+        <text x="28" y="202" textLength="145.5" lengthAdjust="spacingAndGlyphs"><tspan font-weight="700">h</tspan> is needed: without it</text>
+        <text x="28" y="219" textLength="139.2" lengthAdjust="spacingAndGlyphs">the statement fails at</text>
+        <text x="28" y="236" font-weight="700" fill="#E5484D" textLength="82.2" lengthAdjust="spacingAndGlyphs">  a := 3   b := 0</text>
+        <text x="28" y="258" textLength="164.5" lengthAdjust="spacingAndGlyphs"><tspan font-weight="700">h'</tspan> is not needed: it holds</text>
+        <text x="28" y="275" textLength="170.8" lengthAdjust="spacingAndGlyphs">without it <tspan fill="#0FA89B" font-weight="700">(found by omega)</tspan></text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(40 428)" font-size="13">
+    <text x="0" y="14" font-size="15" font-weight="700" fill="#14162B" textLength="165.0" lengthAdjust="spacingAndGlyphs">What a finding is worth</text>
+    <g transform="translate(0 30)">
+      <rect width="372" height="104" rx="10" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.5"/>
+      <text x="16" y="26" font-weight="700" fill="#0FA89B" textLength="142.3" lengthAdjust="spacingAndGlyphs">Accepted by the kernel</text>
+      <text x="16" y="50" fill="#14162B" textLength="302.1" lengthAdjust="spacingAndGlyphs">vacuous: False, derived from the named hypotheses</text>
+      <text x="16" y="70" fill="#14162B" textLength="245.0" lengthAdjust="spacingAndGlyphs">not needed: a proof without the hypothesis</text>
+      <text x="16" y="90" fill="#14162B" textLength="243.5" lengthAdjust="spacingAndGlyphs">trivial: the conclusion, proved from nothing</text>
+    </g>
+    <g transform="translate(392 30)">
+      <rect width="268" height="104" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+      <text x="16" y="26" font-weight="700" fill="#E5484D" textLength="112.2" lengthAdjust="spacingAndGlyphs">A counterexample</text>
+      <text x="16" y="50" fill="#14162B" textLength="203.1" lengthAdjust="spacingAndGlyphs">falsified, or a hypothesis is needed:</text>
+      <text x="16" y="70" fill="#14162B" textLength="201.6" lengthAdjust="spacingAndGlyphs">values at which the statement fails,</text>
+      <text x="16" y="90" fill="#14162B" textLength="179.2" lengthAdjust="spacingAndGlyphs">small enough to check by hand</text>
+    </g>
+    <g transform="translate(680 30)">
+      <rect width="200" height="104" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <text x="16" y="26" font-weight="700" fill="#5B6477" textLength="87.4" lengthAdjust="spacingAndGlyphs">Evidence only</text>
+      <text x="16" y="50" fill="#14162B" textLength="104.8" lengthAdjust="spacingAndGlyphs">passed 100 cases</text>
+      <text x="16" y="70" fill="#14162B" textLength="78.8" lengthAdjust="spacingAndGlyphs">nothing found</text>
+      <text x="16" y="90" fill="#5B6477" textLength="146.0" lengthAdjust="spacingAndGlyphs">never reported as a proof</text>
+    </g>
+  </g>
+</svg>

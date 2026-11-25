@@ -1,0 +1,183 @@
+# Capability register for P16 Blueprint.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P16"
+name = "Blueprint"
+title = "Formalization project planner"
+mission = "Plan and steer a formalization: describe a theorem as a dependency graph of definitions and lemmas, generate the Lean skeleton, and track what is stated, proved and blocked."
+
+[[group]]
+id = "P16-01"
+title = "Blueprint document model"
+language = "OCaml"
+path = "ocaml/lib/blueprint/model/"
+purpose = "The data structure that pairs informal mathematics with formal declarations."
+
+  [[group.capability]]
+  id = "P16-01-01"
+  title = "Node record"
+  spec = "Identifier, kind, title, informal statement, informal proof and Lean declaration name."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-01-02"
+  title = "Node kinds"
+  spec = "Definition, lemma, proposition, theorem and corollary."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-01-03"
+  title = "Dependency edges"
+  spec = "Uses-in-statement and uses-in-proof edges between nodes."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-01-04"
+  title = "Blueprint file format"
+  spec = "Markdown files with front matter, one node per section."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-01-05"
+  title = "Parser and printer"
+  spec = "Round-trip parsing and printing of blueprint files."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-01-06"
+  title = "Blueprint validation"
+  spec = "Unique identifiers, resolvable references and an acyclic graph."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-01-07"
+  title = "Blueprint graph export"
+  spec = "Export nodes and edges as JSON."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_blueprint.ml"]
+
+[[group]]
+id = "P16-02"
+title = "AI decomposition planner"
+language = "OCaml"
+path = "ocaml/lib/blueprint/plan/"
+purpose = "Breaks an informal argument into a graph of lemmas."
+
+  [[group.capability]]
+  id = "P16-02-01"
+  title = "Blueprint decomposition prompt"
+  spec = "A model extracts definitions, lemmas and their dependencies."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-02-02"
+  title = "Plan to blueprint"
+  spec = "Write the plan as blueprint files."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_blueprint.ml"]
+
+[[group]]
+id = "P16-03"
+title = "Skeleton generation"
+language = "OCaml"
+path = "ocaml/lib/blueprint/skeleton/"
+purpose = "Writes Lean files that state everything and prove nothing yet."
+
+  [[group.capability]]
+  id = "P16-03-01"
+  title = "Skeleton emission"
+  spec = "Emit declarations with statements and `sorry` proofs, each tagged with its blueprint identifier."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-03-02"
+  title = "Skeleton compilation"
+  spec = "The generated skeleton must compile."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-03-03"
+  title = "Dependency-respecting order"
+  spec = "Order declarations so dependencies come first."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+[[group]]
+id = "P16-04"
+title = "Progress tracking"
+language = "OCaml"
+path = "ocaml/lib/blueprint/progress/"
+purpose = "Knows what is done, what is blocked and what can be worked on now."
+
+  [[group.capability]]
+  id = "P16-04-01"
+  title = "Status computation"
+  spec = "Combine blueprint files with exported Lean status."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-04-02"
+  title = "Status summary"
+  spec = "Counts by status and kind."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-04-03"
+  title = "Ready frontier"
+  spec = "Nodes not yet proved whose dependencies are all proved."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-04-04"
+  title = "Blocked nodes"
+  spec = "Nodes waiting on unproved dependencies, with the blockers listed."
+  status = "done"
+  tests = ["ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-04-05"
+  title = "Status command"
+  spec = "`maithic blueprint status`."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_blueprint.ml"]
+
+  [[group.capability]]
+  id = "P16-04-06"
+  title = "Next command"
+  spec = "`maithic blueprint next` lists the frontier in priority order."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_blueprint.ml"]
+
+[[group]]
+id = "P16-05"
+title = "Project analytics"
+language = "R"
+path = "r/maithicstats/R/blueprint-*.R"
+purpose = "Shows how a formalization project is going."
+
+  [[group.capability]]
+  id = "P16-05-01"
+  title = "Status series import"
+  spec = "Load status snapshots."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-blueprint.R"]
+
+  [[group.capability]]
+  id = "P16-05-02"
+  title = "Status composition"
+  spec = "Share of nodes by status."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-blueprint.R"]

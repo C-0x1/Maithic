@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 398" role="img" aria-labelledby="split-by-theorem-t split-by-theorem-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="split-by-theorem-t">Why the data is split by theorem</title>
+  <desc id="split-by-theorem-d">Two cards side by side. Split by step: the steps of one proof land on both sides, the model is tested on states it has all but seen, and the measured accuracy flatters it. Split by theorem, which is what is done: every step of a proof is on the same side, the model is measured on proofs it has seen no part of, and the split depends on the set of theorems and the seed and on nothing else.</desc>
+  <rect width="960" height="398" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="431.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="489.0" y="96.0" width="431.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="308.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#E5484D"/>
+  <circle cx="63.0" cy="152.0" r="8" fill="#E5484D"/>
+  <path d="M59.0 148.0 l8 8 M67.0 148.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <circle cx="63.0" cy="176.0" r="8" fill="#E5484D"/>
+  <path d="M59.0 172.0 l8 8 M67.0 172.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <circle cx="63.0" cy="218.0" r="8" fill="#E5484D"/>
+  <path d="M59.0 214.0 l8 8 M67.0 214.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <rect x="54.0" y="254.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M489.0 106.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#0B7F75"/>
+  <circle cx="512.0" cy="152.0" r="8" fill="#0FA89B"/>
+  <path d="M507.5 152.0 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="512.0" cy="176.0" r="8" fill="#0FA89B"/>
+  <path d="M507.5 176.0 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="512.0" cy="200.0" r="8" fill="#0FA89B"/>
+  <path d="M507.5 200.0 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="503.0" y="254.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="326.4" lengthAdjust="spacingAndGlyphs">Split by theorem, never by step</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="536.4" lengthAdjust="spacingAndGlyphs">MaithicData.random_split(theorems; seed = 7)   ·   maithic guide train</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="50.6" lengthAdjust="spacingAndGlyphs">By step</text>
+  <text x="80.0" y="155.0" font-size="13" fill="#14162B" textLength="242.8" lengthAdjust="spacingAndGlyphs">The steps of one proof land on both sides.</text>
+  <text x="80.0" y="179.0" font-size="13" fill="#14162B" textLength="314.4" lengthAdjust="spacingAndGlyphs">The model is tested on states it has all but seen during</text>
+  <text x="80.0" y="197.0" font-size="13" fill="#14162B" textLength="46.3" lengthAdjust="spacingAndGlyphs">training.</text>
+  <text x="80.0" y="221.0" font-size="13" fill="#14162B" textLength="284.7" lengthAdjust="spacingAndGlyphs">The accuracy that is measured flatters the model.</text>
+  <text x="64.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">not done here</text>
+  <text x="503.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="77.0" lengthAdjust="spacingAndGlyphs">By theorem</text>
+  <text x="529.0" y="155.0" font-size="13" fill="#14162B" textLength="239.2" lengthAdjust="spacingAndGlyphs">Every step of a proof is on the same side.</text>
+  <text x="529.0" y="179.0" font-size="13" fill="#14162B" textLength="322.3" lengthAdjust="spacingAndGlyphs">The model is measured on proofs it has seen no part of.</text>
+  <text x="529.0" y="203.0" font-size="13" fill="#14162B" textLength="318.0" lengthAdjust="spacingAndGlyphs">The split depends on the set of theorems and the seed,</text>
+  <text x="529.0" y="221.0" font-size="13" fill="#14162B" textLength="320.9" lengthAdjust="spacingAndGlyphs">and on nothing else: not on the order of the records, not</text>
+  <text x="529.0" y="239.0" font-size="13" fill="#14162B" textLength="92.5" lengthAdjust="spacingAndGlyphs">on the machine.</text>
+  <text x="513.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="180.0" lengthAdjust="spacingAndGlyphs">check_leakage(train, test)</text>
+  <text x="56.0" y="333.0" font-size="13" fill="#14162B" textLength="731.8" lengthAdjust="spacingAndGlyphs">check_leakage returns true, or fails with the list of theorems that are on both sides. The record of a training run states the split it</text>
+  <text x="56.0" y="351.0" font-size="13" fill="#14162B" textLength="288.3" lengthAdjust="spacingAndGlyphs">used, so the number it reports can be reproduced.</text>
+</svg>

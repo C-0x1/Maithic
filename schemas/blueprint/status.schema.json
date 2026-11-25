@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blueprint status",
+  "description": "Where a formalization stands: the nodes of a blueprint, each with the status Lean's report gives it. A node is planned when Lean does not have its declaration, stated when the declaration's own text contains sorry, proved when its own text is finished and something it rests on is not, and done when nothing below it is open. blockers are the nodes it uses that are neither proved nor done. A node is ready when it is neither proved nor done and has no blocker; unblocks counts the nodes resting on it, directly or not, that are neither proved nor done. frontier lists the ready nodes, the most useful first. notes say where the blueprint and the Lean text disagree about what a node uses. label names the snapshot.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.blueprint.status/1"
+    },
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "lean": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "errors": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "file",
+        "errors"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "by_status": {
+          "type": "object",
+          "properties": {
+            "planned": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "stated": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "proved": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "done": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "planned",
+            "stated",
+            "proved",
+            "done"
+          ]
+        },
+        "by_kind": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "planned": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "stated": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "proved": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "done": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "planned",
+              "stated",
+              "proved",
+              "done"
+            ]
+          }
+        },
+        "complete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "nodes",
+        "by_status",
+        "by_kind",
+        "complete"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "definition",
+              "lemma",
+              "proposition",
+              "theorem",
+              "corollary"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "lean": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "planned",
+              "stated",
+              "proved",
+              "done"
+            ]
+          },
+          "uses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proof_uses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "blockers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ready": {
+            "type": "boolean"
+          },
+          "unblocks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "status",
+          "uses",
+          "proof_uses",
+          "blockers",
+          "ready",
+          "unblocks",
+          "notes"
+        ]
+      }
+    },
+    "frontier": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "blockers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "blockers"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "title",
+    "summary",
+    "nodes",
+    "frontier",
+    "blocked"
+  ]
+}

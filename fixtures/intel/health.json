@@ -1,0 +1,177 @@
+{
+  "schema": "maithic.intel.health/1",
+  "files": 4,
+  "filesWithErrors": 0,
+  "declarations": 41,
+  "byKind": {
+    "axiom": 1,
+    "class": 1,
+    "definition": 6,
+    "instance": 3,
+    "structure": 2,
+    "theorem": 28
+  },
+  "documented": 26,
+  "restingOnSorry": 3,
+  "unfinished": [
+    {
+      "name": "open_one",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 18,
+      "column": 2,
+      "goals": [
+        "n : Nat\n⊢ n + 0 = n"
+      ]
+    },
+    {
+      "name": "uses_open",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 20,
+      "column": 8,
+      "goals": [],
+      "through": "open_one"
+    },
+    {
+      "name": "term_gap",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 36,
+      "column": 8,
+      "goals": []
+    }
+  ],
+  "axioms": [
+    {
+      "axiom": "shortcut",
+      "standard": false,
+      "usedBy": [
+        {
+          "name": "by_shortcut",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "axiom": "Quot.sound",
+      "standard": true,
+      "usedBy": [
+        {
+          "name": "Maithic.Algo.insertionSort_idem",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 114
+        },
+        {
+          "name": "Maithic.Algo.linearSearch_first",
+          "file": "lean/Maithic/Algo/Sort/Linear.lean",
+          "line": 44
+        },
+        {
+          "name": "Maithic.Algo.sorted_append",
+          "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+          "line": 66
+        },
+        {
+          "name": "Maithic.Algo.sorted_insertSorted",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 60
+        },
+        {
+          "name": "Maithic.Algo.sorted_insertionSort",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 83
+        },
+        {
+          "name": "Maithic.Algo.sorted_singleton",
+          "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+          "line": 44
+        },
+        {
+          "name": "double_eq",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "axiom": "propext",
+      "standard": true,
+      "usedBy": [
+        {
+          "name": "Maithic.Algo.insertionSort_idem",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 114
+        },
+        {
+          "name": "Maithic.Algo.insertionSort_of_sorted",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 103
+        },
+        {
+          "name": "Maithic.Algo.instTotalPreorderInt",
+          "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+          "line": 26
+        },
+        {
+          "name": "Maithic.Algo.length_insertionSort",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 95
+        },
+        {
+          "name": "Maithic.Algo.linearSearch_first",
+          "file": "lean/Maithic/Algo/Sort/Linear.lean",
+          "line": 44
+        },
+        {
+          "name": "Maithic.Algo.linearSearch_isSome_iff",
+          "file": "lean/Maithic/Algo/Sort/Linear.lean",
+          "line": 80
+        },
+        {
+          "name": "Maithic.Algo.linearSearch_none",
+          "file": "lean/Maithic/Algo/Sort/Linear.lean",
+          "line": 64
+        },
+        {
+          "name": "Maithic.Algo.linearSearch_some",
+          "file": "lean/Maithic/Algo/Sort/Linear.lean",
+          "line": 25
+        },
+        {
+          "name": "Maithic.Algo.mem_insertSorted",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 31
+        },
+        {
+          "name": "Maithic.Algo.mem_insertionSort",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 99
+        },
+        {
+          "name": "Maithic.Algo.sorted_append",
+          "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+          "line": 66
+        },
+        {
+          "name": "Maithic.Algo.sorted_insertSorted",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 60
+        },
+        {
+          "name": "Maithic.Algo.sorted_insertionSort",
+          "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+          "line": 83
+        },
+        {
+          "name": "Maithic.Algo.sorted_singleton",
+          "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+          "line": 44
+        },
+        {
+          "name": "double_eq",
+          "file": "fixtures/intel/lean/Demo.lean",
+          "line": 8
+        }
+      ]
+    }
+  ]
+}

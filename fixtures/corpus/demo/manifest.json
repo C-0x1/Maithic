@@ -1,0 +1,45 @@
+{
+  "schema": "maithic.corpus.manifest/1",
+  "name": "demo",
+  "version": "1",
+  "sources": [
+    {
+      "repository": "lean",
+      "revision": "fixture",
+      "toolchain": "4.36.0",
+      "files": 4
+    }
+  ],
+  "records": {
+    "theorem": 28,
+    "step": 139,
+    "premise": 613,
+    "pair": 88
+  },
+  "shards": [
+    {
+      "kind": "theorem",
+      "file": "shards/theorem-9061bc60aa461f3d.jsonl",
+      "records": 28,
+      "sha256": "9061bc60aa461f3d8da56a87f418deb58357b708609ab03ac15c6b697f572193"
+    },
+    {
+      "kind": "step",
+      "file": "shards/step-d8198aec1f887eba.jsonl",
+      "records": 139,
+      "sha256": "d8198aec1f887ebaab94ecc0faa372a20db3ff9e47b71827e16c8b2186f29ad5"
+    },
+    {
+      "kind": "premise",
+      "file": "shards/premise-ec08cb92b1ed9c4e.jsonl",
+      "records": 613,
+      "sha256": "ec08cb92b1ed9c4e6ad83ad9ceb1c8f6ed8b2e24b1f5cbda2707c25812efb27f"
+    },
+    {
+      "kind": "pair",
+      "file": "shards/pair-cb4fd7ff3f223710.jsonl",
+      "records": 88,
+      "sha256": "cb4fd7ff3f223710f9812ba5b26e668c4da9cd4e567de93e11cc43600c20c138"
+    }
+  ]
+}

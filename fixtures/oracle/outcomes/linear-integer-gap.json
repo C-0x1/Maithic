@@ -1,0 +1,35 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "proved",
+  "certificate": {
+    "schema": "maithic.oracle.certificate/1",
+    "kind": "linear.farkas",
+    "claim": "∀ x y : ℤ, 2 * x + 4 * y < 7 → x + 2 * y ≥ 4 → False",
+    "data": {
+      "domain": "int",
+      "variables": ["x", "y"],
+      "hypotheses": [
+        {
+          "name": "h1",
+          "statement": "2 * x + 4 * y < 7"
+        },
+        {
+          "name": "h2",
+          "statement": "x + 2 * y >= 4"
+        }
+      ],
+      "goal": "false",
+      "refutations": [
+        {
+          "assumption": null,
+          "multipliers": ["1", "1"]
+        }
+      ]
+    },
+    "engine": {
+      "name": "MaithicOracle",
+      "version": "0.1.0",
+      "parameters": {}
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "schema": "maithic.blueprint.status/1",
+  "title": "Odd numbers, squares and triangles",
+  "label": "finished",
+  "lean": {
+    "file": "fixtures/blueprint/lean/Stage4.lean",
+    "errors": 0
+  },
+  "summary": {
+    "nodes": 8,
+    "by_status": {
+      "planned": 0,
+      "stated": 0,
+      "proved": 0,
+      "done": 8
+    },
+    "by_kind": {
+      "definition": {
+        "planned": 0,
+        "stated": 0,
+        "proved": 0,
+        "done": 2
+      },
+      "lemma": {
+        "planned": 0,
+        "stated": 0,
+        "proved": 0,
+        "done": 4
+      },
+      "theorem": {
+        "planned": 0,
+        "stated": 0,
+        "proved": 0,
+        "done": 1
+      },
+      "corollary": {
+        "planned": 0,
+        "stated": 0,
+        "proved": 0,
+        "done": 1
+      }
+    },
+    "complete": true
+  },
+  "nodes": [
+    {
+      "id": "tri",
+      "kind": "definition",
+      "title": "Triangular numbers",
+      "lean": "Triangles.tri",
+      "status": "done",
+      "uses": [],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    },
+    {
+      "id": "sum-odd",
+      "kind": "definition",
+      "title": "The sum of the first odd numbers",
+      "lean": "Triangles.sumOdd",
+      "status": "done",
+      "uses": [],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    },
+    {
+      "id": "tri-step",
+      "kind": "lemma",
+      "title": "The next triangular number",
+      "lean": "Triangles.tri_succ",
+      "status": "done",
+      "uses": [
+        "tri"
+      ],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    },
+    {
+      "id": "tri-formula",
+      "kind": "lemma",
+      "title": "Twice a triangular number",
+      "lean": "Triangles.two_mul_tri",
+      "status": "done",
+      "uses": [
+        "tri"
+      ],
+      "proof_uses": [
+        "tri-step"
+      ],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": [
+        "the blueprint lists tri-step, and the Lean text does not refer to it"
+      ]
+    },
+    {
+      "id": "odd-step",
+      "kind": "lemma",
+      "title": "The next odd number",
+      "lean": "Triangles.sumOdd_succ",
+      "status": "done",
+      "uses": [
+        "sum-odd"
+      ],
+      "proof_uses": [],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    },
+    {
+      "id": "odd-square",
+      "kind": "theorem",
+      "title": "Odd numbers add up to a square",
+      "lean": "Triangles.sumOdd_eq_square",
+      "status": "done",
+      "uses": [
+        "sum-odd"
+      ],
+      "proof_uses": [
+        "odd-step"
+      ],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    },
+    {
+      "id": "two-triangles",
+      "kind": "lemma",
+      "title": "Two triangles make a square",
+      "lean": "Triangles.tri_add_tri_succ",
+      "status": "done",
+      "uses": [
+        "tri"
+      ],
+      "proof_uses": [
+        "tri-formula",
+        "tri-step"
+      ],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    },
+    {
+      "id": "odd-triangles",
+      "kind": "corollary",
+      "title": "Odd numbers add up to two triangles",
+      "lean": "Triangles.sumOdd_eq_two_triangles",
+      "status": "done",
+      "uses": [
+        "sum-odd",
+        "tri"
+      ],
+      "proof_uses": [
+        "odd-square",
+        "two-triangles"
+      ],
+      "blockers": [],
+      "ready": false,
+      "unblocks": 0,
+      "notes": []
+    }
+  ],
+  "frontier": [],
+  "blocked": []
+}

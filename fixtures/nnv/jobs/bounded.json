@@ -1,0 +1,97 @@
+{
+  "schema": "maithic.nnv.job/1",
+  "model": "absolute value",
+  "property": "on [-2, 3] the output stays within [0, 6]",
+  "status": "verified",
+  "claim": "verified",
+  "check": {
+    "theorem": "Maithic.NNV.Job.property_holds",
+    "statement": "Maithic.NN.Holds Maithic.NNV.Job.net Maithic.NNV.Job.input Maithic.NNV.Job.claimed",
+    "accepted": true,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "policy": {
+      "status": "verified",
+      "reasons": [],
+      "violations": []
+    },
+    "elapsed_ms": 255
+  },
+  "verify_ms": 2834,
+  "verdict": {
+    "schema": "maithic.nnv.verdict/1",
+    "verdict": "verified",
+    "network": [
+      {
+        "activation": "relu",
+        "neurons": [
+          {
+            "weights": [
+              "1"
+            ],
+            "bias": "0"
+          },
+          {
+            "weights": [
+              "-1"
+            ],
+            "bias": "0"
+          }
+        ]
+      },
+      {
+        "activation": "identity",
+        "neurons": [
+          {
+            "weights": [
+              "1",
+              "1"
+            ],
+            "bias": "0"
+          }
+        ]
+      }
+    ],
+    "input": [
+      [
+        "-2",
+        "3"
+      ]
+    ],
+    "output": [
+      [
+        "0",
+        "6"
+      ]
+    ],
+    "boxes": [
+      [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      [
+        [
+          "0",
+          "5"
+        ]
+      ]
+    ],
+    "engine": {
+      "name": "MaithicNNV",
+      "version": "0.1.0",
+      "parameters": {
+        "method": "interval bound propagation, outward rounding",
+        "max_corners": 1024
+      }
+    }
+  }
+}

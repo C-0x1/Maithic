@@ -1,0 +1,197 @@
+# Capability register for P06 Council.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P06"
+name = "Council"
+title = "Multi-agent mathematical research assistant"
+mission = "Coordinate a team of specialized AI agents on a mathematical problem, with shared memory and full transcripts, under one hard rule: only the Lean kernel can declare anything proven."
+
+[[group]]
+id = "P06-01"
+title = "Coordinator and task decomposition"
+language = "OCaml"
+path = "ocaml/lib/council/coord/"
+purpose = "Plans the work, dispatches it in parallel and synthesizes the result."
+
+  [[group.capability]]
+  id = "P06-01-01"
+  title = "Problem intake"
+  spec = "Accept a mathematical problem or goal with its context."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-01-02"
+  title = "Role assignment"
+  spec = "Assign subtasks to roles by task type."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-01-03"
+  title = "Result collection"
+  spec = "Gather subtask outputs with their status."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-01-04"
+  title = "Synthesis step"
+  spec = "Combine results into the final answer using verified components only."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+[[group]]
+id = "P06-02"
+title = "Role library"
+language = "OCaml"
+path = "ocaml/lib/council/roles/"
+purpose = "The specialists: prompts, tools and limits for each role."
+
+  [[group.capability]]
+  id = "P06-02-01"
+  title = "Researcher role"
+  spec = "Finds relevant definitions, lemmas and prior results."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-02-02"
+  title = "Prover role"
+  spec = "Generates candidate proofs."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-02-03"
+  title = "Critic role"
+  spec = "Identifies errors and suggests alternatives."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-02-04"
+  title = "Verifier role"
+  spec = "Runs Lean and confirms correctness; the only role that can request a verified status."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-02-05"
+  title = "Role registry"
+  spec = "Look up and instantiate roles by name."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+[[group]]
+id = "P06-03"
+title = "Blackboard and shared memory"
+language = "OCaml"
+path = "ocaml/lib/council/memory/"
+purpose = "The shared theorem and proof-state workspace that all agents read and write."
+
+  [[group.capability]]
+  id = "P06-03-01"
+  title = "Blackboard store"
+  spec = "Typed shared workspace of items with authorship and timestamps."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-03-02"
+  title = "Item kinds"
+  spec = "Definitions, statements, claims, proofs, counterexamples, notes and questions."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-03-03"
+  title = "Claim status field"
+  spec = "Conjectured, formalized, refuted or verified; writable only through the verifier interface."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+[[group]]
+id = "P06-04"
+title = "Communication protocol and logs"
+language = "OCaml"
+path = "ocaml/lib/council/proto/"
+purpose = "Typed messages between agents and a complete, replayable record of them."
+
+  [[group.capability]]
+  id = "P06-04-01"
+  title = "Message schema"
+  spec = "Typed messages with sender, recipients, performative and content."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-04-02"
+  title = "Transcript log"
+  spec = "Ordered log of all messages per session."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-04-03"
+  title = "Transcript export"
+  spec = "Export as JSON and Markdown."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+[[group]]
+id = "P06-05"
+title = "Tool belt"
+language = "OCaml"
+path = "ocaml/lib/council/tools/"
+purpose = "The typed tools through which agents act on the world."
+
+  [[group.capability]]
+  id = "P06-05-01"
+  title = "Lean check tool"
+  spec = "Compile Lean text and return diagnostics."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-05-02"
+  title = "Prove tool"
+  spec = "Run a bounded prover attempt."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_council.ml"]
+
+[[group]]
+id = "P06-06"
+title = "Budgets, scheduling and consensus"
+language = "OCaml"
+path = "ocaml/lib/council/control/"
+purpose = "Keeps a council within budget and resolves disagreements."
+
+  [[group.capability]]
+  id = "P06-06-01"
+  title = "Council session budget"
+  spec = "Global limits on tokens, cost, time and Lean calls."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_council.ml"]
+
+  [[group.capability]]
+  id = "P06-06-02"
+  title = "Round scheduler"
+  spec = "Turn order among agents."
+  status = "done"
+  tests = ["ocaml/test/test_council.ml"]
+
+[[group]]
+id = "P06-07"
+title = "Collaboration analytics"
+language = "R"
+path = "r/maithicstats/R/council-*.R"
+purpose = "Measures what each role contributes and where councils fail."
+
+  [[group.capability]]
+  id = "P06-07-01"
+  title = "Council session import"
+  spec = "Load sessions, messages and outcomes."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-council.R"]

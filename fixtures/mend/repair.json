@@ -1,0 +1,128 @@
+{
+  "schema": "maithic.mend.report/1",
+  "file": "fixtures/mend/lean/Upgrade.lean",
+  "summary": {
+    "breakages": 5,
+    "repaired": 5,
+    "unrepaired": 0,
+    "by_rule": 3,
+    "by_model": 2,
+    "by_prover": 0,
+    "remaining": 0,
+    "clean": true,
+    "checks": 5
+  },
+  "repairs": [
+    {
+      "declaration": "sum_comm",
+      "line": 22,
+      "class": "unknown-identifier",
+      "detail": "Nat.add_commutes",
+      "severity": "error",
+      "error": "Unknown constant `Nat.add_commutes`",
+      "outcome": "repaired",
+      "stage": "rule",
+      "rule": "rename",
+      "description": "rename Nat.add_commutes to Nat.add_comm",
+      "tried": 1,
+      "changed_lines": 2,
+      "before": "/-- A name that is gone. The table of renames knows its successor. -/\ntheorem sum_comm (a b : Nat) : a + b = b + a := by\n  exact Nat.add_commutes a b",
+      "after": "/-- A name that is gone. The table of renames knows its successor. -/\ntheorem sum_comm (a b : Nat) : a + b = b + a := by\n  exact Nat.add_comm a b"
+    },
+    {
+      "declaration": "twice_add_zero",
+      "line": 27,
+      "class": "deprecated",
+      "detail": "twice_is_double",
+      "severity": "warning",
+      "error": "`twice_is_double` has been deprecated: Use `twice_eq` instead",
+      "outcome": "repaired",
+      "stage": "rule",
+      "rule": "rename",
+      "description": "rename twice_is_double to twice_eq",
+      "tried": 1,
+      "changed_lines": 2,
+      "before": "/-- A name that is deprecated. Lean says what to use instead. -/\ntheorem twice_add_zero (n : Nat) : twice n + 0 = 2 * n := by\n  rw [Nat.add_zero]\n  exact twice_is_double n",
+      "after": "/-- A name that is deprecated. Lean says what to use instead. -/\ntheorem twice_add_zero (n : Nat) : twice n + 0 = 2 * n := by\n  rw [Nat.add_zero]\n  exact twice_eq n"
+    },
+    {
+      "declaration": "le_succ_self",
+      "line": 31,
+      "class": "suggestion",
+      "detail": "exact Nat.le_add_right n 1",
+      "severity": "info",
+      "error": "Try this: exact Nat.le_add_right n 1",
+      "outcome": "repaired",
+      "stage": "rule",
+      "rule": "suggestion",
+      "description": "write what Lean suggests: exact Nat.le_add_right n 1 for exact?",
+      "tried": 1,
+      "changed_lines": 2,
+      "before": "/-- A search that was never written down. Lean says what it found. -/\ntheorem le_succ_self (n : Nat) : n ≤ n + 1 := by\n  exact?",
+      "after": "/-- A search that was never written down. Lean says what it found. -/\ntheorem le_succ_self (n : Nat) : n ≤ n + 1 := by\n  exact Nat.le_add_right n 1"
+    },
+    {
+      "declaration": "twice_add",
+      "line": 39,
+      "class": "unsolved-goals",
+      "severity": "error",
+      "error": "`simp` made no progress",
+      "outcome": "repaired",
+      "stage": "model",
+      "round": 1,
+      "description": "a model's repair from round 1, which changes 2 line(s) of the proof",
+      "tried": 2,
+      "changed_lines": 2,
+      "before": "/-- A tactic that no longer closes its goal. One step of the proof has to change. -/\ntheorem twice_add (m n : Nat) : twice (m + n) = twice m + twice n := by\n  induction n with\n  | zero => simp [twice]\n  | succ k ih =>\n    simp [twice] at *\n    simp",
+      "after": "/-- A tactic that no longer closes its goal. One step of the proof has to change. -/\ntheorem twice_add (m n : Nat) : twice (m + n) = twice m + twice n := by\n  induction n with\n  | zero => simp [twice]\n  | succ k ih =>\n    simp [twice] at *\n    omega"
+    },
+    {
+      "declaration": "add_zero_eq",
+      "line": 43,
+      "class": "type-mismatch",
+      "severity": "error",
+      "error": "Type mismatch",
+      "outcome": "repaired",
+      "stage": "model",
+      "round": 1,
+      "description": "a model's repair from round 1, which changes 2 line(s) of the proof",
+      "tried": 1,
+      "changed_lines": 2,
+      "before": "/-- A term that no longer has the type its place asks for. -/\ntheorem add_zero_eq (n : Nat) : n + 0 = n := by\n  exact Nat.zero_add n",
+      "after": "/-- A term that no longer has the type its place asks for. -/\ntheorem add_zero_eq (n : Nat) : n + 0 = n := by\n  exact Nat.add_zero n"
+    }
+  ],
+  "remaining": [],
+  "written": false,
+  "gateway": {
+    "mode": "replay",
+    "calls": 2,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": [
+      {
+        "purpose": "mend.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T17:38:27Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "mend.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T17:38:27Z",
+        "elapsed_ms": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+# Capability register for P02 Formalize.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P02"
+name = "Formalize"
+title = "Natural language to formally verified Lean"
+mission = "Translate mathematics written in ordinary language into Lean 4 theorem statements that compile, and test whether each translation is faithful to the original before anyone tries to prove it."
+
+[[group]]
+id = "P02-01"
+title = "Input ingestion and math parsing"
+language = "OCaml"
+path = "ocaml/lib/formalize/ingest/"
+purpose = "Reads informal mathematics from text, LaTeX and Markdown into a typed intake record."
+
+  [[group.capability]]
+  id = "P02-01-01"
+  title = "Plain-text intake"
+  spec = "Accept a problem as UTF-8 text from a CLI argument, a file or standard input."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-01-02"
+  title = "Unicode math normalization"
+  spec = "Normalize Unicode operators, superscripts and Greek letters to canonical tokens."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-01-03"
+  title = "Intake record"
+  spec = "Typed record with source spans for every extracted element."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+[[group]]
+id = "P02-02"
+title = "Candidate statement generation"
+language = "OCaml"
+path = "ocaml/lib/formalize/draft/"
+purpose = "Drafts several distinct Lean statements for each problem."
+
+  [[group.capability]]
+  id = "P02-02-01"
+  title = "Statement drafting prompt"
+  spec = "Prompt producing a Lean theorem statement with a `sorry` proof from the semantic frame."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-02-02"
+  title = "Multi-candidate generation"
+  spec = "Produce several distinct candidate statements per problem."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-02-03"
+  title = "Candidate record"
+  spec = "Typed candidate with statement, imports, reading choices and provenance."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+[[group]]
+id = "P02-03"
+title = "Elaboration repair loop"
+language = "OCaml"
+path = "ocaml/lib/formalize/elab/"
+purpose = "Compiles candidates and repairs the ones that fail to elaborate."
+
+  [[group.capability]]
+  id = "P02-03-01"
+  title = "Candidate compilation"
+  spec = "Elaborate each candidate statement through the bridge and collect diagnostics."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-03-02"
+  title = "Statement error classes"
+  spec = "Classify statement errors: unknown constant, failed instance, type mismatch, ambiguous notation."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-03-03"
+  title = "Statement repair prompt"
+  spec = "Prompt with the candidate, the error and relevant library signatures."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-03-04"
+  title = "Repair loop bound"
+  spec = "Bounded repair iterations per candidate with early exit."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-03-05"
+  title = "Elaboration result record"
+  spec = "Per-candidate status with final text and repair history."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+[[group]]
+id = "P02-04"
+title = "Faithfulness validation"
+language = "OCaml"
+path = "ocaml/lib/formalize/faith/"
+purpose = "Tests whether a compiling statement actually says what the problem says."
+
+  [[group.capability]]
+  id = "P02-04-01"
+  title = "Back-translation"
+  spec = "Translate each compiled candidate back to English with an independent prompt."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-04-02"
+  title = "Round-trip comparison"
+  spec = "Compare the back-translation with the original problem and score agreement."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-04-03"
+  title = "Vacuity check"
+  spec = "Reject candidates whose hypotheses are contradictory."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-04-04"
+  title = "Triviality check"
+  spec = "Flag candidates closed by `trivial`, `rfl` or `simp` when the problem should be hard."
+  status = "done"
+  tests = ["ocaml/test/test_formalize.ml"]
+
+  [[group.capability]]
+  id = "P02-04-05"
+  title = "Counterexample check"
+  spec = "Send candidates to Refute and discard refuted ones."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_formalize.ml"]
+
+[[group]]
+id = "P02-05"
+title = "Lean statement utilities"
+language = "Lean"
+path = "lean/Maithic/Formalize/"
+purpose = "Commands that inspect, probe and compare theorem statements inside Lean."
+
+  [[group.capability]]
+  id = "P02-05-01"
+  title = "Statement inspection command"
+  spec = "`#maithic_stmt` elaborates a statement and reports binders, hypotheses and conclusion as JSON."
+  status = "done"
+  tests = ["lean/MaithicTest/Formalize.lean"]
+
+  [[group.capability]]
+  id = "P02-05-02"
+  title = "Elaborated-form printer"
+  spec = "Print the statement with all implicit arguments and coercions."
+  status = "done"
+  tests = ["lean/MaithicTest/Formalize.lean"]
+
+[[group]]
+id = "P02-06"
+title = "Formalization quality analytics"
+language = "R"
+path = "r/maithicstats/R/formalize-*.R"
+purpose = "Measures how often formalization is right and why it goes wrong."
+
+  [[group.capability]]
+  id = "P02-06-01"
+  title = "Formalization run import"
+  spec = "Load formalization runs with candidates, checks and outcomes."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-formalize.R"]
+
+  [[group.capability]]
+  id = "P02-06-02"
+  title = "Compile-rate summary"
+  spec = "Share of candidates that elaborate, before and after repair."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-formalize.R"]

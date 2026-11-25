@@ -1,0 +1,39 @@
+# Project metadata: the owner placeholders and the single version number.
+#
+# OWNER stands for the account or organization that hosts the repository, and
+# the address below for its maintainers. Both are placeholders, and nothing
+# that is built or tested depends on them. To set them, replace OWNER in this
+# file, in CITATION.cff and in ocaml/dune-project (dune writes
+# ocaml/maithic.opam from it at the next build), and the address in this
+# file, in SUPPORT.md, in ocaml/dune-project and in the Project.toml of each
+# Julia package. `make hygiene` checks that every package carries this version.
+
+[project]
+name = "Maithic"
+version = "0.1.0"
+tagline = "AI proposes. The kernel decides."
+owner = "OWNER"
+repository = "maithic"
+author_name = "The Maithic Authors"
+author_email = "maintainers@example.org"
+license = "Apache-2.0"
+docs_license = "CC-BY-4.0"
+
+# The language-share gate (`maithic-dev langshare`): percentages of source
+# bytes. The four project languages together, and a floor for each.
+#
+# All four floors are at their final values: OCaml 30, Lean 15, Julia 12 and
+# R 8. How they got there is told in docs/adr/0004-language-share-floors-rise.md.
+[language_share]
+combined_min = 85.0
+ocaml_min = 30.0
+lean_min = 15.0
+julia_min = 12.0
+r_min = 8.0
+
+# The README image gate (`maithic-dev readme`).
+[register]
+min_per_pillar = 20
+
+[readme]
+min_images = 125

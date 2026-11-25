@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 976 546" width="976" height="546" role="img" aria-label="A terminal session: two sessions that end before any model is asked. A false statement is refuted in the examination with the counterexample a = 1, b = 0, and a statement that automation can prove is verified in the examination.">
+  <title>A terminal session: two sessions that end before any model is asked. A false statement is refuted in the examination with the counterexample a = 1, b = 0, and a statement that automation can prove is verified in the examination.</title>
+  <rect width="976" height="546" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h956a10 10 0 0 1 10 10v26h-976z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="488" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic council, when the examination settles it</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="516.78" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic council examples/conjectures.lean --theorem sum_le_product</text>
+    <text x="22.00" y="77" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">council on</text>
+    <text x="108.13" y="77" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">sum_le_product</text>
+    <text x="233.41" y="77" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:10</text>
+    <text x="37.66" y="96" textLength="391.50" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem sum_le_product (a b : Nat) : a + b ≤ a * b</text>
+    <text x="22.00" y="134" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examination</text>
+    <text x="37.66" y="153" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">verifier</text>
+    <text x="131.62" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examine</text>
+    <text x="209.92" y="153" textLength="375.84" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is false: it fails at a = 1, b = 0</text>
+    <text x="22.00" y="191" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F26D72">refuted</text>
+    <text x="92.47" y="191" textLength="555.93" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The statement fails at a = 1, b = 0, and Lean accepted a proof of that.</text>
+    <text x="22.00" y="229" textLength="602.91" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">refuted: the statement fails at a = 1, b = 0 (0 model calls, 2 calls to Lean)</text>
+    <text x="22.00" y="267" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="267" textLength="328.86" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic council examples/even.lean --no-ai</text>
+    <text x="22.00" y="286" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">council on</text>
+    <text x="108.13" y="286" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">even_add_even</text>
+    <text x="225.58" y="286" textLength="156.60" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/even.lean:7</text>
+    <text x="37.66" y="305" textLength="665.55" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem even_add_even (a b : Nat) (ha : a % 2 = 0) (hb : b % 2 = 0) : (a + b) % 2 = 0</text>
+    <text x="22.00" y="343" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examination</text>
+    <text x="37.66" y="362" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">verifier</text>
+    <text x="131.62" y="362" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examine</text>
+    <text x="209.92" y="362" textLength="360.18" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">automation found a proof, and Lean accepted it</text>
+    <text x="22.00" y="400" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">verified</text>
+    <text x="100.30" y="400" textLength="853.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean's kernel accepted proof 3, posted by the verifier in the examination. It rests on the axioms Quot.sound,</text>
+    <text x="100.30" y="419" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext.</text>
+    <text x="37.66" y="457" textLength="759.51" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem even_add_even (a b : Nat) (ha : a % 2 = 0) (hb : b % 2 = 0) : (a + b) % 2 = 0 := by omega</text>
+    <text x="22.00" y="495" textLength="673.38" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">verified: proof 3, by the verifier in the examination (0 model calls, 7 calls to Lean)</text>
+    <text x="22.00" y="514" textLength="454.14" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">the file was not changed; --write writes the proof into it</text>
+  </g>
+</svg>

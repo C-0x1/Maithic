@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 204" width="600" height="204" role="img" aria-label="A terminal session: maithic bridge selftest starts the Bridge and runs five checks, all ok: the kernel accepts a true statement, the kernel rejects a false statement, the axiom audit sees injected axioms, the guard blocks evaluation commands, and tactics step a proof state to its end.">
+  <title>A terminal session: maithic bridge selftest starts the Bridge and runs five checks, all ok: the kernel accepts a true statement, the kernel rejects a false statement, the axiom audit sees injected axioms, the guard blocks evaluation commands, and tactics step a proof state to its end.</title>
+  <rect width="600" height="204" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h580a10 10 0 0 1 10 10v26h-600z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="300" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic bridge selftest</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic bridge selftest</text>
+    <text x="22.00" y="77" textLength="555.93" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">maithic-bridge 0.1.0, Lean 4.36.0 (lean/.lake/build/bin/maithic-bridge)</text>
+    <text x="37.66" y="96" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="84.64" y="96" textLength="242.73" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">kernel accepts a true statement</text>
+    <text x="37.66" y="115" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="84.64" y="115" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">kernel rejects a false statement</text>
+    <text x="37.66" y="134" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="84.64" y="134" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axiom audit sees injected axioms</text>
+    <text x="37.66" y="153" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="84.64" y="153" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">guard blocks evaluation commands</text>
+    <text x="37.66" y="172" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#57C98F">ok</text>
+    <text x="84.64" y="172" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tactics step a proof state to its end</text>
+  </g>
+</svg>

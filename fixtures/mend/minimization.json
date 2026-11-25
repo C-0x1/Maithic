@@ -1,0 +1,162 @@
+{
+  "schema": "maithic.mend.minimization/1",
+  "file": "fixtures/mend/lean/Verbose.lean",
+  "summary": {
+    "theorems": 6,
+    "shortened": 4,
+    "lines_before": 23,
+    "lines_after": 15,
+    "chars_before": 409,
+    "chars_after": 186,
+    "checks": 53
+  },
+  "results": [
+    {
+      "theorem": "twice_eq",
+      "line": 12,
+      "how": "deletion",
+      "before": "by\n  unfold twice\n  have bound : n ≤ n + n := by\n    omega\n  simp only [Nat.two_mul, Nat.add_zero]",
+      "after": "by\n  unfold twice\n  simp only [Nat.two_mul]",
+      "size_before": {
+        "lines": 5,
+        "steps": 4,
+        "chars": 98
+      },
+      "size_after": {
+        "lines": 3,
+        "steps": 2,
+        "chars": 43
+      },
+      "removed": [
+        "have bound : n ≤ n + n := by",
+        "Nat.add_zero in `simp only [Nat.two_mul, Nat.add_zero]`"
+      ],
+      "checks": 14,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "theorem": "length_twice",
+      "line": 17,
+      "how": "deletion",
+      "before": "by\n  simp [twice, List.length_append, Nat.add_comm]",
+      "after": "by\n  simp [twice]",
+      "size_before": {
+        "lines": 2,
+        "steps": 1,
+        "chars": 51
+      },
+      "size_after": {
+        "lines": 2,
+        "steps": 1,
+        "chars": 17
+      },
+      "removed": [
+        "Nat.add_comm in `simp [twice, List.length_append, Nat.add_comm]`",
+        "List.length_append in `simp [twice, List.length_append]`"
+      ],
+      "checks": 4,
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "theorem": "twice_mono",
+      "line": 21,
+      "how": "deletion",
+      "before": "by\n  unfold twice\n  have h2 : m + m ≤ n + m := by\n    omega\n  have h3 : n + m ≤ n + n := by\n    omega\n  omega",
+      "after": "by\n  unfold twice\n  omega",
+      "size_before": {
+        "lines": 7,
+        "steps": 6,
+        "chars": 109
+      },
+      "size_after": {
+        "lines": 3,
+        "steps": 2,
+        "chars": 25
+      },
+      "removed": [
+        "have h3 : n + m ≤ n + n := by",
+        "have h2 : m + m ≤ n + m := by"
+      ],
+      "checks": 13,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "theorem": "sum_le",
+      "line": 26,
+      "how": "automation",
+      "before": "by\n  have h : a ≤ c := by omega\n  exact Nat.add_le_add h h",
+      "after": "by omega",
+      "size_before": {
+        "lines": 3,
+        "steps": 2,
+        "chars": 58
+      },
+      "size_after": {
+        "lines": 1,
+        "steps": 1,
+        "chars": 8
+      },
+      "removed": [
+        "the whole proof, for `by omega`"
+      ],
+      "checks": 4,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "theorem": "sum_le_plain",
+      "line": 30,
+      "how": "unchanged",
+      "before": "by\n  have h : a ≤ c := Nat.le_trans h₁ h₂\n  exact Nat.add_le_add h h",
+      "after": "by\n  have h : a ≤ c := Nat.le_trans h₁ h₂\n  exact Nat.add_le_add h h",
+      "size_before": {
+        "lines": 3,
+        "steps": 2,
+        "chars": 68
+      },
+      "size_after": {
+        "lines": 3,
+        "steps": 2,
+        "chars": 68
+      },
+      "removed": [],
+      "checks": 9,
+      "axioms": [],
+      "note": "Lean accepts a shorter proof, and it needs what this proof does without: Classical.choice, Quot.sound, propext"
+    },
+    {
+      "theorem": "le_twice",
+      "line": 35,
+      "how": "unchanged",
+      "before": "by\n  unfold twice\n  omega",
+      "after": "by\n  unfold twice\n  omega",
+      "size_before": {
+        "lines": 3,
+        "steps": 2,
+        "chars": 25
+      },
+      "size_after": {
+        "lines": 3,
+        "steps": 2,
+        "chars": 25
+      },
+      "removed": [],
+      "checks": 9,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "written": false
+}

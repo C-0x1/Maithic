@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 641" width="960" height="641" role="img" aria-label="A terminal session: maithic mend scan lists five breakages of a Lean file after an upgrade, each with its class; maithic mend repair then repairs three by rule and two with a model, every repair compiled by Lean, and reports that Lean accepts the whole file.">
+  <title>A terminal session: maithic mend scan lists five breakages of a Lean file after an upgrade, each with its class; maithic mend repair then repairs three by rule and two with a model, every repair compiled by Lean, and reports that Lean accepts the whole file.</title>
+  <rect width="960" height="641" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h940a10 10 0 0 1 10 10v26h-960z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="480" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic mend scan, repair</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="383.67" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic mend scan fixtures/mend/lean/Upgrade.lean</text>
+    <text x="22.00" y="77" textLength="242.73" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">fixtures/mend/lean/Upgrade.lean</text>
+    <text x="280.39" y="77" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">5 breakage(s)</text>
+    <text x="37.66" y="96" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">line</text>
+    <text x="84.64" y="96" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="209.92" y="96" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">severity</text>
+    <text x="288.22" y="96" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">class</text>
+    <text x="444.82" y="96" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">what Lean says</text>
+    <text x="37.66" y="115" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">----</text>
+    <text x="84.64" y="115" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------------</text>
+    <text x="209.92" y="115" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">--------</text>
+    <text x="288.22" y="115" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">------------------</text>
+    <text x="444.82" y="115" textLength="477.63" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">-------------------------------------------------------------</text>
+    <text x="37.66" y="134" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">22</text>
+    <text x="84.64" y="134" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">sum_comm</text>
+    <text x="209.92" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#F26D72">error</text>
+    <text x="288.22" y="134" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unknown-identifier</text>
+    <text x="444.82" y="134" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Unknown constant `Nat.add_commutes`</text>
+    <text x="37.66" y="153" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">27</text>
+    <text x="84.64" y="153" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">twice_add_zero</text>
+    <text x="209.92" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">warning</text>
+    <text x="288.22" y="153" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">deprecated</text>
+    <text x="444.82" y="153" textLength="477.63" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">`twice_is_double` has been deprecated: Use `twice_eq` instead</text>
+    <text x="37.66" y="172" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">31</text>
+    <text x="84.64" y="172" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">le_succ_self</text>
+    <text x="209.92" y="172" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">info</text>
+    <text x="288.22" y="172" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">suggestion</text>
+    <text x="444.82" y="172" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Try this: exact Nat.le_add_right n 1</text>
+    <text x="37.66" y="191" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">39</text>
+    <text x="84.64" y="191" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">twice_add</text>
+    <text x="209.92" y="191" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#F26D72">error</text>
+    <text x="288.22" y="191" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unsolved-goals</text>
+    <text x="444.82" y="191" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">`simp` made no progress</text>
+    <text x="37.66" y="210" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">43</text>
+    <text x="84.64" y="210" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">add_zero_eq</text>
+    <text x="209.92" y="210" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#F26D72">error</text>
+    <text x="288.22" y="210" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">type-mismatch</text>
+    <text x="444.82" y="210" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Type mismatch</text>
+    <text x="22.00" y="229" textLength="853.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1 file(s), 5 breakage(s): 1 unknown-identifier, 1 deprecated, 1 unsolved-goals, 1 type-mismatch, 1 suggestion</text>
+    <text x="22.00" y="267" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="267" textLength="689.04" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic mend repair fixtures/mend/lean/Upgrade.lean --renames fixtures/mend/renames.toml</text>
+    <text x="22.00" y="286" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">sum_comm</text>
+    <text x="147.28" y="286" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">unknown-identifier</text>
+    <text x="303.88" y="286" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">repaired</text>
+    <text x="382.18" y="286" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by the rule</text>
+    <text x="476.14" y="286" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">rename</text>
+    <text x="53.32" y="305" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">Lean:</text>
+    <text x="100.30" y="305" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Unknown constant `Nat.add_commutes`</text>
+    <text x="53.32" y="324" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">done:</text>
+    <text x="100.30" y="324" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rename Nat.add_commutes to Nat.add_comm</text>
+    <text x="22.00" y="343" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">twice_add_zero</text>
+    <text x="147.28" y="343" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">deprecated</text>
+    <text x="303.88" y="343" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">repaired</text>
+    <text x="382.18" y="343" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by the rule</text>
+    <text x="476.14" y="343" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">rename</text>
+    <text x="53.32" y="362" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">Lean:</text>
+    <text x="100.30" y="362" textLength="477.63" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">`twice_is_double` has been deprecated: Use `twice_eq` instead</text>
+    <text x="53.32" y="381" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">done:</text>
+    <text x="100.30" y="381" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rename twice_is_double to twice_eq</text>
+    <text x="22.00" y="400" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">le_succ_self</text>
+    <text x="147.28" y="400" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">suggestion</text>
+    <text x="303.88" y="400" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">repaired</text>
+    <text x="382.18" y="400" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by the rule</text>
+    <text x="476.14" y="400" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6">suggestion</text>
+    <text x="53.32" y="419" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">Lean:</text>
+    <text x="100.30" y="419" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Try this: exact Nat.le_add_right n 1</text>
+    <text x="53.32" y="438" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">done:</text>
+    <text x="100.30" y="438" textLength="493.29" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">write what Lean suggests: exact Nat.le_add_right n 1 for exact?</text>
+    <text x="22.00" y="457" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">twice_add</text>
+    <text x="147.28" y="457" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">unsolved-goals</text>
+    <text x="303.88" y="457" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">repaired</text>
+    <text x="382.18" y="457" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by a model, round 1</text>
+    <text x="53.32" y="476" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">Lean:</text>
+    <text x="100.30" y="476" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">`simp` made no progress</text>
+    <text x="53.32" y="495" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">done:</text>
+    <text x="100.30" y="495" textLength="524.61" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">a model's repair from round 1, which changes 2 line(s) of the proof</text>
+    <text x="22.00" y="514" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">add_zero_eq</text>
+    <text x="147.28" y="514" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">type-mismatch</text>
+    <text x="303.88" y="514" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#57C98F">repaired</text>
+    <text x="382.18" y="514" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">by a model, round 1</text>
+    <text x="53.32" y="533" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">Lean:</text>
+    <text x="100.30" y="533" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Type mismatch</text>
+    <text x="53.32" y="552" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">done:</text>
+    <text x="100.30" y="552" textLength="524.61" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">a model's repair from round 1, which changes 2 line(s) of the proof</text>
+    <text x="22.00" y="571" textLength="916.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/mend/lean/Upgrade.lean: 5 breakage(s), 5 repaired (3 by a rule, 2 by a model, 0 by the prover), 0 left; Lean</text>
+    <text x="53.32" y="590" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">accepts the whole file</text>
+    <text x="22.00" y="609" textLength="446.31" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">the file was not changed; --write writes the repairs back</text>
+  </g>
+</svg>

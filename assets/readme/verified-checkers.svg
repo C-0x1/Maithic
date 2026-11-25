@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 592" role="img" aria-labelledby="t d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="t">Checkers with proofs</title>
+  <desc id="d">A goal is read as a formula. A search, which is not trusted, writes a proof. A small checker reads the proof, and the kernel runs the checker. A theorem proved once in Lean says that whatever the checker accepts is true, which turns the run into a proof of the goal. Three checkers are shown: the truth table, clausal proofs by unit propagation, and certificates of linear integer arithmetic.</desc>
+  <defs>
+    <marker id="vc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5B6477"/>
+    </marker>
+  </defs>
+  <rect width="960" height="592" fill="#FAF8F4"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#14162B" textLength="489.5" lengthAdjust="spacingAndGlyphs">A checker, and a proof that the checker is right</text>
+  <text x="40" y="68" font-size="14" fill="#5B6477" textLength="687.9" lengthAdjust="spacingAndGlyphs">The search may be anything. What it writes is read by a small program whose soundness is a theorem in Lean.</text>
+
+  <g font-size="13">
+    <g transform="translate(40 96)">
+      <rect width="158" height="118" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="35.6" lengthAdjust="spacingAndGlyphs">Goal</text>
+      <text x="14" y="54" fill="#14162B" font-family="Menlo, Consolas, monospace" font-size="12" textLength="39.6" lengthAdjust="spacingAndGlyphs">hp  : p</text>
+      <text x="14" y="72" fill="#14162B" font-family="Menlo, Consolas, monospace" font-size="12" textLength="72.6" lengthAdjust="spacingAndGlyphs">hpq : p → q</text>
+      <text x="14" y="90" fill="#14162B" font-family="Menlo, Consolas, monospace" font-size="12" textLength="19.8" lengthAdjust="spacingAndGlyphs">⊢ q</text>
+      <text x="14" y="108" font-size="11" fill="#5B6477" textLength="80.1" lengthAdjust="spacingAndGlyphs">any propositions</text>
+    </g>
+    <line x1="202" y1="155" x2="226" y2="155" stroke="#5B6477" stroke-width="1.5" marker-end="url(#vc-arrow)"/>
+    <g transform="translate(232 96)">
+      <rect width="158" height="118" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="63.1" lengthAdjust="spacingAndGlyphs">Formula</text>
+      <text x="14" y="54" fill="#14162B" font-family="Menlo, Consolas, monospace" font-size="12" textLength="92.4" lengthAdjust="spacingAndGlyphs">a0 → (a0 → a1)</text>
+      <text x="14" y="72" fill="#14162B" font-family="Menlo, Consolas, monospace" font-size="12" textLength="26.4" lengthAdjust="spacingAndGlyphs">   → a1</text>
+      <text x="14" y="90" fill="#5B6477" font-size="12" textLength="122.1" lengthAdjust="spacingAndGlyphs">clauses of its negation:</text>
+      <text x="14" y="108" fill="#14162B" font-family="Menlo, Consolas, monospace" font-size="12" textLength="85.8" lengthAdjust="spacingAndGlyphs">1 │ −1 2 │ −2</text>
+    </g>
+    <line x1="394" y1="155" x2="418" y2="155" stroke="#5B6477" stroke-width="1.5" marker-end="url(#vc-arrow)"/>
+    <g transform="translate(424 96)">
+      <rect width="158" height="118" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="53.4" lengthAdjust="spacingAndGlyphs">Search</text>
+      <text x="14" y="52" fill="#5B6477" textLength="101.9" lengthAdjust="spacingAndGlyphs">a solver, a model,</text>
+      <text x="14" y="70" fill="#5B6477" textLength="65.8" lengthAdjust="spacingAndGlyphs">or a person</text>
+      <text x="14" y="94" font-size="12" font-weight="700" fill="#E5484D" textLength="62.7" lengthAdjust="spacingAndGlyphs">not trusted</text>
+      <text x="14" y="110" font-size="11" fill="#5B6477" textLength="66.0" lengthAdjust="spacingAndGlyphs">writes a proof</text>
+    </g>
+    <line x1="586" y1="155" x2="610" y2="155" stroke="#5B6477" stroke-width="1.5" marker-end="url(#vc-arrow)"/>
+    <g transform="translate(616 96)">
+      <rect width="142" height="118" rx="10" fill="#FFFFFF" stroke="#F0A92E" stroke-width="2.5"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#14162B" textLength="41.8" lengthAdjust="spacingAndGlyphs">Proof</text>
+      <text x="14" y="54" fill="#14162B" font-family="Menlo, Consolas, monospace" font-size="12" textLength="72.6" lengthAdjust="spacingAndGlyphs">4 0 1 2 3 0</text>
+      <text x="14" y="78" fill="#5B6477" font-size="12" textLength="98.3" lengthAdjust="spacingAndGlyphs">"the empty clause,</text>
+      <text x="14" y="94" fill="#5B6477" font-size="12" textLength="97.7" lengthAdjust="spacingAndGlyphs">by clauses 1, 2, 3"</text>
+    </g>
+    <line x1="762" y1="155" x2="786" y2="155" stroke="#5B6477" stroke-width="1.5" marker-end="url(#vc-arrow)"/>
+    <g transform="translate(792 96)">
+      <rect width="128" height="118" rx="10" fill="#0FA89B"/>
+      <text x="14" y="28" font-size="16" font-weight="700" fill="#FFFFFF" textLength="49.8" lengthAdjust="spacingAndGlyphs">Kernel</text>
+      <text x="14" y="52" fill="#FFFFFF" textLength="96.1" lengthAdjust="spacingAndGlyphs">runs the checker</text>
+      <text x="14" y="70" fill="#FFFFFF" textLength="94.7" lengthAdjust="spacingAndGlyphs">on the proof and</text>
+      <text x="14" y="88" fill="#FFFFFF" textLength="24.6" lengthAdjust="spacingAndGlyphs">gets</text>
+      <text x="48" y="88" fill="#FFFFFF" font-family="Menlo, Consolas, monospace" font-size="12" font-weight="700" textLength="26.4" lengthAdjust="spacingAndGlyphs">true</text>
+    </g>
+  </g>
+
+  <g transform="translate(40 238)">
+    <rect width="880" height="64" rx="10" fill="#2B2F77"/>
+    <text x="20" y="27" font-size="15" font-weight="700" fill="#FFFFFF" textLength="270.9" lengthAdjust="spacingAndGlyphs">The soundness theorem, proved once</text>
+    <text x="20" y="49" font-size="13" fill="#E8E9F3" font-family="Menlo, Consolas, monospace" textLength="543.4" lengthAdjust="spacingAndGlyphs">theorem denote_of_lrat : Lrat.refutes f.refutation proof = true → f.denote ρ</text>
+    <text x="700" y="27" font-size="12" fill="#F0A92E" textLength="164.4" lengthAdjust="spacingAndGlyphs">checker says true ⟹ goal holds</text>
+  </g>
+
+  <text x="40" y="340" font-size="16" font-weight="700" fill="#14162B" textLength="289.9" lengthAdjust="spacingAndGlyphs">Three checkers, each with its theorem</text>
+
+  <g font-size="13">
+    <g transform="translate(40 358)">
+      <rect width="282" height="202" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+      <path d="M0 10 a10 10 0 0 1 10 -10 h262 a10 10 0 0 1 10 10 v26 h-282 z" fill="#2B2F77"/>
+      <text x="14" y="24" font-size="15" font-weight="700" fill="#FFFFFF" textLength="76.7" lengthAdjust="spacingAndGlyphs">Truth table</text>
+      <text x="14" y="58" font-size="12" fill="#0FA89B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="79.2" lengthAdjust="spacingAndGlyphs">maithic_taut</text>
+      <text x="14" y="84" font-size="11" font-weight="700" fill="#5B6477" textLength="46.5" lengthAdjust="spacingAndGlyphs">CHECKS</text>
+      <text x="14" y="104" fill="#14162B" textLength="207.4" lengthAdjust="spacingAndGlyphs">the formula under every assignment</text>
+      <text x="14" y="122" fill="#14162B" textLength="66.5" lengthAdjust="spacingAndGlyphs">of its atoms</text>
+      <text x="14" y="150" font-size="11" font-weight="700" fill="#5B6477" textLength="46.5" lengthAdjust="spacingAndGlyphs">PROVED</text>
+      <text x="14" y="170" fill="#14162B" textLength="189.3" lengthAdjust="spacingAndGlyphs">sound and complete: validity of a</text>
+      <text x="14" y="188" fill="#14162B" textLength="193.7" lengthAdjust="spacingAndGlyphs">formula is a decidable proposition</text>
+    </g>
+    <g transform="translate(339 358)">
+      <rect width="282" height="202" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+      <path d="M0 10 a10 10 0 0 1 10 -10 h262 a10 10 0 0 1 10 10 v26 h-282 z" fill="#2B2F77"/>
+      <text x="14" y="24" font-size="15" font-weight="700" fill="#FFFFFF" textLength="104.2" lengthAdjust="spacingAndGlyphs">Clausal proofs</text>
+      <text x="14" y="58" font-size="12" fill="#0FA89B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="171.6" lengthAdjust="spacingAndGlyphs">maithic_sat · maithic_lrat</text>
+      <text x="14" y="84" font-size="11" font-weight="700" fill="#5B6477" textLength="46.5" lengthAdjust="spacingAndGlyphs">CHECKS</text>
+      <text x="14" y="104" fill="#14162B" textLength="211.0" lengthAdjust="spacingAndGlyphs">each new clause by unit propagation</text>
+      <text x="14" y="122" fill="#14162B" textLength="208.8" lengthAdjust="spacingAndGlyphs">along its hints, as solvers write them</text>
+      <text x="14" y="150" font-size="11" font-weight="700" fill="#5B6477" textLength="46.5" lengthAdjust="spacingAndGlyphs">PROVED</text>
+      <text x="14" y="170" fill="#14162B" textLength="193.7" lengthAdjust="spacingAndGlyphs">an accepted proof means that the</text>
+      <text x="14" y="188" fill="#14162B" textLength="142.4" lengthAdjust="spacingAndGlyphs">clauses are unsatisfiable</text>
+    </g>
+    <g transform="translate(638 358)">
+      <rect width="282" height="202" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+      <path d="M0 10 a10 10 0 0 1 10 -10 h262 a10 10 0 0 1 10 10 v26 h-282 z" fill="#2B2F77"/>
+      <text x="14" y="24" font-size="15" font-weight="700" fill="#FFFFFF" textLength="175.1" lengthAdjust="spacingAndGlyphs">Linear integer arithmetic</text>
+      <text x="14" y="58" font-size="12" fill="#0FA89B" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="118.8" lengthAdjust="spacingAndGlyphs">maithic_linear_int</text>
+      <text x="14" y="84" font-size="11" font-weight="700" fill="#5B6477" textLength="46.5" lengthAdjust="spacingAndGlyphs">CHECKS</text>
+      <text x="14" y="104" fill="#14162B" textLength="182.1" lengthAdjust="spacingAndGlyphs">rows times multipliers add up to</text>
+      <text x="14" y="122" fill="#14162B" textLength="119.2" lengthAdjust="spacingAndGlyphs">0 ≤ b with b negative</text>
+      <text x="14" y="150" font-size="11" font-weight="700" fill="#5B6477" textLength="46.5" lengthAdjust="spacingAndGlyphs">PROVED</text>
+      <text x="14" y="170" fill="#14162B" textLength="197.3" lengthAdjust="spacingAndGlyphs">the rows of an accepted certificate</text>
+      <text x="14" y="188" fill="#14162B" textLength="148.1" lengthAdjust="spacingAndGlyphs">have no common solution</text>
+    </g>
+  </g>
+</svg>

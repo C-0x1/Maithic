@@ -1,0 +1,340 @@
+{
+  "schema": "maithic.intel.metrics/1",
+  "nodes": 251,
+  "internal": 41,
+  "edges": 757,
+  "components": {
+    "count": 2,
+    "sizes": [250, 1]
+  },
+  "declarations": [
+    {
+      "name": "Maithic.Algo.Sorted",
+      "kind": "definition",
+      "usedBy": 12,
+      "uses": 4,
+      "pagerank": 0.007712872,
+      "betweenness": 15.833333
+    },
+    {
+      "name": "Maithic.Algo.TotalPreorder",
+      "kind": "class",
+      "usedBy": 5,
+      "uses": 1,
+      "pagerank": 0.005276403,
+      "betweenness": 2.0
+    },
+    {
+      "name": "Maithic.Algo.insertionSort",
+      "kind": "definition",
+      "usedBy": 6,
+      "uses": 12,
+      "pagerank": 0.005235774,
+      "betweenness": 36.5
+    },
+    {
+      "name": "Maithic.Algo.insertSorted",
+      "kind": "definition",
+      "usedBy": 6,
+      "uses": 13,
+      "pagerank": 0.004519025,
+      "betweenness": 30.833333
+    },
+    {
+      "name": "Maithic.Algo.sorted_cons",
+      "kind": "theorem",
+      "usedBy": 4,
+      "uses": 10,
+      "pagerank": 0.004194989,
+      "betweenness": 10.0
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_perm",
+      "kind": "theorem",
+      "usedBy": 2,
+      "uses": 13,
+      "pagerank": 0.004133721,
+      "betweenness": 36.666667
+    },
+    {
+      "name": "Maithic.Algo.SortedArray",
+      "kind": "definition",
+      "usedBy": 1,
+      "uses": 4,
+      "pagerank": 0.003899164,
+      "betweenness": 1.0
+    },
+    {
+      "name": "Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "kind": "instance",
+      "usedBy": 1,
+      "uses": 7,
+      "pagerank": 0.003899164,
+      "betweenness": 4.0
+    },
+    {
+      "name": "Point",
+      "kind": "structure",
+      "usedBy": 1,
+      "uses": 0,
+      "pagerank": 0.003899164,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_of_sorted",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 33,
+      "pagerank": 0.003846389,
+      "betweenness": 27.833333
+    },
+    {
+      "name": "Maithic.Algo.sorted_insertionSort",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 9,
+      "pagerank": 0.003846389,
+      "betweenness": 33.833333
+    },
+    {
+      "name": "open_one",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 13,
+      "pagerank": 0.003846389,
+      "betweenness": 6.0
+    },
+    {
+      "name": "shortcut",
+      "kind": "axiom",
+      "usedBy": 1,
+      "uses": 7,
+      "pagerank": 0.003846389,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.sorted_insertSorted",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 40,
+      "pagerank": 0.003840232,
+      "betweenness": 81.0
+    },
+    {
+      "name": "Maithic.Algo.sorted_nil",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 5,
+      "pagerank": 0.003840232,
+      "betweenness": 2.666667
+    },
+    {
+      "name": "Maithic.Algo.insertSorted_perm",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 23,
+      "pagerank": 0.003747243,
+      "betweenness": 31.333333
+    },
+    {
+      "name": "Maithic.Algo.linearSearch",
+      "kind": "definition",
+      "usedBy": 4,
+      "uses": 26,
+      "pagerank": 0.003705854,
+      "betweenness": 27.666667
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_none",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 55,
+      "pagerank": 0.003569318,
+      "betweenness": 22.166667
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_some",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 57,
+      "pagerank": 0.003569318,
+      "betweenness": 23.166667
+    },
+    {
+      "name": "Maithic.Algo.mem_insertSorted",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 37,
+      "pagerank": 0.003558566,
+      "betweenness": 26.5
+    },
+    {
+      "name": "Maithic.Algo.sorted_singleton",
+      "kind": "theorem",
+      "usedBy": 1,
+      "uses": 29,
+      "pagerank": 0.003558566,
+      "betweenness": 28.0
+    },
+    {
+      "name": "double",
+      "kind": "definition",
+      "usedBy": 1,
+      "uses": 13,
+      "pagerank": 0.003513003,
+      "betweenness": 7.0
+    },
+    {
+      "name": "Bad_Name",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 6,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.Sorted.head_le",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 11,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.Sorted.sublist",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 6,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.Sorted.tail",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 11,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_idem",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 8,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "kind": "instance",
+      "usedBy": 0,
+      "uses": 7,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.instTotalPreorderInt",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 6,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.instTotalPreorderNat",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 6,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.length_insertionSort",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 9,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_first",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 105,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_isSome_iff",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 32,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.mem_insertionSort",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 9,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Maithic.Algo.sorted_append",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 12,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "Point3",
+      "kind": "structure",
+      "usedBy": 0,
+      "uses": 0,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "by_shortcut",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 8,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "double_eq",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 82,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "instInhabitedPoint",
+      "kind": "instance",
+      "usedBy": 0,
+      "uses": 7,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "term_gap",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 13,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    },
+    {
+      "name": "uses_open",
+      "kind": "theorem",
+      "usedBy": 0,
+      "uses": 8,
+      "pagerank": 0.003476962,
+      "betweenness": 0.0
+    }
+  ]
+}

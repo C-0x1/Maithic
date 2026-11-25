@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 874" role="img" aria-labelledby="prove-run-t prove-run-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="prove-run-t">One run of the prover, message by message</title>
+  <desc id="prove-run-d">A sequence diagram with four lifelines: the maithic command, a model, Lean in the session, and Lean in a new process. The command sends the file up to the theorem to Lean and receives an environment. It sends the 18 candidates of the portfolio, and all fail. It asks the model, which answers with two proofs; Lean rejects both, one because simp made no progress and one with unsolved goals. The command asks again, with the two proofs and Lean's error for each, and the model answers with a proof by induction, which Lean accepts with the axioms it rests on. The whole file with the proof is then elaborated in a new process, which reaches the same statement, and the theorem is verified.</desc>
+  <rect width="1040" height="874" fill="#FAF8F4"/>
+  <rect x="55.1" y="96.0" width="209.8" height="36.0" rx="8" fill="#EC6813"/>
+  <rect x="295.1" y="96.0" width="209.8" height="36.0" rx="8" fill="#5B6477"/>
+  <rect x="535.1" y="96.0" width="209.8" height="36.0" rx="8" fill="#2B2F77"/>
+  <rect x="775.1" y="96.0" width="209.8" height="36.0" rx="8" fill="#0B7F75"/>
+  <rect x="54.0" y="672.0" width="692.0" height="33.0" rx="8" fill="#E8E9F3"/>
+  <rect x="54.0" y="803.0" width="932.0" height="33.0" rx="8" fill="#E8E9F3"/>
+  <path d="M160.0 132.0 L160.0 670.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M160.0 707.0 L160.0 801.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M160.0 838.0 L160.0 850.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 132.0 L400.0 148.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 172.0 L400.0 190.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 214.0 L400.0 232.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 256.0 L400.0 274.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 298.0 L400.0 400.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 424.0 L400.0 442.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 466.0 L400.0 584.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 608.0 L400.0 626.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 650.0 L400.0 670.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 707.0 L400.0 715.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 739.0 L400.0 757.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 781.0 L400.0 801.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M400.0 838.0 L400.0 850.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M640.0 132.0 L640.0 670.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M640.0 707.0 L640.0 715.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M640.0 739.0 L640.0 757.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M640.0 781.0 L640.0 801.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M640.0 838.0 L640.0 850.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M880.0 132.0 L880.0 801.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M880.0 838.0 L880.0 850.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="4 4"/>
+  <path d="M163.0 178.0 L629.0 178.0" stroke="#2B2F77" stroke-width="1.6" fill="none"/>
+  <path d="M627.0 172 l10 6 l-10 6 z" fill="#2B2F77"/>
+  <path d="M637.0 220.0 L171.0 220.0" stroke="#5B6477" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+  <path d="M173.0 214 l-10 6 l10 6 z" fill="#5B6477"/>
+  <path d="M163.0 262.0 L629.0 262.0" stroke="#2B2F77" stroke-width="1.6" fill="none"/>
+  <path d="M627.0 256 l10 6 l-10 6 z" fill="#2B2F77"/>
+  <path d="M637.0 304.0 L171.0 304.0" stroke="#5B6477" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+  <path d="M173.0 298 l-10 6 l10 6 z" fill="#5B6477"/>
+  <path d="M163.0 346.0 L389.0 346.0" stroke="#2B2F77" stroke-width="1.6" fill="none"/>
+  <path d="M387.0 340 l10 6 l-10 6 z" fill="#2B2F77"/>
+  <path d="M397.0 388.0 L171.0 388.0" stroke="#5B6477" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+  <path d="M173.0 382 l-10 6 l10 6 z" fill="#5B6477"/>
+  <path d="M163.0 430.0 L629.0 430.0" stroke="#2B2F77" stroke-width="1.6" fill="none"/>
+  <path d="M627.0 424 l10 6 l-10 6 z" fill="#2B2F77"/>
+  <path d="M637.0 472.0 L171.0 472.0" stroke="#5B6477" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+  <path d="M173.0 466 l-10 6 l10 6 z" fill="#5B6477"/>
+  <path d="M163.0 530.0 L389.0 530.0" stroke="#2B2F77" stroke-width="1.6" fill="none"/>
+  <path d="M387.0 524 l10 6 l-10 6 z" fill="#2B2F77"/>
+  <path d="M397.0 572.0 L171.0 572.0" stroke="#5B6477" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+  <path d="M173.0 566 l-10 6 l10 6 z" fill="#5B6477"/>
+  <path d="M163.0 614.0 L629.0 614.0" stroke="#2B2F77" stroke-width="1.6" fill="none"/>
+  <path d="M627.0 608 l10 6 l-10 6 z" fill="#2B2F77"/>
+  <path d="M637.0 656.0 L171.0 656.0" stroke="#5B6477" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+  <path d="M173.0 650 l-10 6 l10 6 z" fill="#5B6477"/>
+  <path d="M163.0 745.0 L869.0 745.0" stroke="#2B2F77" stroke-width="1.6" fill="none"/>
+  <path d="M867.0 739 l10 6 l-10 6 z" fill="#2B2F77"/>
+  <path d="M877.0 787.0 L171.0 787.0" stroke="#5B6477" stroke-width="1.6" fill="none" stroke-dasharray="5 4"/>
+  <path d="M173.0 781 l-10 6 l10 6 z" fill="#5B6477"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="462.2" lengthAdjust="spacingAndGlyphs">One run of the prover, message by message</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="577.0" lengthAdjust="spacingAndGlyphs">maithic prove examples/triangle.lean --mode replay --provider anthropic</text>
+  <text x="160.0" y="119.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="87.8" lengthAdjust="spacingAndGlyphs">maithic prove</text>
+  <text x="400.0" y="119.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="51.0" lengthAdjust="spacingAndGlyphs">a model</text>
+  <text x="640.0" y="119.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="129.0" lengthAdjust="spacingAndGlyphs">Lean, in the session</text>
+  <text x="880.0" y="119.0" font-size="13.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="147.8" lengthAdjust="spacingAndGlyphs">Lean, in a new process</text>
+  <text x="400.0" y="163.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="138.3" lengthAdjust="spacingAndGlyphs">the file up to the theorem</text>
+  <text x="400.0" y="205.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="86.2" lengthAdjust="spacingAndGlyphs">an environment</text>
+  <text x="400.0" y="247.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="175.1" lengthAdjust="spacingAndGlyphs">18 candidates from the portfolio</text>
+  <text x="400.0" y="289.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="50.0" lengthAdjust="spacingAndGlyphs">18 errors</text>
+  <text x="280.0" y="331.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="75.7" lengthAdjust="spacingAndGlyphs">the statement</text>
+  <text x="280.0" y="373.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="45.2" lengthAdjust="spacingAndGlyphs">2 proofs</text>
+  <text x="400.0" y="415.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="66.0" lengthAdjust="spacingAndGlyphs">the 2 proofs</text>
+  <text x="400.0" y="457.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="368.3" lengthAdjust="spacingAndGlyphs">simp made no progress; unsolved goals, with the goal that was left</text>
+  <text x="280.0" y="499.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="176.5" lengthAdjust="spacingAndGlyphs">the statement, the 2 proofs, and</text>
+  <text x="280.0" y="515.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="115.0" lengthAdjust="spacingAndGlyphs">Lean's error for each</text>
+  <text x="280.0" y="557.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="112.6" lengthAdjust="spacingAndGlyphs">1 proof, by induction</text>
+  <text x="400.0" y="599.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="49.3" lengthAdjust="spacingAndGlyphs">the proof</text>
+  <text x="400.0" y="641.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="346.0" lengthAdjust="spacingAndGlyphs">accepted; it rests on propext, Classical.choice and Quot.sound</text>
+  <text x="68.0" y="692.0" font-size="12.5" fill="#14162B" textLength="539.2" lengthAdjust="spacingAndGlyphs">The trust policy allows these three axioms. One thing is left before the word verified: the re-check.</text>
+  <text x="520.0" y="730.0" font-size="12.5" fill="#14162B" text-anchor="middle" textLength="201.5" lengthAdjust="spacingAndGlyphs">the whole file, with the proof in place</text>
+  <text x="520.0" y="772.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="198.0" lengthAdjust="spacingAndGlyphs">the same statement, the same facts</text>
+  <text x="68.0" y="823.0" font-size="12.5" fill="#14162B" textLength="541.3" lengthAdjust="spacingAndGlyphs">tri_formula  verified  (model, 21 attempts): 18 from the portfolio, 2 in the first round, 1 in the second.</text>
+</svg>

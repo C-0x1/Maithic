@@ -1,0 +1,17 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "real",
+  "domain": "real",
+  "variables": ["x"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "0 <= x"
+    },
+    {
+      "name": "h2",
+      "statement": "x <= 2"
+    }
+  ],
+  "goal": "x^2 - 2 * x + 1 >= 0"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "polynomial",
+  "domain": "int",
+  "variables": ["x", "y"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "2 * x = 3 * y + 1"
+    },
+    {
+      "name": "h2",
+      "statement": "y = 1"
+    }
+  ],
+  "goal": "x = 2"
+}

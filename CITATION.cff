@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use Maithic, please cite it as below."
+title: "Maithic: AI-assisted mathematics and formal verification on Lean 4"
+type: software
+authors:
+  - name: "The Maithic Authors"
+license: Apache-2.0
+repository-code: "https://github.com/OWNER/maithic"
+version: 0.1.0
+keywords:
+  - formal verification
+  - theorem proving
+  - Lean 4
+  - artificial intelligence

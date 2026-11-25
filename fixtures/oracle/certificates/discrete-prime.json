@@ -1,0 +1,30 @@
+{
+  "schema": "maithic.oracle.certificate/1",
+  "kind": "discrete.prime",
+  "claim": "Nat.Prime 97",
+  "data": {
+    "n": "97",
+    "proof": [
+      {
+        "n": "3",
+        "witness": "2",
+        "factors": [
+          ["2", 1]
+        ]
+      },
+      {
+        "n": "97",
+        "witness": "5",
+        "factors": [
+          ["2", 5],
+          ["3", 1]
+        ]
+      }
+    ]
+  },
+  "engine": {
+    "name": "MaithicOracle",
+    "version": "0.1.0",
+    "parameters": {}
+  }
+}

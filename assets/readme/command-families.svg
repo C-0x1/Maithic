@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 700" role="img" aria-labelledby="command-families-t command-families-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="command-families-t">Every command, by what it is for</title>
+  <desc id="command-families-d">Seven bands of commands. Prove and check: prove, tree, check. State and test: formalize, refute, council. Plan, find and read: blueprint with six subcommands, search, and intel with seven. Repair and review: mend scan, repair and minimize, and review. Compute with certificates: oracle list and solve, nnv verify, algo synth and differential. Data and measurement: corpus harvest and verify, guide info, rank and train, bench run and gate. Setup: doctor, config, auth, models, bridge selftest, help and version.</desc>
+  <rect width="1040" height="700" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="960.0" height="54.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="162.0" width="960.0" height="54.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="228.0" width="960.0" height="84.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="324.0" width="960.0" height="54.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="390.0" width="960.0" height="58.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <rect x="40.0" y="460.0" width="960.0" height="54.0" rx="10" fill="#FFFFFF" stroke="#276DC3" stroke-width="1.5"/>
+  <rect x="40.0" y="526.0" width="960.0" height="84.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="628.0" width="960.0" height="42.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h200.0v54.0h-200.0a10 10 0 0 1 -10-10z" fill="#2B2F77"/>
+  <rect x="268.0" y="108.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="330.6" y="108.0" width="47.7" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="386.3" y="108.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 172.0a10 10 0 0 1 10-10h200.0v54.0h-200.0a10 10 0 0 1 -10-10z" fill="#2B2F77"/>
+  <rect x="268.0" y="174.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="358.3" y="174.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="427.9" y="174.0" width="68.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 238.0a10 10 0 0 1 10-10h200.0v84.0h-200.0a10 10 0 0 1 -10-10z" fill="#0B7F75"/>
+  <rect x="268.0" y="240.0" width="123.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="399.9" y="240.0" width="47.7" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="455.6" y="240.0" width="75.4" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="538.9" y="240.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="608.5" y="240.0" width="47.7" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="664.2" y="240.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="726.8" y="240.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="796.3" y="240.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="893.6" y="240.0" width="68.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="268.0" y="270.0" width="47.7" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="323.7" y="270.0" width="47.7" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="379.4" y="270.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="476.6" y="270.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="546.2" y="270.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 334.0a10 10 0 0 1 10-10h200.0v54.0h-200.0a10 10 0 0 1 -10-10z" fill="#0B7F75"/>
+  <rect x="268.0" y="336.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="358.3" y="336.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="427.9" y="336.0" width="75.4" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="511.2" y="336.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 400.0a10 10 0 0 1 10-10h200.0v58.0h-200.0a10 10 0 0 1 -10-10z" fill="#9558B2"/>
+  <rect x="268.0" y="402.0" width="96.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="372.2" y="402.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="434.8" y="402.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="532.0" y="402.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="629.3" y="402.0" width="103.1" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 470.0a10 10 0 0 1 10-10h200.0v54.0h-200.0a10 10 0 0 1 -10-10z" fill="#276DC3"/>
+  <rect x="268.0" y="472.0" width="116.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="392.9" y="472.0" width="110.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="510.9" y="472.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="608.2" y="472.0" width="47.7" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="663.9" y="472.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="726.5" y="472.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="816.8" y="472.0" width="47.7" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 536.0a10 10 0 0 1 10-10h200.0v84.0h-200.0a10 10 0 0 1 -10-10z" fill="#5B6477"/>
+  <rect x="268.0" y="538.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="337.5" y="538.0" width="96.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="441.7" y="538.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="532.0" y="538.0" width="75.4" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="615.4" y="538.0" width="96.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="719.6" y="538.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="782.2" y="538.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="851.7" y="538.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="268.0" y="568.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="337.5" y="568.0" width="123.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="469.4" y="568.0" width="123.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="601.3" y="568.0" width="96.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="705.4" y="568.0" width="68.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="412.0" lengthAdjust="spacingAndGlyphs">Forty-nine commands in seven families</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="113.8" lengthAdjust="spacingAndGlyphs">maithic --help</text>
+  <text x="54.0" y="128.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="107.3" lengthAdjust="spacingAndGlyphs">Prove and check</text>
+  <text x="278.0" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">prove</text>
+  <text x="340.6" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">tree</text>
+  <text x="396.3" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">check</text>
+  <text x="54.0" y="194.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="88.5" lengthAdjust="spacingAndGlyphs">State and test</text>
+  <text x="278.0" y="189.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">formalize</text>
+  <text x="368.3" y="189.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">refute</text>
+  <text x="437.9" y="189.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="48.5" lengthAdjust="spacingAndGlyphs">council</text>
+  <text x="54.0" y="275.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="96.8" lengthAdjust="spacingAndGlyphs">Plan, find, read</text>
+  <text x="278.0" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="103.8" lengthAdjust="spacingAndGlyphs">blueprint check</text>
+  <text x="409.9" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">plan</text>
+  <text x="465.6" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">skeleton</text>
+  <text x="548.9" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">status</text>
+  <text x="618.5" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">next</text>
+  <text x="674.2" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">graph</text>
+  <text x="736.8" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">search</text>
+  <text x="806.3" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">intel scan</text>
+  <text x="903.6" y="255.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="48.5" lengthAdjust="spacingAndGlyphs">extract</text>
+  <text x="278.0" y="285.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">show</text>
+  <text x="333.7" y="285.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">deps</text>
+  <text x="389.4" y="285.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">dependents</text>
+  <text x="486.6" y="285.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">health</text>
+  <text x="556.2" y="285.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">stats</text>
+  <text x="54.0" y="356.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="115.6" lengthAdjust="spacingAndGlyphs">Repair and review</text>
+  <text x="278.0" y="351.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">mend scan</text>
+  <text x="368.3" y="351.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">repair</text>
+  <text x="437.9" y="351.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">minimize</text>
+  <text x="521.2" y="351.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">review</text>
+  <text x="54.0" y="415.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="89.2" lengthAdjust="spacingAndGlyphs">Compute with</text>
+  <text x="54.0" y="433.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="71.3" lengthAdjust="spacingAndGlyphs">certificates</text>
+  <text x="278.0" y="417.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">oracle list</text>
+  <text x="382.2" y="417.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">solve</text>
+  <text x="444.8" y="417.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">nnv verify</text>
+  <text x="542.0" y="417.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">algo synth</text>
+  <text x="639.3" y="417.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="83.1" lengthAdjust="spacingAndGlyphs">differential</text>
+  <text x="54.0" y="492.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="148.6" lengthAdjust="spacingAndGlyphs">Data and measurement</text>
+  <text x="278.0" y="487.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="96.9" lengthAdjust="spacingAndGlyphs">corpus harvest</text>
+  <text x="402.9" y="487.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">corpus verify</text>
+  <text x="520.9" y="487.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">guide info</text>
+  <text x="618.2" y="487.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">rank</text>
+  <text x="673.9" y="487.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">train</text>
+  <text x="736.5" y="487.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">bench run</text>
+  <text x="826.8" y="487.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">gate</text>
+  <text x="54.0" y="573.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="37.5" lengthAdjust="spacingAndGlyphs">Setup</text>
+  <text x="278.0" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">doctor</text>
+  <text x="347.5" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">config show</text>
+  <text x="451.7" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">reference</text>
+  <text x="542.0" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">validate</text>
+  <text x="625.4" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">auth status</text>
+  <text x="729.6" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">login</text>
+  <text x="792.2" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">logout</text>
+  <text x="861.7" y="553.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">auth check</text>
+  <text x="278.0" y="583.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">models</text>
+  <text x="347.5" y="583.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="103.8" lengthAdjust="spacingAndGlyphs">bridge selftest</text>
+  <text x="479.4" y="583.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="103.8" lengthAdjust="spacingAndGlyphs">help exit-codes</text>
+  <text x="611.3" y="583.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">help status</text>
+  <text x="715.4" y="583.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="48.5" lengthAdjust="spacingAndGlyphs">version</text>
+  <text x="56.0" y="653.0" font-size="13" fill="#14162B" textLength="816.5" lengthAdjust="spacingAndGlyphs">Every command takes --json and --help, ends with one of fourteen exit codes, and reports an error with a code of the form MTH-AREA-NNNN.</text>
+</svg>

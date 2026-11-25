@@ -1,0 +1,145 @@
+{
+  "schema": "maithic.nnv.job/1",
+  "model": "small classifier",
+  "property": "on the unit square the score stays within [-1, 1]",
+  "status": "verified",
+  "claim": "verified",
+  "check": {
+    "theorem": "Maithic.NNV.Job.property_holds",
+    "statement": "Maithic.NN.Holds Maithic.NNV.Job.net Maithic.NNV.Job.input Maithic.NNV.Job.claimed",
+    "accepted": true,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "policy": {
+      "status": "verified",
+      "reasons": [],
+      "violations": []
+    },
+    "elapsed_ms": 297
+  },
+  "verify_ms": 2695,
+  "verdict": {
+    "schema": "maithic.nnv.verdict/1",
+    "verdict": "verified",
+    "network": [
+      {
+        "activation": "relu",
+        "neurons": [
+          {
+            "weights": [
+              "1/10",
+              "-3/10"
+            ],
+            "bias": "1/20"
+          },
+          {
+            "weights": [
+              "7/10",
+              "1/5"
+            ],
+            "bias": "-3/20"
+          },
+          {
+            "weights": [
+              "-2/5",
+              "3/5"
+            ],
+            "bias": "1/10"
+          }
+        ]
+      },
+      {
+        "activation": "relu",
+        "neurons": [
+          {
+            "weights": [
+              "11/10",
+              "-9/10",
+              "1/2"
+            ],
+            "bias": "1/100"
+          },
+          {
+            "weights": [
+              "-1/5",
+              "4/5",
+              "3/10"
+            ],
+            "bias": "0"
+          }
+        ]
+      },
+      {
+        "activation": "identity",
+        "neurons": [
+          {
+            "weights": [
+              "1",
+              "-1"
+            ],
+            "bias": "0"
+          }
+        ]
+      }
+    ],
+    "input": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "output": [
+      [
+        "-1",
+        "1"
+      ]
+    ],
+    "boxes": [
+      [
+        [
+          "0",
+          "2702159776422299/18014398509481984"
+        ],
+        [
+          "0",
+          "6755399441055749/9007199254740992"
+        ],
+        [
+          "0",
+          "3152519739159349/4503599627370496"
+        ]
+      ],
+      [
+        [
+          "0",
+          "4728779608739027/9007199254740992"
+        ],
+        [
+          "0",
+          "3647915698170107/4503599627370496"
+        ]
+      ],
+      [
+        [
+          "-7295831396340217/9007199254740992",
+          "4728779608739031/9007199254740992"
+        ]
+      ]
+    ],
+    "engine": {
+      "name": "MaithicNNV",
+      "version": "0.1.0",
+      "parameters": {
+        "method": "interval bound propagation, outward rounding",
+        "max_corners": 1024
+      }
+    }
+  }
+}

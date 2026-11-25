@@ -1,0 +1,41 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "xai-chat-ok",
+  "provider": "xai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "api": "chat_completions",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "a3d1008e-4544-40d4-d075-11527e794e4a",
+    "object": "chat.completion",
+    "created": 1752854522,
+    "model": "grok-4.7",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"candidates\": [\"by decide\"]}",
+          "refusal": null
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 140,
+      "completion_tokens": 17,
+      "total_tokens": 157,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  "expect": {
+    "text": "{\"candidates\": [\"by decide\"]}",
+    "stop": "end_turn",
+    "input_tokens": 140,
+    "output_tokens": 17
+  }
+}

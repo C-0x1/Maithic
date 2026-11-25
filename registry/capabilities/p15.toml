@@ -1,0 +1,176 @@
+# Capability register for P15 Bench.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P15"
+name = "Bench"
+title = "Benchmark observatory"
+mission = "Measure the prover on fixed, versioned suites, analyze the results with real statistics, and stop regressions before they merge."
+
+[[group]]
+id = "P15-01"
+title = "Benchmark suite definitions"
+language = "Lean"
+path = "lean/MaithicBench/"
+purpose = "Problems stated in Lean, with metadata, that compile cleanly."
+
+  [[group.capability]]
+  id = "P15-01-01"
+  title = "Problem-as-proposition convention"
+  spec = "Each problem is a `Prop`-valued definition, so suites compile with no `sorry`."
+  status = "done"
+  tests = ["lean/MaithicTest/Bench.lean"]
+
+  [[group.capability]]
+  id = "P15-01-02"
+  title = "Problem attribute"
+  spec = "`@[maithic_problem]` records identifier, suite, tags and difficulty."
+  status = "done"
+  tests = ["lean/MaithicTest/Bench.lean"]
+
+  [[group.capability]]
+  id = "P15-01-03"
+  title = "Basics suite"
+  spec = "Propositional logic, natural-number arithmetic and list facts solvable by core automation."
+  status = "done"
+  tests = ["lean/MaithicTest/Bench.lean"]
+
+  [[group.capability]]
+  id = "P15-01-04"
+  title = "Suite manifest export"
+  spec = "Export the problem list with metadata as JSON."
+  status = "done"
+  tests = ["lean/MaithicTest/Bench.lean"]
+
+  [[group.capability]]
+  id = "P15-01-05"
+  title = "Reference solutions"
+  spec = "Kernel-checked proofs of every basics problem in a separate module."
+  status = "done"
+  tests = ["lean/MaithicTest/Bench.lean"]
+
+  [[group.capability]]
+  id = "P15-01-06"
+  title = "Suite tests"
+  spec = "Tests of the attribute, export and conventions."
+  status = "done"
+  tests = ["lean/MaithicTest/Bench.lean"]
+
+[[group]]
+id = "P15-02"
+title = "Statistical analysis"
+language = "R"
+path = "r/maithicstats/R/bench-*.R"
+purpose = "Turns result tables into conclusions with stated uncertainty."
+
+  [[group.capability]]
+  id = "P15-02-01"
+  title = "Binomial intervals"
+  spec = "Wilson intervals for success rates."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-bench-intervals.R"]
+
+  [[group.capability]]
+  id = "P15-02-02"
+  title = "Bootstrap intervals"
+  spec = "Bootstrap intervals for any metric, resampling problems."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-bench-intervals.R"]
+
+  [[group.capability]]
+  id = "P15-02-03"
+  title = "Paired comparison"
+  spec = "McNemar test for two configurations on the same problems."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-bench-compare.R"]
+
+  [[group.capability]]
+  id = "P15-02-04"
+  title = "Effect size"
+  spec = "Paired difference in success with an interval."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-bench-compare.R"]
+
+  [[group.capability]]
+  id = "P15-02-05"
+  title = "Comparison table"
+  spec = "Table of configurations with intervals."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-bench-compare.R"]
+
+  [[group.capability]]
+  id = "P15-02-06"
+  title = "Statistical helpers tests"
+  spec = "Tests against known values."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-bench-compare.R"]
+
+  [[group.capability]]
+  id = "P15-02-07"
+  title = "Analysis entry point"
+  spec = "One function producing the standard analysis for a run."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-bench-analyze.R"]
+
+[[group]]
+id = "P15-03"
+title = "Figure factory"
+language = "R"
+path = "r/maithicviz/"
+purpose = "One package that draws every chart in reports, documentation and the README."
+
+  [[group.capability]]
+  id = "P15-03-01"
+  title = "Brand theme"
+  spec = "ggplot2 theme with brand fonts, colors and spacing."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-figures.R"]
+
+  [[group.capability]]
+  id = "P15-03-02"
+  title = "Success bar chart"
+  spec = "Success rates with interval bars."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-figures.R"]
+
+  [[group.capability]]
+  id = "P15-03-03"
+  title = "SVG and PNG export"
+  spec = "Deterministic export at fixed sizes."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-figures.R"]
+
+  [[group.capability]]
+  id = "P15-03-04"
+  title = "Render-all function"
+  spec = "`render_all()` regenerates every figure from fixture data."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-figures.R", "r/maithicviz/tests/testthat/test-report-figures.R"]
+
+[[group]]
+id = "P15-04"
+title = "Regression gates"
+language = "OCaml"
+path = "ocaml/lib/bench/gate/"
+purpose = "Fails CI when quality or performance drops."
+
+  [[group.capability]]
+  id = "P15-04-01"
+  title = "Baseline store"
+  spec = "Stored baseline results per suite."
+  status = "done"
+  tests = ["ocaml/test/test_bench.ml"]
+
+  [[group.capability]]
+  id = "P15-04-02"
+  title = "Gate rule"
+  spec = "Compare a run with its baseline against thresholds."
+  status = "done"
+  tests = ["ocaml/test/test_bench.ml"]
+
+  [[group.capability]]
+  id = "P15-04-03"
+  title = "Gate command"
+  spec = "`maithic bench gate` with exit codes."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_bench.ml"]

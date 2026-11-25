@@ -1,0 +1,104 @@
+{
+  "schema": "maithic.prove.run/1",
+  "file": "examples/even.lean",
+  "policy": {
+    "name": "default",
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "allow_native": false,
+    "require_recheck": true
+  },
+  "results": [
+    {
+      "schema": "maithic.prove.result/1",
+      "file": "examples/even.lean",
+      "theorem": "even_add_even",
+      "statement": "∀ (a b : Nat), a % 2 = 0 → b % 2 = 0 → (a + b) % 2 = 0",
+      "line": 7,
+      "status": "verified",
+      "proof": "by omega",
+      "proposer": "portfolio",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "decision": {
+        "status": "verified",
+        "reasons": [],
+        "violations": []
+      },
+      "recheck": {
+        "passed": true,
+        "declaration": "even_add_even",
+        "statement": "∀ (a b : Nat), a % 2 = 0 → b % 2 = 0 → (a + b) % 2 = 0",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "errors": 0,
+        "elapsed_ms": 226,
+        "lean": "4.36.0"
+      },
+      "attempts": [
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by rfl",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:92: Tactic `rfl` failed: The left-hand side\n  (a + b) % 2\nis not definitionally equal to the right-hand side\n  0\n\na b : Nat\nha : a % 2 = 0\nhb : b % 2 = 0\n⊢ (a + b) % 2 = 0",
+          "elapsed_ms": 8
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by trivial",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:92: Tactic `assumption` failed\n\na b : Nat\nha : a % 2 = 0\nhb : b % 2 = 0\n⊢ (a + b) % 2 = 0",
+          "elapsed_ms": 8
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by simp",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:92: `simp` made no progress",
+          "elapsed_ms": 6
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by omega",
+          "accepted": true,
+          "elapsed_ms": 27
+        }
+      ],
+      "rounds_used": 0,
+      "elapsed_ms": 454
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "verified": 1,
+    "checked": 0,
+    "refuted": 0,
+    "conjectured": 0,
+    "unverified": 0,
+    "unknown": 0,
+    "failed": 0,
+    "abstained": 0
+  },
+  "gateway": {
+    "mode": "replay",
+    "calls": 0,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": []
+  }
+}

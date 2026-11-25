@@ -1,0 +1,5 @@
+# Names that changed, old to new: what the release notes of a library say,
+# in a form `maithic mend repair --renames` reads.
+
+[renames]
+"Nat.add_commutes" = "Nat.add_comm"

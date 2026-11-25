@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 550" role="img" aria-labelledby="exit-codes-t exit-codes-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="exit-codes-t">The fourteen exit codes</title>
+  <desc id="exit-codes-d">Fourteen tiles, one for each exit code of the maithic command: 0 success, 1 general failure, 2 usage error, 3 configuration error, 4 toolchain or runtime missing, 5 provider or authentication error, 6 budget exceeded, 7 abstained or not verified, 8 statement refuted, 9 trust or review policy violation, 10 timeout, 11 cancelled, 12 feature unavailable in this installation, 13 regression gate failed. A command whose outcome is a status exits with 0 only when every result is verified.</desc>
+  <rect width="960" height="550" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.5"/>
+  <rect x="218.8" y="96.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="397.6" y="96.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="576.4" y="96.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="755.2" y="96.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="202.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="218.8" y="202.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="397.6" y="202.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#B37400" stroke-width="1.5"/>
+  <rect x="576.4" y="202.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="755.2" y="202.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="40.0" y="308.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="218.8" y="308.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="397.6" y="308.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="576.4" y="308.0" width="164.8" height="92.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="40.0" y="418.0" width="880.0" height="102.0" rx="10" fill="#E8E9F3"/>
+  <rect x="40.0" y="96.0" width="7.0" height="92.0" rx="3" fill="#0FA89B"/>
+  <rect x="218.8" y="96.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="397.6" y="96.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="576.4" y="96.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="755.2" y="96.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="40.0" y="202.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="218.8" y="202.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="397.6" y="202.0" width="7.0" height="92.0" rx="3" fill="#B37400"/>
+  <rect x="576.4" y="202.0" width="7.0" height="92.0" rx="3" fill="#E5484D"/>
+  <rect x="755.2" y="202.0" width="7.0" height="92.0" rx="3" fill="#E5484D"/>
+  <rect x="40.0" y="308.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="218.8" y="308.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="397.6" y="308.0" width="7.0" height="92.0" rx="3" fill="#5B6477"/>
+  <rect x="576.4" y="308.0" width="7.0" height="92.0" rx="3" fill="#E5484D"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="460.9" lengthAdjust="spacingAndGlyphs">Fourteen exit codes that a script can rely on</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="186.9" lengthAdjust="spacingAndGlyphs">maithic help exit-codes</text>
+  <text x="60.0" y="130.0" font-size="24" fill="#0FA89B" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">0</text>
+  <text x="60.0" y="152.0" font-size="12.5" fill="#14162B" textLength="47.2" lengthAdjust="spacingAndGlyphs">Success</text>
+  <text x="238.8" y="130.0" font-size="24" fill="#5B6477" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">1</text>
+  <text x="238.8" y="152.0" font-size="12.5" fill="#14162B" textLength="82.0" lengthAdjust="spacingAndGlyphs">General failure</text>
+  <text x="417.6" y="130.0" font-size="24" fill="#5B6477" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">2</text>
+  <text x="417.6" y="152.0" font-size="12.5" fill="#14162B" textLength="66.0" lengthAdjust="spacingAndGlyphs">Usage error</text>
+  <text x="596.4" y="130.0" font-size="24" fill="#5B6477" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">3</text>
+  <text x="596.4" y="152.0" font-size="12.5" fill="#14162B" textLength="104.2" lengthAdjust="spacingAndGlyphs">Configuration error</text>
+  <text x="775.2" y="130.0" font-size="24" fill="#5B6477" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">4</text>
+  <text x="775.2" y="152.0" font-size="12.5" fill="#14162B" textLength="112.6" lengthAdjust="spacingAndGlyphs">Toolchain or runtime</text>
+  <text x="775.2" y="169.0" font-size="12.5" fill="#14162B" textLength="42.4" lengthAdjust="spacingAndGlyphs">missing</text>
+  <text x="60.0" y="236.0" font-size="24" fill="#5B6477" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">5</text>
+  <text x="60.0" y="258.0" font-size="12.5" fill="#14162B" textLength="61.1" lengthAdjust="spacingAndGlyphs">Provider or</text>
+  <text x="60.0" y="275.0" font-size="12.5" fill="#14162B" textLength="107.7" lengthAdjust="spacingAndGlyphs">authentication error</text>
+  <text x="238.8" y="236.0" font-size="24" fill="#5B6477" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">6</text>
+  <text x="238.8" y="258.0" font-size="12.5" fill="#14162B" textLength="97.3" lengthAdjust="spacingAndGlyphs">Budget exceeded</text>
+  <text x="417.6" y="236.0" font-size="24" fill="#B37400" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">7</text>
+  <text x="417.6" y="258.0" font-size="12.5" fill="#14162B" textLength="91.0" lengthAdjust="spacingAndGlyphs">Abstained or not</text>
+  <text x="417.6" y="275.0" font-size="12.5" fill="#14162B" textLength="40.3" lengthAdjust="spacingAndGlyphs">verified</text>
+  <text x="596.4" y="236.0" font-size="24" fill="#E5484D" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">8</text>
+  <text x="596.4" y="258.0" font-size="12.5" fill="#14162B" textLength="99.4" lengthAdjust="spacingAndGlyphs">Statement refuted</text>
+  <text x="775.2" y="236.0" font-size="24" fill="#E5484D" font-weight="700" textLength="13.3" lengthAdjust="spacingAndGlyphs">9</text>
+  <text x="775.2" y="258.0" font-size="12.5" fill="#14162B" textLength="82.2" lengthAdjust="spacingAndGlyphs">Trust or review</text>
+  <text x="775.2" y="275.0" font-size="12.5" fill="#14162B" textLength="81.3" lengthAdjust="spacingAndGlyphs">policy violation</text>
+  <text x="60.0" y="342.0" font-size="24" fill="#5B6477" font-weight="700" textLength="26.7" lengthAdjust="spacingAndGlyphs">10</text>
+  <text x="60.0" y="364.0" font-size="12.5" fill="#14162B" textLength="44.7" lengthAdjust="spacingAndGlyphs">Timeout</text>
+  <text x="238.8" y="342.0" font-size="24" fill="#5B6477" font-weight="700" textLength="25.4" lengthAdjust="spacingAndGlyphs">11</text>
+  <text x="238.8" y="364.0" font-size="12.5" fill="#14162B" textLength="55.6" lengthAdjust="spacingAndGlyphs">Cancelled</text>
+  <text x="417.6" y="342.0" font-size="24" fill="#5B6477" font-weight="700" textLength="26.7" lengthAdjust="spacingAndGlyphs">12</text>
+  <text x="417.6" y="364.0" font-size="12.5" fill="#14162B" textLength="109.8" lengthAdjust="spacingAndGlyphs">Feature unavailable</text>
+  <text x="417.6" y="381.0" font-size="12.5" fill="#14162B" textLength="95.2" lengthAdjust="spacingAndGlyphs">in this installation</text>
+  <text x="596.4" y="342.0" font-size="24" fill="#E5484D" font-weight="700" textLength="26.7" lengthAdjust="spacingAndGlyphs">13</text>
+  <text x="596.4" y="364.0" font-size="12.5" fill="#14162B" textLength="91.0" lengthAdjust="spacingAndGlyphs">Regression gate</text>
+  <text x="596.4" y="381.0" font-size="12.5" fill="#14162B" textLength="29.9" lengthAdjust="spacingAndGlyphs">failed</text>
+  <text x="56.0" y="443.0" font-size="13" fill="#14162B" textLength="721.9" lengthAdjust="spacingAndGlyphs">A command whose outcome is a status, such as maithic prove, exits with 0 only when every result is verified. Any other status</text>
+  <text x="56.0" y="461.0" font-size="13" fill="#14162B" textLength="265.9" lengthAdjust="spacingAndGlyphs">exits with 7, except refuted, which exits with 8.</text>
+  <text x="56.0" y="485.0" font-size="13" fill="#14162B" textLength="743.5" lengthAdjust="spacingAndGlyphs">The numbers are stable. Every error also carries a code of the form MTH-AREA-NNNN, printed with the message and returned in</text>
+  <text x="56.0" y="503.0" font-size="13" fill="#14162B" textLength="125.0" lengthAdjust="spacingAndGlyphs">error.code with --json.</text>
+</svg>

@@ -1,0 +1,4 @@
+(library
+ (name maithic_base)
+ (public_name maithic.base)
+ (libraries unix str))

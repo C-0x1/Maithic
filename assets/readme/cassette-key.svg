@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 402" role="img" aria-labelledby="cassette-key-t cassette-key-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="cassette-key-t">How a request finds its cassette</title>
+  <desc id="cassette-key-d">Three steps. First the request is made canonical: provider, model, purpose, system prompt, messages, output limit, temperature and schema. Second its SHA-256 digest is taken, and the digest is the name of the file. Third the cassette, a JSON file, holds the request, the response and an origin, recorded or authored; it never holds a key or a header.</desc>
+  <rect width="960" height="402" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="273.3" height="174.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="343.3" y="96.0" width="273.3" height="174.0" rx="10" fill="#FFFFFF" stroke="#B37400" stroke-width="1.5"/>
+  <rect x="646.7" y="96.0" width="273.3" height="174.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="288.0" width="880.0" height="84.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#2B2F77"/>
+  <path d="M317.3 183.0 L331.3 183.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M329.3333333333333 177.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M343.3 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#B37400"/>
+  <path d="M620.7 183.0 L634.7 183.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M632.6666666666666 177.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M646.7 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#0B7F75"/>
+  <circle cx="669.6666666666666" cy="224.0" r="8" fill="#E5484D"/>
+  <path d="M665.6666666666666 220.0 l8 8 M673.6666666666666 220.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="335.0" lengthAdjust="spacingAndGlyphs">How a request finds its cassette</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="260.1" lengthAdjust="spacingAndGlyphs">fixtures/cassettes/&lt;digest&gt;.json</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="159.5" lengthAdjust="spacingAndGlyphs">1  The canonical request</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="111.3" lengthAdjust="spacingAndGlyphs">provider and model</text>
+  <text x="54.0" y="179.0" font-size="13" fill="#14162B" textLength="47.0" lengthAdjust="spacingAndGlyphs">purpose</text>
+  <text x="54.0" y="203.0" font-size="13" fill="#14162B" textLength="173.4" lengthAdjust="spacingAndGlyphs">system prompt and messages</text>
+  <text x="54.0" y="227.0" font-size="13" fill="#14162B" textLength="161.9" lengthAdjust="spacingAndGlyphs">output limit and temperature</text>
+  <text x="54.0" y="251.0" font-size="13" fill="#14162B" textLength="127.2" lengthAdjust="spacingAndGlyphs">schema of the answer</text>
+  <text x="357.3" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="134.6" lengthAdjust="spacingAndGlyphs">2  Its SHA-256 digest</text>
+  <text x="357.3" y="155.0" font-size="13" fill="#14162B" textLength="191.5" lengthAdjust="spacingAndGlyphs">The digest is the name of the file.</text>
+  <text x="357.3" y="179.0" font-size="13" fill="#14162B" textLength="192.9" lengthAdjust="spacingAndGlyphs">The same request finds the same</text>
+  <text x="357.3" y="197.0" font-size="13" fill="#14162B" textLength="169.1" lengthAdjust="spacingAndGlyphs">cassette on every machine; a</text>
+  <text x="357.3" y="215.0" font-size="13" fill="#14162B" textLength="204.3" lengthAdjust="spacingAndGlyphs">request that differs in one character</text>
+  <text x="357.3" y="233.0" font-size="13" fill="#14162B" textLength="63.6" lengthAdjust="spacingAndGlyphs">finds none.</text>
+  <text x="660.7" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="96.5" lengthAdjust="spacingAndGlyphs">3  The cassette</text>
+  <text x="660.7" y="155.0" font-size="13" fill="#14162B" textLength="65.0" lengthAdjust="spacingAndGlyphs">the request</text>
+  <text x="660.7" y="179.0" font-size="13" fill="#14162B" textLength="75.2" lengthAdjust="spacingAndGlyphs">the response</text>
+  <text x="660.7" y="203.0" font-size="13" fill="#14162B" textLength="178.5" lengthAdjust="spacingAndGlyphs">an origin: recorded or authored</text>
+  <text x="686.7" y="227.0" font-size="13" fill="#14162B" textLength="137.3" lengthAdjust="spacingAndGlyphs">never a key or a header</text>
+  <text x="56.0" y="313.0" font-size="13" fill="#14162B" textLength="600.3" lengthAdjust="spacingAndGlyphs">Text shaped like a key is scrubbed before a cassette is written, and the hygiene gate scans the directory.</text>
+  <text x="56.0" y="337.0" font-size="13" fill="#14162B" textLength="714.0" lengthAdjust="spacingAndGlyphs">The cassettes in the repository are authored: answers written by hand for the demonstrations. Running a demonstration with</text>
+  <text x="56.0" y="355.0" font-size="13" fill="#14162B" textLength="411.2" lengthAdjust="spacingAndGlyphs">--mode record and a key replaces them with recordings of a real model.</text>
+</svg>

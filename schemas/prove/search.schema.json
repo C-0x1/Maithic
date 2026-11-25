@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proof search record",
+  "description": "What is left of a step-wise proof search: every goal the search met, with the tactics tried on it and what each left; the order and duration of the expansions; how the search ended and what it cost; and the proof, when one was found. Nodes are named by their position in the list. The node named by root stands for all the goals the search began with; they are the subgoals of its first edge.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.prove.search/1"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "stop": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expansions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "lean_calls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tokens": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "elapsed_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "script": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "root": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "stop",
+    "expansions",
+    "lean_calls",
+    "tokens",
+    "elapsed_ms",
+    "root",
+    "nodes",
+    "steps"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "node": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "parent": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "depth": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "goal": {
+          "type": "string"
+        },
+        "hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "enum": [
+            "open",
+            "proved",
+            "failed"
+          ]
+        },
+        "expanded": {
+          "type": "boolean"
+        },
+        "alias_of": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "abandoned": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proved_by": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "depth",
+        "goal",
+        "hypotheses",
+        "status",
+        "expanded",
+        "edges"
+      ],
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "tactic": {
+          "type": "string"
+        },
+        "prior": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "outcome": {
+          "enum": [
+            "subgoals",
+            "rejected",
+            "blocked"
+          ]
+        },
+        "subgoals": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "error_class": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "by": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "tactic",
+        "prior",
+        "outcome"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "subgoals"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "subgoals"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "rejected"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "error_class",
+              "message"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "blocked"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "by"
+            ]
+          }
+        }
+      ]
+    },
+    "step": {
+      "type": "object",
+      "properties": {
+        "node": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "started_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "elapsed_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "node",
+        "started_ms",
+        "elapsed_ms"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

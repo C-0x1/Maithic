@@ -1,0 +1,45 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "openai-incomplete",
+  "provider": "openai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "resp_2",
+    "object": "response",
+    "status": "incomplete",
+    "error": null,
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "model": "gpt-6.2-sol",
+    "output": [
+      {
+        "id": "msg_1",
+        "type": "message",
+        "status": "incomplete",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "partial",
+            "annotations": []
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 10,
+      "output_tokens": 16,
+      "total_tokens": 26
+    }
+  },
+  "expect": {
+    "text": "partial",
+    "stop": "max_tokens",
+    "input_tokens": 10,
+    "output_tokens": 16
+  }
+}

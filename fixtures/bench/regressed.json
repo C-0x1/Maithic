@@ -1,0 +1,355 @@
+{
+  "schema": "maithic.bench.run/1",
+  "manifest": "manifest.json",
+  "mode": "replay",
+  "use_ai": false,
+  "policy": "default",
+  "total": 24,
+  "verified": 24,
+  "problems": [
+    {
+      "id": "basics-001",
+      "suite": "basics",
+      "tags": [
+        "logic"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.and_comm'; intros; simp_all",
+      "attempts": 6,
+      "rounds": 0,
+      "elapsed_ms": 1697
+    },
+    {
+      "id": "basics-002",
+      "suite": "basics",
+      "tags": [
+        "logic"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.or_comm'; intros; grind",
+      "attempts": 7,
+      "rounds": 0,
+      "elapsed_ms": 917
+    },
+    {
+      "id": "basics-003",
+      "suite": "basics",
+      "tags": [
+        "logic"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.imp_trans; intros; simp_all",
+      "attempts": 6,
+      "rounds": 0,
+      "elapsed_ms": 856
+    },
+    {
+      "id": "basics-004",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.add_comm'; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 858
+    },
+    {
+      "id": "basics-005",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.even_add_even; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 851
+    },
+    {
+      "id": "basics-006",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.lt_succ_of_le'; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 821
+    },
+    {
+      "id": "basics-007",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 1,
+      "status": "failed",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.mul_two; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 837
+    },
+    {
+      "id": "basics-008",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.succ_ne_zero'; intros; simp",
+      "attempts": 3,
+      "rounds": 0,
+      "elapsed_ms": 819
+    },
+    {
+      "id": "basics-009",
+      "suite": "basics",
+      "tags": [
+        "int"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.add_one_le_of_lt; intros; trivial",
+      "attempts": 2,
+      "rounds": 0,
+      "elapsed_ms": 806
+    },
+    {
+      "id": "basics-010",
+      "suite": "basics",
+      "tags": [
+        "list"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.length_append'; intros; simp",
+      "attempts": 3,
+      "rounds": 0,
+      "elapsed_ms": 816
+    },
+    {
+      "id": "basics-011",
+      "suite": "basics",
+      "tags": [
+        "list"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.reverse_reverse'; intros; simp",
+      "attempts": 3,
+      "rounds": 0,
+      "elapsed_ms": 806
+    },
+    {
+      "id": "basics-012",
+      "suite": "basics",
+      "tags": [
+        "decide"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.small_sum; intros; rfl",
+      "attempts": 1,
+      "rounds": 0,
+      "elapsed_ms": 823
+    },
+    {
+      "id": "basics-013",
+      "suite": "basics",
+      "tags": [
+        "logic"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.not_not_intro'; intros; simp_all",
+      "attempts": 6,
+      "rounds": 0,
+      "elapsed_ms": 822
+    },
+    {
+      "id": "basics-014",
+      "suite": "basics",
+      "tags": [
+        "logic"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.and_assoc'; intros; simp_all",
+      "attempts": 6,
+      "rounds": 0,
+      "elapsed_ms": 805
+    },
+    {
+      "id": "basics-015",
+      "suite": "basics",
+      "tags": [
+        "logic"
+      ],
+      "difficulty": 2,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.and_or_distrib; intros; simp_all",
+      "attempts": 6,
+      "rounds": 0,
+      "elapsed_ms": 804
+    },
+    {
+      "id": "basics-016",
+      "suite": "basics",
+      "tags": [
+        "logic"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.contrapositive; intros; simp_all",
+      "attempts": 6,
+      "rounds": 0,
+      "elapsed_ms": 803
+    },
+    {
+      "id": "basics-017",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.odd_add_odd; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 852
+    },
+    {
+      "id": "basics-018",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.sub_add_cancel_of_le; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 851
+    },
+    {
+      "id": "basics-019",
+      "suite": "basics",
+      "tags": [
+        "nat"
+      ],
+      "difficulty": 2,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.max_comm'; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 848
+    },
+    {
+      "id": "basics-020",
+      "suite": "basics",
+      "tags": [
+        "int"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.le_antisymm'; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 928
+    },
+    {
+      "id": "basics-021",
+      "suite": "basics",
+      "tags": [
+        "int"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.int_add_self; intros; omega",
+      "attempts": 4,
+      "rounds": 0,
+      "elapsed_ms": 835
+    },
+    {
+      "id": "basics-022",
+      "suite": "basics",
+      "tags": [
+        "list"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.length_map'; intros; simp",
+      "attempts": 3,
+      "rounds": 0,
+      "elapsed_ms": 789
+    },
+    {
+      "id": "basics-023",
+      "suite": "basics",
+      "tags": [
+        "list"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.append_nil'; intros; simp",
+      "attempts": 3,
+      "rounds": 0,
+      "elapsed_ms": 789
+    },
+    {
+      "id": "basics-024",
+      "suite": "basics",
+      "tags": [
+        "decide"
+      ],
+      "difficulty": 1,
+      "status": "verified",
+      "proposer": "portfolio",
+      "proof": "by unfold MaithicBench.Basics.two_pow_ten; intros; rfl",
+      "attempts": 1,
+      "rounds": 0,
+      "elapsed_ms": 781
+    }
+  ],
+  "gateway": {
+    "mode": "replay",
+    "calls": 0,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": []
+  }
+}

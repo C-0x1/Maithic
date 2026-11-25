@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Network bound certificate",
+  "description": "Claimed bounds on the outputs of a ReLU network over an input box: the network with exact weights, the input box, and one box per layer. The checker `Maithic.NN.checkCertificate`, proved sound in Lean, accepts or rejects it.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.nnv.certificate/1"
+    },
+    "network": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "activation": {
+            "enum": [
+              "relu",
+              "identity"
+            ]
+          },
+          "neurons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "weights": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "../common.schema.json#/$defs/exact"
+                  }
+                },
+                "bias": {
+                  "$ref": "../common.schema.json#/$defs/exact"
+                }
+              },
+              "required": [
+                "weights",
+                "bias"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "activation",
+          "neurons"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "input": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "$ref": "../common.schema.json#/$defs/exact"
+          },
+          {
+            "$ref": "../common.schema.json#/$defs/exact"
+          }
+        ],
+        "items": false,
+        "minItems": 2
+      }
+    },
+    "boxes": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "$ref": "../common.schema.json#/$defs/exact"
+            },
+            {
+              "$ref": "../common.schema.json#/$defs/exact"
+            }
+          ],
+          "items": false,
+          "minItems": 2
+        }
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "network",
+    "input",
+    "boxes"
+  ],
+  "additionalProperties": false
+}

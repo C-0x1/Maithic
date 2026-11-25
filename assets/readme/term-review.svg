@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827 432" width="827" height="432" role="img" aria-label="A terminal session: maithic review reports a proof that one call of omega replaces and a step that is not needed, each edit accepted by Lean, and a suppression comment without a reason.">
+  <title>A terminal session: maithic review reports a proof that one call of omega replaces and a step that is not needed, each edit accepted by Lean, and a suppression comment without a reason.</title>
+  <rect width="827" height="432" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h807a10 10 0 0 1 10 10v26h-827z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="414" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic review --suggest</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="461.97" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic review fixtures/review/lean/Simplify.lean --suggest</text>
+    <text x="22.00" y="77" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/review/lean/Simplify.lean:4</text>
+    <text x="319.54" y="77" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">info</text>
+    <text x="390.01" y="77" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">automation</text>
+    <text x="483.97" y="77" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">le_succ_of_le'</text>
+    <text x="53.32" y="96" textLength="438.48" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the proof can be replaced by `by omega`; Lean accepts it</text>
+    <text x="76.81" y="115" textLength="532.44" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">4 | theorem le_succ_of_le' (a b : Nat) (h : a ≤ b) : a ≤ b + 1 := by</text>
+    <text x="53.32" y="134" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#57C98F">+ by omega</text>
+    <text x="22.00" y="153" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/review/lean/Simplify.lean:14</text>
+    <text x="327.37" y="153" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">info</text>
+    <text x="397.84" y="153" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">unneeded-step</text>
+    <text x="515.29" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">two_tri</text>
+    <text x="53.32" y="172" textLength="665.55" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">one step is not needed: Lean accepts the proof without `have zero : tri 0 = 0 := rfl`</text>
+    <text x="68.98" y="191" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">14 | theorem two_tri (n : Nat) : 2 * tri n = n * (n + 1) := by</text>
+    <text x="53.32" y="210" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#57C98F">+ by</text>
+    <text x="53.32" y="229" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">+</text>
+    <text x="84.64" y="229" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#57C98F">induction n with</text>
+    <text x="53.32" y="248" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">+</text>
+    <text x="84.64" y="248" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#57C98F">| zero =&gt; rfl</text>
+    <text x="53.32" y="267" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">+</text>
+    <text x="84.64" y="267" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#57C98F">| succ k ih =&gt; simp only [tri]; grind</text>
+    <text x="22.00" y="286" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/review/lean/Simplify.lean:23</text>
+    <text x="327.37" y="286" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">warning</text>
+    <text x="397.84" y="286" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">suppression</text>
+    <text x="53.32" y="305" textLength="618.57" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">a suppression needs a reason in parentheses, and suppresses nothing without one</text>
+    <text x="68.98" y="324" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">23 | -- maithic: allow docstring</text>
+    <text x="22.00" y="343" textLength="289.71" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/review/lean/Simplify.lean:24</text>
+    <text x="327.37" y="343" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">info</text>
+    <text x="397.84" y="343" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">docstring</text>
+    <text x="483.97" y="343" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tri_one</text>
+    <text x="53.32" y="362" textLength="751.68" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the theorem is a result of this file, since nothing else in it uses it, and has no documentation</text>
+    <text x="68.98" y="381" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">24 | theorem tri_one : tri 1 = 1 := rfl</text>
+    <text x="22.00" y="400" textLength="579.42" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1 file(s), 4 finding(s): 0 error(s), 1 warning(s), 3 note(s), 1 suppressed</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "anthropic-rate-limit",
+  "provider": "anthropic",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 429,
+  "headers": {
+    "retry-after": "30"
+  },
+  "body": {
+    "type": "error",
+    "error": {
+      "type": "rate_limit_error",
+      "message": "This request would exceed your rate limit."
+    },
+    "request_id": "req_011Example"
+  },
+  "expect": {
+    "error": "rate_limited",
+    "retry_after": 30,
+    "detail": "This request would exceed your rate limit."
+  }
+}

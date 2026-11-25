@@ -1,0 +1,255 @@
+{
+  "total": 481,
+  "done": 481,
+  "in_progress": 0,
+  "planned": 0,
+  "pillars": [
+    {
+      "id": "P00",
+      "name": "Platform",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 20,
+        "Lean": 0,
+        "Julia": 0,
+        "R": 0
+      }
+    },
+    {
+      "id": "P01",
+      "name": "Prove",
+      "done": 33,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 21,
+        "Lean": 4,
+        "Julia": 0,
+        "R": 8
+      }
+    },
+    {
+      "id": "P02",
+      "name": "Formalize",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 16,
+        "Lean": 2,
+        "Julia": 0,
+        "R": 2
+      }
+    },
+    {
+      "id": "P03",
+      "name": "Review",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 13,
+        "Lean": 5,
+        "Julia": 0,
+        "R": 2
+      }
+    },
+    {
+      "id": "P04",
+      "name": "Search",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 4,
+        "Lean": 0,
+        "Julia": 8,
+        "R": 8
+      }
+    },
+    {
+      "id": "P05",
+      "name": "AlgoLab",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 5,
+        "Lean": 11,
+        "Julia": 3,
+        "R": 1
+      }
+    },
+    {
+      "id": "P06",
+      "name": "Council",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 19,
+        "Lean": 0,
+        "Julia": 0,
+        "R": 1
+      }
+    },
+    {
+      "id": "P07",
+      "name": "Intel",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 10,
+        "Lean": 5,
+        "Julia": 3,
+        "R": 2
+      }
+    },
+    {
+      "id": "P08",
+      "name": "NNV",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 3,
+        "Lean": 9,
+        "Julia": 7,
+        "R": 1
+      }
+    },
+    {
+      "id": "P09",
+      "name": "Bridge",
+      "done": 47,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 14,
+        "Lean": 33,
+        "Julia": 0,
+        "R": 0
+      }
+    },
+    {
+      "id": "P10",
+      "name": "Gateway",
+      "done": 46,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 38,
+        "Lean": 0,
+        "Julia": 0,
+        "R": 8
+      }
+    },
+    {
+      "id": "P11",
+      "name": "Corpus",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 7,
+        "Lean": 6,
+        "Julia": 4,
+        "R": 3
+      }
+    },
+    {
+      "id": "P12",
+      "name": "Guide",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 3,
+        "Lean": 0,
+        "Julia": 14,
+        "R": 3
+      }
+    },
+    {
+      "id": "P13",
+      "name": "Oracle",
+      "done": 53,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 8,
+        "Lean": 12,
+        "Julia": 33,
+        "R": 0
+      }
+    },
+    {
+      "id": "P14",
+      "name": "Refute",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 2,
+        "Lean": 18,
+        "Julia": 0,
+        "R": 0
+      }
+    },
+    {
+      "id": "P15",
+      "name": "Bench",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 3,
+        "Lean": 6,
+        "Julia": 0,
+        "R": 11
+      }
+    },
+    {
+      "id": "P16",
+      "name": "Blueprint",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 18,
+        "Lean": 0,
+        "Julia": 0,
+        "R": 2
+      }
+    },
+    {
+      "id": "P17",
+      "name": "Mend",
+      "done": 20,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 18,
+        "Lean": 0,
+        "Julia": 0,
+        "R": 2
+      }
+    },
+    {
+      "id": "P18",
+      "name": "Ledger",
+      "done": 22,
+      "in_progress": 0,
+      "planned": 0,
+      "languages": {
+        "OCaml": 8,
+        "Lean": 6,
+        "Julia": 0,
+        "R": 8
+      }
+    }
+  ]
+}

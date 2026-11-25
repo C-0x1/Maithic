@@ -1,0 +1,239 @@
+{
+  "schema": "maithic.prove.run/1",
+  "file": "examples/double.lean",
+  "policy": {
+    "name": "default",
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "allow_native": false,
+    "require_recheck": true
+  },
+  "results": [
+    {
+      "schema": "maithic.prove.result/1",
+      "file": "examples/double.lean",
+      "theorem": "double_eq",
+      "statement": "∀ (n : Nat), double n = 2 * n",
+      "line": 13,
+      "status": "verified",
+      "proof": "by\n  induction n\n  · rfl\n  · simp [double]\n    omega",
+      "proposer": "search",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "decision": {
+        "status": "verified",
+        "reasons": [],
+        "violations": []
+      },
+      "recheck": {
+        "passed": true,
+        "declaration": "double_eq",
+        "statement": "∀ (n : Nat), double n = 2 * n",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "errors": 0,
+        "elapsed_ms": 252,
+        "lean": "4.36.0"
+      },
+      "attempts": [
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by rfl",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:53: Tactic `rfl` failed: The left-hand side\n  double n\nis not definitionally equal to the right-hand side\n  2 * n\n\nn : Nat\n⊢ double n = 2 * n",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by trivial",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:53: Tactic `assumption` failed\n\nn : Nat\n⊢ double n = 2 * n",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by simp",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:53: `simp` made no progress",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by omega",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:53: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 0\n  a ≥ 0\n  2*a - b ≥ 1\nwhere\n a := ↑n\n b := ↑(double n)",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by decide",
+          "accepted": false,
+          "error_class": "other",
+          "error": "1:53: Expected type must not contain free variables\n  double n = 2 * n\n\nHint: Use the `+revert` option to automatically clean up and revert free variables",
+          "elapsed_ms": 2
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:53: simp_all made no progress",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by grind",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:53: `grind` failed\ncase grind\nn : Nat\nh : ¬double n = 2 * n\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] ¬double n = 2 * n\n  [eqc] False propositions\n    [prop] double n = 2 * n\n  [cutsat] Assignment satisfying linear constraints\n    [assign] n := 0\n    [assign] double n := 1",
+          "elapsed_ms": 9
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; rfl",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: Tactic `rfl` failed: The left-hand side\n  double n\nis not definitionally equal to the right-hand side\n  2 * n\n\nn : Nat\n⊢ double n = 2 * n",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; trivial",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: Tactic `assumption` failed\n\nn : Nat\n⊢ double n = 2 * n",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; simp",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: `simp` made no progress",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; omega",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 0\n  a ≥ 0\n  2*a - b ≥ 1\nwhere\n a := ↑n\n b := ↑(double n)",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; decide",
+          "accepted": false,
+          "error_class": "other",
+          "error": "1:61: Expected type must not contain free variables\n  double n = 2 * n\n\nHint: Use the `+revert` option to automatically clean up and revert free variables",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: simp_all made no progress",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; grind",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: `grind` failed\ncase grind\nn : Nat\nh : ¬double n = 2 * n\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] ¬double n = 2 * n\n  [eqc] False propositions\n    [prop] double n = 2 * n\n  [cutsat] Assignment satisfying linear constraints\n    [assign] n := 0\n    [assign] double n := 1",
+          "elapsed_ms": 7
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; constructor <;> simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: Tactic `constructor` failed: no applicable constructor found\n\nn : Nat\n⊢ double n = 2 * n",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intro h; cases h <;> simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:59: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : Nat\n⊢ double n = 2 * n",
+          "elapsed_ms": 2
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; constructor <;> intros <;> omega",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: Tactic `constructor` failed: no applicable constructor found\n\nn : Nat\n⊢ double n = 2 * n",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; exact?",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:61: `exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+          "elapsed_ms": 676
+        },
+        {
+          "round": 0,
+          "proposer": "search",
+          "proof": "by\n  induction n\n  · rfl\n  · simp [double]\n    omega",
+          "accepted": true,
+          "elapsed_ms": 18
+        }
+      ],
+      "rounds_used": 0,
+      "elapsed_ms": 1310
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "verified": 1,
+    "checked": 0,
+    "refuted": 0,
+    "conjectured": 0,
+    "unverified": 0,
+    "unknown": 0,
+    "failed": 0,
+    "abstained": 0
+  },
+  "gateway": {
+    "mode": "replay",
+    "calls": 0,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": []
+  }
+}

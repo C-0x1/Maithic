@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 691" role="img" aria-labelledby="config-layers-t config-layers-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="config-layers-t">The six layers of configuration</title>
+  <desc id="config-layers-d">Six bands from the lowest to the highest priority: built-in defaults; the system file /etc/maithic/maithic.toml; the user file config.toml in the Maithic home directory; the project file maithic.toml, found at or above the current directory; MAITHIC environment variables; and command-line flags. A later layer overrides an earlier one.</desc>
+  <rect width="960" height="691" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="880.0" height="41.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="149.0" width="880.0" height="54.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="215.0" width="880.0" height="77.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="304.0" width="880.0" height="77.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="393.0" width="880.0" height="77.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="482.0" width="880.0" height="77.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="577.0" width="880.0" height="84.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h168.0v41.0h-168.0a10 10 0 0 1 -10-10z" fill="#5B6477"/>
+  <path d="M40.0 159.0a10 10 0 0 1 10-10h168.0v54.0h-168.0a10 10 0 0 1 -10-10z" fill="#5B6477"/>
+  <rect x="236.0" y="161.0" width="193.1" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 225.0a10 10 0 0 1 10-10h168.0v77.0h-168.0a10 10 0 0 1 -10-10z" fill="#2B2F77"/>
+  <rect x="236.0" y="227.0" width="96.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 314.0a10 10 0 0 1 10-10h168.0v77.0h-168.0a10 10 0 0 1 -10-10z" fill="#2B2F77"/>
+  <rect x="236.0" y="316.0" width="103.1" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 403.0a10 10 0 0 1 10-10h168.0v77.0h-168.0a10 10 0 0 1 -10-10z" fill="#0B7F75"/>
+  <rect x="236.0" y="405.0" width="158.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="402.5" y="405.0" width="116.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="527.4" y="405.0" width="116.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 492.0a10 10 0 0 1 10-10h168.0v77.0h-168.0a10 10 0 0 1 -10-10z" fill="#0B7F75"/>
+  <rect x="236.0" y="494.0" width="110.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="354.0" y="494.0" width="116.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="478.9" y="494.0" width="110.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="654.1" lengthAdjust="spacingAndGlyphs">Six layers of configuration; a later one overrides an earlier one</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="154.4" lengthAdjust="spacingAndGlyphs">maithic config show</text>
+  <text x="54.0" y="121.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="64.5" lengthAdjust="spacingAndGlyphs">1  Defaults</text>
+  <text x="236.0" y="121.0" font-size="12.5" fill="#5B6477" textLength="363.2" lengthAdjust="spacingAndGlyphs">Built in. The reference table is printed by maithic config reference.</text>
+  <text x="54.0" y="181.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="82.5" lengthAdjust="spacingAndGlyphs">2  System file</text>
+  <text x="246.0" y="176.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="173.1" lengthAdjust="spacingAndGlyphs">/etc/maithic/maithic.toml</text>
+  <text x="54.0" y="258.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="64.5" lengthAdjust="spacingAndGlyphs">3  User file</text>
+  <text x="246.0" y="242.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="76.2" lengthAdjust="spacingAndGlyphs">config.toml</text>
+  <text x="236.0" y="274.0" font-size="12.5" fill="#5B6477" textLength="577.6" lengthAdjust="spacingAndGlyphs">In the Maithic home directory: MAITHIC_HOME, or $XDG_CONFIG_HOME/maithic, or ~/.config/maithic.</text>
+  <text x="54.0" y="347.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="80.3" lengthAdjust="spacingAndGlyphs">4  Project file</text>
+  <text x="246.0" y="331.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="83.1" lengthAdjust="spacingAndGlyphs">maithic.toml</text>
+  <text x="236.0" y="363.0" font-size="12.5" fill="#5B6477" textLength="392.1" lengthAdjust="spacingAndGlyphs">Found at or above the current directory, or in MAITHIC_WORKSPACE.</text>
+  <text x="54.0" y="436.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="93.8" lengthAdjust="spacingAndGlyphs">5  Environment</text>
+  <text x="246.0" y="420.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="138.5" lengthAdjust="spacingAndGlyphs">MAITHIC_GATEWAY_MODE</text>
+  <text x="412.5" y="420.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="96.9" lengthAdjust="spacingAndGlyphs">MAITHIC_BRIDGE</text>
+  <text x="537.4" y="420.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="96.9" lengthAdjust="spacingAndGlyphs">MAITHIC_POLICY</text>
+  <text x="236.0" y="452.0" font-size="12.5" fill="#5B6477" textLength="218.8" lengthAdjust="spacingAndGlyphs">Every setting has a MAITHIC_ variable.</text>
+  <text x="54.0" y="525.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="104.3" lengthAdjust="spacingAndGlyphs">6  Command line</text>
+  <text x="246.0" y="509.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">--mode replay</text>
+  <text x="364.0" y="509.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="96.9" lengthAdjust="spacingAndGlyphs">--project lean</text>
+  <text x="488.9" y="509.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">--policy FILE</text>
+  <text x="236.0" y="541.0" font-size="12.5" fill="#5B6477" textLength="56.3" lengthAdjust="spacingAndGlyphs">Flags win.</text>
+  <text x="56.0" y="602.0" font-size="13" fill="#14162B" textLength="734.7" lengthAdjust="spacingAndGlyphs">maithic config show prints the effective value of every setting and the layer it came from. An unknown key is an error that names</text>
+  <text x="56.0" y="620.0" font-size="13" fill="#14162B" textLength="255.6" lengthAdjust="spacingAndGlyphs">the file and suggests the nearest known key.</text>
+  <text x="56.0" y="644.0" font-size="13" fill="#14162B" textLength="510.2" lengthAdjust="spacingAndGlyphs">API keys are not settings. A key placed in maithic.toml is rejected as an unknown setting.</text>
+</svg>

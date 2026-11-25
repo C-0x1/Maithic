@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+ (name maithic_blueprint)
+ (public_name maithic.blueprint)
+ (libraries maithic_base maithic_schema maithic_gateway))

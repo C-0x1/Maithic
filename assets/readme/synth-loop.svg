@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 490" role="img" aria-labelledby="synth-loop-t synth-loop-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="synth-loop-t">The synthesis loop</title>
+  <desc id="synth-loop-d">Four steps in a row with a path that leads back from the last three to the first. Draft: a model writes one Lean definition for the task. Screen: the draft has to be one definition of the function that was asked for, with nothing that could act; a refused draft never reaches Lean. Compile: Lean elaborates the definition. Run: Lean evaluates every example and compares the value with what was expected. Whatever goes wrong goes back to the model with the draft, for a correction, a bounded number of times.</desc>
+  <rect width="1040" height="490" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="217.5" height="206.0" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+  <rect x="287.5" y="96.0" width="217.5" height="206.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="535.0" y="96.0" width="217.5" height="206.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="782.5" y="96.0" width="217.5" height="206.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="376.0" width="960.0" height="84.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#EC6813"/>
+  <rect x="54.0" y="266.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M261.5 199.0 L275.5 199.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M273.5 193.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M287.5 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#E5484D"/>
+  <rect x="301.5" y="266.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M509.0 199.0 L523.0 199.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M521.0 193.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M535.0 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#2B2F77"/>
+  <rect x="549.0" y="266.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M756.5 199.0 L770.5 199.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M768.5 193.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M782.5 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#2B2F77"/>
+  <rect x="796.5" y="266.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M396.2 306.0 L396.2 332.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M643.8 306.0 L643.8 332.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M891.2 306.0 L891.2 332.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M891.2 332.0 L148.8 332.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M148.8 332.0 L148.8 314.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M142.75 316 l6 -10 l6 10 z" fill="#5B6477"/>
+  <circle cx="65" cy="398.0" r="8" fill="#0FA89B"/>
+  <path d="M60.5 398.0 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="65" cy="422.0" r="8" fill="#E5484D"/>
+  <path d="M61 418.0 l8 8 M69 418.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="484.1" lengthAdjust="spacingAndGlyphs">Draft, screen, compile, run: the synthesis loop</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="276.3" lengthAdjust="spacingAndGlyphs">maithic algo synth TASK --rounds 3</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="44.3" lengthAdjust="spacingAndGlyphs">1  Draft</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="142.4" lengthAdjust="spacingAndGlyphs">A model writes one Lean</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="140.2" lengthAdjust="spacingAndGlyphs">definition for the task: its</text>
+  <text x="54.0" y="191.0" font-size="13" fill="#14162B" textLength="139.5" lengthAdjust="spacingAndGlyphs">name, its description, its</text>
+  <text x="54.0" y="209.0" font-size="13" fill="#14162B" textLength="59.3" lengthAdjust="spacingAndGlyphs">examples.</text>
+  <text x="64.0" y="281.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="48.5" lengthAdjust="spacingAndGlyphs">a model</text>
+  <text x="301.5" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="58.4" lengthAdjust="spacingAndGlyphs">2  Screen</text>
+  <text x="301.5" y="155.0" font-size="13" fill="#14162B" textLength="131.5" lengthAdjust="spacingAndGlyphs">One def of the function</text>
+  <text x="301.5" y="173.0" font-size="13" fill="#14162B" textLength="56.4" lengthAdjust="spacingAndGlyphs">asked for.</text>
+  <text x="301.5" y="197.0" font-size="13" fill="#14162B" textLength="161.6" lengthAdjust="spacingAndGlyphs">No partial, unsafe, IO, sorry,</text>
+  <text x="301.5" y="215.0" font-size="13" fill="#14162B" textLength="104.0" lengthAdjust="spacingAndGlyphs">axiom, attribute or</text>
+  <text x="301.5" y="233.0" font-size="13" fill="#14162B" textLength="161.1" lengthAdjust="spacingAndGlyphs">command: Lean will run this</text>
+  <text x="301.5" y="251.0" font-size="13" fill="#14162B" textLength="24.6" lengthAdjust="spacingAndGlyphs">text.</text>
+  <text x="311.5" y="281.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="131.5" lengthAdjust="spacingAndGlyphs">before Lean sees it</text>
+  <text x="549.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="66.9" lengthAdjust="spacingAndGlyphs">3  Compile</text>
+  <text x="549.0" y="155.0" font-size="13" fill="#14162B" textLength="114.9" lengthAdjust="spacingAndGlyphs">Lean elaborates the</text>
+  <text x="549.0" y="173.0" font-size="13" fill="#14162B" textLength="55.7" lengthAdjust="spacingAndGlyphs">definition.</text>
+  <text x="549.0" y="197.0" font-size="13" fill="#14162B" textLength="147.4" lengthAdjust="spacingAndGlyphs">It must be well typed, and</text>
+  <text x="549.0" y="215.0" font-size="13" fill="#14162B" textLength="156.1" lengthAdjust="spacingAndGlyphs">Lean must see that it ends.</text>
+  <text x="559.0" y="281.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="27.7" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="796.5" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="38.9" lengthAdjust="spacingAndGlyphs">4  Run</text>
+  <text x="796.5" y="155.0" font-size="13" fill="#14162B" textLength="162.6" lengthAdjust="spacingAndGlyphs">Every example is evaluated,</text>
+  <text x="796.5" y="173.0" font-size="13" fill="#14162B" textLength="152.5" lengthAdjust="spacingAndGlyphs">and the value is compared</text>
+  <text x="796.5" y="191.0" font-size="13" fill="#14162B" textLength="140.9" lengthAdjust="spacingAndGlyphs">with what was expected.</text>
+  <text x="806.5" y="281.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="110.8" lengthAdjust="spacingAndGlyphs">Lean, with #eval</text>
+  <text x="520.0" y="354.0" font-size="12.5" fill="#5B6477" text-anchor="middle" textLength="654.8" lengthAdjust="spacingAndGlyphs">what went wrong goes back, word for word: the reason for a refusal, Lean's error, or the example with the value it gave</text>
+  <text x="82.0" y="401.0" font-size="13" fill="#14162B" textLength="779.5" lengthAdjust="spacingAndGlyphs">Accepted: the function compiles and every example gives what was expected. That is a test, and the command says tested, not proved.</text>
+  <text x="82.0" y="425.0" font-size="13" fill="#14162B" textLength="762.9" lengthAdjust="spacingAndGlyphs">Not accepted: the rounds are used up, or the model returned a version it had returned before. The record keeps every draft and what</text>
+  <text x="82.0" y="443.0" font-size="13" fill="#14162B" textLength="106.3" lengthAdjust="spacingAndGlyphs">Lean said about it.</text>
+</svg>

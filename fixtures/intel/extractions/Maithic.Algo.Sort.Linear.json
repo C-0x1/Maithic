@@ -1,0 +1,1493 @@
+{
+  "schema": "maithic.bridge.extraction/1",
+  "file": "lean/Maithic/Algo/Sort/Linear.lean",
+  "module": "Maithic.Algo.Sort.Linear",
+  "report": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  "imports": [
+    "Init"
+  ],
+  "moduleDocs": [
+    "# Linear search\n\nFinds the first position of an element in a list. The specification has two halves: a returned\nindex holds the target and nothing before it does, and `none` means the target is absent."
+  ],
+  "declarations": [
+    {
+      "name": "Maithic.Algo.linearSearch",
+      "kind": "definition",
+      "type": "{α : Type u} → [BEq α] → α → List α → Option Nat",
+      "module": "Maithic.Algo.Sort.Linear",
+      "line": 19,
+      "column": 0,
+      "endLine": 22,
+      "endColumn": 73,
+      "nameLine": 20,
+      "nameColumn": 4,
+      "doc": "The index of the first element equal to `x`, if there is one.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [],
+      "typeDeps": [
+        "BEq",
+        "List",
+        "Nat",
+        "Option"
+      ],
+      "valueDeps": [
+        "BEq",
+        "Bool",
+        "Eq",
+        "List",
+        "Nat",
+        "Option",
+        "PProd",
+        "Unit",
+        "instAddNat",
+        "instDecidableEqBool",
+        "instHAdd",
+        "instOfNatNat",
+        "ite",
+        "BEq.beq",
+        "Bool.true",
+        "HAdd.hAdd",
+        "List.below",
+        "List.brecOn",
+        "List.casesOn",
+        "List.cons",
+        "List.nil",
+        "OfNat.ofNat",
+        "Option.map",
+        "Option.none",
+        "Option.some",
+        "Unit.unit"
+      ],
+      "parents": [],
+      "statementHash": "2383023366",
+      "sameStatement": [],
+      "source": "/-- The index of the first element equal to `x`, if there is one. -/\ndef linearSearch (x : α) : List α → Option Nat\n  | [] => none\n  | y :: ys => if y == x then some 0 else (linearSearch x ys).map (· + 1)",
+      "proof": "| [] => none\n  | y :: ys => if y == x then some 0 else (linearSearch x ys).map (· + 1)"
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_some",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : BEq α] [LawfulBEq α] {x : α} {l : List α} {i : Nat},\n  Maithic.Algo.linearSearch x l = some i → l[i]? = some x",
+      "module": "Maithic.Algo.Sort.Linear",
+      "line": 24,
+      "column": 0,
+      "endLine": 41,
+      "endColumn": 27,
+      "nameLine": 25,
+      "nameColumn": 8,
+      "doc": "A returned index is in bounds and holds the target.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "typeDeps": [
+        "BEq",
+        "Eq",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Option",
+        "instLTNat",
+        "GetElem?.getElem?",
+        "LT.lt",
+        "List.instGetElem?NatLtLength",
+        "List.length",
+        "Option.some",
+        "Maithic.Algo.linearSearch"
+      ],
+      "valueDeps": [
+        "BEq",
+        "Bool",
+        "Eq",
+        "False",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Not",
+        "Option",
+        "True",
+        "beq_iff_eq",
+        "congrArg",
+        "congrFun'",
+        "dite",
+        "eq_false'",
+        "eq_true",
+        "getElem?_pos",
+        "id",
+        "instAddNat",
+        "instDecidableEqBool",
+        "instHAdd",
+        "instLTNat",
+        "instOfNatNat",
+        "ite",
+        "ite_eq_left",
+        "ite_eq_right",
+        "noConfusion_of_Nat",
+        "of_eq_true",
+        "propext",
+        "BEq.beq",
+        "Bool.true",
+        "Eq.mp",
+        "Eq.mpr",
+        "Eq.ndrec",
+        "Eq.refl",
+        "Eq.symm",
+        "Eq.trans",
+        "False.elim",
+        "GetElem?.getElem?",
+        "HAdd.hAdd",
+        "LT.lt",
+        "List.cons",
+        "List.instGetElem?NatLtLength",
+        "List.instLawfulGetElemNatLtLength",
+        "List.length",
+        "List.nil",
+        "List.rec",
+        "Nat.succ",
+        "Nat.zero_lt_succ",
+        "OfNat.ofNat",
+        "Option.casesOn",
+        "Option.ctorIdx",
+        "Option.map",
+        "Option.none",
+        "Option.some",
+        "Maithic.Algo.linearSearch",
+        "Option.some.injEq"
+      ],
+      "parents": [],
+      "statementHash": "1984281609",
+      "sameStatement": [],
+      "source": "/-- A returned index is in bounds and holds the target. -/\ntheorem linearSearch_some [LawfulBEq α] {x : α} {l : List α} {i : Nat}\n    (h : linearSearch x l = some i) : l[i]? = some x := by\n  induction l generalizing i with\n  | nil => simp [linearSearch] at h\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · rename_i hyx\n      have hi : i = 0 := by simpa using h.symm\n      subst hi\n      simpa using hyx\n    · cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some j =>\n        have hi : i = j + 1 := by simpa [hrec] using h.symm\n        subst hi\n        simpa using ih hrec",
+      "proof": "by\n  induction l generalizing i with\n  | nil => simp [linearSearch] at h\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · rename_i hyx\n      have hi : i = 0 := by simpa using h.symm\n      subst hi\n      simpa using hyx\n    · cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some j =>\n        have hi : i = j + 1 := by simpa [hrec] using h.symm\n        subst hi\n        simpa using ih hrec"
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_first",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : BEq α] [LawfulBEq α] {x : α} {l : List α} {i j : Nat},\n  Maithic.Algo.linearSearch x l = some i → j < i → l[j]? ≠ some x",
+      "module": "Maithic.Algo.Sort.Linear",
+      "line": 43,
+      "column": 0,
+      "endLine": 61,
+      "endColumn": 51,
+      "nameLine": 44,
+      "nameColumn": 8,
+      "doc": "No element before a returned index equals the target.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "typeDeps": [
+        "BEq",
+        "Eq",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Ne",
+        "Option",
+        "instLTNat",
+        "GetElem?.getElem?",
+        "LT.lt",
+        "List.instGetElem?NatLtLength",
+        "List.length",
+        "Option.some",
+        "Maithic.Algo.linearSearch"
+      ],
+      "valueDeps": [
+        "BEq",
+        "Bool",
+        "Eq",
+        "False",
+        "Int",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Ne",
+        "Not",
+        "Option",
+        "True",
+        "beq_iff_eq",
+        "congrArg",
+        "congrFun'",
+        "dite",
+        "eq_false'",
+        "eq_true",
+        "getElem?_pos",
+        "id",
+        "instAddNat",
+        "instDecidableEqBool",
+        "instHAdd",
+        "instHSub",
+        "instLTNat",
+        "instNatCastInt",
+        "instOfNat",
+        "instOfNatNat",
+        "ite",
+        "ite_eq_left",
+        "ite_eq_right",
+        "le_of_le_of_eq",
+        "noConfusion_of_Nat",
+        "of_decide_eq_true",
+        "of_eq_true",
+        "propext",
+        "BEq.beq",
+        "Bool.true",
+        "Decidable.byContradiction",
+        "Decidable.decide",
+        "Eq.mp",
+        "Eq.mpr",
+        "Eq.ndrec",
+        "Eq.refl",
+        "Eq.symm",
+        "Eq.trans",
+        "False.elim",
+        "GetElem?.getElem?",
+        "HAdd.hAdd",
+        "HSub.hSub",
+        "Int.add_one_le_of_lt",
+        "Int.instAdd",
+        "Int.instLEInt",
+        "Int.instNegInt",
+        "Int.instSub",
+        "Int.natCast_add",
+        "Int.natCast_nonneg",
+        "Int.sub_eq_zero_of_eq",
+        "Int.sub_nonneg_of_le",
+        "LT.lt",
+        "List.cons",
+        "List.instGetElem?NatLtLength",
+        "List.instLawfulGetElemNatLtLength",
+        "List.length",
+        "List.nil",
+        "List.rec",
+        "Nat.casesAuxOn",
+        "Nat.cast",
+        "Nat.decLt",
+        "Nat.le_of_not_lt",
+        "Nat.succ",
+        "Nat.zero_lt_succ",
+        "Neg.neg",
+        "OfNat.ofNat",
+        "Option.casesOn",
+        "Option.ctorIdx",
+        "Option.map",
+        "Option.none",
+        "Option.some",
+        "Lean.Omega.LinearCombo",
+        "Lean.Omega.combo_sat'",
+        "Lean.Omega.tidy_sat",
+        "Maithic.Algo.linearSearch",
+        "Option.some.injEq",
+        "Lean.Omega.Coeffs.ofList",
+        "Lean.Omega.Constraint.addEquality_sat",
+        "Lean.Omega.Constraint.addInequality_sat",
+        "Lean.Omega.Constraint.combine_sat'",
+        "Lean.Omega.Constraint.isImpossible",
+        "Lean.Omega.Constraint.mk",
+        "Lean.Omega.Constraint.not_sat'_of_isImpossible",
+        "Lean.Omega.Int.add_congr",
+        "Lean.Omega.Int.ofNat_congr",
+        "Lean.Omega.Int.ofNat_le_of_le",
+        "Lean.Omega.Int.ofNat_lt_of_lt",
+        "Lean.Omega.Int.sub_congr",
+        "Lean.Omega.LinearCombo.add_eval",
+        "Lean.Omega.LinearCombo.coordinate",
+        "Lean.Omega.LinearCombo.coordinate_eval_0",
+        "Lean.Omega.LinearCombo.coordinate_eval_1",
+        "Lean.Omega.LinearCombo.eval",
+        "Lean.Omega.LinearCombo.instAdd",
+        "Lean.Omega.LinearCombo.instSub",
+        "Lean.Omega.LinearCombo.mk",
+        "Lean.Omega.LinearCombo.sub_eval"
+      ],
+      "parents": [],
+      "statementHash": "979978586",
+      "sameStatement": [],
+      "source": "/-- No element before a returned index equals the target. -/\ntheorem linearSearch_first [LawfulBEq α] {x : α} {l : List α} {i j : Nat}\n    (h : linearSearch x l = some i) (hj : j < i) : l[j]? ≠ some x := by\n  induction l generalizing i j with\n  | nil => simp [linearSearch] at h\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · have hi : i = 0 := by simpa using h.symm\n      omega\n    · rename_i hyx\n      cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some k =>\n        have hi : i = k + 1 := by simpa [hrec] using h.symm\n        subst hi\n        cases j with\n        | zero => simpa using hyx\n        | succ j' => simpa using ih hrec (by omega)",
+      "proof": "by\n  induction l generalizing i j with\n  | nil => simp [linearSearch] at h\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · have hi : i = 0 := by simpa using h.symm\n      omega\n    · rename_i hyx\n      cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some k =>\n        have hi : i = k + 1 := by simpa [hrec] using h.symm\n        subst hi\n        cases j with\n        | zero => simpa using hyx\n        | succ j' => simpa using ih hrec (by omega)"
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_none",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : BEq α] [LawfulBEq α] {x : α} {l : List α},\n  Maithic.Algo.linearSearch x l = none → ¬x ∈ l",
+      "module": "Maithic.Algo.Sort.Linear",
+      "line": 63,
+      "column": 0,
+      "endLine": 77,
+      "endColumn": 26,
+      "nameLine": 64,
+      "nameColumn": 8,
+      "doc": "`none` means the target does not occur.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "typeDeps": [
+        "BEq",
+        "Eq",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Not",
+        "Option",
+        "List.instMembership",
+        "Membership.mem",
+        "Option.none",
+        "Maithic.Algo.linearSearch"
+      ],
+      "valueDeps": [
+        "BEq",
+        "Bool",
+        "Eq",
+        "False",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Not",
+        "Option",
+        "Or",
+        "True",
+        "congrArg",
+        "congrFun'",
+        "dite",
+        "eq_false",
+        "eq_false'",
+        "eq_self",
+        "instAddNat",
+        "instDecidableEqBool",
+        "instEquivBEqOfLawfulBEq",
+        "instHAdd",
+        "instOfNatNat",
+        "ite",
+        "ite_eq_left",
+        "ite_eq_right",
+        "noConfusion_of_Nat",
+        "not_false_eq_true",
+        "not_true_eq_false",
+        "of_eq_true",
+        "propext",
+        "BEq.beq",
+        "BEq.rfl",
+        "Bool.true",
+        "Eq.mp",
+        "Eq.ndrec",
+        "Eq.trans",
+        "EquivBEq.toReflBEq",
+        "False.elim",
+        "HAdd.hAdd",
+        "Iff.mp",
+        "List.cons",
+        "List.instMembership",
+        "List.mem_cons",
+        "List.nil",
+        "List.not_mem_nil",
+        "List.rec",
+        "Membership.mem",
+        "OfNat.ofNat",
+        "Option.ctorIdx",
+        "Option.map",
+        "Option.map_eq_none_iff",
+        "Option.none",
+        "Option.some",
+        "Or.casesOn",
+        "Maithic.Algo.linearSearch"
+      ],
+      "parents": [],
+      "statementHash": "1851094552",
+      "sameStatement": [],
+      "source": "/-- `none` means the target does not occur. -/\ntheorem linearSearch_none [LawfulBEq α] {x : α} {l : List α}\n    (h : linearSearch x l = none) : x ∉ l := by\n  induction l with\n  | nil => simp\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · simp at h\n    · rename_i hyx\n      have hrec : linearSearch x ys = none := by simpa using h\n      intro hmem\n      rcases List.mem_cons.mp hmem with rfl | hmem\n      · simp at hyx\n      · exact ih hrec hmem",
+      "proof": "by\n  induction l with\n  | nil => simp\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · simp at h\n    · rename_i hyx\n      have hrec : linearSearch x ys = none := by simpa using h\n      intro hmem\n      rcases List.mem_cons.mp hmem with rfl | hmem\n      · simp at hyx\n      · exact ih hrec hmem"
+    },
+    {
+      "name": "Maithic.Algo.linearSearch_isSome_iff",
+      "kind": "theorem",
+      "type": "∀ {α : Type u} [inst : BEq α] [LawfulBEq α] {x : α} {l : List α},\n  (Maithic.Algo.linearSearch x l).isSome = true ↔ x ∈ l",
+      "module": "Maithic.Algo.Sort.Linear",
+      "line": 79,
+      "column": 0,
+      "endLine": 90,
+      "endColumn": 19,
+      "nameLine": 80,
+      "nameColumn": 8,
+      "doc": "The search succeeds exactly when the target occurs.",
+      "isPrivate": false,
+      "usesSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "typeDeps": [
+        "BEq",
+        "Bool",
+        "Eq",
+        "Iff",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Bool.true",
+        "List.instMembership",
+        "Membership.mem",
+        "Option.isSome",
+        "Maithic.Algo.linearSearch"
+      ],
+      "valueDeps": [
+        "BEq",
+        "Bool",
+        "Eq",
+        "False",
+        "LawfulBEq",
+        "List",
+        "Nat",
+        "Option",
+        "absurd",
+        "congrArg",
+        "congrFun'",
+        "Bool.false",
+        "Bool.false_eq_true",
+        "Bool.true",
+        "Eq.mp",
+        "Eq.ndrec",
+        "Eq.refl",
+        "Eq.symm",
+        "Eq.trans",
+        "False.elim",
+        "Iff.intro",
+        "List.instMembership",
+        "List.mem_of_getElem?",
+        "Membership.mem",
+        "Option.casesOn",
+        "Option.isSome",
+        "Option.none",
+        "Option.some",
+        "Maithic.Algo.linearSearch",
+        "Maithic.Algo.linearSearch_none",
+        "Maithic.Algo.linearSearch_some"
+      ],
+      "parents": [],
+      "statementHash": "474079091",
+      "sameStatement": [],
+      "source": "/-- The search succeeds exactly when the target occurs. -/\ntheorem linearSearch_isSome_iff [LawfulBEq α] {x : α} {l : List α} :\n    (linearSearch x l).isSome ↔ x ∈ l := by\n  constructor\n  · intro h\n    cases hs : linearSearch x l with\n    | none => simp [hs] at h\n    | some i => exact List.mem_of_getElem? (linearSearch_some hs)\n  · intro hmem\n    cases hs : linearSearch x l with\n    | none => exact absurd hmem (linearSearch_none hs)\n    | some i => rfl",
+      "proof": "by\n  constructor\n  · intro h\n    cases hs : linearSearch x l with\n    | none => simp [hs] at h\n    | some i => exact List.mem_of_getElem? (linearSearch_some hs)\n  · intro hmem\n    cases hs : linearSearch x l with\n    | none => exact absurd hmem (linearSearch_none hs)\n    | some i => rfl"
+    }
+  ],
+  "steps": [
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 0,
+      "tactic": "induction l generalizing i with\n  | nil => simp [linearSearch] at h\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · rename_i hyx\n      have hi : i = 0 := by simpa using h.symm\n      subst hi\n      simpa using hyx\n    · cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some j =>\n        have hi : i = j + 1 := by simpa [hrec] using h.symm\n        subst hi\n        simpa using ih hrec",
+      "line": 27,
+      "column": 2,
+      "endLine": 41,
+      "endColumn": 27,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\ni : Nat\nh : linearSearch x l = some i\n⊢ l[i]? = some x"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 16
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 1,
+      "tactic": "simp [linearSearch] at h",
+      "line": 28,
+      "column": 11,
+      "endLine": 28,
+      "endColumn": 35,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\ni : Nat\nh : linearSearch x [] = some i\n⊢ [][i]? = some x"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 2,
+      "tactic": "simp only [linearSearch] at h",
+      "line": 30,
+      "column": 4,
+      "endLine": 30,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh : linearSearch x (y :: ys) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh : (if (y == x) = true then some 0 else Option.map (fun x => x + 1) (linearSearch x ys)) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 3,
+      "tactic": "split at h",
+      "line": 31,
+      "column": 4,
+      "endLine": 31,
+      "endColumn": 14,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh : (if (y == x) = true then some 0 else Option.map (fun x => x + 1) (linearSearch x ys)) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[i]? = some x",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 4,
+      "tactic": "· rename_i hyx\n      have hi : i = 0 := by simpa using h.symm\n      subst hi\n      simpa using hyx",
+      "line": 32,
+      "column": 4,
+      "endLine": 35,
+      "endColumn": 21,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[i]? = some x",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "depth": 1,
+      "inner": 5
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 5,
+      "tactic": "rename_i hyx",
+      "line": 32,
+      "column": 6,
+      "endLine": 32,
+      "endColumn": 18,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nhyx : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 6,
+      "tactic": "have hi : i = 0 := by simpa using h.symm",
+      "line": 33,
+      "column": 6,
+      "endLine": 33,
+      "endColumn": 46,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nhyx : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nhyx : (y == x) = true\nh : some 0 = some i\nhi : i = 0\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 7,
+      "tactic": "simpa using h.symm",
+      "line": 33,
+      "column": 28,
+      "endLine": 33,
+      "endColumn": 46,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nhyx : (y == x) = true\nh : some 0 = some i\n⊢ i = 0"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 8,
+      "tactic": "subst hi",
+      "line": 34,
+      "column": 6,
+      "endLine": 34,
+      "endColumn": 14,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nhyx : (y == x) = true\nh : some 0 = some i\nhi : i = 0\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\nhyx : (y == x) = true\nh : some 0 = some 0\n⊢ (y :: ys)[0]? = some x"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 9,
+      "tactic": "simpa using hyx",
+      "line": 35,
+      "column": 6,
+      "endLine": 35,
+      "endColumn": 21,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\nhyx : (y == x) = true\nh : some 0 = some 0\n⊢ (y :: ys)[0]? = some x"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 10,
+      "tactic": "· cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some j =>\n        have hi : i = j + 1 := by simpa [hrec] using h.symm\n        subst hi\n        simpa using ih hrec",
+      "line": 36,
+      "column": 4,
+      "endLine": 41,
+      "endColumn": 27,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 6
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 11,
+      "tactic": "cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some j =>\n        have hi : i = j + 1 := by simpa [hrec] using h.symm\n        subst hi\n        simpa using ih hrec",
+      "line": 36,
+      "column": 6,
+      "endLine": 41,
+      "endColumn": 27,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 5
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 12,
+      "tactic": "simp [hrec] at h",
+      "line": 37,
+      "column": 16,
+      "endLine": 37,
+      "endColumn": 32,
+      "goalsBefore": [
+        "case cons.isFalse.none\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nhrec : linearSearch x ys = none\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 13,
+      "tactic": "have hi : i = j + 1 := by simpa [hrec] using h.symm",
+      "line": 39,
+      "column": 8,
+      "endLine": 39,
+      "endColumn": 59,
+      "goalsBefore": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nj : Nat\nhrec : linearSearch x ys = some j\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nj : Nat\nhrec : linearSearch x ys = some j\nhi : i = j + 1\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 14,
+      "tactic": "simpa [hrec] using h.symm",
+      "line": 39,
+      "column": 34,
+      "endLine": 39,
+      "endColumn": 59,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nj : Nat\nhrec : linearSearch x ys = some j\n⊢ i = j + 1"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 15,
+      "tactic": "subst hi",
+      "line": 40,
+      "column": 8,
+      "endLine": 40,
+      "endColumn": 16,
+      "goalsBefore": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\ni : Nat\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nj : Nat\nhrec : linearSearch x ys = some j\nhi : i = j + 1\n⊢ (y :: ys)[i]? = some x"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\nh✝ : ¬(y == x) = true\nj : Nat\nhrec : linearSearch x ys = some j\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some (j + 1)\n⊢ (y :: ys)[j + 1]? = some x"
+      ],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_some",
+      "index": 16,
+      "tactic": "simpa using ih hrec",
+      "line": 41,
+      "column": 8,
+      "endLine": 41,
+      "endColumn": 27,
+      "goalsBefore": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i : Nat}, linearSearch x ys = some i → ys[i]? = some x\nh✝ : ¬(y == x) = true\nj : Nat\nhrec : linearSearch x ys = some j\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some (j + 1)\n⊢ (y :: ys)[j + 1]? = some x"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 17,
+      "tactic": "induction l generalizing i j with\n  | nil => simp [linearSearch] at h\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · have hi : i = 0 := by simpa using h.symm\n      omega\n    · rename_i hyx\n      cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some k =>\n        have hi : i = k + 1 := by simpa [hrec] using h.symm\n        subst hi\n        cases j with\n        | zero => simpa using hyx\n        | succ j' => simpa using ih hrec (by omega)",
+      "line": 46,
+      "column": 2,
+      "endLine": 61,
+      "endColumn": 51,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\ni j : Nat\nh : linearSearch x l = some i\nhj : j < i\n⊢ l[j]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 18
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 18,
+      "tactic": "simp [linearSearch] at h",
+      "line": 47,
+      "column": 11,
+      "endLine": 47,
+      "endColumn": 35,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\ni j : Nat\nh : linearSearch x [] = some i\nhj : j < i\n⊢ [][j]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 19,
+      "tactic": "simp only [linearSearch] at h",
+      "line": 49,
+      "column": 4,
+      "endLine": 49,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nh : linearSearch x (y :: ys) = some i\nhj : j < i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nh : (if (y == x) = true then some 0 else Option.map (fun x => x + 1) (linearSearch x ys)) = some i\nhj : j < i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 20,
+      "tactic": "split at h",
+      "line": 50,
+      "column": 4,
+      "endLine": 50,
+      "endColumn": 14,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nh : (if (y == x) = true then some 0 else Option.map (fun x => x + 1) (linearSearch x ys)) = some i\nhj : j < i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[j]? ≠ some x",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 21,
+      "tactic": "· have hi : i = 0 := by simpa using h.symm\n      omega",
+      "line": 51,
+      "column": 4,
+      "endLine": 52,
+      "endColumn": 11,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[j]? ≠ some x",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "depth": 1,
+      "inner": 3
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 22,
+      "tactic": "have hi : i = 0 := by simpa using h.symm",
+      "line": 51,
+      "column": 6,
+      "endLine": 51,
+      "endColumn": 46,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : (y == x) = true\nh : some 0 = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : (y == x) = true\nh : some 0 = some i\nhi : i = 0\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 23,
+      "tactic": "simpa using h.symm",
+      "line": 51,
+      "column": 28,
+      "endLine": 51,
+      "endColumn": 46,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : (y == x) = true\nh : some 0 = some i\n⊢ i = 0"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 24,
+      "tactic": "omega",
+      "line": 52,
+      "column": 6,
+      "endLine": 52,
+      "endColumn": 11,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : (y == x) = true\nh : some 0 = some i\nhi : i = 0\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 25,
+      "tactic": "· rename_i hyx\n      cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some k =>\n        have hi : i = k + 1 := by simpa [hrec] using h.symm\n        subst hi\n        cases j with\n        | zero => simpa using hyx\n        | succ j' => simpa using ih hrec (by omega)",
+      "line": 53,
+      "column": 4,
+      "endLine": 61,
+      "endColumn": 51,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 10
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 26,
+      "tactic": "rename_i hyx",
+      "line": 53,
+      "column": 6,
+      "endLine": 53,
+      "endColumn": 18,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 27,
+      "tactic": "cases hrec : linearSearch x ys with\n      | none => simp [hrec] at h\n      | some k =>\n        have hi : i = k + 1 := by simpa [hrec] using h.symm\n        subst hi\n        cases j with\n        | zero => simpa using hyx\n        | succ j' => simpa using ih hrec (by omega)",
+      "line": 54,
+      "column": 6,
+      "endLine": 61,
+      "endColumn": 51,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 8
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 28,
+      "tactic": "simp [hrec] at h",
+      "line": 55,
+      "column": 16,
+      "endLine": 55,
+      "endColumn": 32,
+      "goalsBefore": [
+        "case cons.isFalse.none\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nhrec : linearSearch x ys = none\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 29,
+      "tactic": "have hi : i = k + 1 := by simpa [hrec] using h.symm",
+      "line": 57,
+      "column": 8,
+      "endLine": 57,
+      "endColumn": 59,
+      "goalsBefore": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nk : Nat\nhrec : linearSearch x ys = some k\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nk : Nat\nhrec : linearSearch x ys = some k\nhi : i = k + 1\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "depth": 3,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 30,
+      "tactic": "simpa [hrec] using h.symm",
+      "line": 57,
+      "column": 34,
+      "endLine": 57,
+      "endColumn": 59,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nk : Nat\nhrec : linearSearch x ys = some k\n⊢ i = k + 1"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 31,
+      "tactic": "subst hi",
+      "line": 58,
+      "column": 8,
+      "endLine": 58,
+      "endColumn": 16,
+      "goalsBefore": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\ni j : Nat\nhj : j < i\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some i\nk : Nat\nhrec : linearSearch x ys = some k\nhi : i = k + 1\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\nj : Nat\nhyx : ¬(y == x) = true\nk : Nat\nhrec : linearSearch x ys = some k\nhj : j < k + 1\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some (k + 1)\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 32,
+      "tactic": "cases j with\n        | zero => simpa using hyx\n        | succ j' => simpa using ih hrec (by omega)",
+      "line": 59,
+      "column": 8,
+      "endLine": 61,
+      "endColumn": 51,
+      "goalsBefore": [
+        "case cons.isFalse.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\nj : Nat\nhyx : ¬(y == x) = true\nk : Nat\nhrec : linearSearch x ys = some k\nhj : j < k + 1\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some (k + 1)\n⊢ (y :: ys)[j]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 3
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 33,
+      "tactic": "simpa using hyx",
+      "line": 60,
+      "column": 18,
+      "endLine": 60,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons.isFalse.some.zero\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\nhyx : ¬(y == x) = true\nk : Nat\nhrec : linearSearch x ys = some k\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some (k + 1)\nhj : 0 < k + 1\n⊢ (y :: ys)[0]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 34,
+      "tactic": "simpa using ih hrec (by omega)",
+      "line": 61,
+      "column": 21,
+      "endLine": 61,
+      "endColumn": 51,
+      "goalsBefore": [
+        "case cons.isFalse.some.succ\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\nhyx : ¬(y == x) = true\nk : Nat\nhrec : linearSearch x ys = some k\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some (k + 1)\nj' : Nat\nhj : j' + 1 < k + 1\n⊢ (y :: ys)[j' + 1]? ≠ some x"
+      ],
+      "goalsAfter": [],
+      "depth": 4,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_first",
+      "index": 35,
+      "tactic": "omega",
+      "line": 61,
+      "column": 45,
+      "endLine": 61,
+      "endColumn": 50,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : ∀ {i j : Nat}, linearSearch x ys = some i → j < i → ys[j]? ≠ some x\nhyx : ¬(y == x) = true\nk : Nat\nhrec : linearSearch x ys = some k\nh : Option.map (fun x => x + 1) (linearSearch x ys) = some (k + 1)\nj' : Nat\nhj : j' + 1 < k + 1\n⊢ j' < k"
+      ],
+      "goalsAfter": [],
+      "depth": 5,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 36,
+      "tactic": "induction l with\n  | nil => simp\n  | cons y ys ih =>\n    simp only [linearSearch] at h\n    split at h\n    · simp at h\n    · rename_i hyx\n      have hrec : linearSearch x ys = none := by simpa using h\n      intro hmem\n      rcases List.mem_cons.mp hmem with rfl | hmem\n      · simp at hyx\n      · exact ih hrec hmem",
+      "line": 66,
+      "column": 2,
+      "endLine": 77,
+      "endColumn": 26,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nh : linearSearch x l = none\n⊢ ¬x ∈ l"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 15
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 37,
+      "tactic": "simp",
+      "line": 67,
+      "column": 11,
+      "endLine": 67,
+      "endColumn": 15,
+      "goalsBefore": [
+        "case nil\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nh : linearSearch x [] = none\n⊢ ¬x ∈ []"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 38,
+      "tactic": "simp only [linearSearch] at h",
+      "line": 69,
+      "column": 4,
+      "endLine": 69,
+      "endColumn": 33,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh : linearSearch x (y :: ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh : (if (y == x) = true then some 0 else Option.map (fun x => x + 1) (linearSearch x ys)) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 39,
+      "tactic": "split at h",
+      "line": 70,
+      "column": 4,
+      "endLine": 70,
+      "endColumn": 14,
+      "goalsBefore": [
+        "case cons\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh : (if (y == x) = true then some 0 else Option.map (fun x => x + 1) (linearSearch x ys)) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : (y == x) = true\nh : some 0 = none\n⊢ ¬x ∈ y :: ys",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 40,
+      "tactic": "· simp at h",
+      "line": 71,
+      "column": 4,
+      "endLine": 71,
+      "endColumn": 15,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : (y == x) = true\nh : some 0 = none\n⊢ ¬x ∈ y :: ys",
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "depth": 1,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 41,
+      "tactic": "simp at h",
+      "line": 71,
+      "column": 6,
+      "endLine": 71,
+      "endColumn": 15,
+      "goalsBefore": [
+        "case cons.isTrue\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : (y == x) = true\nh : some 0 = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 42,
+      "tactic": "· rename_i hyx\n      have hrec : linearSearch x ys = none := by simpa using h\n      intro hmem\n      rcases List.mem_cons.mp hmem with rfl | hmem\n      · simp at hyx\n      · exact ih hrec hmem",
+      "line": 72,
+      "column": 4,
+      "endLine": 77,
+      "endColumn": 26,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 9
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 43,
+      "tactic": "rename_i hyx",
+      "line": 72,
+      "column": 6,
+      "endLine": 72,
+      "endColumn": 18,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh✝ : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 44,
+      "tactic": "have hrec : linearSearch x ys = none := by simpa using h",
+      "line": 73,
+      "column": 6,
+      "endLine": 73,
+      "endColumn": 62,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 45,
+      "tactic": "simpa using h",
+      "line": 73,
+      "column": 49,
+      "endLine": 73,
+      "endColumn": 62,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\n⊢ linearSearch x ys = none"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 46,
+      "tactic": "intro hmem",
+      "line": 74,
+      "column": 6,
+      "endLine": 74,
+      "endColumn": 16,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\n⊢ ¬x ∈ y :: ys"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhmem : x ∈ y :: ys\n⊢ False"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 47,
+      "tactic": "rcases List.mem_cons.mp hmem with rfl | hmem",
+      "line": 75,
+      "column": 6,
+      "endLine": 75,
+      "endColumn": 50,
+      "goalsBefore": [
+        "case cons.isFalse\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhmem : x ∈ y :: ys\n⊢ False"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.inl\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhyx : ¬(x == x) = true\nhmem : x ∈ x :: ys\n⊢ False",
+        "case cons.isFalse.inr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhmem✝ : x ∈ y :: ys\nhmem : x ∈ ys\n⊢ False"
+      ],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 48,
+      "tactic": "· simp at hyx",
+      "line": 76,
+      "column": 6,
+      "endLine": 76,
+      "endColumn": 19,
+      "goalsBefore": [
+        "case cons.isFalse.inl\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhyx : ¬(x == x) = true\nhmem : x ∈ x :: ys\n⊢ False",
+        "case cons.isFalse.inr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhmem✝ : x ∈ y :: ys\nhmem : x ∈ ys\n⊢ False"
+      ],
+      "goalsAfter": [
+        "case cons.isFalse.inr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhmem✝ : x ∈ y :: ys\nhmem : x ∈ ys\n⊢ False"
+      ],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 49,
+      "tactic": "simp at hyx",
+      "line": 76,
+      "column": 8,
+      "endLine": 76,
+      "endColumn": 19,
+      "goalsBefore": [
+        "case cons.isFalse.inl\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhyx : ¬(x == x) = true\nhmem : x ∈ x :: ys\n⊢ False"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 50,
+      "tactic": "· exact ih hrec hmem",
+      "line": 77,
+      "column": 6,
+      "endLine": 77,
+      "endColumn": 26,
+      "goalsBefore": [
+        "case cons.isFalse.inr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhmem✝ : x ∈ y :: ys\nhmem : x ∈ ys\n⊢ False"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 1
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_none",
+      "index": 51,
+      "tactic": "exact ih hrec hmem",
+      "line": 77,
+      "column": 8,
+      "endLine": 77,
+      "endColumn": 26,
+      "goalsBefore": [
+        "case cons.isFalse.inr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx y : α\nys : List α\nih : linearSearch x ys = none → ¬x ∈ ys\nhyx : ¬(y == x) = true\nh : Option.map (fun x => x + 1) (linearSearch x ys) = none\nhrec : linearSearch x ys = none\nhmem✝ : x ∈ y :: ys\nhmem : x ∈ ys\n⊢ False"
+      ],
+      "goalsAfter": [],
+      "depth": 3,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 52,
+      "tactic": "constructor",
+      "line": 82,
+      "column": 2,
+      "endLine": 82,
+      "endColumn": 13,
+      "goalsBefore": [
+        "α : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ (linearSearch x l).isSome = true ↔ x ∈ l"
+      ],
+      "goalsAfter": [
+        "case mp\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ (linearSearch x l).isSome = true → x ∈ l",
+        "case mpr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ x ∈ l → (linearSearch x l).isSome = true"
+      ],
+      "depth": 0,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 53,
+      "tactic": "· intro h\n    cases hs : linearSearch x l with\n    | none => simp [hs] at h\n    | some i => exact List.mem_of_getElem? (linearSearch_some hs)",
+      "line": 83,
+      "column": 2,
+      "endLine": 86,
+      "endColumn": 65,
+      "goalsBefore": [
+        "case mp\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ (linearSearch x l).isSome = true → x ∈ l",
+        "case mpr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ x ∈ l → (linearSearch x l).isSome = true"
+      ],
+      "goalsAfter": [
+        "case mpr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ x ∈ l → (linearSearch x l).isSome = true"
+      ],
+      "depth": 0,
+      "inner": 4
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 54,
+      "tactic": "intro h",
+      "line": 83,
+      "column": 4,
+      "endLine": 83,
+      "endColumn": 11,
+      "goalsBefore": [
+        "case mp\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ (linearSearch x l).isSome = true → x ∈ l"
+      ],
+      "goalsAfter": [
+        "case mp\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nh : (linearSearch x l).isSome = true\n⊢ x ∈ l"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 55,
+      "tactic": "cases hs : linearSearch x l with\n    | none => simp [hs] at h\n    | some i => exact List.mem_of_getElem? (linearSearch_some hs)",
+      "line": 84,
+      "column": 4,
+      "endLine": 86,
+      "endColumn": 65,
+      "goalsBefore": [
+        "case mp\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nh : (linearSearch x l).isSome = true\n⊢ x ∈ l"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 2
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 56,
+      "tactic": "simp [hs] at h",
+      "line": 85,
+      "column": 14,
+      "endLine": 85,
+      "endColumn": 28,
+      "goalsBefore": [
+        "case mp.none\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nh : (linearSearch x l).isSome = true\nhs : linearSearch x l = none\n⊢ x ∈ l"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 57,
+      "tactic": "exact List.mem_of_getElem? (linearSearch_some hs)",
+      "line": 86,
+      "column": 16,
+      "endLine": 86,
+      "endColumn": 65,
+      "goalsBefore": [
+        "case mp.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nh : (linearSearch x l).isSome = true\ni : Nat\nhs : linearSearch x l = some i\n⊢ x ∈ l"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 58,
+      "tactic": "· intro hmem\n    cases hs : linearSearch x l with\n    | none => exact absurd hmem (linearSearch_none hs)\n    | some i => rfl",
+      "line": 87,
+      "column": 2,
+      "endLine": 90,
+      "endColumn": 19,
+      "goalsBefore": [
+        "case mpr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ x ∈ l → (linearSearch x l).isSome = true"
+      ],
+      "goalsAfter": [],
+      "depth": 0,
+      "inner": 4
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 59,
+      "tactic": "intro hmem",
+      "line": 87,
+      "column": 4,
+      "endLine": 87,
+      "endColumn": 14,
+      "goalsBefore": [
+        "case mpr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\n⊢ x ∈ l → (linearSearch x l).isSome = true"
+      ],
+      "goalsAfter": [
+        "case mpr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nhmem : x ∈ l\n⊢ (linearSearch x l).isSome = true"
+      ],
+      "depth": 1,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 60,
+      "tactic": "cases hs : linearSearch x l with\n    | none => exact absurd hmem (linearSearch_none hs)\n    | some i => rfl",
+      "line": 88,
+      "column": 4,
+      "endLine": 90,
+      "endColumn": 19,
+      "goalsBefore": [
+        "case mpr\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nhmem : x ∈ l\n⊢ (linearSearch x l).isSome = true"
+      ],
+      "goalsAfter": [],
+      "depth": 1,
+      "inner": 2
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 61,
+      "tactic": "exact absurd hmem (linearSearch_none hs)",
+      "line": 89,
+      "column": 14,
+      "endLine": 89,
+      "endColumn": 54,
+      "goalsBefore": [
+        "case mpr.none\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nhmem : x ∈ l\nhs : linearSearch x l = none\n⊢ none.isSome = true"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    },
+    {
+      "decl": "Maithic.Algo.linearSearch_isSome_iff",
+      "index": 62,
+      "tactic": "rfl",
+      "line": 90,
+      "column": 16,
+      "endLine": 90,
+      "endColumn": 19,
+      "goalsBefore": [
+        "case mpr.some\nα : Type u\ninst✝¹ : BEq α\ninst✝ : LawfulBEq α\nx : α\nl : List α\nhmem : x ∈ l\ni : Nat\nhs : linearSearch x l = some i\n⊢ (some i).isSome = true"
+      ],
+      "goalsAfter": [],
+      "depth": 2,
+      "inner": 0
+    }
+  ],
+  "holes": [],
+  "findings": []
+}

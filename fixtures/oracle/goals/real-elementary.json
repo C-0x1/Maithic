@@ -1,0 +1,17 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "real",
+  "domain": "real",
+  "variables": ["x"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "1 / 4 <= x"
+    },
+    {
+      "name": "h2",
+      "statement": "x <= 4"
+    }
+  ],
+  "goal": "sqrt(x) + 1 / x > 9 / 5"
+}

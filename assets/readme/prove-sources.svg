@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 704" role="img" aria-labelledby="prove-sources-t prove-sources-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="prove-sources-t">Where candidate proofs come from</title>
+  <desc id="prove-sources-d">Four stages from top to bottom, each with a note at its right. First the automation portfolio, a fixed list of scripts built from rfl, trivial, simp, omega, decide, simp_all and grind, which needs no model and always runs first. Second, with the option oracle, a solver that returns a certificate for an arithmetic goal. Third, with the option search, a search that runs one tactic at a time on proof states. Fourth, unless AI is switched off, a model that proposes whole proofs in rounds and sees Lean's errors from the round before. The first candidate that the kernel accepts ends the work.</desc>
+  <rect width="960" height="704" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="360.0" height="114.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="236.0" width="360.0" height="96.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <rect x="40.0" y="358.0" width="360.0" height="96.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="480.0" width="360.0" height="114.0" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+  <rect x="40.0" y="614.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h340.0a10 10 0 0 1 10 10v26.0h-360.0z" fill="#0B7F75"/>
+  <path d="M406.0 114.0 L432.0 114.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="3 4"/>
+  <circle cx="450" cy="114" r="9" fill="#0FA89B"/>
+  <path d="M445.5 114 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M220.0 213.0 L220.0 225.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M214.0 223 l6 10 l6 -10 z" fill="#5B6477"/>
+  <path d="M40.0 246.0a10 10 0 0 1 10-10h340.0a10 10 0 0 1 10 10v26.0h-360.0z" fill="#9558B2"/>
+  <path d="M406.0 254.0 L432.0 254.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="3 4"/>
+  <circle cx="450" cy="254" r="9" fill="#0FA89B"/>
+  <path d="M445.5 254 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M220.0 335.0 L220.0 347.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M214.0 345 l6 10 l6 -10 z" fill="#5B6477"/>
+  <path d="M40.0 368.0a10 10 0 0 1 10-10h340.0a10 10 0 0 1 10 10v26.0h-360.0z" fill="#2B2F77"/>
+  <path d="M406.0 376.0 L432.0 376.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="3 4"/>
+  <circle cx="450" cy="376" r="9" fill="#0FA89B"/>
+  <path d="M445.5 376 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M220.0 457.0 L220.0 469.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M214.0 467 l6 10 l6 -10 z" fill="#5B6477"/>
+  <path d="M40.0 490.0a10 10 0 0 1 10-10h340.0a10 10 0 0 1 10 10v26.0h-360.0z" fill="#EC6813"/>
+  <path d="M406.0 498.0 L432.0 498.0" stroke="#C9CCE8" stroke-width="1.4" fill="none" stroke-dasharray="3 4"/>
+  <circle cx="450" cy="498" r="9" fill="#0FA89B"/>
+  <path d="M445.5 498 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="480.4" lengthAdjust="spacingAndGlyphs">Four sources of candidates, tried in this order</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="536.4" lengthAdjust="spacingAndGlyphs">maithic prove FILE [--oracle] [--search] [--guide MODEL] [--no-ai]</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="176.6" lengthAdjust="spacingAndGlyphs">1  The automation portfolio</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="261.5" lengthAdjust="spacingAndGlyphs">A fixed list of scripts built from rfl, trivial, simp,</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="279.7" lengthAdjust="spacingAndGlyphs">omega, decide, simp_all and grind, the cheapest</text>
+  <text x="54.0" y="191.0" font-size="13" fill="#14162B" textLength="24.6" lengthAdjust="spacingAndGlyphs">first.</text>
+  <text x="468.0" y="119.0" font-size="13" fill="#14162B" font-weight="700" textLength="130.8" lengthAdjust="spacingAndGlyphs">Always first, and free</text>
+  <text x="468.0" y="140.0" font-size="12.5" fill="#5B6477" textLength="382.6" lengthAdjust="spacingAndGlyphs">No model and no key. It finds what the tactic maithic_auto finds in the</text>
+  <text x="468.0" y="157.0" font-size="12.5" fill="#5B6477" textLength="321.0" lengthAdjust="spacingAndGlyphs">editor, and proves all 24 problems of the benchmark suite.</text>
+  <text x="54.0" y="259.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="75.0" lengthAdjust="spacingAndGlyphs">2  An oracle</text>
+  <text x="386.0" y="258.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="39.0" lengthAdjust="spacingAndGlyphs">--oracle</text>
+  <text x="54.0" y="295.0" font-size="13" fill="#14162B" textLength="286.1" lengthAdjust="spacingAndGlyphs">A solver in Julia answers an arithmetic goal with a</text>
+  <text x="54.0" y="313.0" font-size="13" fill="#14162B" textLength="224.0" lengthAdjust="spacingAndGlyphs">certificate, which becomes a tactic call.</text>
+  <text x="468.0" y="259.0" font-size="13" fill="#14162B" font-weight="700" textLength="168.6" lengthAdjust="spacingAndGlyphs">A certificate, not an answer</text>
+  <text x="468.0" y="280.0" font-size="12.5" fill="#5B6477" textLength="366.2" lengthAdjust="spacingAndGlyphs">The solver is not trusted. Lean checks the certificate like any other</text>
+  <text x="468.0" y="297.0" font-size="12.5" fill="#5B6477" textLength="32.0" lengthAdjust="spacingAndGlyphs">proof.</text>
+  <text x="54.0" y="381.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="126.1" lengthAdjust="spacingAndGlyphs">3  Step-wise search</text>
+  <text x="386.0" y="380.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="42.2" lengthAdjust="spacingAndGlyphs">--search</text>
+  <text x="54.0" y="417.0" font-size="13" fill="#14162B" textLength="282.5" lengthAdjust="spacingAndGlyphs">One tactic at a time on proof states. With --guide,</text>
+  <text x="54.0" y="435.0" font-size="13" fill="#14162B" textLength="229.8" lengthAdjust="spacingAndGlyphs">a small trained model orders the tactics.</text>
+  <text x="468.0" y="381.0" font-size="13" fill="#14162B" font-weight="700" textLength="91.0" lengthAdjust="spacingAndGlyphs">Sees the goals</text>
+  <text x="468.0" y="402.0" font-size="12.5" fill="#5B6477" textLength="366.9" lengthAdjust="spacingAndGlyphs">Each step is judged by what Lean answers, so a proof is built from</text>
+  <text x="468.0" y="419.0" font-size="12.5" fill="#5B6477" textLength="162.6" lengthAdjust="spacingAndGlyphs">steps that are known to work.</text>
+  <text x="54.0" y="503.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="137.4" lengthAdjust="spacingAndGlyphs">4  A model, in rounds</text>
+  <text x="386.0" y="502.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="69.7" lengthAdjust="spacingAndGlyphs">unless --no-ai</text>
+  <text x="54.0" y="539.0" font-size="13" fill="#14162B" textLength="285.4" lengthAdjust="spacingAndGlyphs">Whole proofs, several in each round. Every round</text>
+  <text x="54.0" y="557.0" font-size="13" fill="#14162B" textLength="270.6" lengthAdjust="spacingAndGlyphs">sees the proofs that failed, with Lean's error for</text>
+  <text x="54.0" y="575.0" font-size="13" fill="#14162B" textLength="31.8" lengthAdjust="spacingAndGlyphs">each.</text>
+  <text x="468.0" y="503.0" font-size="13" fill="#14162B" font-weight="700" textLength="160.6" lengthAdjust="spacingAndGlyphs">Learns from Lean's errors</text>
+  <text x="468.0" y="524.0" font-size="12.5" fill="#5B6477" textLength="376.6" lengthAdjust="spacingAndGlyphs">Anthropic, OpenAI or xAI, with your key; or the recorded answers, in</text>
+  <text x="468.0" y="541.0" font-size="12.5" fill="#5B6477" textLength="72.3" lengthAdjust="spacingAndGlyphs">replay mode.</text>
+  <text x="56.0" y="639.0" font-size="13" fill="#14162B" textLength="729.8" lengthAdjust="spacingAndGlyphs">The first candidate that the kernel accepts ends the work, whatever its source. It then passes the same axiom audit, trust policy</text>
+  <text x="56.0" y="657.0" font-size="13" fill="#14162B" textLength="440.1" lengthAdjust="spacingAndGlyphs">and fresh re-check as any other, and only then is the theorem called verified.</text>
+</svg>

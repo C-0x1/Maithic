@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 672" role="img" aria-labelledby="bridge-methods-t bridge-methods-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="bridge-methods-t">The sixteen methods of the Bridge</title>
+  <desc id="bridge-methods-d">Five bands. Environments: loadHeader, runCommand, checkFile, tryCandidates and releaseEnv run text on an environment and return a report. Proof states: startProof, runTactic, tryTactics, getState and releaseState run one tactic at a time on a goal. Description: extract describes a whole file. Safety: guard says whether untrusted text would be admitted. Housekeeping: handshake, stats, selfTest and shutdown.</desc>
+  <rect width="960" height="672" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="880.0" height="94.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="202.0" width="880.0" height="77.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="291.0" width="880.0" height="94.0" rx="10" fill="#FFFFFF" stroke="#B37400" stroke-width="1.5"/>
+  <rect x="40.0" y="397.0" width="880.0" height="77.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="40.0" y="486.0" width="880.0" height="54.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="558.0" width="880.0" height="84.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h160.0v94.0h-160.0a10 10 0 0 1 -10-10z" fill="#2B2F77"/>
+  <rect x="228.0" y="108.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="325.2" y="108.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="422.5" y="108.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="512.8" y="108.0" width="110.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="630.8" y="108.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 212.0a10 10 0 0 1 10-10h160.0v77.0h-160.0a10 10 0 0 1 -10-10z" fill="#0B7F75"/>
+  <rect x="228.0" y="214.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="325.2" y="214.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="415.6" y="214.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="512.8" y="214.0" width="75.4" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="596.2" y="214.0" width="103.1" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 301.0a10 10 0 0 1 10-10h160.0v94.0h-160.0a10 10 0 0 1 -10-10z" fill="#B37400"/>
+  <rect x="228.0" y="303.0" width="68.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 407.0a10 10 0 0 1 10-10h160.0v77.0h-160.0a10 10 0 0 1 -10-10z" fill="#E5484D"/>
+  <rect x="228.0" y="409.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 496.0a10 10 0 0 1 10-10h160.0v54.0h-160.0a10 10 0 0 1 -10-10z" fill="#5B6477"/>
+  <rect x="228.0" y="498.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="318.3" y="498.0" width="54.6" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="380.9" y="498.0" width="75.4" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="464.3" y="498.0" width="75.4" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="332.5" lengthAdjust="spacingAndGlyphs">Sixteen methods, in five groups</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="268.2" lengthAdjust="spacingAndGlyphs">docs/reference/bridge-protocol.md</text>
+  <text x="54.0" y="148.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="90.0" lengthAdjust="spacingAndGlyphs">Environments</text>
+  <text x="238.0" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">loadHeader</text>
+  <text x="335.2" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">runCommand</text>
+  <text x="432.5" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">checkFile</text>
+  <text x="522.8" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.0" lengthAdjust="spacingAndGlyphs">tryCandidates</text>
+  <text x="640.8" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">releaseEnv</text>
+  <text x="228.0" y="155.0" font-size="12.5" fill="#5B6477" textLength="562.8" lengthAdjust="spacingAndGlyphs">Run text on an environment and get a report of facts: errors, declarations, axioms. A kept environment</text>
+  <text x="228.0" y="172.0" font-size="12.5" fill="#5B6477" textLength="104.9" lengthAdjust="spacingAndGlyphs">gets a new handle.</text>
+  <text x="54.0" y="245.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="78.0" lengthAdjust="spacingAndGlyphs">Proof states</text>
+  <text x="238.0" y="229.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">startProof</text>
+  <text x="335.2" y="229.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">runTactic</text>
+  <text x="425.6" y="229.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">tryTactics</text>
+  <text x="522.8" y="229.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">getState</text>
+  <text x="606.2" y="229.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="83.1" lengthAdjust="spacingAndGlyphs">releaseState</text>
+  <text x="228.0" y="261.0" font-size="12.5" fill="#5B6477" textLength="455.1" lengthAdjust="spacingAndGlyphs">Run one tactic at a time on a goal. A tactic that fails is a result, not a protocol error.</text>
+  <text x="54.0" y="343.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="74.3" lengthAdjust="spacingAndGlyphs">Description</text>
+  <text x="238.0" y="318.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="48.5" lengthAdjust="spacingAndGlyphs">extract</text>
+  <text x="228.0" y="350.0" font-size="12.5" fill="#5B6477" textLength="581.6" lengthAdjust="spacingAndGlyphs">The declarations of a whole file, the steps of its proofs with the goals before and after, its holes and its lint</text>
+  <text x="228.0" y="367.0" font-size="12.5" fill="#5B6477" textLength="46.6" lengthAdjust="spacingAndGlyphs">findings.</text>
+  <text x="54.0" y="440.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="40.5" lengthAdjust="spacingAndGlyphs">Safety</text>
+  <text x="238.0" y="424.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">guard</text>
+  <text x="228.0" y="456.0" font-size="12.5" fill="#5B6477" textLength="350.0" lengthAdjust="spacingAndGlyphs">Says whether untrusted text would be admitted, and if not, why.</text>
+  <text x="54.0" y="518.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="92.3" lengthAdjust="spacingAndGlyphs">Housekeeping</text>
+  <text x="238.0" y="513.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">handshake</text>
+  <text x="328.3" y="513.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="34.6" lengthAdjust="spacingAndGlyphs">stats</text>
+  <text x="390.9" y="513.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">selfTest</text>
+  <text x="474.3" y="513.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">shutdown</text>
+  <text x="56.0" y="583.0" font-size="13" fill="#14162B" textLength="713.7" lengthAdjust="spacingAndGlyphs">The Bridge reports facts. Whether a declaration counts as verified is decided elsewhere, by the trust policy, from these facts.</text>
+  <text x="56.0" y="607.0" font-size="13" fill="#14162B" textLength="733.5" lengthAdjust="spacingAndGlyphs">A proof state with no goals left shows that a tactic script works. It is not a verified theorem: the finished declaration goes through</text>
+  <text x="56.0" y="625.0" font-size="13" fill="#14162B" textLength="322.3" lengthAdjust="spacingAndGlyphs">runCommand or tryCandidates like any other candidate.</text>
+</svg>

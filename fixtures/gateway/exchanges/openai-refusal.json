@@ -1,0 +1,39 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "openai-refusal",
+  "provider": "openai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "resp_3",
+    "object": "response",
+    "status": "completed",
+    "error": null,
+    "model": "gpt-6.2-sol",
+    "output": [
+      {
+        "id": "msg_1",
+        "type": "message",
+        "status": "completed",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "refusal",
+            "refusal": "I can't help with that."
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 10,
+      "output_tokens": 8,
+      "total_tokens": 18
+    }
+  },
+  "expect": {
+    "error": "refused",
+    "detail": "I can't help with that."
+  }
+}

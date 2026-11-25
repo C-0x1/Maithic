@@ -1,0 +1,393 @@
+# Capability register for P10 Gateway.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P10"
+name = "Gateway"
+title = "Multi-provider AI model gateway"
+mission = "Let the user choose Anthropic, OpenAI or xAI, supply their own API key, and have every Maithic feature work the same way, with costs bounded and every model exchange recordable and replayable so that the whole project can be tested without a network."
+
+[[group]]
+id = "P10-01"
+title = "Anthropic adapter"
+language = "OCaml"
+path = "ocaml/lib/gateway/anthropic/"
+purpose = "Speaks the Claude Messages API."
+
+  [[group.capability]]
+  id = "P10-01-01"
+  title = "Messages request"
+  spec = "Build `POST /v1/messages` requests with model, maximum tokens, system prompt and messages."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-01-02"
+  title = "Anthropic authentication headers"
+  spec = "Send the key as a bearer token, or as `x-api-key` when configured, plus the `anthropic-version` header."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-01-03"
+  title = "Messages response parsing"
+  spec = "Parse content blocks, stop reason and usage."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-01-04"
+  title = "Anthropic structured output"
+  spec = "Request JSON-schema-constrained output through `output_config.format`."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-01-05"
+  title = "Anthropic error mapping"
+  spec = "Map HTTP status and error types to the unified error type."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-02"
+title = "OpenAI adapter"
+language = "OCaml"
+path = "ocaml/lib/gateway/openai/"
+purpose = "Speaks the OpenAI Responses API."
+
+  [[group.capability]]
+  id = "P10-02-01"
+  title = "Responses request"
+  spec = "Build `POST /v1/responses` requests with model, instructions and input items."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-02-02"
+  title = "OpenAI bearer authentication"
+  spec = "`Authorization: Bearer` with optional organization and project headers."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-02-03"
+  title = "Responses parsing"
+  spec = "Parse output items, text and usage."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-02-04"
+  title = "OpenAI structured output"
+  spec = "JSON-schema response format in strict mode."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-02-05"
+  title = "OpenAI error mapping"
+  spec = "Map errors including the `slow_down` and `server_is_overloaded` codes and honor `Retry-After`."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-03"
+title = "xAI adapter"
+language = "OCaml"
+path = "ocaml/lib/gateway/xai/"
+purpose = "Speaks the xAI API, which follows the OpenAI request shapes."
+
+  [[group.capability]]
+  id = "P10-03-01"
+  title = "xAI base URL"
+  spec = "Default base `https://api.x.ai/v1` with OpenAI-compatible request shapes."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-03-02"
+  title = "xAI bearer authentication"
+  spec = "`Authorization: Bearer` using the key from `XAI_API_KEY`."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-03-03"
+  title = "xAI chat request"
+  spec = "Build chat-completions requests."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-03-04"
+  title = "xAI responses request"
+  spec = "Use the Responses-style endpoint when selected."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-03-05"
+  title = "xAI response parsing"
+  spec = "Parse choices, text and usage."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-03-06"
+  title = "xAI structured output"
+  spec = "JSON-schema response format."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-04"
+title = "Unified model interface"
+language = "OCaml"
+path = "ocaml/lib/gateway/core/"
+purpose = "One typed interface that all pillars program against."
+
+  [[group.capability]]
+  id = "P10-04-01"
+  title = "Provider signature"
+  spec = "OCaml module type implemented by every provider."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-04-02"
+  title = "Provider selection"
+  spec = "Choose among `anthropic`, `openai`, `xai`, `scripted`, `mock` and `local`."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-04-03"
+  title = "Unified errors"
+  spec = "Rate limit, overloaded, invalid request, authentication, timeout and refusal."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-05"
+title = "Key management and authentication"
+language = "OCaml"
+path = "ocaml/lib/gateway/keys/"
+purpose = "Bring-your-own-key handling that never leaks."
+
+  [[group.capability]]
+  id = "P10-05-01"
+  title = "Key environment variables"
+  spec = "`ANTHROPIC_API_KEY`, `OPENAI_API_KEY` and `XAI_API_KEY`."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-05-02"
+  title = "Provider setting"
+  spec = "`ai.provider` in configuration, `MAITHIC_PROVIDER` in the environment, `--provider` on the command line."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-05-03"
+  title = "Login command"
+  spec = "`maithic auth login` prompts for a key without echoing it and stores it."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-05-04"
+  title = "Key validation"
+  spec = "A cheap authenticated call confirms a key works."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-05-05"
+  title = "Key redaction"
+  spec = "Keys never appear in logs, errors, cassettes or telemetry."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-05-06"
+  title = "Auth status command"
+  spec = "`maithic auth status` shows which providers are configured without revealing keys."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-05-07"
+  title = "Key precedence"
+  spec = "Flag over environment over keychain over file."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-06"
+title = "Routing, fallback and resilience"
+language = "OCaml"
+path = "ocaml/lib/gateway/route/"
+purpose = "Keeps model calls working through rate limits and outages."
+
+  [[group.capability]]
+  id = "P10-06-01"
+  title = "Default route"
+  spec = "Use the configured provider and model."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-06-02"
+  title = "Call timeouts"
+  spec = "Per-call deadlines."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-07"
+title = "Caching, record and replay"
+language = "OCaml"
+path = "ocaml/lib/gateway/replay/"
+purpose = "Makes model behavior reproducible in tests."
+
+  [[group.capability]]
+  id = "P10-07-01"
+  title = "Gateway modes"
+  spec = "`live`, `record`, `replay`, `mock` and `off`, set by configuration or environment."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-07-02"
+  title = "Canonical request hash"
+  spec = "Hash of a normalized request used as the cassette key."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-07-03"
+  title = "Cassette format"
+  spec = "JSON file with request summary, response and metadata."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-07-04"
+  title = "Replay provider"
+  spec = "Serve responses from cassettes."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-07-05"
+  title = "Missing-cassette failure"
+  spec = "A missing cassette in replay mode is a hard error naming the request."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-07-06"
+  title = "Record-time redaction"
+  spec = "Remove keys and authorization headers when recording."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-07-07"
+  title = "Scripted provider"
+  spec = "Provider that returns responses from a script defined in a test."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-07-08"
+  title = "Mock provider"
+  spec = "Deterministic canned responses selected by prompt name."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-08"
+title = "Prompt registry and evaluation"
+language = "OCaml"
+path = "ocaml/lib/gateway/prompts/"
+purpose = "Keeps every prompt versioned, typed and tested."
+
+  [[group.capability]]
+  id = "P10-08-01"
+  title = "Prompt rendering"
+  spec = "Deterministic rendering to messages."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+  [[group.capability]]
+  id = "P10-08-02"
+  title = "System prompt policy"
+  spec = "Shared rules included in every system prompt."
+  status = "done"
+  tests = ["ocaml/test/test_gateway.ml"]
+
+[[group]]
+id = "P10-09"
+title = "Usage analytics and provider comparison"
+language = "R"
+path = "r/maithicstats/R/gateway-*.R"
+purpose = "Analyzes cost, latency and quality by provider and model."
+
+  [[group.capability]]
+  id = "P10-09-01"
+  title = "Usage import"
+  spec = "Load usage records."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-gateway.R"]
+
+  [[group.capability]]
+  id = "P10-09-02"
+  title = "Cost by provider"
+  spec = "Cost by provider, model and pillar."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-gateway.R"]
+
+  [[group.capability]]
+  id = "P10-09-03"
+  title = "Token breakdown"
+  spec = "Input, output, cached and reasoning tokens."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-gateway.R"]
+
+  [[group.capability]]
+  id = "P10-09-04"
+  title = "Call latency distributions"
+  spec = "Latency distributions by model."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-gateway.R"]
+
+  [[group.capability]]
+  id = "P10-09-05"
+  title = "Provider error rates"
+  spec = "Error rates by provider and class."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-gateway.R"]
+
+  [[group.capability]]
+  id = "P10-09-06"
+  title = "Daily spend"
+  spec = "Spend per day with a rolling average."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-gateway.R"]
+
+  [[group.capability]]
+  id = "P10-09-07"
+  title = "Gateway plots"
+  spec = "Plot functions for the summaries."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-report-figures.R"]
+
+  [[group.capability]]
+  id = "P10-09-08"
+  title = "Gateway report table"
+  spec = "Summary table for reports."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-gateway.R"]

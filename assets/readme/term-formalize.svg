@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 926" width="780" height="926" role="img" aria-label="A terminal session: maithic formalize turns the sentence 'the square of a negative integer is positive' into four candidate Lean statements. Lean rejects one as vacuous and one with the counterexample n = 0, a third is repaired and found to be a duplicate, and the remaining statement passes every check and is chosen.">
+  <title>A terminal session: maithic formalize turns the sentence 'the square of a negative integer is positive' into four candidate Lean statements. Lean rejects one as vacuous and one with the counterexample n = 0, a third is repaired and found to be a duplicate, and the remaining statement passes every check and is chosen.</title>
+  <rect width="780" height="926" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h760a10 10 0 0 1 10 10v26h-780z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="390" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic formalize</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="681.21" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic formalize --file fixtures/formalize/problems/negative-square.txt --candidates 4</text>
+    <text x="22.00" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">problem</text>
+    <text x="108.13" y="77" textLength="430.65" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Show that the square of a negative integer is positive.</text>
+    <text x="108.13" y="96" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">task: prove</text>
+    <text x="108.13" y="115" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">constraints: negative; integer; positive</text>
+    <text x="22.00" y="153" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">candidate 1</text>
+    <text x="115.96" y="153" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(n : Int) (h : n &lt; 0) : 0 &lt; n ^ 2</text>
+    <text x="37.66" y="172" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">reading</text>
+    <text x="123.79" y="172" textLength="524.61" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The number is an integer below zero, and positive means above zero.</text>
+    <text x="37.66" y="191" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">elaborates</text>
+    <text x="123.79" y="191" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">as drafted</text>
+    <text x="37.66" y="210" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="194.26" y="210" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="229" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="229" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">counterexample</text>
+    <text x="194.26" y="229" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="264.73" y="229" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">no counterexample in 300 sampled cases</text>
+    <text x="37.66" y="248" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="248" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">triviality</text>
+    <text x="194.26" y="248" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="267" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="267" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">numbers</text>
+    <text x="194.26" y="267" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="286" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="286" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">variables</text>
+    <text x="194.26" y="286" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="305" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="305" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">traps</text>
+    <text x="194.26" y="305" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="324" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="324" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">back-translation</text>
+    <text x="194.26" y="324" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="343" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="343" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round-trip</text>
+    <text x="194.26" y="343" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="264.73" y="343" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">agreement 10 of 10</text>
+    <text x="37.66" y="362" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">says</text>
+    <text x="123.79" y="362" textLength="634.23" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">For every integer n that is less than zero, the square of n is greater than zero.</text>
+    <text x="37.66" y="381" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">→</text>
+    <text x="53.32" y="381" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">chosen</text>
+    <text x="115.96" y="381" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">score 1.00</text>
+    <text x="22.00" y="419" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">candidate 2</text>
+    <text x="115.96" y="419" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(n : Nat) (h : n &lt; 0) : 0 &lt; n ^ 2</text>
+    <text x="37.66" y="438" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">reading</text>
+    <text x="123.79" y="438" textLength="352.35" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The number is taken from the natural numbers.</text>
+    <text x="37.66" y="457" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">elaborates</text>
+    <text x="123.79" y="457" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">as drafted</text>
+    <text x="37.66" y="476" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">✗</text>
+    <text x="53.32" y="476" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="194.26" y="476" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="264.73" y="476" textLength="414.99" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the hypothesis h cannot hold (shown by contradiction)</text>
+    <text x="37.66" y="495" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">·</text>
+    <text x="53.32" y="495" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">counterexample</text>
+    <text x="194.26" y="495" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">skipped</text>
+    <text x="264.73" y="495" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is vacuous</text>
+    <text x="37.66" y="514" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">→</text>
+    <text x="53.32" y="514" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#F26D72">rejected</text>
+    <text x="131.62" y="514" textLength="485.46" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuous: the hypothesis h cannot hold (shown by contradiction)</text>
+    <text x="22.00" y="552" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">candidate 3</text>
+    <text x="115.96" y="552" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(n : Int) (h : n ≤ 0) : 0 &lt; n ^ 2</text>
+    <text x="37.66" y="571" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">reading</text>
+    <text x="123.79" y="571" textLength="414.99" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Negative is read as not positive, so zero is allowed.</text>
+    <text x="37.66" y="590" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">elaborates</text>
+    <text x="123.79" y="590" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">as drafted</text>
+    <text x="37.66" y="609" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="609" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="194.26" y="609" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="628" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">✗</text>
+    <text x="53.32" y="628" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">counterexample</text>
+    <text x="194.26" y="628" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="264.73" y="628" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">it fails at n = 0</text>
+    <text x="37.66" y="647" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">→</text>
+    <text x="53.32" y="647" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#F26D72">rejected</text>
+    <text x="131.62" y="647" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">refuted: it fails at n = 0</text>
+    <text x="22.00" y="685" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">candidate 4</text>
+    <text x="115.96" y="685" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(n : Int) (h : n &lt; 0) : n ^ 2 &gt; 0</text>
+    <text x="37.66" y="704" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">reading</text>
+    <text x="123.79" y="704" textLength="461.97" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The same claim with the conclusion written as greater than.</text>
+    <text x="37.66" y="723" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">drafted</text>
+    <text x="123.79" y="723" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#F26D72">does not elaborate</text>
+    <text x="280.39" y="723" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">unknown-constant</text>
+    <text x="123.79" y="742" textLength="242.73" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">(n : ℤ) (h : n &lt; 0) : n ^ 2 &gt; 0</text>
+    <text x="123.79" y="761" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">Lean:</text>
+    <text x="170.77" y="761" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Unknown identifier `ℤ`</text>
+    <text x="37.66" y="780" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">elaborates</text>
+    <text x="123.79" y="780" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">after 1 repair</text>
+    <text x="37.66" y="799" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">→</text>
+    <text x="53.32" y="799" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">dropped</text>
+    <text x="123.79" y="799" textLength="548.10" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">it says what candidate 1 says (the same once definitions are unfolded)</text>
+    <text x="22.00" y="837" textLength="516.78" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">formalized: candidate 1 of 4 (1 repaired, 1 duplicate, 2 rejected)</text>
+    <text x="22.00" y="875" textLength="383.67" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem problem (n : Int) (h : n &lt; 0) : 0 &lt; n ^ 2</text>
+    <text x="22.00" y="894" textLength="665.55" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">nothing here proves it; --write FILE writes it as a Lean file, with sorry for a proof</text>
+  </g>
+</svg>

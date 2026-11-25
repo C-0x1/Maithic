@@ -1,0 +1,282 @@
+{
+  "schema": "maithic.prove.run/1",
+  "file": "examples/triangle.lean",
+  "policy": {
+    "name": "default",
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "allow_native": false,
+    "require_recheck": true
+  },
+  "results": [
+    {
+      "schema": "maithic.prove.result/1",
+      "file": "examples/triangle.lean",
+      "theorem": "tri_formula",
+      "statement": "∀ (n : Nat), 2 * tri n = n * (n + 1)",
+      "line": 14,
+      "status": "verified",
+      "proof": "by\n  induction n with\n  | zero => rfl\n  | succ k ih => simp only [tri]; grind",
+      "proposer": "model",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decision": {
+        "status": "verified",
+        "reasons": [],
+        "violations": []
+      },
+      "recheck": {
+        "passed": true,
+        "declaration": "tri_formula",
+        "statement": "∀ (n : Nat), 2 * tri n = n * (n + 1)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "errors": 0,
+        "elapsed_ms": 255,
+        "lean": "4.36.0"
+      },
+      "attempts": [
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by rfl",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:62: Tactic `rfl` failed: The left-hand side\n  2 * tri n\nis not definitionally equal to the right-hand side\n  n * (n + 1)\n\nn : Nat\n⊢ 2 * tri n = n * (n + 1)",
+          "elapsed_ms": 7
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by trivial",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:62: Tactic `assumption` failed\n\nn : Nat\n⊢ 2 * tri n = n * (n + 1)",
+          "elapsed_ms": 5
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by simp",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:62: `simp` made no progress",
+          "elapsed_ms": 5
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by omega",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:62: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 0\n  a ≥ 0\n  a - 2*b ≥ 1\nwhere\n a := ↑n * ↑(n + 1)\n b := ↑(tri n)",
+          "elapsed_ms": 5
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by decide",
+          "accepted": false,
+          "error_class": "other",
+          "error": "1:62: Expected type must not contain free variables\n  2 * tri n = n * (n + 1)\n\nHint: Use the `+revert` option to automatically clean up and revert free variables",
+          "elapsed_ms": 3
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:62: simp_all made no progress",
+          "elapsed_ms": 5
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by grind",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:62: `grind` failed\ncase grind\nn : Nat\nh : ¬2 * tri n = n * (n + 1)\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] ¬2 * tri n = n * (n + 1)\n  [eqc] False propositions\n    [prop] 2 * tri n = n * (n + 1)\n  [ematch] E-matching patterns\n    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]\n    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]\n  [cutsat] Assignment satisfying linear constraints\n    [assign] n := 0\n    [assign] tri n := 0\n    [assign] 「↑n ^ 2」 := 1\n  [ring] Ring `Lean.Grind.Ring.OfSemiring.Q Nat`\n    [diseqs] Disequalities\n      [_] ¬-1 * ↑n ^ 2 + 2 * ↑(tri n) + -1 * ↑n = 0",
+          "elapsed_ms": 20
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; rfl",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: Tactic `rfl` failed: The left-hand side\n  2 * tri n\nis not definitionally equal to the right-hand side\n  n * (n + 1)\n\nn : Nat\n⊢ 2 * tri n = n * (n + 1)",
+          "elapsed_ms": 6
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; trivial",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: Tactic `assumption` failed\n\nn : Nat\n⊢ 2 * tri n = n * (n + 1)",
+          "elapsed_ms": 7
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; simp",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: `simp` made no progress",
+          "elapsed_ms": 10
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; omega",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 0\n  a ≥ 0\n  a - 2*b ≥ 1\nwhere\n a := ↑n * ↑(n + 1)\n b := ↑(tri n)",
+          "elapsed_ms": 5
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; decide",
+          "accepted": false,
+          "error_class": "other",
+          "error": "1:70: Expected type must not contain free variables\n  2 * tri n = n * (n + 1)\n\nHint: Use the `+revert` option to automatically clean up and revert free variables",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: simp_all made no progress",
+          "elapsed_ms": 5
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; grind",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: `grind` failed\ncase grind\nn : Nat\nh : ¬2 * tri n = n * (n + 1)\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] ¬2 * tri n = n * (n + 1)\n  [eqc] False propositions\n    [prop] 2 * tri n = n * (n + 1)\n  [ematch] E-matching patterns\n    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]\n    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]\n  [cutsat] Assignment satisfying linear constraints\n    [assign] n := 0\n    [assign] tri n := 0\n    [assign] 「↑n ^ 2」 := 1\n  [ring] Ring `Lean.Grind.Ring.OfSemiring.Q Nat`\n    [diseqs] Disequalities\n      [_] ¬-1 * ↑n ^ 2 + 2 * ↑(tri n) + -1 * ↑n = 0",
+          "elapsed_ms": 17
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; constructor <;> simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: Tactic `constructor` failed: no applicable constructor found\n\nn : Nat\n⊢ 2 * tri n = n * (n + 1)",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intro h; cases h <;> simp_all",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:68: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nn : Nat\n⊢ 2 * tri n = n * (n + 1)",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; constructor <;> intros <;> omega",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "2:13: Tactic `constructor` failed: no applicable constructor found\n\nn : Nat\n⊢ 2 * tri n = n * (n + 1)",
+          "elapsed_ms": 4
+        },
+        {
+          "round": 0,
+          "proposer": "portfolio",
+          "proof": "by intros; exact?",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:70: `exact?` could not close the goal. Try `apply?` to see partial suggestions.",
+          "elapsed_ms": 714
+        },
+        {
+          "round": 1,
+          "proposer": "model",
+          "proof": "by simp [tri]",
+          "accepted": false,
+          "error_class": "tactic-failed",
+          "error": "1:62: `simp` made no progress",
+          "elapsed_ms": 19
+        },
+        {
+          "round": 1,
+          "proposer": "model",
+          "proof": "by induction n <;> simp [tri]",
+          "accepted": false,
+          "error_class": "unsolved-goals",
+          "error": "1:59: unsolved goals\ncase succ\nn✝ : Nat\na✝ : 2 * tri n✝ = n✝ * (n✝ + 1)\n⊢ 2 * (tri n✝ + (n✝ + 1)) = (n✝ + 1) * (n✝ + 1 + 1)",
+          "elapsed_ms": 9
+        },
+        {
+          "round": 2,
+          "proposer": "model",
+          "proof": "by\n  induction n with\n  | zero => rfl\n  | succ k ih => simp only [tri]; grind",
+          "accepted": true,
+          "elapsed_ms": 34
+        }
+      ],
+      "rounds_used": 2,
+      "elapsed_ms": 1410
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "verified": 1,
+    "checked": 0,
+    "refuted": 0,
+    "conjectured": 0,
+    "unverified": 0,
+    "unknown": 0,
+    "failed": 0,
+    "abstained": 0
+  },
+  "gateway": {
+    "mode": "replay",
+    "calls": 2,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": [
+      {
+        "purpose": "prove.propose",
+        "provider": "xai",
+        "model": "grok-4.7",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T01:13:51Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "prove.repair",
+        "provider": "xai",
+        "model": "grok-4.7",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T01:13:51Z",
+        "elapsed_ms": 0
+      }
+    ]
+  }
+}

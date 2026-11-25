@@ -1,0 +1,132 @@
+{
+  "schema": "maithic.bridge.session/1",
+  "name": "handshake",
+  "title": "Version handshake, typed errors and shutdown",
+  "steps": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "handshake"
+      },
+      "expect": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "bridge": "0.1.0",
+          "protocol": 1,
+          "lean": "4.36.0"
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": "a-string-id",
+        "method": "stats"
+      },
+      "expect": {
+        "id": "a-string-id",
+        "result": {
+          "requests": 2,
+          "environments": 0
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "noSuchMethod"
+      },
+      "expect": {
+        "id": 3,
+        "error": {
+          "code": -32601,
+          "data": {
+            "code": "MTH-BRG-0003"
+          },
+          "message": {
+            "$contains": "noSuchMethod"
+          }
+        }
+      }
+    },
+    {
+      "raw": "this is not json",
+      "expect": {
+        "id": null,
+        "error": {
+          "code": -32700,
+          "data": {
+            "code": "MTH-BRG-0001"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "id": 5,
+        "method": "handshake"
+      },
+      "expect": {
+        "id": 5,
+        "error": {
+          "code": -32600,
+          "data": {
+            "code": "MTH-BRG-0002"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "method": "runCommand",
+        "params": {
+          "env": "one"
+        }
+      },
+      "expect": {
+        "id": 6,
+        "error": {
+          "code": -32602,
+          "data": {
+            "code": "MTH-BRG-0004"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "method": "handshake",
+        "params": [
+          1,
+          2
+        ]
+      },
+      "expect": {
+        "id": 7,
+        "error": {
+          "code": -32600
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "method": "shutdown"
+      },
+      "expect": {
+        "id": 8,
+        "result": {
+          "bye": true
+        }
+      }
+    }
+  ]
+}

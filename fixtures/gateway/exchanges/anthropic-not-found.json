@@ -1,0 +1,20 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "anthropic-not-found",
+  "provider": "anthropic",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 404,
+  "headers": {},
+  "body": {
+    "type": "error",
+    "error": {
+      "type": "not_found_error",
+      "message": "model: no-such-model"
+    },
+    "request_id": "req_011Example"
+  },
+  "expect": {
+    "error": "not_found"
+  }
+}

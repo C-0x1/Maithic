@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gateway cassette",
+  "description": "One stored exchange with a provider, replayed in place of a call. `origin` says where the answer came from: `recorded` from a live call, or `authored` by hand for a demonstration or a test. The hash is that of the request.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.gateway.cassette/1"
+    },
+    "hash": {
+      "$ref": "../common.schema.json#/$defs/sha256"
+    },
+    "origin": {
+      "enum": [
+        "recorded",
+        "authored"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "request": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "role": {
+                "enum": [
+                  "user",
+                  "assistant"
+                ]
+              },
+              "content": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "role",
+              "content"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "schema_name": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "provider",
+        "model",
+        "purpose",
+        "messages",
+        "max_tokens"
+      ],
+      "additionalProperties": false
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "stop": {
+          "type": "string"
+        },
+        "usage": {
+          "type": "object",
+          "properties": {
+            "input_tokens": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "output_tokens": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "input_tokens",
+            "output_tokens"
+          ],
+          "additionalProperties": false
+        },
+        "model": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "stop",
+        "usage"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "hash",
+    "origin",
+    "request",
+    "response"
+  ],
+  "additionalProperties": false
+}

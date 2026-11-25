@@ -1,0 +1,97 @@
+{
+  "schema": "maithic.search.rankings/1",
+  "engine": "maithic-name",
+  "queryset": "demo",
+  "config": {
+    "retrievers": [
+      "name"
+    ],
+    "limit": 10,
+    "k1": 1.2,
+    "b": 0.75
+  },
+  "results": [
+    {
+      "query": "sorted-output",
+      "ranked": [],
+      "elapsed_ms": 0.0019073486328125
+    },
+    {
+      "query": "perm-of-input",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "length",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "idempotent",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "already-sorted",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "search-none",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "first-index",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "tail",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "sublist",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "append",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "add-comm",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "preorder-nat",
+      "ranked": [],
+      "elapsed_ms": 0.00095367431640625
+    },
+    {
+      "query": "by-name",
+      "ranked": [
+        "Maithic.Algo.mem_insertSorted"
+      ],
+      "elapsed_ms": 0.015974044799804688
+    },
+    {
+      "query": "double",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "point",
+      "ranked": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "query": "head",
+      "ranked": [],
+      "elapsed_ms": 0.00095367431640625
+    }
+  ]
+}

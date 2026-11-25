@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bridge check report",
+  "description": "What Lean said about one piece of source text: diagnostics, and for each declaration its kind, type and axioms. The Bridge reports facts; whether a declaration counts as verified is decided by the trust policy.",
+  "$defs": {
+    "diagnostic": {
+      "type": "object",
+      "properties": {
+        "severity": {
+          "enum": [
+            "error",
+            "warning",
+            "info"
+          ]
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "endLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "endColumn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "severity",
+        "line",
+        "column",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "decl": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "found": {
+          "type": "boolean"
+        },
+        "kind": {
+          "enum": [
+            "",
+            "axiom",
+            "def",
+            "theorem",
+            "opaque",
+            "quot",
+            "inductive",
+            "constructor",
+            "recursor"
+          ]
+        },
+        "type": {
+          "type": "string"
+        },
+        "axioms": {
+          "$ref": "../common.schema.json#/$defs/axioms"
+        },
+        "usesSorry": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "found"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "ok": {
+      "type": "boolean"
+    },
+    "errors": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "warnings": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/diagnostic"
+      }
+    },
+    "decls": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/decl"
+      }
+    },
+    "elapsedMs": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "ok",
+    "errors",
+    "warnings",
+    "diagnostics",
+    "decls",
+    "elapsedMs"
+  ],
+  "additionalProperties": false
+}

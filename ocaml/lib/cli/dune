@@ -1,0 +1,4 @@
+(library
+ (name maithic_cli)
+ (public_name maithic.cli)
+ (libraries maithic_base maithic_schema maithic_config maithic_bridge maithic_gateway maithic_ledger maithic_prover maithic_oracle maithic_intel maithic_corpus maithic_review maithic_refute maithic_guide maithic_mend maithic_formalize maithic_council maithic_blueprint maithic_lookup maithic_bench maithic_nnv maithic_algolab))

@@ -1,0 +1,190 @@
+# Capability register for P05 AlgoLab.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P05"
+name = "AlgoLab"
+title = "AI-generated algorithm verification laboratory"
+mission = "Verify algorithms: state what correct means as a Lean specification, prove that an implementation meets it, test implementations against reference versions, and have a model draft implementations that are compiled and checked."
+
+[[group]]
+id = "P05-01"
+title = "Specification library"
+language = "Lean"
+path = "lean/Maithic/Algo/Spec/"
+purpose = "Reusable vocabulary for stating what an algorithm must do."
+
+  [[group.capability]]
+  id = "P05-01-01"
+  title = "Sortedness predicate"
+  spec = "`Sorted` for lists and arrays under a decidable order, with basic lemmas."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-01-02"
+  title = "Permutation predicate"
+  spec = "Permutation relation with a count-based characterization."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-01-03"
+  title = "Search specification"
+  spec = "Specification of search results: a valid index holding the target, or proven absence."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+[[group]]
+id = "P05-02"
+title = "Verified searching and sorting"
+language = "Lean"
+path = "lean/Maithic/Algo/Sort/"
+purpose = "Implementations with machine-checked correctness theorems."
+
+  [[group.capability]]
+  id = "P05-02-01"
+  title = "Linear search"
+  spec = "Implementation with proof of correctness."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-02-02"
+  title = "Binary search"
+  spec = "Array binary search with proofs of termination, bounds safety and correctness on sorted input."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-02-03"
+  title = "Insertion sort"
+  spec = "Proof of sortedness and permutation."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-02-04"
+  title = "Merge function"
+  spec = "Verified merge of two sorted lists."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-02-05"
+  title = "Minimum and maximum"
+  spec = "Verified minimum and maximum of nonempty collections."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-02-06"
+  title = "Sorted deduplication"
+  spec = "Verified duplicate removal on sorted input."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+[[group]]
+id = "P05-03"
+title = "Verified graphs and dynamic programming"
+language = "Lean"
+path = "lean/Maithic/Algo/Graph/"
+purpose = "Graph and dynamic-programming algorithms with correctness theorems."
+
+  [[group.capability]]
+  id = "P05-03-01"
+  title = "Memoized Fibonacci"
+  spec = "Verified equivalence of memoized and naive definitions."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+  [[group.capability]]
+  id = "P05-03-02"
+  title = "Prefix sums"
+  spec = "Verified prefix-sum array and range-sum query."
+  status = "done"
+  tests = ["lean/MaithicTest/Algo.lean"]
+
+[[group]]
+id = "P05-04"
+title = "Algorithm synthesis agent"
+language = "OCaml"
+path = "ocaml/lib/algolab/synth/"
+purpose = "Drafts Lean implementations from a task description and iterates until they compile and pass tests."
+
+  [[group.capability]]
+  id = "P05-04-01"
+  title = "Algorithm task intake"
+  spec = "Accept an algorithm request in words with optional signature and constraints."
+  status = "done"
+  tests = ["ocaml/test/test_algolab.ml"]
+
+  [[group.capability]]
+  id = "P05-04-02"
+  title = "Implementation drafting prompt"
+  spec = "Prompt producing a Lean 4 function in the lab style."
+  status = "done"
+  tests = ["ocaml/test/test_algolab.ml"]
+
+  [[group.capability]]
+  id = "P05-04-03"
+  title = "Implementation compile loop"
+  spec = "Compile the draft, feed errors back and iterate within a bound."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_algolab.ml"]
+
+  [[group.capability]]
+  id = "P05-04-04"
+  title = "Example-based check"
+  spec = "Run provided input-output examples through `#eval`."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_algolab.ml"]
+
+  [[group.capability]]
+  id = "P05-04-05"
+  title = "Synthesis record"
+  spec = "Store drafts, errors and the final implementation."
+  status = "done"
+  tests = ["ocaml/test/test_algolab.ml"]
+
+[[group]]
+id = "P05-05"
+title = "Reference implementations and differential testing"
+language = "Julia"
+path = "julia/MaithicAlgoRef/"
+purpose = "Independent implementations and generators that test the Lean code from outside."
+
+  [[group.capability]]
+  id = "P05-05-01"
+  title = "Reference algorithm set"
+  spec = "Julia reference implementations of every starter algorithm."
+  status = "done"
+  tests = ["julia/MaithicAlgoRef/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P05-05-02"
+  title = "Input generators"
+  spec = "Random generators for lists, arrays, graphs and strings with size control."
+  status = "done"
+  tests = ["julia/MaithicAlgoRef/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P05-05-03"
+  title = "Differential runner"
+  spec = "Compare outputs of the compiled Lean implementation with the reference on generated inputs."
+  status = "done"
+  tests = ["julia/MaithicAlgoRef/test/runtests.jl", "ocaml/test/integration/test_integration.ml"]
+
+[[group]]
+id = "P05-06"
+title = "Complexity and performance analytics"
+language = "R"
+path = "r/maithicstats/R/algo-*.R"
+purpose = "Empirical growth analysis and comparison with proven bounds."
+
+  [[group.capability]]
+  id = "P05-06-01"
+  title = "Growth model fitting"
+  spec = "Fit constant, logarithmic, linear, linearithmic and quadratic models."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-algo.R"]

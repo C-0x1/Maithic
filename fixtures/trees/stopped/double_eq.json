@@ -1,0 +1,221 @@
+{
+  "schema": "maithic.prove.search/1",
+  "statement": "theorem double_eq (n : Nat) : double n = 2 * n",
+  "stop": "out of expansions",
+  "expansions": 2,
+  "lean_calls": 2,
+  "tokens": 0,
+  "elapsed_ms": 61,
+  "root": 0,
+  "nodes": [
+    {
+      "id": 0,
+      "depth": 0,
+      "goal": "",
+      "hypotheses": [],
+      "status": "open",
+      "expanded": true,
+      "edges": [
+        {
+          "tactic": "",
+          "prior": 1.0,
+          "outcome": "subgoals",
+          "subgoals": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "parent": 0,
+      "depth": 1,
+      "goal": "double n = 2 * n",
+      "hypotheses": [
+        "n : Nat"
+      ],
+      "status": "open",
+      "expanded": true,
+      "edges": [
+        {
+          "tactic": "rfl",
+          "prior": 0.9,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "Tactic `rfl` failed: The left-hand side\n  double n\nis not definitionally equal to the right-hand side\n  2 * n\n\nn : Nat\n⊢ double n = 2 * n"
+        },
+        {
+          "tactic": "assumption",
+          "prior": 0.9,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "Tactic `assumption` failed\n\nn : Nat\n⊢ double n = 2 * n"
+        },
+        {
+          "tactic": "omega",
+          "prior": 0.8,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b ≥ 0\n  a ≥ 0\n  2*a - b ≥ 1\nwhere\n a := ↑n\n b := ↑(double n)"
+        },
+        {
+          "tactic": "simp",
+          "prior": 0.7,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "`simp` made no progress"
+        },
+        {
+          "tactic": "simp_all",
+          "prior": 0.6,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "simp_all made no progress"
+        },
+        {
+          "tactic": "decide",
+          "prior": 0.5,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "Expected type must not contain free variables\n  double n = 2 * n\n\nHint: Use the `+revert` option to automatically clean up and revert free variables"
+        },
+        {
+          "tactic": "grind",
+          "prior": 0.5,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "`grind` failed\ncase grind\nn : Nat\nh : ¬double n = 2 * n\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] ¬double n = 2 * n\n  [eqc] False propositions\n    [prop] double n = 2 * n\n  [cutsat] Assignment satisfying linear constraints\n    [assign] n := 0\n    [assign] double n := 1"
+        },
+        {
+          "tactic": "induction n",
+          "prior": 0.4,
+          "outcome": "subgoals",
+          "subgoals": [
+            2,
+            3
+          ]
+        },
+        {
+          "tactic": "simp [double]",
+          "prior": 0.5,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "`simp` made no progress"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "depth": 2,
+      "goal": "double 0 = 2 * 0",
+      "hypotheses": [],
+      "status": "proved",
+      "expanded": true,
+      "proved_by": 0,
+      "edges": [
+        {
+          "tactic": "rfl",
+          "prior": 0.9,
+          "outcome": "subgoals",
+          "subgoals": []
+        },
+        {
+          "tactic": "assumption",
+          "prior": 0.9,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "Tactic `assumption` failed\n\ncase zero\n⊢ double 0 = 2 * 0"
+        },
+        {
+          "tactic": "omega",
+          "prior": 0.8,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a ≥ 1\nwhere\n a := ↑(double 0)"
+        },
+        {
+          "tactic": "simp",
+          "prior": 0.7,
+          "outcome": "subgoals",
+          "subgoals": [
+            4
+          ]
+        },
+        {
+          "tactic": "simp_all",
+          "prior": 0.6,
+          "outcome": "subgoals",
+          "subgoals": [
+            5
+          ]
+        },
+        {
+          "tactic": "decide",
+          "prior": 0.5,
+          "outcome": "subgoals",
+          "subgoals": []
+        },
+        {
+          "tactic": "grind",
+          "prior": 0.5,
+          "outcome": "rejected",
+          "error_class": "tactic",
+          "message": "`grind` failed\ncase grind\nh : ¬double 0 = 0\n⊢ False\n[grind] Goal diagnostics\n  [facts] Asserted facts\n    [prop] ¬double 0 = 0\n  [eqc] False propositions\n    [prop] double 0 = 0\n  [cutsat] Assignment satisfying linear constraints\n    [assign] double 0 := 1"
+        },
+        {
+          "tactic": "simp [double]",
+          "prior": 0.5,
+          "outcome": "subgoals",
+          "subgoals": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 1,
+      "depth": 2,
+      "goal": "double (n✝ + 1) = 2 * (n✝ + 1)",
+      "hypotheses": [
+        "n✝ : Nat",
+        "a✝ : double n✝ = 2 * n✝"
+      ],
+      "status": "open",
+      "expanded": false,
+      "edges": []
+    },
+    {
+      "id": 4,
+      "parent": 2,
+      "depth": 3,
+      "goal": "double 0 = 0",
+      "hypotheses": [],
+      "status": "open",
+      "expanded": false,
+      "edges": []
+    },
+    {
+      "id": 5,
+      "parent": 2,
+      "depth": 3,
+      "goal": "double 0 = 0",
+      "hypotheses": [],
+      "status": "open",
+      "expanded": false,
+      "alias_of": 4,
+      "edges": []
+    }
+  ],
+  "steps": [
+    {
+      "node": 1,
+      "started_ms": 0,
+      "elapsed_ms": 25
+    },
+    {
+      "node": 2,
+      "started_ms": 25,
+      "elapsed_ms": 36
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "proved",
+  "certificate": {
+    "schema": "maithic.oracle.certificate/1",
+    "kind": "polynomial.identity",
+    "claim": "∀ a b c d : ℚ, (a ^ 2 + b ^ 2) * (c ^ 2 + d ^ 2) = (a * c - b * d) ^ 2 + (a * d + b * c) ^ 2",
+    "data": {
+      "domain": "rat",
+      "variables": ["a", "b", "c", "d"],
+      "hypotheses": [],
+      "goal": "(a^2 + b^2) * (c^2 + d^2) = (a * c - b * d)^2 + (a * d + b * c)^2",
+      "cofactors": []
+    },
+    "engine": {
+      "name": "MaithicOracle",
+      "version": "0.1.0",
+      "parameters": {}
+    }
+  }
+}

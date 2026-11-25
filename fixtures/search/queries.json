@@ -1,0 +1,138 @@
+{
+  "schema": "maithic.search.queryset/1",
+  "name": "demo",
+  "queries": [
+    {
+      "id": "sorted-output",
+      "text": "the output of sorting is sorted",
+      "relevant": [
+        "Maithic.Algo.sorted_insertionSort"
+      ]
+    },
+    {
+      "id": "perm-of-input",
+      "text": "insertion sort gives a permutation of its input",
+      "relevant": [
+        "Maithic.Algo.insertionSort_perm"
+      ]
+    },
+    {
+      "id": "length",
+      "text": "sorting keeps the length",
+      "relevant": [
+        "Maithic.Algo.length_insertionSort"
+      ]
+    },
+    {
+      "id": "idempotent",
+      "text": "sorting twice is sorting once",
+      "relevant": [
+        {
+          "id": "Maithic.Algo.insertionSort_idem",
+          "grade": 2
+        },
+        "Maithic.Algo.insertionSort_of_sorted"
+      ]
+    },
+    {
+      "id": "already-sorted",
+      "text": "sorting a sorted list changes nothing",
+      "relevant": [
+        {
+          "id": "Maithic.Algo.insertionSort_of_sorted",
+          "grade": 2
+        },
+        "Maithic.Algo.insertionSort_idem"
+      ]
+    },
+    {
+      "id": "search-none",
+      "text": "the search returns none when the target does not occur",
+      "relevant": [
+        "Maithic.Algo.linearSearch_none"
+      ]
+    },
+    {
+      "id": "first-index",
+      "text": "index of the first element equal to the target",
+      "relevant": [
+        {
+          "id": "Maithic.Algo.linearSearch",
+          "grade": 2
+        },
+        "Maithic.Algo.linearSearch_first"
+      ]
+    },
+    {
+      "id": "tail",
+      "text": "the tail of a sorted list",
+      "relevant": [
+        "Maithic.Algo.Sorted.tail"
+      ]
+    },
+    {
+      "id": "sublist",
+      "text": "a sublist of a sorted list is sorted",
+      "relevant": [
+        "Maithic.Algo.Sorted.sublist"
+      ]
+    },
+    {
+      "id": "append",
+      "text": "concatenate two sorted lists",
+      "relevant": [
+        "Maithic.Algo.sorted_append"
+      ]
+    },
+    {
+      "id": "add-comm",
+      "text": "a + b = b + a",
+      "relevant": [
+        "Bad_Name"
+      ]
+    },
+    {
+      "id": "preorder-nat",
+      "text": "TotalPreorder Nat",
+      "relevant": [
+        {
+          "id": "Maithic.Algo.instTotalPreorderNat",
+          "grade": 2
+        },
+        "Maithic.Algo.TotalPreorder"
+      ]
+    },
+    {
+      "id": "by-name",
+      "text": "mem_insertSorted",
+      "relevant": [
+        "Maithic.Algo.mem_insertSorted"
+      ]
+    },
+    {
+      "id": "double",
+      "text": "doubles a number",
+      "relevant": [
+        {
+          "id": "double",
+          "grade": 2
+        },
+        "double_eq"
+      ]
+    },
+    {
+      "id": "point",
+      "text": "a point in space",
+      "relevant": [
+        "Point3"
+      ]
+    },
+    {
+      "id": "head",
+      "text": "the head of a sorted list is at most every later element",
+      "relevant": [
+        "Maithic.Algo.Sorted.head_le"
+      ]
+    }
+  ]
+}

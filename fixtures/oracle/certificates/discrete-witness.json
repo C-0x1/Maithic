@@ -1,0 +1,16 @@
+{
+  "schema": "maithic.oracle.certificate/1",
+  "kind": "discrete.witness",
+  "claim": "∃ x y : ℤ, x ^ 3 + y ^ 3 = 1729 ∧ 0 < x ∧ x < 9 ∧ x < y",
+  "data": {
+    "domain": "int",
+    "variables": ["x", "y"],
+    "conditions": ["x^3 + y^3 = 1729", "0 < x", "x < 9", "x < y"],
+    "values": ["1", "12"]
+  },
+  "engine": {
+    "name": "MaithicOracle",
+    "version": "0.1.0",
+    "parameters": {}
+  }
+}

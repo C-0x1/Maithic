@@ -1,0 +1,20 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "xai-bad-request",
+  "provider": "xai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "api": "responses",
+  "status": 400,
+  "headers": {},
+  "body": {
+    "error": {
+      "message": "guidelines cannot be applied to this model",
+      "type": "invalid_request_error",
+      "code": "invalid_request"
+    }
+  },
+  "expect": {
+    "error": "invalid_request"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Measures of a code graph",
+  "description": "What the shape of a code graph says: how many declarations and uses edges there are, the sizes of the weak components, and for every declaration of the scanned files how many declarations use it, how many it uses, its PageRank with weight flowing from a declaration to what it uses, and its betweenness. Declarations are listed by rank, highest first.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.intel.metrics/1"
+    },
+    "nodes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "internal": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "edges": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "components": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sizes": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "required": [
+        "count",
+        "sizes"
+      ],
+      "additionalProperties": false
+    },
+    "declarations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string"
+          },
+          "usedBy": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "uses": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pagerank": {
+            "type": "number",
+            "minimum": 0
+          },
+          "betweenness": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "name",
+          "kind",
+          "usedBy",
+          "uses",
+          "pagerank",
+          "betweenness"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "nodes",
+    "internal",
+    "edges",
+    "components",
+    "declarations"
+  ],
+  "additionalProperties": false
+}

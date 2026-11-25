@@ -1,0 +1,41 @@
+# Copyright (c) 2026 The Maithic Authors. Apache-2.0; see LICENSE.
+
+test_that("distribution summaries report quantiles and say when there is nothing", {
+  summary <- distribution_summary(c(1, 2, 3, 4, 100, NA))
+  expect_equal(names(summary), c("n", "median", "p90", "p99", "mean", "max"))
+  expect_equal(summary$n, 5)
+  expect_equal(summary$median, 3)
+  expect_equal(summary$mean, 22)
+  expect_equal(summary$max, 100)
+  expect_equal(summary$p90, unname(quantile(c(1, 2, 3, 4, 100), 0.9)))
+  expect_equal(names(distribution_summary(1:10, probs = c(0.5, 0.75))), c("n", "median", "p50", "p75", "mean", "max"))
+  empty <- distribution_summary(numeric())
+  expect_equal(empty$n, 0)
+  expect_true(all(is.na(empty[c("median", "p90", "mean", "max")])))
+  expect_error(distribution_summary("a"), "numeric")
+  expect_error(distribution_summary(1:3, probs = 1), "between 0 and 1")
+})
+
+test_that("Markdown tables align numbers, write shares as percentages and escape bars", {
+  data <- data.frame(name = c("a|b", "c"), n = c(1200, 3), rate = c(0.5, 1 / 3), ms = c(12.5, 2.25), ok = c(TRUE, NA), stringsAsFactors = FALSE)
+  lines <- markdown_table(data, digits = 2, percent = "rate", labels = c(name = "Name", n = "Count"))
+  expect_equal(lines[1], "| Name | Count | rate | ms | ok |")
+  expect_equal(lines[2], "| --- | ---: | ---: | ---: | --- |")
+  expect_equal(lines[3], "| a\\|b | 1,200 | 50.0% | 12.5 | yes |")
+  expect_equal(lines[4], "| c | 3 | 33.3% | 2.25 |  |")
+  data$tags <- list(c("x", "y"), character())
+  expect_equal(markdown_table(data["tags"])[3:4], c("| x, y |", "|  |"))
+  expect_equal(markdown_table(data.frame(a = c(100, 0.125, NA)))[3:5], c("| 100 |", "| 0.125 |", "|  |"))
+  expect_equal(length(markdown_table(data[0, ])), 2)
+  expect_error(markdown_table(list(a = 1)), "data frame")
+  expect_error(markdown_table(data, percent = "missing"), "no column named 'missing'")
+})
+
+test_that("groups are ordered the same way in every locale", {
+  data <- data.frame(group = c("b", "A", "a", "B", "a"), value = 1:5, stringsAsFactors = FALSE)
+  out <- maithicstats:::summarise_groups(data, "group", function(rows) data.frame(total = sum(rows$value)))
+  expect_equal(out$group, c("A", "B", "a", "b"))
+  expect_equal(out$total, c(2, 4, 8, 1))
+  expect_equal(names(maithicstats:::count_values(c("b", "a", "B", "a", "b", NA))), c("a", "b", "B"))
+  expect_error(maithicstats:::summarise_groups(data, "missing", nrow), "no column named 'missing'")
+})

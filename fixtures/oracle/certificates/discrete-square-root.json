@@ -1,0 +1,15 @@
+{
+  "schema": "maithic.oracle.certificate/1",
+  "kind": "discrete.square_root",
+  "claim": "659791110852991619 ^ 2 ≡ 5 [ZMOD 2305843009213693951]",
+  "data": {
+    "a": "5",
+    "modulus": "2305843009213693951",
+    "root": "659791110852991619"
+  },
+  "engine": {
+    "name": "MaithicOracle",
+    "version": "0.1.0",
+    "parameters": {}
+  }
+}

@@ -1,0 +1,379 @@
+# Capability register for P09 Bridge.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P09"
+name = "Bridge"
+title = "Lean interaction engine and verification sandbox"
+mission = "Give every other component one fast, safe, typed way to talk to Lean: load environments, elaborate commands, step through proofs tactic by tactic, snapshot and restore states, and do all of it inside a sandbox."
+
+[[group]]
+id = "P09-01"
+title = "Bridge server"
+language = "Lean"
+path = "lean/MaithicBridge/Server/"
+purpose = "The Lean-side process that executes requests."
+
+  [[group.capability]]
+  id = "P09-01-01"
+  title = "Server executable"
+  spec = "`lake exe maithic-bridge` reads JSON requests on standard input and writes responses on standard output."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-02"
+  title = "Request loop"
+  spec = "Line-delimited JSON-RPC 2.0 handling with correlated responses."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-03"
+  title = "Load-header request"
+  spec = "Import a list of modules and create a base environment."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-04"
+  title = "Run-command request"
+  spec = "Elaborate one or more commands in an environment and return messages."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-05"
+  title = "Start-proof request"
+  spec = "Open a goal from a theorem statement or from a `sorry` position."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-06"
+  title = "Run-tactic request"
+  spec = "Apply a tactic to a proof state and return the new state or a typed error."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean", "ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P09-01-07"
+  title = "Get-state request"
+  spec = "Return the goals of a stored proof state."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-08"
+  title = "Version handshake"
+  spec = "Report server version, Lean version and capabilities."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-09"
+  title = "State store"
+  spec = "In-memory table of environments and proof states with identifiers."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-10"
+  title = "Whole-file check request"
+  spec = "Elaborate a file's text and return diagnostics and unfinished proofs."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-11"
+  title = "Goal selection"
+  spec = "Run a tactic on a chosen goal of a state."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-12"
+  title = "Tactic batch request"
+  spec = "Try many tactics on one state and return all outcomes."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-13"
+  title = "Release-state request"
+  spec = "Free stored states."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-14"
+  title = "Typed error returns"
+  spec = "Error codes and structured fields instead of free text."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-15"
+  title = "Server shutdown"
+  spec = "Clean shutdown on request or end of input."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-16"
+  title = "Server self-test"
+  spec = "Request that exercises core functions and reports health."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-01-17"
+  title = "Server test suite"
+  spec = "Scripted request files with expected responses."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+[[group]]
+id = "P09-02"
+title = "Proof-state serialization"
+language = "Lean"
+path = "lean/MaithicBridge/Serialize/"
+purpose = "Turns Lean's internal state into stable, structured data."
+
+  [[group.capability]]
+  id = "P09-02-01"
+  title = "Goal serialization"
+  spec = "Hypotheses and target as pretty-printed strings."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-02-02"
+  title = "Goal identifiers"
+  spec = "Stable goal identifiers within a state."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-02-03"
+  title = "Message serialization"
+  spec = "Severity, position and text of diagnostics."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-02-04"
+  title = "Protocol JSON instances"
+  spec = "`ToJson` and `FromJson` for all protocol types."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-02-05"
+  title = "Serialization schema tests"
+  spec = "Outputs validate against the shared schema."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-02-06"
+  title = "Goal tags"
+  spec = "Case names and tags of goals."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-02-07"
+  title = "Safe string escaping"
+  spec = "Correct escaping of every string."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-02-08"
+  title = "Serialization round-trip tests"
+  spec = "Encode and decode identity tests."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+[[group]]
+id = "P09-03"
+title = "Environment management and snapshots"
+language = "Lean"
+path = "lean/MaithicBridge/Env/"
+purpose = "Keeps environments and proof states cheap to create, copy and restore."
+
+  [[group.capability]]
+  id = "P09-03-01"
+  title = "Module import resolution"
+  spec = "Resolve module names through the project's search path."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-03-02"
+  title = "Base environment cache"
+  spec = "Keep loaded import sets in memory, keyed by header."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-03-03"
+  title = "Derived environments"
+  spec = "Derive child environments from parents without mutating them."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-03-04"
+  title = "State snapshots"
+  spec = "Snapshot proof states for backtracking."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-03-05"
+  title = "Environment disposal"
+  spec = "Release environments explicitly."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-03-06"
+  title = "Environment tests"
+  spec = "Tests of creation, derivation and disposal."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-03-07"
+  title = "Header deduplication"
+  spec = "Reuse environments for identical import lists."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+  [[group.capability]]
+  id = "P09-03-08"
+  title = "Environment diff"
+  spec = "Declarations added by a command sequence."
+  status = "done"
+  tests = ["lean/MaithicTest/Bridge.lean"]
+
+[[group]]
+id = "P09-04"
+title = "Protocol and client library"
+language = "OCaml"
+path = "ocaml/lib/bridge/client/"
+purpose = "The typed OCaml interface used by every other component."
+
+  [[group.capability]]
+  id = "P09-04-01"
+  title = "Protocol types"
+  spec = "OCaml types for every request and response."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-04-02"
+  title = "Protocol codecs"
+  spec = "JSON encoders and decoders with schema tests."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-04-03"
+  title = "Process spawn"
+  spec = "Start a bridge process with `lake env` in a project directory."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P09-04-04"
+  title = "Request correlation"
+  spec = "Match responses to requests by identifier."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-04-05"
+  title = "Typed client functions"
+  spec = "One function per request."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-04-06"
+  title = "Client timeouts"
+  spec = "Per-call deadlines."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-04-07"
+  title = "Bridge error type"
+  spec = "Sum type of protocol, process and Lean errors."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-04-08"
+  title = "Stub-server tests"
+  spec = "Client tests against a scripted stub."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_bridge.ml"]
+
+[[group]]
+id = "P09-05"
+title = "Sandbox and resource control"
+language = "OCaml"
+path = "ocaml/lib/bridge/sandbox/"
+purpose = "Contains Lean code written by models or taken from untrusted repositories."
+
+  [[group.capability]]
+  id = "P09-05-01"
+  title = "Wall-clock limit"
+  spec = "Kill processes that exceed time limits."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-05-02"
+  title = "Environment scrubbing"
+  spec = "Pass only allowlisted environment variables and never any API key."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]
+
+  [[group.capability]]
+  id = "P09-05-03"
+  title = "Isolation capability report"
+  spec = "`maithic doctor` reports which isolation features are active."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P09-05-04"
+  title = "Elaborator limits"
+  spec = "Heartbeat and recursion-depth limits."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P09-05-05"
+  title = "Construct screening"
+  spec = "Flag `IO` actions, side-effecting `#eval`, `run_cmd`, foreign functions and `initialize` in untrusted input."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_bridge.ml"]
+
+[[group]]
+id = "P09-06"
+title = "Project and toolchain management"
+language = "OCaml"
+path = "ocaml/lib/bridge/project/"
+purpose = "Finds, builds and prepares the Lean projects the bridge works in."
+
+  [[group.capability]]
+  id = "P09-06-01"
+  title = "Project detection"
+  spec = "Find the Lake project root and manifest."
+  status = "done"
+  tests = ["ocaml/test/test_bridge.ml"]

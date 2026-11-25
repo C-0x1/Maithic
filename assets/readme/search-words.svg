@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 482" role="img" aria-labelledby="search-words-t search-words-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="search-words-t">How names, notation and prose become the same words</title>
+  <desc id="search-words-d">A table of six rows. The name Nat.add_comm becomes the words nat, add, comm. The statement a + b = b + a becomes add, eq, add: notation is called what Lean's lemma names call it, and single letters, which are variables, are dropped. The name insertionSort becomes insertion, sort. x ∈ xs ++ ys becomes mem, xs, append, ys. The sentence addition is commutative becomes add, comm. The query sorting keeps the elements becomes sort, keeps, mem.</desc>
+  <rect width="960" height="482" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="880.0" height="32.0" rx="8" fill="#2B2F77"/>
+  <rect x="40.0" y="128.0" width="880.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="196.0" width="880.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="264.0" width="880.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="331.0" width="880.0" height="1.5" rx="0" fill="#C9CCE8"/>
+  <rect x="40.0" y="350.0" width="880.0" height="102.0" rx="10" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="554.3" lengthAdjust="spacingAndGlyphs">A name, a formula and a sentence, in one vocabulary</text>
+  <text x="40.0" y="69.0" font-size="14" fill="#5B6477" textLength="429.2" lengthAdjust="spacingAndGlyphs">Why the query add comm finds Nat.add_comm, and a + b = b + a too</text>
+  <text x="451.5" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="55.6" lengthAdjust="spacingAndGlyphs">What it is</text>
+  <text x="741.5" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="131.3" lengthAdjust="spacingAndGlyphs">The words it becomes</text>
+  <text x="54.0" y="149.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.3" lengthAdjust="spacingAndGlyphs">Nat.add_comm</text>
+  <text x="451.5" y="149.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="40.0" lengthAdjust="spacingAndGlyphs">a name</text>
+  <text x="741.5" y="149.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="76.0" lengthAdjust="spacingAndGlyphs">nat  add  comm</text>
+  <text x="54.0" y="183.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="97.8" lengthAdjust="spacingAndGlyphs">a + b = b + a</text>
+  <text x="451.5" y="183.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="62.7" lengthAdjust="spacingAndGlyphs">a statement</text>
+  <text x="741.5" y="183.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="60.1" lengthAdjust="spacingAndGlyphs">add  eq  add</text>
+  <text x="54.0" y="217.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="97.8" lengthAdjust="spacingAndGlyphs">insertionSort</text>
+  <text x="451.5" y="217.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="40.0" lengthAdjust="spacingAndGlyphs">a name</text>
+  <text x="741.5" y="217.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="68.7" lengthAdjust="spacingAndGlyphs">insertion  sort</text>
+  <text x="54.0" y="251.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="90.3" lengthAdjust="spacingAndGlyphs">x ∈ xs ++ ys</text>
+  <text x="451.5" y="251.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="62.7" lengthAdjust="spacingAndGlyphs">a statement</text>
+  <text x="741.5" y="251.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="100.7" lengthAdjust="spacingAndGlyphs">mem  xs  append  ys</text>
+  <text x="54.0" y="285.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="173.1" lengthAdjust="spacingAndGlyphs">addition is commutative</text>
+  <text x="451.5" y="285.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="40.0" lengthAdjust="spacingAndGlyphs">a query</text>
+  <text x="741.5" y="285.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="56.0" lengthAdjust="spacingAndGlyphs">add  comm</text>
+  <text x="54.0" y="319.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="195.6" lengthAdjust="spacingAndGlyphs">sorting keeps the elements</text>
+  <text x="451.5" y="319.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="40.0" lengthAdjust="spacingAndGlyphs">a query</text>
+  <text x="741.5" y="319.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="85.4" lengthAdjust="spacingAndGlyphs">sort  keeps  mem</text>
+  <text x="56.0" y="375.0" font-size="13" fill="#14162B" textLength="737.8" lengthAdjust="spacingAndGlyphs">A name is taken apart at its dots and underscores, and where a small letter meets a capital. Notation is called what the names of</text>
+  <text x="56.0" y="393.0" font-size="13" fill="#14162B" textLength="367.8" lengthAdjust="spacingAndGlyphs">Lean's lemmas call it: + is add, = is eq, ∈ is mem, ++ is append.</text>
+  <text x="56.0" y="417.0" font-size="13" fill="#14162B" textLength="726.8" lengthAdjust="spacingAndGlyphs">Single letters are variables and say nothing about what a statement is about, so they are dropped. In a query, words that name</text>
+  <text x="56.0" y="435.0" font-size="13" fill="#14162B" textLength="462.5" lengthAdjust="spacingAndGlyphs">an operation are replaced by its name, and words such as the and is are left out.</text>
+</svg>

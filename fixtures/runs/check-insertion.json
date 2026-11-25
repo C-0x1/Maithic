@@ -1,0 +1,91 @@
+{
+  "schema": "maithic.check.report/1",
+  "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+  "ok": true,
+  "errors": 0,
+  "warnings": 0,
+  "declarations": 11,
+  "theorems": [
+    {
+      "name": "Maithic.Algo.insertSorted_perm",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] (x : α) (l : List α),\n  (Maithic.Algo.insertSorted x l).Perm (x :: l)",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_idem",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] [Maithic.Algo.TotalPreorder α] (l : List α),\n  Maithic.Algo.insertionSort (Maithic.Algo.insertionSort l) = Maithic.Algo.insertionSort l",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_of_sorted",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {l : List α},\n  Maithic.Algo.Sorted l → Maithic.Algo.insertionSort l = l",
+      "status": "verified",
+      "axioms": [
+        "propext"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.insertionSort_perm",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] (l : List α),\n  (Maithic.Algo.insertionSort l).Perm l",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.length_insertionSort",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] (l : List α),\n  (Maithic.Algo.insertionSort l).length = l.length",
+      "status": "verified",
+      "axioms": [
+        "propext"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.mem_insertSorted",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {x z : α} {l : List α},\n  z ∈ Maithic.Algo.insertSorted x l ↔ z = x ∨ z ∈ l",
+      "status": "verified",
+      "axioms": [
+        "propext"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.mem_insertionSort",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {x : α} {l : List α},\n  x ∈ Maithic.Algo.insertionSort l ↔ x ∈ l",
+      "status": "verified",
+      "axioms": [
+        "propext"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.sorted_insertSorted",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] [Maithic.Algo.TotalPreorder α] (x : α)\n  {l : List α}, Maithic.Algo.Sorted l → Maithic.Algo.Sorted (Maithic.Algo.insertSorted x l)",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Algo.sorted_insertionSort",
+      "statement": "∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] [Maithic.Algo.TotalPreorder α] (l : List α),\n  Maithic.Algo.Sorted (Maithic.Algo.insertionSort l)",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    }
+  ],
+  "diagnostics": []
+}

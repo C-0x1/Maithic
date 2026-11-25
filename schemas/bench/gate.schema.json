@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Regression gate",
+  "description": "The verdicts of the regression gate: each suite of a run, held against its baseline. regressions are the problems the baseline verified and the run did not; improvements the reverse; missing the problems of the baseline that the run does not have; added the problems the baseline does not have. time_ratio and attempts_ratio compare the run with the baseline over the problems both verified, and are absent when there is nothing to compare. A suite passes when no threshold is broken; reasons say which were.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.bench.gate/1"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "max_regressions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min_rate": {
+          "type": "number"
+        },
+        "max_slowdown": {
+          "type": "number"
+        },
+        "max_attempts_ratio": {
+          "type": "number"
+        },
+        "allow_missing": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "max_regressions",
+        "min_rate",
+        "max_slowdown",
+        "max_attempts_ratio",
+        "allow_missing"
+      ]
+    },
+    "suites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suite": {
+            "type": "string"
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "regressions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "improvements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "missing": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "added": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "baseline": {
+            "type": "object",
+            "properties": {
+              "verified": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "total": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "verified",
+              "total"
+            ]
+          },
+          "run": {
+            "type": "object",
+            "properties": {
+              "verified": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "total": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "verified",
+              "total"
+            ]
+          },
+          "time_ratio": {
+            "type": "number"
+          },
+          "attempts_ratio": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "suite",
+          "passed",
+          "reasons",
+          "regressions",
+          "improvements",
+          "missing",
+          "added",
+          "baseline",
+          "run"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "passed",
+    "thresholds",
+    "suites"
+  ]
+}

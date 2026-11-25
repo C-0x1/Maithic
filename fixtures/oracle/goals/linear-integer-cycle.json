@@ -1,0 +1,21 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "linear",
+  "domain": "int",
+  "variables": ["x", "y", "z"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "x - y < 3"
+    },
+    {
+      "name": "h2",
+      "statement": "y - z < -1"
+    },
+    {
+      "name": "h3",
+      "statement": "z - x <= -1"
+    }
+  ],
+  "goal": "false"
+}

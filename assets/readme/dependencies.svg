@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 384" role="img" aria-labelledby="dependencies-t dependencies-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="dependencies-t">What the repository depends on</title>
+  <desc id="dependencies-d">Four tiles. OCaml: the standard library and unix, and nothing else. Lean: core Lean only, with no Mathlib and no other package. Julia: the standard library; the eight packages use each other by path. R: jsonlite to read, ggplot2 and svglite to draw, testthat to test.</desc>
+  <rect width="960" height="384" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="209.5" height="138.0" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+  <rect x="263.5" y="96.0" width="209.5" height="138.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="487.0" y="96.0" width="209.5" height="138.0" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+  <rect x="710.5" y="96.0" width="209.5" height="138.0" rx="10" fill="#FFFFFF" stroke="#276DC3" stroke-width="1.5"/>
+  <rect x="40.0" y="252.0" width="880.0" height="102.0" rx="10" fill="#E8E9F3"/>
+  <rect x="40.0" y="96.0" width="7.0" height="138.0" rx="3" fill="#EC6813"/>
+  <rect x="263.5" y="96.0" width="7.0" height="138.0" rx="3" fill="#2B2F77"/>
+  <rect x="487.0" y="96.0" width="7.0" height="138.0" rx="3" fill="#9558B2"/>
+  <rect x="710.5" y="96.0" width="7.0" height="138.0" rx="3" fill="#276DC3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="632.0" lengthAdjust="spacingAndGlyphs">Four toolchains, four R packages, and nothing else to install</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="235.7" lengthAdjust="spacingAndGlyphs">docs/adr/0001  ·  docs/adr/0005</text>
+  <text x="60.0" y="125.0" font-size="19" fill="#EC6813" font-weight="700" textLength="61.2" lengthAdjust="spacingAndGlyphs">OCaml</text>
+  <text x="60.0" y="147.0" font-size="12.5" fill="#14162B" textLength="135.5" lengthAdjust="spacingAndGlyphs">The standard library and</text>
+  <text x="60.0" y="164.0" font-size="12.5" fill="#14162B" textLength="165.6" lengthAdjust="spacingAndGlyphs">unix. JSON, TOML, SHA-256,</text>
+  <text x="60.0" y="181.0" font-size="12.5" fill="#14162B" textLength="150.5" lengthAdjust="spacingAndGlyphs">HTTP through curl, and the</text>
+  <text x="60.0" y="198.0" font-size="12.5" fill="#14162B" textLength="137.6" lengthAdjust="spacingAndGlyphs">test framework are in the</text>
+  <text x="60.0" y="215.0" font-size="12.5" fill="#14162B" textLength="57.4" lengthAdjust="spacingAndGlyphs">repository.</text>
+  <text x="283.5" y="125.0" font-size="19" fill="#2B2F77" font-weight="700" textLength="44.3" lengthAdjust="spacingAndGlyphs">Lean</text>
+  <text x="283.5" y="147.0" font-size="12.5" fill="#14162B" textLength="150.5" lengthAdjust="spacingAndGlyphs">Core Lean only. No Mathlib</text>
+  <text x="283.5" y="164.0" font-size="12.5" fill="#14162B" textLength="145.3" lengthAdjust="spacingAndGlyphs">and no other package: the</text>
+  <text x="283.5" y="181.0" font-size="12.5" fill="#14162B" textLength="137.6" lengthAdjust="spacingAndGlyphs">Lake manifest lists none.</text>
+  <text x="507.0" y="125.0" font-size="19" fill="#9558B2" font-weight="700" textLength="43.3" lengthAdjust="spacingAndGlyphs">Julia</text>
+  <text x="507.0" y="147.0" font-size="12.5" fill="#14162B" textLength="138.5" lengthAdjust="spacingAndGlyphs">The standard library. The</text>
+  <text x="507.0" y="164.0" font-size="12.5" fill="#14162B" textLength="138.3" lengthAdjust="spacingAndGlyphs">eight packages use each</text>
+  <text x="507.0" y="181.0" font-size="12.5" fill="#14162B" textLength="118.2" lengthAdjust="spacingAndGlyphs">other by path, and no</text>
+  <text x="507.0" y="198.0" font-size="12.5" fill="#14162B" textLength="114.6" lengthAdjust="spacingAndGlyphs">registry is contacted.</text>
+  <text x="730.5" y="125.0" font-size="19" fill="#276DC3" font-weight="700" textLength="13.7" lengthAdjust="spacingAndGlyphs">R</text>
+  <text x="730.5" y="147.0" font-size="12.5" fill="#14162B" textLength="129.3" lengthAdjust="spacingAndGlyphs">jsonlite to read, ggplot2</text>
+  <text x="730.5" y="164.0" font-size="12.5" fill="#14162B" textLength="107.0" lengthAdjust="spacingAndGlyphs">and svglite to draw,</text>
+  <text x="730.5" y="181.0" font-size="12.5" fill="#14162B" textLength="82.0" lengthAdjust="spacingAndGlyphs">testthat to test.</text>
+  <text x="56.0" y="277.0" font-size="13" fill="#14162B" textLength="723.4" lengthAdjust="spacingAndGlyphs">Every dependency is a registry that must be reachable when the tests run, a version that can change under a result, and code</text>
+  <text x="56.0" y="295.0" font-size="13" fill="#14162B" textLength="723.4" lengthAdjust="spacingAndGlyphs">between a number and its reader. Fewer of them means that a check made today can be repeated on another machine, years</text>
+  <text x="56.0" y="313.0" font-size="13" fill="#14162B" textLength="56.4" lengthAdjust="spacingAndGlyphs">from now.</text>
+  <text x="56.0" y="337.0" font-size="13" fill="#14162B" textLength="492.1" lengthAdjust="spacingAndGlyphs">Live model calls use the curl command, which the key is handed to on standard input.</text>
+</svg>

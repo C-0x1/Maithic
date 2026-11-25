@@ -1,0 +1,15 @@
+# Line endings
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+
+# Data and documentation are not counted as code by the language bar or by
+# the language-share gate.
+registry/** linguist-generated
+fixtures/** linguist-vendored
+assets/** linguist-documentation
+docs/** linguist-documentation
+bench/results/** linguist-generated
+bench/suites/** linguist-generated

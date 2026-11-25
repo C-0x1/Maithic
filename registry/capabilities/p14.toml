@@ -1,0 +1,169 @@
+# Capability register for P14 Refute.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P14"
+name = "Refute"
+title = "Refutation and conjecture laboratory"
+mission = "Before spending effort proving a statement, try to break it: search for counterexamples and detect vacuous or contradictory hypotheses."
+
+[[group]]
+id = "P14-01"
+title = "Property-based testing in Lean"
+language = "Lean"
+path = "lean/Maithic/Refute/Testing/"
+purpose = "Random and exhaustive testing of statements inside Lean."
+
+  [[group.capability]]
+  id = "P14-01-01"
+  title = "Testable class"
+  spec = "Type class for statements that can be tested by sampling."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-02"
+  title = "Generator class"
+  spec = "Type class for random generation of values with size control."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-03"
+  title = "Shrinking class"
+  spec = "Type class for shrinking failing values to smaller ones."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-04"
+  title = "Test runner command"
+  spec = "`#maithic_test` tests a statement and reports a counterexample or the number of passing cases."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-05"
+  title = "Base generators"
+  spec = "Generators for naturals, integers, rationals, booleans, lists, arrays, options and products."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-06"
+  title = "Seeded testing"
+  spec = "Reproducible runs by seed."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-07"
+  title = "Counterexample output"
+  spec = "Structured counterexample with variable assignments."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-08"
+  title = "Precondition handling"
+  spec = "Discard cases failing hypotheses, with a discard limit and report."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-09"
+  title = "Testing tactic"
+  spec = "Tactic that tests the current goal and fails with a counterexample."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-01-10"
+  title = "Test budget options"
+  spec = "Options for case count and size."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+[[group]]
+id = "P14-02"
+title = "Counterexample search orchestration"
+language = "OCaml"
+path = "ocaml/lib/refute/search/"
+purpose = "Runs every refutation method and confirms results in Lean."
+
+  [[group.capability]]
+  id = "P14-02-01"
+  title = "Witness verification"
+  spec = "Confirm each candidate counterexample by compiling a Lean refutation."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_refute.ml"]
+
+  [[group.capability]]
+  id = "P14-02-02"
+  title = "Refute command"
+  spec = "`maithic refute` with budgets and method selection."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_refute.ml"]
+
+[[group]]
+id = "P14-03"
+title = "Vacuity and consistency checks"
+language = "Lean"
+path = "lean/Maithic/Refute/Vacuity/"
+purpose = "Detects statements that are true for the wrong reasons."
+
+  [[group.capability]]
+  id = "P14-03-01"
+  title = "Contradictory-hypothesis check"
+  spec = "Try to derive `False` from the hypotheses with bounded automation."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-03-02"
+  title = "Vacuity command"
+  spec = "`#maithic_vacuous` reports whether a statement's hypotheses are contradictory."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-03-03"
+  title = "Trivial-conclusion check"
+  spec = "Detect conclusions provable without any hypothesis."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-03-04"
+  title = "Unused-hypothesis report"
+  spec = "Hypotheses not needed by a given proof."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-03-05"
+  title = "Hypothesis-drop variants"
+  spec = "Generate the statement with each hypothesis removed."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-03-06"
+  title = "Empty-domain check"
+  spec = "Detect quantification over types or sets that are empty."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-03-07"
+  title = "Vacuity result output"
+  spec = "Structured result with the derivation found."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]
+
+  [[group.capability]]
+  id = "P14-03-08"
+  title = "Vacuity tests"
+  spec = "`#guard_msgs` tests on vacuous and sound fixtures."
+  status = "done"
+  tests = ["lean/MaithicTest/Refute.lean"]

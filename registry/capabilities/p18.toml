@@ -1,0 +1,190 @@
+# Capability register for P18 Ledger.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P18"
+name = "Ledger"
+title = "Trust ledger and proof certificates"
+mission = "Make every \"verified\" result checkable: record exactly what was proved, on which axioms and under which trust policy, and re-check it in a fresh process."
+
+[[group]]
+id = "P18-01"
+title = "Axiom and trust audit"
+language = "Lean"
+path = "lean/Maithic/Audit/"
+purpose = "Inspects a declaration for everything that could weaken what \"proved\" means."
+
+  [[group.capability]]
+  id = "P18-01-01"
+  title = "Axiom collection"
+  spec = "List all axioms a declaration depends on, transitively."
+  status = "done"
+  tests = ["lean/MaithicTest/Audit.lean"]
+
+  [[group.capability]]
+  id = "P18-01-02"
+  title = "Sorry detection"
+  spec = "Detect dependence on `sorryAx` anywhere in the dependency closure."
+  status = "done"
+  tests = ["lean/MaithicTest/Audit.lean"]
+
+  [[group.capability]]
+  id = "P18-01-03"
+  title = "Standard-axiom classification"
+  spec = "Classify axioms as standard (propositional extensionality, quotient soundness, choice) or other."
+  status = "done"
+  tests = ["lean/MaithicTest/Audit.lean"]
+
+  [[group.capability]]
+  id = "P18-01-04"
+  title = "Audit command"
+  spec = "`#maithic_audit` prints the audit of a declaration."
+  status = "done"
+  tests = ["lean/MaithicTest/Audit.lean"]
+
+  [[group.capability]]
+  id = "P18-01-05"
+  title = "Native-evaluation detection"
+  spec = "Detect reliance on compiled evaluation such as `native_decide`."
+  status = "done"
+  tests = ["lean/MaithicTest/Audit.lean"]
+
+  [[group.capability]]
+  id = "P18-01-06"
+  title = "Audit tests"
+  spec = "Positive and negative fixtures for each rule."
+  status = "done"
+  tests = ["lean/MaithicTest/Audit.lean"]
+
+[[group]]
+id = "P18-02"
+title = "Independent re-checking"
+language = "OCaml"
+path = "ocaml/lib/ledger/recheck/"
+purpose = "Checks a result again, separately from the process that produced it."
+
+  [[group.capability]]
+  id = "P18-02-01"
+  title = "Fresh-process re-check"
+  spec = "Re-elaborate the theorem file in a new sandboxed process from imports only."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P18-02-02"
+  title = "Re-check isolation"
+  spec = "Re-checks never reuse the producing session's state."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+[[group]]
+id = "P18-03"
+title = "Trust policy and compliance"
+language = "OCaml"
+path = "ocaml/lib/ledger/policy/"
+purpose = "Decides what counts as acceptable evidence in a given project."
+
+  [[group.capability]]
+  id = "P18-03-01"
+  title = "Allowed-axiom policy"
+  spec = "The list of axioms a certificate may depend on."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_ledger.ml"]
+
+  [[group.capability]]
+  id = "P18-03-02"
+  title = "Required re-check policy"
+  spec = "Which re-checks must pass."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_ledger.ml"]
+
+  [[group.capability]]
+  id = "P18-03-03"
+  title = "Policy evaluation"
+  spec = "Evaluate a certificate against a policy."
+  status = "done"
+  tests = ["ocaml/test/test_ledger.ml"]
+
+  [[group.capability]]
+  id = "P18-03-04"
+  title = "Policy decision record"
+  spec = "Decision with reasons."
+  status = "done"
+  tests = ["ocaml/test/test_ledger.ml"]
+
+  [[group.capability]]
+  id = "P18-03-05"
+  title = "Default policy"
+  spec = "Strict defaults: standard axioms only, fresh-process re-check required."
+  status = "done"
+  tests = ["ocaml/test/test_ledger.ml"]
+
+  [[group.capability]]
+  id = "P18-03-06"
+  title = "Trust policy tests"
+  spec = "Fixture policies and certificates with expected decisions."
+  status = "done"
+  tests = ["ocaml/test/test_ledger.ml"]
+
+[[group]]
+id = "P18-04"
+title = "Trust analytics and reporting"
+language = "R"
+path = "r/maithicstats/R/ledger-*.R"
+purpose = "Summarizes what the evidence says across a project."
+
+  [[group.capability]]
+  id = "P18-04-01"
+  title = "Certificate import"
+  spec = "Load certificate and audit data."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-ledger.R"]
+
+  [[group.capability]]
+  id = "P18-04-02"
+  title = "Trust level distribution"
+  spec = "Share of results at each trust level."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-ledger.R"]
+
+  [[group.capability]]
+  id = "P18-04-03"
+  title = "Certificate axiom census"
+  spec = "Axioms used and by how many results."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-ledger.R"]
+
+  [[group.capability]]
+  id = "P18-04-04"
+  title = "Re-check agreement"
+  spec = "Agreement rates among checkers."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-ledger.R"]
+
+  [[group.capability]]
+  id = "P18-04-05"
+  title = "Re-check time summary"
+  spec = "Time per re-check."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-ledger.R"]
+
+  [[group.capability]]
+  id = "P18-04-06"
+  title = "Policy decision summary"
+  spec = "Passed, failed and waived."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-ledger.R"]
+
+  [[group.capability]]
+  id = "P18-04-07"
+  title = "Ledger plots"
+  spec = "Plot functions for the summaries."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-report-figures.R"]
+
+  [[group.capability]]
+  id = "P18-04-08"
+  title = "Ledger report table"
+  spec = "Summary table for reports."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-ledger.R"]

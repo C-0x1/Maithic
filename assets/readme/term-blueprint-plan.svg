@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 952 356" width="952" height="356" role="img" aria-label="A terminal session: maithic blueprint plan takes an argument in words apart into two definitions, four lemmas, a theorem and a corollary, with what each rests on, and notes the two things it put in order in the answer. maithic blueprint skeleton then writes the eight declarations as Lean, each with sorry for a proof, and Lean compiles them.">
+  <title>A terminal session: maithic blueprint plan takes an argument in words apart into two definitions, four lemmas, a theorem and a corollary, with what each rests on, and notes the two things it put in order in the answer. maithic blueprint skeleton then writes the eight declarations as Lean, each with sorry for a proof, and Lean compiles them.</title>
+  <rect width="952" height="356" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h932a10 10 0 0 1 10 10v26h-952z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="476" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic blueprint plan, skeleton</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="892.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic blueprint plan examples/blueprint/argument.md --namespace Triangles --out .maithic/shots/plan.blueprint.md</text>
+    <text x="37.66" y="77" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition</text>
+    <text x="139.45" y="77" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tri</text>
+    <text x="296.05" y="77" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Triangular numbers</text>
+    <text x="37.66" y="96" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition</text>
+    <text x="139.45" y="96" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">sum-odd</text>
+    <text x="296.05" y="96" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The sum of the first odd numbers</text>
+    <text x="37.66" y="115" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="139.45" y="115" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tri-step</text>
+    <text x="296.05" y="115" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The next triangular number</text>
+    <text x="515.29" y="115" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">&lt;- tri</text>
+    <text x="37.66" y="134" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="139.45" y="134" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">tri-formula</text>
+    <text x="296.05" y="134" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Twice a triangular number</text>
+    <text x="507.46" y="134" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">&lt;- tri, tri-step</text>
+    <text x="37.66" y="153" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="139.45" y="153" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">odd-step</text>
+    <text x="296.05" y="153" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The next odd number</text>
+    <text x="460.48" y="153" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">&lt;- sum-odd</text>
+    <text x="37.66" y="172" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="139.45" y="172" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">odd-square</text>
+    <text x="296.05" y="172" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Odd numbers add up to a square</text>
+    <text x="546.61" y="172" textLength="156.60" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">&lt;- sum-odd, odd-step</text>
+    <text x="37.66" y="191" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lemma</text>
+    <text x="139.45" y="191" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">two-triangles</text>
+    <text x="296.05" y="191" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Two triangles make a square</text>
+    <text x="523.12" y="191" textLength="227.07" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">&lt;- tri, tri-formula, tri-step</text>
+    <text x="37.66" y="210" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">corollary</text>
+    <text x="139.45" y="210" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">odd-triangles</text>
+    <text x="296.05" y="210" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Odd numbers add up to two triangles</text>
+    <text x="585.76" y="210" textLength="328.86" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">&lt;- sum-odd, tri, odd-square, two-triangles</text>
+    <text x="37.66" y="229" textLength="414.99" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">note: the identifier 'Odd Square' became 'odd-square'</text>
+    <text x="37.66" y="248" textLength="469.80" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">note: 'tri-formula' referred to 'gauss', which is not a node</text>
+    <text x="22.00" y="267" textLength="618.57" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">wrote .maithic/shots/plan.blueprint.md: 8 node(s), 13 edge(s), 8 stated in Lean</text>
+    <text x="22.00" y="305" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="305" textLength="798.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic blueprint skeleton examples/blueprint/triangles.md --out .maithic/shots/Triangles.lean --force</text>
+    <text x="22.00" y="324" textLength="634.23" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">wrote .maithic/shots/Triangles.lean: 8 declaration(s); Lean compiles the skeleton</text>
+  </g>
+</svg>

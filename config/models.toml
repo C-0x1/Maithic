@@ -1,0 +1,64 @@
+# Maithic model registry.
+#
+# Which providers exist, how each is reached, and which model each quality tier
+# means. Model identifiers change often: refresh this file from each provider's
+# model list before relying on it, or point `gateway.models` in maithic.toml at
+# your own copy. Nothing else in Maithic names a model.
+#
+# Keys are never stored here. Each provider names the environment variable that
+# holds its key.
+
+[providers.anthropic]
+api = "messages"
+endpoint = "https://api.anthropic.com/v1/messages"
+key_env = "ANTHROPIC_API_KEY"
+auth = "bearer"                 # "bearer" or "x-api-key"
+version = "2026-10-21"          # sent as the anthropic-version header
+
+[providers.anthropic.tiers]
+fast = "claude-haiku-5-5"
+balanced = "claude-sonnet-5-5"
+best = "claude-opus-5-5"
+
+[providers.openai]
+api = "responses"
+endpoint = "https://api.openai.com/v1/responses"
+key_env = "OPENAI_API_KEY"
+auth = "bearer"
+
+[providers.openai.tiers]
+fast = "gpt-6-luna"
+balanced = "gpt-6.2-sol"
+best = "gpt-6.2-astra"
+
+[providers.xai]
+api = "responses"               # "chat_completions" selects the older endpoint shape
+endpoint = "https://api.x.ai/v1/responses"
+key_env = "XAI_API_KEY"
+auth = "bearer"
+
+[providers.xai.tiers]
+fast = "grok-4.3"
+balanced = "grok-4.7"
+best = "grok-4.7"
+
+# A server on this machine that speaks the chat-completions shape.
+[providers.local]
+api = "chat_completions"
+endpoint = "http://127.0.0.1:11434/v1/chat/completions"
+key_env = ""
+auth = "none"
+max_tokens_field = "max_tokens"
+
+[providers.local.tiers]
+fast = "local-model"
+balanced = "local-model"
+best = "local-model"
+
+# Per-model capabilities. A model that is not listed is assumed to accept a
+# JSON schema for its output and no sampling temperature.
+[[models]]
+id = "local-model"
+provider = "local"
+temperature = true
+structured = false

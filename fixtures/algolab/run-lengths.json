@@ -1,0 +1,186 @@
+{
+  "schema": "maithic.algolab.synthesis/1",
+  "task": {
+    "name": "runLengths",
+    "description": "Run-length encoding of a list of natural numbers. Every maximal run of equal neighbours becomes one pair: the value, and how long the run is. The pairs stand in the order of the runs.",
+    "signature": "(l : List Nat) : List (Nat × Nat)",
+    "constraints": [
+      "Recursion on the structure of the list: no well-founded recursion and no partial definition.",
+      "Nothing beyond the Lean core library."
+    ],
+    "examples": [
+      {
+        "call": "runLengths [1, 1, 2, 3, 3, 3]",
+        "expect": "[(1, 2), (2, 1), (3, 3)]"
+      },
+      {
+        "call": "runLengths []",
+        "expect": "[]"
+      },
+      {
+        "call": "runLengths [7]",
+        "expect": "[(7, 1)]"
+      },
+      {
+        "call": "runLengths [4, 4, 4, 4]",
+        "expect": "[(4, 4)]"
+      },
+      {
+        "call": "(runLengths [5, 5, 6, 5]).length",
+        "expect": "3"
+      }
+    ]
+  },
+  "status": "accepted",
+  "implementation": "/-- The maximal runs of equal neighbours in `l`, in order, each as its value and its length; the empty list has no runs. -/\ndef runLengths (l : List Nat) : List (Nat × Nat) :=\n  match l with\n  | [] => []\n  | x :: rest =>\n    match runLengths rest with\n    | (y, n) :: tail => if x = y then (y, n + 1) :: tail else (x, 1) :: (y, n) :: tail\n    | [] => [(x, 1)]",
+  "attempts": [
+    {
+      "round": 0,
+      "implementation": "/-- The maximal runs of equal neighbours in `l`, in order, each as its value and its length; the empty list has no runs. -/\ndef runLengths (l : List Nat) : List (Nat × Nat) :=\n  match l with\n  | [] => []\n  | x :: rest =>\n    let run := rest.takeWhile (· == x)\n    (x, run.length + 1) :: runLengths (rest.dropWhile (· == x))",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "algolab.draft"
+      },
+      "refused": [],
+      "errors": [
+        "line 2: fail to show termination for\n  runLengths\nwith errors\nfailed to infer structural recursion:\nCannot use parameter l:\n  failed to eliminate recursive application\n    runLengths (List.dropWhile (fun x_1 => x_1 == x) rest)\n\n\nfailed to prove termination, possible solutions:\n  - Use `have`-expressions to prove the remaining goals\n  - Use `termination_by` to specify a different well-founded relation\n  - Use `decreasing_by` to specify your own tactic for discharging this kind of goal\nx : Nat\nrest : List Nat\nrun : List Nat := List.takeWhile (fun x_1 => x_1 == x) rest\n⊢ sizeOf (List.dropWhile (fun x_1 => x_1 == x) rest) < 1 + x + sizeOf rest"
+      ],
+      "examples": [],
+      "accepted": false
+    },
+    {
+      "round": 1,
+      "implementation": "/-- The maximal runs of equal neighbours in `l`, in order, each as its value and its length; the empty list has no runs. -/\ndef runLengths (l : List Nat) : List (Nat × Nat) :=\n  match l with\n  | [] => []\n  | x :: rest =>\n    match runLengths rest with\n    | (y, n) :: tail => if x = y then (y, n + 1) :: tail else (x, 1) :: tail\n    | [] => [(x, 1)]",
+      "provenance": {
+        "origin": "repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "algolab.repair"
+      },
+      "refused": [],
+      "errors": [],
+      "examples": [
+        {
+          "call": "runLengths [1, 1, 2, 3, 3, 3]",
+          "expect": "[(1, 2), (2, 1), (3, 3)]",
+          "got": "[(1, 2)]",
+          "passed": false
+        },
+        {
+          "call": "runLengths []",
+          "expect": "[]",
+          "got": "[]",
+          "passed": true
+        },
+        {
+          "call": "runLengths [7]",
+          "expect": "[(7, 1)]",
+          "got": "[(7, 1)]",
+          "passed": true
+        },
+        {
+          "call": "runLengths [4, 4, 4, 4]",
+          "expect": "[(4, 4)]",
+          "got": "[(4, 4)]",
+          "passed": true
+        },
+        {
+          "call": "(runLengths [5, 5, 6, 5]).length",
+          "expect": "3",
+          "got": "1",
+          "passed": false
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "round": 2,
+      "implementation": "/-- The maximal runs of equal neighbours in `l`, in order, each as its value and its length; the empty list has no runs. -/\ndef runLengths (l : List Nat) : List (Nat × Nat) :=\n  match l with\n  | [] => []\n  | x :: rest =>\n    match runLengths rest with\n    | (y, n) :: tail => if x = y then (y, n + 1) :: tail else (x, 1) :: (y, n) :: tail\n    | [] => [(x, 1)]",
+      "provenance": {
+        "origin": "repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "algolab.repair"
+      },
+      "refused": [],
+      "errors": [],
+      "examples": [
+        {
+          "call": "runLengths [1, 1, 2, 3, 3, 3]",
+          "expect": "[(1, 2), (2, 1), (3, 3)]",
+          "got": "[(1, 2), (2, 1), (3, 3)]",
+          "passed": true
+        },
+        {
+          "call": "runLengths []",
+          "expect": "[]",
+          "got": "[]",
+          "passed": true
+        },
+        {
+          "call": "runLengths [7]",
+          "expect": "[(7, 1)]",
+          "got": "[(7, 1)]",
+          "passed": true
+        },
+        {
+          "call": "runLengths [4, 4, 4, 4]",
+          "expect": "[(4, 4)]",
+          "got": "[(4, 4)]",
+          "passed": true
+        },
+        {
+          "call": "(runLengths [5, 5, 6, 5]).length",
+          "expect": "3",
+          "got": "3",
+          "passed": true
+        }
+      ],
+      "accepted": true
+    }
+  ],
+  "gateway": {
+    "mode": "replay",
+    "calls": 3,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": [
+      {
+        "purpose": "algolab.draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T21:46:09Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "algolab.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T21:46:09Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "algolab.repair",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T21:46:09Z",
+        "elapsed_ms": 0
+      }
+    ]
+  }
+}

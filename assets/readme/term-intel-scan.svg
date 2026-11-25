@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 717" width="710" height="717" role="img" aria-label="A terminal session: maithic intel scan elaborates the 23 files of the algorithm library and counts 261 declarations, none resting on sorry. maithic intel stats then gives the size of the graph, and the declarations that most others use: Sorted, TotalPreorder and insertionSort among those of the scanned files, and List, Nat and Eq from anywhere.">
+  <title>A terminal session: maithic intel scan elaborates the 23 files of the algorithm library and counts 261 declarations, none resting on sorry. maithic intel stats then gives the size of the graph, and the declarations that most others use: Sorted, TotalPreorder and insertionSort among those of the scanned files, and List, Nat and Eq from anywhere.</title>
+  <rect width="710" height="717" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h690a10 10 0 0 1 10 10v26h-710z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="355" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic intel scan, stats</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="649.89" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic intel scan lean/Maithic/Algo --project lean --dir .maithic/shots/intel-algo</text>
+    <text x="22.00" y="77" textLength="634.23" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">scanned 23 file(s): 261 declaration(s), 0 resting on sorry, 0 file(s) with errors</text>
+    <text x="37.66" y="96" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">class 2</text>
+    <text x="108.13" y="96" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition 74</text>
+    <text x="225.58" y="96" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">instance 5</text>
+    <text x="319.54" y="96" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem 180</text>
+    <text x="22.00" y="115" textLength="657.72" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">wrote .maithic/shots/intel-algo/graph.json and .maithic/shots/intel-algo/health.json</text>
+    <text x="22.00" y="153" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="153" textLength="399.33" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic intel stats --dir .maithic/shots/intel-algo</text>
+    <text x="22.00" y="172" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">nodes</text>
+    <text x="139.45" y="172" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">declaration 835</text>
+    <text x="272.56" y="172" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">file 23</text>
+    <text x="343.03" y="172" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">module 24</text>
+    <text x="429.16" y="172" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">namespace 15</text>
+    <text x="22.00" y="191" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">edges</text>
+    <text x="139.45" y="191" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">contains 559</text>
+    <text x="249.07" y="191" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">extends 1</text>
+    <text x="335.20" y="191" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">imports 57</text>
+    <text x="429.16" y="191" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">instance-of 5</text>
+    <text x="546.61" y="191" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">uses 8791</text>
+    <text x="22.00" y="210" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">declarations</text>
+    <text x="139.45" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">class 2</text>
+    <text x="209.92" y="210" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">definition 74</text>
+    <text x="327.37" y="210" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">instance 5</text>
+    <text x="421.33" y="210" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem 180</text>
+    <text x="22.00" y="229" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">from outside</text>
+    <text x="139.45" y="229" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">574</text>
+    <text x="22.00" y="248" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">uses</text>
+    <text x="139.45" y="248" textLength="360.18" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">least 1, greatest 174, mean 33.68, median 20.0</text>
+    <text x="22.00" y="267" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">used by</text>
+    <text x="139.45" y="267" textLength="336.69" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">least 0, greatest 27, mean 2.21, median 1.0</text>
+    <text x="22.00" y="286" textLength="242.73" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">most used, of the scanned files</text>
+    <text x="53.32" y="305" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">27</text>
+    <text x="84.64" y="305" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.Sorted</text>
+    <text x="53.32" y="324" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">20</text>
+    <text x="84.64" y="324" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.TotalPreorder</text>
+    <text x="53.32" y="343" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">19</text>
+    <text x="84.64" y="343" textLength="203.58" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.insertionSort</text>
+    <text x="53.32" y="362" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">17</text>
+    <text x="84.64" y="362" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.TotalOrder</text>
+    <text x="53.32" y="381" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">13</text>
+    <text x="84.64" y="381" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.euclid</text>
+    <text x="53.32" y="400" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">12</text>
+    <text x="84.64" y="400" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.Lab.runLengths</text>
+    <text x="53.32" y="419" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">12</text>
+    <text x="84.64" y="419" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.SameCounts</text>
+    <text x="53.32" y="438" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">11</text>
+    <text x="84.64" y="438" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.Cost.insertionSortCost</text>
+    <text x="53.32" y="457" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">11</text>
+    <text x="84.64" y="457" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.Graph</text>
+    <text x="53.32" y="476" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">10</text>
+    <text x="84.64" y="476" textLength="180.09" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Maithic.Algo.SearchSpec</text>
+    <text x="22.00" y="495" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">most used, from anywhere</text>
+    <text x="45.49" y="514" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">196</text>
+    <text x="84.64" y="514" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">List</text>
+    <text x="45.49" y="533" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">185</text>
+    <text x="84.64" y="533" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Nat</text>
+    <text x="45.49" y="552" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">178</text>
+    <text x="84.64" y="552" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Eq</text>
+    <text x="45.49" y="571" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">125</text>
+    <text x="84.64" y="571" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">List.nil</text>
+    <text x="45.49" y="590" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">121</text>
+    <text x="84.64" y="590" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">List.cons</text>
+    <text x="45.49" y="609" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">121</text>
+    <text x="84.64" y="609" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">OfNat.ofNat</text>
+    <text x="45.49" y="628" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">119</text>
+    <text x="84.64" y="628" textLength="93.96" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">instOfNatNat</text>
+    <text x="45.49" y="647" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">117</text>
+    <text x="84.64" y="647" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">congrArg</text>
+    <text x="45.49" y="666" textLength="23.49" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">105</text>
+    <text x="84.64" y="666" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">LE</text>
+    <text x="53.32" y="685" textLength="15.66" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">98</text>
+    <text x="84.64" y="685" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Eq.trans</text>
+  </g>
+</svg>

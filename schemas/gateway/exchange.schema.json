@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Provider exchange fixture",
+  "description": "One response of a provider, as the adapters see it: the HTTP status, headers and body, with what the adapter must make of it. The fixtures are authored from the shapes the providers document; none is a recorded call.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.gateway.exchange/1"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "api": {
+      "type": "string"
+    },
+    "origin": {
+      "enum": [
+        "documented-shape"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "status": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 599
+    },
+    "headers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "body": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "expect": {
+      "type": "object",
+      "minProperties": 1
+    }
+  },
+  "required": [
+    "schema",
+    "name",
+    "provider",
+    "origin",
+    "status",
+    "headers",
+    "body",
+    "expect"
+  ],
+  "additionalProperties": false
+}

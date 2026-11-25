@@ -1,0 +1,11 @@
+(include_subdirs unqualified)
+
+(library
+ (name maithic_devtools)
+ (modules :standard \ maithic_dev)
+ (libraries maithic_base maithic_schema maithic_config maithic_bridge maithic_gateway maithic_ledger maithic_prover))
+
+(executable
+ (name maithic_dev)
+ (modules maithic_dev)
+ (libraries maithic_devtools maithic_corpus maithic_mend maithic_formalize maithic_council maithic_blueprint maithic_algolab))

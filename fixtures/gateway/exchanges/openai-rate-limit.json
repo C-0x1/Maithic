@@ -1,0 +1,23 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "openai-rate-limit",
+  "provider": "openai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 429,
+  "headers": {
+    "retry-after": "12"
+  },
+  "body": {
+    "error": {
+      "message": "Rate limit reached for requests",
+      "type": "requests",
+      "param": null,
+      "code": "rate_limit_exceeded"
+    }
+  },
+  "expect": {
+    "error": "rate_limited",
+    "retry_after": 12
+  }
+}

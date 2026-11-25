@@ -1,0 +1,41 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "anthropic-blocks",
+  "provider": "anthropic",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "msg_02",
+    "type": "message",
+    "role": "assistant",
+    "model": "claude-sonnet-5-5",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "(reasoning)",
+        "signature": "sig"
+      },
+      {
+        "type": "text",
+        "text": "first "
+      },
+      {
+        "type": "text",
+        "text": "second"
+      }
+    ],
+    "stop_reason": "max_tokens",
+    "usage": {
+      "input_tokens": 50,
+      "output_tokens": 2048
+    }
+  },
+  "expect": {
+    "text": "first second",
+    "stop": "max_tokens",
+    "input_tokens": 50,
+    "output_tokens": 2048
+  }
+}

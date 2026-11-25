@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="axiom-audit-t axiom-audit-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="axiom-audit-t">What the axiom audit finds, and what the default policy says</title>
+  <desc id="axiom-audit-d">A table of six rows. propext, Quot.sound and Classical.choice are the axioms of ordinary mathematics in Lean, and the default policy allows them. sorryAx appears when a proof, or anything beneath it, contains sorry, and is never allowed. An axiom with native in its name appears for a proof by compiled evaluation and is rejected unless the policy sets allow_native. An axiom declared in a file appears under its own name and is rejected unless the policy lists it.</desc>
+  <rect width="960" height="520" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="880.0" height="32.0" rx="8" fill="#2B2F77"/>
+  <rect x="40.0" y="128.0" width="880.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="196.0" width="880.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="264.0" width="880.0" height="34.0" rx="0" fill="#FFFFFF"/>
+  <rect x="40.0" y="331.0" width="880.0" height="1.5" rx="0" fill="#C9CCE8"/>
+  <rect x="40.0" y="388.0" width="880.0" height="102.0" rx="10" fill="#E8E9F3"/>
+  <circle cx="833.2352941176471" cy="145.0" r="9" fill="#0FA89B"/>
+  <path d="M828.7352941176471 145.0 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="833.2352941176471" cy="179.0" r="9" fill="#0FA89B"/>
+  <path d="M828.7352941176471 179.0 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="833.2352941176471" cy="213.0" r="9" fill="#0FA89B"/>
+  <path d="M828.7352941176471 213.0 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="833.2352941176471" cy="247.0" r="9" fill="#E5484D"/>
+  <path d="M829.2352941176471 243.0 l8 8 M837.2352941176471 243.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <circle cx="833.2352941176471" cy="281.0" r="9" fill="#E5484D"/>
+  <path d="M829.2352941176471 277.0 l8 8 M837.2352941176471 277.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <circle cx="833.2352941176471" cy="315.0" r="9" fill="#E5484D"/>
+  <path d="M829.2352941176471 311.0 l8 8 M837.2352941176471 311.0 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <circle cx="53" cy="357" r="8" fill="#0FA89B"/>
+  <path d="M48.5 357 l3.2 3.6 l6 -7.2" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="145.177734375" cy="357" r="8" fill="#E5484D"/>
+  <path d="M141.177734375 353 l8 8 M149.177734375 353 l-8 8" stroke="#FFFFFF" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="622.2" lengthAdjust="spacingAndGlyphs">What a proof rests on, and what the default policy says to it</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="227.6" lengthAdjust="spacingAndGlyphs">config/policies/default.toml</text>
+  <text x="538.2" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="123.6" lengthAdjust="spacingAndGlyphs">Where it comes from</text>
+  <text x="833.2" y="116.0" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle" textLength="82.0" lengthAdjust="spacingAndGlyphs">Default policy</text>
+  <text x="54.0" y="149.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="52.7" lengthAdjust="spacingAndGlyphs">propext</text>
+  <text x="538.2" y="149.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="144.1" lengthAdjust="spacingAndGlyphs">propositional extensionality</text>
+  <text x="54.0" y="183.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="75.2" lengthAdjust="spacingAndGlyphs">Quot.sound</text>
+  <text x="538.2" y="183.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="123.4" lengthAdjust="spacingAndGlyphs">soundness of quotients</text>
+  <text x="54.0" y="217.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="120.4" lengthAdjust="spacingAndGlyphs">Classical.choice</text>
+  <text x="538.2" y="217.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="204.1" lengthAdjust="spacingAndGlyphs">choice; remove it for constructive work</text>
+  <text x="54.0" y="251.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="52.7" lengthAdjust="spacingAndGlyphs">sorryAx</text>
+  <text x="538.2" y="251.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="228.8" lengthAdjust="spacingAndGlyphs">a sorry in the proof, or anywhere beneath it</text>
+  <text x="54.0" y="285.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="188.1" lengthAdjust="spacingAndGlyphs">a name with _native in it</text>
+  <text x="538.2" y="285.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="243.5" lengthAdjust="spacingAndGlyphs">a proof by compiled evaluation, native_decide</text>
+  <text x="54.0" y="319.5" font-size="12.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="218.2" lengthAdjust="spacingAndGlyphs">an axiom declared in the file</text>
+  <text x="538.2" y="319.0" font-size="12" fill="#5B6477" text-anchor="middle" textLength="160.8" lengthAdjust="spacingAndGlyphs">it appears under its own name</text>
+  <text x="66.0" y="361.5" font-size="12" fill="#5B6477" textLength="40.7" lengthAdjust="spacingAndGlyphs">allowed</text>
+  <text x="158.2" y="361.5" font-size="12" fill="#5B6477" textLength="123.4" lengthAdjust="spacingAndGlyphs">the result is not verified</text>
+  <text x="56.0" y="413.0" font-size="13" fill="#14162B" textLength="740.0" lengthAdjust="spacingAndGlyphs">The Bridge collects every axiom a declaration rests on, through everything it uses. Nothing has to be declared honestly for this to</text>
+  <text x="56.0" y="431.0" font-size="13" fill="#14162B" textLength="335.2" lengthAdjust="spacingAndGlyphs">work: a sorry three lemmas down still surfaces as sorryAx.</text>
+  <text x="56.0" y="455.0" font-size="13" fill="#14162B" textLength="707.4" lengthAdjust="spacingAndGlyphs">The policy is a file. A project can allow native evaluation, which then trusts the compiler as well as the kernel, or allow fewer</text>
+  <text x="56.0" y="473.0" font-size="13" fill="#14162B" textLength="138.0" lengthAdjust="spacingAndGlyphs">axioms than the default.</text>
+</svg>

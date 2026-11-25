@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 733 641" width="733" height="641" role="img" aria-label="A terminal session: maithic search answers the words sorting keeps the elements with theorems about insertion sort, the first of them the theorem that insertion sort keeps the elements, each with its statement, its documentation and the words that matched. A second search, for add comm, is also put to Lean and returns the commutativity of addition for integers, natural numbers and rationals from Lean's own library.">
+  <title>A terminal session: maithic search answers the words sorting keeps the elements with theorems about insertion sort, the first of them the theorem that insertion sort keeps the elements, each with its statement, its documentation and the words that matched. A second search, for add comm, is also put to Lean and returns the commutativity of addition for integers, natural numbers and rationals from Lean's own library.</title>
+  <rect width="733" height="641" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h713a10 10 0 0 1 10 10v26h-733z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="367" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic search</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="665.55" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic search sorting keeps the elements --from fixtures/intel/extractions --limit 3</text>
+    <text x="29.83" y="77" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1. Maithic.Algo.mem_insertionSort</text>
+    <text x="303.88" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="374.35" y="77" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Sort/Insertion.lean:99</text>
+    <text x="53.32" y="96" textLength="634.23" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {x : α} {l : List α}, x ∈ …</text>
+    <text x="53.32" y="115" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Insertion sort keeps the elements.</text>
+    <text x="53.32" y="134" textLength="375.84" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found by lexical (rank 1); words: sort keeps mem</text>
+    <text x="29.83" y="153" textLength="281.88" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2. Maithic.Algo.length_insertionSort</text>
+    <text x="327.37" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="397.84" y="153" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Sort/Insertion.lean:95</text>
+    <text x="53.32" y="172" textLength="540.27" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] (l : List α), …</text>
+    <text x="53.32" y="191" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Insertion sort keeps the length.</text>
+    <text x="53.32" y="210" textLength="344.52" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found by lexical (rank 2); words: sort keeps</text>
+    <text x="29.83" y="229" textLength="250.56" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">3. Maithic.Algo.mem_insertSorted</text>
+    <text x="296.05" y="229" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="366.52" y="229" textLength="313.20" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Sort/Insertion.lean:31</text>
+    <text x="53.32" y="248" textLength="649.89" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ {α : Type u} [inst : LE α] [inst_1 : DecidableLE α] {x z : α} {l : List α}, z ∈ …</text>
+    <text x="53.32" y="267" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Inserting adds exactly the new element.</text>
+    <text x="53.32" y="286" textLength="328.86" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found by lexical (rank 3); words: sort mem</text>
+    <text x="22.00" y="305" textLength="375.84" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">3 hit(s) among 41 declaration(s) and 150 word(s)</text>
+    <text x="22.00" y="343" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="343" textLength="657.72" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic search add comm --in lean/Maithic/Algo/Arith --project lean --lean --limit 4</text>
+    <text x="29.83" y="362" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1. Maithic.Algo.euclid_comm</text>
+    <text x="256.90" y="362" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="327.37" y="362" textLength="274.05" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">lean/Maithic/Algo/Arith/Gcd.lean:37</text>
+    <text x="53.32" y="381" textLength="501.12" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ (a b : Nat), Maithic.Algo.euclid a b = Maithic.Algo.euclid b a</text>
+    <text x="53.32" y="400" textLength="336.69" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The order of the arguments does not matter.</text>
+    <text x="53.32" y="419" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found by lexical (rank 1); words: comm</text>
+    <text x="29.83" y="438" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">2. Int.add_comm</text>
+    <text x="162.94" y="438" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="233.41" y="438" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(in Lean's scope)</text>
+    <text x="53.32" y="457" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ (a b : Int), a + b = b + a</text>
+    <text x="53.32" y="476" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found by lean (rank 1)</text>
+    <text x="29.83" y="495" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">3. Nat.add_comm</text>
+    <text x="162.94" y="495" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="233.41" y="495" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(in Lean's scope)</text>
+    <text x="53.32" y="514" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ (n m : Nat), n + m = m + n</text>
+    <text x="53.32" y="533" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found by lean (rank 2)</text>
+    <text x="29.83" y="552" textLength="117.45" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">4. Rat.add_comm</text>
+    <text x="162.94" y="552" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem</text>
+    <text x="233.41" y="552" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(in Lean's scope)</text>
+    <text x="53.32" y="571" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">∀ (a b : Rat), a + b = b + a</text>
+    <text x="53.32" y="590" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">found by lean (rank 3)</text>
+    <text x="22.00" y="609" textLength="375.84" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">4 hit(s) among 21 declaration(s) and 118 word(s)</text>
+  </g>
+</svg>

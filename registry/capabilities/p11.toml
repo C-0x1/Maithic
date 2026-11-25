@@ -1,0 +1,190 @@
+# Capability register for P11 Corpus.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P11"
+name = "Corpus"
+title = "Proof-trace extraction and dataset foundry"
+mission = "Turn Lean projects into clean, versioned datasets: theorems with their proofs, tactic steps with the goals before and after, and the premises each proof used."
+
+[[group]]
+id = "P11-01"
+title = "Tactic trace extraction"
+language = "Lean"
+path = "lean/Maithic/Trace/"
+purpose = "Records what each tactic did to the proof state."
+
+  [[group.capability]]
+  id = "P11-01-01"
+  title = "Tactic step record"
+  spec = "Before state, tactic text, after state and source range for each tactic invocation."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P11-01-02"
+  title = "Information-tree traversal"
+  spec = "Collect tactic applications from elaboration information trees."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P11-01-03"
+  title = "Theorem record"
+  spec = "Theorem name, statement, module and full proof text."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P11-01-04"
+  title = "Trace JSON lines output"
+  spec = "One record per line in the shared schema."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P11-01-05"
+  title = "Top-level step filter"
+  spec = "Distinguish top-level steps from nested ones."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+[[group]]
+id = "P11-02"
+title = "Premise and dependency annotation"
+language = "Lean"
+path = "lean/Maithic/Trace/Premise/"
+purpose = "Records which lemmas and definitions each step relied on."
+
+  [[group.capability]]
+  id = "P11-02-01"
+  title = "Per-proof premises"
+  spec = "Constants used by each proof term."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+[[group]]
+id = "P11-03"
+title = "Repository harvesting"
+language = "OCaml"
+path = "ocaml/lib/corpus/harvest/"
+purpose = "Fetches, builds and traces repositories at scale."
+
+  [[group.capability]]
+  id = "P11-03-01"
+  title = "Tracer invocation"
+  spec = "Run trace and extract executables over the project."
+  status = "done"
+  tests = ["ocaml/test/test_corpus.ml"]
+
+  [[group.capability]]
+  id = "P11-03-02"
+  title = "Harvest record"
+  spec = "Repository, revision, toolchain, outcome and output locations."
+  status = "done"
+  tests = ["ocaml/test/test_corpus.ml"]
+
+  [[group.capability]]
+  id = "P11-03-03"
+  title = "Harvest command"
+  spec = "`maithic corpus harvest`."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+[[group]]
+id = "P11-04"
+title = "Dataset schema and storage"
+language = "OCaml"
+path = "ocaml/lib/corpus/store/"
+purpose = "Canonical record formats and a versioned store with lineage."
+
+  [[group.capability]]
+  id = "P11-04-01"
+  title = "Record schemas"
+  spec = "JSON Schemas for theorem, step, premise and pair records."
+  status = "done"
+  tests = ["ocaml/test/test_corpus.ml"]
+
+  [[group.capability]]
+  id = "P11-04-02"
+  title = "Dataset manifest"
+  spec = "Name, version, sources, record counts and hashes."
+  status = "done"
+  tests = ["ocaml/test/test_corpus.ml"]
+
+  [[group.capability]]
+  id = "P11-04-03"
+  title = "Content addressing"
+  spec = "Records and shards stored by content hash."
+  status = "done"
+  tests = ["ocaml/test/test_corpus.ml"]
+
+  [[group.capability]]
+  id = "P11-04-04"
+  title = "Schema validation on write"
+  spec = "Reject records that do not match the schema."
+  status = "done"
+  tests = ["ocaml/test/test_corpus.ml"]
+
+[[group]]
+id = "P11-05"
+title = "Dataset processing"
+language = "Julia"
+path = "julia/MaithicData/src/process/"
+purpose = "Cleans, deduplicates and splits data without leaking test information."
+
+  [[group.capability]]
+  id = "P11-05-01"
+  title = "Record loader"
+  spec = "Load shards into typed Julia tables."
+  status = "done"
+  tests = ["julia/MaithicData/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P11-05-02"
+  title = "Exact deduplication"
+  spec = "Remove identical records."
+  status = "done"
+  tests = ["julia/MaithicData/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P11-05-03"
+  title = "Random split"
+  spec = "Reproducible train, validation and test split by theorem."
+  status = "done"
+  tests = ["julia/MaithicData/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P11-05-04"
+  title = "Leakage check"
+  spec = "Verify that no theorem appears in two splits."
+  status = "done"
+  tests = ["julia/MaithicData/test/runtests.jl"]
+
+[[group]]
+id = "P11-06"
+title = "Corpus statistics and exploration"
+language = "R"
+path = "r/maithicstats/R/corpus-*.R"
+purpose = "Describes what a dataset contains."
+
+  [[group.capability]]
+  id = "P11-06-01"
+  title = "Corpus import"
+  spec = "Load dataset summaries."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-corpus.R"]
+
+  [[group.capability]]
+  id = "P11-06-02"
+  title = "Proof length distribution"
+  spec = "Steps per proof."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-corpus.R", "r/maithicviz/tests/testthat/test-insight-figures.R"]
+
+  [[group.capability]]
+  id = "P11-06-03"
+  title = "Tactic frequency"
+  spec = "Most used tactics."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-corpus.R", "r/maithicviz/tests/testthat/test-insight-figures.R"]

@@ -1,0 +1,190 @@
+# Capability register for P07 Intel.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P07"
+name = "Intel"
+title = "Lean codebase intelligence platform"
+mission = "Understand a Lean repository as a graph of declarations and answer questions about it: what depends on what, where something is used, what is unfinished, and which axioms it rests on."
+
+[[group]]
+id = "P07-01"
+title = "Environment and syntax extractor"
+language = "Lean"
+path = "lean/Maithic/Extract/"
+purpose = "Exports everything Lean knows about a project in a stable, documented schema."
+
+  [[group.capability]]
+  id = "P07-01-01"
+  title = "Declaration export"
+  spec = "Export every declaration with name, kind, type, module and source range as JSON lines."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean", "ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P07-01-02"
+  title = "Dependency export"
+  spec = "For each declaration, the constants referenced in its type and in its value."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P07-01-03"
+  title = "Docstring export"
+  spec = "Export docstrings and module documentation."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P07-01-04"
+  title = "Import graph export"
+  spec = "Module import edges."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+  [[group.capability]]
+  id = "P07-01-05"
+  title = "Sorry flagging"
+  spec = "Mark declarations depending on `sorryAx`."
+  status = "done"
+  tests = ["lean/MaithicTest/Extract.lean"]
+
+[[group]]
+id = "P07-02"
+title = "Code knowledge graph"
+language = "OCaml"
+path = "ocaml/lib/intel/graph/"
+purpose = "Stores declarations, modules and their relations as a queryable graph."
+
+  [[group.capability]]
+  id = "P07-02-01"
+  title = "Graph schema"
+  spec = "Node kinds (declaration, module, namespace, file) and edge kinds (uses, imports, contains, instance-of, extends)."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+  [[group.capability]]
+  id = "P07-02-02"
+  title = "Graph builder"
+  spec = "Build the graph from extractor output."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_intel.ml"]
+
+  [[group.capability]]
+  id = "P07-02-03"
+  title = "Node lookup"
+  spec = "Find nodes by name, file or position."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+  [[group.capability]]
+  id = "P07-02-04"
+  title = "Neighbor queries"
+  spec = "Direct dependencies and direct dependents."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+  [[group.capability]]
+  id = "P07-02-05"
+  title = "Graph statistics"
+  spec = "Counts by kind and basic degree statistics."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+[[group]]
+id = "P07-03"
+title = "Query language and analyses"
+language = "OCaml"
+path = "ocaml/lib/intel/query/"
+purpose = "A small query language and the standard analyses built on it."
+
+  [[group.capability]]
+  id = "P07-03-01"
+  title = "Dependencies query"
+  spec = "All declarations a target depends on, with a depth limit."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_intel.ml"]
+
+  [[group.capability]]
+  id = "P07-03-02"
+  title = "Dependents query"
+  spec = "All declarations depending on a target."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+  [[group.capability]]
+  id = "P07-03-03"
+  title = "Unfinished-proofs query"
+  spec = "List declarations whose proof contains `sorry`."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+[[group]]
+id = "P07-04"
+title = "Graph analytics and layout"
+language = "Julia"
+path = "julia/MaithicGraphs/"
+purpose = "Numerical graph algorithms and layouts for large dependency graphs."
+
+  [[group.capability]]
+  id = "P07-04-01"
+  title = "Graph loader"
+  spec = "Load graph exports into adjacency structures."
+  status = "done"
+  tests = ["julia/MaithicGraphs/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P07-04-02"
+  title = "Degree and centrality"
+  spec = "In-degree, out-degree, PageRank and betweenness."
+  status = "done"
+  tests = ["julia/MaithicGraphs/test/runtests.jl"]
+
+  [[group.capability]]
+  id = "P07-04-03"
+  title = "Component analysis"
+  spec = "Weak components and their sizes."
+  status = "done"
+  tests = ["julia/MaithicGraphs/test/runtests.jl"]
+
+[[group]]
+id = "P07-05"
+title = "Unfinished work and health tracking"
+language = "OCaml"
+path = "ocaml/lib/intel/health/"
+purpose = "Tracks unfinished proofs and the general condition of a codebase."
+
+  [[group.capability]]
+  id = "P07-05-01"
+  title = "Sorry inventory"
+  spec = "All unfinished proofs with locations and goals."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+  [[group.capability]]
+  id = "P07-05-02"
+  title = "Axiom census"
+  spec = "Axioms and where they are used."
+  status = "done"
+  tests = ["ocaml/test/test_intel.ml"]
+
+[[group]]
+id = "P07-06"
+title = "Codebase metrics and trends"
+language = "R"
+path = "r/maithicstats/R/intel-*.R"
+purpose = "Time-series analysis of how a codebase grows and where its risks are."
+
+  [[group.capability]]
+  id = "P07-06-01"
+  title = "Snapshot import"
+  spec = "Load health and graph snapshots."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-intel.R"]
+
+  [[group.capability]]
+  id = "P07-06-02"
+  title = "Top-depended table"
+  spec = "Most depended-upon declarations."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-intel.R", "r/maithicviz/tests/testthat/test-insight-figures.R"]

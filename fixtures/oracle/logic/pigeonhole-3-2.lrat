@@ -1,0 +1,4 @@
+c Pigeon 0 cannot sit in hole 0: the others would both need hole 1.
+10 -1 0 4 2 5 3 7 9 0
+c So it sits in hole 1, and the others would both need hole 0.
+11 0 10 1 7 2 6 3 8 0

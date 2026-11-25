@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scripted Bridge session",
+  "description": "A list of requests, each with the part of the response it must produce. The Lean tests run every session inside the test executable, the integration tests run them against the built server, and the transcripts replayed by the stub server are recorded from them.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.bridge.session/1"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "object"
+          },
+          "raw": {
+            "type": "string"
+          },
+          "expect": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "expect"
+        ],
+        "additionalProperties": false,
+        "oneOf": [
+          {
+            "required": [
+              "request"
+            ]
+          },
+          {
+            "required": [
+              "raw"
+            ]
+          }
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "name",
+    "title",
+    "steps"
+  ],
+  "additionalProperties": false
+}

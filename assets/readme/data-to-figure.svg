@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 410" role="img" aria-labelledby="data-to-figure-t data-to-figure-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="data-to-figure-t">From a result file to a figure</title>
+  <desc id="data-to-figure-d">Four steps in a row. A result file is written by the maithic command with the option json. It is read and checked in R against its schema, its statuses and its totals before any number is computed. It is summarised with uncertainty: success rates with 95 percent Wilson intervals, bootstrap intervals for other measures, and paired comparisons. It is drawn in one visual style, and make figures redraws every figure from the files in the repository.</desc>
+  <rect width="1040" height="410" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="217.5" height="224.0" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+  <rect x="287.5" y="96.0" width="217.5" height="224.0" rx="10" fill="#FFFFFF" stroke="#276DC3" stroke-width="1.5"/>
+  <rect x="535.0" y="96.0" width="217.5" height="224.0" rx="10" fill="#FFFFFF" stroke="#276DC3" stroke-width="1.5"/>
+  <rect x="782.5" y="96.0" width="217.5" height="224.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="338.0" width="960.0" height="42.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#EC6813"/>
+  <rect x="54.0" y="284.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M261.5 208.0 L275.5 208.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M273.5 202.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M287.5 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#276DC3"/>
+  <rect x="301.5" y="284.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M509.0 208.0 L523.0 208.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M521.0 202.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M535.0 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#276DC3"/>
+  <rect x="549.0" y="284.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M756.5 208.0 L770.5 208.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M768.5 202.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M782.5 106.0a10 10 0 0 1 10-10h197.5a10 10 0 0 1 10 10v26.0h-217.5z" fill="#0B7F75"/>
+  <rect x="796.5" y="284.0" width="189.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="561.1" lengthAdjust="spacingAndGlyphs">From a result file to a figure, with the uncertainty kept</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="341.3" lengthAdjust="spacingAndGlyphs">library(maithicstats); library(maithicviz)</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="86.9" lengthAdjust="spacingAndGlyphs">1  A result file</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="143.8" lengthAdjust="spacingAndGlyphs">What a command did, as</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="172.0" lengthAdjust="spacingAndGlyphs">JSON that names its schema.</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="160.4" lengthAdjust="spacingAndGlyphs">The files the figures use are</text>
+  <text x="54.0" y="215.0" font-size="13" fill="#14162B" textLength="95.1" lengthAdjust="spacingAndGlyphs">in the repository.</text>
+  <text x="64.0" y="299.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="138.5" lengthAdjust="spacingAndGlyphs">fixtures/runs/*.json</text>
+  <text x="301.5" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="134.6" lengthAdjust="spacingAndGlyphs">2  Read and checked</text>
+  <text x="301.5" y="155.0" font-size="13" fill="#14162B" textLength="125.0" lengthAdjust="spacingAndGlyphs">A file is held to what it</text>
+  <text x="301.5" y="173.0" font-size="13" fill="#14162B" textLength="121.4" lengthAdjust="spacingAndGlyphs">states about itself: its</text>
+  <text x="301.5" y="191.0" font-size="13" fill="#14162B" textLength="138.0" lengthAdjust="spacingAndGlyphs">schema, its statuses, its</text>
+  <text x="301.5" y="209.0" font-size="13" fill="#14162B" textLength="34.7" lengthAdjust="spacingAndGlyphs">totals.</text>
+  <text x="301.5" y="233.0" font-size="13" fill="#14162B" textLength="163.3" lengthAdjust="spacingAndGlyphs">A file that does not add up is</text>
+  <text x="301.5" y="251.0" font-size="13" fill="#14162B" textLength="163.3" lengthAdjust="spacingAndGlyphs">an error, not a slightly wrong</text>
+  <text x="301.5" y="269.0" font-size="13" fill="#14162B" textLength="31.8" lengthAdjust="spacingAndGlyphs">table.</text>
+  <text x="311.5" y="299.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="117.7" lengthAdjust="spacingAndGlyphs">read_prove_runs()</text>
+  <text x="549.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="95.7" lengthAdjust="spacingAndGlyphs">3  Summarised</text>
+  <text x="549.0" y="155.0" font-size="13" fill="#14162B" textLength="143.1" lengthAdjust="spacingAndGlyphs">A rate comes with a 95%</text>
+  <text x="549.0" y="173.0" font-size="13" fill="#14162B" textLength="121.4" lengthAdjust="spacingAndGlyphs">Wilson interval; other</text>
+  <text x="549.0" y="191.0" font-size="13" fill="#14162B" textLength="141.6" lengthAdjust="spacingAndGlyphs">measures with bootstrap</text>
+  <text x="549.0" y="209.0" font-size="13" fill="#14162B" textLength="52.0" lengthAdjust="spacingAndGlyphs">intervals.</text>
+  <text x="549.0" y="233.0" font-size="13" fill="#14162B" textLength="130.8" lengthAdjust="spacingAndGlyphs">Two configurations are</text>
+  <text x="549.0" y="251.0" font-size="13" fill="#14162B" textLength="133.0" lengthAdjust="spacingAndGlyphs">compared on the same</text>
+  <text x="549.0" y="269.0" font-size="13" fill="#14162B" textLength="106.2" lengthAdjust="spacingAndGlyphs">problems, in pairs.</text>
+  <text x="559.0" y="299.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="110.8" lengthAdjust="spacingAndGlyphs">prover_success()</text>
+  <text x="796.5" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="54.5" lengthAdjust="spacingAndGlyphs">4  Drawn</text>
+  <text x="796.5" y="155.0" font-size="13" fill="#14162B" textLength="131.5" lengthAdjust="spacingAndGlyphs">One visual style, and a</text>
+  <text x="796.5" y="173.0" font-size="13" fill="#14162B" textLength="150.3" lengthAdjust="spacingAndGlyphs">caption that says what the</text>
+  <text x="796.5" y="191.0" font-size="13" fill="#14162B" textLength="41.9" lengthAdjust="spacingAndGlyphs">data is.</text>
+  <text x="796.5" y="215.0" font-size="13" fill="#14162B" textLength="105.5" lengthAdjust="spacingAndGlyphs">Every figure of the</text>
+  <text x="796.5" y="233.0" font-size="13" fill="#14162B" textLength="148.9" lengthAdjust="spacingAndGlyphs">documentation is redrawn</text>
+  <text x="796.5" y="251.0" font-size="13" fill="#14162B" textLength="157.5" lengthAdjust="spacingAndGlyphs">from the files by one target.</text>
+  <text x="806.5" y="299.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="83.1" lengthAdjust="spacingAndGlyphs">make figures</text>
+  <text x="56.0" y="363.0" font-size="13" fill="#14162B" textLength="735.7" lengthAdjust="spacingAndGlyphs">24 of 24 is not 100 percent. It is a rate whose 95% interval runs from about 86 to 100 percent, and the tables and figures say so.</text>
+</svg>

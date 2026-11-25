@@ -1,0 +1,6980 @@
+{
+  "schema": "maithic.intel.graph/1",
+  "nodes": [
+    {
+      "id": "d:And",
+      "kind": "declaration",
+      "name": "And",
+      "internal": false
+    },
+    {
+      "id": "d:And.intro",
+      "kind": "declaration",
+      "name": "And.intro",
+      "internal": false
+    },
+    {
+      "id": "d:And.left",
+      "kind": "declaration",
+      "name": "And.left",
+      "internal": false
+    },
+    {
+      "id": "d:And.right",
+      "kind": "declaration",
+      "name": "And.right",
+      "internal": false
+    },
+    {
+      "id": "d:Array",
+      "kind": "declaration",
+      "name": "Array",
+      "internal": false
+    },
+    {
+      "id": "d:Array.toList",
+      "kind": "declaration",
+      "name": "Array.toList",
+      "internal": false
+    },
+    {
+      "id": "d:BEq",
+      "kind": "declaration",
+      "name": "BEq",
+      "internal": false
+    },
+    {
+      "id": "d:BEq.beq",
+      "kind": "declaration",
+      "name": "BEq.beq",
+      "internal": false
+    },
+    {
+      "id": "d:BEq.rfl",
+      "kind": "declaration",
+      "name": "BEq.rfl",
+      "internal": false
+    },
+    {
+      "id": "d:Bad_Name",
+      "kind": "declaration",
+      "name": "Bad_Name",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 15,
+      "endLine": 15,
+      "nameLine": 15,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": false
+    },
+    {
+      "id": "d:Bool",
+      "kind": "declaration",
+      "name": "Bool",
+      "internal": false
+    },
+    {
+      "id": "d:Bool.false",
+      "kind": "declaration",
+      "name": "Bool.false",
+      "internal": false
+    },
+    {
+      "id": "d:Bool.false_eq_true",
+      "kind": "declaration",
+      "name": "Bool.false_eq_true",
+      "internal": false
+    },
+    {
+      "id": "d:Bool.true",
+      "kind": "declaration",
+      "name": "Bool.true",
+      "internal": false
+    },
+    {
+      "id": "d:Decidable",
+      "kind": "declaration",
+      "name": "Decidable",
+      "internal": false
+    },
+    {
+      "id": "d:Decidable.byContradiction",
+      "kind": "declaration",
+      "name": "Decidable.byContradiction",
+      "internal": false
+    },
+    {
+      "id": "d:Decidable.decide",
+      "kind": "declaration",
+      "name": "Decidable.decide",
+      "internal": false
+    },
+    {
+      "id": "d:DecidableLE",
+      "kind": "declaration",
+      "name": "DecidableLE",
+      "internal": false
+    },
+    {
+      "id": "d:Eq",
+      "kind": "declaration",
+      "name": "Eq",
+      "internal": false
+    },
+    {
+      "id": "d:Eq.mp",
+      "kind": "declaration",
+      "name": "Eq.mp",
+      "internal": false
+    },
+    {
+      "id": "d:Eq.mpr",
+      "kind": "declaration",
+      "name": "Eq.mpr",
+      "internal": false
+    },
+    {
+      "id": "d:Eq.ndrec",
+      "kind": "declaration",
+      "name": "Eq.ndrec",
+      "internal": false
+    },
+    {
+      "id": "d:Eq.refl",
+      "kind": "declaration",
+      "name": "Eq.refl",
+      "internal": false
+    },
+    {
+      "id": "d:Eq.symm",
+      "kind": "declaration",
+      "name": "Eq.symm",
+      "internal": false
+    },
+    {
+      "id": "d:Eq.trans",
+      "kind": "declaration",
+      "name": "Eq.trans",
+      "internal": false
+    },
+    {
+      "id": "d:EquivBEq.toReflBEq",
+      "kind": "declaration",
+      "name": "EquivBEq.toReflBEq",
+      "internal": false
+    },
+    {
+      "id": "d:False",
+      "kind": "declaration",
+      "name": "False",
+      "internal": false
+    },
+    {
+      "id": "d:False.elim",
+      "kind": "declaration",
+      "name": "False.elim",
+      "internal": false
+    },
+    {
+      "id": "d:GT.gt",
+      "kind": "declaration",
+      "name": "GT.gt",
+      "internal": false
+    },
+    {
+      "id": "d:GetElem?.getElem?",
+      "kind": "declaration",
+      "name": "GetElem?.getElem?",
+      "internal": false
+    },
+    {
+      "id": "d:HAdd.hAdd",
+      "kind": "declaration",
+      "name": "HAdd.hAdd",
+      "internal": false
+    },
+    {
+      "id": "d:HAppend.hAppend",
+      "kind": "declaration",
+      "name": "HAppend.hAppend",
+      "internal": false
+    },
+    {
+      "id": "d:HMul.hMul",
+      "kind": "declaration",
+      "name": "HMul.hMul",
+      "internal": false
+    },
+    {
+      "id": "d:HSub.hSub",
+      "kind": "declaration",
+      "name": "HSub.hSub",
+      "internal": false
+    },
+    {
+      "id": "d:Iff",
+      "kind": "declaration",
+      "name": "Iff",
+      "internal": false
+    },
+    {
+      "id": "d:Iff.intro",
+      "kind": "declaration",
+      "name": "Iff.intro",
+      "internal": false
+    },
+    {
+      "id": "d:Iff.mp",
+      "kind": "declaration",
+      "name": "Iff.mp",
+      "internal": false
+    },
+    {
+      "id": "d:Iff.mpr",
+      "kind": "declaration",
+      "name": "Iff.mpr",
+      "internal": false
+    },
+    {
+      "id": "d:Inhabited",
+      "kind": "declaration",
+      "name": "Inhabited",
+      "internal": false
+    },
+    {
+      "id": "d:Inhabited.mk",
+      "kind": "declaration",
+      "name": "Inhabited.mk",
+      "internal": false
+    },
+    {
+      "id": "d:Int",
+      "kind": "declaration",
+      "name": "Int",
+      "internal": false
+    },
+    {
+      "id": "d:Int.add_one_le_of_lt",
+      "kind": "declaration",
+      "name": "Int.add_one_le_of_lt",
+      "internal": false
+    },
+    {
+      "id": "d:Int.instAdd",
+      "kind": "declaration",
+      "name": "Int.instAdd",
+      "internal": false
+    },
+    {
+      "id": "d:Int.instDecidableEq",
+      "kind": "declaration",
+      "name": "Int.instDecidableEq",
+      "internal": false
+    },
+    {
+      "id": "d:Int.instLEInt",
+      "kind": "declaration",
+      "name": "Int.instLEInt",
+      "internal": false
+    },
+    {
+      "id": "d:Int.instMul",
+      "kind": "declaration",
+      "name": "Int.instMul",
+      "internal": false
+    },
+    {
+      "id": "d:Int.instNegInt",
+      "kind": "declaration",
+      "name": "Int.instNegInt",
+      "internal": false
+    },
+    {
+      "id": "d:Int.instSub",
+      "kind": "declaration",
+      "name": "Int.instSub",
+      "internal": false
+    },
+    {
+      "id": "d:Int.le_total",
+      "kind": "declaration",
+      "name": "Int.le_total",
+      "internal": false
+    },
+    {
+      "id": "d:Int.le_trans",
+      "kind": "declaration",
+      "name": "Int.le_trans",
+      "internal": false
+    },
+    {
+      "id": "d:Int.natCast_add",
+      "kind": "declaration",
+      "name": "Int.natCast_add",
+      "internal": false
+    },
+    {
+      "id": "d:Int.natCast_mul",
+      "kind": "declaration",
+      "name": "Int.natCast_mul",
+      "internal": false
+    },
+    {
+      "id": "d:Int.natCast_nonneg",
+      "kind": "declaration",
+      "name": "Int.natCast_nonneg",
+      "internal": false
+    },
+    {
+      "id": "d:Int.sub_eq_zero_of_eq",
+      "kind": "declaration",
+      "name": "Int.sub_eq_zero_of_eq",
+      "internal": false
+    },
+    {
+      "id": "d:Int.sub_nonneg_of_le",
+      "kind": "declaration",
+      "name": "Int.sub_nonneg_of_le",
+      "internal": false
+    },
+    {
+      "id": "d:LE",
+      "kind": "declaration",
+      "name": "LE",
+      "internal": false
+    },
+    {
+      "id": "d:LE.le",
+      "kind": "declaration",
+      "name": "LE.le",
+      "internal": false
+    },
+    {
+      "id": "d:LT.lt",
+      "kind": "declaration",
+      "name": "LT.lt",
+      "internal": false
+    },
+    {
+      "id": "d:LawfulBEq",
+      "kind": "declaration",
+      "name": "LawfulBEq",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Name",
+      "kind": "declaration",
+      "name": "Lean.Name",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Name.anonymous",
+      "kind": "declaration",
+      "name": "Lean.Name.anonymous",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Name.num",
+      "kind": "declaration",
+      "name": "Lean.Name.num",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Name.str",
+      "kind": "declaration",
+      "name": "Lean.Name.str",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Coeffs.isZero",
+      "kind": "declaration",
+      "name": "Lean.Omega.Coeffs.isZero",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Coeffs.ofList",
+      "kind": "declaration",
+      "name": "Lean.Omega.Coeffs.ofList",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Constraint.addEquality_sat",
+      "kind": "declaration",
+      "name": "Lean.Omega.Constraint.addEquality_sat",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Constraint.addInequality_sat",
+      "kind": "declaration",
+      "name": "Lean.Omega.Constraint.addInequality_sat",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Constraint.combine_sat'",
+      "kind": "declaration",
+      "name": "Lean.Omega.Constraint.combine_sat'",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Constraint.isImpossible",
+      "kind": "declaration",
+      "name": "Lean.Omega.Constraint.isImpossible",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Constraint.mk",
+      "kind": "declaration",
+      "name": "Lean.Omega.Constraint.mk",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Constraint.not_sat'_of_isImpossible",
+      "kind": "declaration",
+      "name": "Lean.Omega.Constraint.not_sat'_of_isImpossible",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Int.add_congr",
+      "kind": "declaration",
+      "name": "Lean.Omega.Int.add_congr",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Int.mul_congr",
+      "kind": "declaration",
+      "name": "Lean.Omega.Int.mul_congr",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Int.ofNat_congr",
+      "kind": "declaration",
+      "name": "Lean.Omega.Int.ofNat_congr",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Int.ofNat_le_of_le",
+      "kind": "declaration",
+      "name": "Lean.Omega.Int.ofNat_le_of_le",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Int.ofNat_lt_of_lt",
+      "kind": "declaration",
+      "name": "Lean.Omega.Int.ofNat_lt_of_lt",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.Int.sub_congr",
+      "kind": "declaration",
+      "name": "Lean.Omega.Int.sub_congr",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.add_eval",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.add_eval",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.coordinate",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.coordinate",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.coordinate_eval_0",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.coordinate_eval_0",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.coordinate_eval_1",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.coordinate_eval_1",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.eval",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.eval",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.instAdd",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.instAdd",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.instSub",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.instSub",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.mk",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.mk",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.mul",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.mul",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.mul_eval",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.mul_eval",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.LinearCombo.sub_eval",
+      "kind": "declaration",
+      "name": "Lean.Omega.LinearCombo.sub_eval",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.combo_sat'",
+      "kind": "declaration",
+      "name": "Lean.Omega.combo_sat'",
+      "internal": false
+    },
+    {
+      "id": "d:Lean.Omega.tidy_sat",
+      "kind": "declaration",
+      "name": "Lean.Omega.tidy_sat",
+      "internal": false
+    },
+    {
+      "id": "d:List",
+      "kind": "declaration",
+      "name": "List",
+      "internal": false
+    },
+    {
+      "id": "d:List.Pairwise",
+      "kind": "declaration",
+      "name": "List.Pairwise",
+      "internal": false
+    },
+    {
+      "id": "d:List.Pairwise.nil",
+      "kind": "declaration",
+      "name": "List.Pairwise.nil",
+      "internal": false
+    },
+    {
+      "id": "d:List.Pairwise.sublist",
+      "kind": "declaration",
+      "name": "List.Pairwise.sublist",
+      "internal": false
+    },
+    {
+      "id": "d:List.Perm",
+      "kind": "declaration",
+      "name": "List.Perm",
+      "internal": false
+    },
+    {
+      "id": "d:List.Perm.cons",
+      "kind": "declaration",
+      "name": "List.Perm.cons",
+      "internal": false
+    },
+    {
+      "id": "d:List.Perm.length_eq",
+      "kind": "declaration",
+      "name": "List.Perm.length_eq",
+      "internal": false
+    },
+    {
+      "id": "d:List.Perm.mem_iff",
+      "kind": "declaration",
+      "name": "List.Perm.mem_iff",
+      "internal": false
+    },
+    {
+      "id": "d:List.Perm.refl",
+      "kind": "declaration",
+      "name": "List.Perm.refl",
+      "internal": false
+    },
+    {
+      "id": "d:List.Perm.swap",
+      "kind": "declaration",
+      "name": "List.Perm.swap",
+      "internal": false
+    },
+    {
+      "id": "d:List.Perm.trans",
+      "kind": "declaration",
+      "name": "List.Perm.trans",
+      "internal": false
+    },
+    {
+      "id": "d:List.Sublist",
+      "kind": "declaration",
+      "name": "List.Sublist",
+      "internal": false
+    },
+    {
+      "id": "d:List.below",
+      "kind": "declaration",
+      "name": "List.below",
+      "internal": false
+    },
+    {
+      "id": "d:List.brecOn",
+      "kind": "declaration",
+      "name": "List.brecOn",
+      "internal": false
+    },
+    {
+      "id": "d:List.casesOn",
+      "kind": "declaration",
+      "name": "List.casesOn",
+      "internal": false
+    },
+    {
+      "id": "d:List.cons",
+      "kind": "declaration",
+      "name": "List.cons",
+      "internal": false
+    },
+    {
+      "id": "d:List.decidableBAll",
+      "kind": "declaration",
+      "name": "List.decidableBAll",
+      "internal": false
+    },
+    {
+      "id": "d:List.instAppend",
+      "kind": "declaration",
+      "name": "List.instAppend",
+      "internal": false
+    },
+    {
+      "id": "d:List.instDecidablePairwise",
+      "kind": "declaration",
+      "name": "List.instDecidablePairwise",
+      "internal": false
+    },
+    {
+      "id": "d:List.instGetElem?NatLtLength",
+      "kind": "declaration",
+      "name": "List.instGetElem?NatLtLength",
+      "internal": false
+    },
+    {
+      "id": "d:List.instLawfulGetElemNatLtLength",
+      "kind": "declaration",
+      "name": "List.instLawfulGetElemNatLtLength",
+      "internal": false
+    },
+    {
+      "id": "d:List.instMembership",
+      "kind": "declaration",
+      "name": "List.instMembership",
+      "internal": false
+    },
+    {
+      "id": "d:List.length",
+      "kind": "declaration",
+      "name": "List.length",
+      "internal": false
+    },
+    {
+      "id": "d:List.mem_cons",
+      "kind": "declaration",
+      "name": "List.mem_cons",
+      "internal": false
+    },
+    {
+      "id": "d:List.mem_cons_self",
+      "kind": "declaration",
+      "name": "List.mem_cons_self",
+      "internal": false
+    },
+    {
+      "id": "d:List.mem_of_getElem?",
+      "kind": "declaration",
+      "name": "List.mem_of_getElem?",
+      "internal": false
+    },
+    {
+      "id": "d:List.nil",
+      "kind": "declaration",
+      "name": "List.nil",
+      "internal": false
+    },
+    {
+      "id": "d:List.not_mem_nil",
+      "kind": "declaration",
+      "name": "List.not_mem_nil",
+      "internal": false
+    },
+    {
+      "id": "d:List.pairwise_append",
+      "kind": "declaration",
+      "name": "List.pairwise_append",
+      "internal": false
+    },
+    {
+      "id": "d:List.pairwise_cons",
+      "kind": "declaration",
+      "name": "List.pairwise_cons",
+      "internal": false
+    },
+    {
+      "id": "d:List.rec",
+      "kind": "declaration",
+      "name": "List.rec",
+      "internal": false
+    },
+    {
+      "id": "d:Maithic.Algo.Sorted",
+      "kind": "declaration",
+      "name": "Maithic.Algo.Sorted",
+      "internal": true,
+      "declKind": "definition",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 30,
+      "endLine": 31,
+      "nameLine": 31,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.Sorted.head_le",
+      "kind": "declaration",
+      "name": "Maithic.Algo.Sorted.head_le",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 56,
+      "endLine": 58,
+      "nameLine": 57,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.Sorted.sublist",
+      "kind": "declaration",
+      "name": "Maithic.Algo.Sorted.sublist",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 60,
+      "endLine": 62,
+      "nameLine": 61,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.Sorted.tail",
+      "kind": "declaration",
+      "name": "Maithic.Algo.Sorted.tail",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 52,
+      "endLine": 54,
+      "nameLine": 53,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.SortedArray",
+      "kind": "declaration",
+      "name": "Maithic.Algo.SortedArray",
+      "internal": true,
+      "declKind": "definition",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 33,
+      "endLine": 34,
+      "nameLine": 34,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.TotalPreorder",
+      "kind": "declaration",
+      "name": "Maithic.Algo.TotalPreorder",
+      "internal": true,
+      "declKind": "class",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 19,
+      "endLine": 22,
+      "nameLine": 20,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.TotalPreorder.le_total",
+      "kind": "declaration",
+      "name": "Maithic.Algo.TotalPreorder.le_total",
+      "internal": false
+    },
+    {
+      "id": "d:Maithic.Algo.TotalPreorder.le_trans",
+      "kind": "declaration",
+      "name": "Maithic.Algo.TotalPreorder.le_trans",
+      "internal": false
+    },
+    {
+      "id": "d:Maithic.Algo.TotalPreorder.mk",
+      "kind": "declaration",
+      "name": "Maithic.Algo.TotalPreorder.mk",
+      "internal": false
+    },
+    {
+      "id": "d:Maithic.Algo.insertSorted",
+      "kind": "declaration",
+      "name": "Maithic.Algo.insertSorted",
+      "internal": true,
+      "declKind": "definition",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 20,
+      "endLine": 23,
+      "nameLine": 21,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.insertSorted_perm",
+      "kind": "declaration",
+      "name": "Maithic.Algo.insertSorted_perm",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 49,
+      "endLine": 57,
+      "nameLine": 50,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.insertionSort",
+      "kind": "declaration",
+      "name": "Maithic.Algo.insertionSort",
+      "internal": true,
+      "declKind": "definition",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 25,
+      "endLine": 28,
+      "nameLine": 26,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.insertionSort_idem",
+      "kind": "declaration",
+      "name": "Maithic.Algo.insertionSort_idem",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 113,
+      "endLine": 116,
+      "nameLine": 114,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.insertionSort_of_sorted",
+      "kind": "declaration",
+      "name": "Maithic.Algo.insertionSort_of_sorted",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 102,
+      "endLine": 111,
+      "nameLine": 103,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.insertionSort_perm",
+      "kind": "declaration",
+      "name": "Maithic.Algo.insertionSort_perm",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 88,
+      "endLine": 92,
+      "nameLine": 89,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "kind": "declaration",
+      "name": "Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "internal": true,
+      "declKind": "instance",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 39,
+      "endLine": 40,
+      "nameLine": 39,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": false
+    },
+    {
+      "id": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "kind": "declaration",
+      "name": "Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "internal": true,
+      "declKind": "instance",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 36,
+      "endLine": 37,
+      "nameLine": 36,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": false
+    },
+    {
+      "id": "d:Maithic.Algo.instTotalPreorderInt",
+      "kind": "declaration",
+      "name": "Maithic.Algo.instTotalPreorderInt",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 26,
+      "endLine": 26,
+      "nameLine": 26,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": false
+    },
+    {
+      "id": "d:Maithic.Algo.instTotalPreorderNat",
+      "kind": "declaration",
+      "name": "Maithic.Algo.instTotalPreorderNat",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 24,
+      "endLine": 24,
+      "nameLine": 24,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": false
+    },
+    {
+      "id": "d:Maithic.Algo.length_insertionSort",
+      "kind": "declaration",
+      "name": "Maithic.Algo.length_insertionSort",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 94,
+      "endLine": 96,
+      "nameLine": 95,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.linearSearch",
+      "kind": "declaration",
+      "name": "Maithic.Algo.linearSearch",
+      "internal": true,
+      "declKind": "definition",
+      "file": "lean/Maithic/Algo/Sort/Linear.lean",
+      "line": 19,
+      "endLine": 22,
+      "nameLine": 20,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.linearSearch_first",
+      "kind": "declaration",
+      "name": "Maithic.Algo.linearSearch_first",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Linear.lean",
+      "line": 43,
+      "endLine": 61,
+      "nameLine": 44,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "kind": "declaration",
+      "name": "Maithic.Algo.linearSearch_isSome_iff",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Linear.lean",
+      "line": 79,
+      "endLine": 90,
+      "nameLine": 80,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.linearSearch_none",
+      "kind": "declaration",
+      "name": "Maithic.Algo.linearSearch_none",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Linear.lean",
+      "line": 63,
+      "endLine": 77,
+      "nameLine": 64,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.linearSearch_some",
+      "kind": "declaration",
+      "name": "Maithic.Algo.linearSearch_some",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Linear.lean",
+      "line": 24,
+      "endLine": 41,
+      "nameLine": 25,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.mem_insertSorted",
+      "kind": "declaration",
+      "name": "Maithic.Algo.mem_insertSorted",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 30,
+      "endLine": 47,
+      "nameLine": 31,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.mem_insertionSort",
+      "kind": "declaration",
+      "name": "Maithic.Algo.mem_insertionSort",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 98,
+      "endLine": 100,
+      "nameLine": 99,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.sorted_append",
+      "kind": "declaration",
+      "name": "Maithic.Algo.sorted_append",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 64,
+      "endLine": 68,
+      "nameLine": 66,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.sorted_cons",
+      "kind": "declaration",
+      "name": "Maithic.Algo.sorted_cons",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 47,
+      "endLine": 50,
+      "nameLine": 49,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.sorted_insertSorted",
+      "kind": "declaration",
+      "name": "Maithic.Algo.sorted_insertSorted",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 59,
+      "endLine": 80,
+      "nameLine": 60,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.sorted_insertionSort",
+      "kind": "declaration",
+      "name": "Maithic.Algo.sorted_insertionSort",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "line": 82,
+      "endLine": 86,
+      "nameLine": 83,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "documented": true
+    },
+    {
+      "id": "d:Maithic.Algo.sorted_nil",
+      "kind": "declaration",
+      "name": "Maithic.Algo.sorted_nil",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 42,
+      "endLine": 42,
+      "nameLine": 42,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": false
+    },
+    {
+      "id": "d:Maithic.Algo.sorted_singleton",
+      "kind": "declaration",
+      "name": "Maithic.Algo.sorted_singleton",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "line": 44,
+      "endLine": 45,
+      "nameLine": 44,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "documented": false
+    },
+    {
+      "id": "d:Membership.mem",
+      "kind": "declaration",
+      "name": "Membership.mem",
+      "internal": false
+    },
+    {
+      "id": "d:Nat",
+      "kind": "declaration",
+      "name": "Nat",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.add_comm",
+      "kind": "declaration",
+      "name": "Nat.add_comm",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.below",
+      "kind": "declaration",
+      "name": "Nat.below",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.brecOn",
+      "kind": "declaration",
+      "name": "Nat.brecOn",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.casesAuxOn",
+      "kind": "declaration",
+      "name": "Nat.casesAuxOn",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.casesOn",
+      "kind": "declaration",
+      "name": "Nat.casesOn",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.cast",
+      "kind": "declaration",
+      "name": "Nat.cast",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.decLt",
+      "kind": "declaration",
+      "name": "Nat.decLt",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.le_of_not_lt",
+      "kind": "declaration",
+      "name": "Nat.le_of_not_lt",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.le_total",
+      "kind": "declaration",
+      "name": "Nat.le_total",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.le_trans",
+      "kind": "declaration",
+      "name": "Nat.le_trans",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.lt_or_gt_of_ne",
+      "kind": "declaration",
+      "name": "Nat.lt_or_gt_of_ne",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.recAux",
+      "kind": "declaration",
+      "name": "Nat.recAux",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.succ",
+      "kind": "declaration",
+      "name": "Nat.succ",
+      "internal": false
+    },
+    {
+      "id": "d:Nat.zero_lt_succ",
+      "kind": "declaration",
+      "name": "Nat.zero_lt_succ",
+      "internal": false
+    },
+    {
+      "id": "d:Ne",
+      "kind": "declaration",
+      "name": "Ne",
+      "internal": false
+    },
+    {
+      "id": "d:Neg.neg",
+      "kind": "declaration",
+      "name": "Neg.neg",
+      "internal": false
+    },
+    {
+      "id": "d:Not",
+      "kind": "declaration",
+      "name": "Not",
+      "internal": false
+    },
+    {
+      "id": "d:OfNat.ofNat",
+      "kind": "declaration",
+      "name": "OfNat.ofNat",
+      "internal": false
+    },
+    {
+      "id": "d:Option",
+      "kind": "declaration",
+      "name": "Option",
+      "internal": false
+    },
+    {
+      "id": "d:Option.casesOn",
+      "kind": "declaration",
+      "name": "Option.casesOn",
+      "internal": false
+    },
+    {
+      "id": "d:Option.ctorIdx",
+      "kind": "declaration",
+      "name": "Option.ctorIdx",
+      "internal": false
+    },
+    {
+      "id": "d:Option.isSome",
+      "kind": "declaration",
+      "name": "Option.isSome",
+      "internal": false
+    },
+    {
+      "id": "d:Option.map",
+      "kind": "declaration",
+      "name": "Option.map",
+      "internal": false
+    },
+    {
+      "id": "d:Option.map_eq_none_iff",
+      "kind": "declaration",
+      "name": "Option.map_eq_none_iff",
+      "internal": false
+    },
+    {
+      "id": "d:Option.none",
+      "kind": "declaration",
+      "name": "Option.none",
+      "internal": false
+    },
+    {
+      "id": "d:Option.some",
+      "kind": "declaration",
+      "name": "Option.some",
+      "internal": false
+    },
+    {
+      "id": "d:Option.some.injEq",
+      "kind": "declaration",
+      "name": "Option.some.injEq",
+      "internal": false
+    },
+    {
+      "id": "d:Or",
+      "kind": "declaration",
+      "name": "Or",
+      "internal": false
+    },
+    {
+      "id": "d:Or.casesOn",
+      "kind": "declaration",
+      "name": "Or.casesOn",
+      "internal": false
+    },
+    {
+      "id": "d:Or.elim",
+      "kind": "declaration",
+      "name": "Or.elim",
+      "internal": false
+    },
+    {
+      "id": "d:Or.inl",
+      "kind": "declaration",
+      "name": "Or.inl",
+      "internal": false
+    },
+    {
+      "id": "d:Or.inr",
+      "kind": "declaration",
+      "name": "Or.inr",
+      "internal": false
+    },
+    {
+      "id": "d:Or.resolve_left",
+      "kind": "declaration",
+      "name": "Or.resolve_left",
+      "internal": false
+    },
+    {
+      "id": "d:PProd",
+      "kind": "declaration",
+      "name": "PProd",
+      "internal": false
+    },
+    {
+      "id": "d:Point",
+      "kind": "declaration",
+      "name": "Point",
+      "internal": true,
+      "declKind": "structure",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 22,
+      "endLine": 24,
+      "nameLine": 22,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": false
+    },
+    {
+      "id": "d:Point.mk",
+      "kind": "declaration",
+      "name": "Point.mk",
+      "internal": false
+    },
+    {
+      "id": "d:Point3",
+      "kind": "declaration",
+      "name": "Point3",
+      "internal": true,
+      "declKind": "structure",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 32,
+      "endLine": 34,
+      "nameLine": 33,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:True",
+      "kind": "declaration",
+      "name": "True",
+      "internal": false
+    },
+    {
+      "id": "d:Unit",
+      "kind": "declaration",
+      "name": "Unit",
+      "internal": false
+    },
+    {
+      "id": "d:Unit.unit",
+      "kind": "declaration",
+      "name": "Unit.unit",
+      "internal": false
+    },
+    {
+      "id": "d:absurd",
+      "kind": "declaration",
+      "name": "absurd",
+      "internal": false
+    },
+    {
+      "id": "d:and_self",
+      "kind": "declaration",
+      "name": "and_self",
+      "internal": false
+    },
+    {
+      "id": "d:beq_iff_eq",
+      "kind": "declaration",
+      "name": "beq_iff_eq",
+      "internal": false
+    },
+    {
+      "id": "d:by_shortcut",
+      "kind": "declaration",
+      "name": "by_shortcut",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 30,
+      "endLine": 30,
+      "nameLine": 30,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "shortcut"
+      ],
+      "documented": false
+    },
+    {
+      "id": "d:congr",
+      "kind": "declaration",
+      "name": "congr",
+      "internal": false
+    },
+    {
+      "id": "d:congrArg",
+      "kind": "declaration",
+      "name": "congrArg",
+      "internal": false
+    },
+    {
+      "id": "d:congrFun'",
+      "kind": "declaration",
+      "name": "congrFun'",
+      "internal": false
+    },
+    {
+      "id": "d:dite",
+      "kind": "declaration",
+      "name": "dite",
+      "internal": false
+    },
+    {
+      "id": "d:double",
+      "kind": "declaration",
+      "name": "double",
+      "internal": true,
+      "declKind": "definition",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 3,
+      "endLine": 6,
+      "nameLine": 4,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": true
+    },
+    {
+      "id": "d:double_eq",
+      "kind": "declaration",
+      "name": "double_eq",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 8,
+      "endLine": 13,
+      "nameLine": 8,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "documented": false
+    },
+    {
+      "id": "d:eq_false",
+      "kind": "declaration",
+      "name": "eq_false",
+      "internal": false
+    },
+    {
+      "id": "d:eq_false'",
+      "kind": "declaration",
+      "name": "eq_false'",
+      "internal": false
+    },
+    {
+      "id": "d:eq_self",
+      "kind": "declaration",
+      "name": "eq_self",
+      "internal": false
+    },
+    {
+      "id": "d:eq_true",
+      "kind": "declaration",
+      "name": "eq_true",
+      "internal": false
+    },
+    {
+      "id": "d:false_implies",
+      "kind": "declaration",
+      "name": "false_implies",
+      "internal": false
+    },
+    {
+      "id": "d:forall_congr",
+      "kind": "declaration",
+      "name": "forall_congr",
+      "internal": false
+    },
+    {
+      "id": "d:getElem?_pos",
+      "kind": "declaration",
+      "name": "getElem?_pos",
+      "internal": false
+    },
+    {
+      "id": "d:id",
+      "kind": "declaration",
+      "name": "id",
+      "internal": false
+    },
+    {
+      "id": "d:iff_self",
+      "kind": "declaration",
+      "name": "iff_self",
+      "internal": false
+    },
+    {
+      "id": "d:implies_congr",
+      "kind": "declaration",
+      "name": "implies_congr",
+      "internal": false
+    },
+    {
+      "id": "d:implies_true",
+      "kind": "declaration",
+      "name": "implies_true",
+      "internal": false
+    },
+    {
+      "id": "d:instAddNat",
+      "kind": "declaration",
+      "name": "instAddNat",
+      "internal": false
+    },
+    {
+      "id": "d:instDecidableEqBool",
+      "kind": "declaration",
+      "name": "instDecidableEqBool",
+      "internal": false
+    },
+    {
+      "id": "d:instDecidableEqNat",
+      "kind": "declaration",
+      "name": "instDecidableEqNat",
+      "internal": false
+    },
+    {
+      "id": "d:instDecidableOr",
+      "kind": "declaration",
+      "name": "instDecidableOr",
+      "internal": false
+    },
+    {
+      "id": "d:instEquivBEqOfLawfulBEq",
+      "kind": "declaration",
+      "name": "instEquivBEqOfLawfulBEq",
+      "internal": false
+    },
+    {
+      "id": "d:instHAdd",
+      "kind": "declaration",
+      "name": "instHAdd",
+      "internal": false
+    },
+    {
+      "id": "d:instHAppendOfAppend",
+      "kind": "declaration",
+      "name": "instHAppendOfAppend",
+      "internal": false
+    },
+    {
+      "id": "d:instHMul",
+      "kind": "declaration",
+      "name": "instHMul",
+      "internal": false
+    },
+    {
+      "id": "d:instHSub",
+      "kind": "declaration",
+      "name": "instHSub",
+      "internal": false
+    },
+    {
+      "id": "d:instInhabitedPoint",
+      "kind": "declaration",
+      "name": "instInhabitedPoint",
+      "internal": true,
+      "declKind": "instance",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 26,
+      "endLine": 26,
+      "nameLine": 26,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [],
+      "documented": false
+    },
+    {
+      "id": "d:instLENat",
+      "kind": "declaration",
+      "name": "instLENat",
+      "internal": false
+    },
+    {
+      "id": "d:instLTNat",
+      "kind": "declaration",
+      "name": "instLTNat",
+      "internal": false
+    },
+    {
+      "id": "d:instMulNat",
+      "kind": "declaration",
+      "name": "instMulNat",
+      "internal": false
+    },
+    {
+      "id": "d:instNatCastInt",
+      "kind": "declaration",
+      "name": "instNatCastInt",
+      "internal": false
+    },
+    {
+      "id": "d:instOfNat",
+      "kind": "declaration",
+      "name": "instOfNat",
+      "internal": false
+    },
+    {
+      "id": "d:instOfNatNat",
+      "kind": "declaration",
+      "name": "instOfNatNat",
+      "internal": false
+    },
+    {
+      "id": "d:ite",
+      "kind": "declaration",
+      "name": "ite",
+      "internal": false
+    },
+    {
+      "id": "d:ite_eq_left",
+      "kind": "declaration",
+      "name": "ite_eq_left",
+      "internal": false
+    },
+    {
+      "id": "d:ite_eq_left_of_eq_true",
+      "kind": "declaration",
+      "name": "ite_eq_left_of_eq_true",
+      "internal": false
+    },
+    {
+      "id": "d:ite_eq_right",
+      "kind": "declaration",
+      "name": "ite_eq_right",
+      "internal": false
+    },
+    {
+      "id": "d:le_of_le_of_eq",
+      "kind": "declaration",
+      "name": "le_of_le_of_eq",
+      "internal": false
+    },
+    {
+      "id": "d:noConfusion_of_Nat",
+      "kind": "declaration",
+      "name": "noConfusion_of_Nat",
+      "internal": false
+    },
+    {
+      "id": "d:not_false_eq_true",
+      "kind": "declaration",
+      "name": "not_false_eq_true",
+      "internal": false
+    },
+    {
+      "id": "d:not_true_eq_false",
+      "kind": "declaration",
+      "name": "not_true_eq_false",
+      "internal": false
+    },
+    {
+      "id": "d:of_decide_eq_true",
+      "kind": "declaration",
+      "name": "of_decide_eq_true",
+      "internal": false
+    },
+    {
+      "id": "d:of_eq_true",
+      "kind": "declaration",
+      "name": "of_eq_true",
+      "internal": false
+    },
+    {
+      "id": "d:open_one",
+      "kind": "declaration",
+      "name": "open_one",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 17,
+      "endLine": 18,
+      "nameLine": 17,
+      "usesSorry": true,
+      "containsSorry": true,
+      "axioms": [
+        "sorryAx"
+      ],
+      "documented": false
+    },
+    {
+      "id": "d:or_false",
+      "kind": "declaration",
+      "name": "or_false",
+      "internal": false
+    },
+    {
+      "id": "d:propext",
+      "kind": "declaration",
+      "name": "propext",
+      "internal": false
+    },
+    {
+      "id": "d:shortcut",
+      "kind": "declaration",
+      "name": "shortcut",
+      "internal": true,
+      "declKind": "axiom",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 28,
+      "endLine": 28,
+      "nameLine": 28,
+      "usesSorry": false,
+      "containsSorry": false,
+      "axioms": [
+        "shortcut"
+      ],
+      "documented": false
+    },
+    {
+      "id": "d:sorryAx",
+      "kind": "declaration",
+      "name": "sorryAx",
+      "internal": false
+    },
+    {
+      "id": "d:term_gap",
+      "kind": "declaration",
+      "name": "term_gap",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 36,
+      "endLine": 36,
+      "nameLine": 36,
+      "usesSorry": true,
+      "containsSorry": true,
+      "axioms": [
+        "sorryAx"
+      ],
+      "documented": false
+    },
+    {
+      "id": "d:uses_open",
+      "kind": "declaration",
+      "name": "uses_open",
+      "internal": true,
+      "declKind": "theorem",
+      "file": "fixtures/intel/lean/Demo.lean",
+      "line": 20,
+      "endLine": 20,
+      "nameLine": 20,
+      "usesSorry": true,
+      "containsSorry": false,
+      "axioms": [
+        "sorryAx"
+      ],
+      "documented": false
+    },
+    {
+      "id": "f:fixtures/intel/lean/Demo.lean",
+      "kind": "file",
+      "name": "fixtures/intel/lean/Demo.lean",
+      "internal": true,
+      "file": "fixtures/intel/lean/Demo.lean"
+    },
+    {
+      "id": "f:lean/Maithic/Algo/Sort/Insertion.lean",
+      "kind": "file",
+      "name": "lean/Maithic/Algo/Sort/Insertion.lean",
+      "internal": true,
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean"
+    },
+    {
+      "id": "f:lean/Maithic/Algo/Sort/Linear.lean",
+      "kind": "file",
+      "name": "lean/Maithic/Algo/Sort/Linear.lean",
+      "internal": true,
+      "file": "lean/Maithic/Algo/Sort/Linear.lean"
+    },
+    {
+      "id": "f:lean/Maithic/Algo/Spec/Sorted.lean",
+      "kind": "file",
+      "name": "lean/Maithic/Algo/Spec/Sorted.lean",
+      "internal": true,
+      "file": "lean/Maithic/Algo/Spec/Sorted.lean"
+    },
+    {
+      "id": "m:Init",
+      "kind": "module",
+      "name": "Init",
+      "internal": false
+    },
+    {
+      "id": "m:Maithic.Algo.Sort.Insertion",
+      "kind": "module",
+      "name": "Maithic.Algo.Sort.Insertion",
+      "internal": true,
+      "file": "lean/Maithic/Algo/Sort/Insertion.lean"
+    },
+    {
+      "id": "m:Maithic.Algo.Sort.Linear",
+      "kind": "module",
+      "name": "Maithic.Algo.Sort.Linear",
+      "internal": true,
+      "file": "lean/Maithic/Algo/Sort/Linear.lean"
+    },
+    {
+      "id": "m:Maithic.Algo.Spec.Sorted",
+      "kind": "module",
+      "name": "Maithic.Algo.Spec.Sorted",
+      "internal": true
+    },
+    {
+      "id": "m:fixtures.intel.lean.Demo",
+      "kind": "module",
+      "name": "fixtures.intel.lean.Demo",
+      "internal": true,
+      "file": "fixtures/intel/lean/Demo.lean"
+    },
+    {
+      "id": "n:Maithic",
+      "kind": "namespace",
+      "name": "Maithic",
+      "internal": true
+    },
+    {
+      "id": "n:Maithic.Algo",
+      "kind": "namespace",
+      "name": "Maithic.Algo",
+      "internal": true
+    },
+    {
+      "id": "n:Maithic.Algo.Sorted",
+      "kind": "namespace",
+      "name": "Maithic.Algo.Sorted",
+      "internal": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "d:Bad_Name",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Bad_Name",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Bad_Name",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Bad_Name",
+      "target": "d:Nat.add_comm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Bad_Name",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Bad_Name",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted",
+      "target": "d:List.Pairwise",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:And",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:And.left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:Iff.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:Maithic.Algo.sorted_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.head_le",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.sublist",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.sublist",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.sublist",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.sublist",
+      "target": "d:List.Pairwise.sublist",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.sublist",
+      "target": "d:List.Sublist",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.sublist",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:And",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:And.right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:Iff.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:Maithic.Algo.sorted_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.Sorted.tail",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.SortedArray",
+      "target": "d:Array",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.SortedArray",
+      "target": "d:Array.toList",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.SortedArray",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.SortedArray",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.TotalPreorder",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:List.below",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:List.brecOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:List.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:PProd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:Unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:Unit.unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:Eq.mpr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.Perm",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.Perm.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.Perm.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.Perm.swap",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.Perm.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:Not",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:congrFun'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:dite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:id",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:ite_eq_left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertSorted_perm",
+      "target": "d:ite_eq_right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:List.below",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:List.brecOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:List.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:PProd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:Unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort",
+      "target": "d:Unit.unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:Maithic.Algo.TotalPreorder",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:Maithic.Algo.insertionSort_of_sorted",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_idem",
+      "target": "d:Maithic.Algo.sorted_insertionSort",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:And",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:And.left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:And.right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Eq.mpr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Eq.ndrec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Eq.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Eq.symm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Iff.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:List.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:List.mem_cons_self",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Maithic.Algo.sorted_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:True",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:congrFun'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:eq_self",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:id",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:ite_eq_left_of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_of_sorted",
+      "target": "d:of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List.Perm",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List.Perm.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List.Perm.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List.Perm.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:Maithic.Algo.insertSorted_perm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.insertionSort_perm",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:Decidable",
+      "kind": "instance-of"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:Array",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:Array.toList",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:Decidable",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:Maithic.Algo.SortedArray",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "target": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:Decidable",
+      "kind": "instance-of"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:Decidable",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:List.instDecidablePairwise",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderInt",
+      "target": "d:Int",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderInt",
+      "target": "d:Int.instLEInt",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderInt",
+      "target": "d:Int.le_total",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderInt",
+      "target": "d:Int.le_trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderInt",
+      "target": "d:Maithic.Algo.TotalPreorder",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderInt",
+      "target": "d:Maithic.Algo.TotalPreorder.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderNat",
+      "target": "d:Maithic.Algo.TotalPreorder",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderNat",
+      "target": "d:Maithic.Algo.TotalPreorder.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderNat",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderNat",
+      "target": "d:Nat.le_total",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderNat",
+      "target": "d:Nat.le_trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.instTotalPreorderNat",
+      "target": "d:instLENat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:List.Perm.length_eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:List.length",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:Maithic.Algo.insertionSort_perm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.length_insertionSort",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:BEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:BEq.beq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Bool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Bool.true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:List.below",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:List.brecOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:List.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Option",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Option.map",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Option.none",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Option.some",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:PProd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:Unit.unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:instDecidableEqBool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:BEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:BEq.beq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Bool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Bool.true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Decidable.byContradiction",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Decidable.decide",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Eq.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Eq.mpr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Eq.ndrec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Eq.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Eq.symm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:False",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:False.elim",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:GetElem?.getElem?",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:HSub.hSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.add_one_le_of_lt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.instAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.instLEInt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.instNegInt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.instSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.natCast_add",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.natCast_nonneg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.sub_eq_zero_of_eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Int.sub_nonneg_of_le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:LT.lt",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:LawfulBEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Coeffs.ofList",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Constraint.addEquality_sat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Constraint.addInequality_sat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Constraint.combine_sat'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Constraint.isImpossible",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Constraint.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Constraint.not_sat'_of_isImpossible",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Int.add_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Int.ofNat_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Int.ofNat_le_of_le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Int.ofNat_lt_of_lt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.Int.sub_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.add_eval",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.coordinate",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.coordinate_eval_0",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.coordinate_eval_1",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.eval",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.instAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.instSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.LinearCombo.sub_eval",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.combo_sat'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Lean.Omega.tidy_sat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:List.instGetElem?NatLtLength",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:List.instLawfulGetElemNatLtLength",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:List.length",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Maithic.Algo.linearSearch",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Nat.casesAuxOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Nat.cast",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Nat.decLt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Nat.le_of_not_lt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Nat.succ",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Nat.zero_lt_succ",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Ne",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Neg.neg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Not",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Option",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Option.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Option.ctorIdx",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Option.map",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Option.none",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Option.some",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:Option.some.injEq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:True",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:beq_iff_eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:congrFun'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:dite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:eq_false'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:getElem?_pos",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:id",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instDecidableEqBool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instHSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instLTNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instNatCastInt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instOfNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:ite_eq_left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:ite_eq_right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:le_of_le_of_eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:noConfusion_of_Nat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:of_decide_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_first",
+      "target": "d:propext",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:BEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Bool",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Bool.false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Bool.false_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Bool.true",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Eq.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Eq.ndrec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Eq.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Eq.symm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:False",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:False.elim",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Iff",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Iff.intro",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:LawfulBEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:List.mem_of_getElem?",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Maithic.Algo.linearSearch",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Maithic.Algo.linearSearch_none",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Maithic.Algo.linearSearch_some",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Option",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Option.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Option.isSome",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Option.none",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:Option.some",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:absurd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "target": "d:congrFun'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:BEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:BEq.beq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:BEq.rfl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Bool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Bool.true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Eq.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Eq.ndrec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:EquivBEq.toReflBEq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:False",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:False.elim",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Iff.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:LawfulBEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:List.mem_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:List.not_mem_nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Maithic.Algo.linearSearch",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Not",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Option",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Option.ctorIdx",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Option.map",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Option.map_eq_none_iff",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Option.none",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Option.some",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Or",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:Or.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:True",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:congrFun'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:dite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:eq_false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:eq_false'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:eq_self",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:instDecidableEqBool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:instEquivBEqOfLawfulBEq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:ite_eq_left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:ite_eq_right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:noConfusion_of_Nat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:not_false_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:not_true_eq_false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_none",
+      "target": "d:propext",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:BEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:BEq.beq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Bool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Bool.true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Eq.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Eq.mpr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Eq.ndrec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Eq.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Eq.symm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:False",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:False.elim",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:GetElem?.getElem?",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:LT.lt",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:LawfulBEq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:List.instGetElem?NatLtLength",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:List.instLawfulGetElemNatLtLength",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:List.length",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Maithic.Algo.linearSearch",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Nat.succ",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Nat.zero_lt_succ",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Not",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Option",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Option.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Option.ctorIdx",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Option.map",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Option.none",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Option.some",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:Option.some.injEq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:True",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:beq_iff_eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:congrFun'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:dite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:eq_false'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:getElem?_pos",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:id",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:instDecidableEqBool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:instLTNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:ite_eq_left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:ite_eq_right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:noConfusion_of_Nat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.linearSearch_some",
+      "target": "d:propext",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Eq.mpr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:False",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Iff",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Iff.intro",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:List.mem_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:List.not_mem_nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Not",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Or",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Or.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Or.inl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:Or.inr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:True",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:congrFun'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:dite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:eq_false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:id",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:iff_self",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:ite_eq_left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:ite_eq_right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:or_false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertSorted",
+      "target": "d:propext",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:Iff",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:List.Perm.mem_iff",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:Maithic.Algo.insertionSort_perm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.mem_insertionSort",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:And",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:HAppend.hAppend",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:Iff",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:List.instAppend",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:List.pairwise_append",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_append",
+      "target": "d:instHAppendOfAppend",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:And",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:Iff",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:List.pairwise_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_cons",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:And",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:And.intro",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:And.left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:And.right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Eq.mpr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Eq.ndrec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Iff.mp",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Iff.mpr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:List.mem_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.TotalPreorder",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.TotalPreorder.le_total",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.TotalPreorder.le_trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.mem_insertSorted",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.sorted_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Maithic.Algo.sorted_singleton",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Not",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Or",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Or.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:Or.resolve_left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:True",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:dite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:id",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:ite",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:ite_eq_left",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:ite_eq_right",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertSorted",
+      "target": "d:of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:DecidableLE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:List.rec",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:Maithic.Algo.TotalPreorder",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:Maithic.Algo.sorted_insertSorted",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_insertionSort",
+      "target": "d:Maithic.Algo.sorted_nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_nil",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_nil",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_nil",
+      "target": "d:List.Pairwise.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_nil",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_nil",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:And",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:Eq.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:False",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:LE",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:LE.le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List.Pairwise",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List.Pairwise.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List.instMembership",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List.not_mem_nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:List.pairwise_cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:Membership.mem",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:True",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:and_self",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:congrArg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:eq_false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:false_implies",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:forall_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:implies_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:implies_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:of_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Maithic.Algo.sorted_singleton",
+      "target": "d:propext",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:Point3",
+      "target": "d:Point",
+      "kind": "extends"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:by_shortcut",
+      "target": "d:shortcut",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double",
+      "target": "d:Nat.below",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:Nat.brecOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:Nat.casesOn",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:Nat.succ",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:PProd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:Unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:Unit.unit",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Bool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Bool.true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Decidable.byContradiction",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Decidable.decide",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Eq.refl",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Eq.symm",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Eq.trans",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:False",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:GT.gt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:HMul.hMul",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:HSub.hSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.add_one_le_of_lt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.instAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.instDecidableEq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.instLEInt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.instMul",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.instNegInt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.instSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.natCast_add",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.natCast_mul",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.sub_eq_zero_of_eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Int.sub_nonneg_of_le",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:LT.lt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Coeffs.isZero",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Coeffs.ofList",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Constraint.addEquality_sat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Constraint.addInequality_sat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Constraint.isImpossible",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Constraint.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Constraint.not_sat'_of_isImpossible",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Int.add_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Int.mul_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Int.ofNat_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Int.ofNat_lt_of_lt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.Int.sub_congr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.add_eval",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.coordinate",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.coordinate_eval_0",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.coordinate_eval_1",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.eval",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.instAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.instSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.mul",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.mul_eval",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.LinearCombo.sub_eval",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.combo_sat'",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Lean.Omega.tidy_sat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:List.cons",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:List.decidableBAll",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:List.nil",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Nat.cast",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Nat.lt_or_gt_of_ne",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Nat.recAux",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Neg.neg",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Not",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Option.none",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Option.some",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Or",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:Or.elim",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:double",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:id",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instDecidableEqBool",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instDecidableEqNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instDecidableOr",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instHMul",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instHSub",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instLTNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instMulNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instNatCastInt",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instOfNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:le_of_le_of_eq",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:double_eq",
+      "target": "d:of_decide_eq_true",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:Inhabited",
+      "kind": "instance-of"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:Inhabited",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:Inhabited.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:Point",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:Point.mk",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:instInhabitedPoint",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:Bool.false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:Lean.Name",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:Lean.Name.anonymous",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:Lean.Name.num",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:Lean.Name.str",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:open_one",
+      "target": "d:sorryAx",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:shortcut",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:shortcut",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:shortcut",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:shortcut",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:shortcut",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:shortcut",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:shortcut",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:Bool.false",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:Lean.Name",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:Lean.Name.anonymous",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:Lean.Name.num",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:Lean.Name.str",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:term_gap",
+      "target": "d:sorryAx",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:Eq",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:HAdd.hAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:Nat",
+      "kind": "uses",
+      "via": "both"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:OfNat.ofNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:instAddNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:instHAdd",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:instOfNatNat",
+      "kind": "uses",
+      "via": "type"
+    },
+    {
+      "source": "d:uses_open",
+      "target": "d:open_one",
+      "kind": "uses",
+      "via": "value"
+    },
+    {
+      "source": "f:fixtures/intel/lean/Demo.lean",
+      "target": "m:fixtures.intel.lean.Demo",
+      "kind": "contains"
+    },
+    {
+      "source": "f:lean/Maithic/Algo/Sort/Insertion.lean",
+      "target": "m:Maithic.Algo.Sort.Insertion",
+      "kind": "contains"
+    },
+    {
+      "source": "f:lean/Maithic/Algo/Sort/Linear.lean",
+      "target": "m:Maithic.Algo.Sort.Linear",
+      "kind": "contains"
+    },
+    {
+      "source": "f:lean/Maithic/Algo/Spec/Sorted.lean",
+      "target": "m:Maithic.Algo.Spec.Sorted",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.insertSorted_perm",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.insertionSort_idem",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.insertionSort_of_sorted",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.insertionSort_perm",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.length_insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.mem_insertSorted",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.mem_insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.sorted_insertSorted",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "d:Maithic.Algo.sorted_insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "m:Init",
+      "kind": "imports"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Insertion",
+      "target": "m:Maithic.Algo.Spec.Sorted",
+      "kind": "imports"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Linear",
+      "target": "d:Maithic.Algo.linearSearch",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Linear",
+      "target": "d:Maithic.Algo.linearSearch_first",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Linear",
+      "target": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Linear",
+      "target": "d:Maithic.Algo.linearSearch_none",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Linear",
+      "target": "d:Maithic.Algo.linearSearch_some",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Sort.Linear",
+      "target": "m:Init",
+      "kind": "imports"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.Sorted.head_le",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.Sorted.sublist",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.Sorted.tail",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.SortedArray",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.TotalPreorder",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.instTotalPreorderInt",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.instTotalPreorderNat",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.sorted_append",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.sorted_cons",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.sorted_nil",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "d:Maithic.Algo.sorted_singleton",
+      "kind": "contains"
+    },
+    {
+      "source": "m:Maithic.Algo.Spec.Sorted",
+      "target": "m:Init",
+      "kind": "imports"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:Bad_Name",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:Point",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:Point3",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:by_shortcut",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:double",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:double_eq",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:instInhabitedPoint",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:open_one",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:shortcut",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:term_gap",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "d:uses_open",
+      "kind": "contains"
+    },
+    {
+      "source": "m:fixtures.intel.lean.Demo",
+      "target": "m:Init",
+      "kind": "imports"
+    },
+    {
+      "source": "n:Maithic",
+      "target": "n:Maithic.Algo",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.Sorted",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.SortedArray",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.TotalPreorder",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.insertSorted",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.insertSorted_perm",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.insertionSort_idem",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.insertionSort_of_sorted",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.insertionSort_perm",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.instDecidableSortedArrayOfDecidableLE",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.instDecidableSortedOfDecidableLE",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.instTotalPreorderInt",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.instTotalPreorderNat",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.length_insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.linearSearch",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.linearSearch_first",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.linearSearch_isSome_iff",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.linearSearch_none",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.linearSearch_some",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.mem_insertSorted",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.mem_insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.sorted_append",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.sorted_cons",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.sorted_insertSorted",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.sorted_insertionSort",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.sorted_nil",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "d:Maithic.Algo.sorted_singleton",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo",
+      "target": "n:Maithic.Algo.Sorted",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo.Sorted",
+      "target": "d:Maithic.Algo.Sorted.head_le",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo.Sorted",
+      "target": "d:Maithic.Algo.Sorted.sublist",
+      "kind": "contains"
+    },
+    {
+      "source": "n:Maithic.Algo.Sorted",
+      "target": "d:Maithic.Algo.Sorted.tail",
+      "kind": "contains"
+    }
+  ]
+}

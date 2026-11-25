@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="t d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="t">The proving loop</title>
+  <desc id="d">A theorem enters. The automation portfolio and, if needed, a model propose proofs. Every proposal passes a screen, is checked by the Lean kernel, is judged by the trust policy and is re-checked in a fresh process. Failed proposals return to the model together with the errors Lean reported.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5B6477"/></marker>
+    <marker id="v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0FA89B"/></marker>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E5484D"/></marker>
+  </defs>
+  <rect width="960" height="420" fill="#FAF8F4"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#14162B" textLength="178.4" lengthAdjust="spacingAndGlyphs">The proving loop</text>
+  <text x="40" y="68" font-size="14" fill="#5B6477" textLength="560.3" lengthAdjust="spacingAndGlyphs">Every proposal takes the same path, whoever made it. Only the last box can say “verified”.</text>
+
+  <g font-size="15" font-weight="600" text-anchor="middle">
+    <rect x="40" y="150" width="130" height="70" rx="10" fill="#E8E9F3" stroke="#2B2F77" stroke-width="1.5"/>
+    <text x="105" y="181" fill="#14162B" textLength="63.3" lengthAdjust="spacingAndGlyphs">Theorem</text>
+    <text x="105" y="201" font-size="12" font-weight="400" fill="#5B6477" textLength="55.4" lengthAdjust="spacingAndGlyphs">a Lean file</text>
+
+    <rect x="220" y="100" width="150" height="62" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+    <text x="295" y="127" fill="#14162B" textLength="61.7" lengthAdjust="spacingAndGlyphs">Portfolio</text>
+    <text x="295" y="146" font-size="12" font-weight="400" fill="#5B6477" textLength="130.7" lengthAdjust="spacingAndGlyphs">rfl · simp · omega · grind</text>
+
+    <rect x="220" y="208" width="150" height="62" rx="10" fill="#FFFFFF" stroke="#F0A92E" stroke-width="2"/>
+    <text x="295" y="235" fill="#14162B" textLength="43.3" lengthAdjust="spacingAndGlyphs">Model</text>
+    <text x="295" y="254" font-size="12" font-weight="400" fill="#5B6477" textLength="130.1" lengthAdjust="spacingAndGlyphs">Anthropic · OpenAI · xAI</text>
+
+    <rect x="420" y="150" width="110" height="70" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+    <text x="475" y="181" fill="#14162B" textLength="50.0" lengthAdjust="spacingAndGlyphs">Screen</text>
+    <text x="475" y="201" font-size="12" font-weight="400" fill="#5B6477" textLength="69.4" lengthAdjust="spacingAndGlyphs">no code runs</text>
+
+    <rect x="570" y="150" width="110" height="70" rx="10" fill="#0FA89B"/>
+    <text x="625" y="181" fill="#FFFFFF" textLength="46.7" lengthAdjust="spacingAndGlyphs">Kernel</text>
+    <text x="625" y="201" font-size="12" font-weight="400" fill="#FFFFFF" textLength="36.7" lengthAdjust="spacingAndGlyphs">Lean 4</text>
+
+    <rect x="720" y="150" width="100" height="70" rx="10" fill="#FFFFFF" stroke="#0FA89B" stroke-width="2"/>
+    <text x="770" y="181" fill="#14162B" textLength="44.2" lengthAdjust="spacingAndGlyphs">Policy</text>
+    <text x="770" y="201" font-size="12" font-weight="400" fill="#5B6477" textLength="61.4" lengthAdjust="spacingAndGlyphs">axiom audit</text>
+
+    <rect x="850" y="150" width="80" height="70" rx="10" fill="#14162B"/>
+    <text x="890" y="181" fill="#FAF8F4" textLength="40.8" lengthAdjust="spacingAndGlyphs">Fresh</text>
+    <text x="890" y="201" font-size="12" font-weight="400" fill="#E8E9F3" textLength="46.0" lengthAdjust="spacingAndGlyphs">re-check</text>
+  </g>
+
+  <g fill="none" stroke="#5B6477" stroke-width="1.6" marker-end="url(#a)">
+    <path d="M170 175 L 214 135"/>
+    <path d="M170 195 L 214 235"/>
+    <path d="M370 131 L 414 170"/>
+    <path d="M370 239 L 414 200"/>
+    <path d="M530 185 L 564 185"/>
+    <path d="M680 185 L 714 185"/>
+    <path d="M820 185 L 844 185"/>
+  </g>
+  <path d="M625 220 L 625 320 L 295 320 L 295 276" fill="none" stroke="#E5484D" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#c)"/>
+  <text x="460" y="342" font-size="13" text-anchor="middle" fill="#E5484D" textLength="347.4" lengthAdjust="spacingAndGlyphs">Lean’s exact error goes back to the model for the next round</text>
+
+  <rect x="820" y="262" width="110" height="38" rx="19" fill="#0FA89B"/>
+  <text x="875" y="286" font-size="15" font-weight="700" text-anchor="middle" fill="#FFFFFF" textLength="53.4" lengthAdjust="spacingAndGlyphs">verified</text>
+  <path d="M890 220 L 880 256" fill="none" stroke="#0FA89B" stroke-width="1.8" marker-end="url(#v)"/>
+  <text x="40" y="392" font-size="13" fill="#5B6477" textLength="762.4" lengthAdjust="spacingAndGlyphs">The portfolio runs first because it is free and deterministic. A model is asked only when the portfolio fails and a provider is configured.</text>
+</svg>

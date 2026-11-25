@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 913 337" width="913" height="337" role="img" aria-label="A terminal session: a solver finds the exact point x = 3, y = 0 where a statement about rationals fails, and Lean accepts the refutation built from it.">
+  <title>A terminal session: a solver finds the exact point x = 3, y = 0 where a statement about rationals fails, and Lean accepts the refutation built from it.</title>
+  <rect width="913" height="337" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h893a10 10 0 0 1 10 10v26h-913z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="457" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic refute --method oracle</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="626.40" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic refute examples/conjectures.lean --theorem within_budget --method oracle</text>
+    <text x="22.00" y="77" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">within_budget</text>
+    <text x="139.45" y="77" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">examples/conjectures.lean:18</text>
+    <text x="37.66" y="96" textLength="751.68" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem within_budget (x y : Rat) (h₁ : 2 * x + 3 * y ≤ 6) (h₂ : 0 ≤ x) (h₃ : 0 ≤ y) : x + y ≤ 2</text>
+    <text x="37.66" y="115" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">oracle</text>
+    <text x="115.96" y="115" textLength="501.12" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">a solver found a point where the statement fails: x := 3, y := 0</text>
+    <text x="37.66" y="134" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean</text>
+    <text x="115.96" y="134" textLength="775.17" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">accepts the refutation, closed by decide +kernel; it rests on Classical.choice, Quot.sound, propext</text>
+    <text x="37.66" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F26D72">refuted</text>
+    <text x="115.96" y="153" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">the statement is false</text>
+    <text x="53.32" y="191" textLength="657.72" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem _root_.maithic_refutation_of_within_budget : ¬ type_of% @within_budget := by</text>
+    <text x="68.98" y="210" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">intro h</text>
+    <text x="68.98" y="229" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">have h' := h (x := 3) (y := 0)</text>
+    <text x="68.98" y="248" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">revert h'</text>
+    <text x="68.98" y="267" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">decide +kernel</text>
+    <text x="22.00" y="305" textLength="712.53" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">1 statement: 1 refuted, 0 vacuous, 0 with a counterexample Lean did not confirm, 0 standing</text>
+  </g>
+</svg>

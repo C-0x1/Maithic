@@ -1,0 +1,5 @@
+{
+  "schema": "maithic.oracle.outcome/1",
+  "outcome": "unknown",
+  "reason": "the goal is not a polynomial combination of the hypotheses"
+}

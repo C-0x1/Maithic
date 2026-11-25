@@ -1,0 +1,23 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "openai-failed",
+  "provider": "openai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "resp_4",
+    "object": "response",
+    "status": "failed",
+    "error": {
+      "code": "server_error",
+      "message": "The model failed to generate a response."
+    },
+    "model": "gpt-6.2-sol",
+    "output": []
+  },
+  "expect": {
+    "error": "server"
+  }
+}

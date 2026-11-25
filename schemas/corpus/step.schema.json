@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tactic step record",
+  "description": "One tactic of a proof as it ran: the theorem it belongs to, its position among the steps of that theorem, its text, where it stands, every goal before and after it as Lean prints them, how many steps it stands inside (depth, zero for the outline of the proof) and how many stand inside it (inner, zero for a smallest move).",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.corpus.step/1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "theorem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "module": {
+      "type": "string"
+    },
+    "index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tactic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goals_before": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "goals_after": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "inner": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "line": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "column": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "theorem",
+    "module",
+    "index",
+    "tactic",
+    "goals_before",
+    "goals_after",
+    "depth",
+    "inner",
+    "line",
+    "column"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "real",
+  "domain": "real",
+  "variables": ["x", "y"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "-1 <= x"
+    },
+    {
+      "name": "h2",
+      "statement": "x <= 1"
+    },
+    {
+      "name": "h3",
+      "statement": "-1 <= y"
+    },
+    {
+      "name": "h4",
+      "statement": "y <= 1"
+    },
+    {
+      "name": "h5",
+      "statement": "x^2 + y^2 <= 1 / 2"
+    }
+  ],
+  "goal": "x + y <= 6 / 5"
+}

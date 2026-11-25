@@ -1,0 +1,231 @@
+{
+  "schema": "maithic.bridge.session/1",
+  "name": "whole-file",
+  "title": "Whole-file checks: positions, imports, unfinished proofs and trust facts",
+  "steps": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "checkFile",
+        "params": {
+          "source": "import Std\n\ntheorem t (xs : List Nat) : (xs ++ []).length = xs.length := by\n  simp\n\ntheorem u : 1 = 2 := by\n  decide\n"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": false,
+            "errors": 1,
+            "diagnostics": [
+              {
+                "severity": "error",
+                "line": 7,
+                "column": 2,
+                "text": {
+                  "$contains": "is false"
+                }
+              }
+            ],
+            "decls": [
+              {
+                "name": "t",
+                "kind": "theorem",
+                "usesSorry": false
+              },
+              {
+                "name": "u",
+                "usesSorry": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "checkFile",
+        "params": {
+          "source": "theorem unfinished (a b : Nat) : a + b = b + a := by\n  sorry\n",
+          "names": [
+            "unfinished"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true,
+            "errors": 0,
+            "warnings": 1,
+            "decls": [
+              {
+                "name": "unfinished",
+                "usesSorry": true,
+                "axioms": [
+                  "sorryAx"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "checkFile",
+        "params": {
+          "source": "axiom shortcut : ∀ n : Nat, n = 0\ntheorem wrong : 5 = 0 := shortcut 5\n",
+          "names": [
+            "wrong"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true,
+            "decls": [
+              {
+                "name": "wrong",
+                "kind": "theorem",
+                "axioms": [
+                  "shortcut"
+                ],
+                "usesSorry": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "checkFile",
+        "params": {
+          "source": "theorem fast : 2 ^ 64 = 18446744073709551616 := by native_decide\n",
+          "names": [
+            "fast"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true,
+            "decls": [
+              {
+                "name": "fast",
+                "axioms": [
+                  {
+                    "$contains": "fast._native.native_decide"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "method": "checkFile",
+        "params": {
+          "source": "import NoSuchModule.Anywhere\ntheorem t : True := trivial\n"
+        }
+      },
+      "expect": {
+        "error": {
+          "code": -32000,
+          "data": {
+            "code": "MTH-BRG-0101"
+          },
+          "message": {
+            "$contains": "NoSuchModule"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "method": "checkFile",
+        "params": {
+          "source": "theorem kept : 1 + 1 = 2 := rfl\n",
+          "keep": true
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 3,
+          "report": {
+            "ok": true,
+            "decls": [
+              {
+                "name": "kept",
+                "axioms": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "method": "runCommand",
+        "params": {
+          "env": 3,
+          "source": "example : 1 + 1 = 2 := kept"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "method": "checkFile",
+        "params": {
+          "source": "theorem missing : 1 = 1 := rfl",
+          "names": [
+            "missing",
+            "absent"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "decls": [
+              {
+                "name": "missing",
+                "found": true
+              },
+              {
+                "name": "absent",
+                "found": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

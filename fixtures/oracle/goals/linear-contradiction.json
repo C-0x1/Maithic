@@ -1,0 +1,21 @@
+{
+  "schema": "maithic.oracle.goal/1",
+  "kind": "linear",
+  "domain": "rat",
+  "variables": ["x", "y"],
+  "hypotheses": [
+    {
+      "name": "h1",
+      "statement": "x + y <= 1"
+    },
+    {
+      "name": "h2",
+      "statement": "x >= 1"
+    },
+    {
+      "name": "h3",
+      "statement": "y >= 1 / 2"
+    }
+  ],
+  "goal": "false"
+}

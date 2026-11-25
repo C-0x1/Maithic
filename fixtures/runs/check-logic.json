@@ -1,0 +1,226 @@
+{
+  "schema": "maithic.check.report/1",
+  "file": "lean/Maithic/Oracle/Logic/Examples.lean",
+  "ok": true,
+  "errors": 0,
+  "warnings": 0,
+  "declarations": 21,
+  "theorems": [
+    {
+      "name": "Maithic.Oracle.Logic.Examples.chain",
+      "statement": "∀ {p q r s : Prop}, (p → q) → (q → r) → (r → s) → p → s",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.contraposition",
+      "statement": "∀ {p q : Prop}, p → q ↔ ¬q → ¬p",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.eq_of_le_of_le",
+      "statement": "∀ (a b : Int), a ≤ b → b ≤ a → a = b",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.eq_of_not_lt_of_not_gt",
+      "statement": "∀ (x : Nat), x < 3 ∨ x = 3 ∨ x > 3 → ¬x < 3 → ¬x > 3 → x = 3",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.equation_and_bound",
+      "statement": "∀ (x y : Int), x + y = 10 → x ≤ 3 → y ≤ 6 → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.excluded_middle_valid",
+      "statement": "((Maithic.Oracle.Logic.Formula.atom 0).or (Maithic.Oracle.Logic.Formula.atom 0).not).Valid",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.imp_not_valid",
+      "statement": "¬((Maithic.Oracle.Logic.Formula.atom 0).imp (Maithic.Oracle.Logic.Formula.atom 1)).Valid",
+      "status": "verified",
+      "axioms": [
+        "propext"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.modus_ponens",
+      "statement": "∀ {p q : Prop}, p → (p → q) → q",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.no_integer_point",
+      "statement": "∀ (x y : Int), 2 * x + 4 * y < 7 → x + 2 * y ≥ 4 → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.not_and_iff",
+      "statement": "∀ {p q : Prop}, ¬(p ∧ q) ↔ ¬p ∨ ¬q",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.not_forall_imp",
+      "statement": "¬∀ (a b : Prop), a → b",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.not_or_iff",
+      "statement": "∀ {p q : Prop}, ¬(p ∨ q) ↔ ¬p ∧ ¬q",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.or_and_distrib",
+      "statement": "∀ {p q r : Prop}, p ∨ q ∧ r ↔ (p ∨ q) ∧ (p ∨ r)",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.peirce",
+      "statement": "∀ {p q : Prop}, ((p → q) → p) → p",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.pigeonhole",
+      "statement": "∀ {a₁ a₂ b₁ b₂ c₁ c₂ : Prop},\n  a₁ ∨ a₂ →\n    b₁ ∨ b₂ →\n      c₁ ∨ c₂ → ¬(a₁ ∧ b₁) → ¬(a₁ ∧ c₁) → ¬(b₁ ∧ c₁) → ¬(a₂ ∧ b₂) → ¬(a₂ ∧ c₂) → ¬(b₂ ∧ c₂) → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.pigeonhole'",
+      "statement": "∀ {a₁ a₂ b₁ b₂ c₁ c₂ : Prop},\n  a₁ ∨ a₂ →\n    b₁ ∨ b₂ →\n      c₁ ∨ c₂ → ¬(a₁ ∧ b₁) → ¬(a₁ ∧ c₁) → ¬(b₁ ∧ c₁) → ¬(a₂ ∧ b₂) → ¬(a₂ ∧ c₂) → ¬(b₂ ∧ c₂) → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.pigeonhole_four_three",
+      "statement": "∀ {a₁ a₂ a₃ b₁ b₂ b₃ c₁ c₂ c₃ d₁ d₂ d₃ : Prop},\n  a₁ ∨ a₂ ∨ a₃ →\n    b₁ ∨ b₂ ∨ b₃ →\n      c₁ ∨ c₂ ∨ c₃ →\n        d₁ ∨ d₂ ∨ d₃ →\n          ¬(a₁ ∧ b₁) ∧ ¬(a₁ ∧ c₁) ∧ ¬(a₁ ∧ d₁) ∧ ¬(b₁ ∧ c₁) ∧ ¬(b₁ ∧ d₁) ∧ ¬(c₁ ∧ d₁) →\n            ¬(a₂ ∧ b₂) ∧ ¬(a₂ ∧ c₂) ∧ ¬(a₂ ∧ d₂) ∧ ¬(b₂ ∧ c₂) ∧ ¬(b₂ ∧ d₂) ∧ ¬(c₂ ∧ d₂) →\n              ¬(a₃ ∧ b₃) ∧ ¬(a₃ ∧ c₃) ∧ ¬(a₃ ∧ d₃) ∧ ¬(b₃ ∧ c₃) ∧ ¬(b₃ ∧ d₃) ∧ ¬(c₃ ∧ d₃) → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.resolve",
+      "statement": "∀ {p q r : Prop}, p ∨ q → ¬p ∨ r → q ∨ r",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.twoAtoms_unsatisfiable",
+      "statement": "Maithic.Oracle.Logic.Examples.twoAtoms.Unsatisfiable",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "Maithic.Oracle.Logic.Examples.twoAtoms_unsatisfiable'",
+      "statement": "Maithic.Oracle.Logic.Examples.twoAtoms.Unsatisfiable",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    }
+  ],
+  "diagnostics": []
+}

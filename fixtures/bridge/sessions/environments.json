@@ -1,0 +1,275 @@
+{
+  "schema": "maithic.bridge.session/1",
+  "name": "environments",
+  "title": "Header deduplication, derived environments and disposal",
+  "steps": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "loadHeader",
+        "params": {
+          "imports": [
+            "Init"
+          ]
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 1,
+          "cached": false
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "loadHeader",
+        "params": {
+          "imports": []
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 1,
+          "cached": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "def double (n : Nat) : Nat := n + n",
+          "keep": true
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 2,
+          "report": {
+            "ok": true,
+            "decls": [
+              {
+                "name": "double",
+                "kind": "def",
+                "type": "Nat → Nat",
+                "axioms": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "runCommand",
+        "params": {
+          "env": 2,
+          "source": "theorem double_eq (n : Nat) : double n = 2 * n := by unfold double; omega\ndef quadruple (n : Nat) : Nat := double (double n)",
+          "keep": true
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 3,
+          "report": {
+            "ok": true,
+            "decls": [
+              {
+                "name": "double_eq",
+                "kind": "theorem"
+              },
+              {
+                "name": "quadruple",
+                "kind": "def"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "def double (n : Nat) : Nat := 2 * n\n#eval double 21"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true,
+            "diagnostics": [
+              {
+                "severity": "info",
+                "line": 2,
+                "text": "42"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "method": "runCommand",
+        "params": {
+          "env": 2,
+          "source": "def double (n : Nat) : Nat := 2 * n"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": false,
+            "errors": 1
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "method": "runCommand",
+        "params": {
+          "env": 1,
+          "source": "def broken : Nat := \"text\"",
+          "keep": true
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": false
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "method": "stats"
+      },
+      "expect": {
+        "result": {
+          "environments": 3,
+          "headers": 1,
+          "headerHits": 1,
+          "headerMisses": 1
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 9,
+        "method": "releaseEnv",
+        "params": {
+          "env": 3
+        }
+      },
+      "expect": {
+        "result": {
+          "released": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 10,
+        "method": "releaseEnv",
+        "params": {
+          "env": 3
+        }
+      },
+      "expect": {
+        "result": {
+          "released": false
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 11,
+        "method": "runCommand",
+        "params": {
+          "env": 3,
+          "source": "#eval 1"
+        }
+      },
+      "expect": {
+        "error": {
+          "code": -32001,
+          "data": {
+            "code": "MTH-BRG-0102"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 12,
+        "method": "runCommand",
+        "params": {
+          "env": 2,
+          "source": "example : double 2 = 4 := rfl"
+        }
+      },
+      "expect": {
+        "result": {
+          "report": {
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 13,
+        "method": "releaseEnv",
+        "params": {
+          "env": 1
+        }
+      },
+      "expect": {
+        "result": {
+          "released": true
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 14,
+        "method": "loadHeader",
+        "params": {
+          "imports": []
+        }
+      },
+      "expect": {
+        "result": {
+          "env": 4,
+          "cached": false
+        }
+      }
+    }
+  ]
+}

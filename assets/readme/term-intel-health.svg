@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 569 375" width="569" height="375" role="img" aria-label="A terminal session: maithic intel health counts declarations by kind, lists every unfinished proof with its open goal, and names the axioms the code relies on.">
+  <title>A terminal session: maithic intel health counts declarations by kind, lists every unfinished proof with its open goal, and names the axioms the code relies on.</title>
+  <rect width="569" height="375" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h549a10 10 0 0 1 10 10v26h-569z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="284" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic intel health</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="321.03" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic intel health --dir fixtures/intel</text>
+    <text x="22.00" y="77" textLength="493.29" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">4 file(s), 41 declaration(s), 26 documented, 3 resting on sorry</text>
+    <text x="22.00" y="115" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">unfinished (3)</text>
+    <text x="37.66" y="134" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/intel/lean/Demo.lean:18:2</text>
+    <text x="319.54" y="134" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">open_one</text>
+    <text x="68.98" y="153" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">n : Nat</text>
+    <text x="68.98" y="172" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">⊢ n + 0 = n</text>
+    <text x="37.66" y="191" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/intel/lean/Demo.lean:20:8</text>
+    <text x="319.54" y="191" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">uses_open</text>
+    <text x="405.67" y="191" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(through open_one)</text>
+    <text x="37.66" y="210" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">fixtures/intel/lean/Demo.lean:36:8</text>
+    <text x="319.54" y="210" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">term_gap</text>
+    <text x="22.00" y="248" textLength="234.90" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axioms beyond Lean's logic (1)</text>
+    <text x="37.66" y="267" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">shortcut</text>
+    <text x="115.96" y="267" textLength="148.77" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">used by by_shortcut</text>
+    <text x="22.00" y="305" textLength="172.26" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">axioms of Lean's logic</text>
+    <text x="37.66" y="324" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Quot.sound</text>
+    <text x="178.60" y="324" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">7 declaration(s)</text>
+    <text x="37.66" y="343" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">propext</text>
+    <text x="178.60" y="343" textLength="133.11" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">15 declaration(s)</text>
+  </g>
+</svg>

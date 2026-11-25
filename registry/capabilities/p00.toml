@@ -1,0 +1,169 @@
+# Capability register for P00 Platform.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P00"
+name = "Platform"
+title = "Platform foundation"
+mission = "Provide what every other part shares: the `maithic` command with one set of options and exit codes, configuration, schemas for every document that crosses a language boundary, and the tools that keep the repository honest."
+
+[[group]]
+id = "P00-01"
+title = "Command-line interface"
+language = "OCaml"
+path = "ocaml/bin/maithic/ and ocaml/lib/cli/"
+purpose = "The `maithic` command: one consistent interface to everything."
+
+  [[group.capability]]
+  id = "P00-01-01"
+  title = "Global options"
+  spec = "`--config`, `--provider`, `--model`, `--json`, `--quiet`, `--verbose` and `--no-color`."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_cli.ml"]
+
+  [[group.capability]]
+  id = "P00-01-02"
+  title = "Version command"
+  spec = "Print version, build information and component versions."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P00-01-03"
+  title = "Doctor command"
+  spec = "Check toolchains, services, keys and sandbox features and print remedies."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml"]
+
+  [[group.capability]]
+  id = "P00-01-04"
+  title = "Exit code table"
+  spec = "Documented, stable exit codes shared by all commands."
+  status = "done"
+  tests = ["ocaml/test/test_schema.ml"]
+
+  [[group.capability]]
+  id = "P00-01-05"
+  title = "JSON output mode"
+  spec = "Machine-readable output for every command."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_cli.ml"]
+
+  [[group.capability]]
+  id = "P00-01-06"
+  title = "Error presentation"
+  spec = "Errors with cause, context and suggested next step."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_cli.ml", "ocaml/test/test_schema.ml"]
+
+[[group]]
+id = "P00-02"
+title = "Configuration and workspace"
+language = "OCaml"
+path = "ocaml/lib/config/"
+purpose = "One layered, validated configuration for the whole product."
+
+  [[group.capability]]
+  id = "P00-02-01"
+  title = "Configuration file"
+  spec = "`maithic.toml` with documented sections."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-02"
+  title = "Layered precedence"
+  spec = "Defaults, system, user, project, environment, then command-line flags."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-03"
+  title = "Schema validation"
+  spec = "Validate configuration with precise error locations."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-04"
+  title = "Environment variables"
+  spec = "`MAITHIC_*` variables for every setting."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-05"
+  title = "Typed access"
+  spec = "Typed configuration record used across the code base."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-06"
+  title = "Default configuration"
+  spec = "Sensible defaults that work offline."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-07"
+  title = "Configuration reference generation"
+  spec = "Generate the reference documentation from the schema."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-08"
+  title = "Configuration tests"
+  spec = "Precedence and validation tests."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-09"
+  title = "Workspace discovery"
+  spec = "Find the workspace from the current directory upward."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-10"
+  title = "Secrets separation"
+  spec = "Secrets are never stored in the project configuration file."
+  status = "done"
+  tests = ["ocaml/test/test_config.ml"]
+
+  [[group.capability]]
+  id = "P00-02-11"
+  title = "Effective configuration display"
+  spec = "Show the merged configuration and where each value came from."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_config.ml"]
+
+[[group]]
+id = "P00-03"
+title = "Packaging and distribution"
+language = "OCaml, shell"
+path = "deploy/, ocaml/tools/, .github/workflows/"
+purpose = "Gets Maithic onto users' machines reproducibly."
+
+  [[group.capability]]
+  id = "P00-03-01"
+  title = "Version stamping"
+  spec = "One version source for all components."
+  status = "done"
+  tests = ["ocaml/test/test_tools.ml"]
+
+  [[group.capability]]
+  id = "P00-03-02"
+  title = "Language share tool"
+  spec = "Tool that measures the share of code per language and enforces the 85 percent rule."
+  status = "done"
+  tests = ["ocaml/test/test_tools.ml"]
+
+  [[group.capability]]
+  id = "P00-03-03"
+  title = "Capability register tool"
+  spec = "Tool that checks every capability identifier against the register and its tests."
+  status = "done"
+  tests = ["ocaml/test/test_tools.ml"]

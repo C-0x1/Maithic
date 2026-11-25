@@ -1,0 +1,11 @@
+; Unit tests. They need neither Lean nor a network: the Bridge is played by a
+; stub that replays recorded transcripts, and model calls are served by
+; scripted providers or cassettes.
+
+(tests
+ (names test_base test_schema test_config test_ledger test_bridge test_gateway test_prover test_search test_oracle test_intel test_corpus test_review test_refute test_guide test_mend test_formalize test_council test_blueprint test_lookup test_bench test_nnv test_algolab test_cli test_tools)
+ (libraries maithic_base maithic_schema maithic_config maithic_bridge maithic_gateway maithic_ledger maithic_prover
+   maithic_oracle maithic_intel maithic_corpus maithic_review maithic_refute maithic_guide maithic_mend maithic_formalize maithic_council maithic_blueprint maithic_lookup maithic_bench maithic_nnv maithic_algolab maithic_cli maithic_devtools)
+ (deps
+  (universe)
+  stub/bridge_stub.exe))

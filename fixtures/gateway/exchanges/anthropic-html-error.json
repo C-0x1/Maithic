@@ -1,0 +1,13 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "anthropic-html-error",
+  "provider": "anthropic",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 502,
+  "headers": {},
+  "body": "<html><body>Bad Gateway</body></html>",
+  "expect": {
+    "error": "server"
+  }
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 514" role="img" aria-labelledby="providers-t providers-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="providers-t">The four providers behind one request</title>
+  <desc id="providers-d">Four cards. Anthropic: the Messages API at api.anthropic.com, with the schema of the answer in output_config.format. OpenAI: the Responses API at api.openai.com, with a strict schema in text.format and store false. xAI: the Responses API at api.x.ai by default, chat completions when the registry selects them. Local: chat completions on the local machine, with no key. Every caller builds one provider-independent request and receives one provider-independent response or a typed error.</desc>
+  <rect width="960" height="514" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="431.0" height="134.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="489.0" y="96.0" width="431.0" height="134.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="248.0" width="431.0" height="134.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="489.0" y="248.0" width="431.0" height="134.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="400.0" width="880.0" height="84.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#2B2F77"/>
+  <rect x="54.0" y="194.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M489.0 106.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#2B2F77"/>
+  <rect x="503.0" y="194.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 258.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#2B2F77"/>
+  <rect x="54.0" y="346.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M489.0 258.0a10 10 0 0 1 10-10h411.0a10 10 0 0 1 10 10v26.0h-431.0z" fill="#5B6477"/>
+  <rect x="503.0" y="346.0" width="403.0" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="289.7" lengthAdjust="spacingAndGlyphs">One request, four providers</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="349.5" lengthAdjust="spacingAndGlyphs">--provider anthropic | openai | xai | local</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="63.8" lengthAdjust="spacingAndGlyphs">anthropic</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="86.7" lengthAdjust="spacingAndGlyphs">Messages API.</text>
+  <text x="54.0" y="179.0" font-size="13" fill="#14162B" textLength="324.5" lengthAdjust="spacingAndGlyphs">The schema of the answer goes in output_config.format.</text>
+  <text x="64.0" y="209.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="256.2" lengthAdjust="spacingAndGlyphs">https://api.anthropic.com/v1/messages</text>
+  <text x="503.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="45.1" lengthAdjust="spacingAndGlyphs">openai</text>
+  <text x="503.0" y="155.0" font-size="13" fill="#14162B" textLength="92.5" lengthAdjust="spacingAndGlyphs">Responses API.</text>
+  <text x="503.0" y="179.0" font-size="13" fill="#14162B" textLength="266.6" lengthAdjust="spacingAndGlyphs">A strict schema in text.format, and store: false.</text>
+  <text x="513.0" y="209.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="242.3" lengthAdjust="spacingAndGlyphs">https://api.openai.com/v1/responses</text>
+  <text x="54.0" y="271.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="19.5" lengthAdjust="spacingAndGlyphs">xai</text>
+  <text x="54.0" y="307.0" font-size="13" fill="#14162B" textLength="152.5" lengthAdjust="spacingAndGlyphs">Responses API by default.</text>
+  <text x="54.0" y="331.0" font-size="13" fill="#14162B" textLength="283.2" lengthAdjust="spacingAndGlyphs">Chat completions when the registry selects them.</text>
+  <text x="64.0" y="361.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="200.8" lengthAdjust="spacingAndGlyphs">https://api.x.ai/v1/responses</text>
+  <text x="503.0" y="271.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="31.9" lengthAdjust="spacingAndGlyphs">local</text>
+  <text x="503.0" y="307.0" font-size="13" fill="#14162B" textLength="231.2" lengthAdjust="spacingAndGlyphs">Chat completions on your own machine.</text>
+  <text x="503.0" y="331.0" font-size="13" fill="#14162B" textLength="43.1" lengthAdjust="spacingAndGlyphs">No key.</text>
+  <text x="513.0" y="361.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="290.8" lengthAdjust="spacingAndGlyphs">http://127.0.0.1:11434/v1/chat/completions</text>
+  <text x="56.0" y="425.0" font-size="13" fill="#14162B" textLength="739.3" lengthAdjust="spacingAndGlyphs">A caller builds one provider-independent request and receives one provider-independent response, or one of fifteen typed errors.</text>
+  <text x="56.0" y="449.0" font-size="13" fill="#14162B" textLength="724.8" lengthAdjust="spacingAndGlyphs">The registry config/models.toml maps each quality tier to a model identifier and records the API version. Credentials cannot be</text>
+  <text x="56.0" y="467.0" font-size="13" fill="#14162B" textLength="456.0" lengthAdjust="spacingAndGlyphs">placed in it, and an endpoint must use HTTPS unless it is on the local machine.</text>
+</svg>

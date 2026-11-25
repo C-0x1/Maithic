@@ -1,0 +1,21 @@
+Package: maithicstats
+Title: Statistics for Maithic Runs
+Version: 0.1.0
+Authors@R: person("The Maithic Authors", email = "maintainers@example.org", role = c("aut", "cre"))
+Description: Turns the result files written by the 'maithic' command into
+    estimates with honest uncertainty: binomial intervals for success rates,
+    bootstrap intervals for any metric, and paired comparisons of two
+    configurations on the same problems. Summaries cover benchmark runs, the
+    prover, the trust ledger, gateway usage and retrieval evaluation, and each
+    comes with a table ready for a report.
+License: Apache License (>= 2)
+Encoding: UTF-8
+Depends:
+    R (>= 4.4)
+Imports:
+    jsonlite,
+    stats,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

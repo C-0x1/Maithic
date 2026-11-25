@@ -1,0 +1,337 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prove run",
+  "description": "What `maithic prove FILE --json` writes: for every theorem the outcome, the proof found, each candidate tried with Lean's answer, the decision of the trust policy and the result of the fresh re-check; and the account of the gateway.",
+  "$defs": {
+    "attempt": {
+      "type": "object",
+      "properties": {
+        "round": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proposer": {
+          "type": "string"
+        },
+        "proof": {
+          "type": "string"
+        },
+        "accepted": {
+          "type": "boolean"
+        },
+        "error_class": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        },
+        "elapsed_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "round",
+        "proposer",
+        "proof",
+        "accepted",
+        "elapsed_ms"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "../common.schema.json#/$defs/status"
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "violations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "reasons",
+        "violations"
+      ],
+      "additionalProperties": false
+    },
+    "recheck": {
+      "type": "object",
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "declaration": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "axioms": {
+          "$ref": "../common.schema.json#/$defs/axioms"
+        },
+        "errors": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "elapsed_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lean": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "passed",
+        "declaration",
+        "statement",
+        "axioms",
+        "errors",
+        "elapsed_ms",
+        "lean"
+      ],
+      "additionalProperties": false
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "maithic.prove.result/1"
+        },
+        "file": {
+          "type": "string"
+        },
+        "theorem": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "$ref": "../common.schema.json#/$defs/status"
+        },
+        "proof": {
+          "type": "string"
+        },
+        "proposer": {
+          "type": "string"
+        },
+        "axioms": {
+          "$ref": "../common.schema.json#/$defs/axioms"
+        },
+        "decision": {
+          "$ref": "#/$defs/decision"
+        },
+        "recheck": {
+          "$ref": "#/$defs/recheck"
+        },
+        "attempts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attempt"
+          }
+        },
+        "rounds_used": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ai_note": {
+          "description": "Why no model took part, when none did: the gateway is off, or no key is configured.",
+          "type": "string"
+        },
+        "elapsed_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "schema",
+        "theorem",
+        "statement",
+        "line",
+        "status",
+        "axioms",
+        "decision",
+        "attempts",
+        "rounds_used",
+        "elapsed_ms"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "allowed_axioms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allow_native": {
+          "type": "boolean"
+        },
+        "require_recheck": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "allowed_axioms",
+        "allow_native",
+        "require_recheck"
+      ],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "verified": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "refuted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "conjectured": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unverified": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unknown": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "abstained": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "total",
+        "verified",
+        "checked",
+        "refuted",
+        "conjectured",
+        "unverified",
+        "unknown",
+        "failed",
+        "abstained"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.prove.run/1"
+    },
+    "file": {
+      "type": "string"
+    },
+    "policy": {
+      "$ref": "#/$defs/policy"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/result"
+      }
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    },
+    "gateway": {
+      "$ref": "../gateway/account.schema.json"
+    },
+    "guide": {
+      "type": "object",
+      "description": "The tactic model that ordered the candidates of the step-wise search, when the run had one. Status up: the guidance service answered to the end. Down: it could not be started or stopped answering, for the reason given, and the questions it did not answer were answered with equal priors, which leaves the search as it is without a guide. Idle: no theorem reached the step-wise search, so the service was never started.",
+      "properties": {
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "up",
+            "down",
+            "idle"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "asked": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "answered": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "model",
+        "status",
+        "asked",
+        "answered"
+      ],
+      "additionalProperties": false,
+      "if": {
+        "properties": {
+          "status": {
+            "const": "down"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "reason"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "file",
+    "policy",
+    "results",
+    "summary",
+    "gateway"
+  ],
+  "additionalProperties": false
+}

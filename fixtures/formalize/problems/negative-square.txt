@@ -1,0 +1,1 @@
+Show that the square of a negative integer is positive.

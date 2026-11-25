@@ -1,0 +1,27 @@
+(lang dune 3.16)
+
+(name maithic)
+
+(version 0.1.0)
+
+(generate_opam_files true)
+
+(license Apache-2.0)
+
+(authors "The Maithic Authors")
+
+(maintainers "The Maithic Authors <maintainers@example.org>")
+
+(source
+ (github OWNER/maithic))
+
+(package
+ (name maithic)
+ (synopsis "AI-assisted mathematics and formal verification on Lean 4")
+ (description
+  "Maithic orchestrates model providers, a Lean 4 bridge and numeric services to prove, formalize, review and audit mathematics. AI proposes. The kernel decides.")
+ (depends
+  (ocaml
+   (>= 5.3))
+  (dune
+   (>= 3.16))))

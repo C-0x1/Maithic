@@ -1,0 +1,281 @@
+# Capability register for P01 Prove.
+# Status and tests are kept in step with the test suites by `make cap-sync`.
+
+[pillar]
+id = "P01"
+name = "Prove"
+title = "Self-correcting theorem-proving agent"
+mission = "Prove Lean 4 theorems automatically: an AI model proposes tactics, Lean executes them, the agent reads the resulting state or error, reflects, and retries until the kernel accepts a complete proof."
+
+[[group]]
+id = "P01-01"
+title = "Search kernel"
+language = "OCaml"
+path = "ocaml/lib/prover/search/"
+purpose = "Data structures and algorithms that explore the space of tactic states."
+
+  [[group.capability]]
+  id = "P01-01-01"
+  title = "Search tree store"
+  spec = "Arena-allocated tree of proof states with parent links and child edges labeled by tactic and outcome."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-02"
+  title = "Best-first search"
+  spec = "Priority-queue expansion ordered by cumulative log-probability of the tactic path."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-03"
+  title = "Breadth-first search"
+  spec = "Level-order expansion with a width cap, used as a deterministic baseline."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-04"
+  title = "Depth-first search"
+  spec = "Depth-limited search with chronological backtracking and a configurable branching limit."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-05"
+  title = "Node budgets"
+  spec = "Hard limits on expansions, wall time, Lean calls and tokens, enforced before every expansion."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-06"
+  title = "Goal-level AND/OR model"
+  spec = "Multi-goal states are AND nodes over goals; alternative tactics are OR nodes."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-07"
+  title = "Solved propagation"
+  spec = "Mark a node proved when all AND children are closed and extract the winning path."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-08"
+  title = "Dead-end propagation"
+  spec = "Mark nodes failed when every candidate errors or loops, and prune the subtree."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-09"
+  title = "Transposition table"
+  spec = "Canonical-state hash table merging duplicate states reached by different tactic orders."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-01-10"
+  title = "Search invariants checker"
+  spec = "Debug mode asserting tree consistency after every operation."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+[[group]]
+id = "P01-02"
+title = "Tactic proposal and prompting"
+language = "OCaml"
+path = "ocaml/lib/prover/propose/"
+purpose = "Turns a proof state into ranked candidate tactics from AI and non-AI proposers."
+
+  [[group.capability]]
+  id = "P01-02-01"
+  title = "Portfolio proposer"
+  spec = "Non-AI proposer enumerating a fixed automation portfolio (rfl, simp, omega, decide, grind) for offline runs."
+  status = "done"
+  tests = ["ocaml/test/test_prover.ml", "ocaml/test/test_search.ml"]
+
+[[group]]
+id = "P01-03"
+title = "Self-correction and reflection"
+language = "OCaml"
+path = "ocaml/lib/prover/reflect/"
+purpose = "Reads Lean errors, decides how to repair, and learns within and across attempts."
+
+  [[group.capability]]
+  id = "P01-03-01"
+  title = "Error taxonomy"
+  spec = "Classify Lean failures into typed categories such as unknown identifier, type mismatch, unsolved goals, timeout and motive error."
+  status = "done"
+  tests = ["ocaml/test/test_prover.ml"]
+
+  [[group.capability]]
+  id = "P01-03-02"
+  title = "Repair prompt"
+  spec = "Prompt template presenting the failing tactic, the exact error and the state before it."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_prover.ml"]
+
+  [[group.capability]]
+  id = "P01-03-03"
+  title = "Failed-tactic memory"
+  spec = "Per-state set of tactics already tried, consulted before any execution."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_prover.ml"]
+
+  [[group.capability]]
+  id = "P01-03-04"
+  title = "Loop detection"
+  spec = "Detect tactics that return to an earlier canonical state and block the edge."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-03-05"
+  title = "No-progress detection"
+  spec = "Reject tactics that succeed but leave the canonical state unchanged."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-03-06"
+  title = "Error-to-hint rules"
+  spec = "Deterministic hints mapped from error classes, such as fixing `simp only` arguments."
+  status = "done"
+  tests = ["ocaml/test/test_prover.ml"]
+
+[[group]]
+id = "P01-04"
+title = "Lean tactic suite"
+language = "Lean"
+path = "lean/Maithic/Tactic/"
+purpose = "Tactics and commands that expose Maithic automation inside Lean itself."
+
+  [[group.capability]]
+  id = "P01-04-01"
+  title = "maithic_auto tactic"
+  spec = "Portfolio tactic trying core automation in a fixed order with per-step heartbeat limits."
+  status = "done"
+  tests = ["lean/MaithicTest/Tactic.lean"]
+
+  [[group.capability]]
+  id = "P01-04-02"
+  title = "maithic_close combinator"
+  spec = "Run a tactic and succeed only if it closes the goal, otherwise restore the state."
+  status = "done"
+  tests = ["lean/MaithicTest/Tactic.lean"]
+
+  [[group.capability]]
+  id = "P01-04-03"
+  title = "First-success combinator"
+  spec = "Try a list of tactics and commit to the first that makes progress."
+  status = "done"
+  tests = ["lean/MaithicTest/Tactic.lean"]
+
+  [[group.capability]]
+  id = "P01-04-04"
+  title = "Progress check"
+  spec = "Fail if a tactic leaves the goals syntactically unchanged."
+  status = "done"
+  tests = ["lean/MaithicTest/Tactic.lean"]
+
+[[group]]
+id = "P01-05"
+title = "Run analytics and calibration"
+language = "R"
+path = "r/maithicstats/R/prover-*.R"
+purpose = "Statistical analysis of prover runs."
+
+  [[group.capability]]
+  id = "P01-05-01"
+  title = "Run import"
+  spec = "Read prover run records into tidy tibbles with validated columns."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-prover.R"]
+
+  [[group.capability]]
+  id = "P01-05-02"
+  title = "Success summary"
+  spec = "Success rate by suite, strategy and model with Wilson intervals."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-prover.R"]
+
+  [[group.capability]]
+  id = "P01-05-03"
+  title = "Time-to-proof summary"
+  spec = "Median and quantiles of wall time, Lean time and model time."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-prover.R"]
+
+  [[group.capability]]
+  id = "P01-05-04"
+  title = "Token and cost summary"
+  spec = "Tokens and cost per attempt and per proved theorem."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-prover.R"]
+
+  [[group.capability]]
+  id = "P01-05-05"
+  title = "Step statistics"
+  spec = "Distribution of proof length, expansions and backtracks."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-prover.R"]
+
+  [[group.capability]]
+  id = "P01-05-06"
+  title = "Failure breakdown"
+  spec = "Counts by termination reason and error class."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-prover.R"]
+
+  [[group.capability]]
+  id = "P01-05-07"
+  title = "Standard plots"
+  spec = "ggplot2 functions for the success, time and cost summaries."
+  status = "done"
+  tests = ["r/maithicviz/tests/testthat/test-report-figures.R"]
+
+  [[group.capability]]
+  id = "P01-05-08"
+  title = "Report table"
+  spec = "Formatted summary table for inclusion in reports."
+  status = "done"
+  tests = ["r/maithicstats/tests/testthat/test-prover.R"]
+
+[[group]]
+id = "P01-06"
+title = "Visualization and session experience"
+language = "OCaml"
+path = "ocaml/lib/prover/viz/"
+purpose = "Renders searches, states and final proofs for terminal, Studio and documents."
+
+  [[group.capability]]
+  id = "P01-06-01"
+  title = "Search-tree SVG"
+  spec = "Render the search tree with node status colors and tactic labels."
+  status = "done"
+  tests = ["ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-06-02"
+  title = "Attempt timeline"
+  spec = "Chronological list of steps with outcomes and durations."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-06-03"
+  title = "Session JSON export"
+  spec = "Export tree, timeline and proof as a single JSON document."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_search.ml"]
+
+  [[group.capability]]
+  id = "P01-06-04"
+  title = "Rendering golden tests"
+  spec = "Snapshot tests of SVG output for fixture sessions."
+  status = "done"
+  tests = ["ocaml/test/integration/test_integration.ml", "ocaml/test/test_search.ml"]

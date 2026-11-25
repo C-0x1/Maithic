@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 705" role="img" aria-labelledby="test-layers-t test-layers-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="test-layers-t">How the repository is tested</title>
+  <desc id="test-layers-d">Five bands. Unit tests run in each language on its own; the OCaml tests need neither Lean nor a network, because the Bridge is played by a stub that replays recorded transcripts. Scripted Bridge sessions are run three ways: inside the Lean test program, against the built server, and against the stub. Integration tests run the built command against the real Bridge and the Julia engines, and check every JSON answer against its schema. End-to-end recipes run the sessions of the documentation, and the minimal profile with OCaml and Lean only. Repository gates check contracts, mirrored files, images, scans, the capability register and the language shares.</desc>
+  <rect width="960" height="705" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="880.0" height="94.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="202.0" width="880.0" height="94.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="308.0" width="880.0" height="94.0" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+  <rect x="40.0" y="414.0" width="880.0" height="94.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="520.0" width="880.0" height="77.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="615.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h160.0v94.0h-160.0a10 10 0 0 1 -10-10z" fill="#2B2F77"/>
+  <rect x="228.0" y="108.0" width="123.9" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="359.9" y="108.0" width="82.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="450.2" y="108.0" width="89.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="547.4" y="108.0" width="61.5" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 212.0a10 10 0 0 1 10-10h160.0v94.0h-160.0a10 10 0 0 1 -10-10z" fill="#2B2F77"/>
+  <rect x="228.0" y="214.0" width="186.2" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 318.0a10 10 0 0 1 10-10h160.0v94.0h-160.0a10 10 0 0 1 -10-10z" fill="#EC6813"/>
+  <rect x="228.0" y="320.0" width="130.8" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 424.0a10 10 0 0 1 10-10h160.0v94.0h-160.0a10 10 0 0 1 -10-10z" fill="#0B7F75"/>
+  <rect x="228.0" y="426.0" width="75.4" height="24.0" rx="6" fill="#E8E9F3"/>
+  <rect x="311.4" y="426.0" width="130.8" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M40.0 530.0a10 10 0 0 1 10-10h160.0v77.0h-160.0a10 10 0 0 1 -10-10z" fill="#5B6477"/>
+  <rect x="228.0" y="532.0" width="103.1" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="198.1" lengthAdjust="spacingAndGlyphs">Five layers of tests</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="56.9" lengthAdjust="spacingAndGlyphs">make ci</text>
+  <text x="54.0" y="148.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="61.5" lengthAdjust="spacingAndGlyphs">Unit tests</text>
+  <text x="238.0" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="103.8" lengthAdjust="spacingAndGlyphs">make test-ocaml</text>
+  <text x="369.9" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="62.3" lengthAdjust="spacingAndGlyphs">test-lean</text>
+  <text x="460.2" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">test-julia</text>
+  <text x="557.4" y="123.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="41.5" lengthAdjust="spacingAndGlyphs">test-r</text>
+  <text x="228.0" y="155.0" font-size="12.5" fill="#5B6477" textLength="589.7" lengthAdjust="spacingAndGlyphs">Each language on its own. The OCaml tests need neither Lean nor a network: a stub plays the Bridge from</text>
+  <text x="228.0" y="172.0" font-size="12.5" fill="#5B6477" textLength="334.9" lengthAdjust="spacingAndGlyphs">recorded transcripts, and scripted providers play the models.</text>
+  <text x="54.0" y="254.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="104.3" lengthAdjust="spacingAndGlyphs">Bridge sessions</text>
+  <text x="238.0" y="229.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="166.2" lengthAdjust="spacingAndGlyphs">fixtures/bridge/sessions</text>
+  <text x="228.0" y="261.0" font-size="12.5" fill="#5B6477" textLength="587.8" lengthAdjust="spacingAndGlyphs">One set of scripted sessions, run three ways: inside the Lean test program, against the built server over its</text>
+  <text x="228.0" y="278.0" font-size="12.5" fill="#5B6477" textLength="152.9" lengthAdjust="spacingAndGlyphs">pipes, and against the stub.</text>
+  <text x="54.0" y="360.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="69.8" lengthAdjust="spacingAndGlyphs">Integration</text>
+  <text x="238.0" y="335.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="110.8" lengthAdjust="spacingAndGlyphs">make integration</text>
+  <text x="228.0" y="367.0" font-size="12.5" fill="#5B6477" textLength="603.1" lengthAdjust="spacingAndGlyphs">The built command against the real Bridge and the Julia engines. Every JSON answer is checked against the</text>
+  <text x="228.0" y="384.0" font-size="12.5" fill="#5B6477" textLength="98.0" lengthAdjust="spacingAndGlyphs">schema it names.</text>
+  <text x="54.0" y="466.0" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="69.7" lengthAdjust="spacingAndGlyphs">End to end</text>
+  <text x="238.0" y="441.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="55.4" lengthAdjust="spacingAndGlyphs">make e2e</text>
+  <text x="321.4" y="441.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="110.8" lengthAdjust="spacingAndGlyphs">make e2e-minimal</text>
+  <text x="228.0" y="473.0" font-size="12.5" fill="#5B6477" textLength="569.8" lengthAdjust="spacingAndGlyphs">The sessions of the documentation, as a user would run them; and the minimal profile, with OCaml and</text>
+  <text x="228.0" y="490.0" font-size="12.5" fill="#5B6477" textLength="165.9" lengthAdjust="spacingAndGlyphs">Lean only and AI switched off.</text>
+  <text x="54.0" y="563.5" font-size="13.5" fill="#FFFFFF" font-weight="700" textLength="109.5" lengthAdjust="spacingAndGlyphs">Repository gates</text>
+  <text x="238.0" y="547.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="83.1" lengthAdjust="spacingAndGlyphs">make hygiene</text>
+  <text x="228.0" y="579.0" font-size="12.5" fill="#5B6477" textLength="546.1" lengthAdjust="spacingAndGlyphs">Contracts, mirrored files, README images, scans, the capability register and the language shares.</text>
+  <text x="56.0" y="640.0" font-size="13" fill="#14162B" textLength="718.4" lengthAdjust="spacingAndGlyphs">A fixture that one language writes for another is regenerated by a make target and never edited by hand; the tests fail when a</text>
+  <text x="56.0" y="658.0" font-size="13" fill="#14162B" textLength="83.1" lengthAdjust="spacingAndGlyphs">fixture is stale.</text>
+</svg>

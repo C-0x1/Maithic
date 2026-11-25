@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 455" role="img" aria-labelledby="hygiene-gates-t hygiene-gates-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="hygiene-gates-t">The six repository gates</title>
+  <desc id="hygiene-gates-d">Six tiles, one for each gate of make hygiene. Contracts: every recorded document validates against the schema it names. Sync-check: files that mirror built-in data are up to date. Readme: every image of the README is a file of the repository and has alternative text. Hygiene: no unfinished-work marker, no sorry or axiom in the Lean libraries, no key-shaped string, one version everywhere, no dead link, a copyright header on every source file. Capcheck: every capability marked done has a test that names it. Langshare: at least 85 percent of the code is OCaml, Lean, Julia and R, with a floor for each.</desc>
+  <rect width="960" height="455" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="284.0" height="119.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="338.0" y="96.0" width="284.0" height="119.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="636.0" y="96.0" width="284.0" height="119.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="40.0" y="229.0" width="284.0" height="136.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="338.0" y="229.0" width="284.0" height="136.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="636.0" y="229.0" width="284.0" height="136.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="40.0" y="383.0" width="880.0" height="42.0" rx="10" fill="#E8E9F3"/>
+  <rect x="40.0" y="96.0" width="7.0" height="119.0" rx="3" fill="#2B2F77"/>
+  <rect x="338.0" y="96.0" width="7.0" height="119.0" rx="3" fill="#2B2F77"/>
+  <rect x="636.0" y="96.0" width="7.0" height="119.0" rx="3" fill="#2B2F77"/>
+  <rect x="40.0" y="229.0" width="7.0" height="136.0" rx="3" fill="#0B7F75"/>
+  <rect x="338.0" y="229.0" width="7.0" height="136.0" rx="3" fill="#0B7F75"/>
+  <rect x="636.0" y="229.0" width="7.0" height="136.0" rx="3" fill="#0B7F75"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="480.5" lengthAdjust="spacingAndGlyphs">Six gates that keep the repository publishable</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="97.5" lengthAdjust="spacingAndGlyphs">make hygiene</text>
+  <text x="60.0" y="123.0" font-size="17" fill="#2B2F77" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="92.1" lengthAdjust="spacingAndGlyphs">contracts</text>
+  <text x="60.0" y="145.0" font-size="12.5" fill="#14162B" textLength="199.4" lengthAdjust="spacingAndGlyphs">Every fixture, every recorded Bridge</text>
+  <text x="60.0" y="162.0" font-size="12.5" fill="#14162B" textLength="211.9" lengthAdjust="spacingAndGlyphs">answer and every result the command</text>
+  <text x="60.0" y="179.0" font-size="12.5" fill="#14162B" textLength="207.1" lengthAdjust="spacingAndGlyphs">writes validates against the schema it</text>
+  <text x="60.0" y="196.0" font-size="12.5" fill="#14162B" textLength="41.0" lengthAdjust="spacingAndGlyphs">names.</text>
+  <text x="358.0" y="123.0" font-size="17" fill="#2B2F77" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="102.3" lengthAdjust="spacingAndGlyphs">sync-check</text>
+  <text x="358.0" y="145.0" font-size="12.5" fill="#14162B" textLength="204.9" lengthAdjust="spacingAndGlyphs">Files that mirror built-in data, such as</text>
+  <text x="358.0" y="162.0" font-size="12.5" fill="#14162B" textLength="195.7" lengthAdjust="spacingAndGlyphs">the model registry, the prompts and</text>
+  <text x="358.0" y="179.0" font-size="12.5" fill="#14162B" textLength="210.6" lengthAdjust="spacingAndGlyphs">the configuration table, are up to date.</text>
+  <text x="656.0" y="123.0" font-size="17" fill="#2B2F77" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="61.4" lengthAdjust="spacingAndGlyphs">readme</text>
+  <text x="656.0" y="145.0" font-size="12.5" fill="#14162B" textLength="217.5" lengthAdjust="spacingAndGlyphs">Every image of the README is a file of</text>
+  <text x="656.0" y="162.0" font-size="12.5" fill="#14162B" textLength="211.9" lengthAdjust="spacingAndGlyphs">the repository and has alternative text,</text>
+  <text x="656.0" y="179.0" font-size="12.5" fill="#14162B" textLength="229.3" lengthAdjust="spacingAndGlyphs">and there are as many as PROJECT.toml</text>
+  <text x="656.0" y="196.0" font-size="12.5" fill="#14162B" textLength="46.5" lengthAdjust="spacingAndGlyphs">asks for.</text>
+  <text x="60.0" y="256.0" font-size="17" fill="#0B7F75" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="71.6" lengthAdjust="spacingAndGlyphs">hygiene</text>
+  <text x="60.0" y="278.0" font-size="12.5" fill="#14162B" textLength="215.4" lengthAdjust="spacingAndGlyphs">No unfinished-work marker, no sorry or</text>
+  <text x="60.0" y="295.0" font-size="12.5" fill="#14162B" textLength="166.8" lengthAdjust="spacingAndGlyphs">axiom in the Lean libraries, no</text>
+  <text x="60.0" y="312.0" font-size="12.5" fill="#14162B" textLength="170.2" lengthAdjust="spacingAndGlyphs">key-shaped string, one version</text>
+  <text x="60.0" y="329.0" font-size="12.5" fill="#14162B" textLength="212.6" lengthAdjust="spacingAndGlyphs">everywhere, no dead link, a header on</text>
+  <text x="60.0" y="346.0" font-size="12.5" fill="#14162B" textLength="94.5" lengthAdjust="spacingAndGlyphs">every source file.</text>
+  <text x="358.0" y="256.0" font-size="17" fill="#0B7F75" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="81.9" lengthAdjust="spacingAndGlyphs">capcheck</text>
+  <text x="358.0" y="278.0" font-size="12.5" fill="#14162B" textLength="198.0" lengthAdjust="spacingAndGlyphs">Every capability marked done has a</text>
+  <text x="358.0" y="295.0" font-size="12.5" fill="#14162B" textLength="207.8" lengthAdjust="spacingAndGlyphs">test that names it, and every identifier</text>
+  <text x="358.0" y="312.0" font-size="12.5" fill="#14162B" textLength="166.1" lengthAdjust="spacingAndGlyphs">a test names is in the register.</text>
+  <text x="656.0" y="256.0" font-size="17" fill="#0B7F75" font-weight="700" font-family="Menlo, Consolas, monospace" textLength="92.1" lengthAdjust="spacingAndGlyphs">langshare</text>
+  <text x="656.0" y="278.0" font-size="12.5" fill="#14162B" textLength="182.1" lengthAdjust="spacingAndGlyphs">At least 85 percent of the code is</text>
+  <text x="656.0" y="295.0" font-size="12.5" fill="#14162B" textLength="210.5" lengthAdjust="spacingAndGlyphs">OCaml, Lean, Julia and R, with a floor</text>
+  <text x="656.0" y="312.0" font-size="12.5" fill="#14162B" textLength="191.1" lengthAdjust="spacingAndGlyphs">for each: 30, 15, 12 and 8 percent.</text>
+  <text x="56.0" y="408.0" font-size="13" fill="#14162B" textLength="724.8" lengthAdjust="spacingAndGlyphs">The gates run in the OCaml job of the workflow and need nothing but the developer tool. maithic-dev all runs the six in one go.</text>
+</svg>

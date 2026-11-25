@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='302.40pt' viewBox='0 0 648.00 302.40'>
+<g id='maithic' class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHwzMDIuNDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='302.40' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzMDIuNDA=)'>
+<rect x='0.00' y='-0.000000000000057' width='648.00' height='302.40' style='stroke-width: 1.16; stroke: none; fill: #FAF8F4;' />
+</g>
+<defs>
+  <clipPath id='cpNDUuODR8NjI4LjA3fDU2LjA3fDIwNi45OQ=='>
+    <rect x='45.84' y='56.07' width='582.24' height='150.92' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDUuODR8NjI4LjA3fDU2LjA3fDIwNi45OQ==)'>
+<rect x='45.84' y='56.07' width='582.24' height='150.92' style='stroke-width: 1.16; stroke: none; fill: #FAF8F4;' />
+<polyline points='45.84,206.99 628.07,206.99 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polyline points='45.84,170.00 628.07,170.00 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polyline points='45.84,133.01 628.07,133.01 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polyline points='45.84,96.02 628.07,96.02 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polyline points='45.84,59.03 628.07,59.03 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polygon points='72.30,72.90 189.93,63.66 307.55,59.03 601.61,59.03 601.61,72.90 307.55,86.77 189.93,96.02 72.30,114.52 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #0FA89B; fill-opacity: 0.15;' />
+<polyline points='72.30,72.90 189.93,63.66 307.55,59.03 601.61,59.03 ' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt;' />
+<polyline points='601.61,72.90 307.55,86.77 189.93,96.02 72.30,114.52 ' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt;' />
+<polygon points='72.30,179.25 189.93,179.25 307.55,179.25 601.61,179.25 601.61,206.99 307.55,206.99 189.93,206.99 72.30,206.99 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #F0A92E; fill-opacity: 0.15;' />
+<polyline points='72.30,179.25 189.93,179.25 307.55,179.25 601.61,179.25 ' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt;' />
+<polyline points='601.61,206.99 307.55,206.99 189.93,206.99 72.30,206.99 ' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt;' />
+<polyline points='72.30,91.40 189.93,77.53 307.55,72.90 601.61,63.66 ' style='stroke-width: 1.92; stroke: #0FA89B; stroke-linecap: butt;' />
+<polyline points='72.30,197.75 189.93,197.75 307.55,197.75 601.61,197.75 ' style='stroke-width: 1.92; stroke: #F0A92E; stroke-linecap: butt;' />
+<circle cx='72.30' cy='91.40' r='2.95' style='stroke-width: 0.77; stroke: #0FA89B; fill: #0FA89B;' />
+<circle cx='189.93' cy='77.53' r='2.95' style='stroke-width: 0.77; stroke: #0FA89B; fill: #0FA89B;' />
+<circle cx='307.55' cy='72.90' r='2.95' style='stroke-width: 0.77; stroke: #0FA89B; fill: #0FA89B;' />
+<circle cx='601.61' cy='63.66' r='2.95' style='stroke-width: 0.77; stroke: #0FA89B; fill: #0FA89B;' />
+<circle cx='72.30' cy='197.75' r='2.95' style='stroke-width: 0.77; stroke: #F0A92E; fill: #F0A92E;' />
+<circle cx='189.93' cy='197.75' r='2.95' style='stroke-width: 0.77; stroke: #F0A92E; fill: #F0A92E;' />
+<circle cx='307.55' cy='197.75' r='2.95' style='stroke-width: 0.77; stroke: #F0A92E; fill: #F0A92E;' />
+<circle cx='601.61' cy='197.75' r='2.95' style='stroke-width: 0.77; stroke: #F0A92E; fill: #F0A92E;' />
+</g>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzMDIuNDA=)'>
+<text x='40.46' y='210.29' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='13.86px' lengthAdjust='spacingAndGlyphs'>0%</text>
+<text x='40.46' y='173.30' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>25%</text>
+<text x='40.46' y='136.31' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>50%</text>
+<text x='40.46' y='99.32' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>75%</text>
+<text x='40.46' y='62.33' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='24.52px' lengthAdjust='spacingAndGlyphs'>100%</text>
+<text x='72.30' y='218.97' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='189.93' y='218.97' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>3</text>
+<text x='307.55' y='218.97' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='601.61' y='218.97' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='10.66px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='336.96' y='232.20' text-anchor='middle' style='font-size: 12.00px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>k</text>
+<rect x='252.64' y='253.40' width='15.73' height='15.73' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; fill: #0FA89B; fill-opacity: 0.15;' />
+<line x1='253.59' y1='261.27' x2='267.42' y2='261.27' style='stroke-width: 1.92; stroke: #0FA89B; stroke-linecap: butt;' />
+<circle cx='260.51' cy='261.27' r='2.95' style='stroke-width: 0.77; stroke: #0FA89B; fill: #0FA89B;' />
+<rect x='342.05' y='253.40' width='15.73' height='15.73' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; fill: #F0A92E; fill-opacity: 0.15;' />
+<line x1='343.00' y1='261.27' x2='356.82' y2='261.27' style='stroke-width: 1.92; stroke: #F0A92E; stroke-linecap: butt;' />
+<circle cx='349.91' cy='261.27' r='2.95' style='stroke-width: 0.77; stroke: #F0A92E; fill: #F0A92E;' />
+<text x='275.12' y='264.56' style='font-size: 9.60px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='60.17px' lengthAdjust='spacingAndGlyphs'>maithic-lexical</text>
+<text x='364.53' y='264.56' style='font-size: 9.60px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='57.52px' lengthAdjust='spacingAndGlyphs'>maithic-name</text>
+<text x='15.94' y='43.62' style='font-size: 12.00px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='456.11px' lengthAdjust='spacingAndGlyphs'>Share of the relevant declarations among the first k results, averaged over the queries</text>
+<text x='15.94' y='26.27' style='font-size: 15.00px; font-weight: bold;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='185.95px' lengthAdjust='spacingAndGlyphs'>Recall of retrieval engines</text>
+<text x='15.94' y='288.46' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='315.00px' lengthAdjust='spacingAndGlyphs'>Source: query set demo, 16 queries. Bands show 95% bootstrap intervals.</text>
+</g>
+</g>
+</svg>

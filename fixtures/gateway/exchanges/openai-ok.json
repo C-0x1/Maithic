@@ -1,0 +1,56 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "openai-ok",
+  "provider": "openai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 200,
+  "headers": {},
+  "body": {
+    "id": "resp_0123example",
+    "object": "response",
+    "status": "completed",
+    "error": null,
+    "incomplete_details": null,
+    "model": "gpt-6.2-sol",
+    "output": [
+      {
+        "id": "rs_1",
+        "type": "reasoning",
+        "summary": []
+      },
+      {
+        "id": "msg_1",
+        "type": "message",
+        "status": "completed",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "{\"candidates\": [\"by simp\"]}",
+            "annotations": []
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 180,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 22,
+      "output_tokens_details": {
+        "reasoning_tokens": 8
+      },
+      "total_tokens": 202
+    }
+  },
+  "expect": {
+    "text": "{\"candidates\": [\"by simp\"]}",
+    "stop": "end_turn",
+    "input_tokens": 180,
+    "output_tokens": 22,
+    "model": "gpt-6.2-sol",
+    "id": "resp_0123example"
+  }
+}

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='360.00pt' viewBox='0 0 648.00 360.00'>
+<g id='maithic' class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHwzNjAuMDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='360.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzNjAuMDA=)'>
+<rect x='0.00' y='0.000000000000057' width='648.00' height='360.00' style='stroke-width: 1.16; stroke: none; fill: #FAF8F4;' />
+</g>
+<defs>
+  <clipPath id='cpNjcuMTJ8NjI4LjA3fDU2LjA3fDI2My40NQ=='>
+    <rect x='67.12' y='56.07' width='560.96' height='207.38' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNjcuMTJ8NjI4LjA3fDU2LjA3fDI2My40NQ==)'>
+<rect x='67.12' y='56.07' width='560.96' height='207.38' style='stroke-width: 1.16; stroke: none; fill: #FAF8F4;' />
+<polyline points='67.12,87.68 628.07,87.68 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polyline points='67.12,117.77 628.07,117.77 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polyline points='67.12,147.87 628.07,147.87 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<polyline points='67.12,177.97 628.07,177.97 ' style='stroke-width: 0.85; stroke: #E8E9F3; stroke-linecap: butt;' />
+<rect x='74.91' y='56.07' width='77.91' height='136.95' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E8E9F3; fill-opacity: 0.55;' />
+<rect x='152.82' y='56.07' width='311.64' height='136.95' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E8E9F3; fill-opacity: 0.20;' />
+<rect x='464.46' y='56.07' width='155.82' height='136.95' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E8E9F3; fill-opacity: 0.55;' />
+<text x='113.86' y='66.92' text-anchor='middle' style='font-size: 9.67px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='52.16px' lengthAdjust='spacingAndGlyphs'>examination</text>
+<text x='308.64' y='66.92' text-anchor='middle' style='font-size: 9.67px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='32.78px' lengthAdjust='spacingAndGlyphs'>round 1</text>
+<text x='542.37' y='66.92' text-anchor='middle' style='font-size: 9.67px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='32.78px' lengthAdjust='spacingAndGlyphs'>round 2</text>
+<polyline points='113.86,147.87 191.77,87.68 269.69,117.77 347.60,147.87 425.51,177.97 503.42,117.77 581.33,147.87 ' style='stroke-width: 0.85; stroke: #5B6477; stroke-linecap: butt;' />
+<circle cx='113.86' cy='147.87' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #5B6477;' />
+<circle cx='191.77' cy='87.68' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #2B2F77;' />
+<circle cx='269.69' cy='117.77' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #F0A92E;' />
+<circle cx='347.60' cy='147.87' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #0FA89B;' />
+<circle cx='425.51' cy='177.97' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #E5484D;' />
+<circle cx='503.42' cy='117.77' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #F0A92E;' />
+<circle cx='581.33' cy='147.87' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #0FA89B;' />
+<text x='113.86' y='204.71' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='58.30px' lengthAdjust='spacingAndGlyphs'>the statement is</text>
+<text x='113.86' y='214.12' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='55.98px' lengthAdjust='spacingAndGlyphs'>well formed; no</text>
+<text x='113.86' y='223.53' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='58.75px' lengthAdjust='spacingAndGlyphs'>counterexample</text>
+<text x='113.86' y='232.93' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='39.94px' lengthAdjust='spacingAndGlyphs'>was found;</text>
+<text x='113.86' y='242.34' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='63.83px' lengthAdjust='spacingAndGlyphs'>automation found</text>
+<text x='113.86' y='251.74' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='30.31px' lengthAdjust='spacingAndGlyphs'>no proof</text>
+<text x='191.77' y='204.71' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='47.75px' lengthAdjust='spacingAndGlyphs'>4 of 5 names</text>
+<text x='191.77' y='214.12' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='39.47px' lengthAdjust='spacingAndGlyphs'>exist in the</text>
+<text x='191.77' y='223.53' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='49.56px' lengthAdjust='spacingAndGlyphs'>library; 1 idea</text>
+<text x='269.69' y='204.71' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='42.70px' lengthAdjust='spacingAndGlyphs'>2 candidate</text>
+<text x='269.69' y='214.12' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='22.95px' lengthAdjust='spacingAndGlyphs'>proofs</text>
+<text x='347.60' y='204.71' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='60.59px' lengthAdjust='spacingAndGlyphs'>Lean rejected all</text>
+<text x='347.60' y='214.12' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='29.84px' lengthAdjust='spacingAndGlyphs'>2 proofs</text>
+<text x='425.51' y='204.71' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='57.84px' lengthAdjust='spacingAndGlyphs'>a diagnosis of 2</text>
+<text x='425.51' y='214.12' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='56.92px' lengthAdjust='spacingAndGlyphs'>rejected proofs,</text>
+<text x='425.51' y='223.53' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='63.80px' lengthAdjust='spacingAndGlyphs'>with 1 suggestion</text>
+<text x='503.42' y='204.71' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='63.83px' lengthAdjust='spacingAndGlyphs'>1 candidate proof</text>
+<text x='581.33' y='204.71' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='61.08px' lengthAdjust='spacingAndGlyphs'>Lean accepted a</text>
+<text x='581.33' y='214.12' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='28.47px' lengthAdjust='spacingAndGlyphs'>proof (1</text>
+<text x='581.33' y='223.53' text-anchor='middle' style='font-size: 8.25px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='38.55px' lengthAdjust='spacingAndGlyphs'>examined)</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzNjAuMDA=)'>
+<text x='61.74' y='90.97' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='45.80px' lengthAdjust='spacingAndGlyphs'>researcher</text>
+<text x='61.74' y='121.07' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='27.16px' lengthAdjust='spacingAndGlyphs'>prover</text>
+<text x='61.74' y='151.17' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='28.75px' lengthAdjust='spacingAndGlyphs'>verifier</text>
+<text x='61.74' y='181.27' text-anchor='end' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='19.70px' lengthAdjust='spacingAndGlyphs'>critic</text>
+<text x='113.86' y='275.42' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='191.77' y='275.42' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='269.69' y='275.42' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>3</text>
+<text x='347.60' y='275.42' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>4</text>
+<text x='425.51' y='275.42' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='503.42' y='275.42' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>6</text>
+<text x='581.33' y='275.42' text-anchor='middle' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>7</text>
+<text x='347.60' y='288.66' text-anchor='middle' style='font-size: 12.00px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='20.67px' lengthAdjust='spacingAndGlyphs'>turn</text>
+<circle cx='208.21' cy='318.29' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #5B6477;' />
+<circle cx='274.81' cy='318.29' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #2B2F77;' />
+<circle cx='342.47' cy='318.29' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #F0A92E;' />
+<circle cx='396.82' cy='318.29' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #0FA89B;' />
+<circle cx='450.11' cy='318.29' r='7.50' style='stroke-width: 1.13; stroke: #14162B; fill: #E5484D;' />
+<text x='223.40' y='321.59' style='font-size: 9.60px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='36.22px' lengthAdjust='spacingAndGlyphs'>examine</text>
+<text x='290.00' y='321.59' style='font-size: 9.60px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='37.28px' lengthAdjust='spacingAndGlyphs'>research</text>
+<text x='357.66' y='321.59' style='font-size: 9.60px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='23.97px' lengthAdjust='spacingAndGlyphs'>prove</text>
+<text x='412.01' y='321.59' style='font-size: 9.60px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='22.91px' lengthAdjust='spacingAndGlyphs'>verify</text>
+<text x='465.30' y='321.59' style='font-size: 9.60px;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='30.89px' lengthAdjust='spacingAndGlyphs'>critique</text>
+<text x='15.94' y='43.62' style='font-size: 12.00px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='575.44px' lengthAdjust='spacingAndGlyphs'>Each role takes its turn and posts to a shared board; only what Lean accepts changes the status of the claim</text>
+<text x='15.94' y='26.27' style='font-size: 15.00px; font-weight: bold;fill: #14162B; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='219.47px' lengthAdjust='spacingAndGlyphs'>A council session, turn by turn</text>
+<text x='15.94' y='346.06' style='font-size: 9.60px;fill: #5B6477; font-family: Arial, "Helvetica Neue", "Liberation Sans", sans-serif;' textLength='501.48px' lengthAdjust='spacingAndGlyphs'>Source: the session on sumOdd_eq_square: 7 turn(s), 4 question(s) to models, 24 call(s) to Lean; the claim is verified.</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 398" role="img" aria-labelledby="key-handling-t key-handling-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="key-handling-t">Where a key comes from and where it never goes</title>
+  <desc id="key-handling-d">Three steps in a row. A key is looked for in three places, in order: passed explicitly, the environment variable of the provider, and the file credentials.toml in the Maithic home directory. It is handed to curl on its standard input and never on a command line. Errors, logs and cassettes pass through a scrubber that removes the key in use and anything shaped like a key.</desc>
+  <rect width="960" height="398" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="273.3" height="194.0" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+  <rect x="343.3" y="96.0" width="273.3" height="194.0" rx="10" fill="#FFFFFF" stroke="#0B7F75" stroke-width="1.5"/>
+  <rect x="646.7" y="96.0" width="273.3" height="194.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="40.0" y="308.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#2B2F77"/>
+  <rect x="54.0" y="254.0" width="245.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M317.3 193.0 L331.3 193.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M329.3333333333333 187.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M343.3 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#0B7F75"/>
+  <rect x="357.3" y="254.0" width="245.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <path d="M620.7 193.0 L634.7 193.0" stroke="#5B6477" stroke-width="1.6" fill="none"/>
+  <path d="M632.6666666666666 187.0 l10 6 l-10 6 z" fill="#5B6477"/>
+  <path d="M646.7 106.0a10 10 0 0 1 10-10h253.3a10 10 0 0 1 10 10v26.0h-273.3z" fill="#E5484D"/>
+  <rect x="660.7" y="254.0" width="245.3" height="24.0" rx="6" fill="#E8E9F3"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="522.1" lengthAdjust="spacingAndGlyphs">Where a key comes from, and where it never goes</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="398.2" lengthAdjust="spacingAndGlyphs">maithic auth status   ·   maithic auth login PROVIDER</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="140.0" lengthAdjust="spacingAndGlyphs">1  Looked for in order</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="129.3" lengthAdjust="spacingAndGlyphs">a key passed explicitly</text>
+  <text x="54.0" y="179.0" font-size="13" fill="#14162B" textLength="178.5" lengthAdjust="spacingAndGlyphs">the environment variable of the</text>
+  <text x="54.0" y="197.0" font-size="13" fill="#14162B" textLength="47.0" lengthAdjust="spacingAndGlyphs">provider</text>
+  <text x="54.0" y="221.0" font-size="13" fill="#14162B" textLength="207.4" lengthAdjust="spacingAndGlyphs">credentials.toml in the Maithic home</text>
+  <text x="54.0" y="239.0" font-size="13" fill="#14162B" textLength="49.8" lengthAdjust="spacingAndGlyphs">directory</text>
+  <text x="64.0" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="145.4" lengthAdjust="spacingAndGlyphs">never in maithic.toml</text>
+  <text x="357.3" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="96.5" lengthAdjust="spacingAndGlyphs">2  Handed over</text>
+  <text x="357.3" y="155.0" font-size="13" fill="#14162B" textLength="206.0" lengthAdjust="spacingAndGlyphs">The key goes to curl on its standard</text>
+  <text x="357.3" y="173.0" font-size="13" fill="#14162B" textLength="31.8" lengthAdjust="spacingAndGlyphs">input.</text>
+  <text x="357.3" y="197.0" font-size="13" fill="#14162B" textLength="195.8" lengthAdjust="spacingAndGlyphs">It is never part of a command line,</text>
+  <text x="357.3" y="215.0" font-size="13" fill="#14162B" textLength="166.9" lengthAdjust="spacingAndGlyphs">where other programs on the</text>
+  <text x="357.3" y="233.0" font-size="13" fill="#14162B" textLength="127.2" lengthAdjust="spacingAndGlyphs">machine could read it.</text>
+  <text x="367.3" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="69.2" lengthAdjust="spacingAndGlyphs">over HTTPS</text>
+  <text x="660.7" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="68.4" lengthAdjust="spacingAndGlyphs">3  Kept out</text>
+  <text x="660.7" y="155.0" font-size="13" fill="#14162B" textLength="181.4" lengthAdjust="spacingAndGlyphs">Errors, logs and cassettes pass</text>
+  <text x="660.7" y="173.0" font-size="13" fill="#14162B" textLength="112.0" lengthAdjust="spacingAndGlyphs">through a scrubber.</text>
+  <text x="660.7" y="197.0" font-size="13" fill="#14162B" textLength="173.4" lengthAdjust="spacingAndGlyphs">It removes the key in use, and</text>
+  <text x="660.7" y="215.0" font-size="13" fill="#14162B" textLength="155.9" lengthAdjust="spacingAndGlyphs">anything shaped like a key.</text>
+  <text x="670.7" y="269.9" font-size="11.5" fill="#14162B" font-family="Menlo, Consolas, monospace" textLength="207.7" lengthAdjust="spacingAndGlyphs">auth status never prints a key</text>
+  <text x="56.0" y="333.0" font-size="13" fill="#14162B" textLength="701.7" lengthAdjust="spacingAndGlyphs">Keys are not settings: a key placed in maithic.toml is rejected as an unknown setting, so a key cannot be committed with a</text>
+  <text x="56.0" y="351.0" font-size="13" fill="#14162B" textLength="491.2" lengthAdjust="spacingAndGlyphs">project file by accident. The hygiene gate scans the repository for key-shaped strings.</text>
+</svg>

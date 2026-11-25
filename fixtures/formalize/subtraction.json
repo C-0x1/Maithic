@@ -1,0 +1,366 @@
+{
+  "schema": "maithic.formalize.run/1",
+  "problem": {
+    "origin": "fixtures/formalize/problems/subtraction.md",
+    "source": "## Exercise 3\n\nFor natural numbers $a$ and $b$, show that $(a - b) + b = a$.\n",
+    "text": "Exercise 3\n\nFor natural numbers a and b, show that (a - b) + b = a.",
+    "task": "prove",
+    "elements": [
+      {
+        "kind": "constraint",
+        "text": "natural numbers",
+        "start": 19,
+        "stop": 34
+      },
+      {
+        "kind": "symbol",
+        "text": "a",
+        "start": 36,
+        "stop": 37
+      },
+      {
+        "kind": "symbol",
+        "text": "b",
+        "start": 44,
+        "stop": 45
+      },
+      {
+        "kind": "task",
+        "text": "show that",
+        "start": 48,
+        "stop": 57
+      },
+      {
+        "kind": "formula",
+        "text": "(a - b) + b = a",
+        "start": 59,
+        "stop": 74
+      },
+      {
+        "kind": "symbol",
+        "text": "a",
+        "start": 60,
+        "stop": 61
+      },
+      {
+        "kind": "symbol",
+        "text": "b",
+        "start": 64,
+        "stop": 65
+      },
+      {
+        "kind": "symbol",
+        "text": "b",
+        "start": 69,
+        "stop": 70
+      },
+      {
+        "kind": "symbol",
+        "text": "a",
+        "start": 73,
+        "stop": 74
+      }
+    ]
+  },
+  "settings": {
+    "candidates": 3,
+    "rounds": 2,
+    "name": "problem",
+    "imports": []
+  },
+  "status": "flagged",
+  "note": "flagged by traps and round-trip",
+  "chosen": 2,
+  "candidates": [
+    {
+      "id": 1,
+      "name": "problem_1",
+      "drafted": "(a b : Nat) : a - b + b = a",
+      "statement": "(a b : Nat) : a - b + b = a",
+      "reading": "Both numbers are natural numbers, and the minus sign is subtraction of natural numbers.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (a b : Nat), a - b + b = a",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(a b : Nat) : a - b + b = a",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "passed"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "failed",
+          "note": "it fails at a = 0, b = 1"
+        },
+        {
+          "name": "triviality",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "numbers",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "variables",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "traps",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "skipped",
+          "note": "the statement was rejected"
+        }
+      ],
+      "score": 0.0,
+      "verdict": "rejected",
+      "reason": "refuted: it fails at a = 0, b = 1"
+    },
+    {
+      "id": 2,
+      "name": "problem_2",
+      "drafted": "(a b : Nat) (h : b ≤ a) : a - b + b = a",
+      "statement": "(a b : Nat) (h : b ≤ a) : a - b + b = a",
+      "reading": "Adds the assumption that b is at most a, without which the subtraction is cut off at zero.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (a b : Nat), b ≤ a → a - b + b = a",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(a b : Nat) (h : b ≤ a) : a - b + b = a",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "passed"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "passed",
+          "note": "no counterexample in 300 sampled cases"
+        },
+        {
+          "name": "triviality",
+          "outcome": "passed"
+        },
+        {
+          "name": "numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "variables",
+          "outcome": "passed"
+        },
+        {
+          "name": "traps",
+          "outcome": "flagged",
+          "note": "a - b: subtraction of natural numbers stops at zero: it is 0 whenever the second number is the larger"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "passed"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "flagged",
+          "note": "agreement 7 of 10: The statement assumes that b is at most a; the problem makes no such assumption."
+        }
+      ],
+      "english": "For all natural numbers a and b such that b is at most a, subtracting b from a and then adding b gives a. The subtraction is that of natural numbers, which would stop at zero if b were larger than a.",
+      "agreement": 7,
+      "differences": [
+        "The statement assumes that b is at most a; the problem makes no such assumption."
+      ],
+      "score": 0.64999999999999991,
+      "verdict": "chosen",
+      "rank": 1
+    },
+    {
+      "id": 3,
+      "name": "problem_3",
+      "drafted": "(a b : Int) : a - b + b = a",
+      "statement": "(a b : Int) : a - b + b = a",
+      "reading": "Moves to the integers, where subtraction is exact.",
+      "provenance": {
+        "origin": "draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "prompt": "formalize.draft",
+        "round": 0
+      },
+      "elaboration": {
+        "status": "elaborated",
+        "first_try": true,
+        "repairs": 0,
+        "statement": "∀ (a b : Int), a - b + b = a",
+        "history": [
+          {
+            "round": 0,
+            "statement": "(a b : Int) : a - b + b = a",
+            "elaborated": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "name": "vacuity",
+          "outcome": "passed"
+        },
+        {
+          "name": "counterexample",
+          "outcome": "passed",
+          "note": "no counterexample in 300 sampled cases"
+        },
+        {
+          "name": "triviality",
+          "outcome": "flagged",
+          "note": "Lean accepts `by simp` for a proof"
+        },
+        {
+          "name": "numbers",
+          "outcome": "passed"
+        },
+        {
+          "name": "variables",
+          "outcome": "passed"
+        },
+        {
+          "name": "traps",
+          "outcome": "passed"
+        },
+        {
+          "name": "back-translation",
+          "outcome": "passed"
+        },
+        {
+          "name": "round-trip",
+          "outcome": "flagged",
+          "note": "agreement 6 of 10: The statement is about integers; the problem is about natural numbers."
+        }
+      ],
+      "english": "For all integers a and b, subtracting b from a and then adding b gives a.",
+      "agreement": 6,
+      "differences": [
+        "The statement is about integers; the problem is about natural numbers."
+      ],
+      "score": 0.3,
+      "verdict": "kept",
+      "rank": 2
+    }
+  ],
+  "summary": {
+    "drafted": 3,
+    "elaborated_first_try": 3,
+    "repaired": 0,
+    "elaborated": 3,
+    "failed": 0,
+    "duplicates": 0,
+    "rejected": 1,
+    "kept": 2
+  },
+  "lean": "/-\nThe problem, as it was posed:\n\n  Exercise 3\n\n  For natural numbers a and b, show that (a - b) + b = a.\n\nThe statement below was chosen from 3 candidates. Lean elaborates it; nothing here proves it.\nIts reading of the problem: Adds the assumption that b is at most a, without which the subtraction is cut off at zero.\n\nRead back into English, the statement says:\n\n  For all natural numbers a and b such that b is at most a, subtracting b from a and then adding b gives a. The subtraction is that of natural numbers, which would stop at zero if b were larger than a.\n\nWhat the checks found:\n\n  vacuity           passed\n  counterexample    passed   no counterexample in 300 sampled cases\n  triviality        passed\n  numbers           passed\n  variables         passed\n  traps             flagged  a - b: subtraction of natural numbers stops at zero: it is 0 whenever the second number is the larger\n  back-translation  passed\n  round-trip        flagged  agreement 7 of 10: The statement assumes that b is at most a; the problem makes no such assumption.\n\nThat a statement says what was meant is a matter of evidence. Read it before you rely on it.\n-/\nset_option autoImplicit false in\ntheorem problem (a b : Nat) (h : b ≤ a) : a - b + b = a := by\n  sorry\n",
+  "gateway": {
+    "mode": "replay",
+    "calls": 5,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": [
+      {
+        "purpose": "formalize.draft",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:45Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.back",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:45Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.judge",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:45Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.back",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:46Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "formalize.judge",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T18:30:46Z",
+        "elapsed_ms": 0
+      }
+    ]
+  }
+}

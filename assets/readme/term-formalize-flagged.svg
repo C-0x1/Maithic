@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984 1040" width="984" height="1040" role="img" aria-label="A terminal session: for the claim that (a - b) + b = a over the natural numbers, Lean refutes the literal statement at a = 0, b = 1. The statement that is chosen adds an assumption, and the report flags it: its subtraction is cut off at zero, and its reading differs from the problem.">
+  <title>A terminal session: for the claim that (a - b) + b = a over the natural numbers, Lean refutes the literal statement at a = 0, b = 1. The statement that is chosen adds an assumption, and the report flags it: its subtraction is cut off at zero, and its reading differs from the problem.</title>
+  <rect width="984" height="1040" rx="10" fill="#14162B"/>
+  <path d="M0 10a10 10 0 0 1 10-10h964a10 10 0 0 1 10 10v26h-984z" fill="#1E2142"/>
+  <circle cx="22" cy="18" r="5.5" fill="#F26D72"/>
+  <circle cx="40" cy="18" r="5.5" fill="#F0A92E"/>
+  <circle cx="58" cy="18" r="5.5" fill="#57C98F"/>
+  <text x="492" y="23" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#8A90A6">maithic formalize, on a problem that is false as posed</text>
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13">
+    <text x="22.00" y="58" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#2CC4B6" font-weight="bold">$</text>
+    <text x="37.66" y="58" textLength="524.61" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">maithic formalize --file fixtures/formalize/problems/subtraction.md</text>
+    <text x="22.00" y="77" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">problem</text>
+    <text x="108.13" y="77" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Exercise 3</text>
+    <text x="108.13" y="115" textLength="430.65" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">For natural numbers a and b, show that (a - b) + b = a.</text>
+    <text x="108.13" y="134" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">task: prove</text>
+    <text x="108.13" y="153" textLength="195.75" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">formulas: (a - b) + b = a</text>
+    <text x="108.13" y="172" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">symbols: a; b</text>
+    <text x="108.13" y="191" textLength="219.24" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">constraints: natural numbers</text>
+    <text x="22.00" y="229" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">candidate 1</text>
+    <text x="115.96" y="229" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(a b : Nat) : a - b + b = a</text>
+    <text x="37.66" y="248" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">reading</text>
+    <text x="123.79" y="248" textLength="681.21" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Both numbers are natural numbers, and the minus sign is subtraction of natural numbers.</text>
+    <text x="37.66" y="267" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">elaborates</text>
+    <text x="123.79" y="267" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">as drafted</text>
+    <text x="37.66" y="286" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="286" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="194.26" y="286" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="305" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F26D72">✗</text>
+    <text x="53.32" y="305" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">counterexample</text>
+    <text x="194.26" y="305" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#F26D72">failed</text>
+    <text x="264.73" y="305" textLength="187.92" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">it fails at a = 0, b = 1</text>
+    <text x="37.66" y="324" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">→</text>
+    <text x="53.32" y="324" textLength="62.64" lengthAdjust="spacingAndGlyphs" fill="#F26D72">rejected</text>
+    <text x="131.62" y="324" textLength="258.39" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">refuted: it fails at a = 0, b = 1</text>
+    <text x="22.00" y="362" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">candidate 2</text>
+    <text x="115.96" y="362" textLength="305.37" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(a b : Nat) (h : b ≤ a) : a - b + b = a</text>
+    <text x="37.66" y="381" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">reading</text>
+    <text x="123.79" y="381" textLength="704.70" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Adds the assumption that b is at most a, without which the subtraction is cut off at zero.</text>
+    <text x="37.66" y="400" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">elaborates</text>
+    <text x="123.79" y="400" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">as drafted</text>
+    <text x="37.66" y="419" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="419" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="194.26" y="419" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="438" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="438" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">counterexample</text>
+    <text x="194.26" y="438" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="264.73" y="438" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">no counterexample in 300 sampled cases</text>
+    <text x="37.66" y="457" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="457" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">triviality</text>
+    <text x="194.26" y="457" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="476" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="476" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">numbers</text>
+    <text x="194.26" y="476" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="495" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="495" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">variables</text>
+    <text x="194.26" y="495" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="514" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">!</text>
+    <text x="53.32" y="514" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">traps</text>
+    <text x="194.26" y="514" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">flagged</text>
+    <text x="264.73" y="514" textLength="681.21" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">a - b: subtraction of natural numbers stops at zero: it is 0 whenever the second number</text>
+    <text x="264.73" y="533" textLength="101.79" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">is the larger</text>
+    <text x="37.66" y="552" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="552" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">back-translation</text>
+    <text x="194.26" y="552" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="571" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">!</text>
+    <text x="53.32" y="571" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round-trip</text>
+    <text x="194.26" y="571" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">flagged</text>
+    <text x="264.73" y="571" textLength="681.21" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">agreement 7 of 10: The statement assumes that b is at most a; the problem makes no such</text>
+    <text x="264.73" y="590" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">assumption.</text>
+    <text x="37.66" y="609" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">says</text>
+    <text x="123.79" y="609" textLength="822.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">For all natural numbers a and b such that b is at most a, subtracting b from a and then adding b gives a.</text>
+    <text x="123.79" y="628" textLength="728.19" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">The subtraction is that of natural numbers, which would stop at zero if b were larger than a.</text>
+    <text x="37.66" y="647" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">→</text>
+    <text x="53.32" y="647" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">chosen</text>
+    <text x="115.96" y="647" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">score 0.65</text>
+    <text x="22.00" y="685" textLength="86.13" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3" font-weight="bold">candidate 3</text>
+    <text x="115.96" y="685" textLength="211.41" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">(a b : Int) : a - b + b = a</text>
+    <text x="37.66" y="704" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">reading</text>
+    <text x="123.79" y="704" textLength="391.50" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Moves to the integers, where subtraction is exact.</text>
+    <text x="37.66" y="723" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">elaborates</text>
+    <text x="123.79" y="723" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">as drafted</text>
+    <text x="37.66" y="742" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="742" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">vacuity</text>
+    <text x="194.26" y="742" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="761" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="761" textLength="109.62" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">counterexample</text>
+    <text x="194.26" y="761" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="264.73" y="761" textLength="297.54" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">no counterexample in 300 sampled cases</text>
+    <text x="37.66" y="780" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">!</text>
+    <text x="53.32" y="780" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">triviality</text>
+    <text x="194.26" y="780" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">flagged</text>
+    <text x="264.73" y="780" textLength="266.22" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">Lean accepts `by simp` for a proof</text>
+    <text x="37.66" y="799" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="799" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">numbers</text>
+    <text x="194.26" y="799" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="818" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="818" textLength="70.47" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">variables</text>
+    <text x="194.26" y="818" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="837" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="837" textLength="39.15" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">traps</text>
+    <text x="194.26" y="837" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="856" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#57C98F">✓</text>
+    <text x="53.32" y="856" textLength="125.28" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">back-translation</text>
+    <text x="194.26" y="856" textLength="46.98" lengthAdjust="spacingAndGlyphs" fill="#57C98F">passed</text>
+    <text x="37.66" y="875" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">!</text>
+    <text x="53.32" y="875" textLength="78.30" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">round-trip</text>
+    <text x="194.26" y="875" textLength="54.81" lengthAdjust="spacingAndGlyphs" fill="#F0A92E">flagged</text>
+    <text x="264.73" y="875" textLength="696.87" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">agreement 6 of 10: The statement is about integers; the problem is about natural numbers.</text>
+    <text x="37.66" y="894" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">says</text>
+    <text x="123.79" y="894" textLength="571.59" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">For all integers a and b, subtracting b from a and then adding b gives a.</text>
+    <text x="37.66" y="913" textLength="7.83" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">→</text>
+    <text x="53.32" y="913" textLength="31.32" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">kept</text>
+    <text x="100.30" y="913" textLength="140.94" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">rank 2, score 0.30</text>
+    <text x="22.00" y="951" textLength="642.06" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">chosen with a flag: candidate 2 of 3, flagged by traps and round-trip (1 rejected)</text>
+    <text x="22.00" y="989" textLength="430.65" lengthAdjust="spacingAndGlyphs" fill="#E8E9F3">theorem problem (a b : Nat) (h : b ≤ a) : a - b + b = a</text>
+    <text x="22.00" y="1008" textLength="665.55" lengthAdjust="spacingAndGlyphs" fill="#8A90A6">nothing here proves it; --write FILE writes it as a Lean file, with sorry for a proof</text>
+  </g>
+</svg>

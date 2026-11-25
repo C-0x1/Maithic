@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Training run of a tactic model",
+  "description": "The record of one training run: what was configured, what data went in, the loss and the accuracy after every epoch, and the chosen model on the test part of the data beside a baseline. The data is split by theorem, so no state of the test part comes from a proof the model was trained on. `top1` is the share of examples whose tactic template the model put first, `topk` the share where it was among the first `k`. The baseline knows no state and always answers with the templates most frequent in training: a model is worth using when it beats it. A number is null where there was nothing to measure, as on an empty validation part. The record holds no times and no paths: the same run gives the same record.",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "maithic.guide.run/1"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "config": {
+      "type": "object",
+      "properties": {
+        "dim": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pooling": {
+          "enum": [
+            "mean",
+            "first"
+          ]
+        },
+        "mixer": {
+          "enum": [
+            "none",
+            "attention"
+          ]
+        },
+        "epochs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "batch": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rate": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "weight_decay": {
+          "type": "number",
+          "minimum": 0
+        },
+        "decoupled": {
+          "type": "boolean"
+        },
+        "min_token_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "min_template_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "k": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "dim",
+        "max_length",
+        "pooling",
+        "mixer",
+        "epochs",
+        "batch",
+        "rate",
+        "weight_decay",
+        "decoupled",
+        "min_token_count",
+        "min_template_count",
+        "k"
+      ],
+      "additionalProperties": false
+    },
+    "dataset": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string"
+        },
+        "pairs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "theorems": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "train": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "validation": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "test": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "pairs",
+        "theorems",
+        "train",
+        "validation",
+        "test"
+      ],
+      "additionalProperties": false
+    },
+    "vocabulary": {
+      "type": "integer",
+      "minimum": 5
+    },
+    "classes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "parameters": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "epochs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "epoch": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "train_loss": {
+            "type": "number",
+            "minimum": 0
+          },
+          "validation_loss": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "validation_top1": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "validation_topk": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "epoch",
+          "train_loss",
+          "validation_loss",
+          "validation_top1",
+          "validation_topk"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "best_epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "test": {
+      "type": "object",
+      "properties": {
+        "examples": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "loss": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "top1": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "topk": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "k": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "examples",
+        "loss",
+        "top1",
+        "topk",
+        "k"
+      ],
+      "additionalProperties": false
+    },
+    "baseline": {
+      "type": "object",
+      "properties": {
+        "examples": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "loss": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "top1": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "topk": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "k": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "examples",
+        "loss",
+        "top1",
+        "topk",
+        "k"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "name",
+    "seed",
+    "config",
+    "dataset",
+    "vocabulary",
+    "classes",
+    "parameters",
+    "epochs",
+    "best_epoch",
+    "test",
+    "baseline"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 378" role="img" aria-labelledby="refute-outcomes-t refute-outcomes-d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="refute-outcomes-t">What refute can say</title>
+  <desc id="refute-outcomes-d">Three cards. Refuted, exit status 8: a counterexample was found and Lean's kernel confirmed that the statement fails there. Vacuous or not confirmed, exit status 7: the hypotheses can never hold together, so the statement says nothing, or a candidate counterexample was not confirmed. Standing, exit status 0: no counterexample turned up, which is not a proof.</desc>
+  <rect width="960" height="378" fill="#FAF8F4"/>
+  <rect x="40.0" y="96.0" width="281.3" height="174.0" rx="10" fill="#FFFFFF" stroke="#E5484D" stroke-width="1.5"/>
+  <rect x="339.3" y="96.0" width="281.3" height="174.0" rx="10" fill="#FFFFFF" stroke="#B37400" stroke-width="1.5"/>
+  <rect x="638.7" y="96.0" width="281.3" height="174.0" rx="10" fill="#FFFFFF" stroke="#5B6477" stroke-width="1.5"/>
+  <rect x="40.0" y="288.0" width="880.0" height="60.0" rx="10" fill="#E8E9F3"/>
+  <path d="M40.0 106.0a10 10 0 0 1 10-10h261.3a10 10 0 0 1 10 10v26.0h-281.3z" fill="#E5484D"/>
+  <path d="M339.3 106.0a10 10 0 0 1 10-10h261.3a10 10 0 0 1 10 10v26.0h-281.3z" fill="#B37400"/>
+  <path d="M638.7 106.0a10 10 0 0 1 10-10h261.3a10 10 0 0 1 10 10v26.0h-281.3z" fill="#5B6477"/>
+  <text x="40.0" y="44.0" font-size="22" fill="#14162B" font-weight="700" textLength="471.9" lengthAdjust="spacingAndGlyphs">Three things a refutation can come back with</text>
+  <text x="40.0" y="69.0" font-size="13.5" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="154.4" lengthAdjust="spacingAndGlyphs">maithic refute FILE</text>
+  <text x="54.0" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="47.4" lengthAdjust="spacingAndGlyphs">refuted</text>
+  <text x="307.3" y="118.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="27.5" lengthAdjust="spacingAndGlyphs">exit 8</text>
+  <text x="54.0" y="155.0" font-size="13" fill="#14162B" textLength="195.9" lengthAdjust="spacingAndGlyphs">A counterexample was found, and</text>
+  <text x="54.0" y="173.0" font-size="13" fill="#14162B" textLength="184.6" lengthAdjust="spacingAndGlyphs">Lean's kernel confirmed that the</text>
+  <text x="54.0" y="191.0" font-size="13" fill="#14162B" textLength="120.7" lengthAdjust="spacingAndGlyphs">statement fails there.</text>
+  <text x="54.0" y="215.0" font-size="13" fill="#14162B" textLength="210.3" lengthAdjust="spacingAndGlyphs">The values are printed, and so is the</text>
+  <text x="54.0" y="233.0" font-size="13" fill="#14162B" textLength="124.3" lengthAdjust="spacingAndGlyphs">theorem that says so.</text>
+  <text x="353.3" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="175.8" lengthAdjust="spacingAndGlyphs">vacuous, or not confirmed</text>
+  <text x="606.7" y="118.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="27.5" lengthAdjust="spacingAndGlyphs">exit 7</text>
+  <text x="353.3" y="155.0" font-size="13" fill="#14162B" textLength="181.4" lengthAdjust="spacingAndGlyphs">The hypotheses can never hold</text>
+  <text x="353.3" y="173.0" font-size="13" fill="#14162B" textLength="214.6" lengthAdjust="spacingAndGlyphs">together, so the statement is true and</text>
+  <text x="353.3" y="191.0" font-size="13" fill="#14162B" textLength="76.6" lengthAdjust="spacingAndGlyphs">says nothing.</text>
+  <text x="353.3" y="215.0" font-size="13" fill="#14162B" textLength="216.8" lengthAdjust="spacingAndGlyphs">Or a candidate counterexample came</text>
+  <text x="353.3" y="233.0" font-size="13" fill="#14162B" textLength="190.1" lengthAdjust="spacingAndGlyphs">up that Lean did not confirm, and</text>
+  <text x="353.3" y="251.0" font-size="13" fill="#14162B" textLength="107.7" lengthAdjust="spacingAndGlyphs">nothing is claimed.</text>
+  <text x="652.7" y="119.0" font-size="14" fill="#FFFFFF" font-weight="700" textLength="58.3" lengthAdjust="spacingAndGlyphs">standing</text>
+  <text x="906.0" y="118.5" font-size="11.5" fill="#FFFFFF" text-anchor="end" textLength="27.5" lengthAdjust="spacingAndGlyphs">exit 0</text>
+  <text x="652.7" y="155.0" font-size="13" fill="#14162B" textLength="214.6" lengthAdjust="spacingAndGlyphs">No counterexample turned up among</text>
+  <text x="652.7" y="173.0" font-size="13" fill="#14162B" textLength="148.9" lengthAdjust="spacingAndGlyphs">the values that were tried.</text>
+  <text x="652.7" y="197.0" font-size="13" fill="#14162B" textLength="216.1" lengthAdjust="spacingAndGlyphs">That is not a proof, and the command</text>
+  <text x="652.7" y="215.0" font-size="13" fill="#14162B" textLength="168.1" lengthAdjust="spacingAndGlyphs">says so. The statement stays</text>
+  <text x="652.7" y="233.0" font-size="13" fill="#14162B" textLength="70.8" lengthAdjust="spacingAndGlyphs">conjectured.</text>
+  <text x="56.0" y="313.0" font-size="13" fill="#14162B" textLength="734.9" lengthAdjust="spacingAndGlyphs">A counterexample is a claim like any other until the kernel has checked it. Only then is the status refuted, and it is the one status</text>
+  <text x="56.0" y="331.0" font-size="13" fill="#14162B" textLength="252.9" lengthAdjust="spacingAndGlyphs">besides verified that is presented as settled.</text>
+</svg>

@@ -1,0 +1,697 @@
+{
+  "schema": "maithic.council.session/1",
+  "problem": {
+    "file": "examples/council.lean",
+    "theorem": "sumOdd_eq_square",
+    "statement": "theorem sumOdd_eq_square (n : Nat) : sumOdd n = n * n",
+    "line": 15
+  },
+  "settings": {
+    "rounds": 3,
+    "candidates": 3,
+    "policy": "default",
+    "model": true,
+    "roles": [
+      {
+        "name": "researcher",
+        "purpose": "Finds the definitions, lemmas and prior results that bear on the statement.",
+        "tasks": [
+          "research"
+        ],
+        "uses_model": true,
+        "tools": [
+          "lookup"
+        ]
+      },
+      {
+        "name": "prover",
+        "purpose": "Generates candidate proofs.",
+        "tasks": [
+          "prove"
+        ],
+        "uses_model": true,
+        "tools": []
+      },
+      {
+        "name": "critic",
+        "purpose": "Identifies the errors in proofs that Lean rejected, and suggests alternatives.",
+        "tasks": [
+          "critique"
+        ],
+        "uses_model": true,
+        "tools": []
+      },
+      {
+        "name": "verifier",
+        "purpose": "Runs Lean and confirms correctness; the only role that can request a verified status.",
+        "tasks": [
+          "examine",
+          "verify"
+        ],
+        "uses_model": false,
+        "tools": [
+          "lean_check",
+          "elaborate",
+          "check_proof",
+          "prove",
+          "refute"
+        ]
+      }
+    ],
+    "schedule": "examine: verifier | round 1: researcher, prover, verifier, critic | round 2: prover, verifier, critic | round 3: prover, verifier"
+  },
+  "status": "verified",
+  "ending": {
+    "reason": "settled"
+  },
+  "answer": {
+    "status": "verified",
+    "statement": "∀ (n : Nat), sumOdd n = n * n",
+    "text": "Lean's kernel accepted proof 11, posted by the prover in round 2. It rests on the axioms Quot.sound, propext.",
+    "proof": "by\n  induction n with\n  | zero => rfl\n  | succ k ih =>\n    simp only [sumOdd, ih, Nat.succ_mul, Nat.mul_succ]\n    omega",
+    "proof_item": 11,
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "components": [
+      2,
+      11,
+      3,
+      4,
+      5
+    ],
+    "set_aside": {
+      "definition": 1,
+      "proof": 2,
+      "note": 2
+    },
+    "lean": "/-- The first `n` odd numbers add up to `n` squared. -/\ntheorem sumOdd_eq_square (n : Nat) : sumOdd n = n * n := by\n  induction n with\n  | zero => rfl\n  | succ k ih =>\n    simp only [sumOdd, ih, Nat.succ_mul, Nat.mul_succ]\n    omega\n"
+  },
+  "turns": [
+    {
+      "number": 1,
+      "round": 0,
+      "task": "examine",
+      "role": "verifier",
+      "status": "done",
+      "summary": "the statement is well formed; no counterexample was found; automation found no proof",
+      "posted": [],
+      "model_calls": 0,
+      "lean_calls": 20,
+      "seconds": 1.424
+    },
+    {
+      "number": 2,
+      "round": 1,
+      "task": "research",
+      "role": "researcher",
+      "status": "done",
+      "summary": "4 of 5 names exist in the library; 1 idea",
+      "posted": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "model_calls": 1,
+      "lean_calls": 1,
+      "seconds": 0.009
+    },
+    {
+      "number": 3,
+      "round": 1,
+      "task": "prove",
+      "role": "prover",
+      "status": "done",
+      "summary": "2 candidate proofs",
+      "posted": [
+        8,
+        9
+      ],
+      "model_calls": 1,
+      "lean_calls": 0,
+      "seconds": 0.0
+    },
+    {
+      "number": 4,
+      "round": 1,
+      "task": "verify",
+      "role": "verifier",
+      "status": "done",
+      "summary": "Lean rejected all 2 proofs",
+      "posted": [],
+      "model_calls": 0,
+      "lean_calls": 2,
+      "seconds": 0.041
+    },
+    {
+      "number": 5,
+      "round": 1,
+      "task": "critique",
+      "role": "critic",
+      "status": "done",
+      "summary": "a diagnosis of 2 rejected proofs, with 1 suggestion",
+      "posted": [
+        10
+      ],
+      "model_calls": 1,
+      "lean_calls": 0,
+      "seconds": 0.001
+    },
+    {
+      "number": 6,
+      "round": 2,
+      "task": "prove",
+      "role": "prover",
+      "status": "done",
+      "summary": "1 candidate proof",
+      "posted": [
+        11
+      ],
+      "model_calls": 1,
+      "lean_calls": 0,
+      "seconds": 0.0
+    },
+    {
+      "number": 7,
+      "round": 2,
+      "task": "verify",
+      "role": "verifier",
+      "status": "done",
+      "summary": "Lean accepted a proof (1 examined)",
+      "posted": [],
+      "model_calls": 0,
+      "lean_calls": 1,
+      "seconds": 0.404
+    }
+  ],
+  "board": [
+    {
+      "id": 1,
+      "kind": "statement",
+      "author": "coordinator",
+      "round": 0,
+      "at": 0.0,
+      "title": "sumOdd_eq_square",
+      "body": "theorem sumOdd_eq_square (n : Nat) : sumOdd n = n * n"
+    },
+    {
+      "id": 2,
+      "kind": "claim",
+      "author": "coordinator",
+      "round": 0,
+      "at": 0.0,
+      "title": "the statement holds",
+      "body": "theorem sumOdd_eq_square (n : Nat) : sumOdd n = n * n",
+      "refers": [
+        1
+      ],
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "elaborated",
+          "statement": "∀ (n : Nat), sumOdd n = n * n"
+        },
+        {
+          "kind": "proved",
+          "statement": "∀ (n : Nat), sumOdd n = n * n",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ],
+          "policy": "default"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "kind": "definition",
+      "author": "researcher",
+      "round": 1,
+      "at": 1.433,
+      "title": "sumOdd",
+      "body": "sumOdd : Nat → Nat",
+      "refers": [
+        1
+      ],
+      "checked": true
+    },
+    {
+      "id": 4,
+      "kind": "definition",
+      "author": "researcher",
+      "round": 1,
+      "at": 1.433,
+      "title": "Nat.succ_mul",
+      "body": "Nat.succ_mul (n m : Nat) : n.succ * m = n * m + m",
+      "refers": [
+        1
+      ],
+      "checked": true
+    },
+    {
+      "id": 5,
+      "kind": "definition",
+      "author": "researcher",
+      "round": 1,
+      "at": 1.433,
+      "title": "Nat.mul_succ",
+      "body": "Nat.mul_succ (n m : Nat) : n * m.succ = n * m + n",
+      "refers": [
+        1
+      ],
+      "checked": true
+    },
+    {
+      "id": 6,
+      "kind": "definition",
+      "author": "researcher",
+      "round": 1,
+      "at": 1.433,
+      "title": "Nat.mul_comm",
+      "body": "Nat.mul_comm (n m : Nat) : n * m = m * n",
+      "refers": [
+        1
+      ],
+      "checked": true
+    },
+    {
+      "id": 7,
+      "kind": "note",
+      "author": "researcher",
+      "round": 1,
+      "at": 1.433,
+      "title": "an idea for the proof",
+      "body": "Induction on n: in the step, unfold sumOdd, use the induction hypothesis, and compare both sides as polynomials in n.",
+      "refers": [
+        2
+      ]
+    },
+    {
+      "id": 8,
+      "kind": "proof",
+      "author": "prover",
+      "round": 1,
+      "at": 1.433,
+      "title": "candidate 1 of round 1",
+      "body": "by\n  induction n <;> simp [sumOdd]",
+      "refers": [
+        2
+      ],
+      "examined": "rejected",
+      "lean": "unsolved goals\ncase succ\nn✝ : Nat\na✝ : sumOdd n✝ = n✝ * n✝\n⊢ sumOdd n✝ + (2 * n✝ + 1) = (n✝ + 1) * (n✝ + 1)"
+    },
+    {
+      "id": 9,
+      "kind": "proof",
+      "author": "prover",
+      "round": 1,
+      "at": 1.433,
+      "title": "candidate 2 of round 1",
+      "body": "by\n  induction n with\n  | zero => rfl\n  | succ k ih => simp [sumOdd, ih]; omega",
+      "refers": [
+        2
+      ],
+      "examined": "rejected",
+      "lean": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 0\n  b ≥ 0\n  a ≥ 0\n  a - b + 2*c ≤ -2\nwhere\n a := ↑k * ↑k\n b := ↑(k + 1) * ↑(k + 1)\n c := ↑k"
+    },
+    {
+      "id": 10,
+      "kind": "note",
+      "author": "critic",
+      "round": 1,
+      "at": 1.475,
+      "title": "why the proofs of round 1 failed",
+      "body": "Both proofs get through the base case and stop in the step. After the induction hypothesis is used, the goal still holds the product (k + 1) * (k + 1). simp leaves it as it is, and omega cannot read it: omega decides linear arithmetic, and a product of two variables is not linear.\nTry: Rewrite the product with Nat.succ_mul and Nat.mul_succ first, so that k * k is the only product left on both sides, and call omega after that.",
+      "refers": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "kind": "proof",
+      "author": "prover",
+      "round": 2,
+      "at": 1.475,
+      "title": "candidate 1 of round 2",
+      "body": "by\n  induction n with\n  | zero => rfl\n  | succ k ih =>\n    simp only [sumOdd, ih, Nat.succ_mul, Nat.mul_succ]\n    omega",
+      "refers": [
+        2
+      ],
+      "examined": "accepted"
+    }
+  ],
+  "messages": [
+    {
+      "seq": 1,
+      "at": 0.0,
+      "round": 0,
+      "sender": "coordinator",
+      "recipients": [
+        "researcher",
+        "prover",
+        "critic",
+        "verifier"
+      ],
+      "performative": "inform",
+      "subject": "the problem: sumOdd_eq_square",
+      "content": "theorem sumOdd_eq_square (n : Nat) : sumOdd n = n * n",
+      "refers": [
+        1,
+        2
+      ]
+    },
+    {
+      "seq": 2,
+      "at": 0.0,
+      "round": 0,
+      "sender": "coordinator",
+      "recipients": [
+        "verifier"
+      ],
+      "performative": "request",
+      "subject": "examine",
+      "content": "Check that the statement is well formed, look for a counterexample, and let automation try."
+    },
+    {
+      "seq": 3,
+      "at": 0.003,
+      "round": 0,
+      "sender": "verifier",
+      "recipients": [
+        "coordinator"
+      ],
+      "performative": "verdict",
+      "subject": "the statement is well formed",
+      "content": "∀ (n : Nat), sumOdd n = n * n",
+      "refers": [
+        2
+      ]
+    },
+    {
+      "seq": 4,
+      "at": 1.424,
+      "round": 0,
+      "sender": "verifier",
+      "recipients": [
+        "coordinator"
+      ],
+      "performative": "inform",
+      "subject": "automation found no proof",
+      "content": "its automation found no proof in 18 attempts"
+    },
+    {
+      "seq": 5,
+      "at": 1.424,
+      "round": 1,
+      "sender": "coordinator",
+      "recipients": [
+        "researcher"
+      ],
+      "performative": "request",
+      "subject": "research",
+      "content": "Find the definitions and lemmas of the library that bear on the statement."
+    },
+    {
+      "seq": 6,
+      "at": 1.433,
+      "round": 1,
+      "sender": "researcher",
+      "recipients": [
+        "prover",
+        "coordinator"
+      ],
+      "performative": "inform",
+      "subject": "4 of 5 names exist in the library; 1 idea",
+      "content": "sumOdd : Nat → Nat\nNat.succ_mul (n m : Nat) : n.succ * m = n * m + m\nNat.mul_succ (n m : Nat) : n * m.succ = n * m + n\nNat.mul_comm (n m : Nat) : n * m = m * n\nLean does not know: Nat.add_mul_self_eq",
+      "refers": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "seq": 7,
+      "at": 1.433,
+      "round": 1,
+      "sender": "coordinator",
+      "recipients": [
+        "prover"
+      ],
+      "performative": "request",
+      "subject": "prove",
+      "content": "Propose proofs of the statement."
+    },
+    {
+      "seq": 8,
+      "at": 1.433,
+      "round": 1,
+      "sender": "prover",
+      "recipients": [
+        "verifier"
+      ],
+      "performative": "propose",
+      "subject": "2 candidate proofs",
+      "content": "by\n  induction n <;> simp [sumOdd]\n\nby\n  induction n with\n  | zero => rfl\n  | succ k ih => simp [sumOdd, ih]; omega",
+      "refers": [
+        8,
+        9
+      ]
+    },
+    {
+      "seq": 9,
+      "at": 1.433,
+      "round": 1,
+      "sender": "coordinator",
+      "recipients": [
+        "verifier"
+      ],
+      "performative": "request",
+      "subject": "verify",
+      "content": "Give each proposed proof to Lean, and say what Lean decided."
+    },
+    {
+      "seq": 10,
+      "at": 1.463,
+      "round": 1,
+      "sender": "verifier",
+      "recipients": [
+        "coordinator",
+        "prover",
+        "critic"
+      ],
+      "performative": "verdict",
+      "subject": "proof 8 is rejected",
+      "content": "unsolved goals\ncase succ\nn✝ : Nat\na✝ : sumOdd n✝ = n✝ * n✝\n⊢ sumOdd n✝ + (2 * n✝ + 1) = (n✝ + 1) * (n✝ + 1)",
+      "refers": [
+        8
+      ]
+    },
+    {
+      "seq": 11,
+      "at": 1.474,
+      "round": 1,
+      "sender": "verifier",
+      "recipients": [
+        "coordinator",
+        "prover",
+        "critic"
+      ],
+      "performative": "verdict",
+      "subject": "proof 9 is rejected",
+      "content": "omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c ≥ 0\n  b ≥ 0\n  a ≥ 0\n  a - b + 2*c ≤ -2\nwhere\n a := ↑k * ↑k\n b := ↑(k + 1) * ↑(k + 1)\n c := ↑k",
+      "refers": [
+        9
+      ]
+    },
+    {
+      "seq": 12,
+      "at": 1.474,
+      "round": 1,
+      "sender": "coordinator",
+      "recipients": [
+        "critic"
+      ],
+      "performative": "request",
+      "subject": "critique",
+      "content": "Say why the proofs Lean rejected fail, and what to try instead."
+    },
+    {
+      "seq": 13,
+      "at": 1.475,
+      "round": 1,
+      "sender": "critic",
+      "recipients": [
+        "prover"
+      ],
+      "performative": "critique",
+      "subject": "a diagnosis of 2 rejected proofs, with 1 suggestion",
+      "content": "Both proofs get through the base case and stop in the step. After the induction hypothesis is used, the goal still holds the product (k + 1) * (k + 1). simp leaves it as it is, and omega cannot read it: omega decides linear arithmetic, and a product of two variables is not linear.\nTry: Rewrite the product with Nat.succ_mul and Nat.mul_succ first, so that k * k is the only product left on both sides, and call omega after that.",
+      "refers": [
+        10,
+        8,
+        9
+      ]
+    },
+    {
+      "seq": 14,
+      "at": 1.475,
+      "round": 2,
+      "sender": "coordinator",
+      "recipients": [
+        "prover"
+      ],
+      "performative": "request",
+      "subject": "prove",
+      "content": "Propose proofs of the statement."
+    },
+    {
+      "seq": 15,
+      "at": 1.475,
+      "round": 2,
+      "sender": "prover",
+      "recipients": [
+        "verifier"
+      ],
+      "performative": "propose",
+      "subject": "1 candidate proof",
+      "content": "by\n  induction n with\n  | zero => rfl\n  | succ k ih =>\n    simp only [sumOdd, ih, Nat.succ_mul, Nat.mul_succ]\n    omega",
+      "refers": [
+        11
+      ]
+    },
+    {
+      "seq": 16,
+      "at": 1.475,
+      "round": 2,
+      "sender": "coordinator",
+      "recipients": [
+        "verifier"
+      ],
+      "performative": "request",
+      "subject": "verify",
+      "content": "Give each proposed proof to Lean, and say what Lean decided."
+    },
+    {
+      "seq": 17,
+      "at": 1.879,
+      "round": 2,
+      "sender": "verifier",
+      "recipients": [
+        "coordinator",
+        "prover",
+        "critic"
+      ],
+      "performative": "verdict",
+      "subject": "proof 11 is accepted: the claim is verified",
+      "content": "Lean's kernel accepted the proof. It rests on the axioms Quot.sound, propext.",
+      "refers": [
+        11,
+        2
+      ]
+    },
+    {
+      "seq": 18,
+      "at": 1.879,
+      "round": 2,
+      "sender": "coordinator",
+      "recipients": [
+        "all"
+      ],
+      "performative": "inform",
+      "subject": "the answer: verified",
+      "content": "Lean's kernel accepted proof 11, posted by the prover in round 2. It rests on the axioms Quot.sound, propext.",
+      "refers": [
+        2,
+        11,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "budget": {
+    "limits": {
+      "tokens": 200000,
+      "cost": 0.0,
+      "seconds": 600.0,
+      "lean_calls": 200,
+      "model_calls": 24
+    },
+    "spent": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "seconds": 2.895,
+      "lean_calls": 24,
+      "model_calls": 4
+    }
+  },
+  "tools": {
+    "lean_check": 0,
+    "lookup": 1,
+    "elaborate": 1,
+    "check_proof": 3,
+    "prove": 1,
+    "refute": 1
+  },
+  "written": false,
+  "gateway": {
+    "mode": "replay",
+    "calls": 4,
+    "failed_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "records": [
+      {
+        "purpose": "council.research",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T19:03:20Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "council.prove",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T19:03:20Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "council.critique",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T19:03:20Z",
+        "elapsed_ms": 0
+      },
+      {
+        "purpose": "council.prove",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "served_by": "replay",
+        "ok": true,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "started_at": "2026-11-23T19:03:20Z",
+        "elapsed_ms": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="t d" font-family="'Helvetica Neue', Arial, sans-serif">
+  <title id="t">One proof becomes four kinds of record</title>
+  <desc id="d">The theorem double_eq, proved by induction with the tactics rfl, simp and omega, is traced while Lean elaborates it. Four kinds of record come out. One theorem record with the statement, the proof text, three smallest steps, 82 premises and the mark complete. Four step records, one for each tactic as written, with its depth and the goals before and after: the induction, which holds the other three, then rfl, simp with the definition of double, and omega. Eighty-two premise records, one for each constant the proof term refers to, among them double, Nat.recAux and lemmas that omega used behind the scenes. Three pair records, each a proof state with the tactic that was run on it: the goal double 0 equals 2 times 0 with rfl, the goal double of n plus 1 equals 2 times n plus 1 with simp, and the goal double n plus 2 equals 2 times n plus 1 with omega. Pairs come only from complete proofs. Shards are named by their content, the manifest holds a SHA-256 for each, and maithic corpus verify checks all of it.</desc>
+  <rect width="960" height="600" fill="#FAF8F4"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#14162B" textLength="420.5" lengthAdjust="spacingAndGlyphs">One proof becomes four kinds of record</text>
+  <text x="40" y="68" font-size="14" fill="#5B6477" textLength="679.1" lengthAdjust="spacingAndGlyphs">maithic corpus harvest traces a proof while Lean elaborates it. These are the records it wrote for this theorem.</text>
+
+  <!-- the source -->
+  <rect x="40" y="88" width="372" height="170" rx="10" fill="#14162B"/>
+  <text x="56" y="110" font-size="11.5" fill="#8A90A6" textLength="145.1" lengthAdjust="spacingAndGlyphs">fixtures/intel/lean/Demo.lean</text>
+  <g font-size="12.5" font-family="Menlo, Consolas, monospace" fill="#E8E9F3" xml:space="preserve">
+    <text x="56" y="134" xml:space="preserve" textLength="199.4" lengthAdjust="spacingAndGlyphs"><tspan fill="#F0A92E">theorem</tspan> double_eq (n : Nat) :</text>
+    <text x="56" y="152" xml:space="preserve" textLength="178.8" lengthAdjust="spacingAndGlyphs">    double n = 2 * n := by</text>
+    <text x="56" y="170" xml:space="preserve" textLength="123.8" lengthAdjust="spacingAndGlyphs">  induction n with</text>
+    <text x="56" y="188" xml:space="preserve" textLength="103.1" lengthAdjust="spacingAndGlyphs">  | zero =&gt; <tspan fill="#2CC4B6">rfl</tspan></text>
+    <text x="56" y="206" xml:space="preserve" textLength="110.0" lengthAdjust="spacingAndGlyphs">  | succ n ih =&gt;</text>
+    <text x="56" y="224" xml:space="preserve" textLength="116.9" lengthAdjust="spacingAndGlyphs">    <tspan fill="#2CC4B6">simp [double]</tspan></text>
+    <text x="56" y="242" xml:space="preserve" textLength="61.9" lengthAdjust="spacingAndGlyphs">    <tspan fill="#2CC4B6">omega</tspan></text>
+  </g>
+
+  <!-- how it is read -->
+  <rect x="40" y="274" width="372" height="208" rx="10" fill="#FFFFFF" stroke="#E8E9F3" stroke-width="1.5"/>
+  <text x="56" y="300" font-size="14" font-weight="700" fill="#14162B" textLength="224.0" lengthAdjust="spacingAndGlyphs">Read from Lean, not from the text</text>
+  <g font-size="13" fill="#14162B">
+    <text x="56" y="326" textLength="251.5" lengthAdjust="spacingAndGlyphs">A <tspan font-weight="700">step</tspan> is a tactic as it stands in the file, with</text>
+    <text x="56" y="344" textLength="229.8" lengthAdjust="spacingAndGlyphs">the goals Lean had before it and after it.</text>
+    <text x="56" y="372" textLength="265.9" lengthAdjust="spacingAndGlyphs">The <tspan font-weight="700" fill="#0B7F75">smallest steps</tspan> hold no other tactic. Each</text>
+    <text x="56" y="390" textLength="254.4" lengthAdjust="spacingAndGlyphs">is a state and the move that was made on it.</text>
+    <text x="56" y="418" textLength="258.0" lengthAdjust="spacingAndGlyphs">A <tspan font-weight="700">premise</tspan> is a constant in the proof term the</text>
+    <text x="56" y="436" textLength="269.5" lengthAdjust="spacingAndGlyphs">kernel checked: what the tactics used, whether</text>
+    <text x="56" y="454" textLength="205.2" lengthAdjust="spacingAndGlyphs">or not the text of the proof names it.</text>
+  </g>
+
+  <!-- four kinds of record -->
+  <g font-size="12.5">
+    <g transform="translate(432 88)">
+      <rect width="234" height="188" rx="10" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h214a10 10 0 0 1 10 10v24h-234z" fill="#2B2F77"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="53.3" lengthAdjust="spacingAndGlyphs">theorem</text>
+      <text x="220" y="23" font-size="12" fill="#C9CCE8" text-anchor="end" textLength="44.0" lengthAdjust="spacingAndGlyphs">1 record</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#14162B">
+        <text x="14" y="56" textLength="88.6" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">name      </tspan> double_eq</text>
+        <text x="14" y="76" textLength="139.2" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">statement </tspan> ∀ (n : Nat),</text>
+        <text x="14" y="94" xml:space="preserve" textLength="177.1" lengthAdjust="spacingAndGlyphs">            double n = 2 * n</text>
+        <text x="14" y="114" textLength="44.3" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">steps     </tspan> 3</text>
+        <text x="14" y="134" textLength="69.6" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">premises  </tspan> 82</text>
+        <text x="14" y="154" textLength="82.2" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">complete  </tspan> true</text>
+      </g>
+      <text x="14" y="176" font-size="11.5" fill="#5B6477" textLength="186.0" lengthAdjust="spacingAndGlyphs">with the proof as written, file and line</text>
+    </g>
+    <g transform="translate(686 88)">
+      <rect width="234" height="188" rx="10" fill="#FFFFFF" stroke="#EC6813" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h214a10 10 0 0 1 10 10v24h-234z" fill="#EC6813"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="27.8" lengthAdjust="spacingAndGlyphs">step</text>
+      <text x="220" y="23" font-size="12" fill="#FBE3D2" text-anchor="end" textLength="50.0" lengthAdjust="spacingAndGlyphs">4 records</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#14162B" xml:space="preserve">
+        <text x="14" y="56" xml:space="preserve" textLength="132.8" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">0</tspan>  induction n with …</text>
+        <text x="14" y="76" xml:space="preserve" textLength="50.6" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">1</tspan>    rfl</text>
+        <text x="14" y="96" xml:space="preserve" textLength="113.9" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">2</tspan>    simp [double]</text>
+        <text x="14" y="116" xml:space="preserve" textLength="63.3" lengthAdjust="spacingAndGlyphs"><tspan fill="#5B6477">3</tspan>    omega</text>
+      </g>
+      <text x="14" y="142" font-size="11.5" fill="#5B6477" textLength="196.3" lengthAdjust="spacingAndGlyphs">Step 0 holds the other three. Each has</text>
+      <text x="14" y="158" font-size="11.5" fill="#5B6477" textLength="167.5" lengthAdjust="spacingAndGlyphs">its depth, its place, and the goals</text>
+      <text x="14" y="174" font-size="11.5" fill="#5B6477" textLength="191.2" lengthAdjust="spacingAndGlyphs">before and after, as Lean prints them.</text>
+    </g>
+    <g transform="translate(432 294)">
+      <rect width="234" height="188" rx="10" fill="#FFFFFF" stroke="#9558B2" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h214a10 10 0 0 1 10 10v24h-234z" fill="#9558B2"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="51.8" lengthAdjust="spacingAndGlyphs">premise</text>
+      <text x="220" y="23" font-size="12" fill="#EBDDF3" text-anchor="end" textLength="56.7" lengthAdjust="spacingAndGlyphs">82 records</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#14162B">
+        <text x="14" y="56" textLength="38.0" lengthAdjust="spacingAndGlyphs">double</text>
+        <text x="14" y="76" textLength="63.2" lengthAdjust="spacingAndGlyphs">Nat.recAux</text>
+        <text x="14" y="96" textLength="94.9" lengthAdjust="spacingAndGlyphs">Int.natCast_add</text>
+        <text x="14" y="116" textLength="132.8" lengthAdjust="spacingAndGlyphs">Lean.Omega.combo_sat'</text>
+        <text x="14" y="136" fill="#5B6477" textLength="56.9" lengthAdjust="spacingAndGlyphs">… 78 more</text>
+      </g>
+      <text x="14" y="158" font-size="11.5" fill="#5B6477" textLength="212.2" lengthAdjust="spacingAndGlyphs">The lemmas omega reached for are here,</text>
+      <text x="14" y="174" font-size="11.5" fill="#5B6477" textLength="185.4" lengthAdjust="spacingAndGlyphs">though the proof never names them.</text>
+    </g>
+    <g transform="translate(686 294)">
+      <rect width="234" height="188" rx="10" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.5"/>
+      <path d="M0 10a10 10 0 0 1 10-10h214a10 10 0 0 1 10 10v24h-234z" fill="#0FA89B"/>
+      <text x="14" y="23" font-size="13.5" font-weight="700" fill="#FFFFFF" textLength="24.8" lengthAdjust="spacingAndGlyphs">pair</text>
+      <text x="220" y="23" font-size="12" fill="#D5F3F0" text-anchor="end" textLength="50.0" lengthAdjust="spacingAndGlyphs">3 records</text>
+      <g font-family="Menlo, Consolas, monospace" font-size="11" fill="#14162B">
+        <text x="14" y="54" textLength="108.9" lengthAdjust="spacingAndGlyphs">⊢ double 0 = 2 * 0</text>
+        <text x="220" y="54" text-anchor="end" font-weight="700" fill="#0B7F75" textLength="18.2" lengthAdjust="spacingAndGlyphs">rfl</text>
+        <text x="14" y="82" textLength="108.9" lengthAdjust="spacingAndGlyphs">⊢ double (n + 1) =</text>
+        <text x="14" y="97" xml:space="preserve" textLength="90.8" lengthAdjust="spacingAndGlyphs">    2 * (n + 1)</text>
+        <text x="220" y="97" text-anchor="end" font-weight="700" fill="#0B7F75" textLength="78.7" lengthAdjust="spacingAndGlyphs">simp [double]</text>
+        <text x="14" y="125" textLength="96.8" lengthAdjust="spacingAndGlyphs">⊢ double n + 2 =</text>
+        <text x="14" y="140" xml:space="preserve" textLength="90.8" lengthAdjust="spacingAndGlyphs">    2 * (n + 1)</text>
+        <text x="220" y="140" text-anchor="end" font-weight="700" fill="#0B7F75" textLength="30.2" lengthAdjust="spacingAndGlyphs">omega</text>
+      </g>
+      <text x="14" y="162" font-size="11.5" fill="#5B6477" textLength="195.6" lengthAdjust="spacingAndGlyphs">The whole state, hypotheses included,</text>
+      <text x="14" y="178" font-size="11.5" fill="#5B6477" textLength="162.4" lengthAdjust="spacingAndGlyphs">and the tactic that was run on it.</text>
+    </g>
+  </g>
+
+  <!-- three guarantees -->
+  <g font-size="12.5">
+    <g transform="translate(40 500)">
+      <rect width="286" height="80" rx="8" fill="#FFFFFF" stroke="#0FA89B" stroke-width="1.5"/>
+      <text x="14" y="24" font-weight="700" fill="#14162B" textLength="227.8" lengthAdjust="spacingAndGlyphs">Pairs come from complete proofs only</text>
+      <text x="14" y="45" fill="#5B6477" textLength="202.6" lengthAdjust="spacingAndGlyphs">A proof that rests on sorry, its own or</text>
+      <text x="14" y="63" fill="#5B6477" textLength="208.0" lengthAdjust="spacingAndGlyphs">a lemma's, is kept and gives no pairs.</text>
+    </g>
+    <g transform="translate(337 500)">
+      <rect width="286" height="80" rx="8" fill="#FFFFFF" stroke="#2B2F77" stroke-width="1.5"/>
+      <text x="14" y="24" font-weight="700" fill="#14162B" textLength="205.6" lengthAdjust="spacingAndGlyphs">Shards are named by their content</text>
+      <text x="14" y="46" font-size="11" fill="#5B6477" font-family="Menlo, Consolas, monospace" textLength="205.7" lengthAdjust="spacingAndGlyphs">shards/pair-cb4fd7ff3f223710.jsonl</text>
+      <text x="14" y="64" fill="#5B6477" textLength="232.7" lengthAdjust="spacingAndGlyphs">Same sources, same bytes, same names.</text>
+    </g>
+    <g transform="translate(634 500)">
+      <rect width="286" height="80" rx="8" fill="#FFFFFF" stroke="#F0A92E" stroke-width="1.5"/>
+      <text x="14" y="24" font-weight="700" fill="#14162B" textLength="173.7" lengthAdjust="spacingAndGlyphs">The manifest can be checked</text>
+      <text x="14" y="45" fill="#5B6477" textLength="221.0" lengthAdjust="spacingAndGlyphs">A SHA-256 and a count for every shard;</text>
+      <text x="14" y="63" fill="#5B6477" textLength="204.4" lengthAdjust="spacingAndGlyphs"><tspan font-family="Menlo, Consolas, monospace" font-size="11.5">maithic corpus verify</tspan> checks it all.</text>
+    </g>
+  </g>
+</svg>

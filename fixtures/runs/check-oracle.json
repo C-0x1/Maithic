@@ -1,0 +1,186 @@
+{
+  "schema": "maithic.check.report/1",
+  "file": "fixtures/oracle/lean/Checks.lean",
+  "ok": true,
+  "errors": 0,
+  "warnings": 0,
+  "declarations": 19,
+  "theorems": [
+    {
+      "name": "discrete_bezout",
+      "statement": "1606938044258990275541962092341162602522202993782792835301375 * -1099511627776 +\n      -1329227995784915872903807060280344575 * -1329227995784915872903807060280344577 =\n    1099511627775 ∧\n  1099511627775 * 1461501637332232146199470957515006442444899221505 =\n      1606938044258990275541962092341162602522202993782792835301375 ∧\n    1099511627775 * -1208925819615728686333953 = -1329227995784915872903807060280344575",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "discrete_factorization",
+      "statement": "360 = 2 ^ 3 * 3 ^ 2 * 5 ^ 1",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "discrete_factorization_fermat",
+      "statement": "18446744073709551617 = 274177 ^ 1 * 67280421310721 ^ 1",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "discrete_inverse",
+      "statement": "3 * 5 % 7 = 1",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "discrete_square_root",
+      "statement": "(659791110852991619 ^ 2 - 5) % 2305843009213693951 = 0",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "discrete_witness",
+      "statement": "∃ x y, x ^ 3 + y ^ 3 = 1729 ∧ 0 < x ∧ x < 9 ∧ x < y",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "discrete_witness_pell",
+      "statement": "∃ x y, x ^ 2 = 2 * y ^ 2 + 1 ∧ y > 0",
+      "status": "verified",
+      "axioms": [],
+      "reasons": []
+    },
+    {
+      "name": "linear_budget",
+      "statement": "∀ (x y : Rat), 2 * x + 3 * y ≤ 6 → x ≥ 0 → y ≥ 0 → x + y ≤ 3",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_contradiction",
+      "statement": "∀ (x y : Rat), x + y ≤ 1 → x ≥ 1 → y ≥ 1 / 2 → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_equation",
+      "statement": "∀ (x y : Rat), x + y = 10 → x - y = 2 → x = 6",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_integer_bound",
+      "statement": "∀ (x y : Int), 3 * x ≥ 4 → y ≥ x → y ≥ 2",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_integer_cycle",
+      "statement": "∀ (x y z : Int), x - y < 3 → y - z < -1 → z - x ≤ -1 → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_integer_distinct",
+      "statement": "∀ (x y : Int), 2 * x + 1 = 2 * y → x ≠ y",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_integer_gap",
+      "statement": "∀ (x y : Int), 2 * x + 4 * y < 7 → x + 2 * y ≥ 4 → False",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_integer_parity",
+      "statement": "∀ (x y : Int), 2 * x + 4 * y < 7 → x + 2 * y > 2 → x + 2 * y = 3",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "linear_integer_system",
+      "statement": "∀ (a b c : Int),\n  7 * a + 12 * b + 31 * c = 17 →\n    3 * a + 5 * b + 14 * c = 7 → 1 ≤ a → a ≤ 40 → -50 ≤ b → b ≤ 50 → c ≥ -1000",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "polynomial_identity",
+      "statement": "∀ (a b c d : Rat), (a ^ 2 + b ^ 2) * (c ^ 2 + d ^ 2) = (a * c - b * d) ^ 2 + (a * d + b * c) ^ 2",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "polynomial_integer",
+      "statement": "∀ (x y : Int), 2 * (x - 2) = 1 * (2 * x - (3 * y + 1)) + 3 * (y - 1)",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    },
+    {
+      "name": "polynomial_symmetric",
+      "statement": "∀ (x y : Rat), x ^ 2 + y ^ 2 - 5 = (x + y + 3) * (x + y - 3) + -2 * (x * y - 2)",
+      "status": "verified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "reasons": []
+    }
+  ],
+  "diagnostics": []
+}

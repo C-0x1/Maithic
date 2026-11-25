@@ -1,0 +1,20 @@
+{
+  "schema": "maithic.gateway.exchange/1",
+  "name": "openai-quota",
+  "provider": "openai",
+  "origin": "documented-shape",
+  "note": "Authored from the provider's documented response shape; not a recorded call.",
+  "status": 429,
+  "headers": {},
+  "body": {
+    "error": {
+      "message": "You exceeded your current quota",
+      "type": "insufficient_quota",
+      "param": null,
+      "code": "insufficient_quota"
+    }
+  },
+  "expect": {
+    "error": "rate_limited"
+  }
+}
